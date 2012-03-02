@@ -5,10 +5,9 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ClientPhone", "ClientPhone\
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WpfApplication1", "WpfApplication1\WpfApplication1.csproj", "{2190CBCD-7FAE-4A2F-94DB-2DD5AC123383}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsoleApplication1", "ConsoleApplication1\ConsoleApplication1.csproj", "{B22C56A2-49FE-4C57-BBC5-F56184A6101D}"
+EndProject
 Global
-	GlobalSection(PowerDesigner) = preSolution
-		HasSWS = 1
-	EndGlobalSection
 	GlobalSection(SubversionScc) = preSolution
 		Svn-Managed = True
 		Manager = AnkhSVN - Subversion Support for Visual Studio
@@ -46,8 +45,21 @@ Global
 		{2190CBCD-7FAE-4A2F-94DB-2DD5AC123383}.Release|Mixed Platforms.Build.0 = Release|x86
 		{2190CBCD-7FAE-4A2F-94DB-2DD5AC123383}.Release|x86.ActiveCfg = Release|x86
 		{2190CBCD-7FAE-4A2F-94DB-2DD5AC123383}.Release|x86.Build.0 = Release|x86
+		{B22C56A2-49FE-4C57-BBC5-F56184A6101D}.Debug|Any CPU.ActiveCfg = Debug|x86
+		{B22C56A2-49FE-4C57-BBC5-F56184A6101D}.Debug|Mixed Platforms.ActiveCfg = Debug|x86
+		{B22C56A2-49FE-4C57-BBC5-F56184A6101D}.Debug|Mixed Platforms.Build.0 = Debug|x86
+		{B22C56A2-49FE-4C57-BBC5-F56184A6101D}.Debug|x86.ActiveCfg = Debug|x86
+		{B22C56A2-49FE-4C57-BBC5-F56184A6101D}.Debug|x86.Build.0 = Debug|x86
+		{B22C56A2-49FE-4C57-BBC5-F56184A6101D}.Release|Any CPU.ActiveCfg = Release|x86
+		{B22C56A2-49FE-4C57-BBC5-F56184A6101D}.Release|Mixed Platforms.ActiveCfg = Release|x86
+		{B22C56A2-49FE-4C57-BBC5-F56184A6101D}.Release|Mixed Platforms.Build.0 = Release|x86
+		{B22C56A2-49FE-4C57-BBC5-F56184A6101D}.Release|x86.ActiveCfg = Release|x86
+		{B22C56A2-49FE-4C57-BBC5-F56184A6101D}.Release|x86.Build.0 = Release|x86
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(PowerDesigner) = preSolution
+		HasSWS = 1
 	EndGlobalSection
 EndGlobal
