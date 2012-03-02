@@ -6,6 +6,9 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WpfApplication1", "WpfApplication1\WpfApplication1.csproj", "{2190CBCD-7FAE-4A2F-94DB-2DD5AC123383}"
 EndProject
 Global
+	GlobalSection(PowerDesigner) = preSolution
+		HasSWS = 1
+	EndGlobalSection
 	GlobalSection(SubversionScc) = preSolution
 		Svn-Managed = True
 		Manager = AnkhSVN - Subversion Support for Visual Studio

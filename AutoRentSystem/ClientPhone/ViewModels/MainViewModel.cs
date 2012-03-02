@@ -16,6 +16,9 @@ using System.Collections.ObjectModel;
 
 namespace ClientPhone
 {
+    /// <summary>
+    /// Base class for all ViewModels
+    /// </summary>
     public class MainViewModel : INotifyPropertyChanged
     {
         public MainViewModel()
