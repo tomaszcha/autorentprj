@@ -3,8 +3,6 @@ Microsoft Visual Studio Solution File, Format Version 11.00
 # Visual Studio 2010
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ClientPhone", "ClientPhone\ClientPhone.csproj", "{AA66888D-CEB8-4EB7-A32A-62D28AEBD6ED}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WpfApplication1", "WpfApplication1\WpfApplication1.csproj", "{2190CBCD-7FAE-4A2F-94DB-2DD5AC123383}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WcfServiceLibrary1", "WcfServiceLibrary1\WcfServiceLibrary1.csproj", "{174F1A69-28C5-43FA-9B13-91E56288C619}"
 EndProject
 Global
@@ -35,16 +33,6 @@ Global
 		{AA66888D-CEB8-4EB7-A32A-62D28AEBD6ED}.Release|Mixed Platforms.Build.0 = Release|Any CPU
 		{AA66888D-CEB8-4EB7-A32A-62D28AEBD6ED}.Release|Mixed Platforms.Deploy.0 = Release|Any CPU
 		{AA66888D-CEB8-4EB7-A32A-62D28AEBD6ED}.Release|x86.ActiveCfg = Release|Any CPU
-		{2190CBCD-7FAE-4A2F-94DB-2DD5AC123383}.Debug|Any CPU.ActiveCfg = Debug|x86
-		{2190CBCD-7FAE-4A2F-94DB-2DD5AC123383}.Debug|Mixed Platforms.ActiveCfg = Debug|x86
-		{2190CBCD-7FAE-4A2F-94DB-2DD5AC123383}.Debug|Mixed Platforms.Build.0 = Debug|x86
-		{2190CBCD-7FAE-4A2F-94DB-2DD5AC123383}.Debug|x86.ActiveCfg = Debug|x86
-		{2190CBCD-7FAE-4A2F-94DB-2DD5AC123383}.Debug|x86.Build.0 = Debug|x86
-		{2190CBCD-7FAE-4A2F-94DB-2DD5AC123383}.Release|Any CPU.ActiveCfg = Release|x86
-		{2190CBCD-7FAE-4A2F-94DB-2DD5AC123383}.Release|Mixed Platforms.ActiveCfg = Release|x86
-		{2190CBCD-7FAE-4A2F-94DB-2DD5AC123383}.Release|Mixed Platforms.Build.0 = Release|x86
-		{2190CBCD-7FAE-4A2F-94DB-2DD5AC123383}.Release|x86.ActiveCfg = Release|x86
-		{2190CBCD-7FAE-4A2F-94DB-2DD5AC123383}.Release|x86.Build.0 = Release|x86
 		{174F1A69-28C5-43FA-9B13-91E56288C619}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{174F1A69-28C5-43FA-9B13-91E56288C619}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{174F1A69-28C5-43FA-9B13-91E56288C619}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
