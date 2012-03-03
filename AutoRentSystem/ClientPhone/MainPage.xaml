@@ -59,5 +59,6 @@
                 </ListBox>
             </controls:PanoramaItem>
         </controls:Panorama>
+        <Button Content="Button" Height="72" HorizontalAlignment="Left" Margin="287,290,0,0" Name="button1" VerticalAlignment="Top" Width="160" />
     </Grid>
 </phone:PhoneApplicationPage>
