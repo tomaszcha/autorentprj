@@ -27,6 +27,7 @@ namespace ClientPhone
         {
             get
             {
+                ыжшгпицжукигцукихкицуг
                 // Delay creation of the view model until necessary
                 if (viewModel == null)
                     viewModel = new MainViewModel();
