@@ -8,9 +8,9 @@ namespace MainModelMock
     public class Application
     {
         public int Id { get; set; }
+        public DateTime CreationDate { get; set; }
         public string FirstName { get; set; }
         public string LastName { get; set; }
-        public DateTime CreationDate { get; set; }
         public Model Model { get; set; }
         public string Preference { get; set; }
         public DateTime PickupDate { get; set; }
