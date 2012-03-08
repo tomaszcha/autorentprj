@@ -19,7 +19,7 @@ namespace MainModelMock
         /// <summary>
         /// Rent order of the auto that needs the evacuation
         /// </summary>
-        public RentOrder RentOrder { get; set; }
+        public Order Order { get; set; }
 
 
         /// <summary>

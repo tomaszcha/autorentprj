@@ -17,6 +17,12 @@ namespace MainModelMock
 
 
         /// <summary>
+        /// Auto that is damaged
+        /// </summary>
+        public Auto Auto { get; set; }
+
+
+        /// <summary>
         /// Name of the extra damage 
         /// </summary>
         public string Name { get; set; }
