@@ -43,15 +43,27 @@
     <Compile Include="Application.cs" />
     <Compile Include="Auto.cs" />
     <Compile Include="Category.cs" />
+    <Compile Include="ChargeOffOrder.cs" />
     <Compile Include="City.cs" />
     <Compile Include="Customer.cs" />
+    <Compile Include="Damage.cs" />
     <Compile Include="Department.cs" />
+    <Compile Include="Purchaser.cs" />
+    <Compile Include="Employee.cs" />
+    <Compile Include="EvacuationOrder.cs" />
+    <Compile Include="ExtraDamage.cs" />
     <Compile Include="Insuarance.cs" />
     <Compile Include="InsuaranceAgency.cs" />
     <Compile Include="Make.cs" />
     <Compile Include="Model.cs" />
-    <Compile Include="Order.cs" />
+    <Compile Include="RentOrder.cs" />
+    <Compile Include="OrdinaryDamage.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="PurchaseOrder.cs" />
+    <Compile Include="Repair.cs" />
+    <Compile Include="Supplier.cs" />
+    <Compile Include="SupplyOrder.cs" />
+    <Compile Include="TechnicalService.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

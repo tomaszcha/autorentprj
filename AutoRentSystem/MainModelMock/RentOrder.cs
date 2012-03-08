@@ -5,7 +5,7 @@ using System.Text;
 
 namespace MainModelMock
 {
-    public class Order
+    public class RentOrder
     {
         public int Id { get; set; }
         public DateTime CreationDate { get; set; }
