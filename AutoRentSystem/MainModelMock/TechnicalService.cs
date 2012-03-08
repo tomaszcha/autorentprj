@@ -29,7 +29,7 @@ namespace MainModelMock
 
 
         /// <summary>
-        /// Street, house, house addition of the technical service location
+        /// Address of the technical service within the city
         /// </summary>
         public string Address { get; set; }
 
