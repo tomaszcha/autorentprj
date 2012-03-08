@@ -17,6 +17,7 @@ namespace MainModelMock
         public Department ReturnDepartment { get; set; }
         public string Status { get; set; }
         public string RentalType { get; set; }
-        
+        public string PaymentType { get; set; }
+        public float Payment { get; set; }
     }
 }
