@@ -5,6 +5,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Diagrams", "Diagrams", "{5C
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Task", "Task", "{FD2A990E-D99F-438F-ABE7-89D1A398CC14}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MainModelMock", "MainModelMock\MainModelMock.csproj", "{27028396-922C-4A41-9D68-A4803F944E9E}"
+EndProject
 Global
 	GlobalSection(PowerDesigner) = preSolution
 		HasSWS = 1
@@ -12,6 +14,16 @@ Global
 	GlobalSection(SubversionScc) = preSolution
 		Svn-Managed = True
 		Manager = AnkhSVN - Subversion Support for Visual Studio
+	EndGlobalSection
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{27028396-922C-4A41-9D68-A4803F944E9E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{27028396-922C-4A41-9D68-A4803F944E9E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{27028396-922C-4A41-9D68-A4803F944E9E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{27028396-922C-4A41-9D68-A4803F944E9E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
