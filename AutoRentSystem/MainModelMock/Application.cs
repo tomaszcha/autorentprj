@@ -12,12 +12,13 @@ namespace MainModelMock
         public string FirstName { get; set; }
         public string LastName { get; set; }
         public Model Model { get; set; }
-        public string Preference { get; set; }
         public DateTime PickupDate { get; set; }
-        public DateTime ReturnDate { get; set; }
         public Department PickupDepartment { get; set; }
+        public DateTime ReturnDate { get; set; }
         public Department ReturnDepartment { get; set; }
+        public string Preference { get; set; }
         public string Status { get; set; }
+        public string Phone { get; set; }
         public string Email { get; set; }
     }
 }
