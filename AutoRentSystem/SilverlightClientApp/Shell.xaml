@@ -7,11 +7,25 @@
     xmlns:navigation="clr-namespace:System.Windows.Controls;assembly=System.Windows.Controls.Navigation" 
     xmlns:uriMapper="clr-namespace:System.Windows.Navigation;assembly=System.Windows.Controls.Navigation"
     mc:Ignorable="d"
-    d:DesignHeight="300" d:DesignWidth="400">
+    d:DesignHeight="431" d:DesignWidth="727">
+    
+    <UserControl.Resources>
+        <Style x:Key="MenuButton" TargetType="Button">
+            <Setter Property="Background" Value="Black"/>
+            <Setter Property="Width" Value="auto"/>
+            <Setter Property="MinWidth" Value="150"/>
+            <Setter Property="Margin" Value="3,0,3,0"/>
+            <Setter Property="Opacity" Value="0.4"/>
+            <Setter Property="Foreground" Value="Black"/>
+            <Setter Property="FontWeight" Value="ExtraBlack"/>
+            <Setter Property="FontSize" Value="13"/>
+        </Style>
+    </UserControl.Resources>
+    
     <Grid>
         <Grid.RowDefinitions>
-            <RowDefinition Height="10*"/>
-            <RowDefinition Height="10*"/>
+            <RowDefinition Height="40"/>
+            <RowDefinition Height="40"/>
             <RowDefinition Height="100*"/>
             <RowDefinition Height="10*"/>
         </Grid.RowDefinitions>
@@ -19,7 +33,19 @@
             <ColumnDefinition Width="Auto"/>
             <ColumnDefinition Width="*"/>
         </Grid.ColumnDefinitions>
-        <Image Grid.Column="0" Grid.Row="0" Grid.ColumnSpan="2" HorizontalAlignment="Left" Name="image1" Stretch="Fill" VerticalAlignment="Top"/>
+        <StackPanel Grid.Column="1" Grid.Row="1" Grid.ColumnSpan="2" Orientation="Horizontal" HorizontalAlignment="Center">
+            <Button Name="bttnHome" Style="{StaticResource MenuButton}" Content="Home"/>
+            <Button Name="bttnAutoPark" Style="{StaticResource MenuButton}" Content="Auto park"/>
+            <Button Name="bttnContract" Style="{StaticResource MenuButton}" Content="Conditions of rental"/>
+            <Button Name="bttnAboutUs" Style="{StaticResource MenuButton}" Content="About us"/>
+            <Button Name="bttnContacts" Style="{StaticResource MenuButton}" Content="Our contacts"/>
+        </StackPanel>
+        <Grid.Background>
+            <LinearGradientBrush EndPoint="1,0.5" StartPoint="0,0.5">
+                <GradientStop Color="Black" Offset="0" />
+                <GradientStop Color="White" Offset="1" />
+            </LinearGradientBrush>
+        </Grid.Background>
     </Grid>
 
 </UserControl>
