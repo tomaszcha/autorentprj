@@ -54,7 +54,7 @@ namespace SilverlightClientApp
         {
             base.ConfigureModuleCatalog();
             ModuleCatalog moduleCatalog = (ModuleCatalog)ModuleCatalog;
-            moduleCatalog.AddModule(typeof(OrderList.OrderListModule));
+            moduleCatalog.AddModule(typeof(ApplicationCreate.ApplicationCreateModule));
             //moduleCatalog.AddModule(typeof(PersonsListModule));;
         }
 
