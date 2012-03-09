@@ -14,6 +14,7 @@ using Microsoft.Practices.Prism.Modularity;
 using Microsoft.Practices.Prism.UnityExtensions;
 using Microsoft.Practices.ServiceLocation;
 using Microsoft.Practices.Unity;
+using ModulesInfrastructure.Views;
 
 namespace SilverlightClientApp 
 {
@@ -33,14 +34,13 @@ namespace SilverlightClientApp
             base.InitializeShell();
 
             //register shell in container
-            Container.RegisterInstance((IShellWindow)Shell);
+            Container.RegisterInstance((IShellPage)Shell);
 
             //set the delegateyhat is used to the current container retrieve
             ServiceLocator.SetLocatorProvider(() => new UnityServiceLocator(Container));
 
-            //Window mainWindow = (Window)Shell;
-            //Application.Current.MainWindow = mainWindow;
-            //Application.Current.MainWindow.Show();
+            UIElement mainPage = (UIElement)Shell;
+            Application.Current.RootVisual = mainPage;
         }
 
         protected override void ConfigureModuleCatalog()
