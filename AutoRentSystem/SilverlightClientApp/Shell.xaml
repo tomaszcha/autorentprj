@@ -40,11 +40,11 @@
             <Button Name="bttnAboutUs" Style="{StaticResource MenuButton}" Content="About us"/>
             <Button Name="bttnContacts" Style="{StaticResource MenuButton}" Content="Our contacts"/>
         </StackPanel>
-        <ContentControl Grid.Column="0" Grid.Row="2" HorizontalAlignment="Center"
-                       VerticalAlignment="Center"
+        <ContentControl Grid.Column="0" Grid.Row="2" HorizontalAlignment="Stretch"
+                       VerticalAlignment="Stretch"
                        prism:RegionManager.RegionName="LeftRegion"/>
-        <ContentControl Grid.Column="1" Grid.Row="2" HorizontalAlignment="Center"
-                       VerticalAlignment="Center"
+        <ContentControl Grid.Column="1" Grid.Row="2" HorizontalAlignment="Stretch"
+                       VerticalAlignment="Stretch"
                        prism:RegionManager.RegionName="RightRegion"/>
         <Grid.Background>
             <LinearGradientBrush EndPoint="1,0.5" StartPoint="0,0.5">
