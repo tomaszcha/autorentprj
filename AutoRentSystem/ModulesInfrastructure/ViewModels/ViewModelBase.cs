@@ -23,14 +23,14 @@ namespace ModulesInfrastructure.ViewModels
         #region INotifyPropertyChanged members
 
         /// <summary>
-        /// Возникает, когда свойтсво этого объекта получает новое значение.
+        /// Occurs when a property of this object receives a new value.
         /// </summary>
         public event PropertyChangedEventHandler PropertyChanged;
 
         /// <summary>
-        /// Вызывает событие PropertyChanged этого объекта.
+        /// Raises the PropertyChanged event of the object.
         /// </summary>
-        /// <param name="propertyName">Свойство, которое получило новое значение.</param>
+        /// <param name="propertyName">The property, which has received a new meaning.</param>
         protected void OnPropertyChanged(string propertyName)
         {
             PropertyChangedEventHandler handler = PropertyChanged;
