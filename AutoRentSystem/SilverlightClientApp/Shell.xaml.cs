@@ -12,9 +12,9 @@ using System.Windows.Shapes;
 
 namespace SilverlightClientApp
 {
-    public partial class MainPage : UserControl
+    public partial class Shell : UserControl, 
     {
-        public MainPage()
+        public Shell()
         {
             InitializeComponent();
         }
