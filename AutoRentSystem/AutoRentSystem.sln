@@ -9,8 +9,6 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MainModelMock", "MainModelM
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Infrastracture", "Infrastracture", "{1145C79F-A71C-464D-8409-8B5400905ED8}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Common.Extensions", "Common.Extensions\Common.Extensions.csproj", "{D174C649-20D8-4010-9821-687C864246B3}"
-EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Modules", "Modules", "{1F728413-9ED0-4816-9A3B-3DAE93141CAA}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SilverlightClientApp", "SilverlightClientApp\SilverlightClientApp.csproj", "{5F8208DD-CEB8-4EDA-9AD8-1A3422644A58}"
@@ -33,10 +31,6 @@ Global
 		{27028396-922C-4A41-9D68-A4803F944E9E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{27028396-922C-4A41-9D68-A4803F944E9E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{27028396-922C-4A41-9D68-A4803F944E9E}.Release|Any CPU.Build.0 = Release|Any CPU
-		{D174C649-20D8-4010-9821-687C864246B3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{D174C649-20D8-4010-9821-687C864246B3}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{D174C649-20D8-4010-9821-687C864246B3}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{D174C649-20D8-4010-9821-687C864246B3}.Release|Any CPU.Build.0 = Release|Any CPU
 		{5F8208DD-CEB8-4EDA-9AD8-1A3422644A58}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{5F8208DD-CEB8-4EDA-9AD8-1A3422644A58}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5F8208DD-CEB8-4EDA-9AD8-1A3422644A58}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -54,7 +48,6 @@ Global
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
-		{D174C649-20D8-4010-9821-687C864246B3} = {1145C79F-A71C-464D-8409-8B5400905ED8}
 		{9EC7A04C-4450-4C9C-B03F-91ECF50189F3} = {1145C79F-A71C-464D-8409-8B5400905ED8}
 	EndGlobalSection
 EndGlobal
