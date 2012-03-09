@@ -29,6 +29,12 @@ namespace MainModelMock
 
 
         /// <summary>
+        /// Customer who makes order
+        /// </summary>
+        public Customer Customer { get; set; }
+
+
+        /// <summary>
         /// The auto to rent
         /// </summary>
         public Auto Auto { get; set; }
