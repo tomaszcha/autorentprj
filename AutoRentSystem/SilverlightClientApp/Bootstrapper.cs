@@ -30,6 +30,7 @@ namespace SilverlightClientApp
 
         protected override DependencyObject CreateShell()
         {
+            //return Container.Resolve<Shell>();
             Shell shell = new Shell();
             return shell;
         }
@@ -53,6 +54,7 @@ namespace SilverlightClientApp
         {
             base.ConfigureModuleCatalog();
             ModuleCatalog moduleCatalog = (ModuleCatalog)ModuleCatalog;
+            moduleCatalog.AddModule(typeof(OrderList.OrderListModule));
             //moduleCatalog.AddModule(typeof(PersonsListModule));;
         }
 
