@@ -19,7 +19,9 @@ using ModulesInfrastructure.Views;
 namespace SilverlightClientApp 
 {
     /// <summary>
-    /// 
+    /// The basic purpose of our Bootstrapper is to initialize our Shall and register all 
+    /// the types you’ll need for Dependency Injection (DI). Bootstrapper will responsible 
+    /// to load and start our application.
     /// </summary>
     public class Bootstrapper : UnityBootstrapper
     {
