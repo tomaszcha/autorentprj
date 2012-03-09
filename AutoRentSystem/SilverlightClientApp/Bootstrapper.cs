@@ -14,6 +14,7 @@ using Microsoft.Practices.Prism.Modularity;
 using Microsoft.Practices.Prism.UnityExtensions;
 using Microsoft.Practices.ServiceLocation;
 using Microsoft.Practices.Unity;
+
 using ModulesInfrastructure.Views;
 
 namespace SilverlightClientApp 
