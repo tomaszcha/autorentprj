@@ -8,10 +8,11 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Animation;
 using System.Windows.Shapes;
+using ModulesInfrastructure.ViewModels;
 
 namespace OrderList.ViewModels
 {
-    public class OrderListViewModel : IOrderListViewModel
+    public class OrderListViewModel : ViewModelBase, IOrderListViewModel
     {
 
     }
