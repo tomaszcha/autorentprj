@@ -18,6 +18,9 @@ using ModulesInfrastructure.Views;
 
 namespace SilverlightClientApp 
 {
+    /// <summary>
+    /// 
+    /// </summary>
     public class Bootstrapper : UnityBootstrapper
     {
         #region Overrides of Bootstrapper

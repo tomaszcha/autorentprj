@@ -5,8 +5,6 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Diagrams", "Diagrams", "{5C
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Task", "Task", "{FD2A990E-D99F-438F-ABE7-89D1A398CC14}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MainModelMock", "MainModelMock\MainModelMock.csproj", "{27028396-922C-4A41-9D68-A4803F944E9E}"
-EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Infrastracture", "Infrastracture", "{1145C79F-A71C-464D-8409-8B5400905ED8}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Modules", "Modules", "{1F728413-9ED0-4816-9A3B-3DAE93141CAA}"
@@ -16,6 +14,14 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SilverlightClientApp.Web", "SilverlightClientApp.Web\SilverlightClientApp.Web.csproj", "{57111D77-ABB2-4784-82DD-A01F62F8260F}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ModulesInfrastructure", "ModulesInfrastructure\ModulesInfrastructure.csproj", "{9EC7A04C-4450-4C9C-B03F-91ECF50189F3}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "MockModel", "MockModel", "{0A08439F-7B91-48B8-B6E8-27411E96CB38}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ModelMock", "ModelMock\ModelMock.csproj", "{D60BD72C-4FDD-4A83-ADD3-D57F0D998A68}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OrderEdit", "OrderEdit\OrderEdit.csproj", "{B23E85BE-5713-430B-ADC4-1AD1F2760C48}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OrderList", "OrderList\OrderList.csproj", "{126D18E2-3D8B-4528-ABC2-6DC8EFD21D04}"
 EndProject
 Global
 	GlobalSection(SubversionScc) = preSolution
@@ -27,10 +33,6 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{27028396-922C-4A41-9D68-A4803F944E9E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{27028396-922C-4A41-9D68-A4803F944E9E}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{27028396-922C-4A41-9D68-A4803F944E9E}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{27028396-922C-4A41-9D68-A4803F944E9E}.Release|Any CPU.Build.0 = Release|Any CPU
 		{5F8208DD-CEB8-4EDA-9AD8-1A3422644A58}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{5F8208DD-CEB8-4EDA-9AD8-1A3422644A58}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5F8208DD-CEB8-4EDA-9AD8-1A3422644A58}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -43,11 +45,26 @@ Global
 		{9EC7A04C-4450-4C9C-B03F-91ECF50189F3}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9EC7A04C-4450-4C9C-B03F-91ECF50189F3}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9EC7A04C-4450-4C9C-B03F-91ECF50189F3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D60BD72C-4FDD-4A83-ADD3-D57F0D998A68}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D60BD72C-4FDD-4A83-ADD3-D57F0D998A68}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D60BD72C-4FDD-4A83-ADD3-D57F0D998A68}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D60BD72C-4FDD-4A83-ADD3-D57F0D998A68}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B23E85BE-5713-430B-ADC4-1AD1F2760C48}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B23E85BE-5713-430B-ADC4-1AD1F2760C48}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B23E85BE-5713-430B-ADC4-1AD1F2760C48}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B23E85BE-5713-430B-ADC4-1AD1F2760C48}.Release|Any CPU.Build.0 = Release|Any CPU
+		{126D18E2-3D8B-4528-ABC2-6DC8EFD21D04}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{126D18E2-3D8B-4528-ABC2-6DC8EFD21D04}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{126D18E2-3D8B-4528-ABC2-6DC8EFD21D04}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{126D18E2-3D8B-4528-ABC2-6DC8EFD21D04}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{9EC7A04C-4450-4C9C-B03F-91ECF50189F3} = {1145C79F-A71C-464D-8409-8B5400905ED8}
+		{B23E85BE-5713-430B-ADC4-1AD1F2760C48} = {1F728413-9ED0-4816-9A3B-3DAE93141CAA}
+		{126D18E2-3D8B-4528-ABC2-6DC8EFD21D04} = {1F728413-9ED0-4816-9A3B-3DAE93141CAA}
+		{D60BD72C-4FDD-4A83-ADD3-D57F0D998A68} = {0A08439F-7B91-48B8-B6E8-27411E96CB38}
 	EndGlobalSection
 EndGlobal
