@@ -1,18 +1,22 @@
-﻿using System;
-using System.Net;
-using System.Windows;
-using System.Windows.Controls;
-using System.Windows.Documents;
-using System.Windows.Ink;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Animation;
-using System.Windows.Shapes;
+﻿using ModulesInfrastructure;
+using ShellInfrastracture;
+using OrderList.Views;
+using OrderList.ViewModels;
+using Microsoft.Practices.Prism.Modularity;
+using Microsoft.Practices.Prism.Regions;
 
 namespace OrderList
 {
-    public class OrderListModule
+    public class OrderListModule : ModuleBase
     {
+        protected override void RegisterViewsInRegions()
+        {
+            RegionManager.RegisterViewWithRegion("LeftRegion", typeof(OrderListView));
+        }
 
+        protected override void RegisterTypesDependencies()
+        {
+            //UnityContainer.RegisterType<IOrderListViewModel, OrderListViewModel>();
+        }
     }
 }
