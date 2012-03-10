@@ -12,9 +12,13 @@
             <Setter Property="Foreground" Value="Black"/>
             <Setter Property="Margin" Value="15,15,0,0"/>
         </Style>
+        <Style x:Key="SComboBox" TargetType="ComboBox">
+            <Setter Property="Margin" Value="0,10,30,5"/>
+        </Style>
     </UserControl.Resources>
         <Grid x:Name="LayoutRoot" Opacity="0.5" Margin="5" Background="White">
         <Grid.RowDefinitions>
+            <RowDefinition Height="40"/>
             <RowDefinition Height="40"/>
             <RowDefinition Height="40"/>
             <RowDefinition Height="100*"/>
@@ -26,6 +30,8 @@
         </Grid.ColumnDefinitions>
         <Border BorderBrush="Black" BorderThickness="5" Grid.ColumnSpan="2" Grid.RowSpan="5"/>
         <TextBlock Grid.Column="0" Grid.Row="0" Text="Pickup: " Style="{StaticResource SLabel}"/>
-        <TextBlock Grid.Column="0" Grid.Row="1" Text="Pickup: " Style="{StaticResource SLabel}"/>
+        <ComboBox Grid.Column="1" Style="{StaticResource SComboBox}"/>
+        <ComboBox Grid.Column="1" Grid.Row="1" Style="{StaticResource SComboBox}"/>
+        <TextBlock Grid.Column="0" Grid.Row="2" Text="Return: " Style="{StaticResource SLabel}"/>
     </Grid>
 </UserControl>
