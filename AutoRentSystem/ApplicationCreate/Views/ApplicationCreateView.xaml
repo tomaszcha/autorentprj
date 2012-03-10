@@ -4,9 +4,16 @@
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d"
-    d:DesignHeight="316" d:DesignWidth="350">
-
-    <Grid x:Name="LayoutRoot" Opacity="0.5" Margin="5" Background="White">
+    d:DesignHeight="316" d:DesignWidth="500">
+    <UserControl.Resources>
+        <Style x:Key="SLabel" TargetType="TextBlock">
+            <Setter Property="FontWeight" Value="ExtraBlack"/>
+            <Setter Property="FontSize" Value="13"/>
+            <Setter Property="Foreground" Value="Black"/>
+            <Setter Property="Margin" Value="15,15,0,0"/>
+        </Style>
+    </UserControl.Resources>
+        <Grid x:Name="LayoutRoot" Opacity="0.5" Margin="5" Background="White">
         <Grid.RowDefinitions>
             <RowDefinition Height="40"/>
             <RowDefinition Height="40"/>
@@ -15,10 +22,10 @@
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="150"/>
-            <ColumnDefinition Width="200"/>
+            <ColumnDefinition Width="350"/>
         </Grid.ColumnDefinitions>
         <Border BorderBrush="Black" BorderThickness="5" Grid.ColumnSpan="2" Grid.RowSpan="5"/>
-        <TextBlock Grid.Column="0" Grid.Row="0" Text="Pickup: " FontWeight="ExtraBlack" FontSize="13" Foreground="Black" Margin="15,15,0,0"/>
-        
+        <TextBlock Grid.Column="0" Grid.Row="0" Text="Pickup: " Style="{StaticResource SLabel}"/>
+        <TextBlock Grid.Column="0" Grid.Row="1" Text="Pickup: " Style="{StaticResource SLabel}"/>
     </Grid>
 </UserControl>
