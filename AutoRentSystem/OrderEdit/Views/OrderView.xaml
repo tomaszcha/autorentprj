@@ -18,12 +18,24 @@
         </Grid.RowDefinitions>
         <StackPanel Orientation="Vertical" Grid.Column="0" Grid.Row="0">
             <StackPanel Orientation="Horizontal" Margin="5,10,5,5">
-                <TextBlock Height="23" Name="txtBlockOrderNumber" Text="Order #" VerticalAlignment="Top" Width="50" />
-                <TextBox Height="23" Name="txtBoxOrderNumber" VerticalAlignment="Top" Width="90" />
-                <TextBlock Height="23" Name="txtBlockOrderStatus" Text="Satus" VerticalAlignment="Top" Width="50" Margin="5,0,0,0" />
-                <ComboBox Height="23" Name="cmbBoxStatus" Width="90" VerticalAlignment="Top"/>
+                <TextBlock Height="23" Name="txtBlockOrderNumber" Text="Order #" VerticalAlignment="Top" Width="125" />
+                <TextBox Height="23" Name="txtBoxOrderNumber" VerticalAlignment="Top" Width="125" />
+                <Button Height="23" Name="btnFindOrder" VerticalAlignment="Top" Width="35" />               
             </StackPanel>
-        </StackPanel>       
+       </StackPanel>
+       <!-- <StackPanel Orientation="Vertical" Grid.Column="1" Grid.Row="0">
+            <StackPanel Orientation="Horizontal" Margin="5,10,5,5">
+                <TextBlock Height="23" Name="txtBlockApplicationNumber" Text="Application #" VerticalAlignment="Top" Width="125" />
+                <TextBox Height="23" Name="txtBoxApplicationNumber" VerticalAlignment="Top" Width="125" /> 
+                <Button Height="23" Name="btnFindApplication" VerticalAlignment="Top" Width="35" />               
+            </StackPanel>
+        </StackPanel>-->
+        <StackPanel Orientation="Vertical" Grid.Column="1" Grid.Row="0">
+            <StackPanel Orientation="Horizontal" Margin="5,10,5,5">                
+                <TextBlock Height="23" Name="txtBlockOrderStatus" Text="Order status" VerticalAlignment="Top" Width="125" Margin="5,0,0,0" />
+                <ComboBox Height="23" Name="cmbBoxStatus" Width="160" VerticalAlignment="Top"/>
+            </StackPanel>
+        </StackPanel>
         <StackPanel Orientation="Vertical" Grid.Column="0" Grid.Row="1">
             <StackPanel Orientation="Horizontal" Margin="5,10,5,5">
                 <TextBlock Height="23" Name="txtBlockCustomer" Text="Customer" VerticalAlignment="Top" />
@@ -62,7 +74,11 @@
             <StackPanel Orientation="Horizontal" Margin="5,10,5,5">
                 <TextBlock Height="23" Name="txtBlockModel" Text="Model" VerticalAlignment="Top" Width ="125"  />
                 <ComboBox Height="23" Name="cmbBoxModel" Width="160" VerticalAlignment="Top"/>                
-            </StackPanel>            
+            </StackPanel>
+            <StackPanel Orientation="Horizontal" Margin="5,10,5,5">
+                <TextBlock Height="23" Name="txtBlockRentalType" Text="Rental type" VerticalAlignment="Top" Width ="125"  />
+                <ComboBox Height="23" Name="cmbBoxRentalType" Width="160" VerticalAlignment="Top"/>
+            </StackPanel>
         </StackPanel>
         <StackPanel Orientation="Vertical" Grid.Column="0" Grid.Row="2">
             <StackPanel Orientation="Horizontal" Margin="5,10,5,5">
