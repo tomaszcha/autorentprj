@@ -1,18 +1,19 @@
-﻿using System;
-using System.Net;
-using System.Windows;
-using System.Windows.Controls;
-using System.Windows.Documents;
-using System.Windows.Ink;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Animation;
-using System.Windows.Shapes;
+﻿using Microsoft.Practices.Prism.Regions;
+using ModulesInfrastructure;
+using Home.Views;
 
 namespace Home
 {
-    public class HomeModule
+    public class HomeModule : ModuleBase          
     {
+        protected override void RegisterViewsInRegions()
+        {
+            RegionManager.RegisterViewWithRegion("RightRegion", typeof(HomeView));
+        }
 
+        protected override void RegisterTypesDependencies()
+        {
+            //UnityContainer.RegisterType<IOrderListViewModel, OrderListViewModel>();
+        }
     }
 }

@@ -110,6 +110,10 @@
       <Project>{B38EA525-2324-4AC9-AE96-649CBB9E5F3C}</Project>
       <Name>ApplicationCreate</Name>
     </ProjectReference>
+    <ProjectReference Include="..\Home\Home.csproj">
+      <Project>{F57B68E0-C08C-4B1D-AD13-5B7E1506A84B}</Project>
+      <Name>Home</Name>
+    </ProjectReference>
     <ProjectReference Include="..\ModulesInfrastructure\ModulesInfrastructure.csproj">
       <Project>{9EC7A04C-4450-4C9C-B03F-91ECF50189F3}</Project>
       <Name>ModulesInfrastructure</Name>
