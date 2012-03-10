@@ -15,7 +15,7 @@
             <RowDefinition Height="1*" />
             <RowDefinition Height="1*" />                   
         </Grid.RowDefinitions>
-        <StackPanel Orientation="Vertical" Grid.Column="0" Grid.Row="0">
+        <StackPanel Orientation="Vertical" Grid.Column="0" Grid.Row="0">            
             <StackPanel Orientation="Horizontal" Margin="5,10,5,5">
                 <TextBlock Height="23" Name="txtBlockOrderNumber" Text="Order #" VerticalAlignment="Top" Width="50" />
                 <TextBox Height="23" Name="txtBoxOrderNumber" VerticalAlignment="Top" Width="90" />
@@ -24,6 +24,11 @@
             </StackPanel>
             <StackPanel Orientation="Horizontal" Margin="5,10,5,5">
                 <TextBlock Height="23" Name="txtBlockCustomer" Text="Customer" VerticalAlignment="Top" /> 
+            </StackPanel>
+            <StackPanel Orientation="Horizontal" Margin="5,10,5,5">
+                <TextBlock Height="23" Name="txtBlockPassport" Text="Passport" VerticalAlignment="Top" Width ="125"  />
+                <TextBox Height="23" Name="txtBoxPassport" VerticalAlignment="Top" Width="125" />
+                <Button Height="23" Name="btnFindPassport" VerticalAlignment="Top" Width="35" /> 
             </StackPanel>
             <StackPanel Orientation="Horizontal" Margin="5,10,5,5">
                 <TextBlock Height="23" Name="txtBlockFirstName" Text="FirstName" VerticalAlignment="Top" Width ="125"  />
