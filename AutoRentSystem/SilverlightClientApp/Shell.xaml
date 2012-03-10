@@ -11,7 +11,7 @@
     
     <UserControl.Resources>
         <Style x:Key="MenuButton" TargetType="Button">
-            <Setter Property="Background" Value="Black"/>
+            <Setter Property="Background" Value="Red"/>
             <Setter Property="Width" Value="auto"/>
             <Setter Property="MinWidth" Value="150"/>
             <Setter Property="Margin" Value="3,0,3,0"/>
@@ -46,10 +46,16 @@
         <ContentControl Grid.Column="1" Grid.Row="2" HorizontalAlignment="Stretch"
                        VerticalAlignment="Stretch"
                        prism:RegionManager.RegionName="RightRegion"/>
-        <Grid.Background>
+        <!--<Grid.Background>
             <LinearGradientBrush EndPoint="1,0.5" StartPoint="0,0.5">
                 <GradientStop Color="Black" Offset="0" />
                 <GradientStop Color="White" Offset="1" />
+            </LinearGradientBrush>
+        </Grid.Background>-->
+        <Grid.Background>
+            <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                <GradientStop Color="Black" Offset="0" />
+                <GradientStop Color="#EC620505" Offset="0.488" />
             </LinearGradientBrush>
         </Grid.Background>
     </Grid>

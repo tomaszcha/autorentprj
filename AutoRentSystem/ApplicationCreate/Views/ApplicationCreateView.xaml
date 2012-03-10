@@ -6,7 +6,7 @@
     mc:Ignorable="d"
     d:DesignHeight="316" d:DesignWidth="350">
 
-    <Grid x:Name="LayoutRoot" Opacity="0.3" Margin="5">
+    <Grid x:Name="LayoutRoot" Opacity="0.5" Margin="5" Background="White">
         <Grid.RowDefinitions>
             <RowDefinition Height="40"/>
             <RowDefinition Height="40"/>
@@ -17,8 +17,8 @@
             <ColumnDefinition Width="150"/>
             <ColumnDefinition Width="200"/>
         </Grid.ColumnDefinitions>
-        <Border BorderBrush="White" BorderThickness="5" Grid.ColumnSpan="2" Grid.RowSpan="5"/>
-        <TextBlock Grid.Column="0" Grid.Row="0" Text="Select " FontWeight="ExtraBlack" FontSize="13" Foreground="White" Margin="5"/>
+        <Border BorderBrush="Black" BorderThickness="5" Grid.ColumnSpan="2" Grid.RowSpan="5"/>
+        <TextBlock Grid.Column="0" Grid.Row="0" Text="Pickup: " FontWeight="ExtraBlack" FontSize="13" Foreground="Black" Margin="15,15,0,0"/>
         
     </Grid>
 </UserControl>
