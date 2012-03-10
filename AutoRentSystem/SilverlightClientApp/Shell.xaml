@@ -33,7 +33,7 @@
             <ColumnDefinition Width="Auto"/>
             <ColumnDefinition Width="*"/>
         </Grid.ColumnDefinitions>
-        <StackPanel Grid.Column="1" Grid.Row="1" Grid.ColumnSpan="2" Orientation="Horizontal" HorizontalAlignment="Center">
+        <StackPanel Grid.Column="0" Grid.Row="1" Grid.ColumnSpan="2" Orientation="Horizontal" HorizontalAlignment="Center">
             <Button Name="bttnHome" Style="{StaticResource MenuButton}" Content="Home"/>
             <Button Name="bttnAutoPark" Style="{StaticResource MenuButton}" Content="Auto park"/>
             <Button Name="bttnContract" Style="{StaticResource MenuButton}" Content="Conditions of rental"/>
