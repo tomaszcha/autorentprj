@@ -4,13 +4,19 @@
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d"
-    d:DesignHeight="316" d:DesignWidth="500">
+    d:DesignHeight="535" d:DesignWidth="491">
     <UserControl.Resources>
+        <Style x:Key="SLabelTitle" TargetType="TextBlock">
+            <Setter Property="FontWeight" Value="ExtraBlack"/>
+            <Setter Property="FontSize" Value="13"/>
+            <Setter Property="Foreground" Value="Red"/>
+            <Setter Property="Margin" Value="15,15,0,0"/>
+        </Style>
         <Style x:Key="SLabel" TargetType="TextBlock">
             <Setter Property="FontWeight" Value="ExtraBlack"/>
             <Setter Property="FontSize" Value="13"/>
             <Setter Property="Foreground" Value="Black"/>
-            <Setter Property="Margin" Value="15,15,0,0"/>
+            <Setter Property="Margin" Value="30,15,15,0"/>
         </Style>
         <Style x:Key="SComboBox" TargetType="ComboBox">
             <Setter Property="Margin" Value="0,10,30,5"/>
@@ -21,6 +27,11 @@
             <RowDefinition Height="40"/>
             <RowDefinition Height="40"/>
             <RowDefinition Height="40"/>
+            <RowDefinition Height="40"/>
+            <RowDefinition Height="40"/>
+            <RowDefinition Height="40"/>
+            <RowDefinition Height="40"/>
+            <RowDefinition Height="40"/>
             <RowDefinition Height="100*"/>
             <RowDefinition Height="10*"/>
         </Grid.RowDefinitions>
@@ -28,10 +39,18 @@
             <ColumnDefinition Width="150"/>
             <ColumnDefinition Width="350"/>
         </Grid.ColumnDefinitions>
-        <Border BorderBrush="Black" BorderThickness="5" Grid.ColumnSpan="2" Grid.RowSpan="5"/>
-        <TextBlock Grid.Column="0" Grid.Row="0" Text="Pickup: " Style="{StaticResource SLabel}"/>
-        <ComboBox Grid.Column="1" Style="{StaticResource SComboBox}"/>
-        <ComboBox Grid.Column="1" Grid.Row="1" Style="{StaticResource SComboBox}"/>
-        <TextBlock Grid.Column="0" Grid.Row="2" Text="Return: " Style="{StaticResource SLabel}"/>
+        <TextBlock Grid.Column="0" Grid.Row="0" Text="Pickup: " Style="{StaticResource SLabelTitle}"/>
+        <TextBlock Grid.Column="0" Grid.Row="1" Text="City: " Style="{StaticResource SLabel}"/>
+        <TextBlock Grid.Column="0" Grid.Row="2" Text="Department: " Style="{StaticResource SLabel}"/>
+        <ComboBox Name="cmbBx_PickupCity" Grid.Column="1" Grid.Row="1" Style="{StaticResource SComboBox}"/>
+        <ComboBox Name="cmbBx_PickupDept" Grid.Column="1" Grid.Row="2" Style="{StaticResource SComboBox}"/>
+        <TextBlock Grid.Column="0" Grid.Row="3" Text="Return: " Style="{StaticResource SLabelTitle}"/>
+        <TextBlock Grid.Column="0" Grid.Row="4" Text="City: " Style="{StaticResource SLabel}"/>
+        <TextBlock Grid.Column="0" Grid.Row="5" Text="Department: " Style="{StaticResource SLabel}"/>
+        <ComboBox Name="cmbBx_ReturnCity" Grid.Column="1" Grid.Row="4" Style="{StaticResource SComboBox}"/>
+        <ComboBox Name="cmbBx_ReturnDept" Grid.Column="1" Grid.Row="5" Style="{StaticResource SComboBox}"/>
+        <TextBlock Grid.Column="0" Grid.Row="6" Text="Period: " Style="{StaticResource SLabelTitle}"/>
+        <TextBlock Grid.Column="0" Grid.Row="7" Text="Pickup: " Style="{StaticResource SLabel}"/>
+        <TextBlock Grid.Column="0" Grid.Row="8" Text="Return: " Style="{StaticResource SLabel}"/>
     </Grid>
 </UserControl>
