@@ -8,7 +8,7 @@
     
     <Grid x:Name="LayoutRoot">
         <Grid.Background>
-            <ImageBrush ImageSource="/Home;component/Images/RedCar.jpg" Stretch="Fill" />
+            <ImageBrush ImageSource="/Home;component/Images/RedCar.jpg" />
         </Grid.Background>
     </Grid>
 </UserControl>
