@@ -1,4 +1,5 @@
 ﻿using Microsoft.Practices.Prism.Regions;
+using Microsoft.Practices.Unity;
 using ModulesInfrastructure;
 using Home.Views;
 
@@ -8,12 +9,12 @@ namespace Home
     {
         protected override void RegisterViewsInRegions()
         {
-            RegionManager.RegisterViewWithRegion("RightRegion", typeof(HomeView));
+            RegionManager.RegisterViewWithRegion("RightRegion", () => UnityContainer.Resolve<IHomeView>());
         }
 
         protected override void RegisterTypesDependencies()
         {
-            //UnityContainer.RegisterType<IOrderListViewModel, OrderListViewModel>();
+            UnityContainer.RegisterType<IHomeView, HomeView>(new ContainerControlledLifetimeManager());
         }
     }
 }

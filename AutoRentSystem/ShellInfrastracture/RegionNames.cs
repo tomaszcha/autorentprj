@@ -18,6 +18,8 @@ namespace ShellInfrastracture
     {
         public const string LeftPanelName = "LeftRegion";
 
-        public const string RightPanelName = "RightRegion";  
+        public const string RightPanelName = "RightRegion";
+
+        public const string MenuPanelName = "MenuRegion";
     }
 }

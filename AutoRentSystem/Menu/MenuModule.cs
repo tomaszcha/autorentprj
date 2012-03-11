@@ -23,13 +23,10 @@ namespace Menu
             UnityContainer.RegisterType<IMenuViewModel, MenuViewModel>();
         }
 
-        private void onRightRegionNeedChangeEvent(string n)
+        public void onRightRegionNeedChangeEvent(string n)
         {
-            //if (name != null)
-            {
-                IRegion region = RegionManager.Regions[RegionNames.RightPanelName];
-                region.Activate(UnityContainer.Resolve<Home.Views.HomeView>());
-            }
+                IRegion region = RegionManager.Regions[RegionNames.RightPanelName];                     
+                region.Activate(UnityContainer.Resolve<Home.Views.IHomeView>());
         }
     }
 }
