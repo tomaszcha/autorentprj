@@ -19,7 +19,7 @@
     </UserControl.Resources>
     <Grid>
         <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
-            <Button Name="bttnHome" Style="{StaticResource MenuButton}" Content="Home"/>
+            <Button Name="bttnHome" Style="{StaticResource MenuButton}" Content="Home" Command="{Binding OnMenuCliclCommand}"/>
             <Button Name="bttnAutoPark" Style="{StaticResource MenuButton}" Content="Auto park"/>
             <Button Name="bttnContract" Style="{StaticResource MenuButton}" Content="Conditions of rental"/>
             <Button Name="bttnAboutUs" Style="{StaticResource MenuButton}" Content="About us"/>
