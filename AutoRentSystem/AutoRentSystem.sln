@@ -29,6 +29,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ApplicationCreate", "Applic
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Home", "Home\Home.csproj", "{F57B68E0-C08C-4B1D-AD13-5B7E1506A84B}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "LibCommon", "LibCommon", "{5D0E2EDA-5F7D-47C2-8CC4-13BF47BE6E23}"
+EndProject
 Global
 	GlobalSection(SubversionScc) = preSolution
 		Svn-Managed = True
