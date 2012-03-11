@@ -31,6 +31,44 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Home", "Home\Home.csproj", 
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "LibCommon", "LibCommon", "{5D0E2EDA-5F7D-47C2-8CC4-13BF47BE6E23}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "prism", "prism", "{57638AC5-57A5-4EE0-8B90-D54CBC521ED2}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Phone", "Phone", "{101D01EC-1466-4C25-803A-6BE4C6D373BB}"
+	ProjectSection(SolutionItems) = preProject
+		LibCommon\prism\Phone\Microsoft.Practices.Prism.dll = LibCommon\prism\Phone\Microsoft.Practices.Prism.dll
+		LibCommon\prism\Phone\Microsoft.Practices.Prism.Interactivity.dll = LibCommon\prism\Phone\Microsoft.Practices.Prism.Interactivity.dll
+		LibCommon\prism\Phone\Microsoft.Practices.Prism.Interactivity.pdb = LibCommon\prism\Phone\Microsoft.Practices.Prism.Interactivity.pdb
+		LibCommon\prism\Phone\Microsoft.Practices.Prism.Interactivity.XML = LibCommon\prism\Phone\Microsoft.Practices.Prism.Interactivity.XML
+		LibCommon\prism\Phone\Microsoft.Practices.Prism.pdb = LibCommon\prism\Phone\Microsoft.Practices.Prism.pdb
+		LibCommon\prism\Phone\Microsoft.Practices.Prism.XML = LibCommon\prism\Phone\Microsoft.Practices.Prism.XML
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Silverlight", "Silverlight", "{33F1497E-D0CC-4163-A43A-2C903E9442AE}"
+	ProjectSection(SolutionItems) = preProject
+		LibCommon\prism\Silverlight\Microsoft.Practices.Prism.dll = LibCommon\prism\Silverlight\Microsoft.Practices.Prism.dll
+		LibCommon\prism\Silverlight\Microsoft.Practices.Prism.extmap.xml = LibCommon\prism\Silverlight\Microsoft.Practices.Prism.extmap.xml
+		LibCommon\prism\Silverlight\Microsoft.Practices.Prism.Interactivity.dll = LibCommon\prism\Silverlight\Microsoft.Practices.Prism.Interactivity.dll
+		LibCommon\prism\Silverlight\Microsoft.Practices.Prism.Interactivity.extmap.xml = LibCommon\prism\Silverlight\Microsoft.Practices.Prism.Interactivity.extmap.xml
+		LibCommon\prism\Silverlight\Microsoft.Practices.Prism.Interactivity.pdb = LibCommon\prism\Silverlight\Microsoft.Practices.Prism.Interactivity.pdb
+		LibCommon\prism\Silverlight\Microsoft.Practices.Prism.Interactivity.XML = LibCommon\prism\Silverlight\Microsoft.Practices.Prism.Interactivity.XML
+		LibCommon\prism\Silverlight\Microsoft.Practices.Prism.MefExtensions.dll = LibCommon\prism\Silverlight\Microsoft.Practices.Prism.MefExtensions.dll
+		LibCommon\prism\Silverlight\Microsoft.Practices.Prism.MefExtensions.extmap.xml = LibCommon\prism\Silverlight\Microsoft.Practices.Prism.MefExtensions.extmap.xml
+		LibCommon\prism\Silverlight\Microsoft.Practices.Prism.MefExtensions.pdb = LibCommon\prism\Silverlight\Microsoft.Practices.Prism.MefExtensions.pdb
+		LibCommon\prism\Silverlight\Microsoft.Practices.Prism.MefExtensions.xml = LibCommon\prism\Silverlight\Microsoft.Practices.Prism.MefExtensions.xml
+		LibCommon\prism\Silverlight\Microsoft.Practices.Prism.pdb = LibCommon\prism\Silverlight\Microsoft.Practices.Prism.pdb
+		LibCommon\prism\Silverlight\Microsoft.Practices.Prism.UnityExtensions.dll = LibCommon\prism\Silverlight\Microsoft.Practices.Prism.UnityExtensions.dll
+		LibCommon\prism\Silverlight\Microsoft.Practices.Prism.UnityExtensions.extmap.xml = LibCommon\prism\Silverlight\Microsoft.Practices.Prism.UnityExtensions.extmap.xml
+		LibCommon\prism\Silverlight\Microsoft.Practices.Prism.UnityExtensions.pdb = LibCommon\prism\Silverlight\Microsoft.Practices.Prism.UnityExtensions.pdb
+		LibCommon\prism\Silverlight\Microsoft.Practices.Prism.UnityExtensions.xml = LibCommon\prism\Silverlight\Microsoft.Practices.Prism.UnityExtensions.xml
+		LibCommon\prism\Silverlight\Microsoft.Practices.Prism.xml = LibCommon\prism\Silverlight\Microsoft.Practices.Prism.xml
+		LibCommon\prism\Silverlight\Microsoft.Practices.ServiceLocation.dll = LibCommon\prism\Silverlight\Microsoft.Practices.ServiceLocation.dll
+		LibCommon\prism\Silverlight\Microsoft.Practices.ServiceLocation.extmap.xml = LibCommon\prism\Silverlight\Microsoft.Practices.ServiceLocation.extmap.xml
+		LibCommon\prism\Silverlight\Microsoft.Practices.ServiceLocation.XML = LibCommon\prism\Silverlight\Microsoft.Practices.ServiceLocation.XML
+		LibCommon\prism\Silverlight\Microsoft.Practices.Unity.Silverlight.dll = LibCommon\prism\Silverlight\Microsoft.Practices.Unity.Silverlight.dll
+		LibCommon\prism\Silverlight\Microsoft.Practices.Unity.Silverlight.extmap.xml = LibCommon\prism\Silverlight\Microsoft.Practices.Unity.Silverlight.extmap.xml
+		LibCommon\prism\Silverlight\Microsoft.Practices.Unity.Silverlight.xml = LibCommon\prism\Silverlight\Microsoft.Practices.Unity.Silverlight.xml
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SubversionScc) = preSolution
 		Svn-Managed = True
@@ -89,5 +127,8 @@ Global
 		{B38EA525-2324-4AC9-AE96-649CBB9E5F3C} = {1F728413-9ED0-4816-9A3B-3DAE93141CAA}
 		{F57B68E0-C08C-4B1D-AD13-5B7E1506A84B} = {1F728413-9ED0-4816-9A3B-3DAE93141CAA}
 		{D60BD72C-4FDD-4A83-ADD3-D57F0D998A68} = {0A08439F-7B91-48B8-B6E8-27411E96CB38}
+		{57638AC5-57A5-4EE0-8B90-D54CBC521ED2} = {5D0E2EDA-5F7D-47C2-8CC4-13BF47BE6E23}
+		{101D01EC-1466-4C25-803A-6BE4C6D373BB} = {57638AC5-57A5-4EE0-8B90-D54CBC521ED2}
+		{33F1497E-D0CC-4163-A43A-2C903E9442AE} = {57638AC5-57A5-4EE0-8B90-D54CBC521ED2}
 	EndGlobalSection
 EndGlobal
