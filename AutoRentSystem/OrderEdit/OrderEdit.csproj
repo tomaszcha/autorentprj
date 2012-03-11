@@ -51,7 +51,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Microsoft.Practices.Unity.Silverlight">
-      <HintPath>..\..\..\..\..\..\..\Bin\Silverlight\Microsoft.Practices.Unity.Silverlight.dll</HintPath>
+      <HintPath>..\LibCommon\prism\Silverlight\Microsoft.Practices.Unity.Silverlight.dll</HintPath>
     </Reference>
     <Reference Include="mscorlib" />
     <Reference Include="System.ComponentModel.DataAnnotations, Version=2.0.5.0, Culture=neutral, PublicKeyToken=ddd0da4d3e678217" />

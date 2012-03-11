@@ -47,7 +47,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Microsoft.Practices.Prism">
-      <HintPath>..\..\..\..\..\..\..\Bin\Silverlight\Microsoft.Practices.Prism.dll</HintPath>
+      <HintPath>..\LibCommon\prism\Silverlight\Microsoft.Practices.Prism.dll</HintPath>
     </Reference>
     <Reference Include="mscorlib" />
     <Reference Include="System.Windows" />

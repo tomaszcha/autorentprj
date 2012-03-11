@@ -47,7 +47,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Microsoft.Practices.Prism">
-      <HintPath>..\..\..\..\..\..\..\Bin\Silverlight\Microsoft.Practices.Prism.dll</HintPath>
+      <HintPath>..\LibCommon\prism\Silverlight\Microsoft.Practices.Prism.dll</HintPath>
     </Reference>
     <Reference Include="mscorlib" />
     <Reference Include="System.ComponentModel.DataAnnotations, Version=2.0.5.0, Culture=neutral, PublicKeyToken=ddd0da4d3e678217" />
@@ -69,6 +69,10 @@
     <Compile Include="Views\IApplicationCreateView.cs" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\Home\Home.csproj">
+      <Project>{F57B68E0-C08C-4B1D-AD13-5B7E1506A84B}</Project>
+      <Name>Home</Name>
+    </ProjectReference>
     <ProjectReference Include="..\ModulesInfrastructure\ModulesInfrastructure.csproj">
       <Project>{9EC7A04C-4450-4C9C-B03F-91ECF50189F3}</Project>
       <Name>ModulesInfrastructure</Name>
