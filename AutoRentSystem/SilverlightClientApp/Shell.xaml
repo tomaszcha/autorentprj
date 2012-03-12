@@ -27,14 +27,17 @@
                        prism:RegionManager.RegionName="MenuRegion"/>
         <ContentControl Grid.Column="0" Grid.Row="2" HorizontalAlignment="Stretch"
                        VerticalAlignment="Stretch"
-                       prism:RegionManager.RegionName="LeftRegion"/>
+                       prism:RegionManager.RegionName="LeftRegion"
+                        Margin="20,0,0,0"/>
         <ContentControl Grid.Column="1" Grid.Row="2" HorizontalAlignment="Stretch"
                        VerticalAlignment="Stretch"
-                       prism:RegionManager.RegionName="RightRegion"/>
+                       prism:RegionManager.RegionName="RightRegion"
+                        Margin="0,0,20,0"/>
         <Grid.Background>
             <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
-                <GradientStop Color="Black" Offset="0" />
-                <GradientStop Color="#EC620505" Offset="0.488" />
+                <GradientStop Color="Black" Offset="0.186" />
+                <GradientStop Color="#ECDBCDCD" Offset="0.89" />
+                <GradientStop Color="#41382626" Offset="1" />
             </LinearGradientBrush>
         </Grid.Background>
     </Grid>
