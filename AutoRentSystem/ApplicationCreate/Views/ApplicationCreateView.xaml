@@ -20,6 +20,8 @@
         </Style>
         <Style x:Key="SComboBox" TargetType="ComboBox">
             <Setter Property="HorizontalAlignment" Value="Left"/>
+            <Setter Property="VerticalAlignment" Value="Center"/>
+            <Setter Property="Height" Value="25"/>
             <Setter Property="Width" Value="250"/>
         </Style>
         <Style x:Key="STextBox" TargetType="TextBox">
@@ -39,7 +41,7 @@
             </Style>
 
         </UserControl.Resources>
-        <Grid x:Name="LayoutRoot" Opacity="0.5" Margin="5" Background="White">
+        <Grid x:Name="LayoutRoot" Opacity="0.7" Margin="5" Background="White">
         <Grid.RowDefinitions>
             <RowDefinition Height="40*"/>
             <RowDefinition Height="40*"/>
