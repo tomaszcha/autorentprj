@@ -6,6 +6,7 @@ using ShellInfrastracture;
 using ModulesInfrastructure.Views;
 using EventInfrastracture;
 using Menu.ModelViews;
+using Microsoft.Practices.ServiceLocation;
 
 namespace Menu
 {
@@ -23,10 +24,15 @@ namespace Menu
             UnityContainer.RegisterType<IMenuViewModel, MenuViewModel>();
         }
 
-        public void onRightRegionNeedChangeEvent(string n)
+        public void onRightRegionNeedChangeEvent(string views)
         {
-                IRegion region = RegionManager.Regions[RegionNames.RightPanelName];                     
-                region.Activate(UnityContainer.Resolve<Home.Views.IHomeView>());
+            IRegion region = RegionManager.Regions[RegionNames.RightPanelName];
+            switch (views)
+            {
+                case "IHomeView":
+                    region.Activate(UnityContainer.Resolve<Home.Views.IHomeView>());
+                    break;
+            }
         }
     }
 }

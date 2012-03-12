@@ -16,36 +16,58 @@ using Microsoft.Practices.Prism.Commands;
 
 namespace Menu.ModelViews
 {
+    /// <summary>
+    /// Module for work with main menu
+    /// </summary>
     public class MenuViewModel  : ViewModelBase, IMenuViewModel
     {
+        #region Constructor
 
         public MenuViewModel(IEventAggregator eventAggregator)
         {
             this.eventAggregator = eventAggregator;
         }
 
-        private string clickOnMenu;
+        #endregion Constructor
+
+        #region Fields
+
+        private string _currentRightRegion;
+
         private IEventAggregator eventAggregator;
 
+        private DelegateCommand<string> _onMenuCliclCommand;
 
-        void OnMenuClick()
-        {
-            {
-                eventAggregator.GetEvent<MenuEvent>().Publish(clickOnMenu);
-            }
-        }
-        private DelegateCommand _onMenuCliclCommand;
+        #endregion Fields
 
+        #region Commands
+
+        /// <summary>
+        /// Happens when you click a menu item. The module is loaded into the right area.
+        /// </summary>
         public ICommand OnMenuCliclCommand
         {
             get
             {
                 if (_onMenuCliclCommand == null)
                 {
-                    _onMenuCliclCommand = new DelegateCommand(OnMenuClick);
+                    _onMenuCliclCommand = new DelegateCommand<string>(OnMenuClick);
                 }
                 return _onMenuCliclCommand;
             }
         }
+
+        #endregion Commands
+
+        #region Private Helpers
+
+        void OnMenuClick(string view)
+        {
+            _currentRightRegion = view;
+            eventAggregator.GetEvent<MenuEvent>().Publish(_currentRightRegion);
+        }
+
+        #endregion Private Helpers
+
     }
 }
