@@ -4,7 +4,7 @@
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d"
-    d:DesignHeight="535" d:DesignWidth="491">
+    d:DesignHeight="496" d:DesignWidth="438" xmlns:toolkit="http://schemas.microsoft.com/winfx/2006/xaml/presentation/toolkit">
     <UserControl.Resources>
         <Style x:Key="SLabelTitle" TargetType="TextBlock">
             <Setter Property="FontWeight" Value="ExtraBlack"/>
@@ -19,25 +19,47 @@
             <Setter Property="Margin" Value="30,15,15,0"/>
         </Style>
         <Style x:Key="SComboBox" TargetType="ComboBox">
-            <Setter Property="Margin" Value="0,10,30,5"/>
+            <Setter Property="HorizontalAlignment" Value="Left"/>
+            <Setter Property="Width" Value="250"/>
         </Style>
-    </UserControl.Resources>
+        <Style x:Key="STextBox" TargetType="TextBox">
+            <Setter Property="VerticalAlignment" Value="Center"/>
+            <Setter Property="HorizontalAlignment" Value="Left"/>
+            <Setter Property="Width" Value="250"/>
+        </Style>
+            <Style x:Key="MenuButton" TargetType="Button">
+                <Setter Property="Background" Value="Red"/>
+                <Setter Property="Width" Value="auto"/>
+                <Setter Property="MinWidth" Value="150"/>
+                <Setter Property="Margin" Value="3,0,3,0"/>
+                <Setter Property="Opacity" Value="0.6"/>
+                <Setter Property="Foreground" Value="Black"/>
+                <Setter Property="FontWeight" Value="ExtraBlack"/>
+                <Setter Property="FontSize" Value="13"/>
+            </Style>
+
+        </UserControl.Resources>
         <Grid x:Name="LayoutRoot" Opacity="0.5" Margin="5" Background="White">
         <Grid.RowDefinitions>
-            <RowDefinition Height="40"/>
-            <RowDefinition Height="40"/>
-            <RowDefinition Height="40"/>
-            <RowDefinition Height="40"/>
-            <RowDefinition Height="40"/>
-            <RowDefinition Height="40"/>
-            <RowDefinition Height="40"/>
-            <RowDefinition Height="40"/>
-            <RowDefinition Height="100*"/>
-            <RowDefinition Height="10*"/>
+            <RowDefinition Height="40*"/>
+            <RowDefinition Height="40*"/>
+            <RowDefinition Height="40*"/>
+            <RowDefinition Height="40*"/>
+            <RowDefinition Height="40*"/>
+            <RowDefinition Height="40*"/>
+            <RowDefinition Height="40*"/>
+            <RowDefinition Height="40*"/>
+            <RowDefinition Height="40*"/>
+            <RowDefinition Height="40*"/>
+            <RowDefinition Height="40*"/>
+            <RowDefinition Height="40*"/>
+            <RowDefinition Height="40*"/>
+            <RowDefinition Height="40*"/>
+            <RowDefinition Height="40*"/>
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="150"/>
-            <ColumnDefinition Width="350"/>
+            <ColumnDefinition Width="320"/>
         </Grid.ColumnDefinitions>
         <TextBlock Grid.Column="0" Grid.Row="0" Text="Pickup: " Style="{StaticResource SLabelTitle}"/>
         <TextBlock Grid.Column="0" Grid.Row="1" Text="City: " Style="{StaticResource SLabel}"/>
@@ -51,6 +73,17 @@
         <ComboBox Name="cmbBx_ReturnDept" Grid.Column="1" Grid.Row="5" Style="{StaticResource SComboBox}"/>
         <TextBlock Grid.Column="0" Grid.Row="6" Text="Period: " Style="{StaticResource SLabelTitle}"/>
         <TextBlock Grid.Column="0" Grid.Row="7" Text="Pickup: " Style="{StaticResource SLabel}"/>
+        <sdk:DatePicker Grid.Column="1" Grid.Row="7"  Width="130" VerticalAlignment="Center" HorizontalAlignment="Left"/>
+        <sdk:DatePicker Grid.Column="1" Grid.Row="8"  Width="130" VerticalAlignment="Center" HorizontalAlignment="Left"/>
         <TextBlock Grid.Column="0" Grid.Row="8" Text="Return: " Style="{StaticResource SLabel}"/>
+        <TextBlock Grid.Column="0" Grid.Row="9" Text="Personal data: " Style="{StaticResource SLabelTitle}"/>
+        <TextBlock Grid.Column="0" Grid.Row="10" Text="First name: " Style="{StaticResource SLabel}"/>
+        <TextBox Grid.Column="1" Grid.Row="10" Style="{StaticResource STextBox}"/>
+        <TextBlock Grid.Column="0" Grid.Row="11" Text="Last name: " Style="{StaticResource SLabel}"/>
+        <TextBox Grid.Column="1" Grid.Row="11" Style="{StaticResource STextBox}" />
+        <TextBlock Grid.Column="0" Grid.Row="12" Text="Selected car: " Style="{StaticResource SLabelTitle}"/>
+        <TextBox Grid.Column="1" Grid.Row="12" Style="{StaticResource STextBox}" />
+        <Button Grid.Column="1" Grid.Row="13" Content="Send" Style="{StaticResource MenuButton}" Width="20"/>
+        <Rectangle Grid.Column="1" Grid.Row="14" Height="40"/>
     </Grid>
 </UserControl>
