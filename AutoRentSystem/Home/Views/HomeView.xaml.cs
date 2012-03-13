@@ -9,10 +9,11 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Animation;
 using System.Windows.Shapes;
+using ModulesInfrastructure.Views;
 
 namespace Home.Views
 {
-    public partial class HomeView : UserControl, IHomeView
+    public partial class HomeView : UserControl, IViewRightRegion
     {
         public HomeView()
         {

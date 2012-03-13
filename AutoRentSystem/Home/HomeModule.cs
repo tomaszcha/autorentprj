@@ -2,6 +2,7 @@
 using Microsoft.Practices.Unity;
 using ModulesInfrastructure;
 using Home.Views;
+using ModulesInfrastructure.Views;
 
 namespace Home
 {
@@ -9,12 +10,12 @@ namespace Home
     {
         protected override void RegisterViewsInRegions()
         {
-            RegionManager.RegisterViewWithRegion("RightRegion", () => UnityContainer.Resolve<IHomeView>());
+            RegionManager.RegisterViewWithRegion("RightRegion", () => UnityContainer.Resolve<IViewRightRegion>("HomeView"));
         }
 
         protected override void RegisterTypesDependencies()
         {
-            UnityContainer.RegisterType<IHomeView, HomeView>(new ContainerControlledLifetimeManager());
+            UnityContainer.RegisterType<IViewRightRegion, HomeView>("HomeView", new ContainerControlledLifetimeManager());
         }
     }
 }
