@@ -27,15 +27,7 @@ namespace Menu
         public void onRightRegionNeedChangeEvent(string views)
         {
             IRegion region = RegionManager.Regions[RegionNames.RightPanelName];
-            //switch (views)
-            {
-                //case "IHomeView":
-                    region.Activate(UnityContainer.Resolve<IViewRightRegion>(views));
-                //    break;
-                //case "IAutoParkView":
-                //    region.Activate(UnityContainer.Resolve<AutoPark.Views.IAutoParkView>());
-                //    break;
-            }
+            region.Activate(UnityContainer.Resolve<IViewRightRegion>(views));
         }
     }
 }
