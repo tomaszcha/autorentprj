@@ -10,20 +10,22 @@ using System.Windows.Media.Animation;
 using System.Windows.Shapes;
 using AutoPark.Views;
 using Microsoft.Practices.Prism.Regions;
+using Microsoft.Practices.Unity;
 using ModulesInfrastructure;
+
 
 namespace AutoPark
 {
-    public class AutoParkModule //: ModuleBase
-    {/*
+    public class AutoParkModule: ModuleBase
+    {
         protected override void RegisterViewsInRegions()
         {
-            RegionManager.RegisterViewWithRegion("RightRegion", typeof(AutoParkView));
+            RegionManager.RegisterViewWithRegion("RightRegion", () => UnityContainer.Resolve<IAutoParkView>());
         }
 
         protected override void RegisterTypesDependencies()
         {
-            //UnityContainer.RegisterType<IOrderListViewModel, OrderListViewModel>();
-        }*/
+            UnityContainer.RegisterType<IAutoParkView, AutoParkView>(new ContainerControlledLifetimeManager());
+        }
     }
 }
