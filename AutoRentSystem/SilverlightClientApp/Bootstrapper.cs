@@ -57,6 +57,7 @@ namespace SilverlightClientApp
             moduleCatalog.AddModule(typeof(ApplicationCreate.ApplicationCreateModule));
             moduleCatalog.AddModule(typeof(Home.HomeModule));
             moduleCatalog.AddModule(typeof(Menu.MenuModule));
+            moduleCatalog.AddModule(typeof(AutoPark.AutoParkModule));
         }
 
         #endregion Overrides of Bootstrapper
