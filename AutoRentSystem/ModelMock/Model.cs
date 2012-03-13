@@ -41,6 +41,12 @@ namespace ModelMock
 
 
         /// <summary>
+        /// Engine capacity of the auto
+        /// </summary>
+        public string EngineCapacity { get; set; }
+
+
+        /// <summary>
         /// Photo of the auto model
         /// </summary>
         public byte[] Photo { get; set; }
@@ -56,5 +62,11 @@ namespace ModelMock
         /// Rental rate of one day
         /// </summary>
         public float DayRate { get; set; }
+
+
+        /// <summary>
+        /// Deposit for the rental auto
+        /// </summary>
+        public float Deposit { get; set; }
     }
 }
