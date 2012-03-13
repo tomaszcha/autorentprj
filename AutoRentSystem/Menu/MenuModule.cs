@@ -32,6 +32,9 @@ namespace Menu
                 case "IHomeView":
                     region.Activate(UnityContainer.Resolve<Home.Views.IHomeView>());
                     break;
+                case "IAutoParkView":
+                    region.Activate(UnityContainer.Resolve<AutoPark.Views.IAutoParkView>());
+                    break;
             }
         }
     }

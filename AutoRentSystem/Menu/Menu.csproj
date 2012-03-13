@@ -70,6 +70,10 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\AutoPark\AutoPark.csproj">
+      <Project>{16C13BB6-A184-4383-8CCA-22B4EF96265F}</Project>
+      <Name>AutoPark</Name>
+    </ProjectReference>
     <ProjectReference Include="..\EventInfrastracture\EventInfrastracture.csproj">
       <Project>{8B4993D7-A007-4A0E-8EF4-B7323DAAEEEE}</Project>
       <Name>EventInfrastracture</Name>
