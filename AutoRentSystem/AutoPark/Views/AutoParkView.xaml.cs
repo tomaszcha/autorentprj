@@ -19,17 +19,18 @@ namespace AutoPark.Views
         public AutoParkView()
         {
             InitializeComponent();
+            
         }
         
         #region Implementation of IAutoParkView
-
-        [Dependency]
+        
+       /* [Dependency]
         public IAutoParkViewModel ViewModel
         {
             get { return DataContext as IAutoParkViewModel; }
             set { DataContext = value; }
         }
-
+        */
         #endregion
     }
 }
