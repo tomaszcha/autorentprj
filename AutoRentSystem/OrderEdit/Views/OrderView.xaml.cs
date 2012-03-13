@@ -19,6 +19,7 @@ namespace OrderEdit.Views
         public OrderView()
         {
             InitializeComponent();
+            
         }
 
         #region Implementation of IOrderView
