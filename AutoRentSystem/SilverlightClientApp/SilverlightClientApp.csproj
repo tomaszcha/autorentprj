@@ -118,6 +118,10 @@
       <Project>{B38EA525-2324-4AC9-AE96-649CBB9E5F3C}</Project>
       <Name>ApplicationCreate</Name>
     </ProjectReference>
+    <ProjectReference Include="..\AutoPark\AutoPark.csproj">
+      <Project>{16C13BB6-A184-4383-8CCA-22B4EF96265F}</Project>
+      <Name>AutoPark</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Home\Home.csproj">
       <Project>{F57B68E0-C08C-4B1D-AD13-5B7E1506A84B}</Project>
       <Name>Home</Name>
