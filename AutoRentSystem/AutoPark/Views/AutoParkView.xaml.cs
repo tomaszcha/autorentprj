@@ -12,10 +12,11 @@ using System.Windows.Shapes;
 using AutoPark.ViewModels;
 using Microsoft.Practices.Unity;
 using ModelMock;
+using ModulesInfrastructure.Views;
 
 namespace AutoPark.Views
 {
-    public partial class AutoParkView : UserControl, IAutoParkView
+    public partial class AutoParkView : UserControl, IViewRightRegion
     {
         public List<Model> list;
 

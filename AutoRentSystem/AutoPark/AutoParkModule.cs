@@ -12,6 +12,7 @@ using AutoPark.Views;
 using Microsoft.Practices.Prism.Regions;
 using Microsoft.Practices.Unity;
 using ModulesInfrastructure;
+using ModulesInfrastructure.Views;
 
 
 namespace AutoPark
@@ -20,12 +21,12 @@ namespace AutoPark
     {
         protected override void RegisterViewsInRegions()
         {
-            RegionManager.RegisterViewWithRegion("RightRegion", () => UnityContainer.Resolve<IAutoParkView>());
+            RegionManager.RegisterViewWithRegion("RightRegion", () => UnityContainer.Resolve<IViewRightRegion>("AutoParkView"));
         }
 
         protected override void RegisterTypesDependencies()
         {
-            UnityContainer.RegisterType<IAutoParkView, AutoParkView>(new ContainerControlledLifetimeManager());
+            UnityContainer.RegisterType<IViewRightRegion, AutoParkView>("AutoParkView", new ContainerControlledLifetimeManager());
         }
     }
 }
