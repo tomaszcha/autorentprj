@@ -32,8 +32,6 @@ namespace Menu.ModelViews
 
         #region Fields
 
-        private string _currentRightRegion;
-
         private IEventAggregator eventAggregator;
 
         private DelegateCommand<string> _onMenuCliclCommand;
@@ -63,8 +61,7 @@ namespace Menu.ModelViews
 
         void OnMenuClick(string view)
         {
-            _currentRightRegion = view;
-            eventAggregator.GetEvent<MenuEvent>().Publish(_currentRightRegion);
+            eventAggregator.GetEvent<MenuEvent>().Publish(view);
         }
 
         #endregion Private Helpers
