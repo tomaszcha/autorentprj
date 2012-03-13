@@ -4,14 +4,15 @@
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d" xmlns:Resources="clr-namespace:AutoPark.Properties"
-             d:DesignHeight="600" d:DesignWidth="600">
+             d:DesignHeight="600" d:DesignWidth="600" Height="500" Width="800">
     <UserControl.Resources>
         <Resources:Resources x:Key="Res"/>
     </UserControl.Resources>
-    <Grid x:Name="LayoutRoot" Background="White">
-        <ListBox x:Name="myList" BorderThickness="1" Margin="5">            
-            <ListBoxItem>
-                <Grid>
+    <Grid x:Name="LayoutRoot" Background="White" HorizontalAlignment="Center" >
+       <ListBox x:Name="myList" BorderThickness="1" Margin="10, 5, 5, 5" >
+       <ListBox.ItemTemplate>
+                <DataTemplate>
+                    <Grid Width="640">
                     <Grid.Background>
                         <LinearGradientBrush StartPoint="0,0" EndPoint="0,1">
                             <GradientStop Color="White" Offset="0"/>
@@ -19,10 +20,10 @@
                         </LinearGradientBrush>
                     </Grid.Background>
                     <Grid.ColumnDefinitions>
-                        <ColumnDefinition Width="350"/>
-                        <ColumnDefinition Width="150"/>
+                        <ColumnDefinition Width="420"/>
+                        <ColumnDefinition Width="*"/>                       
                     </Grid.ColumnDefinitions>
-                    <StackPanel Grid.Column="0" VerticalAlignment="Stretch">
+                    <StackPanel VerticalAlignment="Stretch" Width="420">
                         <StackPanel Orientation="Horizontal" Height="30">                            
                             <TextBlock FontSize="14" Text="{Binding Name}"/>                            
                             <TextBlock FontSize="14" Text="{Binding Make.Name}" />
@@ -47,12 +48,11 @@
                             <TextBlock FontSize="12" Text="{Binding Deposit, Source={StaticResource Res}}"/>
                             <TextBlock FontSize="12" Margin="5,0,0,0" Text="{Binding Deposit}" />
                         </StackPanel>
-                    </StackPanel>
-                    <StackPanel Grid.Column="1" Margin="0,10,0,0">
-                        <Image Width="150" Height="150" Source="/AutoPark;component/Images/Mazda.jpg" />
-                    </StackPanel>
+                    </StackPanel>                    
+                    <Image Width="200" Height="150" Source="/AutoPark;component/Images/Mazda.jpg" Grid.Column="1" />
                 </Grid>
-            </ListBoxItem>
+                </DataTemplate>
+            </ListBox.ItemTemplate>
         </ListBox>
     </Grid>
 </UserControl>
