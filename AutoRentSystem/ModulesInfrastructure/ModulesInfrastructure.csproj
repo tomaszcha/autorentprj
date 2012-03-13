@@ -66,6 +66,9 @@
     <Compile Include="ViewModels\ViewModelBase.cs" />
     <Compile Include="Views\IShellPage.cs" />
     <Compile Include="Views\IView.cs" />
+    <Compile Include="Views\IViewLeftRegion.cs" />
+    <Compile Include="Views\IViewMenuRegion.cs" />
+    <Compile Include="Views\IViewRightRegion.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\ShellInfrastracture\ShellInfrastracture.csproj">
