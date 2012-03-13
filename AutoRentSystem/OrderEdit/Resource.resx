@@ -117,24 +117,76 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="Auto" xml:space="preserve">
+    <value>Auto</value>
+    <comment>Data about the auto</comment>
+  </data>
+  <data name="City" xml:space="preserve">
+    <value>City</value>
+    <comment>City</comment>
+  </data>
   <data name="Customer" xml:space="preserve">
     <value>Customer</value>
     <comment>Customer data</comment>
   </data>
+  <data name="Date" xml:space="preserve">
+    <value>Date</value>
+    <comment>Date</comment>
+  </data>
+  <data name="Department" xml:space="preserve">
+    <value>Department</value>
+    <comment>Department</comment>
+  </data>
+  <data name="EditCustomer" xml:space="preserve">
+    <value>Edit customer</value>
+    <comment>Edit customer</comment>
+  </data>
   <data name="FirstName" xml:space="preserve">
-    <value>FirstName</value>
+    <value>First name</value>
     <comment>Customer first name</comment>
   </data>
   <data name="LastName" xml:space="preserve">
-    <value>LastName</value>
+    <value>Last name</value>
     <comment>Customer last name</comment>
+  </data>
+  <data name="Make" xml:space="preserve">
+    <value>Make</value>
+    <comment>Make of the auto</comment>
+  </data>
+  <data name="Model" xml:space="preserve">
+    <value>Model</value>
+    <comment>Model of the auto</comment>
+  </data>
+  <data name="NewCustomer" xml:space="preserve">
+    <value>New customer</value>
+    <comment>Create new customer</comment>
+  </data>
+  <data name="Number" xml:space="preserve">
+    <value>Number</value>
+    <comment>Number of the auto</comment>
   </data>
   <data name="OrderNumber" xml:space="preserve">
     <value>Order #</value>
     <comment>Order number</comment>
   </data>
+  <data name="OrderStatus" xml:space="preserve">
+    <value>Order status</value>
+    <comment>Status of the order</comment>
+  </data>
   <data name="Passport" xml:space="preserve">
     <value>Passport</value>
     <comment>Passport data</comment>
+  </data>
+  <data name="Pickup" xml:space="preserve">
+    <value>Pickup</value>
+    <comment>Pickup data</comment>
+  </data>
+  <data name="RentalType" xml:space="preserve">
+    <value>Rental type</value>
+    <comment>Type of the rent</comment>
+  </data>
+  <data name="Return" xml:space="preserve">
+    <value>Return</value>
+    <comment>Return</comment>
   </data>
 </root>

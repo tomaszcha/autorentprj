@@ -61,6 +61,24 @@ namespace OrderEdit {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Auto.
+        /// </summary>
+        public static string Auto {
+            get {
+                return ResourceManager.GetString("Auto", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to City.
+        /// </summary>
+        public static string City {
+            get {
+                return ResourceManager.GetString("City", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Customer.
         /// </summary>
         public static string Customer {
@@ -70,7 +88,34 @@ namespace OrderEdit {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to FirstName.
+        ///   Looks up a localized string similar to Date.
+        /// </summary>
+        public static string Date {
+            get {
+                return ResourceManager.GetString("Date", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Department.
+        /// </summary>
+        public static string Department {
+            get {
+                return ResourceManager.GetString("Department", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Edit customer.
+        /// </summary>
+        public static string EditCustomer {
+            get {
+                return ResourceManager.GetString("EditCustomer", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to First name.
         /// </summary>
         public static string FirstName {
             get {
@@ -79,11 +124,47 @@ namespace OrderEdit {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to LastName.
+        ///   Looks up a localized string similar to Last name.
         /// </summary>
         public static string LastName {
             get {
                 return ResourceManager.GetString("LastName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Make.
+        /// </summary>
+        public static string Make {
+            get {
+                return ResourceManager.GetString("Make", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Model.
+        /// </summary>
+        public static string Model {
+            get {
+                return ResourceManager.GetString("Model", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to New customer.
+        /// </summary>
+        public static string NewCustomer {
+            get {
+                return ResourceManager.GetString("NewCustomer", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Number.
+        /// </summary>
+        public static string Number {
+            get {
+                return ResourceManager.GetString("Number", resourceCulture);
             }
         }
         
@@ -97,11 +178,47 @@ namespace OrderEdit {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Order status.
+        /// </summary>
+        public static string OrderStatus {
+            get {
+                return ResourceManager.GetString("OrderStatus", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Passport.
         /// </summary>
         public static string Passport {
             get {
                 return ResourceManager.GetString("Passport", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Pickup.
+        /// </summary>
+        public static string Pickup {
+            get {
+                return ResourceManager.GetString("Pickup", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Rental type.
+        /// </summary>
+        public static string RentalType {
+            get {
+                return ResourceManager.GetString("RentalType", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Return.
+        /// </summary>
+        public static string Return {
+            get {
+                return ResourceManager.GetString("Return", resourceCulture);
             }
         }
     }

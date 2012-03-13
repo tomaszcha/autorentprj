@@ -15,7 +15,7 @@
         <Grid.RowDefinitions>
             <RowDefinition Height="50" />
             <RowDefinition Height="200" />
-            <RowDefinition Height="120" />
+            <RowDefinition Height="160" />
             <RowDefinition Height="*" />                              
         </Grid.RowDefinitions>
         <StackPanel Orientation="Vertical" Grid.Column="0" Grid.Row="0">
@@ -25,8 +25,8 @@
             </StackPanel>
        </StackPanel>       
         <StackPanel Orientation="Vertical" Grid.Column="1" Grid.Row="0">
-            <StackPanel Orientation="Horizontal" Margin="5,10,5,5">                
-                <TextBlock Height="23" Name="txtBlockOrderStatus" Text="Order status" VerticalAlignment="Top" Width="125" Margin="5,0,0,0" />
+            <StackPanel Orientation="Horizontal" Margin="5,10,5,5">
+                <TextBlock Height="23" Name="txtBlockOrderStatus" Text="{Binding OrderStatus, Source={StaticResource Res}}" VerticalAlignment="Top" Width="125" Margin="5,0,0,0" />
                 <ComboBox Height="23" Name="cmbBoxStatus" Width="160" VerticalAlignment="Top"/>
             </StackPanel>
         </StackPanel>
@@ -48,55 +48,63 @@
                 <TextBox Height="23" Name="txtBoxLastName" VerticalAlignment="Top" Width="160"/>
             </StackPanel>
             <StackPanel Orientation="Horizontal" Margin="5,10,5,5" HorizontalAlignment="Center">
-                <Button Height="23" Name="btnNewCustomer" Content="New customer" VerticalAlignment="Top" Width="100" />
-                <Button Height="23" Name="btnEditCustomer" Content="Edit customer" VerticalAlignment="Top" Width="100" Margin="4,0,0,0" />
+                <Button Height="23" Name="btnNewCustomer" Content="{Binding NewCustomer, Source={StaticResource Res}}" VerticalAlignment="Top" Width="100" />
+                <Button Height="23" Name="btnEditCustomer" Content="{Binding EditCustomer, Source={StaticResource Res}}" VerticalAlignment="Top" Width="100" Margin="4,0,0,0" />
             </StackPanel>
         </StackPanel>
         <StackPanel Orientation="Vertical" Grid.Column="1" Grid.Row="1">
             <StackPanel Orientation="Horizontal" Margin="5,10,5,5">
-                <TextBlock Height="23" Name="txtBlockAuto" Text="Auto" VerticalAlignment="Top" />
+                <TextBlock Height="23" Name="txtBlockAuto" Text="{Binding Auto, Source={StaticResource Res}}" VerticalAlignment="Top" />
             </StackPanel>
             <StackPanel Orientation="Horizontal" Margin="5,10,5,5">
-                <TextBlock Height="23" Name="txtBlockAutoNumber" Text="Number" VerticalAlignment="Top" Width ="125"  />
+                <TextBlock Height="23" Name="txtBlockAutoNumber" Text="{Binding Number, Source={StaticResource Res}}" VerticalAlignment="Top" Width ="125"  />
                 <TextBox Height="23" Name="txtAutoNumber" VerticalAlignment="Top" Width="125" />
                 <Button Height="23" Name="btnFindAuto" VerticalAlignment="Top" Width="35" />
             </StackPanel>
             <StackPanel Orientation="Horizontal" Margin="5,10,5,5">
-                <TextBlock Height="23" Name="txtBlockMake" Text="Make" VerticalAlignment="Top" Width ="125"  />
+                <TextBlock Height="23" Name="txtBlockMake" Text="{Binding Make, Source={StaticResource Res}}" VerticalAlignment="Top" Width ="125"  />
                 <ComboBox Height="23" Name="cmbBoxMake" Width="160" VerticalAlignment="Top"/>
             </StackPanel>
             <StackPanel Orientation="Horizontal" Margin="5,10,5,5">
-                <TextBlock Height="23" Name="txtBlockModel" Text="Model" VerticalAlignment="Top" Width ="125"  />
+                <TextBlock Height="23" Name="txtBlockModel" Text="{Binding Model, Source={StaticResource Res}}" VerticalAlignment="Top" Width ="125"  />
                 <ComboBox Height="23" Name="cmbBoxModel" Width="160" VerticalAlignment="Top"/>                
             </StackPanel>
             <StackPanel Orientation="Horizontal" Margin="5,10,5,5">
-                <TextBlock Height="23" Name="txtBlockRentalType" Text="Rental type" VerticalAlignment="Top" Width ="125"  />
+                <TextBlock Height="23" Name="txtBlockRentalType" Text="{Binding RentalType, Source={StaticResource Res}}" VerticalAlignment="Top" Width ="125"  />
                 <ComboBox Height="23" Name="cmbBoxRentalType" Width="160" VerticalAlignment="Top"/>
             </StackPanel>
         </StackPanel>
         <StackPanel Orientation="Vertical" Grid.Column="0" Grid.Row="2">
             <StackPanel Orientation="Horizontal" Margin="5,10,5,5">
-                <TextBlock Height="23" Name="txtBlockPickup" Text="Pickup" VerticalAlignment="Top" />
+                <TextBlock Height="23" Name="txtBlockPickup" Text="{Binding Pickup, Source={StaticResource Res}}" VerticalAlignment="Top" />
             </StackPanel>
             <StackPanel Orientation="Horizontal" Margin="5,10,5,5">
-                <TextBlock Height="23" Name="txtBlockPickupDept" Text="Department" VerticalAlignment="Top" Width ="125"  />
-                <sdk:DatePicker Height="23" Name="datePickerPickupDept" VerticalAlignment="Top" Width="160" />
+                <TextBlock Height="23" Name="txtBlockPickupCity" Text="{Binding City, Source={StaticResource Res}}" VerticalAlignment="Top" Width ="125"  />
+                <ComboBox Height="23" Name="cmbBoxPickupCity" Width="160" VerticalAlignment="Top"/>
             </StackPanel>
             <StackPanel Orientation="Horizontal" Margin="5,10,5,5">
-                <TextBlock Height="23" Name="txtBlockPickupDate" Text="Date" VerticalAlignment="Top" Width ="125"  />
+                <TextBlock Height="23" Name="txtBlockPickupDept" Text="{Binding Department, Source={StaticResource Res}}" VerticalAlignment="Top" Width ="125"  />               
+                <ComboBox Height="23" Name="cmbBoxPickupDept" Width="160" VerticalAlignment="Top"/>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal" Margin="5,10,5,5">
+                <TextBlock Height="23" Name="txtBlockPickupDate" Text="{Binding Date, Source={StaticResource Res}}" VerticalAlignment="Top" Width ="125"  />
                 <sdk:DatePicker Height="23" Name="datePickerPickupDate" VerticalAlignment="Top" Width="160" />                        
             </StackPanel>            
         </StackPanel>
         <StackPanel Orientation="Vertical" Grid.Column="1" Grid.Row="2">
             <StackPanel Orientation="Horizontal" Margin="5,10,5,5">
-                <TextBlock Height="23" Name="txtBlockReturn" Text="Return" VerticalAlignment="Top" />
+                <TextBlock Height="23" Name="txtBlockReturn" Text="{Binding Return, Source={StaticResource Res}}" VerticalAlignment="Top" />
             </StackPanel>
             <StackPanel Orientation="Horizontal" Margin="5,10,5,5">
-                <TextBlock Height="23" Name="txtBlockReturnDept" Text="Department" VerticalAlignment="Top" Width ="125"  />
-                <sdk:DatePicker Height="23" Name="datePickerReturnDept" VerticalAlignment="Top" Width="160" />
+                <TextBlock Height="23" Name="txtBlockReturnCity" Text="{Binding City, Source={StaticResource Res}}" VerticalAlignment="Top" Width ="125"  />
+                <ComboBox Height="23" Name="cmbBoxReturnCity" Width="160" VerticalAlignment="Top"/>
             </StackPanel>
             <StackPanel Orientation="Horizontal" Margin="5,10,5,5">
-                <TextBlock Height="23" Name="txtBlockReturnDate" Text="Date" VerticalAlignment="Top" Width ="125"  />
+                <TextBlock Height="23" Name="txtBlockReturnDept" Text="{Binding Department, Source={StaticResource Res}}" VerticalAlignment="Top" Width ="125"  />
+                <ComboBox Height="23" Name="cmbBoxReturnDept" Width="160" VerticalAlignment="Top"/>
+            </StackPanel>           
+            <StackPanel Orientation="Horizontal" Margin="5,10,5,5">
+                <TextBlock Height="23" Name="txtBlockReturnDate" Text="{Binding Date, Source={StaticResource Res}}" VerticalAlignment="Top" Width ="125"  />
                 <sdk:DatePicker Height="23" Name="datePickerReturnDate" VerticalAlignment="Top" Width="160" />
             </StackPanel>
         </StackPanel>
