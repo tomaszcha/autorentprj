@@ -14,7 +14,7 @@ namespace Menu
     {
         protected override void RegisterViewsInRegions()
         {
-            RegionManager.RegisterViewWithRegion(RegionNames.RightPanelName, () => UnityContainer.Resolve<IMenuView>());
+            RegionManager.RegisterViewWithRegion(RegionNames.MenuPanelName, () => UnityContainer.Resolve<IMenuView>());
             EventAggregator.GetEvent<MenuEvent>().Subscribe(onRightRegionNeedChangeEvent);
         }
 
