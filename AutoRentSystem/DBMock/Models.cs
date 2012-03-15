@@ -18,7 +18,7 @@ namespace DBMock
                                                  EngineCapacity = "2",
                                                  Seats = 5,
                                                  DayRate = 700,
-                                                 HourRate = 300,
+                                                 KmRate = 10,
                                                  Deposit = 0
                                              },
                                          new Model
@@ -29,7 +29,7 @@ namespace DBMock
                                                  EngineCapacity = "2.2",
                                                  Seats = 5,
                                                  DayRate = 900,
-                                                 HourRate = 400,
+                                                 KmRate = 12,
                                                  Deposit = 0
                                              },
                                          new Model
@@ -40,7 +40,7 @@ namespace DBMock
                                                  EngineCapacity = "2",
                                                  Seats = 5,
                                                  DayRate = 1100,
-                                                 HourRate = 500,
+                                                 KmRate = 15,
                                                  Deposit = 1100
                                              }
 
