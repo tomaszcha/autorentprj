@@ -55,7 +55,7 @@ namespace ModelMock
         /// <summary>
         /// Rental rate of one hour 
         /// </summary>
-        public float HourRate { get; set; }
+        public float KmRate { get; set; }
 
 
         /// <summary>
