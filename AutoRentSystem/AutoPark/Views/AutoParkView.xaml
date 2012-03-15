@@ -9,7 +9,7 @@
         <Resources:Resources x:Key="Res"/>
     </UserControl.Resources>
     <Grid x:Name="LayoutRoot" Background="White" HorizontalAlignment="Center" >
-       <ListBox x:Name="myList" BorderThickness="1" Margin="10, 5, 5, 5" >
+       <ListBox x:Name="myList" BorderThickness="1" Margin="10, 5, 5, 5" ItemsSource="{Binding Models}">
        <ListBox.ItemTemplate>
                 <DataTemplate>
                     <Grid Width="640">
