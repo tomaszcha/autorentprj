@@ -103,6 +103,10 @@
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\DBMock\DBMock.csproj">
+      <Project>{9CC1BDB1-06C6-46B8-A591-DB7B632579D3}</Project>
+      <Name>DBMock</Name>
+    </ProjectReference>
     <ProjectReference Include="..\ModelMock\ModelMock.csproj">
       <Project>{D60BD72C-4FDD-4A83-ADD3-D57F0D998A68}</Project>
       <Name>ModelMock</Name>
@@ -111,9 +115,16 @@
       <Project>{9EC7A04C-4450-4C9C-B03F-91ECF50189F3}</Project>
       <Name>ModulesInfrastructure</Name>
     </ProjectReference>
+    <ProjectReference Include="..\ShellInfrastracture\ShellInfrastracture.csproj">
+      <Project>{E8312A08-18FE-4A44-A412-91D0B079AE21}</Project>
+      <Name>ShellInfrastracture</Name>
+    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Images\Mazda.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Silverlight\$(SilverlightVersion)\Microsoft.Silverlight.CSharp.targets" />
   <ProjectExtensions>
