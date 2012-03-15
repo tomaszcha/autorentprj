@@ -22,7 +22,7 @@ namespace ModulesInfrastructure.ViewModels
             _dayRate = model.DayRate;
             _deposit = model.Deposit;
             _engineCapacity = model.EngineCapacity;
-            _hourRate = model.HourRate;
+            _hourRate = model.KmRate;
             _id = model.Id;
             _name = model.Name;
             _photo = model.Photo;
