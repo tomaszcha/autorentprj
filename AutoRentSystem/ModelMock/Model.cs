@@ -68,5 +68,11 @@ namespace ModelMock
         /// Deposit for the rental auto
         /// </summary>
         public float Deposit { get; set; }
+
+
+        /// <summary>
+        /// category of the auto
+        /// </summary>
+        public Category Category { get; set; }
     }
 }
