@@ -3,33 +3,39 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 
-namespace SilverlightClientApp.Web.Model
+namespace SilverlightClientApp.Web.DbModel
 {
     /// <summary>
-    /// Describes purchaser object
+    /// Describes technical service object
     /// </summary>
-    public class Purchaser
+    public class TechnicalService
     {
         /// <summary>
-        /// Unique identifier of the purchaser
+        /// Unique identifier of the technical service
         /// </summary>
         public int Id { get; set; }
 
 
         /// <summary>
-        /// City where the purchaser is located
+        /// Name of the technical service
+        /// </summary>
+        public string Name { get; set; }
+
+
+        /// <summary>
+        /// City where the technical service is located
         /// </summary>
         public City City { get; set; }
 
 
         /// <summary>
-        /// Address within the city where the purchaser is located
+        /// Address of the technical service within the city
         /// </summary>
         public string Address { get; set; }
 
 
         /// <summary>
-        /// Contact phone number of the purchaser
+        /// Technical service contact phone number
         /// </summary>
         public string Phone { get; set; }
     }

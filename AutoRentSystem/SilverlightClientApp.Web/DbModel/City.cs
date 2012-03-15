@@ -3,21 +3,21 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 
-namespace SilverlightClientApp.Web.Model
+namespace SilverlightClientApp.Web.DbModel
 {
     /// <summary>
-    /// Describes make of the auto 
+    /// Describes city object
     /// </summary>
-    public class Make
+    public class City
     {
         /// <summary>
-        /// Unique identifier of the make
+        /// Unique identifier of the city
         /// </summary>
         public int Id { get; set; }
 
 
         /// <summary>
-        /// Name of the make 
+        /// City name
         /// </summary>
         public string Name { get; set; }
     }

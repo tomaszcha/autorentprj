@@ -3,33 +3,45 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 
-namespace SilverlightClientApp.Web.Model
+namespace SilverlightClientApp.Web.DbModel
 {
     /// <summary>
-    /// Describes ordinary damage object
+    /// Describes extra damage object
     /// </summary>
-    public class OrdinaryDamage
+    public class ExtraDamage
     {
         /// <summary>
-        /// Unique identifier of the ordinary damage
+        /// Unique identifier of the extra damage 
         /// </summary>
         public int Id { get; set; }
 
 
         /// <summary>
-        /// The auto that is damaged
+        /// Auto that is damaged
         /// </summary>
         public Auto Auto { get; set; }
 
 
         /// <summary>
-        /// The damage with fixed price
+        /// Name of the extra damage 
         /// </summary>
-        public Damage Damage { get; set; }
+        public string Name { get; set; }
 
 
         /// <summary>
-        /// The date of the damage
+        /// Description of the extra damage 
+        /// </summary>
+        public string Description { get; set; }
+
+
+        /// <summary>
+        /// Value of the extra damage 
+        /// </summary>
+        public float Price { get; set; }
+
+
+        /// <summary>
+        /// Date of the extra damage 
         /// </summary>
         public DateTime DamageDate { get; set; }
 
