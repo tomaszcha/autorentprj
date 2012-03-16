@@ -88,11 +88,11 @@ namespace AutoPark.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Hour rate:.
+        ///   Looks up a localized string similar to Km rate:.
         /// </summary>
-        public static string HourRate {
+        public static string KmRate {
             get {
-                return ResourceManager.GetString("HourRate", resourceCulture);
+                return ResourceManager.GetString("KmRate", resourceCulture);
             }
         }
         

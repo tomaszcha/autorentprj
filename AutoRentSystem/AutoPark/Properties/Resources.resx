@@ -129,8 +129,8 @@
     <value>Engine capacity:</value>
     <comment>Engine capacity</comment>
   </data>
-  <data name="HourRate" xml:space="preserve">
-    <value>Hour rate:</value>
+  <data name="KmRate" xml:space="preserve">
+    <value>Km rate:</value>
     <comment>Rate for the hour to rent</comment>
   </data>
   <data name="Seats" xml:space="preserve">
