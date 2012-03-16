@@ -59,7 +59,7 @@
         protected virtual void InitializeRootVisual()
         {
             MainHost.Controls.BusyIndicator busyIndicator = new MainHost.Controls.BusyIndicator();
-            busyIndicator.Content = new MainPage();
+            busyIndicator.Content = new Shell();
             busyIndicator.HorizontalContentAlignment = HorizontalAlignment.Stretch;
             busyIndicator.VerticalContentAlignment = VerticalAlignment.Stretch;
 
