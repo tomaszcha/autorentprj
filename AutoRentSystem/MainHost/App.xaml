@@ -3,8 +3,8 @@
   xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
   xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
   xmlns:app="clr-namespace:MainHost"
-  Startup="Application_Startup"
-  UnhandledException="Application_UnhandledException">
+  
+  UnhandledException="Application_UnhandledException"><!--Startup="Application_Startup"-->
 
     <Application.Resources>
         <ResourceDictionary>
