@@ -42,7 +42,7 @@
             // Show some UI to the user while LoadUser is in progress
             this.InitializeRootVisual();
 
-            Bootstrapper bootstrapper = new Bootstrapper();
+            //Bootstrapper bootstrapper = new Bootstrapper();
             //bootstrapper.Run();
         }
 
