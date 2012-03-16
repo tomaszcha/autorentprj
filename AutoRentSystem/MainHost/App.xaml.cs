@@ -43,7 +43,7 @@
             this.InitializeRootVisual();
 
             Bootstrapper bootstrapper = new Bootstrapper();
-            bootstrapper.Run();
+           // bootstrapper.Run();
         }
 
         private void Application_Exit(object sender, EventArgs e) { }
