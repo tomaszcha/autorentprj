@@ -9,6 +9,10 @@ namespace SilverlightClientApp.Web.DataAccessLayer
 {
     public class AutoRentDbContext : DbContext
     {
+        public AutoRentDbContext() { }
+
+        public AutoRentDbContext(string databaseName) : base(databaseName) { }
+
         public DbSet<Application> Applications { get; set; }
 
         public DbSet<Auto> Autos { get; set; }
