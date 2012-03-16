@@ -5,7 +5,6 @@
     using System.ServiceModel.DomainServices.Client.ApplicationServices;
     using System.Windows;
     using System.Windows.Controls;
-    using MainHost.Helpers;
 
     /// <summary>
     /// Main <see cref="Application"/> class.
