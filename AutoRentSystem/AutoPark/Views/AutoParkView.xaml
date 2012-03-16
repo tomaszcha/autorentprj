@@ -37,8 +37,8 @@
                             <TextBlock FontSize="12" Margin="5,0,0,0" Text="{Binding EngineCapacity}" />
                         </StackPanel>
                         <StackPanel Orientation="Horizontal" Margin="0,5,0,0">
-                            <TextBlock FontSize="12" Text="{Binding DayRate, Source={StaticResource Res}}"/>
-                            <TextBlock FontSize="12" Margin="5,0,0,0" Text="{Binding DayRate}" />
+                            <TextBlock FontSize="12" Text="{Binding KmRate, Source={StaticResource Res}}"/>
+                            <TextBlock FontSize="12" Margin="5,0,0,0" Text="{Binding KmRate}" />
                         </StackPanel>
                         <StackPanel Orientation="Horizontal" Margin="0,5,0,0">
                             <TextBlock FontSize="12" Text="{Binding HourRate, Source={StaticResource Res}}"/>
