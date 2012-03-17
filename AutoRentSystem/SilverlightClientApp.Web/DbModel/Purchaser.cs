@@ -19,7 +19,7 @@ namespace SilverlightClientApp.Web.DbModel
         /// <summary>
         /// Name of the purchaser
         /// </summary>
-        public string FirstName { get; set; }
+        public string Name { get; set; }
 
 
         /// <summary>
