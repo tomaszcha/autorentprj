@@ -334,7 +334,7 @@
     <!-- ******************************* -->
     <!-- Login Container Style -->
     <Style x:Key="LoginContainerStyle" TargetType="Border">
-        <Setter Property="Background" Value="#FF949290"/>
+        <Setter Property="Background" Value="#FFB42020"/>
         <Setter Property="Margin" Value="0,43,0,0"/>
         <Setter Property="Height" Value="21"/>
         <Setter Property="BorderThickness" Value="0,0,0,1"/>
