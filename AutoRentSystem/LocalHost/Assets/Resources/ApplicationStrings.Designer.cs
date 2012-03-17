@@ -79,7 +79,7 @@ namespace LocalHost {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Application Name.
+        ///   Looks up a localized string similar to Auto Rent System [LO].
         /// </summary>
         public static string ApplicationName {
             get {

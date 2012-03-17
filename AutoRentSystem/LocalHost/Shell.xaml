@@ -4,59 +4,51 @@
   xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
   xmlns:navigation="clr-namespace:System.Windows.Controls;assembly=System.Windows.Controls.Navigation" 
   xmlns:uriMapper="clr-namespace:System.Windows.Navigation;assembly=System.Windows.Controls.Navigation"
+  xmlns:prism="clr-namespace:Microsoft.Practices.Prism.Regions;assembly=Microsoft.Practices.Prism"
   xmlns:dataControls="clr-namespace:System.Windows.Controls;assembly=System.Windows.Controls.Data.DataForm.Toolkit" 
   xmlns:login="clr-namespace:LocalHost.LoginUI"
   xmlns:d="http://schemas.microsoft.com/expression/blend/2008" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
   mc:Ignorable="d" d:DesignWidth="640" d:DesignHeight="480">
 
-  <Grid x:Name="LayoutRoot" Style="{StaticResource LayoutRootGridStyle}">
-
-    <Border x:Name="ContentBorder" Style="{StaticResource ContentBorderStyle}">
-            <navigation:Frame x:Name="ContentFrame" Style="{StaticResource ContentFrameStyle}" 
-                              Source="/Home" Navigated="ContentFrame_Navigated" NavigationFailed="ContentFrame_NavigationFailed">
-                <navigation:Frame.UriMapper>
-                  <uriMapper:UriMapper>
-                    <uriMapper:UriMapping Uri="" MappedUri="/Views/Home.xaml"/>
-                    <uriMapper:UriMapping Uri="/{pageName}" MappedUri="/Views/{pageName}.xaml"/>
-                  </uriMapper:UriMapper>
-                </navigation:Frame.UriMapper>
-            </navigation:Frame>
-    </Border>
-
-    <Grid Style="{StaticResource NavigationOuterGridStyle}">
-      <Grid x:Name="NavigationGrid" Style="{StaticResource NavigationGridStyle}">
-
-        <Border x:Name="BrandingBorder" Style="{StaticResource BrandingBorderStyle}">
-          <StackPanel x:Name="BrandingStackPanel" Style="{StaticResource BrandingStackPanelStyle}">
-
-            <ContentControl Style="{StaticResource LogoIcon}"/>
-            <TextBlock x:Name="ApplicationNameTextBlock" Style="{StaticResource ApplicationNameStyle}" 
-                               Text="{Binding Strings.ApplicationName, Source={StaticResource ApplicationResources}}"/>
-
-          </StackPanel>
-        </Border>
-
-        <Border x:Name="LinksBorder" Style="{StaticResource LinksBorderStyle}">
-          <StackPanel x:Name="LinksStackPanel" Style="{StaticResource LinksStackPanelStyle}">
-
-            <HyperlinkButton x:Name="Link1" Style="{StaticResource LinkStyle}" 
-                                     NavigateUri="/Home" TargetName="ContentFrame" Content="{Binding Path=Strings.HomePageTitle, Source={StaticResource ApplicationResources}}"/>
-
-            <Rectangle x:Name="Divider1" Style="{StaticResource DividerStyle}"/>
-
-            <HyperlinkButton x:Name="Link2" Style="{StaticResource LinkStyle}" 
-                                     NavigateUri="/About" TargetName="ContentFrame" Content="{Binding Path=Strings.AboutPageTitle, Source={StaticResource ApplicationResources}}"/>
-
-          </StackPanel>
-        </Border>
-
-      </Grid>
-
-      <Border Style="{StaticResource LoginContainerStyle}">
-          <login:LoginStatus/>           
-      </Border>
+    <Grid x:Name="LayoutRoot" Style="{StaticResource LayoutRootGridStyle}">
+        <Grid Style="{StaticResource NavigationOuterGridStyle}">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="426*" />
+            </Grid.RowDefinitions>
+            <Grid x:Name="NavigationGrid" Style="{StaticResource NavigationGridStyle}">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto" />
+                    <ColumnDefinition Width="Auto" />
+                    <ColumnDefinition Width="194*" />
+                </Grid.ColumnDefinitions>
+                <login:LoginStatus Grid.Column="2" Margin="5" />
+                <TextBlock x:Name="ApplicationNameTextBlock" Style="{StaticResource ApplicationNameStyle}" Text="{Binding Strings.ApplicationName, Source={StaticResource ApplicationResources}}" Grid.Column="1" Margin="5" />
+                <ContentControl Style="{StaticResource LogoIcon}" Margin="5" />
+            </Grid>
+            <Grid Name="GridContent" Grid.Row="1" Margin="0">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto" />
+                    <ColumnDefinition Width="Auto" />
+                    <ColumnDefinition Width="620*" />
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="418*" />
+                </Grid.RowDefinitions>
+                <ContentControl Name="MenuRegion" prism:RegionManager.RegionName="MenuRegion" Grid.ColumnSpan="2" Margin="5" />
+                <ContentControl Name="LeftRegion" prism:RegionManager.RegionName="LeftRegion" Grid.Row="1" Margin="5" />
+                <ContentControl Name="RightRegion" prism:RegionManager.RegionName="RightRegion" Grid.Column="1" Grid.Row="1" Margin="5" />
+                <ContentControl Name="FooterRegion" prism:RegionManager.RegionName="FooterRegion" Grid.Row="2" Grid.ColumnSpan="2" VerticalAlignment="Bottom" Margin="5" />
+                <Grid.Background>
+                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                        <GradientStop Color="Gray" Offset="0.186" />
+                        <GradientStop Color="AntiqueWhite" Offset="0.9" />
+                    </LinearGradientBrush>
+                </Grid.Background>
+            </Grid>
+        </Grid>
     </Grid>
-
-  </Grid>
 
 </UserControl>

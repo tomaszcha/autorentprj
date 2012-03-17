@@ -124,7 +124,7 @@
     <value>Already registered?</value>
   </data>
   <data name="ApplicationName" xml:space="preserve">
-    <value>Auto Rent System</value>
+    <value>Auto Rent System [GO]</value>
   </data>
   <data name="AuthenticatingMessage" xml:space="preserve">
     <value>authenticating...</value>
