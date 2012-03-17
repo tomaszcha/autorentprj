@@ -52,6 +52,18 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Microsoft.Practices.Prism">
+      <HintPath>..\LibCommon\prism\Silverlight\Microsoft.Practices.Prism.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.Prism.UnityExtensions">
+      <HintPath>..\LibCommon\prism\Silverlight\Microsoft.Practices.Prism.UnityExtensions.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.ServiceLocation">
+      <HintPath>..\LibCommon\prism\Silverlight\Microsoft.Practices.ServiceLocation.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.Unity.Silverlight">
+      <HintPath>..\LibCommon\prism\Silverlight\Microsoft.Practices.Unity.Silverlight.dll</HintPath>
+    </Reference>
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Runtime.Serialization" />
     <Reference Include="System.Windows" />
@@ -100,6 +112,7 @@
       <DependentUpon>ErrorResources.resx</DependentUpon>
     </Compile>
     <Compile Include="GlobalSuppressions.cs" />
+    <Compile Include="Helpers\Bootstrapper.cs" />
     <Compile Include="Models\LoginInfo.cs" />
     <Compile Include="Models\User.partial.cs" />
     <Compile Include="Models\RegistrationData.partial.cs" />
@@ -123,8 +136,8 @@
     <Compile Include="Views\Home.xaml.cs">
       <DependentUpon>Home.xaml</DependentUpon>
     </Compile>
-    <Compile Include="MainPage.xaml.cs">
-      <DependentUpon>MainPage.xaml</DependentUpon>
+    <Compile Include="Shell.xaml.cs">
+      <DependentUpon>Shell.xaml</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Views\Login\LoginStatus.xaml.cs">
@@ -166,7 +179,7 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:MarkupCompilePass1</Generator>
     </Page>
-    <Page Include="MainPage.xaml">
+    <Page Include="Shell.xaml">
       <Generator>MSBuild:MarkupCompilePass1</Generator>
       <SubType>Designer</SubType>
     </Page>
@@ -222,6 +235,48 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Properties\OutOfBrowserSettings.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\ApplicationCreate\ApplicationCreate.csproj">
+      <Project>{B38EA525-2324-4AC9-AE96-649CBB9E5F3C}</Project>
+      <Name>ApplicationCreate</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\AutoPark\AutoPark.csproj">
+      <Project>{16C13BB6-A184-4383-8CCA-22B4EF96265F}</Project>
+      <Name>AutoPark</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\EventInfrastracture\EventInfrastracture.csproj">
+      <Project>{8B4993D7-A007-4A0E-8EF4-B7323DAAEEEE}</Project>
+      <Name>EventInfrastracture</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Home\Home.csproj">
+      <Project>{F57B68E0-C08C-4B1D-AD13-5B7E1506A84B}</Project>
+      <Name>Home</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\MechanicView\MechanicView.csproj">
+      <Project>{11C61C81-58D5-4A3A-ADAE-A212F92BD66A}</Project>
+      <Name>MechanicView</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Menu\Menu.csproj">
+      <Project>{3C30881B-904D-4EDC-86C7-CF7DF63B4B39}</Project>
+      <Name>Menu</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ModulesInfrastructure\ModulesInfrastructure.csproj">
+      <Project>{9EC7A04C-4450-4C9C-B03F-91ECF50189F3}</Project>
+      <Name>ModulesInfrastructure</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\OrderEdit\OrderEdit.csproj">
+      <Project>{B23E85BE-5713-430B-ADC4-1AD1F2760C48}</Project>
+      <Name>OrderEdit</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\OrderList\OrderList.csproj">
+      <Project>{126D18E2-3D8B-4528-ABC2-6DC8EFD21D04}</Project>
+      <Name>OrderList</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ShellInfrastracture\ShellInfrastracture.csproj">
+      <Project>{E8312A08-18FE-4A44-A412-91D0B079AE21}</Project>
+      <Name>ShellInfrastracture</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Silverlight\$(SilverlightVersion)\Microsoft.Silverlight.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
