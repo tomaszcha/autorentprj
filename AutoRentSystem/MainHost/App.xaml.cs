@@ -5,6 +5,7 @@
     using System.ServiceModel.DomainServices.Client.ApplicationServices;
     using System.Windows;
     using System.Windows.Controls;
+    using MainHost.Helpers;
 
     /// <summary>
     /// Main <see cref="Application"/> class.
@@ -16,6 +17,10 @@
         /// </summary>
         public App()
         {
+            this.Startup += this.Application_Startup;
+            this.Exit += this.Application_Exit;
+            this.UnhandledException += this.Application_UnhandledException;
+
             InitializeComponent();
 
             // Create a WebContext and add it to the ApplicationLifetimeObjects collection.
@@ -36,7 +41,12 @@
 
             // Show some UI to the user while LoadUser is in progress
             this.InitializeRootVisual();
+
+            Bootstrapper bootstrapper = new Bootstrapper();
+            bootstrapper.Run();
         }
+
+        private void Application_Exit(object sender, EventArgs e) { }
 
         /// <summary>
         /// Invoked when the <see cref="LoadUserOperation"/> completes.
@@ -59,7 +69,7 @@
         protected virtual void InitializeRootVisual()
         {
             MainHost.Controls.BusyIndicator busyIndicator = new MainHost.Controls.BusyIndicator();
-            busyIndicator.Content = new MainPage();
+            busyIndicator.Content = new Shell();
             busyIndicator.HorizontalContentAlignment = HorizontalAlignment.Stretch;
             busyIndicator.VerticalContentAlignment = VerticalAlignment.Stretch;
 
