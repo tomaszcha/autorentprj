@@ -68,12 +68,12 @@
         /// </summary>
         protected virtual void InitializeRootVisual()
         {
-            LocalHost.Controls.BusyIndicator busyIndicator = new LocalHost.Controls.BusyIndicator();
-            busyIndicator.Content = new Shell();
-            busyIndicator.HorizontalContentAlignment = HorizontalAlignment.Stretch;
-            busyIndicator.VerticalContentAlignment = VerticalAlignment.Stretch;
+            //LocalHost.Controls.BusyIndicator busyIndicator = new LocalHost.Controls.BusyIndicator();
+            //busyIndicator.Content = new Shell();
+            //busyIndicator.HorizontalContentAlignment = HorizontalAlignment.Stretch;
+            //busyIndicator.VerticalContentAlignment = VerticalAlignment.Stretch;
 
-            this.RootVisual = busyIndicator;
+            //this.RootVisual = busyIndicator;
         }
 
         private void Application_UnhandledException(object sender, ApplicationUnhandledExceptionEventArgs e)

@@ -4,11 +4,12 @@
     using System.Windows.Controls;
     using System.Windows.Navigation;
     using LocalHost.LoginUI;
+    using ModulesInfrastructure.Views;
 
     /// <summary>
     /// <see cref="UserControl"/> class providing the main UI for the application.
     /// </summary>
-    public partial class Shell : UserControl
+    public partial class Shell : UserControl, IShellPage
     {
         /// <summary>
         /// Creates a new <see cref="Shell"/> instance.
