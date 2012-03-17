@@ -80,8 +80,6 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MainHost", "MainHost\MainHo
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MainHost.Web", "MainHost.Web\MainHost.Web.csproj", "{E5F2EF98-DE2E-48E8-A4FA-B7FD5D484FF8}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InitDb", "InitDb\InitDb.csproj", "{29CC8773-A519-46E5-99C6-36C58E75297B}"
-EndProject
 Global
 	GlobalSection(SubversionScc) = preSolution
 		Svn-Managed = True
@@ -236,16 +234,6 @@ Global
 		{E5F2EF98-DE2E-48E8-A4FA-B7FD5D484FF8}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
 		{E5F2EF98-DE2E-48E8-A4FA-B7FD5D484FF8}.Release|Mixed Platforms.Build.0 = Release|Any CPU
 		{E5F2EF98-DE2E-48E8-A4FA-B7FD5D484FF8}.Release|x86.ActiveCfg = Release|Any CPU
-		{29CC8773-A519-46E5-99C6-36C58E75297B}.Debug|Any CPU.ActiveCfg = Debug|x86
-		{29CC8773-A519-46E5-99C6-36C58E75297B}.Debug|Mixed Platforms.ActiveCfg = Debug|x86
-		{29CC8773-A519-46E5-99C6-36C58E75297B}.Debug|Mixed Platforms.Build.0 = Debug|x86
-		{29CC8773-A519-46E5-99C6-36C58E75297B}.Debug|x86.ActiveCfg = Debug|x86
-		{29CC8773-A519-46E5-99C6-36C58E75297B}.Debug|x86.Build.0 = Debug|x86
-		{29CC8773-A519-46E5-99C6-36C58E75297B}.Release|Any CPU.ActiveCfg = Release|x86
-		{29CC8773-A519-46E5-99C6-36C58E75297B}.Release|Mixed Platforms.ActiveCfg = Release|x86
-		{29CC8773-A519-46E5-99C6-36C58E75297B}.Release|Mixed Platforms.Build.0 = Release|x86
-		{29CC8773-A519-46E5-99C6-36C58E75297B}.Release|x86.ActiveCfg = Release|x86
-		{29CC8773-A519-46E5-99C6-36C58E75297B}.Release|x86.Build.0 = Release|x86
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
