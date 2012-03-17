@@ -4,15 +4,15 @@
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d" xmlns:Resources="clr-namespace:AutoPark.Properties"
-             d:DesignHeight="600" d:DesignWidth="600" Height="500" Width="800">
+             d:DesignHeight="300" d:DesignWidth="500">
     <UserControl.Resources>
         <Resources:Resources x:Key="Res"/>
     </UserControl.Resources>
-    <Grid x:Name="LayoutRoot" Background="White" HorizontalAlignment="Center" >
-       <ListBox x:Name="myList" BorderThickness="1" Margin="10, 5, 5, 5" ItemsSource="{Binding Models}">
+    <Grid x:Name="LayoutRoot" Background="White">
+       <ListBox x:Name="myList" BorderThickness="1" ItemsSource="{Binding Models}">
        <ListBox.ItemTemplate>
                 <DataTemplate>
-                    <Grid Width="640">
+                    <Grid>
                     <Grid.Background>
                         <LinearGradientBrush StartPoint="0,0" EndPoint="0,1">
                             <GradientStop Color="White" Offset="0"/>
@@ -20,11 +20,11 @@
                         </LinearGradientBrush>
                     </Grid.Background>
                     <Grid.ColumnDefinitions>
-                        <ColumnDefinition Width="420"/>
+                        <ColumnDefinition />
                         <ColumnDefinition Width="*"/>                       
                     </Grid.ColumnDefinitions>
-                    <StackPanel VerticalAlignment="Stretch" Width="420">
-                        <StackPanel Orientation="Horizontal" Height="30">                            
+                    <StackPanel VerticalAlignment="Stretch">
+                        <StackPanel Orientation="Horizontal">                            
                             <TextBlock FontSize="14" Text="{Binding Name}"/>                            
                             <TextBlock FontSize="14" Text="{Binding Make.Name}" />
                         </StackPanel>
@@ -33,7 +33,7 @@
                             <TextBlock FontSize="12" Text="{Binding Seats}" />
                         </StackPanel>
                         <StackPanel Orientation="Horizontal" Margin="0,5,0,0">
-                            <TextBlock FontSize="12" Text="{Binding EngineCapacity, Source={StaticResource Res}}" />
+                            <TextBlock FontSize="12" Text="{Binding EngineCapacity, Source={StaticResource Res}}" HorizontalAlignment="Right" />
                             <TextBlock FontSize="12" Margin="5,0,0,0" Text="{Binding EngineCapacity}" />
                         </StackPanel>
                         <StackPanel Orientation="Horizontal" Margin="0,5,0,0">

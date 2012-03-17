@@ -81,16 +81,9 @@
       <DependentUpon>AutoParkView.xaml</DependentUpon>
     </Compile>
     <Compile Include="Views\IAutoParkView.cs" />
-    <Compile Include="Views\TMP.xaml.cs">
-      <DependentUpon>TMP.xaml</DependentUpon>
-    </Compile>
   </ItemGroup>
   <ItemGroup>
     <Page Include="Views\AutoParkView.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="Views\TMP.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
