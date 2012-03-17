@@ -17,6 +17,12 @@ namespace SilverlightClientApp.Web.DbModel
 
 
         /// <summary>
+        /// Name of the purchaser
+        /// </summary>
+        public string FirstName { get; set; }
+
+
+        /// <summary>
         /// City where the purchaser is located
         /// </summary>
         public City City { get; set; }
