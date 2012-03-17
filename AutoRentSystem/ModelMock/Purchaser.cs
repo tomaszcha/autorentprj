@@ -23,6 +23,12 @@ namespace ModelMock
 
 
         /// <summary>
+        /// Name of the purchaser
+        /// </summary>
+        public string Name { get; set; }
+
+
+        /// <summary>
         /// City where the purchaser is located
         /// </summary>
         public City City { get; set; }
