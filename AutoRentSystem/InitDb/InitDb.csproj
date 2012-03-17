@@ -57,12 +57,6 @@
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\SilverlightClientApp.Web\SilverlightClientApp.Web.csproj">
-      <Project>{57111D77-ABB2-4784-82DD-A01F62F8260F}</Project>
-      <Name>SilverlightClientApp.Web</Name>
-    </ProjectReference>
-  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

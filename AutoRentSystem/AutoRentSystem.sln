@@ -5,10 +5,6 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Infrastracture", "Infrastra
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Modules", "Modules", "{1F728413-9ED0-4816-9A3B-3DAE93141CAA}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SilverlightClientApp", "SilverlightClientApp\SilverlightClientApp.csproj", "{5F8208DD-CEB8-4EDA-9AD8-1A3422644A58}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SilverlightClientApp.Web", "SilverlightClientApp.Web\SilverlightClientApp.Web.csproj", "{57111D77-ABB2-4784-82DD-A01F62F8260F}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ModulesInfrastructure", "ModulesInfrastructure\ModulesInfrastructure.csproj", "{9EC7A04C-4450-4C9C-B03F-91ECF50189F3}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "MockModel", "MockModel", "{0A08439F-7B91-48B8-B6E8-27411E96CB38}"
@@ -107,26 +103,6 @@ Global
 		Release|x86 = Release|x86
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{5F8208DD-CEB8-4EDA-9AD8-1A3422644A58}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{5F8208DD-CEB8-4EDA-9AD8-1A3422644A58}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{5F8208DD-CEB8-4EDA-9AD8-1A3422644A58}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
-		{5F8208DD-CEB8-4EDA-9AD8-1A3422644A58}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
-		{5F8208DD-CEB8-4EDA-9AD8-1A3422644A58}.Debug|x86.ActiveCfg = Debug|Any CPU
-		{5F8208DD-CEB8-4EDA-9AD8-1A3422644A58}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{5F8208DD-CEB8-4EDA-9AD8-1A3422644A58}.Release|Any CPU.Build.0 = Release|Any CPU
-		{5F8208DD-CEB8-4EDA-9AD8-1A3422644A58}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
-		{5F8208DD-CEB8-4EDA-9AD8-1A3422644A58}.Release|Mixed Platforms.Build.0 = Release|Any CPU
-		{5F8208DD-CEB8-4EDA-9AD8-1A3422644A58}.Release|x86.ActiveCfg = Release|Any CPU
-		{57111D77-ABB2-4784-82DD-A01F62F8260F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{57111D77-ABB2-4784-82DD-A01F62F8260F}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{57111D77-ABB2-4784-82DD-A01F62F8260F}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
-		{57111D77-ABB2-4784-82DD-A01F62F8260F}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
-		{57111D77-ABB2-4784-82DD-A01F62F8260F}.Debug|x86.ActiveCfg = Debug|Any CPU
-		{57111D77-ABB2-4784-82DD-A01F62F8260F}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{57111D77-ABB2-4784-82DD-A01F62F8260F}.Release|Any CPU.Build.0 = Release|Any CPU
-		{57111D77-ABB2-4784-82DD-A01F62F8260F}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
-		{57111D77-ABB2-4784-82DD-A01F62F8260F}.Release|Mixed Platforms.Build.0 = Release|Any CPU
-		{57111D77-ABB2-4784-82DD-A01F62F8260F}.Release|x86.ActiveCfg = Release|Any CPU
 		{9EC7A04C-4450-4C9C-B03F-91ECF50189F3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{9EC7A04C-4450-4C9C-B03F-91ECF50189F3}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9EC7A04C-4450-4C9C-B03F-91ECF50189F3}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
