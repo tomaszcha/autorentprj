@@ -4,12 +4,12 @@
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d" xmlns:Resources="clr-namespace:AutoPark.Properties"
-             d:DesignHeight="300" d:DesignWidth="500">
+             d:DesignHeight="300" d:DesignWidth="500" Margin="5">
     <UserControl.Resources>
         <Resources:Resources x:Key="Res"/>
     </UserControl.Resources>
     <Grid x:Name="LayoutRoot" Background="White">
-       <ListBox x:Name="myList" BorderThickness="1" ItemsSource="{Binding Models}">
+       <ListBox x:Name="myList" BorderThickness="1" ItemsSource="{Binding Models}" Margin="5">
        <ListBox.ItemTemplate>
                 <DataTemplate>
                     <Grid>
@@ -33,7 +33,7 @@
                             <TextBlock FontSize="12" Text="{Binding Seats}" />
                         </StackPanel>
                         <StackPanel Orientation="Horizontal" Margin="0,5,0,0">
-                            <TextBlock FontSize="12" Text="{Binding EngineCapacity, Source={StaticResource Res}}" HorizontalAlignment="Right" />
+                            <TextBlock FontSize="12" Text="{Binding EngineCapacity, Source={StaticResource Res}}" />
                             <TextBlock FontSize="12" Margin="5,0,0,0" Text="{Binding EngineCapacity}" />
                         </StackPanel>
                         <StackPanel Orientation="Horizontal" Margin="0,5,0,0">
@@ -49,7 +49,7 @@
                             <TextBlock FontSize="12" Margin="5,0,0,0" Text="{Binding Deposit}" />
                         </StackPanel>
                     </StackPanel>                    
-                    <Image Width="200" Height="150" Source="/AutoPark;component/Images/Mazda.jpg" Grid.Column="1" />
+                    <Image Width="200" Height="150" Source="/AutoPark;component/Images/Mazda.jpg" Grid.Column="1" HorizontalAlignment="Right" />
                 </Grid>
                 </DataTemplate>
             </ListBox.ItemTemplate>
