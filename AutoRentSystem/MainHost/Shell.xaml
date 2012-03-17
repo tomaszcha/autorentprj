@@ -26,20 +26,21 @@
                 <TextBlock x:Name="ApplicationNameTextBlock" Style="{StaticResource ApplicationNameStyle}" Text="{Binding Strings.ApplicationName, Source={StaticResource ApplicationResources}}" Grid.Column="1" Margin="5" />
                 <ContentControl Style="{StaticResource LogoIcon}" Margin="5" />
             </Grid>
-            <Grid Grid.Row="1" Name="grid1" Margin="0">
+            <Grid Name="GridContent" Grid.Row="1" Margin="0">
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="Auto" />
                     <ColumnDefinition Width="Auto" />
+                    <ColumnDefinition Width="620*" />
                 </Grid.ColumnDefinitions>
                 <Grid.RowDefinitions>
                     <RowDefinition Height="Auto" />
                     <RowDefinition Height="Auto" />
-                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="418*" />
                 </Grid.RowDefinitions>
-                <ContentControl prism:RegionManager.RegionName="MenuRegion" Grid.ColumnSpan="2" Margin="5" />
-                <ContentControl prism:RegionManager.RegionName="FooterRegion" Grid.Row="2" Grid.ColumnSpan="2" Margin="5" />
-                <ContentControl prism:RegionManager.RegionName="LeftRegion" Grid.Row="1" Margin="5" />
-                <ContentControl prism:RegionManager.RegionName="RightRegion" Grid.Column="1" Grid.Row="1" Margin="5" />
+                <ContentControl Name="MenuRegion" prism:RegionManager.RegionName="MenuRegion" Grid.ColumnSpan="2" Margin="5" />
+                <ContentControl Name="LeftRegion" prism:RegionManager.RegionName="LeftRegion" Grid.Row="1" Margin="5" />
+                <ContentControl Name="RightRegion" prism:RegionManager.RegionName="RightRegion" Grid.Column="1" Grid.Row="1" Margin="5" />
+                <ContentControl Name="FooterRegion" prism:RegionManager.RegionName="FooterRegion" Grid.Row="2" Grid.ColumnSpan="2" VerticalAlignment="Bottom" Margin="5" />
                 <Grid.Background>
                     <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
                         <GradientStop Color="Gray" Offset="0.186" />
