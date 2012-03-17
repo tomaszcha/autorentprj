@@ -55,7 +55,8 @@
       <Border Style="{StaticResource LoginContainerStyle}">
           <login:LoginStatus/>           
       </Border>
-    </Grid>
+            <Button Content="Button" Height="23" HorizontalAlignment="Left" Margin="330,166,0,0" Name="button1" VerticalAlignment="Top" Width="75" />
+        </Grid>
 
   </Grid>
 
