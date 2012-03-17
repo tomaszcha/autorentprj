@@ -17,7 +17,6 @@
         public Shell()
         {
             InitializeComponent();
-            //MessageBox.Show(GridContent.Width.ToString());
         }
 
         /// <summary>
