@@ -17,7 +17,7 @@ using Microsoft.Practices.Unity;
 
 using ModulesInfrastructure.Views;
 
-using AutoRentHome = Home;
+//using AutoRentHome = CustomerModule;
 
 namespace LocalHost.Helpers
 {
@@ -56,10 +56,10 @@ namespace LocalHost.Helpers
         {
             base.ConfigureModuleCatalog();
             ModuleCatalog moduleCatalog = (ModuleCatalog)ModuleCatalog;
-            moduleCatalog.AddModule(typeof(ApplicationCreate.ApplicationCreateModule));
-            moduleCatalog.AddModule(typeof(AutoRentHome.HomeModule));
-            moduleCatalog.AddModule(typeof(Menu.MenuModule));
-            moduleCatalog.AddModule(typeof(AutoPark.AutoParkModule));
+            //moduleCatalog.AddModule(typeof(CustomerModule.ApplicationCreateModule));
+            //moduleCatalog.AddModule(typeof(CustomerModule.HomeModule));
+            //moduleCatalog.AddModule(typeof(CustomerModule.MenuModule));
+            //moduleCatalog.AddModule(typeof(CustomerModule.AutoParkModule));
         }
 
         #endregion Overrides of Bootstrapper
