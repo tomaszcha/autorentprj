@@ -8,7 +8,7 @@ using DBMock;
 using System.Collections.Generic;
 using System.Windows.Input;
 
-namespace AutoPark.ViewModels
+namespace CustomerModule.ViewModels
 {
     public class AutoParkViewModel : ViewModelBase, IAutoParkViewModel
     {

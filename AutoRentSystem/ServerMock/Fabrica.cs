@@ -17,16 +17,16 @@ namespace ServerMock
     {
         #region Commands
 
-        public static List<IBaseClass> GetCommand(string type, int indexFrom, int indexTo)
-        {
-            List<IBaseClass> list;
-            switch (type)
-            {
-                case Types.Model:
-                    list = GetModelList(indexFrom, indexTo);
-                    break;
-            }  
-        }
+        //public static List<IBaseClass> GetCommand(string type, int indexFrom, int indexTo)
+        //{
+        //    List<IBaseClass> list;
+        //    switch (type)
+        //    {
+        //        case Types.Model:
+        //            //list = GetModelList(indexFrom, indexTo);
+        //            break;
+        //    }  
+        //}
 
         public static bool InsertCommand(object item)
         {

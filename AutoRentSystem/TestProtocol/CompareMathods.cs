@@ -53,9 +53,9 @@ namespace TestProtocol
                                                     if (model1.Photo.Length != model2.Photo.Length)
                                                         res = false;
                                                     else
-                                                        for (int i = 0; i < model1.Photo.Length)
+                                                        for (int i = 0; i < model1.Photo.Length; i++ )
                                                         {
-                                                            if (model1.Photo[i]!=model2.Photo[i])
+                                                            if (model1.Photo[i] != model2.Photo[i])
                                                             {
                                                                 res = false;
                                                                 break;
@@ -127,7 +127,7 @@ namespace TestProtocol
             return res;
         }
 
-        public static bool Compare<T>(List<T> list1, List<T> list2) where T: Model, Make , Category
+        public static bool Compare<T>(List<T> list1, List<T> list2) where T: Model//, Make , Category
         {
            bool res = true;
             if (list1 == null)

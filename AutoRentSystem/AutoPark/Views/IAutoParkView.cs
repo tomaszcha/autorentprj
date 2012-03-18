@@ -8,10 +8,10 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Animation;
 using System.Windows.Shapes;
-using AutoPark.ViewModels;
+using CustomerModule.ViewModels;
 using ModulesInfrastructure.Views;
 
-namespace AutoPark.Views
+namespace CustomerModule.Views
 {
     public interface IAutoParkView : IView
     {

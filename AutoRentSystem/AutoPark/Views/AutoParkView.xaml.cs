@@ -1,9 +1,9 @@
-﻿using AutoPark.ViewModels;
+﻿using CustomerModule.ViewModels;
 using Microsoft.Practices.Unity;
 using ModulesInfrastructure.Views;
 using System.Windows.Controls;
 
-namespace AutoPark.Views
+namespace CustomerModule.Views
 {
     public partial class AutoParkView : UserControl, IViewRightRegion
     {

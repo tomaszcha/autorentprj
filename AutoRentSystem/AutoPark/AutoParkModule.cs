@@ -8,16 +8,16 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Animation;
 using System.Windows.Shapes;
-using AutoPark.Views;
+using CustomerModule.Views;
 using Microsoft.Practices.Prism.Regions;
 using Microsoft.Practices.Unity;
 using ModulesInfrastructure;
 using ModulesInfrastructure.Views;
 using ShellInfrastracture;
-using AutoPark.ViewModels;
+using CustomerModule.ViewModels;
 
 
-namespace AutoPark
+namespace CustomerModule
 {
     public class AutoParkModule: ModuleBase
     {
@@ -30,6 +30,7 @@ namespace AutoPark
         {
             UnityContainer.RegisterType<IAutoParkViewModel, AutoParkViewModel>();
             UnityContainer.RegisterType<IViewRightRegion, AutoParkView>("AutoParkView", new ContainerControlledLifetimeManager());
+            //UnityContainer.RegisterType<Domain
         }
     }
 }

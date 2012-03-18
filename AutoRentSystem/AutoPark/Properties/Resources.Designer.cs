@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace AutoPark.Properties {
+namespace CustomerModule.Properties {
     using System;
     
     

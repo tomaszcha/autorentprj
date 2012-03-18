@@ -9,7 +9,7 @@ using System.Windows.Media;
 using System.Windows.Media.Animation;
 using System.Windows.Shapes;
 
-namespace AutoPark.ViewModels
+namespace CustomerModule.ViewModels
 {
     public interface IAutoParkViewModel
     {
