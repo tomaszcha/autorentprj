@@ -5,6 +5,7 @@
     using System.Windows.Navigation;
     using MainHost.LoginUI;
     using ModulesInfrastructure.Views;
+    using MainHost.Web.Services;
 
     /// <summary>
     /// <see cref="UserControl"/> class providing the main UI for the application.
@@ -16,6 +17,8 @@
         /// </summary>
         public Shell()
         {
+            new MainHost.Web.Services.AutoRentDomainContext();
+
             InitializeComponent();
         }
 
