@@ -1044,7 +1044,7 @@ namespace MainHost.Web.Services
 
         #endregion
 
-        #region CRUD for TechnicalOrder
+        #region CRUD for TechnicalService
 
         [RequiresAuthentication]
         public IQueryable<TechnicalService> GetTechnicalService()
