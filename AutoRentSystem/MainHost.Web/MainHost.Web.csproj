@@ -106,6 +106,7 @@
     <Compile Include="Services\AutoRentDomainService.cs" />
     <Compile Include="Services\AutoRentDomainService.metadata.cs" />
     <Compile Include="Services\DomainService1.cs" />
+    <Compile Include="Services\GuestDomainService.cs" />
     <Compile Include="Services\UserRegistrationService.cs" />
     <Compile Include="Models\Shared\User.shared.cs" />
   </ItemGroup>
