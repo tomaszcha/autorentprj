@@ -6,6 +6,7 @@ using MainHost.Web.Models;
 
 namespace MainHost.Web.CRUD
 {
+
     public class CrudOperations
     {
         #region CRUD operations for City
@@ -46,12 +47,12 @@ namespace MainHost.Web.CRUD
         /// Updates city
         /// </summary>
         /// <param name="city">City to update</param>
-        public void UpdateCity(City city)
+        public void UpdateCity(City updCity)
         {
             using (AutoRentEntities autoRentEntities = new AutoRentEntities())
             {
-                City qCity = (from ccity in autoRentEntities.City where ccity.Id==city.Id select ccity).First();
-                qCity = city;
+                City qCity = (from city in autoRentEntities.City where city.Id == updCity.Id select city).First();
+                qCity = updCity;
                 autoRentEntities.SaveChanges();                
             }
         }
