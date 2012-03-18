@@ -1,0 +1,58 @@
+﻿<UserControl x:Class="CustomerModule.Views.AutoParkView"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d" xmlns:Resources="clr-namespace:CustomerModule.Properties"
+             d:DesignHeight="300" d:DesignWidth="500" Margin="5">
+    <UserControl.Resources>
+        <Resources:Resources x:Key="Res"/>
+    </UserControl.Resources>
+    <Grid x:Name="LayoutRoot" Background="White">
+       <ListBox x:Name="myList" BorderThickness="1" ItemsSource="{Binding Models}" Margin="5">
+       <ListBox.ItemTemplate>
+                <DataTemplate>
+                    <Grid>
+                    <Grid.Background>
+                        <LinearGradientBrush StartPoint="0,0" EndPoint="0,1">
+                            <GradientStop Color="White" Offset="0"/>
+                            <GradientStop Color="LightSteelBlue" Offset="1"/>
+                        </LinearGradientBrush>
+                    </Grid.Background>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition />
+                        <ColumnDefinition Width="*"/>                       
+                    </Grid.ColumnDefinitions>
+                    <StackPanel VerticalAlignment="Stretch">
+                        <StackPanel Orientation="Horizontal">                            
+                            <TextBlock FontSize="14" Text="{Binding Name}"/>                            
+                            <TextBlock FontSize="14" Text="{Binding Make.Name}" />
+                        </StackPanel>
+                        <StackPanel Orientation="Horizontal" Margin="0,5,0,0">
+                            <TextBlock FontSize="12" Text="{Binding Seats, Source={StaticResource Res}}" />
+                            <TextBlock FontSize="12" Text="{Binding Seats}" />
+                        </StackPanel>
+                        <StackPanel Orientation="Horizontal" Margin="0,5,0,0">
+                            <TextBlock FontSize="12" Text="{Binding EngineCapacity, Source={StaticResource Res}}" />
+                                <TextBlock FontSize="12" Margin="5,0,0,0" Text="{Binding EngineCapacity}" />
+                        </StackPanel>
+                        <StackPanel Orientation="Horizontal" Margin="0,5,0,0">
+                            <TextBlock FontSize="12" Text="{Binding KmRate, Source={StaticResource Res}}"/>
+                            <TextBlock FontSize="12" Margin="5,0,0,0" Text="{Binding KmRate}" />
+                        </StackPanel>
+                        <StackPanel Orientation="Horizontal" Margin="0,5,0,0">
+                            <TextBlock FontSize="12" Text="{Binding HourRate, Source={StaticResource Res}}"/>
+                            <TextBlock FontSize="12" Margin="5,0,0,0" Text="{Binding HourRate}" />
+                        </StackPanel>
+                        <StackPanel Orientation="Horizontal" Margin="0,5,0,0">
+                            <TextBlock FontSize="12" Text="{Binding Deposit, Source={StaticResource Res}}"/>
+                            <TextBlock FontSize="12" Margin="5,0,0,0" Text="{Binding Deposit}" />
+                        </StackPanel>
+                    </StackPanel>                    
+                    <Image Width="200" Height="150" Source="/CustomerModule;component/Images/Mazda.jpg" Grid.Column="1" HorizontalAlignment="Right" />
+                </Grid>
+                </DataTemplate>
+            </ListBox.ItemTemplate>
+        </ListBox>
+    </Grid>
+</UserControl>
