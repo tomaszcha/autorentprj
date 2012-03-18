@@ -70,6 +70,7 @@
     <Compile Include="Employee.cs" />
     <Compile Include="EvacuationOrder.cs" />
     <Compile Include="ExtraDamage.cs" />
+    <Compile Include="IBaseClass.cs" />
     <Compile Include="Insuarance.cs" />
     <Compile Include="InsuaranceAgency.cs" />
     <Compile Include="Make.cs" />

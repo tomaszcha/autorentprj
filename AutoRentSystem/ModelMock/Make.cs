@@ -14,7 +14,7 @@ namespace ModelMock
     /// <summary>
     /// Describes make of the auto 
     /// </summary>
-    public class Make
+    public class Make  : IBaseClass
     {
         /// <summary>
         /// Unique identifier of the make

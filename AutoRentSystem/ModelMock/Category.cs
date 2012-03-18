@@ -14,7 +14,7 @@ namespace ModelMock
     /// <summary>
     /// Describes an auto category object
     /// </summary>
-    public class Category
+    public class Category : IBaseClass
     {
         /// <summary>
         /// Unique identifier of the auto category

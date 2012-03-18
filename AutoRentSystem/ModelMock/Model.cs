@@ -14,7 +14,7 @@ namespace ModelMock
     /// <summary>
     /// Describes model object of the auto
     /// </summary>
-    public class Model
+    public class Model : IBaseClass
     {
         /// <summary>
         /// Unique identifier of the auto model
