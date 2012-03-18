@@ -17,7 +17,7 @@ namespace MainHost.Web.Models
     public partial class Application
     {
 
-        // This class allows you to attach custom attributes to properties
+        // This class allows to attach custom attributes to properties
         // of the Application class.
         //
         // For example, the following marks the Xyz property as a
