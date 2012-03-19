@@ -1,0 +1,2134 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="2.0" xmlns:edmx="http://schemas.microsoft.com/ado/2008/10/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="LocalAutoRentModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
+        <EntityContainer Name="LocalAutoRentModelStoreContainer">
+          <EntitySet Name="Application" EntityType="LocalAutoRentModel.Store.Application" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Auto" EntityType="LocalAutoRentModel.Store.Auto" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="ChargeOffOrder" EntityType="LocalAutoRentModel.Store.ChargeOffOrder" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="City" EntityType="LocalAutoRentModel.Store.City" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Customer" EntityType="LocalAutoRentModel.Store.Customer" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Damage" EntityType="LocalAutoRentModel.Store.Damage" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Department" EntityType="LocalAutoRentModel.Store.Department" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Employee" EntityType="LocalAutoRentModel.Store.Employee" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="EvacuationOrder" EntityType="LocalAutoRentModel.Store.EvacuationOrder" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="ExtraDamage" EntityType="LocalAutoRentModel.Store.ExtraDamage" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Insuarance" EntityType="LocalAutoRentModel.Store.Insuarance" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="InsuaranceAgency" EntityType="LocalAutoRentModel.Store.InsuaranceAgency" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Make" EntityType="LocalAutoRentModel.Store.Make" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Model" EntityType="LocalAutoRentModel.Store.Model" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Order" EntityType="LocalAutoRentModel.Store.Order" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="OrdinaryDamage" EntityType="LocalAutoRentModel.Store.OrdinaryDamage" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="PurchaseOrder" EntityType="LocalAutoRentModel.Store.PurchaseOrder" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Purchaser" EntityType="LocalAutoRentModel.Store.Purchaser" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Repair" EntityType="LocalAutoRentModel.Store.Repair" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Supplier" EntityType="LocalAutoRentModel.Store.Supplier" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="SupplyOrder" EntityType="LocalAutoRentModel.Store.SupplyOrder" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="TechnicalService" EntityType="LocalAutoRentModel.Store.TechnicalService" store:Type="Tables" Schema="dbo" />
+          <AssociationSet Name="FK_Application_DepartmentPickUp" Association="LocalAutoRentModel.Store.FK_Application_DepartmentPickUp">
+            <End Role="Department" EntitySet="Department" />
+            <End Role="Application" EntitySet="Application" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Application_DepartmentRet" Association="LocalAutoRentModel.Store.FK_Application_DepartmentRet">
+            <End Role="Department" EntitySet="Department" />
+            <End Role="Application" EntitySet="Application" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Application_Model" Association="LocalAutoRentModel.Store.FK_Application_Model">
+            <End Role="Model" EntitySet="Model" />
+            <End Role="Application" EntitySet="Application" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Auto_Insuarance" Association="LocalAutoRentModel.Store.FK_Auto_Insuarance">
+            <End Role="Insuarance" EntitySet="Insuarance" />
+            <End Role="Auto" EntitySet="Auto" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Auto_Model" Association="LocalAutoRentModel.Store.FK_Auto_Model">
+            <End Role="Model" EntitySet="Model" />
+            <End Role="Auto" EntitySet="Auto" />
+          </AssociationSet>
+          <AssociationSet Name="FK_ChargeOffOrder_Auto" Association="LocalAutoRentModel.Store.FK_ChargeOffOrder_Auto">
+            <End Role="Auto" EntitySet="Auto" />
+            <End Role="ChargeOffOrder" EntitySet="ChargeOffOrder" />
+          </AssociationSet>
+          <AssociationSet Name="FK_ChargeOffOrder_EmployeeManager" Association="LocalAutoRentModel.Store.FK_ChargeOffOrder_EmployeeManager">
+            <End Role="Employee" EntitySet="Employee" />
+            <End Role="ChargeOffOrder" EntitySet="ChargeOffOrder" />
+          </AssociationSet>
+          <AssociationSet Name="FK_ChargeOffOrder_EmployeeMechanic" Association="LocalAutoRentModel.Store.FK_ChargeOffOrder_EmployeeMechanic">
+            <End Role="Employee" EntitySet="Employee" />
+            <End Role="ChargeOffOrder" EntitySet="ChargeOffOrder" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Department_City" Association="LocalAutoRentModel.Store.FK_Department_City">
+            <End Role="City" EntitySet="City" />
+            <End Role="Department" EntitySet="Department" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Employee_City" Association="LocalAutoRentModel.Store.FK_Employee_City">
+            <End Role="City" EntitySet="City" />
+            <End Role="Employee" EntitySet="Employee" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Employee_Department" Association="LocalAutoRentModel.Store.FK_Employee_Department">
+            <End Role="Department" EntitySet="Department" />
+            <End Role="Employee" EntitySet="Employee" />
+          </AssociationSet>
+          <AssociationSet Name="FK_EvacuationOrder_City" Association="LocalAutoRentModel.Store.FK_EvacuationOrder_City">
+            <End Role="City" EntitySet="City" />
+            <End Role="EvacuationOrder" EntitySet="EvacuationOrder" />
+          </AssociationSet>
+          <AssociationSet Name="FK_EvacuationOrder_Order" Association="LocalAutoRentModel.Store.FK_EvacuationOrder_Order">
+            <End Role="Order" EntitySet="Order" />
+            <End Role="EvacuationOrder" EntitySet="EvacuationOrder" />
+          </AssociationSet>
+          <AssociationSet Name="FK_ExtraDamage_Auto" Association="LocalAutoRentModel.Store.FK_ExtraDamage_Auto">
+            <End Role="Auto" EntitySet="Auto" />
+            <End Role="ExtraDamage" EntitySet="ExtraDamage" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Insuarance_InsuaranceAgency" Association="LocalAutoRentModel.Store.FK_Insuarance_InsuaranceAgency">
+            <End Role="InsuaranceAgency" EntitySet="InsuaranceAgency" />
+            <End Role="Insuarance" EntitySet="Insuarance" />
+          </AssociationSet>
+          <AssociationSet Name="FK_InsuaranceAgency_City" Association="LocalAutoRentModel.Store.FK_InsuaranceAgency_City">
+            <End Role="City" EntitySet="City" />
+            <End Role="InsuaranceAgency" EntitySet="InsuaranceAgency" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Model_Make" Association="LocalAutoRentModel.Store.FK_Model_Make">
+            <End Role="Make" EntitySet="Make" />
+            <End Role="Model" EntitySet="Model" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Order_Auto" Association="LocalAutoRentModel.Store.FK_Order_Auto">
+            <End Role="Auto" EntitySet="Auto" />
+            <End Role="Order" EntitySet="Order" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Order_Customer" Association="LocalAutoRentModel.Store.FK_Order_Customer">
+            <End Role="Customer" EntitySet="Customer" />
+            <End Role="Order" EntitySet="Order" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Order_DepartmentPickup" Association="LocalAutoRentModel.Store.FK_Order_DepartmentPickup">
+            <End Role="Department" EntitySet="Department" />
+            <End Role="Order" EntitySet="Order" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Order_DepartmentRetrn" Association="LocalAutoRentModel.Store.FK_Order_DepartmentRetrn">
+            <End Role="Department" EntitySet="Department" />
+            <End Role="Order" EntitySet="Order" />
+          </AssociationSet>
+          <AssociationSet Name="FK_OrdinaryDamage_Auto" Association="LocalAutoRentModel.Store.FK_OrdinaryDamage_Auto">
+            <End Role="Auto" EntitySet="Auto" />
+            <End Role="OrdinaryDamage" EntitySet="OrdinaryDamage" />
+          </AssociationSet>
+          <AssociationSet Name="FK_OrdinaryDamage_Damage" Association="LocalAutoRentModel.Store.FK_OrdinaryDamage_Damage">
+            <End Role="Damage" EntitySet="Damage" />
+            <End Role="OrdinaryDamage" EntitySet="OrdinaryDamage" />
+          </AssociationSet>
+          <AssociationSet Name="FK_PurchaseOrder_Auto" Association="LocalAutoRentModel.Store.FK_PurchaseOrder_Auto">
+            <End Role="Auto" EntitySet="Auto" />
+            <End Role="PurchaseOrder" EntitySet="PurchaseOrder" />
+          </AssociationSet>
+          <AssociationSet Name="FK_PurchaseOrder_Purchaser" Association="LocalAutoRentModel.Store.FK_PurchaseOrder_Purchaser">
+            <End Role="Purchaser" EntitySet="Purchaser" />
+            <End Role="PurchaseOrder" EntitySet="PurchaseOrder" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Purchaser_City" Association="LocalAutoRentModel.Store.FK_Purchaser_City">
+            <End Role="City" EntitySet="City" />
+            <End Role="Purchaser" EntitySet="Purchaser" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Repair_Auto" Association="LocalAutoRentModel.Store.FK_Repair_Auto">
+            <End Role="Auto" EntitySet="Auto" />
+            <End Role="Repair" EntitySet="Repair" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Repair_TechnicalService" Association="LocalAutoRentModel.Store.FK_Repair_TechnicalService">
+            <End Role="TechnicalService" EntitySet="TechnicalService" />
+            <End Role="Repair" EntitySet="Repair" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Supplier_City" Association="LocalAutoRentModel.Store.FK_Supplier_City">
+            <End Role="City" EntitySet="City" />
+            <End Role="Supplier" EntitySet="Supplier" />
+          </AssociationSet>
+          <AssociationSet Name="FK_SupplyOrder_Model" Association="LocalAutoRentModel.Store.FK_SupplyOrder_Model">
+            <End Role="Model" EntitySet="Model" />
+            <End Role="SupplyOrder" EntitySet="SupplyOrder" />
+          </AssociationSet>
+          <AssociationSet Name="FK_SupplyOrder_Supplier" Association="LocalAutoRentModel.Store.FK_SupplyOrder_Supplier">
+            <End Role="Supplier" EntitySet="Supplier" />
+            <End Role="SupplyOrder" EntitySet="SupplyOrder" />
+          </AssociationSet>
+          <AssociationSet Name="FK_TechnicalService_City" Association="LocalAutoRentModel.Store.FK_TechnicalService_City">
+            <End Role="City" EntitySet="City" />
+            <End Role="TechnicalService" EntitySet="TechnicalService" />
+          </AssociationSet>
+        </EntityContainer>
+        <EntityType Name="Application">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="CreationDate" Type="datetime" Nullable="false" />
+          <Property Name="FirstName" Type="nvarchar" Nullable="false" MaxLength="20" />
+          <Property Name="LastName" Type="nvarchar" Nullable="false" MaxLength="30" />
+          <Property Name="Phone" Type="nvarchar" Nullable="false" MaxLength="12" />
+          <Property Name="Email" Type="nchar" MaxLength="20" />
+          <Property Name="ModelId" Type="int" Nullable="false" />
+          <Property Name="PickupDate" Type="date" Nullable="false" />
+          <Property Name="PickupDepartmentId" Type="int" Nullable="false" />
+          <Property Name="ReturnDate" Type="date" Nullable="false" />
+          <Property Name="ReturnDepartmentId" Type="int" Nullable="false" />
+          <Property Name="Status" Type="smallint" Nullable="false" />
+          <Property Name="Preferences" Type="nvarchar" MaxLength="128" />
+        </EntityType>
+        <EntityType Name="Auto">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="Number" Type="nvarchar" Nullable="false" MaxLength="8" />
+          <Property Name="InsuaranceId" Type="int" Nullable="false" />
+          <Property Name="Category" Type="smallint" Nullable="false" />
+          <Property Name="ModelId" Type="int" Nullable="false" />
+          <Property Name="Year" Type="smallint" Nullable="false" />
+          <Property Name="Mileage" Type="int" Nullable="false" />
+          <Property Name="Color" Type="smallint" Nullable="false" />
+          <Property Name="LastCheckDate" Type="datetime" />
+          <Property Name="Description" Type="nvarchar" MaxLength="128" />
+          <Property Name="Status" Type="smallint" Nullable="false" />
+        </EntityType>
+        <EntityType Name="ChargeOffOrder">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="AutoId" Type="int" Nullable="false" />
+          <Property Name="Reason" Type="nvarchar" Nullable="false" MaxLength="60" />
+          <Property Name="MechanicId" Type="int" Nullable="false" />
+          <Property Name="ManagerId" Type="int" />
+          <Property Name="Status" Type="smallint" Nullable="false" />
+        </EntityType>
+        <EntityType Name="City">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="Name" Type="nvarchar" Nullable="false" MaxLength="30" />
+        </EntityType>
+        <EntityType Name="Customer">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="FirstName" Type="nvarchar" Nullable="false" MaxLength="20" />
+          <Property Name="LastName" Type="nvarchar" Nullable="false" MaxLength="30" />
+          <Property Name="Insuarance" Type="nvarchar" Nullable="false" MaxLength="20" />
+          <Property Name="Passport" Type="nvarchar" Nullable="false" MaxLength="8" />
+          <Property Name="Phone" Type="nvarchar" Nullable="false" MaxLength="12" />
+          <Property Name="Email" Type="nvarchar" MaxLength="20" />
+        </EntityType>
+        <EntityType Name="Damage">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="Name" Type="nvarchar" Nullable="false" MaxLength="20" />
+          <Property Name="Price" Type="money" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Department">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="CityId" Type="int" Nullable="false" />
+          <Property Name="Address" Type="nvarchar" Nullable="false" MaxLength="30" />
+          <Property Name="Phone" Type="nvarchar" Nullable="false" MaxLength="12" />
+        </EntityType>
+        <EntityType Name="Employee">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="DepartmentId" Type="int" Nullable="false" />
+          <Property Name="IdentificationCode" Type="nvarchar" MaxLength="10" />
+          <Property Name="FirstName" Type="nchar" Nullable="false" MaxLength="10" />
+          <Property Name="LastName" Type="nchar" Nullable="false" MaxLength="10" />
+          <Property Name="Birthday" Type="date" />
+          <Property Name="Passport" Type="nvarchar" MaxLength="8" />
+          <Property Name="Position" Type="nvarchar" Nullable="false" MaxLength="20" />
+          <Property Name="HireDate" Type="date" Nullable="false" />
+          <Property Name="FireDate" Type="date" />
+          <Property Name="CityId" Type="int" Nullable="false" />
+          <Property Name="Address" Type="nvarchar" Nullable="false" MaxLength="30" />
+          <Property Name="Phone" Type="nvarchar" Nullable="false" MaxLength="12" />
+        </EntityType>
+        <EntityType Name="EvacuationOrder">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="OrderId" Type="int" Nullable="false" />
+          <Property Name="CityId" Type="int" Nullable="false" />
+          <Property Name="Address" Type="nvarchar" Nullable="false" MaxLength="50" />
+          <Property Name="Value" Type="money" />
+        </EntityType>
+        <EntityType Name="ExtraDamage">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="AutoId" Type="int" Nullable="false" />
+          <Property Name="Name" Type="nvarchar" Nullable="false" MaxLength="20" />
+          <Property Name="Description" Type="nvarchar" Nullable="false" MaxLength="50" />
+          <Property Name="Price" Type="money" Nullable="false" />
+          <Property Name="DamageDate" Type="date" />
+          <Property Name="FixDate" Type="date" />
+        </EntityType>
+        <EntityType Name="Insuarance">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="Number" Type="nvarchar" Nullable="false" MaxLength="20" />
+          <Property Name="InsuaranceAgencyId" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="InsuaranceAgency">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="Name" Type="nchar" Nullable="false" MaxLength="10" />
+          <Property Name="CityId" Type="int" Nullable="false" />
+          <Property Name="Address" Type="nvarchar" Nullable="false" MaxLength="30" />
+          <Property Name="Phone" Type="nvarchar" Nullable="false" MaxLength="12" />
+        </EntityType>
+        <EntityType Name="Make">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="Name" Type="nvarchar" Nullable="false" MaxLength="20" />
+        </EntityType>
+        <EntityType Name="Model">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="Name" Type="nvarchar" Nullable="false" MaxLength="20" />
+          <Property Name="MakeId" Type="int" Nullable="false" />
+          <Property Name="Photo" Type="image" />
+          <Property Name="KmRate" Type="smallmoney" />
+          <Property Name="DayRate" Type="smallmoney" />
+          <Property Name="Engine" Type="nvarchar" MaxLength="12" />
+          <Property Name="Seats" Type="smallint" />
+          <Property Name="Deposit" Type="money" />
+        </EntityType>
+        <EntityType Name="Order">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="CreateDate" Type="datetime" />
+          <Property Name="CloseDate" Type="datetime" />
+          <Property Name="CustomerId" Type="int" Nullable="false" />
+          <Property Name="AutoId" Type="int" />
+          <Property Name="PickupDate" Type="datetime" />
+          <Property Name="PickupDepartmentId" Type="int" />
+          <Property Name="ReturnDate" Type="datetime" />
+          <Property Name="ReturnDepartmentId" Type="int" />
+          <Property Name="Status" Type="smallint" Nullable="false" />
+          <Property Name="RentType" Type="smallint" Nullable="false" />
+          <Property Name="PaymentType" Type="smallint" />
+          <Property Name="PaymentSum" Type="money" />
+        </EntityType>
+        <EntityType Name="OrdinaryDamage">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="AutoId" Type="int" Nullable="false" />
+          <Property Name="DamageId" Type="int" Nullable="false" />
+          <Property Name="DamageDate" Type="date" Nullable="false" />
+          <Property Name="FixDate" Type="date" Nullable="false" />
+        </EntityType>
+        <EntityType Name="PurchaseOrder">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="PuchaserId" Type="int" Nullable="false" />
+          <Property Name="AutoId" Type="int" Nullable="false" />
+          <Property Name="Price" Type="money" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Purchaser">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="Name" Type="nvarchar" Nullable="false" MaxLength="20" />
+          <Property Name="CityId" Type="int" Nullable="false" />
+          <Property Name="Address" Type="nvarchar" Nullable="false" MaxLength="30" />
+          <Property Name="Phone" Type="nvarchar" Nullable="false" MaxLength="12" />
+        </EntityType>
+        <EntityType Name="Repair">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="AutoId" Type="int" Nullable="false" />
+          <Property Name="TechnicalServiceId" Type="int" Nullable="false" />
+          <Property Name="StartDate" Type="date" Nullable="false" />
+          <Property Name="EndDate" Type="date" />
+          <Property Name="PaymentSum" Type="money" />
+          <Property Name="Description" Type="nvarchar" MaxLength="128" />
+        </EntityType>
+        <EntityType Name="Supplier">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="Name" Type="nvarchar" Nullable="false" MaxLength="20" />
+          <Property Name="CityId" Type="int" Nullable="false" />
+          <Property Name="Address" Type="nvarchar" Nullable="false" MaxLength="30" />
+          <Property Name="Phone" Type="nvarchar" Nullable="false" MaxLength="12" />
+        </EntityType>
+        <EntityType Name="SupplyOrder">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="SupplierId" Type="int" Nullable="false" />
+          <Property Name="ModelId" Type="int" Nullable="false" />
+          <Property Name="Price" Type="money" Nullable="false" />
+          <Property Name="Quantity" Type="smallint" Nullable="false" />
+        </EntityType>
+        <EntityType Name="TechnicalService">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="Name" Type="nvarchar" Nullable="false" MaxLength="20" />
+          <Property Name="CityId" Type="int" Nullable="false" />
+          <Property Name="Address" Type="nvarchar" Nullable="false" MaxLength="30" />
+          <Property Name="Phone" Type="nvarchar" Nullable="false" MaxLength="12" />
+        </EntityType>
+        <Association Name="FK_Application_DepartmentPickUp">
+          <End Role="Department" Type="LocalAutoRentModel.Store.Department" Multiplicity="1" />
+          <End Role="Application" Type="LocalAutoRentModel.Store.Application" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Department">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Application">
+              <PropertyRef Name="PickupDepartmentId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Application_DepartmentRet">
+          <End Role="Department" Type="LocalAutoRentModel.Store.Department" Multiplicity="1" />
+          <End Role="Application" Type="LocalAutoRentModel.Store.Application" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Department">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Application">
+              <PropertyRef Name="ReturnDepartmentId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Application_Model">
+          <End Role="Model" Type="LocalAutoRentModel.Store.Model" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="Application" Type="LocalAutoRentModel.Store.Application" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Model">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Application">
+              <PropertyRef Name="ModelId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Auto_Insuarance">
+          <End Role="Insuarance" Type="LocalAutoRentModel.Store.Insuarance" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="Auto" Type="LocalAutoRentModel.Store.Auto" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Insuarance">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Auto">
+              <PropertyRef Name="InsuaranceId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Auto_Model">
+          <End Role="Model" Type="LocalAutoRentModel.Store.Model" Multiplicity="1" />
+          <End Role="Auto" Type="LocalAutoRentModel.Store.Auto" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Model">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Auto">
+              <PropertyRef Name="ModelId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_ChargeOffOrder_Auto">
+          <End Role="Auto" Type="LocalAutoRentModel.Store.Auto" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="ChargeOffOrder" Type="LocalAutoRentModel.Store.ChargeOffOrder" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Auto">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="ChargeOffOrder">
+              <PropertyRef Name="AutoId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_ChargeOffOrder_EmployeeManager">
+          <End Role="Employee" Type="LocalAutoRentModel.Store.Employee" Multiplicity="0..1" />
+          <End Role="ChargeOffOrder" Type="LocalAutoRentModel.Store.ChargeOffOrder" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Employee">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="ChargeOffOrder">
+              <PropertyRef Name="ManagerId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_ChargeOffOrder_EmployeeMechanic">
+          <End Role="Employee" Type="LocalAutoRentModel.Store.Employee" Multiplicity="1" />
+          <End Role="ChargeOffOrder" Type="LocalAutoRentModel.Store.ChargeOffOrder" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Employee">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="ChargeOffOrder">
+              <PropertyRef Name="MechanicId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Department_City">
+          <End Role="City" Type="LocalAutoRentModel.Store.City" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="Department" Type="LocalAutoRentModel.Store.Department" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="City">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Department">
+              <PropertyRef Name="CityId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Employee_City">
+          <End Role="City" Type="LocalAutoRentModel.Store.City" Multiplicity="1" />
+          <End Role="Employee" Type="LocalAutoRentModel.Store.Employee" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="City">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Employee">
+              <PropertyRef Name="CityId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Employee_Department">
+          <End Role="Department" Type="LocalAutoRentModel.Store.Department" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="Employee" Type="LocalAutoRentModel.Store.Employee" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Department">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Employee">
+              <PropertyRef Name="DepartmentId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_EvacuationOrder_City">
+          <End Role="City" Type="LocalAutoRentModel.Store.City" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="EvacuationOrder" Type="LocalAutoRentModel.Store.EvacuationOrder" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="City">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="EvacuationOrder">
+              <PropertyRef Name="CityId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_EvacuationOrder_Order">
+          <End Role="Order" Type="LocalAutoRentModel.Store.Order" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="EvacuationOrder" Type="LocalAutoRentModel.Store.EvacuationOrder" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Order">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="EvacuationOrder">
+              <PropertyRef Name="OrderId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_ExtraDamage_Auto">
+          <End Role="Auto" Type="LocalAutoRentModel.Store.Auto" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="ExtraDamage" Type="LocalAutoRentModel.Store.ExtraDamage" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Auto">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="ExtraDamage">
+              <PropertyRef Name="AutoId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Insuarance_InsuaranceAgency">
+          <End Role="InsuaranceAgency" Type="LocalAutoRentModel.Store.InsuaranceAgency" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="Insuarance" Type="LocalAutoRentModel.Store.Insuarance" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="InsuaranceAgency">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Insuarance">
+              <PropertyRef Name="InsuaranceAgencyId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_InsuaranceAgency_City">
+          <End Role="City" Type="LocalAutoRentModel.Store.City" Multiplicity="1" />
+          <End Role="InsuaranceAgency" Type="LocalAutoRentModel.Store.InsuaranceAgency" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="City">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="InsuaranceAgency">
+              <PropertyRef Name="CityId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Model_Make">
+          <End Role="Make" Type="LocalAutoRentModel.Store.Make" Multiplicity="1" />
+          <End Role="Model" Type="LocalAutoRentModel.Store.Model" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Make">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Model">
+              <PropertyRef Name="MakeId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Order_Auto">
+          <End Role="Auto" Type="LocalAutoRentModel.Store.Auto" Multiplicity="0..1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="Order" Type="LocalAutoRentModel.Store.Order" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Auto">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Order">
+              <PropertyRef Name="AutoId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Order_Customer">
+          <End Role="Customer" Type="LocalAutoRentModel.Store.Customer" Multiplicity="1" />
+          <End Role="Order" Type="LocalAutoRentModel.Store.Order" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Customer">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Order">
+              <PropertyRef Name="CustomerId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Order_DepartmentPickup">
+          <End Role="Department" Type="LocalAutoRentModel.Store.Department" Multiplicity="0..1" />
+          <End Role="Order" Type="LocalAutoRentModel.Store.Order" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Department">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Order">
+              <PropertyRef Name="PickupDepartmentId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Order_DepartmentRetrn">
+          <End Role="Department" Type="LocalAutoRentModel.Store.Department" Multiplicity="0..1" />
+          <End Role="Order" Type="LocalAutoRentModel.Store.Order" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Department">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Order">
+              <PropertyRef Name="ReturnDepartmentId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_OrdinaryDamage_Auto">
+          <End Role="Auto" Type="LocalAutoRentModel.Store.Auto" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="OrdinaryDamage" Type="LocalAutoRentModel.Store.OrdinaryDamage" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Auto">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="OrdinaryDamage">
+              <PropertyRef Name="AutoId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_OrdinaryDamage_Damage">
+          <End Role="Damage" Type="LocalAutoRentModel.Store.Damage" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="OrdinaryDamage" Type="LocalAutoRentModel.Store.OrdinaryDamage" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Damage">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="OrdinaryDamage">
+              <PropertyRef Name="DamageId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_PurchaseOrder_Auto">
+          <End Role="Auto" Type="LocalAutoRentModel.Store.Auto" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="PurchaseOrder" Type="LocalAutoRentModel.Store.PurchaseOrder" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Auto">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="PurchaseOrder">
+              <PropertyRef Name="AutoId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_PurchaseOrder_Purchaser">
+          <End Role="Purchaser" Type="LocalAutoRentModel.Store.Purchaser" Multiplicity="1" />
+          <End Role="PurchaseOrder" Type="LocalAutoRentModel.Store.PurchaseOrder" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Purchaser">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="PurchaseOrder">
+              <PropertyRef Name="PuchaserId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Purchaser_City">
+          <End Role="City" Type="LocalAutoRentModel.Store.City" Multiplicity="1" />
+          <End Role="Purchaser" Type="LocalAutoRentModel.Store.Purchaser" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="City">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Purchaser">
+              <PropertyRef Name="CityId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Repair_Auto">
+          <End Role="Auto" Type="LocalAutoRentModel.Store.Auto" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="Repair" Type="LocalAutoRentModel.Store.Repair" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Auto">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Repair">
+              <PropertyRef Name="AutoId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Repair_TechnicalService">
+          <End Role="TechnicalService" Type="LocalAutoRentModel.Store.TechnicalService" Multiplicity="1" />
+          <End Role="Repair" Type="LocalAutoRentModel.Store.Repair" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="TechnicalService">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Repair">
+              <PropertyRef Name="TechnicalServiceId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Supplier_City">
+          <End Role="City" Type="LocalAutoRentModel.Store.City" Multiplicity="1" />
+          <End Role="Supplier" Type="LocalAutoRentModel.Store.Supplier" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="City">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Supplier">
+              <PropertyRef Name="CityId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_SupplyOrder_Model">
+          <End Role="Model" Type="LocalAutoRentModel.Store.Model" Multiplicity="1" />
+          <End Role="SupplyOrder" Type="LocalAutoRentModel.Store.SupplyOrder" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Model">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="SupplyOrder">
+              <PropertyRef Name="ModelId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_SupplyOrder_Supplier">
+          <End Role="Supplier" Type="LocalAutoRentModel.Store.Supplier" Multiplicity="1" />
+          <End Role="SupplyOrder" Type="LocalAutoRentModel.Store.SupplyOrder" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Supplier">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="SupplyOrder">
+              <PropertyRef Name="SupplierId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_TechnicalService_City">
+          <End Role="City" Type="LocalAutoRentModel.Store.City" Multiplicity="1" />
+          <End Role="TechnicalService" Type="LocalAutoRentModel.Store.TechnicalService" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="City">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="TechnicalService">
+              <PropertyRef Name="CityId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="LocalAutoRentModel" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
+        <EntityContainer Name="LocalAutoRentEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="Application" EntityType="LocalAutoRentModel.Application" />
+          <EntitySet Name="Auto" EntityType="LocalAutoRentModel.Auto" />
+          <EntitySet Name="ChargeOffOrder" EntityType="LocalAutoRentModel.ChargeOffOrder" />
+          <EntitySet Name="City" EntityType="LocalAutoRentModel.City" />
+          <EntitySet Name="Customer" EntityType="LocalAutoRentModel.Customer" />
+          <EntitySet Name="Damage" EntityType="LocalAutoRentModel.Damage" />
+          <EntitySet Name="Department" EntityType="LocalAutoRentModel.Department" />
+          <EntitySet Name="Employee" EntityType="LocalAutoRentModel.Employee" />
+          <EntitySet Name="EvacuationOrder" EntityType="LocalAutoRentModel.EvacuationOrder" />
+          <EntitySet Name="ExtraDamage" EntityType="LocalAutoRentModel.ExtraDamage" />
+          <EntitySet Name="Insuarance" EntityType="LocalAutoRentModel.Insuarance" />
+          <EntitySet Name="InsuaranceAgency" EntityType="LocalAutoRentModel.InsuaranceAgency" />
+          <EntitySet Name="Make" EntityType="LocalAutoRentModel.Make" />
+          <EntitySet Name="Model" EntityType="LocalAutoRentModel.Model" />
+          <EntitySet Name="Order" EntityType="LocalAutoRentModel.Order" />
+          <EntitySet Name="OrdinaryDamage" EntityType="LocalAutoRentModel.OrdinaryDamage" />
+          <EntitySet Name="PurchaseOrder" EntityType="LocalAutoRentModel.PurchaseOrder" />
+          <EntitySet Name="Purchaser" EntityType="LocalAutoRentModel.Purchaser" />
+          <EntitySet Name="Repair" EntityType="LocalAutoRentModel.Repair" />
+          <EntitySet Name="Supplier" EntityType="LocalAutoRentModel.Supplier" />
+          <EntitySet Name="SupplyOrder" EntityType="LocalAutoRentModel.SupplyOrder" />
+          <EntitySet Name="TechnicalService" EntityType="LocalAutoRentModel.TechnicalService" />
+          <AssociationSet Name="FK_Application_DepartmentPickUp" Association="LocalAutoRentModel.FK_Application_DepartmentPickUp">
+            <End Role="Department" EntitySet="Department" />
+            <End Role="Application" EntitySet="Application" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Application_DepartmentRet" Association="LocalAutoRentModel.FK_Application_DepartmentRet">
+            <End Role="Department" EntitySet="Department" />
+            <End Role="Application" EntitySet="Application" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Application_Model" Association="LocalAutoRentModel.FK_Application_Model">
+            <End Role="Model" EntitySet="Model" />
+            <End Role="Application" EntitySet="Application" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Auto_Insuarance" Association="LocalAutoRentModel.FK_Auto_Insuarance">
+            <End Role="Insuarance" EntitySet="Insuarance" />
+            <End Role="Auto" EntitySet="Auto" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Auto_Model" Association="LocalAutoRentModel.FK_Auto_Model">
+            <End Role="Model" EntitySet="Model" />
+            <End Role="Auto" EntitySet="Auto" />
+          </AssociationSet>
+          <AssociationSet Name="FK_ChargeOffOrder_Auto" Association="LocalAutoRentModel.FK_ChargeOffOrder_Auto">
+            <End Role="Auto" EntitySet="Auto" />
+            <End Role="ChargeOffOrder" EntitySet="ChargeOffOrder" />
+          </AssociationSet>
+          <AssociationSet Name="FK_ExtraDamage_Auto" Association="LocalAutoRentModel.FK_ExtraDamage_Auto">
+            <End Role="Auto" EntitySet="Auto" />
+            <End Role="ExtraDamage" EntitySet="ExtraDamage" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Order_Auto" Association="LocalAutoRentModel.FK_Order_Auto">
+            <End Role="Auto" EntitySet="Auto" />
+            <End Role="Order" EntitySet="Order" />
+          </AssociationSet>
+          <AssociationSet Name="FK_OrdinaryDamage_Auto" Association="LocalAutoRentModel.FK_OrdinaryDamage_Auto">
+            <End Role="Auto" EntitySet="Auto" />
+            <End Role="OrdinaryDamage" EntitySet="OrdinaryDamage" />
+          </AssociationSet>
+          <AssociationSet Name="FK_PurchaseOrder_Auto" Association="LocalAutoRentModel.FK_PurchaseOrder_Auto">
+            <End Role="Auto" EntitySet="Auto" />
+            <End Role="PurchaseOrder" EntitySet="PurchaseOrder" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Repair_Auto" Association="LocalAutoRentModel.FK_Repair_Auto">
+            <End Role="Auto" EntitySet="Auto" />
+            <End Role="Repair" EntitySet="Repair" />
+          </AssociationSet>
+          <AssociationSet Name="FK_ChargeOffOrder_EmployeeManager" Association="LocalAutoRentModel.FK_ChargeOffOrder_EmployeeManager">
+            <End Role="Employee" EntitySet="Employee" />
+            <End Role="ChargeOffOrder" EntitySet="ChargeOffOrder" />
+          </AssociationSet>
+          <AssociationSet Name="FK_ChargeOffOrder_EmployeeMechanic" Association="LocalAutoRentModel.FK_ChargeOffOrder_EmployeeMechanic">
+            <End Role="Employee" EntitySet="Employee" />
+            <End Role="ChargeOffOrder" EntitySet="ChargeOffOrder" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Department_City" Association="LocalAutoRentModel.FK_Department_City">
+            <End Role="City" EntitySet="City" />
+            <End Role="Department" EntitySet="Department" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Employee_City" Association="LocalAutoRentModel.FK_Employee_City">
+            <End Role="City" EntitySet="City" />
+            <End Role="Employee" EntitySet="Employee" />
+          </AssociationSet>
+          <AssociationSet Name="FK_EvacuationOrder_City" Association="LocalAutoRentModel.FK_EvacuationOrder_City">
+            <End Role="City" EntitySet="City" />
+            <End Role="EvacuationOrder" EntitySet="EvacuationOrder" />
+          </AssociationSet>
+          <AssociationSet Name="FK_InsuaranceAgency_City" Association="LocalAutoRentModel.FK_InsuaranceAgency_City">
+            <End Role="City" EntitySet="City" />
+            <End Role="InsuaranceAgency" EntitySet="InsuaranceAgency" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Purchaser_City" Association="LocalAutoRentModel.FK_Purchaser_City">
+            <End Role="City" EntitySet="City" />
+            <End Role="Purchaser" EntitySet="Purchaser" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Supplier_City" Association="LocalAutoRentModel.FK_Supplier_City">
+            <End Role="City" EntitySet="City" />
+            <End Role="Supplier" EntitySet="Supplier" />
+          </AssociationSet>
+          <AssociationSet Name="FK_TechnicalService_City" Association="LocalAutoRentModel.FK_TechnicalService_City">
+            <End Role="City" EntitySet="City" />
+            <End Role="TechnicalService" EntitySet="TechnicalService" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Order_Customer" Association="LocalAutoRentModel.FK_Order_Customer">
+            <End Role="Customer" EntitySet="Customer" />
+            <End Role="Order" EntitySet="Order" />
+          </AssociationSet>
+          <AssociationSet Name="FK_OrdinaryDamage_Damage" Association="LocalAutoRentModel.FK_OrdinaryDamage_Damage">
+            <End Role="Damage" EntitySet="Damage" />
+            <End Role="OrdinaryDamage" EntitySet="OrdinaryDamage" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Employee_Department" Association="LocalAutoRentModel.FK_Employee_Department">
+            <End Role="Department" EntitySet="Department" />
+            <End Role="Employee" EntitySet="Employee" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Order_DepartmentPickup" Association="LocalAutoRentModel.FK_Order_DepartmentPickup">
+            <End Role="Department" EntitySet="Department" />
+            <End Role="Order" EntitySet="Order" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Order_DepartmentRetrn" Association="LocalAutoRentModel.FK_Order_DepartmentRetrn">
+            <End Role="Department" EntitySet="Department" />
+            <End Role="Order" EntitySet="Order" />
+          </AssociationSet>
+          <AssociationSet Name="FK_EvacuationOrder_Order" Association="LocalAutoRentModel.FK_EvacuationOrder_Order">
+            <End Role="Order" EntitySet="Order" />
+            <End Role="EvacuationOrder" EntitySet="EvacuationOrder" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Insuarance_InsuaranceAgency" Association="LocalAutoRentModel.FK_Insuarance_InsuaranceAgency">
+            <End Role="InsuaranceAgency" EntitySet="InsuaranceAgency" />
+            <End Role="Insuarance" EntitySet="Insuarance" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Model_Make" Association="LocalAutoRentModel.FK_Model_Make">
+            <End Role="Make" EntitySet="Make" />
+            <End Role="Model" EntitySet="Model" />
+          </AssociationSet>
+          <AssociationSet Name="FK_SupplyOrder_Model" Association="LocalAutoRentModel.FK_SupplyOrder_Model">
+            <End Role="Model" EntitySet="Model" />
+            <End Role="SupplyOrder" EntitySet="SupplyOrder" />
+          </AssociationSet>
+          <AssociationSet Name="FK_PurchaseOrder_Purchaser" Association="LocalAutoRentModel.FK_PurchaseOrder_Purchaser">
+            <End Role="Purchaser" EntitySet="Purchaser" />
+            <End Role="PurchaseOrder" EntitySet="PurchaseOrder" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Repair_TechnicalService" Association="LocalAutoRentModel.FK_Repair_TechnicalService">
+            <End Role="TechnicalService" EntitySet="TechnicalService" />
+            <End Role="Repair" EntitySet="Repair" />
+          </AssociationSet>
+          <AssociationSet Name="FK_SupplyOrder_Supplier" Association="LocalAutoRentModel.FK_SupplyOrder_Supplier">
+            <End Role="Supplier" EntitySet="Supplier" />
+            <End Role="SupplyOrder" EntitySet="SupplyOrder" />
+          </AssociationSet>
+        </EntityContainer>
+        <EntityType Name="Application">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="CreationDate" Type="DateTime" Nullable="false" />
+          <Property Name="FirstName" Type="String" Nullable="false" MaxLength="20" Unicode="true" FixedLength="false" />
+          <Property Name="LastName" Type="String" Nullable="false" MaxLength="30" Unicode="true" FixedLength="false" />
+          <Property Name="Phone" Type="String" Nullable="false" MaxLength="12" Unicode="true" FixedLength="false" />
+          <Property Name="Email" Type="String" MaxLength="20" Unicode="true" FixedLength="true" />
+          <Property Name="ModelId" Type="Int32" Nullable="false" />
+          <Property Name="PickupDate" Type="DateTime" Nullable="false" />
+          <Property Name="PickupDepartmentId" Type="Int32" Nullable="false" />
+          <Property Name="ReturnDate" Type="DateTime" Nullable="false" />
+          <Property Name="ReturnDepartmentId" Type="Int32" Nullable="false" />
+          <Property Name="Status" Type="Int16" Nullable="false" />
+          <Property Name="Preferences" Type="String" MaxLength="128" Unicode="true" FixedLength="false" />
+          <NavigationProperty Name="Department" Relationship="LocalAutoRentModel.FK_Application_DepartmentPickUp" FromRole="Application" ToRole="Department" />
+          <NavigationProperty Name="Department1" Relationship="LocalAutoRentModel.FK_Application_DepartmentRet" FromRole="Application" ToRole="Department" />
+          <NavigationProperty Name="Model" Relationship="LocalAutoRentModel.FK_Application_Model" FromRole="Application" ToRole="Model" />
+        </EntityType>
+        <EntityType Name="Auto">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Number" Type="String" Nullable="false" MaxLength="8" Unicode="true" FixedLength="false" />
+          <Property Name="InsuaranceId" Type="Int32" Nullable="false" />
+          <Property Name="Category" Type="Int16" Nullable="false" />
+          <Property Name="ModelId" Type="Int32" Nullable="false" />
+          <Property Name="Year" Type="Int16" Nullable="false" />
+          <Property Name="Mileage" Type="Int32" Nullable="false" />
+          <Property Name="Color" Type="Int16" Nullable="false" />
+          <Property Name="LastCheckDate" Type="DateTime" />
+          <Property Name="Description" Type="String" MaxLength="128" Unicode="true" FixedLength="false" />
+          <Property Name="Status" Type="Int16" Nullable="false" />
+          <NavigationProperty Name="Insuarance" Relationship="LocalAutoRentModel.FK_Auto_Insuarance" FromRole="Auto" ToRole="Insuarance" />
+          <NavigationProperty Name="Model" Relationship="LocalAutoRentModel.FK_Auto_Model" FromRole="Auto" ToRole="Model" />
+          <NavigationProperty Name="ChargeOffOrder" Relationship="LocalAutoRentModel.FK_ChargeOffOrder_Auto" FromRole="Auto" ToRole="ChargeOffOrder" />
+          <NavigationProperty Name="ExtraDamage" Relationship="LocalAutoRentModel.FK_ExtraDamage_Auto" FromRole="Auto" ToRole="ExtraDamage" />
+          <NavigationProperty Name="Order" Relationship="LocalAutoRentModel.FK_Order_Auto" FromRole="Auto" ToRole="Order" />
+          <NavigationProperty Name="OrdinaryDamage" Relationship="LocalAutoRentModel.FK_OrdinaryDamage_Auto" FromRole="Auto" ToRole="OrdinaryDamage" />
+          <NavigationProperty Name="PurchaseOrder" Relationship="LocalAutoRentModel.FK_PurchaseOrder_Auto" FromRole="Auto" ToRole="PurchaseOrder" />
+          <NavigationProperty Name="Repair" Relationship="LocalAutoRentModel.FK_Repair_Auto" FromRole="Auto" ToRole="Repair" />
+        </EntityType>
+        <EntityType Name="ChargeOffOrder">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="AutoId" Type="Int32" Nullable="false" />
+          <Property Name="Reason" Type="String" Nullable="false" MaxLength="60" Unicode="true" FixedLength="false" />
+          <Property Name="MechanicId" Type="Int32" Nullable="false" />
+          <Property Name="ManagerId" Type="Int32" />
+          <Property Name="Status" Type="Int16" Nullable="false" />
+          <NavigationProperty Name="Auto" Relationship="LocalAutoRentModel.FK_ChargeOffOrder_Auto" FromRole="ChargeOffOrder" ToRole="Auto" />
+          <NavigationProperty Name="Employee" Relationship="LocalAutoRentModel.FK_ChargeOffOrder_EmployeeManager" FromRole="ChargeOffOrder" ToRole="Employee" />
+          <NavigationProperty Name="Employee1" Relationship="LocalAutoRentModel.FK_ChargeOffOrder_EmployeeMechanic" FromRole="ChargeOffOrder" ToRole="Employee" />
+        </EntityType>
+        <EntityType Name="City">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Name" Type="String" Nullable="false" MaxLength="30" Unicode="true" FixedLength="false" />
+          <NavigationProperty Name="Department" Relationship="LocalAutoRentModel.FK_Department_City" FromRole="City" ToRole="Department" />
+          <NavigationProperty Name="Employee" Relationship="LocalAutoRentModel.FK_Employee_City" FromRole="City" ToRole="Employee" />
+          <NavigationProperty Name="EvacuationOrder" Relationship="LocalAutoRentModel.FK_EvacuationOrder_City" FromRole="City" ToRole="EvacuationOrder" />
+          <NavigationProperty Name="InsuaranceAgency" Relationship="LocalAutoRentModel.FK_InsuaranceAgency_City" FromRole="City" ToRole="InsuaranceAgency" />
+          <NavigationProperty Name="Purchaser" Relationship="LocalAutoRentModel.FK_Purchaser_City" FromRole="City" ToRole="Purchaser" />
+          <NavigationProperty Name="Supplier" Relationship="LocalAutoRentModel.FK_Supplier_City" FromRole="City" ToRole="Supplier" />
+          <NavigationProperty Name="TechnicalService" Relationship="LocalAutoRentModel.FK_TechnicalService_City" FromRole="City" ToRole="TechnicalService" />
+        </EntityType>
+        <EntityType Name="Customer">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="FirstName" Type="String" Nullable="false" MaxLength="20" Unicode="true" FixedLength="false" />
+          <Property Name="LastName" Type="String" Nullable="false" MaxLength="30" Unicode="true" FixedLength="false" />
+          <Property Name="Insuarance" Type="String" Nullable="false" MaxLength="20" Unicode="true" FixedLength="false" />
+          <Property Name="Passport" Type="String" Nullable="false" MaxLength="8" Unicode="true" FixedLength="false" />
+          <Property Name="Phone" Type="String" Nullable="false" MaxLength="12" Unicode="true" FixedLength="false" />
+          <Property Name="Email" Type="String" MaxLength="20" Unicode="true" FixedLength="false" />
+          <NavigationProperty Name="Order" Relationship="LocalAutoRentModel.FK_Order_Customer" FromRole="Customer" ToRole="Order" />
+        </EntityType>
+        <EntityType Name="Damage">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Name" Type="String" Nullable="false" MaxLength="20" Unicode="true" FixedLength="false" />
+          <Property Name="Price" Type="Decimal" Nullable="false" Precision="19" Scale="4" />
+          <NavigationProperty Name="OrdinaryDamage" Relationship="LocalAutoRentModel.FK_OrdinaryDamage_Damage" FromRole="Damage" ToRole="OrdinaryDamage" />
+        </EntityType>
+        <EntityType Name="Department">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="CityId" Type="Int32" Nullable="false" />
+          <Property Name="Address" Type="String" Nullable="false" MaxLength="30" Unicode="true" FixedLength="false" />
+          <Property Name="Phone" Type="String" Nullable="false" MaxLength="12" Unicode="true" FixedLength="false" />
+          <NavigationProperty Name="Application" Relationship="LocalAutoRentModel.FK_Application_DepartmentPickUp" FromRole="Department" ToRole="Application" />
+          <NavigationProperty Name="Application1" Relationship="LocalAutoRentModel.FK_Application_DepartmentRet" FromRole="Department" ToRole="Application" />
+          <NavigationProperty Name="City" Relationship="LocalAutoRentModel.FK_Department_City" FromRole="Department" ToRole="City" />
+          <NavigationProperty Name="Employee" Relationship="LocalAutoRentModel.FK_Employee_Department" FromRole="Department" ToRole="Employee" />
+          <NavigationProperty Name="Order" Relationship="LocalAutoRentModel.FK_Order_DepartmentPickup" FromRole="Department" ToRole="Order" />
+          <NavigationProperty Name="Order1" Relationship="LocalAutoRentModel.FK_Order_DepartmentRetrn" FromRole="Department" ToRole="Order" />
+        </EntityType>
+        <EntityType Name="Employee">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="DepartmentId" Type="Int32" Nullable="false" />
+          <Property Name="IdentificationCode" Type="String" MaxLength="10" Unicode="true" FixedLength="false" />
+          <Property Name="FirstName" Type="String" Nullable="false" MaxLength="10" Unicode="true" FixedLength="true" />
+          <Property Name="LastName" Type="String" Nullable="false" MaxLength="10" Unicode="true" FixedLength="true" />
+          <Property Name="Birthday" Type="DateTime" />
+          <Property Name="Passport" Type="String" MaxLength="8" Unicode="true" FixedLength="false" />
+          <Property Name="Position" Type="String" Nullable="false" MaxLength="20" Unicode="true" FixedLength="false" />
+          <Property Name="HireDate" Type="DateTime" Nullable="false" />
+          <Property Name="FireDate" Type="DateTime" />
+          <Property Name="CityId" Type="Int32" Nullable="false" />
+          <Property Name="Address" Type="String" Nullable="false" MaxLength="30" Unicode="true" FixedLength="false" />
+          <Property Name="Phone" Type="String" Nullable="false" MaxLength="12" Unicode="true" FixedLength="false" />
+          <NavigationProperty Name="ChargeOffOrder" Relationship="LocalAutoRentModel.FK_ChargeOffOrder_EmployeeManager" FromRole="Employee" ToRole="ChargeOffOrder" />
+          <NavigationProperty Name="ChargeOffOrder1" Relationship="LocalAutoRentModel.FK_ChargeOffOrder_EmployeeMechanic" FromRole="Employee" ToRole="ChargeOffOrder" />
+          <NavigationProperty Name="City" Relationship="LocalAutoRentModel.FK_Employee_City" FromRole="Employee" ToRole="City" />
+          <NavigationProperty Name="Department" Relationship="LocalAutoRentModel.FK_Employee_Department" FromRole="Employee" ToRole="Department" />
+        </EntityType>
+        <EntityType Name="EvacuationOrder">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="OrderId" Type="Int32" Nullable="false" />
+          <Property Name="CityId" Type="Int32" Nullable="false" />
+          <Property Name="Address" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="Value" Type="Decimal" Precision="19" Scale="4" />
+          <NavigationProperty Name="City" Relationship="LocalAutoRentModel.FK_EvacuationOrder_City" FromRole="EvacuationOrder" ToRole="City" />
+          <NavigationProperty Name="Order" Relationship="LocalAutoRentModel.FK_EvacuationOrder_Order" FromRole="EvacuationOrder" ToRole="Order" />
+        </EntityType>
+        <EntityType Name="ExtraDamage">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="AutoId" Type="Int32" Nullable="false" />
+          <Property Name="Name" Type="String" Nullable="false" MaxLength="20" Unicode="true" FixedLength="false" />
+          <Property Name="Description" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="Price" Type="Decimal" Nullable="false" Precision="19" Scale="4" />
+          <Property Name="DamageDate" Type="DateTime" />
+          <Property Name="FixDate" Type="DateTime" />
+          <NavigationProperty Name="Auto" Relationship="LocalAutoRentModel.FK_ExtraDamage_Auto" FromRole="ExtraDamage" ToRole="Auto" />
+        </EntityType>
+        <EntityType Name="Insuarance">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Number" Type="String" Nullable="false" MaxLength="20" Unicode="true" FixedLength="false" />
+          <Property Name="InsuaranceAgencyId" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="Auto" Relationship="LocalAutoRentModel.FK_Auto_Insuarance" FromRole="Insuarance" ToRole="Auto" />
+          <NavigationProperty Name="InsuaranceAgency" Relationship="LocalAutoRentModel.FK_Insuarance_InsuaranceAgency" FromRole="Insuarance" ToRole="InsuaranceAgency" />
+        </EntityType>
+        <EntityType Name="InsuaranceAgency">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Name" Type="String" Nullable="false" MaxLength="10" Unicode="true" FixedLength="true" />
+          <Property Name="CityId" Type="Int32" Nullable="false" />
+          <Property Name="Address" Type="String" Nullable="false" MaxLength="30" Unicode="true" FixedLength="false" />
+          <Property Name="Phone" Type="String" Nullable="false" MaxLength="12" Unicode="true" FixedLength="false" />
+          <NavigationProperty Name="City" Relationship="LocalAutoRentModel.FK_InsuaranceAgency_City" FromRole="InsuaranceAgency" ToRole="City" />
+          <NavigationProperty Name="Insuarance" Relationship="LocalAutoRentModel.FK_Insuarance_InsuaranceAgency" FromRole="InsuaranceAgency" ToRole="Insuarance" />
+        </EntityType>
+        <EntityType Name="Make">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Name" Type="String" Nullable="false" MaxLength="20" Unicode="true" FixedLength="false" />
+          <NavigationProperty Name="Model" Relationship="LocalAutoRentModel.FK_Model_Make" FromRole="Make" ToRole="Model" />
+        </EntityType>
+        <EntityType Name="Model">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Name" Type="String" Nullable="false" MaxLength="20" Unicode="true" FixedLength="false" />
+          <Property Name="MakeId" Type="Int32" Nullable="false" />
+          <Property Name="Photo" Type="Binary" MaxLength="Max" FixedLength="false" />
+          <Property Name="KmRate" Type="Decimal" Precision="10" Scale="4" />
+          <Property Name="DayRate" Type="Decimal" Precision="10" Scale="4" />
+          <Property Name="Engine" Type="String" MaxLength="12" Unicode="true" FixedLength="false" />
+          <Property Name="Seats" Type="Int16" />
+          <Property Name="Deposit" Type="Decimal" Precision="19" Scale="4" />
+          <NavigationProperty Name="Application" Relationship="LocalAutoRentModel.FK_Application_Model" FromRole="Model" ToRole="Application" />
+          <NavigationProperty Name="Auto" Relationship="LocalAutoRentModel.FK_Auto_Model" FromRole="Model" ToRole="Auto" />
+          <NavigationProperty Name="Make" Relationship="LocalAutoRentModel.FK_Model_Make" FromRole="Model" ToRole="Make" />
+          <NavigationProperty Name="SupplyOrder" Relationship="LocalAutoRentModel.FK_SupplyOrder_Model" FromRole="Model" ToRole="SupplyOrder" />
+        </EntityType>
+        <EntityType Name="Order">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="CreateDate" Type="DateTime" />
+          <Property Name="CloseDate" Type="DateTime" />
+          <Property Name="CustomerId" Type="Int32" Nullable="false" />
+          <Property Name="AutoId" Type="Int32" />
+          <Property Name="PickupDate" Type="DateTime" />
+          <Property Name="PickupDepartmentId" Type="Int32" />
+          <Property Name="ReturnDate" Type="DateTime" />
+          <Property Name="ReturnDepartmentId" Type="Int32" />
+          <Property Name="Status" Type="Int16" Nullable="false" />
+          <Property Name="RentType" Type="Int16" Nullable="false" />
+          <Property Name="PaymentType" Type="Int16" />
+          <Property Name="PaymentSum" Type="Decimal" Precision="19" Scale="4" />
+          <NavigationProperty Name="Auto" Relationship="LocalAutoRentModel.FK_Order_Auto" FromRole="Order" ToRole="Auto" />
+          <NavigationProperty Name="Customer" Relationship="LocalAutoRentModel.FK_Order_Customer" FromRole="Order" ToRole="Customer" />
+          <NavigationProperty Name="Department" Relationship="LocalAutoRentModel.FK_Order_DepartmentPickup" FromRole="Order" ToRole="Department" />
+          <NavigationProperty Name="Department1" Relationship="LocalAutoRentModel.FK_Order_DepartmentRetrn" FromRole="Order" ToRole="Department" />
+          <NavigationProperty Name="EvacuationOrder" Relationship="LocalAutoRentModel.FK_EvacuationOrder_Order" FromRole="Order" ToRole="EvacuationOrder" />
+        </EntityType>
+        <EntityType Name="OrdinaryDamage">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="AutoId" Type="Int32" Nullable="false" />
+          <Property Name="DamageId" Type="Int32" Nullable="false" />
+          <Property Name="DamageDate" Type="DateTime" Nullable="false" />
+          <Property Name="FixDate" Type="DateTime" Nullable="false" />
+          <NavigationProperty Name="Auto" Relationship="LocalAutoRentModel.FK_OrdinaryDamage_Auto" FromRole="OrdinaryDamage" ToRole="Auto" />
+          <NavigationProperty Name="Damage" Relationship="LocalAutoRentModel.FK_OrdinaryDamage_Damage" FromRole="OrdinaryDamage" ToRole="Damage" />
+        </EntityType>
+        <EntityType Name="PurchaseOrder">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="PuchaserId" Type="Int32" Nullable="false" />
+          <Property Name="AutoId" Type="Int32" Nullable="false" />
+          <Property Name="Price" Type="Decimal" Nullable="false" Precision="19" Scale="4" />
+          <NavigationProperty Name="Auto" Relationship="LocalAutoRentModel.FK_PurchaseOrder_Auto" FromRole="PurchaseOrder" ToRole="Auto" />
+          <NavigationProperty Name="Purchaser" Relationship="LocalAutoRentModel.FK_PurchaseOrder_Purchaser" FromRole="PurchaseOrder" ToRole="Purchaser" />
+        </EntityType>
+        <EntityType Name="Purchaser">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Name" Type="String" Nullable="false" MaxLength="20" Unicode="true" FixedLength="false" />
+          <Property Name="CityId" Type="Int32" Nullable="false" />
+          <Property Name="Address" Type="String" Nullable="false" MaxLength="30" Unicode="true" FixedLength="false" />
+          <Property Name="Phone" Type="String" Nullable="false" MaxLength="12" Unicode="true" FixedLength="false" />
+          <NavigationProperty Name="City" Relationship="LocalAutoRentModel.FK_Purchaser_City" FromRole="Purchaser" ToRole="City" />
+          <NavigationProperty Name="PurchaseOrder" Relationship="LocalAutoRentModel.FK_PurchaseOrder_Purchaser" FromRole="Purchaser" ToRole="PurchaseOrder" />
+        </EntityType>
+        <EntityType Name="Repair">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="AutoId" Type="Int32" Nullable="false" />
+          <Property Name="TechnicalServiceId" Type="Int32" Nullable="false" />
+          <Property Name="StartDate" Type="DateTime" Nullable="false" />
+          <Property Name="EndDate" Type="DateTime" />
+          <Property Name="PaymentSum" Type="Decimal" Precision="19" Scale="4" />
+          <Property Name="Description" Type="String" MaxLength="128" Unicode="true" FixedLength="false" />
+          <NavigationProperty Name="Auto" Relationship="LocalAutoRentModel.FK_Repair_Auto" FromRole="Repair" ToRole="Auto" />
+          <NavigationProperty Name="TechnicalService" Relationship="LocalAutoRentModel.FK_Repair_TechnicalService" FromRole="Repair" ToRole="TechnicalService" />
+        </EntityType>
+        <EntityType Name="Supplier">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Name" Type="String" Nullable="false" MaxLength="20" Unicode="true" FixedLength="false" />
+          <Property Name="CityId" Type="Int32" Nullable="false" />
+          <Property Name="Address" Type="String" Nullable="false" MaxLength="30" Unicode="true" FixedLength="false" />
+          <Property Name="Phone" Type="String" Nullable="false" MaxLength="12" Unicode="true" FixedLength="false" />
+          <NavigationProperty Name="City" Relationship="LocalAutoRentModel.FK_Supplier_City" FromRole="Supplier" ToRole="City" />
+          <NavigationProperty Name="SupplyOrder" Relationship="LocalAutoRentModel.FK_SupplyOrder_Supplier" FromRole="Supplier" ToRole="SupplyOrder" />
+        </EntityType>
+        <EntityType Name="SupplyOrder">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="SupplierId" Type="Int32" Nullable="false" />
+          <Property Name="ModelId" Type="Int32" Nullable="false" />
+          <Property Name="Price" Type="Decimal" Nullable="false" Precision="19" Scale="4" />
+          <Property Name="Quantity" Type="Int16" Nullable="false" />
+          <NavigationProperty Name="Model" Relationship="LocalAutoRentModel.FK_SupplyOrder_Model" FromRole="SupplyOrder" ToRole="Model" />
+          <NavigationProperty Name="Supplier" Relationship="LocalAutoRentModel.FK_SupplyOrder_Supplier" FromRole="SupplyOrder" ToRole="Supplier" />
+        </EntityType>
+        <EntityType Name="TechnicalService">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Name" Type="String" Nullable="false" MaxLength="20" Unicode="true" FixedLength="false" />
+          <Property Name="CityId" Type="Int32" Nullable="false" />
+          <Property Name="Address" Type="String" Nullable="false" MaxLength="30" Unicode="true" FixedLength="false" />
+          <Property Name="Phone" Type="String" Nullable="false" MaxLength="12" Unicode="true" FixedLength="false" />
+          <NavigationProperty Name="City" Relationship="LocalAutoRentModel.FK_TechnicalService_City" FromRole="TechnicalService" ToRole="City" />
+          <NavigationProperty Name="Repair" Relationship="LocalAutoRentModel.FK_Repair_TechnicalService" FromRole="TechnicalService" ToRole="Repair" />
+        </EntityType>
+        <Association Name="FK_Application_DepartmentPickUp">
+          <End Role="Department" Type="LocalAutoRentModel.Department" Multiplicity="1" />
+          <End Role="Application" Type="LocalAutoRentModel.Application" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Department">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Application">
+              <PropertyRef Name="PickupDepartmentId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Application_DepartmentRet">
+          <End Role="Department" Type="LocalAutoRentModel.Department" Multiplicity="1" />
+          <End Role="Application" Type="LocalAutoRentModel.Application" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Department">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Application">
+              <PropertyRef Name="ReturnDepartmentId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Application_Model">
+          <End Role="Model" Type="LocalAutoRentModel.Model" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="Application" Type="LocalAutoRentModel.Application" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Model">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Application">
+              <PropertyRef Name="ModelId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Auto_Insuarance">
+          <End Role="Insuarance" Type="LocalAutoRentModel.Insuarance" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="Auto" Type="LocalAutoRentModel.Auto" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Insuarance">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Auto">
+              <PropertyRef Name="InsuaranceId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Auto_Model">
+          <End Role="Model" Type="LocalAutoRentModel.Model" Multiplicity="1" />
+          <End Role="Auto" Type="LocalAutoRentModel.Auto" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Model">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Auto">
+              <PropertyRef Name="ModelId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_ChargeOffOrder_Auto">
+          <End Role="Auto" Type="LocalAutoRentModel.Auto" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="ChargeOffOrder" Type="LocalAutoRentModel.ChargeOffOrder" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Auto">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="ChargeOffOrder">
+              <PropertyRef Name="AutoId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_ExtraDamage_Auto">
+          <End Role="Auto" Type="LocalAutoRentModel.Auto" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="ExtraDamage" Type="LocalAutoRentModel.ExtraDamage" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Auto">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="ExtraDamage">
+              <PropertyRef Name="AutoId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Order_Auto">
+          <End Role="Auto" Type="LocalAutoRentModel.Auto" Multiplicity="0..1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="Order" Type="LocalAutoRentModel.Order" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Auto">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Order">
+              <PropertyRef Name="AutoId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_OrdinaryDamage_Auto">
+          <End Role="Auto" Type="LocalAutoRentModel.Auto" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="OrdinaryDamage" Type="LocalAutoRentModel.OrdinaryDamage" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Auto">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="OrdinaryDamage">
+              <PropertyRef Name="AutoId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_PurchaseOrder_Auto">
+          <End Role="Auto" Type="LocalAutoRentModel.Auto" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="PurchaseOrder" Type="LocalAutoRentModel.PurchaseOrder" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Auto">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="PurchaseOrder">
+              <PropertyRef Name="AutoId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Repair_Auto">
+          <End Role="Auto" Type="LocalAutoRentModel.Auto" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="Repair" Type="LocalAutoRentModel.Repair" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Auto">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Repair">
+              <PropertyRef Name="AutoId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_ChargeOffOrder_EmployeeManager">
+          <End Role="Employee" Type="LocalAutoRentModel.Employee" Multiplicity="0..1" />
+          <End Role="ChargeOffOrder" Type="LocalAutoRentModel.ChargeOffOrder" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Employee">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="ChargeOffOrder">
+              <PropertyRef Name="ManagerId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_ChargeOffOrder_EmployeeMechanic">
+          <End Role="Employee" Type="LocalAutoRentModel.Employee" Multiplicity="1" />
+          <End Role="ChargeOffOrder" Type="LocalAutoRentModel.ChargeOffOrder" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Employee">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="ChargeOffOrder">
+              <PropertyRef Name="MechanicId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Department_City">
+          <End Role="City" Type="LocalAutoRentModel.City" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="Department" Type="LocalAutoRentModel.Department" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="City">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Department">
+              <PropertyRef Name="CityId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Employee_City">
+          <End Role="City" Type="LocalAutoRentModel.City" Multiplicity="1" />
+          <End Role="Employee" Type="LocalAutoRentModel.Employee" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="City">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Employee">
+              <PropertyRef Name="CityId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_EvacuationOrder_City">
+          <End Role="City" Type="LocalAutoRentModel.City" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="EvacuationOrder" Type="LocalAutoRentModel.EvacuationOrder" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="City">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="EvacuationOrder">
+              <PropertyRef Name="CityId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_InsuaranceAgency_City">
+          <End Role="City" Type="LocalAutoRentModel.City" Multiplicity="1" />
+          <End Role="InsuaranceAgency" Type="LocalAutoRentModel.InsuaranceAgency" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="City">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="InsuaranceAgency">
+              <PropertyRef Name="CityId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Purchaser_City">
+          <End Role="City" Type="LocalAutoRentModel.City" Multiplicity="1" />
+          <End Role="Purchaser" Type="LocalAutoRentModel.Purchaser" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="City">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Purchaser">
+              <PropertyRef Name="CityId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Supplier_City">
+          <End Role="City" Type="LocalAutoRentModel.City" Multiplicity="1" />
+          <End Role="Supplier" Type="LocalAutoRentModel.Supplier" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="City">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Supplier">
+              <PropertyRef Name="CityId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_TechnicalService_City">
+          <End Role="City" Type="LocalAutoRentModel.City" Multiplicity="1" />
+          <End Role="TechnicalService" Type="LocalAutoRentModel.TechnicalService" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="City">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="TechnicalService">
+              <PropertyRef Name="CityId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Order_Customer">
+          <End Role="Customer" Type="LocalAutoRentModel.Customer" Multiplicity="1" />
+          <End Role="Order" Type="LocalAutoRentModel.Order" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Customer">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Order">
+              <PropertyRef Name="CustomerId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_OrdinaryDamage_Damage">
+          <End Role="Damage" Type="LocalAutoRentModel.Damage" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="OrdinaryDamage" Type="LocalAutoRentModel.OrdinaryDamage" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Damage">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="OrdinaryDamage">
+              <PropertyRef Name="DamageId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Employee_Department">
+          <End Role="Department" Type="LocalAutoRentModel.Department" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="Employee" Type="LocalAutoRentModel.Employee" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Department">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Employee">
+              <PropertyRef Name="DepartmentId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Order_DepartmentPickup">
+          <End Role="Department" Type="LocalAutoRentModel.Department" Multiplicity="0..1" />
+          <End Role="Order" Type="LocalAutoRentModel.Order" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Department">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Order">
+              <PropertyRef Name="PickupDepartmentId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Order_DepartmentRetrn">
+          <End Role="Department" Type="LocalAutoRentModel.Department" Multiplicity="0..1" />
+          <End Role="Order" Type="LocalAutoRentModel.Order" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Department">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Order">
+              <PropertyRef Name="ReturnDepartmentId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_EvacuationOrder_Order">
+          <End Role="Order" Type="LocalAutoRentModel.Order" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="EvacuationOrder" Type="LocalAutoRentModel.EvacuationOrder" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Order">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="EvacuationOrder">
+              <PropertyRef Name="OrderId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Insuarance_InsuaranceAgency">
+          <End Role="InsuaranceAgency" Type="LocalAutoRentModel.InsuaranceAgency" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="Insuarance" Type="LocalAutoRentModel.Insuarance" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="InsuaranceAgency">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Insuarance">
+              <PropertyRef Name="InsuaranceAgencyId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Model_Make">
+          <End Role="Make" Type="LocalAutoRentModel.Make" Multiplicity="1" />
+          <End Role="Model" Type="LocalAutoRentModel.Model" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Make">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Model">
+              <PropertyRef Name="MakeId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_SupplyOrder_Model">
+          <End Role="Model" Type="LocalAutoRentModel.Model" Multiplicity="1" />
+          <End Role="SupplyOrder" Type="LocalAutoRentModel.SupplyOrder" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Model">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="SupplyOrder">
+              <PropertyRef Name="ModelId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_PurchaseOrder_Purchaser">
+          <End Role="Purchaser" Type="LocalAutoRentModel.Purchaser" Multiplicity="1" />
+          <End Role="PurchaseOrder" Type="LocalAutoRentModel.PurchaseOrder" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Purchaser">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="PurchaseOrder">
+              <PropertyRef Name="PuchaserId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Repair_TechnicalService">
+          <End Role="TechnicalService" Type="LocalAutoRentModel.TechnicalService" Multiplicity="1" />
+          <End Role="Repair" Type="LocalAutoRentModel.Repair" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="TechnicalService">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Repair">
+              <PropertyRef Name="TechnicalServiceId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_SupplyOrder_Supplier">
+          <End Role="Supplier" Type="LocalAutoRentModel.Supplier" Multiplicity="1" />
+          <End Role="SupplyOrder" Type="LocalAutoRentModel.SupplyOrder" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Supplier">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="SupplyOrder">
+              <PropertyRef Name="SupplierId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2008/09/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="LocalAutoRentModelStoreContainer" CdmEntityContainer="LocalAutoRentEntities">
+          <EntitySetMapping Name="Application"><EntityTypeMapping TypeName="LocalAutoRentModel.Application"><MappingFragment StoreEntitySet="Application">
+            <ScalarProperty Name="Id" ColumnName="Id" />
+            <ScalarProperty Name="CreationDate" ColumnName="CreationDate" />
+            <ScalarProperty Name="FirstName" ColumnName="FirstName" />
+            <ScalarProperty Name="LastName" ColumnName="LastName" />
+            <ScalarProperty Name="Phone" ColumnName="Phone" />
+            <ScalarProperty Name="Email" ColumnName="Email" />
+            <ScalarProperty Name="ModelId" ColumnName="ModelId" />
+            <ScalarProperty Name="PickupDate" ColumnName="PickupDate" />
+            <ScalarProperty Name="PickupDepartmentId" ColumnName="PickupDepartmentId" />
+            <ScalarProperty Name="ReturnDate" ColumnName="ReturnDate" />
+            <ScalarProperty Name="ReturnDepartmentId" ColumnName="ReturnDepartmentId" />
+            <ScalarProperty Name="Status" ColumnName="Status" />
+            <ScalarProperty Name="Preferences" ColumnName="Preferences" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="Auto"><EntityTypeMapping TypeName="LocalAutoRentModel.Auto"><MappingFragment StoreEntitySet="Auto">
+            <ScalarProperty Name="Id" ColumnName="Id" />
+            <ScalarProperty Name="Number" ColumnName="Number" />
+            <ScalarProperty Name="InsuaranceId" ColumnName="InsuaranceId" />
+            <ScalarProperty Name="Category" ColumnName="Category" />
+            <ScalarProperty Name="ModelId" ColumnName="ModelId" />
+            <ScalarProperty Name="Year" ColumnName="Year" />
+            <ScalarProperty Name="Mileage" ColumnName="Mileage" />
+            <ScalarProperty Name="Color" ColumnName="Color" />
+            <ScalarProperty Name="LastCheckDate" ColumnName="LastCheckDate" />
+            <ScalarProperty Name="Description" ColumnName="Description" />
+            <ScalarProperty Name="Status" ColumnName="Status" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="ChargeOffOrder"><EntityTypeMapping TypeName="LocalAutoRentModel.ChargeOffOrder"><MappingFragment StoreEntitySet="ChargeOffOrder">
+            <ScalarProperty Name="Id" ColumnName="Id" />
+            <ScalarProperty Name="AutoId" ColumnName="AutoId" />
+            <ScalarProperty Name="Reason" ColumnName="Reason" />
+            <ScalarProperty Name="MechanicId" ColumnName="MechanicId" />
+            <ScalarProperty Name="ManagerId" ColumnName="ManagerId" />
+            <ScalarProperty Name="Status" ColumnName="Status" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="City"><EntityTypeMapping TypeName="LocalAutoRentModel.City"><MappingFragment StoreEntitySet="City">
+            <ScalarProperty Name="Id" ColumnName="Id" />
+            <ScalarProperty Name="Name" ColumnName="Name" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="Customer"><EntityTypeMapping TypeName="LocalAutoRentModel.Customer"><MappingFragment StoreEntitySet="Customer">
+            <ScalarProperty Name="Id" ColumnName="Id" />
+            <ScalarProperty Name="FirstName" ColumnName="FirstName" />
+            <ScalarProperty Name="LastName" ColumnName="LastName" />
+            <ScalarProperty Name="Insuarance" ColumnName="Insuarance" />
+            <ScalarProperty Name="Passport" ColumnName="Passport" />
+            <ScalarProperty Name="Phone" ColumnName="Phone" />
+            <ScalarProperty Name="Email" ColumnName="Email" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="Damage"><EntityTypeMapping TypeName="LocalAutoRentModel.Damage"><MappingFragment StoreEntitySet="Damage">
+            <ScalarProperty Name="Id" ColumnName="Id" />
+            <ScalarProperty Name="Name" ColumnName="Name" />
+            <ScalarProperty Name="Price" ColumnName="Price" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="Department"><EntityTypeMapping TypeName="LocalAutoRentModel.Department"><MappingFragment StoreEntitySet="Department">
+            <ScalarProperty Name="Id" ColumnName="Id" />
+            <ScalarProperty Name="CityId" ColumnName="CityId" />
+            <ScalarProperty Name="Address" ColumnName="Address" />
+            <ScalarProperty Name="Phone" ColumnName="Phone" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="Employee"><EntityTypeMapping TypeName="LocalAutoRentModel.Employee"><MappingFragment StoreEntitySet="Employee">
+            <ScalarProperty Name="Id" ColumnName="Id" />
+            <ScalarProperty Name="DepartmentId" ColumnName="DepartmentId" />
+            <ScalarProperty Name="IdentificationCode" ColumnName="IdentificationCode" />
+            <ScalarProperty Name="FirstName" ColumnName="FirstName" />
+            <ScalarProperty Name="LastName" ColumnName="LastName" />
+            <ScalarProperty Name="Birthday" ColumnName="Birthday" />
+            <ScalarProperty Name="Passport" ColumnName="Passport" />
+            <ScalarProperty Name="Position" ColumnName="Position" />
+            <ScalarProperty Name="HireDate" ColumnName="HireDate" />
+            <ScalarProperty Name="FireDate" ColumnName="FireDate" />
+            <ScalarProperty Name="CityId" ColumnName="CityId" />
+            <ScalarProperty Name="Address" ColumnName="Address" />
+            <ScalarProperty Name="Phone" ColumnName="Phone" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="EvacuationOrder"><EntityTypeMapping TypeName="LocalAutoRentModel.EvacuationOrder"><MappingFragment StoreEntitySet="EvacuationOrder">
+            <ScalarProperty Name="Id" ColumnName="Id" />
+            <ScalarProperty Name="OrderId" ColumnName="OrderId" />
+            <ScalarProperty Name="CityId" ColumnName="CityId" />
+            <ScalarProperty Name="Address" ColumnName="Address" />
+            <ScalarProperty Name="Value" ColumnName="Value" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="ExtraDamage"><EntityTypeMapping TypeName="LocalAutoRentModel.ExtraDamage"><MappingFragment StoreEntitySet="ExtraDamage">
+            <ScalarProperty Name="Id" ColumnName="Id" />
+            <ScalarProperty Name="AutoId" ColumnName="AutoId" />
+            <ScalarProperty Name="Name" ColumnName="Name" />
+            <ScalarProperty Name="Description" ColumnName="Description" />
+            <ScalarProperty Name="Price" ColumnName="Price" />
+            <ScalarProperty Name="DamageDate" ColumnName="DamageDate" />
+            <ScalarProperty Name="FixDate" ColumnName="FixDate" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="Insuarance"><EntityTypeMapping TypeName="LocalAutoRentModel.Insuarance"><MappingFragment StoreEntitySet="Insuarance">
+            <ScalarProperty Name="Id" ColumnName="Id" />
+            <ScalarProperty Name="Number" ColumnName="Number" />
+            <ScalarProperty Name="InsuaranceAgencyId" ColumnName="InsuaranceAgencyId" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="InsuaranceAgency"><EntityTypeMapping TypeName="LocalAutoRentModel.InsuaranceAgency"><MappingFragment StoreEntitySet="InsuaranceAgency">
+            <ScalarProperty Name="Id" ColumnName="Id" />
+            <ScalarProperty Name="Name" ColumnName="Name" />
+            <ScalarProperty Name="CityId" ColumnName="CityId" />
+            <ScalarProperty Name="Address" ColumnName="Address" />
+            <ScalarProperty Name="Phone" ColumnName="Phone" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="Make"><EntityTypeMapping TypeName="LocalAutoRentModel.Make"><MappingFragment StoreEntitySet="Make">
+            <ScalarProperty Name="Id" ColumnName="Id" />
+            <ScalarProperty Name="Name" ColumnName="Name" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="Model"><EntityTypeMapping TypeName="LocalAutoRentModel.Model"><MappingFragment StoreEntitySet="Model">
+            <ScalarProperty Name="Id" ColumnName="Id" />
+            <ScalarProperty Name="Name" ColumnName="Name" />
+            <ScalarProperty Name="MakeId" ColumnName="MakeId" />
+            <ScalarProperty Name="Photo" ColumnName="Photo" />
+            <ScalarProperty Name="KmRate" ColumnName="KmRate" />
+            <ScalarProperty Name="DayRate" ColumnName="DayRate" />
+            <ScalarProperty Name="Engine" ColumnName="Engine" />
+            <ScalarProperty Name="Seats" ColumnName="Seats" />
+            <ScalarProperty Name="Deposit" ColumnName="Deposit" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="Order"><EntityTypeMapping TypeName="LocalAutoRentModel.Order"><MappingFragment StoreEntitySet="Order">
+            <ScalarProperty Name="Id" ColumnName="Id" />
+            <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
+            <ScalarProperty Name="CloseDate" ColumnName="CloseDate" />
+            <ScalarProperty Name="CustomerId" ColumnName="CustomerId" />
+            <ScalarProperty Name="AutoId" ColumnName="AutoId" />
+            <ScalarProperty Name="PickupDate" ColumnName="PickupDate" />
+            <ScalarProperty Name="PickupDepartmentId" ColumnName="PickupDepartmentId" />
+            <ScalarProperty Name="ReturnDate" ColumnName="ReturnDate" />
+            <ScalarProperty Name="ReturnDepartmentId" ColumnName="ReturnDepartmentId" />
+            <ScalarProperty Name="Status" ColumnName="Status" />
+            <ScalarProperty Name="RentType" ColumnName="RentType" />
+            <ScalarProperty Name="PaymentType" ColumnName="PaymentType" />
+            <ScalarProperty Name="PaymentSum" ColumnName="PaymentSum" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="OrdinaryDamage"><EntityTypeMapping TypeName="LocalAutoRentModel.OrdinaryDamage"><MappingFragment StoreEntitySet="OrdinaryDamage">
+            <ScalarProperty Name="Id" ColumnName="Id" />
+            <ScalarProperty Name="AutoId" ColumnName="AutoId" />
+            <ScalarProperty Name="DamageId" ColumnName="DamageId" />
+            <ScalarProperty Name="DamageDate" ColumnName="DamageDate" />
+            <ScalarProperty Name="FixDate" ColumnName="FixDate" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="PurchaseOrder"><EntityTypeMapping TypeName="LocalAutoRentModel.PurchaseOrder"><MappingFragment StoreEntitySet="PurchaseOrder">
+            <ScalarProperty Name="Id" ColumnName="Id" />
+            <ScalarProperty Name="PuchaserId" ColumnName="PuchaserId" />
+            <ScalarProperty Name="AutoId" ColumnName="AutoId" />
+            <ScalarProperty Name="Price" ColumnName="Price" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="Purchaser"><EntityTypeMapping TypeName="LocalAutoRentModel.Purchaser"><MappingFragment StoreEntitySet="Purchaser">
+            <ScalarProperty Name="Id" ColumnName="Id" />
+            <ScalarProperty Name="Name" ColumnName="Name" />
+            <ScalarProperty Name="CityId" ColumnName="CityId" />
+            <ScalarProperty Name="Address" ColumnName="Address" />
+            <ScalarProperty Name="Phone" ColumnName="Phone" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="Repair"><EntityTypeMapping TypeName="LocalAutoRentModel.Repair"><MappingFragment StoreEntitySet="Repair">
+            <ScalarProperty Name="Id" ColumnName="Id" />
+            <ScalarProperty Name="AutoId" ColumnName="AutoId" />
+            <ScalarProperty Name="TechnicalServiceId" ColumnName="TechnicalServiceId" />
+            <ScalarProperty Name="StartDate" ColumnName="StartDate" />
+            <ScalarProperty Name="EndDate" ColumnName="EndDate" />
+            <ScalarProperty Name="PaymentSum" ColumnName="PaymentSum" />
+            <ScalarProperty Name="Description" ColumnName="Description" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="Supplier"><EntityTypeMapping TypeName="LocalAutoRentModel.Supplier"><MappingFragment StoreEntitySet="Supplier">
+            <ScalarProperty Name="Id" ColumnName="Id" />
+            <ScalarProperty Name="Name" ColumnName="Name" />
+            <ScalarProperty Name="CityId" ColumnName="CityId" />
+            <ScalarProperty Name="Address" ColumnName="Address" />
+            <ScalarProperty Name="Phone" ColumnName="Phone" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="SupplyOrder"><EntityTypeMapping TypeName="LocalAutoRentModel.SupplyOrder"><MappingFragment StoreEntitySet="SupplyOrder">
+            <ScalarProperty Name="Id" ColumnName="Id" />
+            <ScalarProperty Name="SupplierId" ColumnName="SupplierId" />
+            <ScalarProperty Name="ModelId" ColumnName="ModelId" />
+            <ScalarProperty Name="Price" ColumnName="Price" />
+            <ScalarProperty Name="Quantity" ColumnName="Quantity" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="TechnicalService"><EntityTypeMapping TypeName="LocalAutoRentModel.TechnicalService"><MappingFragment StoreEntitySet="TechnicalService">
+            <ScalarProperty Name="Id" ColumnName="Id" />
+            <ScalarProperty Name="Name" ColumnName="Name" />
+            <ScalarProperty Name="CityId" ColumnName="CityId" />
+            <ScalarProperty Name="Address" ColumnName="Address" />
+            <ScalarProperty Name="Phone" ColumnName="Phone" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2008/10/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="False" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="True" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams>
+      <Diagram Name="LocalDbModel">
+        <EntityTypeShape EntityType="LocalAutoRentModel.Application" Width="1.5" PointX="5.25" PointY="11.625" Height="4.0956022135416674" IsExpanded="true" />
+        <EntityTypeShape EntityType="LocalAutoRentModel.Auto" Width="1.5" PointX="10.5" PointY="15.75" Height="4.6725065104166674" IsExpanded="true" />
+        <EntityTypeShape EntityType="LocalAutoRentModel.ChargeOffOrder" Width="1.5" PointX="15.75" PointY="16.625" Height="2.749492187499996" IsExpanded="true" />
+        <EntityTypeShape EntityType="LocalAutoRentModel.City" Width="1.5" PointX="0.75" PointY="19.5" Height="2.749492187499996" IsExpanded="true" />
+        <EntityTypeShape EntityType="LocalAutoRentModel.Customer" Width="1.5" PointX="6" PointY="8.25" Height="2.5571907552083317" IsExpanded="true" />
+        <EntityTypeShape EntityType="LocalAutoRentModel.Damage" Width="1.5" PointX="10.5" PointY="8.25" Height="1.7879850260416674" IsExpanded="true" />
+        <EntityTypeShape EntityType="LocalAutoRentModel.Department" Width="1.5" PointX="3" PointY="13.25" Height="2.9417936197916674" IsExpanded="true" />
+        <EntityTypeShape EntityType="LocalAutoRentModel.Employee" Width="1.5" PointX="8.25" PointY="15.625" Height="4.2879036458333317" IsExpanded="true" />
+        <EntityTypeShape EntityType="LocalAutoRentModel.EvacuationOrder" Width="1.5" PointX="10.5" PointY="11.75" Height="2.3648893229166674" IsExpanded="true" />
+        <EntityTypeShape EntityType="LocalAutoRentModel.ExtraDamage" Width="1.5" PointX="12.75" PointY="16.875" Height="2.5571907552083317" IsExpanded="true" />
+        <EntityTypeShape EntityType="LocalAutoRentModel.Insuarance" Width="1.5" PointX="5.25" PointY="17.125" Height="1.9802864583333388" IsExpanded="true" />
+        <EntityTypeShape EntityType="LocalAutoRentModel.InsuaranceAgency" Width="1.5" PointX="3" PointY="16.875" Height="2.3648893229166674" IsExpanded="true" />
+        <EntityTypeShape EntityType="LocalAutoRentModel.Make" Width="1.5" PointX="6" PointY="27.25" Height="1.5956835937500031" IsExpanded="true" />
+        <EntityTypeShape EntityType="LocalAutoRentModel.Model" Width="1.5" PointX="8.25" PointY="26.375" Height="3.5186979166666674" IsExpanded="true" />
+        <EntityTypeShape EntityType="LocalAutoRentModel.Order" Width="1.5" PointX="8.25" PointY="9.5" Height="4.480205078124996" IsExpanded="true" />
+        <EntityTypeShape EntityType="LocalAutoRentModel.OrdinaryDamage" Width="1.5" PointX="12.75" PointY="12.875" Height="2.3648893229166674" IsExpanded="true" />
+        <EntityTypeShape EntityType="LocalAutoRentModel.PurchaseOrder" Width="1.5" PointX="12.75" PointY="21" Height="2.172587890624996" IsExpanded="true" />
+        <EntityTypeShape EntityType="LocalAutoRentModel.Purchaser" Width="1.5" PointX="3" PointY="20" Height="2.3648893229166674" IsExpanded="true" />
+        <EntityTypeShape EntityType="LocalAutoRentModel.Repair" Width="1.5" PointX="15.75" PointY="20.875" Height="2.749492187499996" IsExpanded="true" />
+        <EntityTypeShape EntityType="LocalAutoRentModel.Supplier" Width="1.5" PointX="3" PointY="23.125" Height="2.3648893229166674" IsExpanded="true" />
+        <EntityTypeShape EntityType="LocalAutoRentModel.SupplyOrder" Width="1.5" PointX="5.25" PointY="23.125" Height="2.3648893229166674" IsExpanded="true" />
+        <EntityTypeShape EntityType="LocalAutoRentModel.TechnicalService" Width="1.5" PointX="3" PointY="26.25" Height="2.3648893229166674" IsExpanded="true" />
+        <AssociationConnector Association="LocalAutoRentModel.FK_Application_DepartmentPickUp" ManuallyRouted="false">
+          <ConnectorPoint PointX="4.5" PointY="14.485301106770834" />
+          <ConnectorPoint PointX="5.25" PointY="14.485301106770834" />
+        </AssociationConnector>
+        <AssociationConnector Association="LocalAutoRentModel.FK_Application_DepartmentRet" ManuallyRouted="false">
+          <ConnectorPoint PointX="4.5" PointY="13.805150553385417" />
+          <ConnectorPoint PointX="5.25" PointY="13.805150553385417" />
+        </AssociationConnector>
+        <AssociationConnector Association="LocalAutoRentModel.FK_Application_Model" ManuallyRouted="false">
+          <ConnectorPoint PointX="8.25" PointY="26.375" />
+          <ConnectorPoint PointX="7.875" PointY="26" />
+          <ConnectorPoint PointX="7.875" PointY="13.672801106770834" />
+          <ConnectorPoint PointX="6.75" PointY="13.672801106770834" />
+        </AssociationConnector>
+        <AssociationConnector Association="LocalAutoRentModel.FK_Auto_Insuarance" ManuallyRouted="false">
+          <ConnectorPoint PointX="6" PointY="19.105286458333339" />
+          <ConnectorPoint PointX="6" PointY="20.198955078125" />
+          <ConnectorPoint PointX="7.791666666666667" PointY="20.198955078125" />
+          <ConnectorPoint PointX="7.958333333333333" PointY="20.198955078125" />
+          <ConnectorPoint PointX="10.5" PointY="20.198955078125" />
+        </AssociationConnector>
+        <AssociationConnector Association="LocalAutoRentModel.FK_Auto_Model" ManuallyRouted="false">
+          <ConnectorPoint PointX="9.75" PointY="28.134348958333334" />
+          <ConnectorPoint PointX="11.25" PointY="28.134348958333334" />
+          <ConnectorPoint PointX="11.25" PointY="20.422506510416667" />
+        </AssociationConnector>
+        <AssociationConnector Association="LocalAutoRentModel.FK_ChargeOffOrder_Auto" ManuallyRouted="false">
+          <ConnectorPoint PointX="12" PointY="16.71875" />
+          <ConnectorPoint PointX="15.75" PointY="16.71875" />
+        </AssociationConnector>
+        <AssociationConnector Association="LocalAutoRentModel.FK_ExtraDamage_Auto" ManuallyRouted="false">
+          <ConnectorPoint PointX="12" PointY="18.153595377604166" />
+          <ConnectorPoint PointX="12.75" PointY="18.153595377604166" />
+        </AssociationConnector>
+        <AssociationConnector Association="LocalAutoRentModel.FK_Order_Auto" ManuallyRouted="false">
+          <ConnectorPoint PointX="10.5" PointY="15.75" />
+          <ConnectorPoint PointX="10.125" PointY="15.375" />
+          <ConnectorPoint PointX="10.125" PointY="11.740102539062498" />
+          <ConnectorPoint PointX="9.75" PointY="11.740102539062498" />
+        </AssociationConnector>
+        <AssociationConnector Association="LocalAutoRentModel.FK_OrdinaryDamage_Auto" ManuallyRouted="false">
+          <ConnectorPoint PointX="12" PointY="15.75" />
+          <ConnectorPoint PointX="12.375" PointY="15.375" />
+          <ConnectorPoint PointX="12.375" PointY="15.614889322916667" />
+          <ConnectorPoint PointX="12.75" PointY="15.239889322916667" />
+        </AssociationConnector>
+        <AssociationConnector Association="LocalAutoRentModel.FK_PurchaseOrder_Auto" ManuallyRouted="false">
+          <ConnectorPoint PointX="11.6562525" PointY="20.422506510416667" />
+          <ConnectorPoint PointX="11.6562525" PointY="22.086293945312498" />
+          <ConnectorPoint PointX="12.75" PointY="22.086293945312498" />
+        </AssociationConnector>
+        <AssociationConnector Association="LocalAutoRentModel.FK_Repair_Auto" ManuallyRouted="false">
+          <ConnectorPoint PointX="10.8437475" PointY="20.422506510416667" />
+          <ConnectorPoint PointX="10.8437475" PointY="23.429790039062496" />
+          <ConnectorPoint PointX="11.166666666666666" PointY="23.429790039062496" />
+          <ConnectorPoint PointX="11.333333333333334" PointY="23.429790039062496" />
+          <ConnectorPoint PointX="15.75" PointY="23.429790039062496" />
+        </AssociationConnector>
+        <AssociationConnector Association="LocalAutoRentModel.FK_ChargeOffOrder_EmployeeManager" ManuallyRouted="false">
+          <ConnectorPoint PointX="9.75" PointY="15.65625" />
+          <ConnectorPoint PointX="10.322916666666666" PointY="15.65625" />
+          <ConnectorPoint PointX="10.489583333333334" PointY="15.65625" />
+          <ConnectorPoint PointX="12.010416666666666" PointY="15.65625" />
+          <ConnectorPoint PointX="12.177083333333334" PointY="15.65625" />
+          <ConnectorPoint PointX="16.5" PointY="15.65625" />
+          <ConnectorPoint PointX="16.5" PointY="16.625" />
+        </AssociationConnector>
+        <AssociationConnector Association="LocalAutoRentModel.FK_ChargeOffOrder_EmployeeMechanic" ManuallyRouted="false">
+          <ConnectorPoint PointX="9.75" PointY="15.671875" />
+          <ConnectorPoint PointX="10.338541666666666" PointY="15.671875" />
+          <ConnectorPoint PointX="10.505208333333334" PointY="15.671875" />
+          <ConnectorPoint PointX="11.994791666666666" PointY="15.671875" />
+          <ConnectorPoint PointX="12.161458333333334" PointY="15.671875" />
+          <ConnectorPoint PointX="16.0937475" PointY="15.671875" />
+          <ConnectorPoint PointX="16.0937475" PointY="16.625" />
+        </AssociationConnector>
+        <AssociationConnector Association="LocalAutoRentModel.FK_Department_City" ManuallyRouted="false">
+          <ConnectorPoint PointX="1.5" PointY="19.5" />
+          <ConnectorPoint PointX="1.5" PointY="14.720896809895834" />
+          <ConnectorPoint PointX="3" PointY="14.720896809895834" />
+        </AssociationConnector>
+        <AssociationConnector Association="LocalAutoRentModel.FK_Employee_City" ManuallyRouted="false">
+          <ConnectorPoint PointX="2.25" PointY="19.706451822916666" />
+          <ConnectorPoint PointX="5.916666666666667" PointY="19.706451822916666" />
+          <ConnectorPoint PointX="6.083333333333333" PointY="19.706451822916666" />
+          <ConnectorPoint PointX="7.791666666666667" PointY="19.706451822916666" />
+          <ConnectorPoint PointX="8.0833333333333339" PointY="19.706451822916666" />
+          <ConnectorPoint PointX="8.25" PointY="19.706451822916666" />
+        </AssociationConnector>
+        <AssociationConnector Association="LocalAutoRentModel.FK_EvacuationOrder_City" ManuallyRouted="false">
+          <ConnectorPoint PointX="2.25" PointY="21.009224005208331" />
+          <ConnectorPoint PointX="2.75" PointY="21.009224005208331" />
+          <ConnectorPoint PointX="2.75" PointY="19.875" />
+          <ConnectorPoint PointX="5.916666666666667" PointY="19.875" />
+          <ConnectorPoint PointX="6.083333333333333" PointY="19.875" />
+          <ConnectorPoint PointX="7.791666666666667" PointY="19.875" />
+          <ConnectorPoint PointX="7.958333333333333" PointY="19.875" />
+          <ConnectorPoint PointX="8" PointY="19.875" />
+          <ConnectorPoint PointX="8" PointY="15.375" />
+          <ConnectorPoint PointX="11.25" PointY="15.375" />
+          <ConnectorPoint PointX="11.25" PointY="14.114889322916667" />
+        </AssociationConnector>
+        <AssociationConnector Association="LocalAutoRentModel.FK_InsuaranceAgency_City" ManuallyRouted="false">
+          <ConnectorPoint PointX="1.9062525" PointY="19.5" />
+          <ConnectorPoint PointX="1.9062525" PointY="18.057444661458334" />
+          <ConnectorPoint PointX="3" PointY="18.057444661458334" />
+        </AssociationConnector>
+        <AssociationConnector Association="LocalAutoRentModel.FK_Purchaser_City" ManuallyRouted="false">
+          <ConnectorPoint PointX="2.25" PointY="21.691858096354164" />
+          <ConnectorPoint PointX="3" PointY="21.691858096354164" />
+        </AssociationConnector>
+        <AssociationConnector Association="LocalAutoRentModel.FK_Supplier_City" ManuallyRouted="false">
+          <ConnectorPoint PointX="1.5" PointY="22.249492187499996" />
+          <ConnectorPoint PointX="1.5" PointY="24.307444661458334" />
+          <ConnectorPoint PointX="1.8229191666666667" PointY="24.307444661458334" />
+          <ConnectorPoint PointX="1.9895858333333332" PointY="24.307444661458334" />
+          <ConnectorPoint PointX="3" PointY="24.307444661458334" />
+        </AssociationConnector>
+        <AssociationConnector Association="LocalAutoRentModel.FK_TechnicalService_City" ManuallyRouted="false">
+          <ConnectorPoint PointX="1.9062525" PointY="22.249492187499996" />
+          <ConnectorPoint PointX="1.9062525" PointY="27.432444661458334" />
+          <ConnectorPoint PointX="3" PointY="27.432444661458334" />
+        </AssociationConnector>
+        <AssociationConnector Association="LocalAutoRentModel.FK_Order_Customer" ManuallyRouted="false">
+          <ConnectorPoint PointX="7.5" PointY="10.153595377604166" />
+          <ConnectorPoint PointX="8.25" PointY="10.153595377604166" />
+        </AssociationConnector>
+        <AssociationConnector Association="LocalAutoRentModel.FK_OrdinaryDamage_Damage" ManuallyRouted="false">
+          <ConnectorPoint PointX="12" PointY="9.1439925130208337" />
+          <ConnectorPoint PointX="13.5" PointY="9.1439925130208337" />
+          <ConnectorPoint PointX="13.5" PointY="12.875" />
+        </AssociationConnector>
+        <AssociationConnector Association="LocalAutoRentModel.FK_Employee_Department" ManuallyRouted="false">
+          <ConnectorPoint PointX="4.5" PointY="15.987447916666667" />
+          <ConnectorPoint PointX="7.791666666666667" PointY="15.987447916666666" />
+          <ConnectorPoint PointX="8.0833333333333339" PointY="15.987447916666667" />
+          <ConnectorPoint PointX="8.25" PointY="15.987447916666667" />
+        </AssociationConnector>
+        <AssociationConnector Association="LocalAutoRentModel.FK_Order_DepartmentPickup" ManuallyRouted="false">
+          <ConnectorPoint PointX="3.75" PointY="13.25" />
+          <ConnectorPoint PointX="3.75" PointY="11.216095377604166" />
+          <ConnectorPoint PointX="8.25" PointY="11.216095377604166" />
+        </AssociationConnector>
+        <AssociationConnector Association="LocalAutoRentModel.FK_Order_DepartmentRetrn" ManuallyRouted="false">
+          <ConnectorPoint PointX="4.1562525" PointY="13.25" />
+          <ConnectorPoint PointX="4.1562525" PointY="11.420550188802077" />
+          <ConnectorPoint PointX="8.25" PointY="11.420550188802077" />
+        </AssociationConnector>
+        <AssociationConnector Association="LocalAutoRentModel.FK_EvacuationOrder_Order" ManuallyRouted="false">
+          <ConnectorPoint PointX="9.75" PointY="12.865102539062498" />
+          <ConnectorPoint PointX="10.041666666666666" PointY="12.865102539062498" />
+          <ConnectorPoint PointX="10.208333333333334" PointY="12.865102539062498" />
+          <ConnectorPoint PointX="10.5" PointY="12.865102539062498" />
+        </AssociationConnector>
+        <AssociationConnector Association="LocalAutoRentModel.FK_Insuarance_InsuaranceAgency" ManuallyRouted="false">
+          <ConnectorPoint PointX="4.5" PointY="18.115143229166669" />
+          <ConnectorPoint PointX="5.25" PointY="18.115143229166669" />
+        </AssociationConnector>
+        <AssociationConnector Association="LocalAutoRentModel.FK_Model_Make" ManuallyRouted="false">
+          <ConnectorPoint PointX="7.5" PointY="28.047841796875" />
+          <ConnectorPoint PointX="8.25" PointY="28.047841796875" />
+        </AssociationConnector>
+        <AssociationConnector Association="LocalAutoRentModel.FK_SupplyOrder_Model" ManuallyRouted="false">
+          <ConnectorPoint PointX="9.0312525" PointY="26.375" />
+          <ConnectorPoint PointX="9.0312525" PointY="24.307444661458334" />
+          <ConnectorPoint PointX="7.958333333333333" PointY="24.307444661458334" />
+          <ConnectorPoint PointX="7.791666666666667" PointY="24.307444661458334" />
+          <ConnectorPoint PointX="6.75" PointY="24.307444661458334" />
+        </AssociationConnector>
+        <AssociationConnector Association="LocalAutoRentModel.FK_PurchaseOrder_Purchaser" ManuallyRouted="false">
+          <ConnectorPoint PointX="4.5" PointY="21.480646972656249" />
+          <ConnectorPoint PointX="7.791666666666667" PointY="21.480646972656249" />
+          <ConnectorPoint PointX="7.958333333333333" PointY="21.480646972656249" />
+          <ConnectorPoint PointX="10.760414166666665" PointY="21.480646972656249" />
+          <ConnectorPoint PointX="10.927080833333333" PointY="21.480646972656249" />
+          <ConnectorPoint PointX="11.166666666666666" PointY="21.480646972656249" />
+          <ConnectorPoint PointX="11.333333333333334" PointY="21.480646972656249" />
+          <ConnectorPoint PointX="11.572919166666667" PointY="21.480646972656249" />
+          <ConnectorPoint PointX="11.739585833333335" PointY="21.480646972656249" />
+          <ConnectorPoint PointX="12.75" PointY="21.480646972656249" />
+        </AssociationConnector>
+        <AssociationConnector Association="LocalAutoRentModel.FK_Repair_TechnicalService" ManuallyRouted="false">
+          <ConnectorPoint PointX="4.5" PointY="26.28125" />
+          <ConnectorPoint PointX="8.0729166666666661" PointY="26.28125" />
+          <ConnectorPoint PointX="8.2395833333333339" PointY="26.28125" />
+          <ConnectorPoint PointX="8.9479191666666669" PointY="26.28125" />
+          <ConnectorPoint PointX="9.1145858333333347" PointY="26.28125" />
+          <ConnectorPoint PointX="11.166666666666666" PointY="26.28125" />
+          <ConnectorPoint PointX="11.333333333333334" PointY="26.28125" />
+          <ConnectorPoint PointX="16.5" PointY="26.28125" />
+          <ConnectorPoint PointX="16.5" PointY="23.624492187499996" />
+        </AssociationConnector>
+        <AssociationConnector Association="LocalAutoRentModel.FK_SupplyOrder_Supplier" ManuallyRouted="false">
+          <ConnectorPoint PointX="4.5" PointY="24.307444661458334" />
+          <ConnectorPoint PointX="5.25" PointY="24.307444661458334" />
+        </AssociationConnector>
+      </Diagram>
+    </Diagrams>
+  </Designer>
+</edmx:Edmx>
