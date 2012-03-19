@@ -21,7 +21,6 @@ using System.Runtime.Serialization;
 [assembly: EdmRelationshipAttribute("AutoRentModel", "FK_Application_DepartmentPickUp", "Department", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(MainHost.Web.Models.Department), "Application", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(MainHost.Web.Models.Application), true)]
 [assembly: EdmRelationshipAttribute("AutoRentModel", "FK_Application_DepartmentRet", "Department", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(MainHost.Web.Models.Department), "Application", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(MainHost.Web.Models.Application), true)]
 [assembly: EdmRelationshipAttribute("AutoRentModel", "FK_Application_Model", "Model", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(MainHost.Web.Models.Model), "Application", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(MainHost.Web.Models.Application), true)]
-[assembly: EdmRelationshipAttribute("AutoRentModel", "FK_Auto_Category", "Category", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(MainHost.Web.Models.Category), "Auto", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(MainHost.Web.Models.Auto), true)]
 [assembly: EdmRelationshipAttribute("AutoRentModel", "FK_Auto_Insuarance", "Insuarance", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(MainHost.Web.Models.Insuarance), "Auto", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(MainHost.Web.Models.Auto), true)]
 [assembly: EdmRelationshipAttribute("AutoRentModel", "FK_Auto_Model", "Model", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(MainHost.Web.Models.Model), "Auto", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(MainHost.Web.Models.Auto), true)]
 [assembly: EdmRelationshipAttribute("AutoRentModel", "FK_ChargeOffOrder_Auto", "Auto", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(MainHost.Web.Models.Auto), "ChargeOffOrder", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(MainHost.Web.Models.ChargeOffOrder), true)]
@@ -133,22 +132,6 @@ namespace MainHost.Web.Models
             }
         }
         private ObjectSet<Auto> _Auto;
-    
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
-        public ObjectSet<Category> Category
-        {
-            get
-            {
-                if ((_Category == null))
-                {
-                    _Category = base.CreateObjectSet<Category>("Category");
-                }
-                return _Category;
-            }
-        }
-        private ObjectSet<Category> _Category;
     
         /// <summary>
         /// No Metadata Documentation available.
@@ -487,14 +470,6 @@ namespace MainHost.Web.Models
         public void AddToAuto(Auto auto)
         {
             base.AddObject("Auto", auto);
-        }
-    
-        /// <summary>
-        /// Deprecated Method for adding a new object to the Category EntitySet. Consider using the .Add method of the associated ObjectSet&lt;T&gt; property instead.
-        /// </summary>
-        public void AddToCategory(Category category)
-        {
-            base.AddObject("Category", category);
         }
     
         /// <summary>
@@ -1161,19 +1136,19 @@ namespace MainHost.Web.Models
         /// <param name="id">Initial value of the Id property.</param>
         /// <param name="number">Initial value of the Number property.</param>
         /// <param name="insuaranceId">Initial value of the InsuaranceId property.</param>
-        /// <param name="categoryId">Initial value of the CategoryId property.</param>
+        /// <param name="category">Initial value of the Category property.</param>
         /// <param name="modelId">Initial value of the ModelId property.</param>
         /// <param name="year">Initial value of the Year property.</param>
         /// <param name="mileage">Initial value of the Mileage property.</param>
         /// <param name="color">Initial value of the Color property.</param>
         /// <param name="status">Initial value of the Status property.</param>
-        public static Auto CreateAuto(global::System.Int32 id, global::System.String number, global::System.Int32 insuaranceId, global::System.Int32 categoryId, global::System.Int32 modelId, global::System.Int16 year, global::System.Int32 mileage, global::System.Int16 color, global::System.Int16 status)
+        public static Auto CreateAuto(global::System.Int32 id, global::System.String number, global::System.Int32 insuaranceId, global::System.Int16 category, global::System.Int32 modelId, global::System.Int16 year, global::System.Int32 mileage, global::System.Int16 color, global::System.Int16 status)
         {
             Auto auto = new Auto();
             auto.Id = id;
             auto.Number = number;
             auto.InsuaranceId = insuaranceId;
-            auto.CategoryId = categoryId;
+            auto.Category = category;
             auto.ModelId = modelId;
             auto.Year = year;
             auto.Mileage = mileage;
@@ -1265,24 +1240,24 @@ namespace MainHost.Web.Models
         /// </summary>
         [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=false)]
         [DataMemberAttribute()]
-        public global::System.Int32 CategoryId
+        public global::System.Int16 Category
         {
             get
             {
-                return _CategoryId;
+                return _Category;
             }
             set
             {
-                OnCategoryIdChanging(value);
-                ReportPropertyChanging("CategoryId");
-                _CategoryId = StructuralObject.SetValidValue(value);
-                ReportPropertyChanged("CategoryId");
-                OnCategoryIdChanged();
+                OnCategoryChanging(value);
+                ReportPropertyChanging("Category");
+                _Category = StructuralObject.SetValidValue(value);
+                ReportPropertyChanged("Category");
+                OnCategoryChanged();
             }
         }
-        private global::System.Int32 _CategoryId;
-        partial void OnCategoryIdChanging(global::System.Int32 value);
-        partial void OnCategoryIdChanged();
+        private global::System.Int16 _Category;
+        partial void OnCategoryChanging(global::System.Int16 value);
+        partial void OnCategoryChanged();
     
         /// <summary>
         /// No Metadata Documentation available.
@@ -1455,44 +1430,6 @@ namespace MainHost.Web.Models
         #endregion
     
         #region Navigation Properties
-    
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
-        [XmlIgnoreAttribute()]
-        [SoapIgnoreAttribute()]
-        [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("AutoRentModel", "FK_Auto_Category", "Category")]
-        public Category Category
-        {
-            get
-            {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Category>("AutoRentModel.FK_Auto_Category", "Category").Value;
-            }
-            set
-            {
-                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Category>("AutoRentModel.FK_Auto_Category", "Category").Value = value;
-            }
-        }
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
-        [BrowsableAttribute(false)]
-        [DataMemberAttribute()]
-        public EntityReference<Category> CategoryReference
-        {
-            get
-            {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Category>("AutoRentModel.FK_Auto_Category", "Category");
-            }
-            set
-            {
-                if ((value != null))
-                {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<Category>("AutoRentModel.FK_Auto_Category", "Category", value);
-                }
-            }
-        }
     
         /// <summary>
         /// No Metadata Documentation available.
@@ -1698,138 +1635,6 @@ namespace MainHost.Web.Models
                 if ((value != null))
                 {
                     ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<Repair>("AutoRentModel.FK_Repair_Auto", "Repair", value);
-                }
-            }
-        }
-
-        #endregion
-    }
-    
-    /// <summary>
-    /// No Metadata Documentation available.
-    /// </summary>
-    [EdmEntityTypeAttribute(NamespaceName="AutoRentModel", Name="Category")]
-    [Serializable()]
-    [DataContractAttribute(IsReference=true)]
-    public partial class Category : EntityObject
-    {
-        #region Factory Method
-    
-        /// <summary>
-        /// Create a new Category object.
-        /// </summary>
-        /// <param name="id">Initial value of the Id property.</param>
-        /// <param name="name">Initial value of the Name property.</param>
-        /// <param name="deposit">Initial value of the Deposit property.</param>
-        public static Category CreateCategory(global::System.Int32 id, global::System.String name, global::System.Boolean deposit)
-        {
-            Category category = new Category();
-            category.Id = id;
-            category.Name = name;
-            category.Deposit = deposit;
-            return category;
-        }
-
-        #endregion
-        #region Primitive Properties
-    
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
-        [EdmScalarPropertyAttribute(EntityKeyProperty=true, IsNullable=false)]
-        [DataMemberAttribute()]
-        public global::System.Int32 Id
-        {
-            get
-            {
-                return _Id;
-            }
-            set
-            {
-                if (_Id != value)
-                {
-                    OnIdChanging(value);
-                    ReportPropertyChanging("Id");
-                    _Id = StructuralObject.SetValidValue(value);
-                    ReportPropertyChanged("Id");
-                    OnIdChanged();
-                }
-            }
-        }
-        private global::System.Int32 _Id;
-        partial void OnIdChanging(global::System.Int32 value);
-        partial void OnIdChanged();
-    
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
-        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=false)]
-        [DataMemberAttribute()]
-        public global::System.String Name
-        {
-            get
-            {
-                return _Name;
-            }
-            set
-            {
-                OnNameChanging(value);
-                ReportPropertyChanging("Name");
-                _Name = StructuralObject.SetValidValue(value, false);
-                ReportPropertyChanged("Name");
-                OnNameChanged();
-            }
-        }
-        private global::System.String _Name;
-        partial void OnNameChanging(global::System.String value);
-        partial void OnNameChanged();
-    
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
-        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=false)]
-        [DataMemberAttribute()]
-        public global::System.Boolean Deposit
-        {
-            get
-            {
-                return _Deposit;
-            }
-            set
-            {
-                OnDepositChanging(value);
-                ReportPropertyChanging("Deposit");
-                _Deposit = StructuralObject.SetValidValue(value);
-                ReportPropertyChanged("Deposit");
-                OnDepositChanged();
-            }
-        }
-        private global::System.Boolean _Deposit;
-        partial void OnDepositChanging(global::System.Boolean value);
-        partial void OnDepositChanged();
-
-        #endregion
-    
-        #region Navigation Properties
-    
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
-        [XmlIgnoreAttribute()]
-        [SoapIgnoreAttribute()]
-        [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("AutoRentModel", "FK_Auto_Category", "Auto")]
-        public EntityCollection<Auto> Auto
-        {
-            get
-            {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<Auto>("AutoRentModel.FK_Auto_Category", "Auto");
-            }
-            set
-            {
-                if ((value != null))
-                {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<Auto>("AutoRentModel.FK_Auto_Category", "Auto", value);
                 }
             }
         }

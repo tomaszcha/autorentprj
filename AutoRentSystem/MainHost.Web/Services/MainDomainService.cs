@@ -13,20 +13,19 @@ namespace MainHost.Web.Services
     using MainHost.Web.Models;
 
 
-    // Реализует логику приложения с использованием контекста AutoRentEntities.
-    // TODO: добавьте свою прикладную логику в эти или другие методы.
-    // TODO: включите проверку подлинности (Windows/ASP.NET Forms) и раскомментируйте следующие строки, чтобы запретить анонимный доступ
-    // Кроме того, рассмотрите возможность добавления ролей для соответствующего ограничения доступа.
-    [RequiresAuthentication]
+    // Implements application logic using the AutoRentEntities context.
+    // TODO: Add your application logic to these methods or in additional methods.
+    // TODO: Wire up authentication (Windows/ASP.NET Forms) and uncomment the following to disable anonymous access
+    // Also consider adding roles to restrict access as appropriate.
+    // [RequiresAuthentication]
     [EnableClientAccess()]
-    public class DomainService1 : LinqToEntitiesDomainService<AutoRentEntities>
+    public class MainDomainService : LinqToEntitiesDomainService<AutoRentEntities>
     {
 
         // TODO:
-        // рассмотрите возможность сокращения результатов метода запроса.  Если необходим дополнительный ввод,
-        // то в этот метод можно добавить параметры или создать дополнительные методы выполнения запроса с другими именами.
-        // Для поддержки разбиения на страницы добавьте упорядочение в запрос "Application".
-        [Query(IsDefault = true)]
+        // Consider constraining the results of your query method.  If you need additional input you can
+        // add parameters to this method or create additional query methods with different names.
+        // To support paging you will need to add ordering to the 'Application' query.
         public IQueryable<Application> GetApplication()
         {
             return this.ObjectContext.Application;
@@ -63,10 +62,9 @@ namespace MainHost.Web.Services
         }
 
         // TODO:
-        // рассмотрите возможность сокращения результатов метода запроса.  Если необходим дополнительный ввод,
-        // то в этот метод можно добавить параметры или создать дополнительные методы выполнения запроса с другими именами.
-        // Для поддержки разбиения на страницы добавьте упорядочение в запрос "Auto".
-        [Query(IsDefault = true)]
+        // Consider constraining the results of your query method.  If you need additional input you can
+        // add parameters to this method or create additional query methods with different names.
+        // To support paging you will need to add ordering to the 'Auto' query.
         public IQueryable<Auto> GetAuto()
         {
             return this.ObjectContext.Auto;
@@ -103,50 +101,9 @@ namespace MainHost.Web.Services
         }
 
         // TODO:
-        // рассмотрите возможность сокращения результатов метода запроса.  Если необходим дополнительный ввод,
-        // то в этот метод можно добавить параметры или создать дополнительные методы выполнения запроса с другими именами.
-        // Для поддержки разбиения на страницы добавьте упорядочение в запрос "Category".
-        [Query(IsDefault = true)]
-        public IQueryable<Category> GetCategory()
-        {
-            return this.ObjectContext.Category;
-        }
-
-        public void InsertCategory(Category category)
-        {
-            if ((category.EntityState != EntityState.Detached))
-            {
-                this.ObjectContext.ObjectStateManager.ChangeObjectState(category, EntityState.Added);
-            }
-            else
-            {
-                this.ObjectContext.Category.AddObject(category);
-            }
-        }
-
-        public void UpdateCategory(Category currentCategory)
-        {
-            this.ObjectContext.Category.AttachAsModified(currentCategory, this.ChangeSet.GetOriginal(currentCategory));
-        }
-
-        public void DeleteCategory(Category category)
-        {
-            if ((category.EntityState != EntityState.Detached))
-            {
-                this.ObjectContext.ObjectStateManager.ChangeObjectState(category, EntityState.Deleted);
-            }
-            else
-            {
-                this.ObjectContext.Category.Attach(category);
-                this.ObjectContext.Category.DeleteObject(category);
-            }
-        }
-
-        // TODO:
-        // рассмотрите возможность сокращения результатов метода запроса.  Если необходим дополнительный ввод,
-        // то в этот метод можно добавить параметры или создать дополнительные методы выполнения запроса с другими именами.
-        // Для поддержки разбиения на страницы добавьте упорядочение в запрос "ChargeOffOrder".
-        [Query(IsDefault = true)]
+        // Consider constraining the results of your query method.  If you need additional input you can
+        // add parameters to this method or create additional query methods with different names.
+        // To support paging you will need to add ordering to the 'ChargeOffOrder' query.
         public IQueryable<ChargeOffOrder> GetChargeOffOrder()
         {
             return this.ObjectContext.ChargeOffOrder;
@@ -183,10 +140,9 @@ namespace MainHost.Web.Services
         }
 
         // TODO:
-        // рассмотрите возможность сокращения результатов метода запроса.  Если необходим дополнительный ввод,
-        // то в этот метод можно добавить параметры или создать дополнительные методы выполнения запроса с другими именами.
-        // Для поддержки разбиения на страницы добавьте упорядочение в запрос "City".
-        [Query(IsDefault = true)]
+        // Consider constraining the results of your query method.  If you need additional input you can
+        // add parameters to this method or create additional query methods with different names.
+        // To support paging you will need to add ordering to the 'City' query.
         public IQueryable<City> GetCity()
         {
             return this.ObjectContext.City;
@@ -223,10 +179,9 @@ namespace MainHost.Web.Services
         }
 
         // TODO:
-        // рассмотрите возможность сокращения результатов метода запроса.  Если необходим дополнительный ввод,
-        // то в этот метод можно добавить параметры или создать дополнительные методы выполнения запроса с другими именами.
-        // Для поддержки разбиения на страницы добавьте упорядочение в запрос "Customer".
-        [Query(IsDefault = true)]
+        // Consider constraining the results of your query method.  If you need additional input you can
+        // add parameters to this method or create additional query methods with different names.
+        // To support paging you will need to add ordering to the 'Customer' query.
         public IQueryable<Customer> GetCustomer()
         {
             return this.ObjectContext.Customer;
@@ -263,10 +218,9 @@ namespace MainHost.Web.Services
         }
 
         // TODO:
-        // рассмотрите возможность сокращения результатов метода запроса.  Если необходим дополнительный ввод,
-        // то в этот метод можно добавить параметры или создать дополнительные методы выполнения запроса с другими именами.
-        // Для поддержки разбиения на страницы добавьте упорядочение в запрос "Damage".
-        [Query(IsDefault = true)]
+        // Consider constraining the results of your query method.  If you need additional input you can
+        // add parameters to this method or create additional query methods with different names.
+        // To support paging you will need to add ordering to the 'Damage' query.
         public IQueryable<Damage> GetDamage()
         {
             return this.ObjectContext.Damage;
@@ -303,10 +257,9 @@ namespace MainHost.Web.Services
         }
 
         // TODO:
-        // рассмотрите возможность сокращения результатов метода запроса.  Если необходим дополнительный ввод,
-        // то в этот метод можно добавить параметры или создать дополнительные методы выполнения запроса с другими именами.
-        // Для поддержки разбиения на страницы добавьте упорядочение в запрос "Department".
-        [Query(IsDefault = true)]
+        // Consider constraining the results of your query method.  If you need additional input you can
+        // add parameters to this method or create additional query methods with different names.
+        // To support paging you will need to add ordering to the 'Department' query.
         public IQueryable<Department> GetDepartment()
         {
             return this.ObjectContext.Department;
@@ -343,10 +296,9 @@ namespace MainHost.Web.Services
         }
 
         // TODO:
-        // рассмотрите возможность сокращения результатов метода запроса.  Если необходим дополнительный ввод,
-        // то в этот метод можно добавить параметры или создать дополнительные методы выполнения запроса с другими именами.
-        // Для поддержки разбиения на страницы добавьте упорядочение в запрос "Employee".
-        [Query(IsDefault = true)]
+        // Consider constraining the results of your query method.  If you need additional input you can
+        // add parameters to this method or create additional query methods with different names.
+        // To support paging you will need to add ordering to the 'Employee' query.
         public IQueryable<Employee> GetEmployee()
         {
             return this.ObjectContext.Employee;
@@ -383,10 +335,9 @@ namespace MainHost.Web.Services
         }
 
         // TODO:
-        // рассмотрите возможность сокращения результатов метода запроса.  Если необходим дополнительный ввод,
-        // то в этот метод можно добавить параметры или создать дополнительные методы выполнения запроса с другими именами.
-        // Для поддержки разбиения на страницы добавьте упорядочение в запрос "EvacuationOrder".
-        [Query(IsDefault = true)]
+        // Consider constraining the results of your query method.  If you need additional input you can
+        // add parameters to this method or create additional query methods with different names.
+        // To support paging you will need to add ordering to the 'EvacuationOrder' query.
         public IQueryable<EvacuationOrder> GetEvacuationOrder()
         {
             return this.ObjectContext.EvacuationOrder;
@@ -423,10 +374,9 @@ namespace MainHost.Web.Services
         }
 
         // TODO:
-        // рассмотрите возможность сокращения результатов метода запроса.  Если необходим дополнительный ввод,
-        // то в этот метод можно добавить параметры или создать дополнительные методы выполнения запроса с другими именами.
-        // Для поддержки разбиения на страницы добавьте упорядочение в запрос "ExtraDamage".
-        [Query(IsDefault = true)]
+        // Consider constraining the results of your query method.  If you need additional input you can
+        // add parameters to this method or create additional query methods with different names.
+        // To support paging you will need to add ordering to the 'ExtraDamage' query.
         public IQueryable<ExtraDamage> GetExtraDamage()
         {
             return this.ObjectContext.ExtraDamage;
@@ -463,10 +413,9 @@ namespace MainHost.Web.Services
         }
 
         // TODO:
-        // рассмотрите возможность сокращения результатов метода запроса.  Если необходим дополнительный ввод,
-        // то в этот метод можно добавить параметры или создать дополнительные методы выполнения запроса с другими именами.
-        // Для поддержки разбиения на страницы добавьте упорядочение в запрос "Insuarance".
-        [Query(IsDefault = true)]
+        // Consider constraining the results of your query method.  If you need additional input you can
+        // add parameters to this method or create additional query methods with different names.
+        // To support paging you will need to add ordering to the 'Insuarance' query.
         public IQueryable<Insuarance> GetInsuarance()
         {
             return this.ObjectContext.Insuarance;
@@ -503,10 +452,9 @@ namespace MainHost.Web.Services
         }
 
         // TODO:
-        // рассмотрите возможность сокращения результатов метода запроса.  Если необходим дополнительный ввод,
-        // то в этот метод можно добавить параметры или создать дополнительные методы выполнения запроса с другими именами.
-        // Для поддержки разбиения на страницы добавьте упорядочение в запрос "InsuaranceAgency".
-        [Query(IsDefault = true)]
+        // Consider constraining the results of your query method.  If you need additional input you can
+        // add parameters to this method or create additional query methods with different names.
+        // To support paging you will need to add ordering to the 'InsuaranceAgency' query.
         public IQueryable<InsuaranceAgency> GetInsuaranceAgency()
         {
             return this.ObjectContext.InsuaranceAgency;
@@ -543,10 +491,9 @@ namespace MainHost.Web.Services
         }
 
         // TODO:
-        // рассмотрите возможность сокращения результатов метода запроса.  Если необходим дополнительный ввод,
-        // то в этот метод можно добавить параметры или создать дополнительные методы выполнения запроса с другими именами.
-        // Для поддержки разбиения на страницы добавьте упорядочение в запрос "Make".
-        [Query(IsDefault = true)]
+        // Consider constraining the results of your query method.  If you need additional input you can
+        // add parameters to this method or create additional query methods with different names.
+        // To support paging you will need to add ordering to the 'Make' query.
         public IQueryable<Make> GetMake()
         {
             return this.ObjectContext.Make;
@@ -583,10 +530,9 @@ namespace MainHost.Web.Services
         }
 
         // TODO:
-        // рассмотрите возможность сокращения результатов метода запроса.  Если необходим дополнительный ввод,
-        // то в этот метод можно добавить параметры или создать дополнительные методы выполнения запроса с другими именами.
-        // Для поддержки разбиения на страницы добавьте упорядочение в запрос "Model".
-        [Query(IsDefault = true)]
+        // Consider constraining the results of your query method.  If you need additional input you can
+        // add parameters to this method or create additional query methods with different names.
+        // To support paging you will need to add ordering to the 'Model' query.
         public IQueryable<Model> GetModel()
         {
             return this.ObjectContext.Model;
@@ -623,10 +569,9 @@ namespace MainHost.Web.Services
         }
 
         // TODO:
-        // рассмотрите возможность сокращения результатов метода запроса.  Если необходим дополнительный ввод,
-        // то в этот метод можно добавить параметры или создать дополнительные методы выполнения запроса с другими именами.
-        // Для поддержки разбиения на страницы добавьте упорядочение в запрос "Order".
-        [Query(IsDefault = true)]
+        // Consider constraining the results of your query method.  If you need additional input you can
+        // add parameters to this method or create additional query methods with different names.
+        // To support paging you will need to add ordering to the 'Order' query.
         public IQueryable<Order> GetOrder()
         {
             return this.ObjectContext.Order;
@@ -663,10 +608,9 @@ namespace MainHost.Web.Services
         }
 
         // TODO:
-        // рассмотрите возможность сокращения результатов метода запроса.  Если необходим дополнительный ввод,
-        // то в этот метод можно добавить параметры или создать дополнительные методы выполнения запроса с другими именами.
-        // Для поддержки разбиения на страницы добавьте упорядочение в запрос "OrdinaryDamage".
-        [Query(IsDefault = true)]
+        // Consider constraining the results of your query method.  If you need additional input you can
+        // add parameters to this method or create additional query methods with different names.
+        // To support paging you will need to add ordering to the 'OrdinaryDamage' query.
         public IQueryable<OrdinaryDamage> GetOrdinaryDamage()
         {
             return this.ObjectContext.OrdinaryDamage;
@@ -703,10 +647,9 @@ namespace MainHost.Web.Services
         }
 
         // TODO:
-        // рассмотрите возможность сокращения результатов метода запроса.  Если необходим дополнительный ввод,
-        // то в этот метод можно добавить параметры или создать дополнительные методы выполнения запроса с другими именами.
-        // Для поддержки разбиения на страницы добавьте упорядочение в запрос "PurchaseOrder".
-        [Query(IsDefault = true)]
+        // Consider constraining the results of your query method.  If you need additional input you can
+        // add parameters to this method or create additional query methods with different names.
+        // To support paging you will need to add ordering to the 'PurchaseOrder' query.
         public IQueryable<PurchaseOrder> GetPurchaseOrder()
         {
             return this.ObjectContext.PurchaseOrder;
@@ -743,10 +686,9 @@ namespace MainHost.Web.Services
         }
 
         // TODO:
-        // рассмотрите возможность сокращения результатов метода запроса.  Если необходим дополнительный ввод,
-        // то в этот метод можно добавить параметры или создать дополнительные методы выполнения запроса с другими именами.
-        // Для поддержки разбиения на страницы добавьте упорядочение в запрос "Purchaser".
-        [Query(IsDefault = true)]
+        // Consider constraining the results of your query method.  If you need additional input you can
+        // add parameters to this method or create additional query methods with different names.
+        // To support paging you will need to add ordering to the 'Purchaser' query.
         public IQueryable<Purchaser> GetPurchaser()
         {
             return this.ObjectContext.Purchaser;
@@ -783,10 +725,9 @@ namespace MainHost.Web.Services
         }
 
         // TODO:
-        // рассмотрите возможность сокращения результатов метода запроса.  Если необходим дополнительный ввод,
-        // то в этот метод можно добавить параметры или создать дополнительные методы выполнения запроса с другими именами.
-        // Для поддержки разбиения на страницы добавьте упорядочение в запрос "Repair".
-        [Query(IsDefault = true)]
+        // Consider constraining the results of your query method.  If you need additional input you can
+        // add parameters to this method or create additional query methods with different names.
+        // To support paging you will need to add ordering to the 'Repair' query.
         public IQueryable<Repair> GetRepair()
         {
             return this.ObjectContext.Repair;
@@ -823,10 +764,9 @@ namespace MainHost.Web.Services
         }
 
         // TODO:
-        // рассмотрите возможность сокращения результатов метода запроса.  Если необходим дополнительный ввод,
-        // то в этот метод можно добавить параметры или создать дополнительные методы выполнения запроса с другими именами.
-        // Для поддержки разбиения на страницы добавьте упорядочение в запрос "Supplier".
-        [Query(IsDefault = true)]
+        // Consider constraining the results of your query method.  If you need additional input you can
+        // add parameters to this method or create additional query methods with different names.
+        // To support paging you will need to add ordering to the 'Supplier' query.
         public IQueryable<Supplier> GetSupplier()
         {
             return this.ObjectContext.Supplier;
@@ -863,10 +803,9 @@ namespace MainHost.Web.Services
         }
 
         // TODO:
-        // рассмотрите возможность сокращения результатов метода запроса.  Если необходим дополнительный ввод,
-        // то в этот метод можно добавить параметры или создать дополнительные методы выполнения запроса с другими именами.
-        // Для поддержки разбиения на страницы добавьте упорядочение в запрос "SupplyOrder".
-        [Query(IsDefault = true)]
+        // Consider constraining the results of your query method.  If you need additional input you can
+        // add parameters to this method or create additional query methods with different names.
+        // To support paging you will need to add ordering to the 'SupplyOrder' query.
         public IQueryable<SupplyOrder> GetSupplyOrder()
         {
             return this.ObjectContext.SupplyOrder;
@@ -903,10 +842,9 @@ namespace MainHost.Web.Services
         }
 
         // TODO:
-        // рассмотрите возможность сокращения результатов метода запроса.  Если необходим дополнительный ввод,
-        // то в этот метод можно добавить параметры или создать дополнительные методы выполнения запроса с другими именами.
-        // Для поддержки разбиения на страницы добавьте упорядочение в запрос "TechnicalService".
-        [Query(IsDefault = true)]
+        // Consider constraining the results of your query method.  If you need additional input you can
+        // add parameters to this method or create additional query methods with different names.
+        // To support paging you will need to add ordering to the 'TechnicalService' query.
         public IQueryable<TechnicalService> GetTechnicalService()
         {
             return this.ObjectContext.TechnicalService;

@@ -8,7 +8,6 @@
         <EntityContainer Name="AutoRentModelStoreContainer">
           <EntitySet Name="Application" EntityType="AutoRentModel.Store.Application" store:Type="Tables" Schema="dbo" />
           <EntitySet Name="Auto" EntityType="AutoRentModel.Store.Auto" store:Type="Tables" Schema="dbo" />
-          <EntitySet Name="Category" EntityType="AutoRentModel.Store.Category" store:Type="Tables" Schema="dbo" />
           <EntitySet Name="ChargeOffOrder" EntityType="AutoRentModel.Store.ChargeOffOrder" store:Type="Tables" Schema="dbo" />
           <EntitySet Name="City" EntityType="AutoRentModel.Store.City" store:Type="Tables" Schema="dbo" />
           <EntitySet Name="Customer" EntityType="AutoRentModel.Store.Customer" store:Type="Tables" Schema="dbo" />
@@ -40,10 +39,6 @@
           <AssociationSet Name="FK_Application_Model" Association="AutoRentModel.Store.FK_Application_Model">
             <End Role="Model" EntitySet="Model" />
             <End Role="Application" EntitySet="Application" />
-          </AssociationSet>
-          <AssociationSet Name="FK_Auto_Category" Association="AutoRentModel.Store.FK_Auto_Category">
-            <End Role="Category" EntitySet="Category" />
-            <End Role="Auto" EntitySet="Auto" />
           </AssociationSet>
           <AssociationSet Name="FK_Auto_Insuarance" Association="AutoRentModel.Store.FK_Auto_Insuarance">
             <End Role="Insuarance" EntitySet="Insuarance" />
@@ -187,7 +182,7 @@
           <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
           <Property Name="Number" Type="nvarchar" Nullable="false" MaxLength="8" />
           <Property Name="InsuaranceId" Type="int" Nullable="false" />
-          <Property Name="CategoryId" Type="int" Nullable="false" />
+          <Property Name="Category" Type="smallint" Nullable="false" />
           <Property Name="ModelId" Type="int" Nullable="false" />
           <Property Name="Year" Type="smallint" Nullable="false" />
           <Property Name="Mileage" Type="int" Nullable="false" />
@@ -195,14 +190,6 @@
           <Property Name="LastCheckDate" Type="datetime" />
           <Property Name="Description" Type="nvarchar" MaxLength="128" />
           <Property Name="Status" Type="smallint" Nullable="false" />
-        </EntityType>
-        <EntityType Name="Category">
-          <Key>
-            <PropertyRef Name="Id" />
-          </Key>
-          <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
-          <Property Name="Name" Type="nvarchar" Nullable="false" MaxLength="20" />
-          <Property Name="Deposit" Type="bit" Nullable="false" />
         </EntityType>
         <EntityType Name="ChargeOffOrder">
           <Key>
@@ -454,20 +441,6 @@
             </Principal>
             <Dependent Role="Application">
               <PropertyRef Name="ModelId" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <Association Name="FK_Auto_Category">
-          <End Role="Category" Type="AutoRentModel.Store.Category" Multiplicity="1">
-            <OnDelete Action="Cascade" />
-          </End>
-          <End Role="Auto" Type="AutoRentModel.Store.Auto" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="Category">
-              <PropertyRef Name="Id" />
-            </Principal>
-            <Dependent Role="Auto">
-              <PropertyRef Name="CategoryId" />
             </Dependent>
           </ReferentialConstraint>
         </Association>
@@ -853,7 +826,6 @@
         <EntityContainer Name="AutoRentEntities" annotation:LazyLoadingEnabled="true">
           <EntitySet Name="Application" EntityType="AutoRentModel.Application" />
           <EntitySet Name="Auto" EntityType="AutoRentModel.Auto" />
-          <EntitySet Name="Category" EntityType="AutoRentModel.Category" />
           <EntitySet Name="ChargeOffOrder" EntityType="AutoRentModel.ChargeOffOrder" />
           <EntitySet Name="City" EntityType="AutoRentModel.City" />
           <EntitySet Name="Customer" EntityType="AutoRentModel.Customer" />
@@ -885,10 +857,6 @@
           <AssociationSet Name="FK_Application_Model" Association="AutoRentModel.FK_Application_Model">
             <End Role="Model" EntitySet="Model" />
             <End Role="Application" EntitySet="Application" />
-          </AssociationSet>
-          <AssociationSet Name="FK_Auto_Category" Association="AutoRentModel.FK_Auto_Category">
-            <End Role="Category" EntitySet="Category" />
-            <End Role="Auto" EntitySet="Auto" />
           </AssociationSet>
           <AssociationSet Name="FK_Auto_Insuarance" Association="AutoRentModel.FK_Auto_Insuarance">
             <End Role="Insuarance" EntitySet="Insuarance" />
@@ -1035,7 +1003,7 @@
           <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="Number" Type="String" Nullable="false" MaxLength="8" Unicode="true" FixedLength="false" />
           <Property Name="InsuaranceId" Type="Int32" Nullable="false" />
-          <Property Name="CategoryId" Type="Int32" Nullable="false" />
+          <Property Name="Category" Type="Int16" Nullable="false" />
           <Property Name="ModelId" Type="Int32" Nullable="false" />
           <Property Name="Year" Type="Int16" Nullable="false" />
           <Property Name="Mileage" Type="Int32" Nullable="false" />
@@ -1043,7 +1011,6 @@
           <Property Name="LastCheckDate" Type="DateTime" />
           <Property Name="Description" Type="String" MaxLength="128" Unicode="true" FixedLength="false" />
           <Property Name="Status" Type="Int16" Nullable="false" />
-          <NavigationProperty Name="Category" Relationship="AutoRentModel.FK_Auto_Category" FromRole="Auto" ToRole="Category" />
           <NavigationProperty Name="Insuarance" Relationship="AutoRentModel.FK_Auto_Insuarance" FromRole="Auto" ToRole="Insuarance" />
           <NavigationProperty Name="Model" Relationship="AutoRentModel.FK_Auto_Model" FromRole="Auto" ToRole="Model" />
           <NavigationProperty Name="ChargeOffOrder" Relationship="AutoRentModel.FK_ChargeOffOrder_Auto" FromRole="Auto" ToRole="ChargeOffOrder" />
@@ -1052,15 +1019,6 @@
           <NavigationProperty Name="OrdinaryDamage" Relationship="AutoRentModel.FK_OrdinaryDamage_Auto" FromRole="Auto" ToRole="OrdinaryDamage" />
           <NavigationProperty Name="PurchaseOrder" Relationship="AutoRentModel.FK_PurchaseOrder_Auto" FromRole="Auto" ToRole="PurchaseOrder" />
           <NavigationProperty Name="Repair" Relationship="AutoRentModel.FK_Repair_Auto" FromRole="Auto" ToRole="Repair" />
-        </EntityType>
-        <EntityType Name="Category">
-          <Key>
-            <PropertyRef Name="Id" />
-          </Key>
-          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="Name" Type="String" Nullable="false" MaxLength="20" Unicode="true" FixedLength="false" />
-          <Property Name="Deposit" Type="Boolean" Nullable="false" />
-          <NavigationProperty Name="Auto" Relationship="AutoRentModel.FK_Auto_Category" FromRole="Category" ToRole="Auto" />
         </EntityType>
         <EntityType Name="ChargeOffOrder">
           <Key>
@@ -1365,20 +1323,6 @@
             </Principal>
             <Dependent Role="Application">
               <PropertyRef Name="ModelId" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <Association Name="FK_Auto_Category">
-          <End Role="Category" Type="AutoRentModel.Category" Multiplicity="1">
-            <OnDelete Action="Cascade" />
-          </End>
-          <End Role="Auto" Type="AutoRentModel.Auto" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="Category">
-              <PropertyRef Name="Id" />
-            </Principal>
-            <Dependent Role="Auto">
-              <PropertyRef Name="CategoryId" />
             </Dependent>
           </ReferentialConstraint>
         </Association>
@@ -1781,7 +1725,7 @@
             <ScalarProperty Name="Id" ColumnName="Id" />
             <ScalarProperty Name="Number" ColumnName="Number" />
             <ScalarProperty Name="InsuaranceId" ColumnName="InsuaranceId" />
-            <ScalarProperty Name="CategoryId" ColumnName="CategoryId" />
+            <ScalarProperty Name="Category" ColumnName="Category" />
             <ScalarProperty Name="ModelId" ColumnName="ModelId" />
             <ScalarProperty Name="Year" ColumnName="Year" />
             <ScalarProperty Name="Mileage" ColumnName="Mileage" />
@@ -1789,11 +1733,6 @@
             <ScalarProperty Name="LastCheckDate" ColumnName="LastCheckDate" />
             <ScalarProperty Name="Description" ColumnName="Description" />
             <ScalarProperty Name="Status" ColumnName="Status" />
-          </MappingFragment></EntityTypeMapping></EntitySetMapping>
-          <EntitySetMapping Name="Category"><EntityTypeMapping TypeName="AutoRentModel.Category"><MappingFragment StoreEntitySet="Category">
-            <ScalarProperty Name="Id" ColumnName="Id" />
-            <ScalarProperty Name="Name" ColumnName="Name" />
-            <ScalarProperty Name="Deposit" ColumnName="Deposit" />
           </MappingFragment></EntityTypeMapping></EntitySetMapping>
           <EntitySetMapping Name="ChargeOffOrder"><EntityTypeMapping TypeName="AutoRentModel.ChargeOffOrder"><MappingFragment StoreEntitySet="ChargeOffOrder">
             <ScalarProperty Name="Id" ColumnName="Id" />
@@ -1970,27 +1909,26 @@
     </Options>
     <!-- Diagram content (shape and connector positions) -->
     <Diagrams>
-      <Diagram Name="AutoRentModel">
+      <Diagram Name="MainDbModel">
         <EntityTypeShape EntityType="AutoRentModel.Application" Width="1.5" PointX="5.25" PointY="11.625" Height="4.0956022135416674" IsExpanded="true" />
-        <EntityTypeShape EntityType="AutoRentModel.Auto" Width="1.5" PointX="10.5" PointY="15.625" Height="4.8648079427083317" IsExpanded="true" />
-        <EntityTypeShape EntityType="AutoRentModel.Category" Width="1.5" PointX="8.25" PointY="21.125" Height="1.7879850260416674" IsExpanded="true" />
-        <EntityTypeShape EntityType="AutoRentModel.ChargeOffOrder" Width="1.5" PointX="15.75" PointY="16.75" Height="2.749492187499996" IsExpanded="true" />
+        <EntityTypeShape EntityType="AutoRentModel.Auto" Width="1.5" PointX="10.5" PointY="15.75" Height="4.6725065104166674" IsExpanded="true" />
+        <EntityTypeShape EntityType="AutoRentModel.ChargeOffOrder" Width="1.5" PointX="15.75" PointY="16.625" Height="2.749492187499996" IsExpanded="true" />
         <EntityTypeShape EntityType="AutoRentModel.City" Width="1.5" PointX="0.75" PointY="19.5" Height="2.749492187499996" IsExpanded="true" />
-        <EntityTypeShape EntityType="AutoRentModel.Customer" Width="1.5" PointX="6" PointY="7" Height="2.5571907552083317" IsExpanded="true" />
+        <EntityTypeShape EntityType="AutoRentModel.Customer" Width="1.5" PointX="6" PointY="8.25" Height="2.5571907552083317" IsExpanded="true" />
         <EntityTypeShape EntityType="AutoRentModel.Damage" Width="1.5" PointX="10.5" PointY="8.25" Height="1.7879850260416674" IsExpanded="true" />
         <EntityTypeShape EntityType="AutoRentModel.Department" Width="1.5" PointX="3" PointY="13.25" Height="2.9417936197916674" IsExpanded="true" />
-        <EntityTypeShape EntityType="AutoRentModel.Employee" Width="1.5" PointX="8.25" PointY="15.625" Height="4.2879036458333335" IsExpanded="true" />
+        <EntityTypeShape EntityType="AutoRentModel.Employee" Width="1.5" PointX="8.25" PointY="15.625" Height="4.2879036458333317" IsExpanded="true" />
         <EntityTypeShape EntityType="AutoRentModel.EvacuationOrder" Width="1.5" PointX="10.5" PointY="11.75" Height="2.3648893229166674" IsExpanded="true" />
         <EntityTypeShape EntityType="AutoRentModel.ExtraDamage" Width="1.5" PointX="12.75" PointY="16.875" Height="2.5571907552083317" IsExpanded="true" />
-        <EntityTypeShape EntityType="AutoRentModel.Insuarance" Width="1.5" PointX="5.25" PointY="17.125" Height="1.9802864583333317" IsExpanded="true" />
+        <EntityTypeShape EntityType="AutoRentModel.Insuarance" Width="1.5" PointX="5.25" PointY="17.125" Height="1.9802864583333388" IsExpanded="true" />
         <EntityTypeShape EntityType="AutoRentModel.InsuaranceAgency" Width="1.5" PointX="3" PointY="16.875" Height="2.3648893229166674" IsExpanded="true" />
-        <EntityTypeShape EntityType="AutoRentModel.Make" Width="1.5" PointX="6" PointY="27.625" Height="1.5956835937500031" IsExpanded="true" />
-        <EntityTypeShape EntityType="AutoRentModel.Model" Width="1.5" PointX="8.25" PointY="26.625" Height="3.5186979166666674" IsExpanded="true" />
+        <EntityTypeShape EntityType="AutoRentModel.Make" Width="1.5" PointX="6" PointY="27.25" Height="1.5956835937500031" IsExpanded="true" />
+        <EntityTypeShape EntityType="AutoRentModel.Model" Width="1.5" PointX="8.25" PointY="26.375" Height="3.5186979166666674" IsExpanded="true" />
         <EntityTypeShape EntityType="AutoRentModel.Order" Width="1.5" PointX="8.25" PointY="9.5" Height="4.480205078124996" IsExpanded="true" />
         <EntityTypeShape EntityType="AutoRentModel.OrdinaryDamage" Width="1.5" PointX="12.75" PointY="12.875" Height="2.3648893229166674" IsExpanded="true" />
         <EntityTypeShape EntityType="AutoRentModel.PurchaseOrder" Width="1.5" PointX="12.75" PointY="21" Height="2.172587890624996" IsExpanded="true" />
         <EntityTypeShape EntityType="AutoRentModel.Purchaser" Width="1.5" PointX="3" PointY="20" Height="2.3648893229166674" IsExpanded="true" />
-        <EntityTypeShape EntityType="AutoRentModel.Repair" Width="1.5" PointX="15.75" PointY="20.75" Height="2.749492187499996" IsExpanded="true" />
+        <EntityTypeShape EntityType="AutoRentModel.Repair" Width="1.5" PointX="15.75" PointY="20.875" Height="2.749492187499996" IsExpanded="true" />
         <EntityTypeShape EntityType="AutoRentModel.Supplier" Width="1.5" PointX="3" PointY="23.125" Height="2.3648893229166674" IsExpanded="true" />
         <EntityTypeShape EntityType="AutoRentModel.SupplyOrder" Width="1.5" PointX="5.25" PointY="23.125" Height="2.3648893229166674" IsExpanded="true" />
         <EntityTypeShape EntityType="AutoRentModel.TechnicalService" Width="1.5" PointX="3" PointY="26.25" Height="2.3648893229166674" IsExpanded="true" />
@@ -2003,93 +1941,72 @@
           <ConnectorPoint PointX="5.25" PointY="13.805150553385417" />
         </AssociationConnector>
         <AssociationConnector Association="AutoRentModel.FK_Application_Model" ManuallyRouted="false">
-          <ConnectorPoint PointX="8.25" PointY="26.625" />
-          <ConnectorPoint PointX="7.875" PointY="26.25" />
+          <ConnectorPoint PointX="8.25" PointY="26.375" />
+          <ConnectorPoint PointX="7.875" PointY="26" />
           <ConnectorPoint PointX="7.875" PointY="13.672801106770834" />
           <ConnectorPoint PointX="6.75" PointY="13.672801106770834" />
         </AssociationConnector>
-        <AssociationConnector Association="AutoRentModel.FK_Auto_Category" ManuallyRouted="false">
-          <ConnectorPoint PointX="9.75" PointY="22.018992513020834" />
-          <ConnectorPoint PointX="10.760414166666665" PointY="22.018992513020834" />
-          <ConnectorPoint PointX="10.927080833333333" PointY="22.018992513020834" />
-          <ConnectorPoint PointX="11.25" PointY="22.018992513020834" />
-          <ConnectorPoint PointX="11.25" PointY="20.489807942708332" />
-        </AssociationConnector>
         <AssociationConnector Association="AutoRentModel.FK_Auto_Insuarance" ManuallyRouted="false">
-          <ConnectorPoint PointX="6" PointY="19.105286458333332" />
-          <ConnectorPoint PointX="6" PointY="20.232605794270832" />
-          <ConnectorPoint PointX="7.791666666666667" PointY="20.232605794270832" />
-          <ConnectorPoint PointX="7.958333333333333" PointY="20.232605794270832" />
-          <ConnectorPoint PointX="10.5" PointY="20.232605794270832" />
+          <ConnectorPoint PointX="6" PointY="19.105286458333339" />
+          <ConnectorPoint PointX="6" PointY="20.198955078125" />
+          <ConnectorPoint PointX="7.791666666666667" PointY="20.198955078125" />
+          <ConnectorPoint PointX="7.958333333333333" PointY="20.198955078125" />
+          <ConnectorPoint PointX="10.5" PointY="20.198955078125" />
         </AssociationConnector>
         <AssociationConnector Association="AutoRentModel.FK_Auto_Model" ManuallyRouted="false">
-          <ConnectorPoint PointX="9.75" PointY="28.384348958333334" />
-          <ConnectorPoint PointX="10.8437475" PointY="28.384348958333334" />
-          <ConnectorPoint PointX="10.8437475" PointY="20.489807942708332" />
+          <ConnectorPoint PointX="9.75" PointY="28.134348958333334" />
+          <ConnectorPoint PointX="11.25" PointY="28.134348958333334" />
+          <ConnectorPoint PointX="11.25" PointY="20.422506510416667" />
         </AssociationConnector>
         <AssociationConnector Association="AutoRentModel.FK_ChargeOffOrder_Auto" ManuallyRouted="false">
-          <ConnectorPoint PointX="12" PointY="16.78125" />
-          <ConnectorPoint PointX="15.041666666666666" PointY="16.78125" />
-          <ConnectorPoint PointX="15.208333333333334" PointY="16.78125" />
-          <ConnectorPoint PointX="15.291666666666666" PointY="16.78125" />
-          <ConnectorPoint PointX="15.458333333333334" PointY="16.78125" />
-          <ConnectorPoint PointX="15.75" PointY="16.78125" />
+          <ConnectorPoint PointX="12" PointY="16.71875" />
+          <ConnectorPoint PointX="15.75" PointY="16.71875" />
         </AssociationConnector>
         <AssociationConnector Association="AutoRentModel.FK_ExtraDamage_Auto" ManuallyRouted="false">
           <ConnectorPoint PointX="12" PointY="18.153595377604166" />
           <ConnectorPoint PointX="12.75" PointY="18.153595377604166" />
         </AssociationConnector>
         <AssociationConnector Association="AutoRentModel.FK_Order_Auto" ManuallyRouted="false">
-          <ConnectorPoint PointX="10.5" PointY="15.625" />
-          <ConnectorPoint PointX="10.125" PointY="15.25" />
+          <ConnectorPoint PointX="10.5" PointY="15.75" />
+          <ConnectorPoint PointX="10.125" PointY="15.375" />
           <ConnectorPoint PointX="10.125" PointY="11.740102539062498" />
           <ConnectorPoint PointX="9.75" PointY="11.740102539062498" />
         </AssociationConnector>
         <AssociationConnector Association="AutoRentModel.FK_OrdinaryDamage_Auto" ManuallyRouted="false">
-          <ConnectorPoint PointX="12" PointY="15.625" />
-          <ConnectorPoint PointX="12.375" PointY="15.25" />
+          <ConnectorPoint PointX="12" PointY="15.75" />
+          <ConnectorPoint PointX="12.375" PointY="15.375" />
           <ConnectorPoint PointX="12.375" PointY="15.614889322916667" />
           <ConnectorPoint PointX="12.75" PointY="15.239889322916667" />
         </AssociationConnector>
         <AssociationConnector Association="AutoRentModel.FK_PurchaseOrder_Auto" ManuallyRouted="false">
-          <ConnectorPoint PointX="11.6562525" PointY="20.489807942708332" />
-          <ConnectorPoint PointX="11.6562525" PointY="22.595790201822915" />
-          <ConnectorPoint PointX="11.776045416666667" PointY="22.595790201822915" />
-          <ConnectorPoint PointX="11.942712083333335" PointY="22.595790201822915" />
-          <ConnectorPoint PointX="12.75" PointY="22.595790201822915" />
+          <ConnectorPoint PointX="11.6562525" PointY="20.422506510416667" />
+          <ConnectorPoint PointX="11.6562525" PointY="22.086293945312498" />
+          <ConnectorPoint PointX="12.75" PointY="22.086293945312498" />
         </AssociationConnector>
         <AssociationConnector Association="AutoRentModel.FK_Repair_Auto" ManuallyRouted="false">
-          <ConnectorPoint PointX="11.859378750000001" PointY="20.489807942708332" />
-          <ConnectorPoint PointX="11.859378750000001" PointY="23.367290039062496" />
-          <ConnectorPoint PointX="15.75" PointY="23.367290039062496" />
+          <ConnectorPoint PointX="10.8437475" PointY="20.422506510416667" />
+          <ConnectorPoint PointX="10.8437475" PointY="23.429790039062496" />
+          <ConnectorPoint PointX="11.166666666666666" PointY="23.429790039062496" />
+          <ConnectorPoint PointX="11.333333333333334" PointY="23.429790039062496" />
+          <ConnectorPoint PointX="15.75" PointY="23.429790039062496" />
         </AssociationConnector>
         <AssociationConnector Association="AutoRentModel.FK_ChargeOffOrder_EmployeeManager" ManuallyRouted="false">
-          <ConnectorPoint PointX="9" PointY="15.625" />
-          <ConnectorPoint PointX="9" PointY="15.375" />
-          <ConnectorPoint PointX="10.166666666666666" PointY="15.375" />
-          <ConnectorPoint PointX="10.333333333333334" PointY="15.375" />
-          <ConnectorPoint PointX="12.166666666666666" PointY="15.374999999999998" />
-          <ConnectorPoint PointX="12.458333333333334" PointY="15.375" />
-          <ConnectorPoint PointX="12.531555989583334" PointY="15.375" />
-          <ConnectorPoint PointX="12.698222656250001" PointY="15.375" />
-          <ConnectorPoint PointX="15.375" PointY="15.375" />
-          <ConnectorPoint PointX="15.375" PointY="18.17162309375" />
-          <ConnectorPoint PointX="15.75" PointY="18.17162309375" />
+          <ConnectorPoint PointX="9.75" PointY="15.65625" />
+          <ConnectorPoint PointX="10.322916666666666" PointY="15.65625" />
+          <ConnectorPoint PointX="10.489583333333334" PointY="15.65625" />
+          <ConnectorPoint PointX="12.010416666666666" PointY="15.65625" />
+          <ConnectorPoint PointX="12.177083333333334" PointY="15.65625" />
+          <ConnectorPoint PointX="16.5" PointY="15.65625" />
+          <ConnectorPoint PointX="16.5" PointY="16.625" />
         </AssociationConnector>
         <AssociationConnector Association="AutoRentModel.FK_ChargeOffOrder_EmployeeMechanic" ManuallyRouted="false">
-          <ConnectorPoint PointX="9.406252" PointY="15.625" />
-          <ConnectorPoint PointX="9.406252" PointY="15.5" />
-          <ConnectorPoint PointX="10.291666666666666" PointY="15.5" />
-          <ConnectorPoint PointX="10.458333333333334" PointY="15.5" />
-          <ConnectorPoint PointX="12.041666666666666" PointY="15.5" />
-          <ConnectorPoint PointX="12.208333333333334" PointY="15.5" />
-          <ConnectorPoint PointX="12.291666666666666" PointY="15.499999999999998" />
-          <ConnectorPoint PointX="12.573222656250001" PointY="15.5" />
-          <ConnectorPoint PointX="15.125" PointY="15.5" />
-          <ConnectorPoint PointX="15.125" PointY="17.476436546875" />
-          <ConnectorPoint PointX="15.291666666666666" PointY="17.476436546875" />
-          <ConnectorPoint PointX="15.458333333333334" PointY="17.476436546875" />
-          <ConnectorPoint PointX="15.75" PointY="17.476436546875" />
+          <ConnectorPoint PointX="9.75" PointY="15.671875" />
+          <ConnectorPoint PointX="10.338541666666666" PointY="15.671875" />
+          <ConnectorPoint PointX="10.505208333333334" PointY="15.671875" />
+          <ConnectorPoint PointX="11.994791666666666" PointY="15.671875" />
+          <ConnectorPoint PointX="12.161458333333334" PointY="15.671875" />
+          <ConnectorPoint PointX="16.0937475" PointY="15.671875" />
+          <ConnectorPoint PointX="16.0937475" PointY="16.625" />
         </AssociationConnector>
         <AssociationConnector Association="AutoRentModel.FK_Department_City" ManuallyRouted="false">
           <ConnectorPoint PointX="1.5" PointY="19.5" />
@@ -2113,10 +2030,8 @@
           <ConnectorPoint PointX="7.791666666666667" PointY="19.875" />
           <ConnectorPoint PointX="7.958333333333333" PointY="19.875" />
           <ConnectorPoint PointX="8" PointY="19.875" />
-          <ConnectorPoint PointX="8" PointY="15.125" />
-          <ConnectorPoint PointX="10.041666666666666" PointY="15.125" />
-          <ConnectorPoint PointX="10.208333333333334" PointY="15.125" />
-          <ConnectorPoint PointX="11.25" PointY="15.125" />
+          <ConnectorPoint PointX="8" PointY="15.375" />
+          <ConnectorPoint PointX="11.25" PointY="15.375" />
           <ConnectorPoint PointX="11.25" PointY="14.114889322916667" />
         </AssociationConnector>
         <AssociationConnector Association="AutoRentModel.FK_InsuaranceAgency_City" ManuallyRouted="false">
@@ -2141,9 +2056,8 @@
           <ConnectorPoint PointX="3" PointY="27.432444661458334" />
         </AssociationConnector>
         <AssociationConnector Association="AutoRentModel.FK_Order_Customer" ManuallyRouted="false">
-          <ConnectorPoint PointX="7.5" PointY="8.2499995000000013" />
-          <ConnectorPoint PointX="9" PointY="8.2499995000000013" />
-          <ConnectorPoint PointX="9" PointY="9.5" />
+          <ConnectorPoint PointX="7.5" PointY="10.153595377604166" />
+          <ConnectorPoint PointX="8.25" PointY="10.153595377604166" />
         </AssociationConnector>
         <AssociationConnector Association="AutoRentModel.FK_OrdinaryDamage_Damage" ManuallyRouted="false">
           <ConnectorPoint PointX="12" PointY="9.1439925130208337" />
@@ -2158,13 +2072,13 @@
         </AssociationConnector>
         <AssociationConnector Association="AutoRentModel.FK_Order_DepartmentPickup" ManuallyRouted="false">
           <ConnectorPoint PointX="3.75" PointY="13.25" />
-          <ConnectorPoint PointX="3.75" PointY="10.591095377604166" />
-          <ConnectorPoint PointX="8.25" PointY="10.591095377604166" />
+          <ConnectorPoint PointX="3.75" PointY="11.216095377604166" />
+          <ConnectorPoint PointX="8.25" PointY="11.216095377604166" />
         </AssociationConnector>
         <AssociationConnector Association="AutoRentModel.FK_Order_DepartmentRetrn" ManuallyRouted="false">
           <ConnectorPoint PointX="4.1562525" PointY="13.25" />
-          <ConnectorPoint PointX="4.1562525" PointY="11.108050188802077" />
-          <ConnectorPoint PointX="8.25" PointY="11.108050188802077" />
+          <ConnectorPoint PointX="4.1562525" PointY="11.420550188802077" />
+          <ConnectorPoint PointX="8.25" PointY="11.420550188802077" />
         </AssociationConnector>
         <AssociationConnector Association="AutoRentModel.FK_EvacuationOrder_Order" ManuallyRouted="false">
           <ConnectorPoint PointX="9.75" PointY="12.865102539062498" />
@@ -2173,44 +2087,42 @@
           <ConnectorPoint PointX="10.5" PointY="12.865102539062498" />
         </AssociationConnector>
         <AssociationConnector Association="AutoRentModel.FK_Insuarance_InsuaranceAgency" ManuallyRouted="false">
-          <ConnectorPoint PointX="4.5" PointY="18.115143229166666" />
-          <ConnectorPoint PointX="5.25" PointY="18.115143229166666" />
+          <ConnectorPoint PointX="4.5" PointY="18.115143229166669" />
+          <ConnectorPoint PointX="5.25" PointY="18.115143229166669" />
         </AssociationConnector>
         <AssociationConnector Association="AutoRentModel.FK_Model_Make" ManuallyRouted="false">
-          <ConnectorPoint PointX="7.5" PointY="28.422841796875" />
-          <ConnectorPoint PointX="8.25" PointY="28.422841796875" />
+          <ConnectorPoint PointX="7.5" PointY="28.047841796875" />
+          <ConnectorPoint PointX="8.25" PointY="28.047841796875" />
         </AssociationConnector>
         <AssociationConnector Association="AutoRentModel.FK_SupplyOrder_Model" ManuallyRouted="false">
-          <ConnectorPoint PointX="9.0312525" PointY="26.625" />
+          <ConnectorPoint PointX="9.0312525" PointY="26.375" />
           <ConnectorPoint PointX="9.0312525" PointY="24.307444661458334" />
           <ConnectorPoint PointX="7.958333333333333" PointY="24.307444661458334" />
           <ConnectorPoint PointX="7.791666666666667" PointY="24.307444661458334" />
           <ConnectorPoint PointX="6.75" PointY="24.307444661458334" />
         </AssociationConnector>
         <AssociationConnector Association="AutoRentModel.FK_PurchaseOrder_Purchaser" ManuallyRouted="false">
-          <ConnectorPoint PointX="4.5" PointY="21.03125" />
-          <ConnectorPoint PointX="7.791666666666667" PointY="21.03125" />
-          <ConnectorPoint PointX="7.958333333333333" PointY="21.03125" />
-          <ConnectorPoint PointX="10.760414166666665" PointY="21.03125" />
-          <ConnectorPoint PointX="10.927080833333333" PointY="21.03125" />
-          <ConnectorPoint PointX="11.166666666666666" PointY="21.03125" />
-          <ConnectorPoint PointX="11.333333333333334" PointY="21.03125" />
-          <ConnectorPoint PointX="11.572919166666667" PointY="21.03125" />
-          <ConnectorPoint PointX="11.739585833333335" PointY="21.03125" />
-          <ConnectorPoint PointX="11.776045416666667" PointY="21.03125" />
-          <ConnectorPoint PointX="11.942712083333335" PointY="21.03125" />
-          <ConnectorPoint PointX="12.75" PointY="21.03125" />
+          <ConnectorPoint PointX="4.5" PointY="21.480646972656249" />
+          <ConnectorPoint PointX="7.791666666666667" PointY="21.480646972656249" />
+          <ConnectorPoint PointX="7.958333333333333" PointY="21.480646972656249" />
+          <ConnectorPoint PointX="10.760414166666665" PointY="21.480646972656249" />
+          <ConnectorPoint PointX="10.927080833333333" PointY="21.480646972656249" />
+          <ConnectorPoint PointX="11.166666666666666" PointY="21.480646972656249" />
+          <ConnectorPoint PointX="11.333333333333334" PointY="21.480646972656249" />
+          <ConnectorPoint PointX="11.572919166666667" PointY="21.480646972656249" />
+          <ConnectorPoint PointX="11.739585833333335" PointY="21.480646972656249" />
+          <ConnectorPoint PointX="12.75" PointY="21.480646972656249" />
         </AssociationConnector>
         <AssociationConnector Association="AutoRentModel.FK_Repair_TechnicalService" ManuallyRouted="false">
-          <ConnectorPoint PointX="4.5" PointY="26.40625" />
-          <ConnectorPoint PointX="7.947916666666667" PointY="26.40625" />
-          <ConnectorPoint PointX="8.1145833333333339" PointY="26.40625" />
-          <ConnectorPoint PointX="8.9479191666666669" PointY="26.40625" />
-          <ConnectorPoint PointX="9.1145858333333347" PointY="26.40625" />
-          <ConnectorPoint PointX="10.760414166666665" PointY="26.40625" />
-          <ConnectorPoint PointX="10.927080833333333" PointY="26.40625" />
-          <ConnectorPoint PointX="16.5" PointY="26.40625" />
-          <ConnectorPoint PointX="16.5" PointY="23.499492187499996" />
+          <ConnectorPoint PointX="4.5" PointY="26.28125" />
+          <ConnectorPoint PointX="8.0729166666666661" PointY="26.28125" />
+          <ConnectorPoint PointX="8.2395833333333339" PointY="26.28125" />
+          <ConnectorPoint PointX="8.9479191666666669" PointY="26.28125" />
+          <ConnectorPoint PointX="9.1145858333333347" PointY="26.28125" />
+          <ConnectorPoint PointX="11.166666666666666" PointY="26.28125" />
+          <ConnectorPoint PointX="11.333333333333334" PointY="26.28125" />
+          <ConnectorPoint PointX="16.5" PointY="26.28125" />
+          <ConnectorPoint PointX="16.5" PointY="23.624492187499996" />
         </AssociationConnector>
         <AssociationConnector Association="AutoRentModel.FK_SupplyOrder_Supplier" ManuallyRouted="false">
           <ConnectorPoint PointX="4.5" PointY="24.307444661458334" />
