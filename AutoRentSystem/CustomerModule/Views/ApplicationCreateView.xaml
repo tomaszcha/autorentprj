@@ -22,27 +22,30 @@
             <Setter Property="HorizontalAlignment" Value="Left"/>
             <Setter Property="VerticalAlignment" Value="Center"/>
             <Setter Property="Height" Value="25"/>
-            <Setter Property="Width" Value="250"/>
+            <Setter Property="Width" Value="200"/>
+            <Setter Property="Margin" Value="5"/>
         </Style>
         <Style x:Key="STextBox" TargetType="TextBox">
             <Setter Property="VerticalAlignment" Value="Center"/>
             <Setter Property="HorizontalAlignment" Value="Left"/>
-            <Setter Property="Width" Value="250"/>
+            <Setter Property="Width" Value="200"/>
+            <Setter Property="Margin" Value="5"/>
         </Style>
         <Style x:Key="MenuButton" TargetType="Button">
                 <Setter Property="Background" Value="Red"/>
                 <Setter Property="Width" Value="auto"/>
-                <!--<Setter Property="MinWidth" Value="150"/>-->
-                <!--<Setter Property="Margin" Value="3,0,3,0"/>-->
                 <Setter Property="Opacity" Value="0.6"/>
                 <Setter Property="Foreground" Value="Black"/>
                 <Setter Property="FontWeight" Value="ExtraBlack"/>
                 <Setter Property="FontSize" Value="13"/>
+                <Setter Property="Margin" Value="5"/>
         </Style>
 
         </UserControl.Resources>
         <Grid x:Name="LayoutRoot" Opacity="0.8" Background="White" Margin="5">
         <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
             <RowDefinition Height="Auto"/>
             <RowDefinition Height="Auto"/>
             <RowDefinition Height="Auto"/>
@@ -68,33 +71,35 @@
             <ColumnDefinition Width="Auto" />
             <ColumnDefinition Width="253*" />
         </Grid.ColumnDefinitions>
-        <TextBlock Grid.Column="0" Grid.Row="0" Text="Pickup: " Style="{StaticResource SLabelTitle}" Margin="5" />
-        <TextBlock Grid.Column="0" Grid.Row="1" Text="City: " Style="{StaticResource SLabel}" Margin="5" />
-        <TextBlock Grid.Column="0" Grid.Row="2" Text="Department: " Style="{StaticResource SLabel}" Margin="5" />
-        <ComboBox Name="cmbBx_PickupCity" Grid.Column="1" Grid.Row="1" Style="{StaticResource SComboBox}" MinWidth="150" MaxWidth="200" Margin="5" Width="200" />
-        <ComboBox Name="cmbBx_PickupDept" Grid.Column="1" Grid.Row="2" Style="{StaticResource SComboBox}" MinWidth="150" MaxWidth="200" Margin="5" Width="200" />
-        <TextBlock Grid.Column="0" Grid.Row="3" Text="Return: " Style="{StaticResource SLabelTitle}" Margin="5" />
-        <TextBlock Grid.Column="0" Grid.Row="4" Text="City: " Style="{StaticResource SLabel}" Margin="5" />
-        <TextBlock Grid.Column="0" Grid.Row="5" Text="Department: " Style="{StaticResource SLabel}" Margin="5" />
-        <ComboBox Name="cmbBx_ReturnCity" Grid.Column="1" Grid.Row="4" Style="{StaticResource SComboBox}" MinWidth="150" MaxWidth="200" Margin="5" Width="200" />
-        <ComboBox Name="cmbBx_ReturnDept" Grid.Column="1" Grid.Row="5" Style="{StaticResource SComboBox}" MinWidth="150" MaxWidth="200" Margin="5" Width="200" />
-        <TextBlock Grid.Column="0" Grid.Row="6" Text="Period: " Style="{StaticResource SLabelTitle}" Margin="5" />
-        <TextBlock Grid.Column="0" Grid.Row="7" Text="Pickup: " Style="{StaticResource SLabel}" Margin="5" />
+        <TextBlock Grid.Column="0" Grid.Row="0" Text="Pickup: " Style="{StaticResource SLabelTitle}"/>
+        <TextBlock Grid.Column="0" Grid.Row="1" Text="City: " Style="{StaticResource SLabel}"/>
+        <TextBlock Grid.Column="0" Grid.Row="2" Text="Department: " Style="{StaticResource SLabel}"/>
+        <ComboBox Name="cmbBx_PickupCity" Grid.Column="1" Grid.Row="1" Style="{StaticResource SComboBox}"/>
+        <ComboBox Name="cmbBx_PickupDept" Grid.Column="1" Grid.Row="2" Style="{StaticResource SComboBox}"/>
+        <TextBlock Grid.Column="0" Grid.Row="3" Text="Return: " Style="{StaticResource SLabelTitle}"/>
+        <TextBlock Grid.Column="0" Grid.Row="4" Text="City: " Style="{StaticResource SLabel}"/>
+        <TextBlock Grid.Column="0" Grid.Row="5" Text="Department: " Style="{StaticResource SLabel}"/>
+        <ComboBox Name="cmbBx_ReturnCity" Grid.Column="1" Grid.Row="4" Style="{StaticResource SComboBox}" />
+        <ComboBox Name="cmbBx_ReturnDept" Grid.Column="1" Grid.Row="5" Style="{StaticResource SComboBox}" />
+        <TextBlock Grid.Column="0" Grid.Row="6" Text="Period: " Style="{StaticResource SLabelTitle}"/>
+        <TextBlock Grid.Column="0" Grid.Row="7" Text="Pickup: " Style="{StaticResource SLabel}"/>
         <sdk:DatePicker Grid.Column="1" Grid.Row="7" Margin="5" Width="200" />
         <sdk:DatePicker Grid.Column="1" Grid.Row="8" Margin="5" Width="200" />
-        <TextBlock Grid.Column="0" Grid.Row="8" Text="Return: " Style="{StaticResource SLabel}" Margin="5" />
-        <TextBlock Grid.Column="0" Grid.Row="9" Text="Personal data: " Style="{StaticResource SLabelTitle}" Margin="5" />
-        <TextBlock Grid.Column="0" Grid.Row="10" Text="First name: " Style="{StaticResource SLabel}" Margin="5" />
-        <TextBox Grid.Column="1" Grid.Row="10" Style="{StaticResource STextBox}" MinWidth="150" MaxWidth="200" Margin="5" Width="200" />
-        <TextBlock Grid.Column="0" Grid.Row="11" Text="Last name: " Style="{StaticResource SLabel}" Margin="5" />
-        <TextBox Grid.Column="1" Grid.Row="11" Style="{StaticResource STextBox}" MinWidth="150" MaxWidth="200" Margin="5" Width="200" />
-        <TextBlock Grid.Column="0" Grid.Row="12" Text="Phone: " Style="{StaticResource SLabel}" Margin="5" />
-        <TextBox Grid.Column="1" Grid.Row="12" Style="{StaticResource STextBox}" MinWidth="150" MaxWidth="200" Margin="5" Width="200" />
-        <TextBlock Grid.Column="0" Grid.Row="13" Text="email: " Style="{StaticResource SLabel}" Margin="5" />
-        <TextBox Grid.Column="1" Grid.Row="13" Style="{StaticResource STextBox}" MinWidth="150" MaxWidth="200" Margin="5" Width="200" />
-        <TextBlock Grid.Column="0" Grid.Row="14" Text="Selected car: " Style="{StaticResource SLabelTitle}" Margin="5" />
-        <TextBox Grid.Column="1" Grid.Row="14" Style="{StaticResource STextBox}" MinWidth="150" MaxWidth="200" Margin="5" Width="200" />
-        <Button Grid.Column="1" Grid.Row="15" Content="Send" Style="{StaticResource MenuButton}" Margin="5" Width="200" />
-        <Rectangle Grid.Column="1" Grid.Row="16" Grid.ColumnSpan="2" Margin="0,0,-9,0" />
+        <TextBlock Grid.Column="0" Grid.Row="8" Text="Return: " Style="{StaticResource SLabel}"/>
+        <TextBlock Grid.Column="0" Grid.Row="9" Text="Personal data: " Style="{StaticResource SLabelTitle}"/>
+        <TextBlock Grid.Column="0" Grid.Row="10" Text="First name: " Style="{StaticResource SLabel}"/>
+        <TextBox Grid.Column="1" Grid.Row="10" Style="{StaticResource STextBox}"/>
+        <TextBlock Grid.Column="0" Grid.Row="11" Text="Last name: " Style="{StaticResource SLabel}"/>
+        <TextBox Grid.Column="1" Grid.Row="11" Style="{StaticResource STextBox}" />
+        <TextBlock Grid.Column="0" Grid.Row="12" Text="Phone: " Style="{StaticResource SLabel}"/>
+        <TextBox Grid.Column="1" Grid.Row="12" Style="{StaticResource STextBox}" />
+        <TextBlock Grid.Column="0" Grid.Row="13" Text="email: " Style="{StaticResource SLabel}" />
+        <TextBox Grid.Column="1" Grid.Row="13" Style="{StaticResource STextBox}"/>
+        <TextBlock Grid.Column="0" Grid.Row="14" Text="Selected car: " Style="{StaticResource SLabelTitle}" />
+        <TextBox Grid.Column="1" Grid.Row="14" Style="{StaticResource STextBox}"/>
+        <TextBlock Grid.Column="0" Grid.Row="15" Text="Preference: " Style="{StaticResource SLabel}"/>
+        <TextBox Grid.Column="1" Grid.Row="15" Grid.RowSpan="2" Style="{StaticResource STextBox}" />
+        <Button Grid.Column="1" Grid.Row="17" Content="Send" Style="{StaticResource MenuButton}" Margin="5" Width="200" />
+        <Rectangle Grid.Column="1" Grid.Row="18" Grid.ColumnSpan="2" Margin="0,0,-9,0" />
     </Grid>
 </UserControl>
