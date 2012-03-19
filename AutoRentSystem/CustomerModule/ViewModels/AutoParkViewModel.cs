@@ -3,10 +3,10 @@ using System.Linq;
 using ModulesInfrastructure.ViewModels;
 using ModelMock;
 using System.Collections.ObjectModel;
-using Microsoft.Practices.Prism.Commands;
 using DBMock;
 using System.Collections.Generic;
 using System.Windows.Input;
+using Microsoft.Practices.Prism.Commands;
 
 namespace CustomerModule.ViewModels
 {
@@ -17,7 +17,11 @@ namespace CustomerModule.ViewModels
         public AutoParkViewModel()
         {
             _models = new ObservableCollection<ModelViewModel>();
-            GetListAction(0);
+            _categories = new List<CategoryViewModel>();
+            _number = 1;
+            GetListPrevAction();
+            GetListOfCategories();
+            _countOfDataInList = new Models().List.Count;
             //_models.CollectionChanged+=OnCollectionChanged;
         }
 
@@ -32,15 +36,28 @@ namespace CustomerModule.ViewModels
         /// </summary>
         public ObservableCollection<ModelViewModel> Models { get { return _models; } }
 
+        /// <summary>
+        /// List of categories
+        /// </summary>
+        public List<CategoryViewModel> Categoreis { get { return _categories; } }
+
         #endregion public
 
         #region private
 
         private  ObservableCollection<ModelViewModel> _models;
 
-        private DelegateCommand<int> _getListCommand;
+        private List<CategoryViewModel> _categories;
 
-        private const int _countOfModelsOnList = 10;
+        private DelegateCommand _getListNextCommand;
+
+        private DelegateCommand _getListPrevCommand;
+
+        private const int _countOfModelsOnList = 3;
+
+        private int _number = 0;
+
+        private int _countOfDataInList;
 
         #endregion private
 
@@ -51,15 +68,27 @@ namespace CustomerModule.ViewModels
         /// <summary>
         /// Get list of models
         /// </summary>
-        public ICommand GetListCommand
+        public ICommand GetListNextCommand
         {
             get 
             {
-                if (_getListCommand == null)
+                if (_getListNextCommand == null)
                 {
-                    _getListCommand = new DelegateCommand<int>(GetListAction);
+                    _getListNextCommand = new DelegateCommand(GetListNextAction, CanGetNextListAction);
                 }
-                return _getListCommand;
+                return _getListNextCommand;
+            }
+        }
+
+        public ICommand GetListPrevtCommand
+        {
+            get
+            {
+                if (_getListPrevCommand == null)
+                {
+                    _getListPrevCommand = new DelegateCommand(GetListPrevAction, CanGetPrevtListAction);
+                }
+                return _getListPrevCommand;
             }
         }
 
@@ -67,11 +96,37 @@ namespace CustomerModule.ViewModels
 
         #region Private methods
 
-        private void GetListAction(int number)
+        private void GetListNextAction()
+        {
+            _number++;
+            GetListAction();
+        }
+
+        private bool CanGetNextListAction()
+        {
+            bool res = true;
+            if ((_number + 1) * _countOfModelsOnList == _countOfDataInList) res = false;
+            return res;
+        }
+
+        private void GetListPrevAction()
+        {
+            _number--;
+            GetListAction();
+        }
+
+        private bool CanGetPrevtListAction()
+        {
+            bool res = true;
+            if (_number==0) res = false;
+            return res;
+        }
+
+        private void GetListAction()
         {
             _models.Clear();
-            List<ModelViewModel> list = (from model in new Models().List
-                        select new ModelViewModel(model)).ToList();
+            List<ModelViewModel> list = (from model in new Models().List.GetRange(_number * _countOfModelsOnList, _countOfModelsOnList)
+                                         select new ModelViewModel(model)).ToList();
             foreach (ModelViewModel model in list)
             {
                 _models.Add(model);
@@ -80,6 +135,13 @@ namespace CustomerModule.ViewModels
             //{
             //    model.PropertyChanged += OnModelViewModelPropertyChanged;
             //}
+        }
+
+        private void GetListOfCategories()
+        {
+            _categories.Clear();
+            _categories = (from category in new Categories().List
+                                            select new CategoryViewModel(category)).ToList();
         }
 
         #endregion Private methods
