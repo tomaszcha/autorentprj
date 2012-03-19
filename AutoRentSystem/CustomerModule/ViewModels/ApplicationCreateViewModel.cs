@@ -24,7 +24,11 @@ namespace CustomerModule.ViewModels
         /// <summary>
         /// Unique identifier of the application
         /// </summary>
-        public int Id { get; set; }   
+        public int Id 
+        {
+            get { return _id; }
+            private set { _id = value; }
+        }   
 
         /// <summary>
         /// A date of the application creation
@@ -54,46 +58,66 @@ namespace CustomerModule.ViewModels
         /// <summary>
         /// Auto model
         /// </summary>
-        //public Model Model { get; set; }
+        public ModelViewModel Model { get; set; }
 
         /// <summary>
         /// Expected date to pickup the auto
         /// </summary>
         public DateTime PickupDate { get; set; }
 
-
         /// <summary>
         /// Expected department to pickup the auto
         /// </summary>
-        //public Department PickupDepartment { get; set; }
-
+        public DepartmentViewModel PickupDepartment { get; set; }  
 
         /// <summary>
         /// Expected date to return the auto
         /// </summary>
-        public DateTime ReturnDate { get; set; }
-
+        public DateTime ReturnDate { get; set; } 
 
         /// <summary>
         /// Expected department to return the auto
         /// </summary>
-        //public Department ReturnDepartment { get; set; }
-
+        public DepartmentViewModel ReturnDepartment { get; set; }  
 
         /// <summary>
         /// Customer preference about the auto (e.g., color)
         /// </summary>
-        public string Preference { get; set; }
-
+        public string Preference { get; set; }  
 
         /// <summary>
         /// Status of the application
         /// </summary>
-        public string Status { get; set; }
+        public string Status { get; set; } 
 
         #endregion public
 
-        #region privare
+        #region private
+
+        private int _id { get; set; }
+
+        private DateTime _creationDate { get; set; }
+
+        private string _firstName { get; set; }
+
+        private string _lastName { get; set; }
+
+        private string _phone { get; set; }
+
+        private string _email { get; set; }
+
+        private ModelViewModel _model { get; set; }
+
+        private DateTime _pickupDate { get; set; }
+
+        private DateTime _returnDate { get; set; }
+
+        private DepartmentViewModel _returnDepartment { get; set; }
+
+        private string _preference { get; set; }
+
+        private string _status { get; set; } 
+
         #endregion private
 
         #endregion Fields
