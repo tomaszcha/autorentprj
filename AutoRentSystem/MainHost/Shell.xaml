@@ -37,10 +37,10 @@
                     <RowDefinition Height="Auto" />
                     <RowDefinition Height="418*" />
                 </Grid.RowDefinitions>
-                <ContentControl Name="MenuRegion" prism:RegionManager.RegionName="MenuRegion" Grid.ColumnSpan="2" Margin="5"/>
-                <ContentControl Name="LeftRegion" prism:RegionManager.RegionName="LeftRegion" Grid.Row="1" Margin="5" />
-                <ContentControl Name="RightRegion" prism:RegionManager.RegionName="RightRegion" Grid.Column="1" Grid.Row="1" Margin="5" />
-                <ContentControl Name="FooterRegion" prism:RegionManager.RegionName="FooterRegion" Grid.Row="2" Grid.ColumnSpan="2" VerticalAlignment="Bottom" Margin="5" />
+                <ContentControl Name="MenuRegion" prism:RegionManager.RegionName="MenuRegion" Grid.ColumnSpan="2" Margin="5"  HorizontalAlignment="Center"/>
+                <ContentControl Name="LeftRegion" prism:RegionManager.RegionName="LeftRegion" Grid.Row="1" Margin="5"  HorizontalAlignment="Center"/>
+                <ContentControl Name="RightRegion" prism:RegionManager.RegionName="RightRegion" Grid.Column="1" Grid.Row="1" Margin="5"  HorizontalAlignment="Center"/>
+                <ContentControl Name="FooterRegion" prism:RegionManager.RegionName="FooterRegion" Grid.Row="2" Grid.ColumnSpan="2" VerticalAlignment="Bottom" Margin="5"  HorizontalAlignment="Center"/>
                 <Grid.Background>
                     <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
                         <GradientStop Color="Gray" Offset="0.186" />

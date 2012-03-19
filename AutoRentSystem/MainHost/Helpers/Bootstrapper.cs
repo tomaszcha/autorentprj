@@ -32,7 +32,6 @@ namespace MainHost.Helpers
 
         protected override DependencyObject CreateShell()
         {
-            //return Container.Resolve<Shell>();
             Shell shell = new Shell();
             return shell;
         }
@@ -45,7 +44,7 @@ namespace MainHost.Helpers
             //register shell in container
             Container.RegisterInstance((IShellPage)Shell);
 
-            //set the delegateyhat is used to the current container retrieve
+            //set the delegate that is used to the current container retrieve
             ServiceLocator.SetLocatorProvider(() => new UnityServiceLocator(Container));
 
             UIElement mainPage = (UIElement)Shell;

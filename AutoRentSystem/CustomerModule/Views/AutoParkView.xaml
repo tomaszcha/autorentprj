@@ -4,12 +4,26 @@
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d" xmlns:Resources="clr-namespace:CustomerModule.Properties"
-             d:DesignHeight="300" d:DesignWidth="500" Margin="5">
+             d:DesignHeight="566" d:DesignWidth="497" Margin="5">
     <UserControl.Resources>
         <Resources:Resources x:Key="Res"/>
+        <Style x:Key="SComboBox" TargetType="ComboBox">
+            <Setter Property="HorizontalAlignment" Value="Left"/>
+            <Setter Property="VerticalAlignment" Value="Center"/>
+            <Setter Property="Height" Value="25"/>
+            <Setter Property="Width" Value="200"/>
+            <Setter Property="Margin" Value="5"/>
+        </Style>
+        
     </UserControl.Resources>
-    <Grid x:Name="LayoutRoot" Background="White">
-       <ListBox x:Name="myList" BorderThickness="1" ItemsSource="{Binding Models}" Margin="5">
+    <Grid x:Name="LayoutRoot" Background="White" Margin="5">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="40"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="30"/>
+        </Grid.RowDefinitions>
+        <ComboBox ItemsSource="{Binding Categoreis}" DisplayMemberPath = "Name" Style="{StaticResource SComboBox}"/>
+        <ListBox x:Name="myList" BorderThickness="1" ItemsSource="{Binding Models}" Margin="5" Grid.Row="1">
        <ListBox.ItemTemplate>
                 <DataTemplate>
                     <Grid>
@@ -19,13 +33,14 @@
                             <GradientStop Color="LightSteelBlue" Offset="1"/>
                         </LinearGradientBrush>
                     </Grid.Background>
-                    <Grid.ColumnDefinitions>
-                        <ColumnDefinition />
-                        <ColumnDefinition Width="*"/>                       
-                    </Grid.ColumnDefinitions>
-                    <StackPanel VerticalAlignment="Stretch">
-                        <StackPanel Orientation="Horizontal">                            
-                            <TextBlock FontSize="14" Text="{Binding Name}"/>                            
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="*"/>
+                        </Grid.ColumnDefinitions>
+                    <StackPanel VerticalAlignment="Stretch" Grid.Column="0">
+                            <StackPanel Orientation="Horizontal"  Width="300">
+                                <TextBlock FontSize="14" Text="{Binding Name}"/>                            
                             <TextBlock FontSize="14" Text="{Binding Make.Name}" />
                         </StackPanel>
                         <StackPanel Orientation="Horizontal" Margin="0,5,0,0">
@@ -48,11 +63,14 @@
                             <TextBlock FontSize="12" Text="{Binding Deposit, Source={StaticResource Res}}"/>
                             <TextBlock FontSize="12" Margin="5,0,0,0" Text="{Binding Deposit}" />
                         </StackPanel>
-                    </StackPanel>                    
-                    <Image Width="200" Height="150" Source="/CustomerModule;component/Images/Mazda.jpg" Grid.Column="1" HorizontalAlignment="Right" />
-                </Grid>
+                    </StackPanel>
+                    <Image Width="200" Height="140" Source="/CustomerModule;component/Images/Mazda.jpg" Grid.Column="1" HorizontalAlignment="Right" />
+                    <Button Grid.Column="2" Content="Select" Height="40"/>
+                    </Grid>
                 </DataTemplate>
             </ListBox.ItemTemplate>
         </ListBox>
+        <Button Grid.Row="2" Content="Prev" HorizontalAlignment="Left" Margin="20, 2, 0, 2" Command="{Binding GetListPrevtCommand}"/>
+        <Button Grid.Row="2" Content="Next" HorizontalAlignment="Right" Margin="0, 2, 20, 2" Command="{Binding GetListNextCommand}"/>
     </Grid>
 </UserControl>

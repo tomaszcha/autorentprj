@@ -8,11 +8,23 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Animation;
 using System.Windows.Shapes;
+using ModelMock;
 
 namespace ModulesInfrastructure.ViewModels
 {
     public class CategoryViewModel : ViewModelBase
     {
+        #region Constructor
+
+        public CategoryViewModel(Category category)
+        {
+            _deposit = category.Deposit;
+            _id = category.Id;
+            _name = category.Name;
+        }
+
+        #endregion Constructor
+
         #region Data
 
         #region public
