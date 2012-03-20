@@ -61,8 +61,8 @@
                                 <TextBlock FontSize="12" Text="{Binding KmRate}" Margin="5,0,0,0" />
                             </StackPanel>
                             <StackPanel Orientation="Horizontal">
-                                <TextBlock FontSize="12" Text="{Binding HourRate, Source={StaticResource Res}}" />
-                                <TextBlock FontSize="12" Text="{Binding HourRate}" />
+                                <TextBlock FontSize="12" Text="{Binding DayRate, Source={StaticResource Res}}" />
+                                <TextBlock FontSize="12" Text="{Binding DayRate}" />
                             </StackPanel>
                             <StackPanel Orientation="Horizontal">
                                 <TextBlock FontSize="12" Text="{Binding Deposit, Source={StaticResource Res}}" />
