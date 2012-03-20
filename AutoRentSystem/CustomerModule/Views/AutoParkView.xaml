@@ -19,11 +19,12 @@
         <Grid.RowDefinitions>
             <RowDefinition Height="50" />
             <RowDefinition Height="*" />
+            <RowDefinition Height="30" />
         </Grid.RowDefinitions>
-        <ComboBox ItemsSource="{Binding Categoreis}" DisplayMemberPath = "Name" Style="{StaticResource SComboBox}" Grid.Row="0"/>
-        <sdk:DataGrid x:Name="myList" CanUserReorderColumns="False" CanUserSortColumns="False" ItemsSource="{Binding Models}" Grid.Row="1" 
+        <ComboBox Style="{StaticResource SComboBox}" Grid.Row="0"/>
+        <sdk:DataGrid x:Name="carList" CanUserReorderColumns="False" CanUserSortColumns="False" ItemsSource="{Binding Models}" Grid.Row="1" 
                            RowDetailsVisibilityMode="VisibleWhenSelected" HorizontalAlignment="Center" ScrollViewer.VerticalScrollBarVisibility="Auto" 
-                           AutoGenerateColumns="False" VerticalAlignment="Stretch" MinWidth="350" MaxWidth="700" >
+                           AutoGenerateColumns="False" VerticalAlignment="Stretch" MinWidth="350" >
             <sdk:DataGrid.Columns>
                 <sdk:DataGridTextColumn Width="0.3*" Header="Make" Binding="{Binding Make.Name}"/>
                 <sdk:DataGridTextColumn Width="0.3*" Header="Model" Binding="{Binding Name}"/>
@@ -78,65 +79,11 @@
                         </Grid>
                     </Border>
                 </DataTemplate>
-            </sdk:DataGrid.RowDetailsTemplate>
+            </sdk:DataGrid.RowDetailsTemplate>            
         </sdk:DataGrid>
-    </Grid>
-    <!---
-    <Grid x:Name="LayoutRoot" Background="White" Margin="5">        
-        <Grid.RowDefinitions>
-            <RowDefinition Height="40"/>
-            <RowDefinition Height="*"/>
-            <RowDefinition Height="30"/>
-        </Grid.RowDefinitions>
-        <ComboBox ItemsSource="{Binding Categoreis}" DisplayMemberPath = "Name" Style="{StaticResource SComboBox}"/>
-        <ListBox x:Name="myList" BorderThickness="1" ItemsSource="{Binding Models}" Margin="5" Grid.Row="1">
-            <ListBox.ItemTemplate>
-                <DataTemplate>
-                    <Grid>
-                        <Grid.Background>
-                            <LinearGradientBrush StartPoint="0,0" EndPoint="0,1">
-                                <GradientStop Color="White" Offset="0"/>
-                                <GradientStop Color="LightSteelBlue" Offset="1"/>
-                            </LinearGradientBrush>
-                        </Grid.Background>
-                        <Grid.ColumnDefinitions>
-                            <ColumnDefinition Width="*"/>
-                            <ColumnDefinition Width="*"/>
-                            <ColumnDefinition Width="*"/>
-                        </Grid.ColumnDefinitions>
-                        <Image Width="200" Height="140" Source="/CustomerModule;component/Images/Mazda.jpg" Grid.Column="0" HorizontalAlignment="Right" />
-                        <StackPanel VerticalAlignment="Stretch" Grid.Column="1">
-                            <StackPanel Orientation="Horizontal"  Width="500">
-                                <TextBlock FontSize="14" Text="{Binding Name}"/>
-                                <TextBlock FontSize="14" Text="{Binding Make.Name}" />
-                            </StackPanel>
-                            <StackPanel Orientation="Horizontal" Margin="0,5,0,0">
-                                <TextBlock FontSize="12" Text="{Binding Seats, Source={StaticResource Res}}" />
-                                <TextBlock FontSize="12" Text="{Binding Seats}" />
-                            </StackPanel>
-                            <StackPanel Orientation="Horizontal" Margin="0,5,0,0">
-                                <TextBlock FontSize="12" Text="{Binding EngineCapacity, Source={StaticResource Res}}" />
-                                <TextBlock FontSize="12" Margin="5,0,0,0" Text="{Binding EngineCapacity}" />
-                            </StackPanel>
-                            <StackPanel Orientation="Horizontal" Margin="0,5,0,0">
-                                <TextBlock FontSize="12" Text="{Binding KmRate, Source={StaticResource Res}}"/>
-                                <TextBlock FontSize="12" Margin="5,0,0,0" Text="{Binding KmRate}" />
-                            </StackPanel>
-                            <StackPanel Orientation="Horizontal" Margin="0,5,0,0">
-                                <TextBlock FontSize="12" Text="{Binding HourRate, Source={StaticResource Res}}"/>
-                                <TextBlock FontSize="12" Margin="5,0,0,0" Text="{Binding HourRate}" />
-                            </StackPanel>
-                            <StackPanel Orientation="Horizontal" Margin="0,5,0,0">
-                                <TextBlock FontSize="12" Text="{Binding Deposit, Source={StaticResource Res}}"/>
-                                <TextBlock FontSize="12" Margin="5,0,0,0" Text="{Binding Deposit}" />
-                            </StackPanel>
-                        </StackPanel>
-                        <Button Grid.Column="2" Content="Select" Height="40" Width="60"/>
-                    </Grid>
-                </DataTemplate>
-            </ListBox.ItemTemplate>
-        </ListBox>
-        <Button Grid.Row="2" Content="Prev" HorizontalAlignment="Left" Margin="20, 2, 0, 2" Command="{Binding GetListPrevtCommand}"/>
-        <Button Grid.Row="2" Content="Next" HorizontalAlignment="Right" Margin="0, 2, 20, 2" Command="{Binding GetListNextCommand}"/>
-    </Grid>-->
+        <sdk:DataPager x:Name="pagerAuto" 
+                       NumericButtonCount="3" Grid.Row="2" HorizontalContentAlignment="Center" VerticalAlignment="Bottom"
+                       PageSize="10" AutoEllipsis="True" DisplayMode="FirstLastPreviousNextNumeric"
+                       IsTotalItemCountFixed="True" Source="{Binding Path=ItemsSource, ElementName=carList}"></sdk:DataPager>     
+    </Grid>    
 </UserControl>
