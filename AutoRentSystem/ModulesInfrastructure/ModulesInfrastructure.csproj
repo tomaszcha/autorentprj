@@ -64,7 +64,6 @@
     <Compile Include="ModuleBase.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ViewModels\AutoViewModel.cs" />
-    <Compile Include="ViewModels\CategoryViewModel.cs" />
     <Compile Include="ViewModels\MakeViewModel.cs" />
     <Compile Include="ViewModels\ModelViewModel.cs" />
     <Compile Include="ViewModels\ViewModelBase.cs" />
