@@ -15,6 +15,8 @@ using System.Collections.Generic;
 using System.Linq;
 using DBMock;
 using System.Collections.ObjectModel;
+using Microsoft.Practices.Prism.Events;
+using CustomerModule.Events;
 
 namespace CustomerModule.ViewModels
 {
@@ -22,8 +24,10 @@ namespace CustomerModule.ViewModels
     {
         #region Constructor
 
-        public ApplicationCreateViewModel()
+        public ApplicationCreateViewModel(IEventAggregator eventAggregator)
         {
+            this.eventAggregator = eventAggregator;
+            eventAggregator.GetEvent<SelectEvent>().Subscribe(onSelectModel);
             _cities = new ObservableCollection<CityViewModel>();
             DeptsPickup = new ObservableCollection<DepartmentViewModel>();
             DeptsReturn = new ObservableCollection<DepartmentViewModel>();
@@ -233,6 +237,7 @@ namespace CustomerModule.ViewModels
         private CityViewModel _cityReturn;
         private DepartmentViewModel _deptPickup;
         private DepartmentViewModel _deptReturn;
+        private IEventAggregator eventAggregator;
 
         private int _id { get; set; }
 
@@ -265,6 +270,11 @@ namespace CustomerModule.ViewModels
         #endregion Fields
 
         #region Methods
+
+        public void onSelectModel(ModelViewModel model)
+        {
+            Model = model;
+        }
 
         private void GetCityList()
         {
@@ -379,5 +389,7 @@ namespace CustomerModule.ViewModels
         }
 
         #endregion IDataErrorInfo members
+
+        
     }
 }
