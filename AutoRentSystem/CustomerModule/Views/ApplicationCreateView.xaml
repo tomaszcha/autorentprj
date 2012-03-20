@@ -5,7 +5,7 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     xmlns:toolkit="http://schemas.microsoft.com/winfx/2006/xaml/presentation/toolkit"
     mc:Ignorable="d" d:DesignHeight="573" d:DesignWidth="354">
-    <UserControl.Resources>
+    <UserControl.Resources>        
         <Style x:Key="SLabelTitle" TargetType="TextBlock">
             <Setter Property="FontWeight" Value="ExtraBlack"/>
             <Setter Property="FontSize" Value="13"/>
@@ -73,27 +73,27 @@
         <TextBlock Grid.Column="0" Grid.Row="0" Text="Pickup: " Style="{StaticResource SLabelTitle}"/>
         <TextBlock Grid.Column="0" Grid.Row="1" Text="City: " Style="{StaticResource SLabel}"/>
         <TextBlock Grid.Column="0" Grid.Row="2" Text="Department: " Style="{StaticResource SLabel}"/>
-        <ComboBox Name="cmbBx_PickupCity" Grid.Column="1" Grid.Row="1" Style="{StaticResource SComboBox}"/>
-        <ComboBox Name="cmbBx_PickupDept" Grid.Column="1" Grid.Row="2" Style="{StaticResource SComboBox}"/>
+        <ComboBox Name="cmbBx_PickupCity" Grid.Column="1" Grid.Row="1" Style="{StaticResource SComboBox}" ItemsSource="{Binding CitiesList}" DisplayMemberPath="Name" SelectedItem="{Binding Path=CityPickup, Mode=TwoWay}"/>
+        <ComboBox Name="cmbBx_PickupDept" Grid.Column="1" Grid.Row="2" Style="{StaticResource SComboBox}" ItemsSource="{Binding DeptsPickup}" DisplayMemberPath="Address" SelectedItem="{Binding Path=DeptPickUp, Mode=TwoWay}"/>
         <TextBlock Grid.Column="0" Grid.Row="3" Text="Return: " Style="{StaticResource SLabelTitle}"/>
         <TextBlock Grid.Column="0" Grid.Row="4" Text="City: " Style="{StaticResource SLabel}"/>
         <TextBlock Grid.Column="0" Grid.Row="5" Text="Department: " Style="{StaticResource SLabel}"/>
-        <ComboBox Name="cmbBx_ReturnCity" Grid.Column="1" Grid.Row="4" Style="{StaticResource SComboBox}" />
-        <ComboBox Name="cmbBx_ReturnDept" Grid.Column="1" Grid.Row="5" Style="{StaticResource SComboBox}" />
+        <ComboBox Name="cmbBx_ReturnCity" Grid.Column="1" Grid.Row="4" Style="{StaticResource SComboBox}" ItemsSource="{Binding CitiesList}" DisplayMemberPath="Name" SelectedItem="{Binding Path=CityReturn, Mode=TwoWay}" />
+        <ComboBox Name="cmbBx_ReturnDept" Grid.Column="1" Grid.Row="5" Style="{StaticResource SComboBox}" ItemsSource="{Binding DeptsReturn}" DisplayMemberPath="Address" SelectedItem="{Binding Path=DeptReturn, Mode=TwoWay}"/>
         <TextBlock Grid.Column="0" Grid.Row="6" Text="Period: " Style="{StaticResource SLabelTitle}"/>
         <TextBlock Grid.Column="0" Grid.Row="7" Text="Pickup: " Style="{StaticResource SLabel}"/>
-        <sdk:DatePicker Grid.Column="1" Grid.Row="7" Margin="5" Width="200" />
-        <sdk:DatePicker Grid.Column="1" Grid.Row="8" Margin="5" Width="200" />
+        <sdk:DatePicker Grid.Column="1" Grid.Row="7" Margin="5" Width="200" SelectedDate="{Binding PickupDate, Mode=TwoWay, ValidatesOnDataErrors=True}"/>
+        <sdk:DatePicker Grid.Column="1" Grid.Row="8" Margin="5" Width="200" SelectedDate="{Binding ReturnDate, Mode=TwoWay, ValidatesOnDataErrors=True}"/>
         <TextBlock Grid.Column="0" Grid.Row="8" Text="Return: " Style="{StaticResource SLabel}"/>
         <TextBlock Grid.Column="0" Grid.Row="9" Text="Personal data: " Style="{StaticResource SLabelTitle}"/>
         <TextBlock Grid.Column="0" Grid.Row="10" Text="First name: " Style="{StaticResource SLabel}"/>
-        <TextBox Grid.Column="1" Grid.Row="10" Style="{StaticResource STextBox}"/>
+        <TextBox Grid.Column="1" Grid.Row="10" Style="{StaticResource STextBox}" Text="{Binding FirstName, ValidatesOnDataErrors=True, Mode=TwoWay}"/>
         <TextBlock Grid.Column="0" Grid.Row="11" Text="Last name: " Style="{StaticResource SLabel}"/>
-        <TextBox Grid.Column="1" Grid.Row="11" Style="{StaticResource STextBox}" />
+        <TextBox Grid.Column="1" Grid.Row="11" Style="{StaticResource STextBox}" Text="{Binding LastName, ValidatesOnDataErrors=True, Mode=TwoWay}" />
         <TextBlock Grid.Column="0" Grid.Row="12" Text="Phone: " Style="{StaticResource SLabel}"/>
-        <TextBox Grid.Column="1" Grid.Row="12" Style="{StaticResource STextBox}" />
+        <TextBox Grid.Column="1" Grid.Row="12" Style="{StaticResource STextBox}" Text="{Binding Phone, ValidatesOnDataErrors=True, Mode=TwoWay}" />
         <TextBlock Grid.Column="0" Grid.Row="13" Text="email: " Style="{StaticResource SLabel}" />
-        <TextBox Grid.Column="1" Grid.Row="13" Style="{StaticResource STextBox}"/>
+        <TextBox Grid.Column="1" Grid.Row="13" Style="{StaticResource STextBox}" Text="{Binding Email, ValidatesOnDataErrors=True, Mode=TwoWay}"/>
         <TextBlock Grid.Column="0" Grid.Row="14" Text="Selected car: " Style="{StaticResource SLabelTitle}" />
         <TextBox Grid.Column="1" Grid.Row="14" Style="{StaticResource STextBox}"/>
         <TextBlock Grid.Column="0" Grid.Row="15" Text="Preference: " Style="{StaticResource SLabel}"/>
