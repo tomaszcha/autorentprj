@@ -46,6 +46,19 @@ namespace CustomerModule.ViewModels
 
         #region public
 
+        public string ModelDes
+        {
+            get
+            {
+                return _modelDes;
+            }
+            set
+            {
+                _modelDes = Model.Name;
+                OnPropertyChanged("ModelDes");
+            }
+        }
+
         public ObservableCollection<CityViewModel> CitiesList { get { return _cities; } }
         public ObservableCollection<DepartmentViewModel> DeptsPickup { get; set; }
         public ObservableCollection<DepartmentViewModel> DeptsReturn { get; set; }
@@ -232,6 +245,8 @@ namespace CustomerModule.ViewModels
 
         #region private
 
+        private string _modelDes; 
+
         private ObservableCollection<CityViewModel> _cities;
         private CityViewModel _cityPickup;
         private CityViewModel _cityReturn;
@@ -274,6 +289,7 @@ namespace CustomerModule.ViewModels
         public void onSelectModel(ModelViewModel model)
         {
             Model = model;
+            ModelDes = model.Name;
         }
 
         private void GetCityList()
