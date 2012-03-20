@@ -17,6 +17,7 @@ using DBMock;
 using System.Collections.ObjectModel;
 using Microsoft.Practices.Prism.Events;
 using CustomerModule.Events;
+using Microsoft.Practices.Prism.Commands;
 
 namespace CustomerModule.ViewModels
 {
@@ -69,6 +70,7 @@ namespace CustomerModule.ViewModels
             {
                 _cityPickup = value;
                 GetDepartmentList(_cityPickup, DeptsPickup);
+                OnPropertyChanged("CityPickup");
             }
         }
 
@@ -79,6 +81,7 @@ namespace CustomerModule.ViewModels
             {
                 _cityReturn = value;
                 GetDepartmentList(_cityReturn, DeptsReturn);
+                OnPropertyChanged("CityReturn");
             }
         }
 
@@ -88,6 +91,7 @@ namespace CustomerModule.ViewModels
             set
             {
                 _deptPickup = value;
+                OnPropertyChanged("DeptPickUp");
             }
         }
 
@@ -97,6 +101,7 @@ namespace CustomerModule.ViewModels
             set
             {
                 _deptReturn = value;
+                OnPropertyChanged("DeptReturn");
             }
         }
 
@@ -106,7 +111,11 @@ namespace CustomerModule.ViewModels
         public int Id 
         {
             get { return _id; }
-            private set { _id = value; }
+            private set 
+            { 
+                _id = value;
+                OnPropertyChanged("Id");
+            }
         }   
 
         /// <summary>
@@ -115,7 +124,11 @@ namespace CustomerModule.ViewModels
         public DateTime CreationDate 
         {
             get { return _creationDate; }
-            set { _creationDate = value; }
+            set 
+            { 
+                _creationDate = value;
+                OnPropertyChanged("CreationDate");
+            }
         }    
 
         /// <summary>
@@ -127,7 +140,10 @@ namespace CustomerModule.ViewModels
             set
             {
                 if (!String.IsNullOrEmpty(value))
+                {
                     _firstName = value;
+                    OnPropertyChanged("FirstName");
+                }
             }
         }
 
@@ -140,7 +156,10 @@ namespace CustomerModule.ViewModels
             set
             {
                 if (!String.IsNullOrEmpty(value))
+                {
                     _lastName = value;
+                    OnPropertyChanged("LastName");
+                }
             }
         }
 
@@ -153,7 +172,10 @@ namespace CustomerModule.ViewModels
             set
             {
                 if (!String.IsNullOrEmpty(value))
+                {
                     _phone = value;
+                    OnPropertyChanged("Phone");
+                }
             }
         }
 
@@ -166,7 +188,10 @@ namespace CustomerModule.ViewModels
             set
             {
                 if (!String.IsNullOrEmpty(value))
+                {
                     _email = value;
+                    OnPropertyChanged("LastName");
+                }
             }
         }
 
@@ -317,10 +342,22 @@ namespace CustomerModule.ViewModels
         private void Send()
         {
             //send application
-            FirstName = "";
-            LastName = "";  
+            FirstName = String.Empty;
+            LastName = String.Empty;  
+            CreationDate = default(DateTime);
+            Phone = String.Empty;
+            Email = String.Empty;
+            Model = default(ModelViewModel);
+            PickupDate = DateTime.Today.Date; ;
+            ReturnDate = DateTime.Today.Date.AddDays(3); 
+            CityPickup = _cities[0];
+            CityReturn = _cities[0];
+            DeptPickUp = DeptsPickup[0];
+            DeptReturn = DeptsReturn[0];
+            Preference = String.Empty;
+            Status = String.Empty;
 
-            MessageBox.Show(new Random().Next(15231, 9999).ToString());
+            MessageBox.Show(new Random().Next(1521, 9999).ToString());
         }
 
         #endregion Methods
@@ -406,6 +443,21 @@ namespace CustomerModule.ViewModels
 
         #endregion IDataErrorInfo members
 
+        #region Commands
+
+        public ICommand SendCommand
+        {
+            get
+            {
+                if (_sendCommand == null)
+                    _sendCommand = new DelegateCommand(Send);
+                return _sendCommand;
+            }
+        }
+
+        #endregion Commands
+
+        DelegateCommand _sendCommand;
         
     }
 }
