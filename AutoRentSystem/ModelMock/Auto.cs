@@ -38,13 +38,7 @@ namespace ModelMock
         /// Model of the auto
         /// </summary>
         public Model Model { get; set; }
-
-
-        /// <summary>
-        /// category of the auto
-        /// </summary>
-        public Category Category { get; set; }
-
+  
 
         /// <summary>
         /// Production year of the auto
