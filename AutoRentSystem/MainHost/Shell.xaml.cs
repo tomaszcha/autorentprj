@@ -17,7 +17,7 @@
         /// </summary>
         public Shell()
         {
-            new MainHost.Web.Services.AutoRentDomainContext();
+           new MainHost.Web.Services.MainDomainContext();
 
             InitializeComponent();
         }
