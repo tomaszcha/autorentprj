@@ -4,7 +4,7 @@
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     xmlns:toolkit="http://schemas.microsoft.com/winfx/2006/xaml/presentation/toolkit"
-    mc:Ignorable="d" d:DesignHeight="566" d:DesignWidth="497">
+    mc:Ignorable="d" d:DesignHeight="573" d:DesignWidth="354">
     <UserControl.Resources>
         <Style x:Key="SLabelTitle" TargetType="TextBlock">
             <Setter Property="FontWeight" Value="ExtraBlack"/>
@@ -69,7 +69,6 @@
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="Auto"/>
             <ColumnDefinition Width="Auto" />
-            <ColumnDefinition Width="253*" />
         </Grid.ColumnDefinitions>
         <TextBlock Grid.Column="0" Grid.Row="0" Text="Pickup: " Style="{StaticResource SLabelTitle}"/>
         <TextBlock Grid.Column="0" Grid.Row="1" Text="City: " Style="{StaticResource SLabel}"/>
@@ -101,5 +100,6 @@
         <TextBox Grid.Column="1" Grid.Row="15" Grid.RowSpan="2" Style="{StaticResource STextBox}" />
         <Button Grid.Column="1" Grid.Row="17" Content="Send" Style="{StaticResource MenuButton}" Margin="5" Width="200" />
         <Rectangle Grid.Column="1" Grid.Row="18" Grid.ColumnSpan="2" Margin="0,0,-9,0" />
+        
     </Grid>
 </UserControl>
