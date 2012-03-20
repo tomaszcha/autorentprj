@@ -43,29 +43,25 @@
                         </Grid.ColumnDefinitions>
                         <Image Width="200" Height="140" Source="/CustomerModule;component/Images/Mazda.jpg" 
                                Grid.Column="0" HorizontalAlignment="Right"  />
-                        <StackPanel Orientation="Vertical" Grid.Column="1">
-                            <StackPanel Orientation="Horizontal">
-                                <TextBlock FontSize="14" Text="{Binding Make, Source={StaticResource Res}}" />
-                                <TextBlock FontSize="14" Text="{Binding Make.Name}" />                                
-                            </StackPanel>
-                            <StackPanel Orientation="Horizontal">
-                                <TextBlock FontSize="12" Text="{Binding Model, Source={StaticResource Res}}" />
-                                <TextBlock FontSize="12" Text="{Binding Name}" />
+                        <StackPanel Orientation="Vertical" Grid.Column="1" Margin="10,0,0,0" >
+                            <StackPanel Orientation="Horizontal">                                
+                                <TextBlock FontSize="14" Text="{Binding Make.Name}" />
+                                <TextBlock FontSize="14" Text="{Binding Name}" Margin="5,0,0,0" />
                             </StackPanel>
                             <StackPanel Orientation="Horizontal">
                                 <TextBlock FontSize="12" Text="{Binding Seats, Source={StaticResource Res}}" />
-                                <TextBlock FontSize="12" Text="{Binding Seats}"  />
+                                <TextBlock FontSize="12" Text="{Binding Seats}" Margin="5,0,0,0" />
                             </StackPanel>
                             <StackPanel Orientation="Horizontal">
-                                <TextBlock FontSize="12" Text="{Binding Engine, Source={StaticResource Res}}"/>
-                                <TextBlock FontSize="12" Text="{Binding EngineCapacity}"/>
+                                <TextBlock FontSize="12" Text="{Binding Engine, Source={StaticResource Res}}" />
+                                <TextBlock FontSize="12" Text="{Binding EngineCapacity}" Margin="5,0,0,0" />
                             </StackPanel>
                             <StackPanel Orientation="Horizontal">
-                                <TextBlock FontSize="12" Text="{Binding KmRate, Source={StaticResource Res}}"/>
-                                <TextBlock FontSize="12" Text="{Binding KmRate}" />
+                                <TextBlock FontSize="12" Text="{Binding KmRate, Source={StaticResource Res}}" />
+                                <TextBlock FontSize="12" Text="{Binding KmRate}" Margin="5,0,0,0" />
                             </StackPanel>
                             <StackPanel Orientation="Horizontal">
-                                <TextBlock FontSize="12" Text="{Binding HourRate, Source={StaticResource Res}}"/>
+                                <TextBlock FontSize="12" Text="{Binding HourRate, Source={StaticResource Res}}" />
                                 <TextBlock FontSize="12" Text="{Binding HourRate}" />
                             </StackPanel>
                             <StackPanel Orientation="Horizontal">
@@ -73,7 +69,7 @@
                                 <TextBlock FontSize="12" Text="{Binding Deposit}" />
                             </StackPanel>
                         </StackPanel>
-                        <Button Grid.Column="2" Content="Select" Height="40" Width="60"/>
+                        <Button Grid.Column="2" Content="Select" Height="40" Width="60" />
                     </Grid>
                 </Border>
             </DataTemplate>
