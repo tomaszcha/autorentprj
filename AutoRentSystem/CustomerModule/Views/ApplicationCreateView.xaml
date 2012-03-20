@@ -95,7 +95,7 @@
         <TextBlock Grid.Column="0" Grid.Row="13" Text="email: " Style="{StaticResource SLabel}" />
         <TextBox Grid.Column="1" Grid.Row="13" Style="{StaticResource STextBox}" Text="{Binding Email, ValidatesOnDataErrors=True, Mode=TwoWay}"/>
         <TextBlock Grid.Column="0" Grid.Row="14" Text="Selected car: " Style="{StaticResource SLabelTitle}" />
-        <TextBox Grid.Column="1" Grid.Row="14" Style="{StaticResource STextBox}"/>
+        <TextBox Grid.Column="1" Grid.Row="14" Style="{StaticResource STextBox}" Text="{Binding Model.Name, Mode=TwoWay}"/>
         <TextBlock Grid.Column="0" Grid.Row="15" Text="Preference: " Style="{StaticResource SLabel}"/>
         <TextBox Grid.Column="1" Grid.Row="15" Grid.RowSpan="2" Style="{StaticResource STextBox}" />
         <Button Grid.Column="1" Grid.Row="17" Content="Send" Style="{StaticResource MenuButton}" Margin="5" Width="200" />
