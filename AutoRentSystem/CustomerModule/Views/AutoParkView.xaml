@@ -30,7 +30,18 @@
                 <sdk:DataGridTextColumn Width="0.3*" Header="Model" Binding="{Binding Name}"/>
                 <sdk:DataGridTextColumn Width="0.2*" Header="Km rate" Binding="{Binding KmRate}"/>
                 <sdk:DataGridTextColumn Width="0.2*" Header="Day rate" Binding="{Binding DayRate}"/>
-            </sdk:DataGrid.Columns>           
+            </sdk:DataGrid.Columns>
+            <sdk:DataGrid.RowGroupHeaderStyles>                
+                <Style TargetType="sdk:DataGridRowGroupHeader">
+                    <Setter Property="PropertyNameVisibility" Value="Collapsed" />
+                    <Setter Property="Background" Value="#FF112255" />
+                    <Setter Property="Foreground" Value="#FFEEEEEE" />
+                    <Setter Property="SublevelIndent" Value="15" />
+                </Style>               
+                <Style TargetType="sdk:DataGridRowGroupHeader">
+                    <Setter Property="Background" Value="#44225566" />
+                </Style>
+            </sdk:DataGrid.RowGroupHeaderStyles>
             <sdk:DataGrid.RowDetailsTemplate>
                 <DataTemplate>
                     <Border BorderBrush="Black" 
