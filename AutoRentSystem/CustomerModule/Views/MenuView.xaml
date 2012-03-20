@@ -21,9 +21,9 @@
         <StackPanel Orientation="Horizontal">
             <Button Name="bttnHome" Style="{StaticResource MenuButton}" Content="Home" Command="{Binding OnMenuCliclCommand}" CommandParameter="HomeView"/>
             <Button Name="bttnAutoPark" Style="{StaticResource MenuButton}" Content="Auto park" Command="{Binding OnMenuCliclCommand}" CommandParameter="AutoParkView"/>
-            <Button Name="bttnContract" Style="{StaticResource MenuButton}" Content="Conditions of rental"/>
-            <Button Name="bttnAboutUs" Style="{StaticResource MenuButton}" Content="About us"/>
-            <Button Name="bttnContacts" Style="{StaticResource MenuButton}" Content="Our contacts"/>
+            <Button Name="bttnContract" Style="{StaticResource MenuButton}" Content="Conditions of rental" Command="{Binding OnMenuCliclCommand}" CommandParameter="Conditions"/>
+            <Button Name="bttnAboutUs" Style="{StaticResource MenuButton}" Content="About us" Command="{Binding OnMenuCliclCommand}" CommandParameter="AboutUs"/>
+            <Button Name="bttnContacts" Style="{StaticResource MenuButton}" Content="Our contacts" Command="{Binding OnMenuCliclCommand}" CommandParameter="Contacts"/>
         </StackPanel>
     </Grid>
 </UserControl>
