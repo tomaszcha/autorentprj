@@ -19,7 +19,8 @@ namespace DBMock
                                                  Seats = 5,
                                                  DayRate = 700,
                                                  KmRate = 10,
-                                                 Deposit = 0
+                                                 Deposit = 0, 
+                                                 Category = 1
                                              },
                                          new Model
                                              {
@@ -30,7 +31,8 @@ namespace DBMock
                                                  Seats = 5,
                                                  DayRate = 900,
                                                  KmRate = 12,
-                                                 Deposit = 0
+                                                 Deposit = 0,
+                                                 Category = 1
                                              },
                                          new Model
                                              {
@@ -41,7 +43,8 @@ namespace DBMock
                                                  Seats = 5,
                                                  DayRate = 1100,
                                                  KmRate = 15,
-                                                 Deposit = 1100
+                                                 Deposit = 1100,
+                                                 Category = 1
                                              },
                                             new Model
                                              {
@@ -52,7 +55,8 @@ namespace DBMock
                                                  Seats = 5,
                                                  DayRate = 700,
                                                  KmRate = 10,
-                                                 Deposit = 0
+                                                 Deposit = 0,
+                                                 Category = 1
                                              },
                                          new Model
                                              {
@@ -63,7 +67,8 @@ namespace DBMock
                                                  Seats = 5,
                                                  DayRate = 900,
                                                  KmRate = 12,
-                                                 Deposit = 0
+                                                 Deposit = 0,
+                                                 Category = 1
                                              },
                                          new Model
                                              {
@@ -74,7 +79,8 @@ namespace DBMock
                                                  Seats = 5,
                                                  DayRate = 1100,
                                                  KmRate = 15,
-                                                 Deposit = 1100
+                                                 Deposit = 1100,
+                                                 Category = 1
                                              }
                                      };
         }
