@@ -24,7 +24,9 @@
             <RowDefinition Height="30" />
         </Grid.RowDefinitions>
         <ComboBox Style="{StaticResource SComboBox}" Grid.Row="0" ItemsSource="{Binding Categories}" />
+        <Button Grid.Column="2" Content="Select auto" Height="40" Width="100" Command="{Binding SelectCommand}" HorizontalAlignment="Right" Margin="0,0,10,0"/>
         <sdk:DataGrid x:Name="carList" CanUserReorderColumns="False" CanUserSortColumns="False" ItemsSource="{Binding Models}" Grid.Row="1"
+                            SelectedItem="{Binding CurModel, Mode=TwoWay}"
                            RowDetailsVisibilityMode="VisibleWhenSelected" HorizontalAlignment="Center" ScrollViewer.VerticalScrollBarVisibility="Auto" 
                            AutoGenerateColumns="False" VerticalAlignment="Stretch" MinWidth="350" >
             <sdk:DataGrid.Columns>
@@ -88,7 +90,6 @@
                                     <TextBlock FontSize="12" Text="{Binding Deposit}" />
                                 </StackPanel>
                             </StackPanel>
-                            <Button Grid.Column="2" Content="Select" Height="40" Width="60" />
                         </Grid>
                     </Border>
                 </DataTemplate>
@@ -98,5 +99,6 @@
                        NumericButtonCount="3" Grid.Row="2" HorizontalContentAlignment="Center" VerticalAlignment="Bottom"
                        PageSize="10" AutoEllipsis="True" DisplayMode="FirstLastPreviousNextNumeric"
                        IsTotalItemCountFixed="True" Source="{Binding Path=ItemsSource, ElementName=carList}"></sdk:DataPager>
+
     </Grid>
 </UserControl>
