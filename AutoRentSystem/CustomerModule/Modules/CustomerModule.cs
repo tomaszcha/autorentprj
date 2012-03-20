@@ -18,6 +18,9 @@ namespace CustomerModule
 
             RegionManager.RegisterViewWithRegion(RegionNames.RightPanelName, () => UnityContainer.Resolve<IViewRightRegion>("HomeView"));
             RegionManager.RegisterViewWithRegion(RegionNames.RightPanelName, () => UnityContainer.Resolve<IViewRightRegion>("AutoParkView"));
+            RegionManager.RegisterViewWithRegion(RegionNames.RightPanelName, () => UnityContainer.Resolve<IViewRightRegion>("Conditions"));
+            RegionManager.RegisterViewWithRegion(RegionNames.RightPanelName, () => UnityContainer.Resolve<IViewRightRegion>("AboutUs"));
+            RegionManager.RegisterViewWithRegion(RegionNames.RightPanelName, () => UnityContainer.Resolve<IViewRightRegion>("Contacts"));
 
             RegionManager.RegisterViewWithRegion(RegionNames.MenuPanelName, () => UnityContainer.Resolve<IViewMenuRegion>());
             EventAggregator.GetEvent<MenuEvent>().Subscribe(onRightRegionNeedChangeEvent);
@@ -29,7 +32,9 @@ namespace CustomerModule
             UnityContainer.RegisterType<IViewLeftRegion, ApplicationCreateView>("ApplicationCreate", new TransientLifetimeManager());
 
             UnityContainer.RegisterType<IViewRightRegion, HomeView>("HomeView", new ContainerControlledLifetimeManager());
-
+            UnityContainer.RegisterType<IViewRightRegion, ConditionalOfRentalView>("Conditions", new ContainerControlledLifetimeManager());
+            UnityContainer.RegisterType<IViewRightRegion, AboutUsView>("AboutUs", new ContainerControlledLifetimeManager());
+            UnityContainer.RegisterType<IViewRightRegion, ContactsView>("Contacts", new ContainerControlledLifetimeManager());
 
             UnityContainer.RegisterType<IAutoParkViewModel, AutoParkViewModel>();
             UnityContainer.RegisterType<IViewRightRegion, AutoParkView>("AutoParkView", new ContainerControlledLifetimeManager());
