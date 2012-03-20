@@ -22,7 +22,7 @@
             <RowDefinition Height="30" />
         </Grid.RowDefinitions>
         <ComboBox Style="{StaticResource SComboBox}" Grid.Row="0"/>
-        <sdk:DataGrid x:Name="carList" CanUserReorderColumns="False" CanUserSortColumns="False" ItemsSource="{Binding Models}" Grid.Row="1" 
+        <sdk:DataGrid x:Name="carList" CanUserReorderColumns="False" CanUserSortColumns="False" ItemsSource="{Binding Models}" Grid.Row="1"
                            RowDetailsVisibilityMode="VisibleWhenSelected" HorizontalAlignment="Center" ScrollViewer.VerticalScrollBarVisibility="Auto" 
                            AutoGenerateColumns="False" VerticalAlignment="Stretch" MinWidth="350" >
             <sdk:DataGrid.Columns>
@@ -31,13 +31,13 @@
                 <sdk:DataGridTextColumn Width="0.2*" Header="Km rate" Binding="{Binding KmRate}"/>
                 <sdk:DataGridTextColumn Width="0.2*" Header="Day rate" Binding="{Binding DayRate}"/>
             </sdk:DataGrid.Columns>
-            <sdk:DataGrid.RowGroupHeaderStyles>                
+            <sdk:DataGrid.RowGroupHeaderStyles>
                 <Style TargetType="sdk:DataGridRowGroupHeader">
                     <Setter Property="PropertyNameVisibility" Value="Collapsed" />
                     <Setter Property="Background" Value="#708090" />
                     <Setter Property="Foreground" Value="#FFEEEEEE" />
                     <Setter Property="SublevelIndent" Value="15" />
-                </Style>               
+                </Style>
                 <Style TargetType="sdk:DataGridRowGroupHeader">
                     <Setter Property="Background" Value="#44225566" />
                 </Style>
@@ -90,11 +90,11 @@
                         </Grid>
                     </Border>
                 </DataTemplate>
-            </sdk:DataGrid.RowDetailsTemplate>            
+            </sdk:DataGrid.RowDetailsTemplate>
         </sdk:DataGrid>
         <sdk:DataPager x:Name="pagerAuto" 
                        NumericButtonCount="3" Grid.Row="2" HorizontalContentAlignment="Center" VerticalAlignment="Bottom"
                        PageSize="10" AutoEllipsis="True" DisplayMode="FirstLastPreviousNextNumeric"
-                       IsTotalItemCountFixed="True" Source="{Binding Path=ItemsSource, ElementName=carList}"></sdk:DataPager>     
-    </Grid>    
+                       IsTotalItemCountFixed="True" Source="{Binding Path=ItemsSource, ElementName=carList}"></sdk:DataPager>
+    </Grid>
 </UserControl>
