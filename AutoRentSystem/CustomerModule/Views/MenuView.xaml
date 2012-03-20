@@ -4,13 +4,13 @@
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d"
-    d:DesignHeight="43" d:DesignWidth="818" Margin="5">
+    d:DesignHeight="43" d:DesignWidth="818" Height="50">
     <UserControl.Resources>
         <Style x:Key="MenuButton" TargetType="Button">
             <Setter Property="Background" Value="Red"/>
             <Setter Property="Width" Value="auto"/>
             <Setter Property="MinWidth" Value="150"/>
-            <Setter Property="Margin" Value="5"/>
+            <Setter Property="Margin" Value="3,5,3,0"/>
             <Setter Property="Opacity" Value="0.6"/>
             <Setter Property="Foreground" Value="Black"/>
             <Setter Property="FontWeight" Value="ExtraBlack"/>
