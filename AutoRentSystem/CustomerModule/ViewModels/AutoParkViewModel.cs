@@ -14,16 +14,20 @@ namespace CustomerModule.ViewModels
     {
         #region Constructor
         List<Model> list;
+        //List<ModelViewModel> list;
+
         public AutoParkViewModel()
         {
-            _models = new ObservableCollection<ModelViewModel>();
+           // _models = new ObservableCollection<ModelViewModel>();
            // _categories = new List<CategoryViewModel>();
            // _number = 1;
            // GetListPrevAction();
            // GetListOfCategories();
             //_countOfDataInList = new Models().List.Count;
             //_models.CollectionChanged+=OnCollectionChanged;
-           list = new List<Model> {
+          
+            
+            list = new List<Model> {
                 new Model                      
                 {
                     Id = 1,
@@ -69,14 +73,20 @@ namespace CustomerModule.ViewModels
                         Deposit = 3000
                     }
             };
-            _models.Clear();
-
-            //List<ModelViewModel> list = (from model in new Models().List
-            //                             select new ModelViewModel(model)).ToList();
-            //foreach (ModelViewModel model in list)
-            //{
-           //     _models.Add(model);
-           // }
+           /* _models.Clear();
+           
+            list = (from model in new Models().List
+                                       select new ModelViewModel(model)).ToList();
+            foreach (ModelViewModel model in list)
+            {
+                _models.Add(model);
+            }
+           /* List<ModelViewModel> list = (from model in new Models().List
+                                       select new ModelViewModel(model)).ToList();
+            foreach (ModelViewModel model in list)
+            {
+                _models.Add(model);
+            }*/
         }
 
         #endregion Constructor
@@ -88,8 +98,8 @@ namespace CustomerModule.ViewModels
         /// <summary>
         /// List of models
         /// </summary>
-        //public ObservableCollection<ModelViewModel> Models { get { return _models; } }
-        public List<Model> Models { get { return  list;}}
+       // public ObservableCollection<ModelViewModel> Models { get { return _models; } }
+        public List<Model> Models { get { return  list;} }
           
         /// <summary>
         /// List of categories
@@ -100,19 +110,19 @@ namespace CustomerModule.ViewModels
 
         #region private
 
-        private  ObservableCollection<ModelViewModel> _models;
+       // private ObservableCollection<ModelViewModel> _models;
 
        // private List<CategoryViewModel> _categories;
 
-        //private DelegateCommand _getListNextCommand;
+       // private DelegateCommand _getListNextCommand;
 
         //private DelegateCommand _getListPrevCommand;
 
-        //private const int _countOfModelsOnList = 3;
+       // private const int _countOfModelsOnList = 3;
 
-        private int _number = 0;
+       // private int _number = 0;
 
-        //private int _countOfDataInList;
+       // private int _countOfDataInList;
 
         #endregion private
 
