@@ -18,7 +18,12 @@ namespace CustomerModule.ViewModels
         #region Constructor
 
         public DepartmentViewModel(Department department)
-        { }
+        {
+            _address = department.Address;
+            _city = new CityViewModel(department.City);
+            _id = department.Id;
+            _phone = department.Phone;
+        }
 
         #endregion Constructor
 
