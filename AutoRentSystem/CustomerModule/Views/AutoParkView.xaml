@@ -1,4 +1,5 @@
-﻿<UserControl xmlns:sdk="http://schemas.microsoft.com/winfx/2006/xaml/presentation/sdk"  x:Class="CustomerModule.Views.AutoParkView"
+﻿<UserControl xmlns:sdk="http://schemas.microsoft.com/winfx/2006/xaml/presentation/sdk"  
+    x:Class="CustomerModule.Views.AutoParkView"
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
@@ -6,7 +7,8 @@
     mc:Ignorable="d" xmlns:Resources="clr-namespace:CustomerModule.Properties"
     d:DesignHeight="566" d:DesignWidth="497">
     <UserControl.Resources>
-        <Resources:Resources x:Key="Res"/>
+        
+        <Resources:Resources x:Key="Res"/>       
         <Style x:Key="SComboBox" TargetType="ComboBox">
             <Setter Property="HorizontalAlignment" Value="Left"/>
             <Setter Property="VerticalAlignment" Value="Center"/>
@@ -21,7 +23,7 @@
             <RowDefinition Height="*" />
             <RowDefinition Height="30" />
         </Grid.RowDefinitions>
-        <ComboBox Style="{StaticResource SComboBox}" Grid.Row="0"/>
+        <ComboBox Style="{StaticResource SComboBox}" Grid.Row="0" ItemsSource="{Binding Categories}" />
         <sdk:DataGrid x:Name="carList" CanUserReorderColumns="False" CanUserSortColumns="False" ItemsSource="{Binding Models}" Grid.Row="1"
                            RowDetailsVisibilityMode="VisibleWhenSelected" HorizontalAlignment="Center" ScrollViewer.VerticalScrollBarVisibility="Auto" 
                            AutoGenerateColumns="False" VerticalAlignment="Stretch" MinWidth="350" >
