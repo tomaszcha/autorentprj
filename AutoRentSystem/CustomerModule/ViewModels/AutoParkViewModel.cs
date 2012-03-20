@@ -9,6 +9,8 @@ using System.Windows.Input;
 using Microsoft.Practices.Prism.Commands;
 using System.Windows.Data;
 using System.Reflection;
+using Microsoft.Practices.Prism.Events;
+using CustomerModule.Events;
 
 namespace CustomerModule.ViewModels
 {
@@ -20,9 +22,10 @@ namespace CustomerModule.ViewModels
         public enum Category{ Economy, Middle, Luxury };
 
         ObservableCollection<string> _categories;
-        
-        public AutoParkViewModel()
-        {            
+
+        public AutoParkViewModel(IEventAggregator eventAggregator)
+        {
+            this.eventAggregator = eventAggregator;
             pList = new PagedCollectionView(GetListOfModels());
             if (pList.CanGroup == true)
             {
@@ -210,6 +213,11 @@ namespace CustomerModule.ViewModels
             };
         }
 
+        public void SelectModel()
+        {
+            eventAggregator.GetEvent<SelectEvent>().Publish(new ModelViewModel(CurModel));
+        }
+
         #endregion
        
         #region Fields
@@ -220,7 +228,9 @@ namespace CustomerModule.ViewModels
         /// List of models
         /// </summary>
         // public ObservableCollection<ModelViewModel> Models { get { return _models; } }
-        public PagedCollectionView Models { get { return pList; } }        
+        public PagedCollectionView Models { get { return pList; } }
+
+        public Model CurModel { get; set; }
 
         #endregion public
 
@@ -230,8 +240,9 @@ namespace CustomerModule.ViewModels
 
         PagedCollectionView pList;
 
-        
+        IEventAggregator eventAggregator;
 
+        DelegateCommand _selectCommand;
 
         // private ObservableCollection<ModelViewModel> _models;
 
@@ -249,6 +260,20 @@ namespace CustomerModule.ViewModels
 
         #endregion private
 
-        #endregion Fields      
+        #endregion Fields 
+     
+        #region Commands
+
+        public ICommand SelectCommand
+        {
+            get 
+            {
+                if (_selectCommand == null)
+                    _selectCommand = new DelegateCommand(SelectModel);
+                return _selectCommand;
+            }
+        }
+
+        #endregion Commands
     }
 }
