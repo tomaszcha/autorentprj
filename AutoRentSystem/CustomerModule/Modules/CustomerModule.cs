@@ -29,7 +29,7 @@ namespace CustomerModule
         protected override void RegisterTypesDependencies()
         {
             UnityContainer.RegisterType<IApplicationCreateViewModel, ApplicationCreateViewModel>();
-            UnityContainer.RegisterType<IViewLeftRegion, ApplicationCreateView>("ApplicationCreate", new TransientLifetimeManager());
+            UnityContainer.RegisterType<IViewLeftRegion, ApplicationCreateView>("ApplicationCreate", new ContainerControlledLifetimeManager());
 
             UnityContainer.RegisterType<IViewRightRegion, HomeView>("HomeView", new ContainerControlledLifetimeManager());
             UnityContainer.RegisterType<IViewRightRegion, ConditionalOfRentalView>("Conditions", new ContainerControlledLifetimeManager());
