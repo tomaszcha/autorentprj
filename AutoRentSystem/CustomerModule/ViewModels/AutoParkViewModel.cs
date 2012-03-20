@@ -8,16 +8,19 @@ using System.Collections.Generic;
 using System.Windows.Input;
 using Microsoft.Practices.Prism.Commands;
 using System.Windows.Data;
+using System.Reflection;
 
 namespace CustomerModule.ViewModels
 {
+    
     public class AutoParkViewModel : ViewModelBase, IAutoParkViewModel
     {
         #region Constructor
 
-        List<Model> list;
-        PagedCollectionView pList;
+        public enum Category{ Economy, Middle, Luxury };
 
+        ObservableCollection<string> _categories;
+        
         public AutoParkViewModel()
         {            
             pList = new PagedCollectionView(GetListOfModels());
@@ -25,9 +28,25 @@ namespace CustomerModule.ViewModels
             {
                 pList.GroupDescriptions.Add(new PropertyGroupDescription("Make.Name"));
             }
+
+            _categories = new ObservableCollection<string>();
+
+            Type typeCategory = typeof(Category);
+            FieldInfo[] arrCategFieldValues = typeCategory.GetFields(BindingFlags.Public|BindingFlags.Static);
+            foreach(var categName in arrCategFieldValues)
+            {
+                Categories.Add(categName.GetValue(null).ToString());
+            }
+           
         }
 
         #endregion Constructor
+
+        public ObservableCollection<string> Categories
+        {
+            get { return _categories; }
+            set { _categories = value; }
+        }
 
         #region Help method
         
@@ -206,6 +225,13 @@ namespace CustomerModule.ViewModels
         #endregion public
 
         #region private
+
+        List<Model> list;
+
+        PagedCollectionView pList;
+
+        
+
 
         // private ObservableCollection<ModelViewModel> _models;
 
