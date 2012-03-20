@@ -7,6 +7,7 @@ using Microsoft.Practices.Unity;
 using CustomerModule.ViewModels;
 using CustomerModule.ModelViews;
 using EventInfrastracture;
+using CustomerModule.Events;
 
 namespace CustomerModule
 {
@@ -24,6 +25,7 @@ namespace CustomerModule
 
             RegionManager.RegisterViewWithRegion(RegionNames.MenuPanelName, () => UnityContainer.Resolve<IViewMenuRegion>());
             EventAggregator.GetEvent<MenuEvent>().Subscribe(onRightRegionNeedChangeEvent);
+            //EventAggregator.GetEvent<SelectEvent>().Subscribe(onSelectModel);
         }
 
         protected override void RegisterTypesDependencies()
@@ -49,6 +51,11 @@ namespace CustomerModule
         {
             IRegion region = RegionManager.Regions[RegionNames.RightPanelName];
             region.Activate(UnityContainer.Resolve<IViewRightRegion>(views));
+        }
+
+        public void onSelectModel(ModelViewModel model)
+        {
+            
         }
     }
 }
