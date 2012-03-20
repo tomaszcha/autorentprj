@@ -27,6 +27,7 @@ namespace ModulesInfrastructure.ViewModels
             _name = model.Name;
             _photo = model.Photo;
             _seats = model.Seats;
+            _category = model.Category;
             Make = new MakeViewModel(model.Make);
         }
 
@@ -150,7 +151,17 @@ namespace ModulesInfrastructure.ViewModels
         /// <summary>
         /// category of the auto
         /// </summary>
-        public CategoryViewModel Category;
+        public short Category
+        {
+            get { return _category; }
+            set
+            {
+                if (value >= 0)
+                {
+                    _category = value;
+                }
+            }
+        }
 
         #endregion public
 
@@ -171,6 +182,8 @@ namespace ModulesInfrastructure.ViewModels
         private float _dayRate;
 
         private float _deposit;
+
+        private short _category;
 
         #endregion private
 
