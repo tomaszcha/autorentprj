@@ -87,6 +87,10 @@ namespace ModulesInfrastructure.ViewModels
         /// </summary>
         public DateTime LastCheckDate { get; set; }
 
+        // Current mileage of the auto
+        /// </summary>
+        public short Category { get; set; }
+
 
         /// <summary>
         /// Additional information about the auto
@@ -105,7 +109,7 @@ namespace ModulesInfrastructure.ViewModels
 
         private Model _model { get; set; }
 
-        private Category _category { get; set; }
+        private short _category { get; set; }
 
         private short _year { get; set; }
 
