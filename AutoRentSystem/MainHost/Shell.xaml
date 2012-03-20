@@ -27,24 +27,31 @@
                 <ContentControl Style="{StaticResource LogoIcon}" Margin="5" />
             </Grid>
             <Grid Name="GridContent" Grid.Row="1" Margin="0">
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="Auto" />
-                    <ColumnDefinition Width="Auto" />
-                    <ColumnDefinition Width="620*" />
-                </Grid.ColumnDefinitions>
                 <Grid.RowDefinitions>
-                    <RowDefinition Height="Auto" />
-                    <RowDefinition Height="Auto" />
-                    <RowDefinition Height="418*" />
+                    <RowDefinition Height="45"/>
+                    <RowDefinition Height="100*"/>
+                    <RowDefinition Height="3*"/>
                 </Grid.RowDefinitions>
-                <ContentControl Name="MenuRegion" prism:RegionManager.RegionName="MenuRegion" Grid.ColumnSpan="2" Margin="5"  HorizontalAlignment="Center"/>
-                <ContentControl Name="LeftRegion" prism:RegionManager.RegionName="LeftRegion" Grid.Row="1" Margin="5"  HorizontalAlignment="Center"/>
-                <ContentControl Name="RightRegion" prism:RegionManager.RegionName="RightRegion" Grid.Column="1" Grid.Row="1" Margin="5"  HorizontalAlignment="Center"/>
-                <ContentControl Name="FooterRegion" prism:RegionManager.RegionName="FooterRegion" Grid.Row="2" Grid.ColumnSpan="2" VerticalAlignment="Bottom" Margin="5"  HorizontalAlignment="Center"/>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="40*"/>
+                    <ColumnDefinition Width="60*"/>
+                </Grid.ColumnDefinitions>
+                <ContentControl Grid.Column="0" Grid.Row="0" Grid.ColumnSpan="2" HorizontalAlignment="Center"
+                       VerticalAlignment="Stretch"
+                       prism:RegionManager.RegionName="MenuRegion"/>
+                <ContentControl Grid.Column="0" Grid.Row="1" HorizontalAlignment="Stretch"
+                       VerticalAlignment="Stretch"
+                       prism:RegionManager.RegionName="LeftRegion"
+                        Margin="120,0,0,0"/>
+                <ContentControl Grid.Column="1" Grid.Row="1" HorizontalAlignment="Stretch"
+                       VerticalAlignment="Stretch"
+                       prism:RegionManager.RegionName="RightRegion"
+                        Margin="0,0,120,0"/>
                 <Grid.Background>
                     <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
-                        <GradientStop Color="Gray" Offset="0.186" />
-                        <GradientStop Color="AntiqueWhite" Offset="0.9" />
+                        <GradientStop Color="Black" Offset="0.186" />
+                        <GradientStop Color="#ECDBCDCD" Offset="0.89" />
+                        <GradientStop Color="#41382626" Offset="1" />
                     </LinearGradientBrush>
                 </Grid.Background>
             </Grid>
