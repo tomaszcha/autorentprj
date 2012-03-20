@@ -73,6 +73,6 @@ namespace ModelMock
         /// <summary>
         /// category of the auto
         /// </summary>
-        public Category Category { get; set; }
+        public short Category { get; set; }
     }
 }
