@@ -52,7 +52,7 @@ namespace ModulesInfrastructure.ViewModels
             {
                 if (value != null)
                 {
-                    //value.
+                    _insuarance = value;
                 }
             } 
         }
@@ -104,8 +104,6 @@ namespace ModulesInfrastructure.ViewModels
         private Insuarance _insuarance;
 
         private Model _model { get; set; }
-
-        private Category _category { get; set; }
 
         private short _year { get; set; }
 
