@@ -3,9 +3,9 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-    mc:Ignorable="d" d:DesignHeight="400" d:DesignWidth="550" Width="600" Height="400">
+    mc:Ignorable="d" d:DesignHeight="400" d:DesignWidth="550" MinWidth="800" MinHeight="500" HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
     
-    <Grid x:Name="LayoutRoot" >
+    <Grid x:Name="LayoutRoot">
         <Grid.Background>
             <ImageBrush ImageSource="/CustomerModule;component/Images/RedCar.jpg" />
         </Grid.Background>
