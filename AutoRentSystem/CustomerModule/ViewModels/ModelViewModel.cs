@@ -22,8 +22,8 @@ namespace CustomerModule.ViewModels
         {
             _dayRate = model.DayRate;
             _deposit = model.Deposit;
-            _engineCapacity = model.EngineCapacity;
-            _hourRate = model.KmRate;
+            _engine = model.Engine;
+            _kmRate = model.KmRate;
             _id = model.Id;
             _name = model.Name;
             _photo = model.Photo;
@@ -82,14 +82,14 @@ namespace CustomerModule.ViewModels
         /// <summary>
         /// Engine capacity of the auto
         /// </summary>
-        public string EngineCapacity 
+        public string Engine 
         {
-            get { return _engineCapacity; }
+            get { return _engine; }
             set
             {
                 if (!String.IsNullOrEmpty(value))
                 {
-                    _engineCapacity = value;
+                    _engine = value;
                 }
             }
         }
@@ -104,16 +104,16 @@ namespace CustomerModule.ViewModels
         }
 
         /// <summary>
-        /// Rental rate of one hour 
+        /// Rental rate per km
         /// </summary>
         public float HourRate 
         {
-            get { return _hourRate; }
+            get { return _kmRate; }
             set 
             {
                 if (value > 0)
                 {
-                    _hourRate = value;
+                    _kmRate = value;
                 }
             } 
         }
@@ -149,9 +149,9 @@ namespace CustomerModule.ViewModels
         }         
 
         /// <summary>
-        /// category of the auto
+        /// Category of the auto
         /// </summary>
-        public CategoryViewModel Category;
+        //public CategoryViewModel Category;
 
         #endregion public
 
@@ -163,11 +163,11 @@ namespace CustomerModule.ViewModels
 
         private int _seats;
 
-        private string _engineCapacity;
+        private string _engine;
 
         private byte[] _photo;
 
-        private float _hourRate;
+        private float _kmRate;
 
         private float _dayRate;
 
