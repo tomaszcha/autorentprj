@@ -28,6 +28,7 @@ namespace CustomerModule.ViewModels
             _name = model.Name;
             _photo = model.Photo;
             _seats = model.Seats;
+            _category = model.Category;
             Make = new MakeViewModel(model.Make);
         }
 
@@ -62,7 +63,7 @@ namespace CustomerModule.ViewModels
         /// <summary>
         /// Make of the auto model
         /// </summary>
-        public MakeViewModel Make;
+        public MakeViewModel Make { get; set; }
 
         /// <summary>
         /// Number of seats of the auto model
@@ -106,7 +107,7 @@ namespace CustomerModule.ViewModels
         /// <summary>
         /// Rental rate per km
         /// </summary>
-        public float HourRate 
+        public float KmRate 
         {
             get { return _kmRate; }
             set 
@@ -146,7 +147,19 @@ namespace CustomerModule.ViewModels
                     _deposit = value;
                 }
             }
-        }         
+        }
+
+        public short Category
+        {
+            get { return _category; }
+            set
+            {
+                if (value >= 0)
+                {
+                    _category = value;
+                }
+            }
+        }       
 
         /// <summary>
         /// Category of the auto
@@ -172,6 +185,8 @@ namespace CustomerModule.ViewModels
         private float _dayRate;
 
         private float _deposit;
+
+        private short _category;
 
         #endregion private
 
