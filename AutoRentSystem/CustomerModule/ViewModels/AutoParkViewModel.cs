@@ -21,6 +21,10 @@ namespace CustomerModule.ViewModels
         public AutoParkViewModel()
         {            
             pList = new PagedCollectionView(GetListOfModels());
+            if (pList.CanGroup == true)
+            {
+                pList.GroupDescriptions.Add(new PropertyGroupDescription("Make.Name"));
+            }
         }
 
         #endregion Constructor
