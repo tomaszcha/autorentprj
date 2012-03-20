@@ -34,7 +34,7 @@
             <sdk:DataGrid.RowGroupHeaderStyles>                
                 <Style TargetType="sdk:DataGridRowGroupHeader">
                     <Setter Property="PropertyNameVisibility" Value="Collapsed" />
-                    <Setter Property="Background" Value="#FF112255" />
+                    <Setter Property="Background" Value="#708090" />
                     <Setter Property="Foreground" Value="#FFEEEEEE" />
                     <Setter Property="SublevelIndent" Value="15" />
                 </Style>               
