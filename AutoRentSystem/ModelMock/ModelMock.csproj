@@ -61,7 +61,6 @@
   <ItemGroup>
     <Compile Include="Application.cs" />
     <Compile Include="Auto.cs" />
-    <Compile Include="Category.cs" />
     <Compile Include="ChargeOffOrder.cs" />
     <Compile Include="City.cs" />
     <Compile Include="Customer.cs" />
