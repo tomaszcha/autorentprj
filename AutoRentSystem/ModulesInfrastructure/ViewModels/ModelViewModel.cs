@@ -21,7 +21,7 @@ namespace ModulesInfrastructure.ViewModels
         {
             _dayRate = model.DayRate;
             _deposit = model.Deposit;
-            _engineCapacity = model.EngineCapacity;
+            _engine = model.Engine;
             _hourRate = model.KmRate;
             _id = model.Id;
             _name = model.Name;
@@ -81,14 +81,14 @@ namespace ModulesInfrastructure.ViewModels
         /// <summary>
         /// Engine capacity of the auto
         /// </summary>
-        public string EngineCapacity 
+        public string Engine
         {
-            get { return _engineCapacity; }
+            get { return _engine; }
             set
             {
                 if (!String.IsNullOrEmpty(value))
                 {
-                    _engineCapacity = value;
+                    _engine = value;
                 }
             }
         }
@@ -162,7 +162,7 @@ namespace ModulesInfrastructure.ViewModels
 
         private int _seats;
 
-        private string _engineCapacity;
+        private string _engine;
 
         private byte[] _photo;
 
