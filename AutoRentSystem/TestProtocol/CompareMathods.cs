@@ -23,7 +23,7 @@ namespace TestProtocol
                         res = false;
                 }
             {
-                if (!Compare(model1.Category, model2.Category))
+                if (model1.Category != model2.Category)
                     res = false;
                 else
                     if (model1.DayRate != model2.DayRate)
@@ -71,7 +71,7 @@ namespace TestProtocol
             }
             return res;
         }
-
+        /*
         public static bool Compare(Category category1, Category category2)
         {
             bool res = true;
@@ -101,7 +101,7 @@ namespace TestProtocol
                 }
             return res;
         }
-
+        */
         public static bool Compare(Make make1, Make make2)
         {
             bool res = true;
