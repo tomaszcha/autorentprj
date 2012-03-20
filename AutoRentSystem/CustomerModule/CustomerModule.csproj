@@ -89,11 +89,20 @@
     <Compile Include="ViewModels\IAutoParkViewModel.cs" />
     <Compile Include="ViewModels\IMenuViewModel.cs" />
     <Compile Include="ViewModels\MenuViewModel.cs" />
+    <Compile Include="Views\AboutUsView.xaml.cs">
+      <DependentUpon>AboutUsView.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Views\ApplicationCreateView.xaml.cs">
       <DependentUpon>ApplicationCreateView.xaml</DependentUpon>
     </Compile>
     <Compile Include="Views\AutoParkView.xaml.cs">
       <DependentUpon>AutoParkView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\ConditionalOfRentalView.xaml.cs">
+      <DependentUpon>ConditionalOfRentalView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\ContactsView.xaml.cs">
+      <DependentUpon>ContactsView.xaml</DependentUpon>
     </Compile>
     <Compile Include="Views\HomeView.xaml.cs">
       <DependentUpon>HomeView.xaml</DependentUpon>
@@ -103,11 +112,23 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <Page Include="Views\AboutUsView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
     <Page Include="Views\ApplicationCreateView.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
     <Page Include="Views\AutoParkView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\ConditionalOfRentalView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\ContactsView.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
