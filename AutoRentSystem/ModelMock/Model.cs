@@ -43,7 +43,7 @@ namespace ModelMock
         /// <summary>
         /// Engine capacity of the auto
         /// </summary>
-        public string EngineCapacity { get; set; }
+        public string Engine { get; set; }
 
 
         /// <summary>
