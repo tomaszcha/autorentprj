@@ -32,7 +32,7 @@ namespace TestProtocol
                         if (model1.Deposit != model2.Deposit)
                             res = false;
                         else
-                            if (model1.EngineCapacity != model2.EngineCapacity)
+                            if (model1.Engine != model2.Engine)
                                 res = false;
                             else
                                 if (model1.Id != model2.Id)
