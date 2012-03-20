@@ -14,68 +14,73 @@
             <Setter Property="Width" Value="200"/>
             <Setter Property="Margin" Value="5"/>
         </Style>
-
     </UserControl.Resources>
-    <sdk:DataGrid x:Name="myList" CanUserReorderColumns="False" CanUserSortColumns="False" ItemsSource="{Binding Models}" 
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="50" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+        <ComboBox ItemsSource="{Binding Categoreis}" DisplayMemberPath = "Name" Style="{StaticResource SComboBox}" Grid.Row="0"/>
+        <sdk:DataGrid x:Name="myList" CanUserReorderColumns="False" CanUserSortColumns="False" ItemsSource="{Binding Models}" Grid.Row="1" 
                            RowDetailsVisibilityMode="VisibleWhenSelected" HorizontalAlignment="Center" ScrollViewer.VerticalScrollBarVisibility="Auto" 
                            AutoGenerateColumns="False" VerticalAlignment="Stretch" MinWidth="350" MaxWidth="700" >
-        <sdk:DataGrid.Columns>
-            <sdk:DataGridTextColumn Width="0.3*" Header="Make" Binding="{Binding Make.Name}"/>
-            <sdk:DataGridTextColumn Width="0.3*" Header="Model" Binding="{Binding Name}"/>
-            <sdk:DataGridTextColumn Width="0.2*" Header="Km rate" Binding="{Binding KmRate}"/>
-            <sdk:DataGridTextColumn Width="0.2*" Header="Day rate" Binding="{Binding DayRate}"/>
-        </sdk:DataGrid.Columns>
-        <sdk:DataGrid.RowDetailsTemplate>
-            <DataTemplate>
-                <Border BorderBrush="Black" 
+            <sdk:DataGrid.Columns>
+                <sdk:DataGridTextColumn Width="0.3*" Header="Make" Binding="{Binding Make.Name}"/>
+                <sdk:DataGridTextColumn Width="0.3*" Header="Model" Binding="{Binding Name}"/>
+                <sdk:DataGridTextColumn Width="0.2*" Header="Km rate" Binding="{Binding KmRate}"/>
+                <sdk:DataGridTextColumn Width="0.2*" Header="Day rate" Binding="{Binding DayRate}"/>
+            </sdk:DataGrid.Columns>
+            <sdk:DataGrid.RowDetailsTemplate>
+                <DataTemplate>
+                    <Border BorderBrush="Black" 
                       BorderThickness="1" Background="White">
-                    <Grid>
-                        <Grid.Background>
-                            <LinearGradientBrush StartPoint="0,0" EndPoint="0,1">
-                                <GradientStop Color="White" Offset="0"/>
-                                <GradientStop Color="LightSteelBlue" Offset="1"/>
-                            </LinearGradientBrush>
-                        </Grid.Background>
-                        <Grid.ColumnDefinitions>
-                            <ColumnDefinition Width="0.3*" />
-                            <ColumnDefinition Width="0.5*" />
-                            <ColumnDefinition Width="0.2*" />
-                        </Grid.ColumnDefinitions>
-                        <Image Width="200" Height="140" Source="/CustomerModule;component/Images/Mazda.jpg" 
+                        <Grid>
+                            <Grid.Background>
+                                <LinearGradientBrush StartPoint="0,0" EndPoint="0,1">
+                                    <GradientStop Color="White" Offset="0"/>
+                                    <GradientStop Color="LightSteelBlue" Offset="1"/>
+                                </LinearGradientBrush>
+                            </Grid.Background>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="0.3*" />
+                                <ColumnDefinition Width="0.5*" />
+                                <ColumnDefinition Width="0.2*" />
+                            </Grid.ColumnDefinitions>
+                            <Image Width="200" Height="140" Source="/CustomerModule;component/Images/Mazda.jpg" 
                                Grid.Column="0" HorizontalAlignment="Right"  />
-                        <StackPanel Orientation="Vertical" Grid.Column="1" Margin="10,0,0,0" >
-                            <StackPanel Orientation="Horizontal">                                
-                                <TextBlock FontSize="14" Text="{Binding Make.Name}" />
-                                <TextBlock FontSize="14" Text="{Binding Name}" Margin="5,0,0,0" />
+                            <StackPanel Orientation="Vertical" Grid.Column="1" Margin="10,0,0,0" >
+                                <StackPanel Orientation="Horizontal">
+                                    <TextBlock FontSize="14" Text="{Binding Make.Name}" />
+                                    <TextBlock FontSize="14" Text="{Binding Name}" Margin="5,0,0,0" />
+                                </StackPanel>
+                                <StackPanel Orientation="Horizontal">
+                                    <TextBlock FontSize="12" Text="{Binding Seats, Source={StaticResource Res}}" />
+                                    <TextBlock FontSize="12" Text="{Binding Seats}" Margin="5,0,0,0" />
+                                </StackPanel>
+                                <StackPanel Orientation="Horizontal">
+                                    <TextBlock FontSize="12" Text="{Binding Engine, Source={StaticResource Res}}" />
+                                    <TextBlock FontSize="12" Text="{Binding EngineCapacity}" Margin="5,0,0,0" />
+                                </StackPanel>
+                                <StackPanel Orientation="Horizontal">
+                                    <TextBlock FontSize="12" Text="{Binding KmRate, Source={StaticResource Res}}" />
+                                    <TextBlock FontSize="12" Text="{Binding KmRate}" Margin="5,0,0,0" />
+                                </StackPanel>
+                                <StackPanel Orientation="Horizontal">
+                                    <TextBlock FontSize="12" Text="{Binding DayRate, Source={StaticResource Res}}" />
+                                    <TextBlock FontSize="12" Text="{Binding DayRate}" />
+                                </StackPanel>
+                                <StackPanel Orientation="Horizontal">
+                                    <TextBlock FontSize="12" Text="{Binding Deposit, Source={StaticResource Res}}" />
+                                    <TextBlock FontSize="12" Text="{Binding Deposit}" />
+                                </StackPanel>
                             </StackPanel>
-                            <StackPanel Orientation="Horizontal">
-                                <TextBlock FontSize="12" Text="{Binding Seats, Source={StaticResource Res}}" />
-                                <TextBlock FontSize="12" Text="{Binding Seats}" Margin="5,0,0,0" />
-                            </StackPanel>
-                            <StackPanel Orientation="Horizontal">
-                                <TextBlock FontSize="12" Text="{Binding Engine, Source={StaticResource Res}}" />
-                                <TextBlock FontSize="12" Text="{Binding EngineCapacity}" Margin="5,0,0,0" />
-                            </StackPanel>
-                            <StackPanel Orientation="Horizontal">
-                                <TextBlock FontSize="12" Text="{Binding KmRate, Source={StaticResource Res}}" />
-                                <TextBlock FontSize="12" Text="{Binding KmRate}" Margin="5,0,0,0" />
-                            </StackPanel>
-                            <StackPanel Orientation="Horizontal">
-                                <TextBlock FontSize="12" Text="{Binding DayRate, Source={StaticResource Res}}" />
-                                <TextBlock FontSize="12" Text="{Binding DayRate}" />
-                            </StackPanel>
-                            <StackPanel Orientation="Horizontal">
-                                <TextBlock FontSize="12" Text="{Binding Deposit, Source={StaticResource Res}}" />
-                                <TextBlock FontSize="12" Text="{Binding Deposit}" />
-                            </StackPanel>
-                        </StackPanel>
-                        <Button Grid.Column="2" Content="Select" Height="40" Width="60" />
-                    </Grid>
-                </Border>
-            </DataTemplate>
-
-        </sdk:DataGrid.RowDetailsTemplate>
-    </sdk:DataGrid>
+                            <Button Grid.Column="2" Content="Select" Height="40" Width="60" />
+                        </Grid>
+                    </Border>
+                </DataTemplate>
+            </sdk:DataGrid.RowDetailsTemplate>
+        </sdk:DataGrid>
+    </Grid>
     <!---
     <Grid x:Name="LayoutRoot" Background="White" Margin="5">        
         <Grid.RowDefinitions>
