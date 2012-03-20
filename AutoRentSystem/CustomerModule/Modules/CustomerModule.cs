@@ -15,10 +15,11 @@ namespace CustomerModule
         protected override void RegisterViewsInRegions()
         {
             RegionManager.RegisterViewWithRegion(RegionNames.LeftPanelName, () => UnityContainer.Resolve<IViewLeftRegion>("ApplicationCreate"));
-            RegionManager.RegisterViewWithRegion(RegionNames.RightPanelName, () => UnityContainer.Resolve<IViewRightRegion>("AutoParkView"));
-            RegionManager.RegisterViewWithRegion(RegionNames.RightPanelName, () => UnityContainer.Resolve<IViewRightRegion>("HomeView"));
 
-            RegionManager.RegisterViewWithRegion(RegionNames.MenuPanelName, () => UnityContainer.Resolve<IMenuView>());
+            RegionManager.RegisterViewWithRegion(RegionNames.RightPanelName, () => UnityContainer.Resolve<IViewRightRegion>("HomeView"));
+            RegionManager.RegisterViewWithRegion(RegionNames.RightPanelName, () => UnityContainer.Resolve<IViewRightRegion>("AutoParkView"));
+
+            RegionManager.RegisterViewWithRegion(RegionNames.MenuPanelName, () => UnityContainer.Resolve<IViewMenuRegion>());
             EventAggregator.GetEvent<MenuEvent>().Subscribe(onRightRegionNeedChangeEvent);
         }
 
@@ -27,12 +28,14 @@ namespace CustomerModule
             UnityContainer.RegisterType<IApplicationCreateViewModel, ApplicationCreateViewModel>();
             UnityContainer.RegisterType<IViewLeftRegion, ApplicationCreateView>("ApplicationCreate", new TransientLifetimeManager());
 
+            UnityContainer.RegisterType<IViewRightRegion, HomeView>("HomeView", new ContainerControlledLifetimeManager());
+
+
             UnityContainer.RegisterType<IAutoParkViewModel, AutoParkViewModel>();
             UnityContainer.RegisterType<IViewRightRegion, AutoParkView>("AutoParkView", new ContainerControlledLifetimeManager());
 
-            UnityContainer.RegisterType<IViewRightRegion, HomeView>("HomeView", new ContainerControlledLifetimeManager());
 
-            UnityContainer.RegisterType<IMenuView, MenuView>();
+            UnityContainer.RegisterType<IViewMenuRegion, MenuView>();
             UnityContainer.RegisterType<IMenuViewModel, MenuViewModel>();
 
         }

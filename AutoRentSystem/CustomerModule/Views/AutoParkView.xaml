@@ -4,7 +4,7 @@
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d" xmlns:Resources="clr-namespace:CustomerModule.Properties"
-             d:DesignHeight="566" d:DesignWidth="497" Margin="5">
+             d:DesignHeight="566" d:DesignWidth="497">
     <UserControl.Resources>
         <Resources:Resources x:Key="Res"/>
         <Style x:Key="SComboBox" TargetType="ComboBox">

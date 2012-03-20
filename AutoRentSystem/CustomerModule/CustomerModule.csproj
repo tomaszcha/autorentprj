@@ -98,10 +98,6 @@
     <Compile Include="Views\HomeView.xaml.cs">
       <DependentUpon>HomeView.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Views\IApplicationCreateView.cs" />
-    <Compile Include="Views\IAutoParkView.cs" />
-    <Compile Include="Views\IHomeView.cs" />
-    <Compile Include="Views\IMenuView.cs" />
     <Compile Include="Views\MenuView.xaml.cs">
       <DependentUpon>MenuView.xaml</DependentUpon>
     </Compile>
