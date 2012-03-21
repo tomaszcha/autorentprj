@@ -7,7 +7,6 @@
     mc:Ignorable="d" xmlns:Resources="clr-namespace:CustomerModule.Properties"
     d:DesignHeight="566" d:DesignWidth="497">
     <UserControl.Resources>
-        
         <Resources:Resources x:Key="Res"/>       
         <Style x:Key="SComboBox" TargetType="ComboBox">
             <Setter Property="HorizontalAlignment" Value="Left"/>

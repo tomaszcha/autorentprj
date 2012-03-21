@@ -10,6 +10,8 @@ using System.Windows.Media.Animation;
 using System.Windows.Shapes;
 using ModulesInfrastructure;
 using GlblManagerModule.View;
+using Microsoft.Practices.Prism.Modularity;
+using Microsoft.Practices.Prism.Regions;
 
 namespace GlblManagerModule
 {

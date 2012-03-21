@@ -3,10 +3,96 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:MainRes= "clr-namespace:GlblManagerModule.Assets.Resources"
+    xmlns:sdk="http://schemas.microsoft.com/winfx/2006/xaml/presentation/sdk"
     mc:Ignorable="d"
-    d:DesignHeight="300" d:DesignWidth="400">
-    
-    <Grid x:Name="LayoutRoot" Background="White">
+    d:DesignHeight="100" d:DesignWidth="250" >
 
+    <UserControl.Resources>
+        <MainRes:ModuleStrings x:Key="ResStr" />
+        <Style x:Key="SHeaderText" TargetType="sdk:Label">
+            <Setter Property="HorizontalContentAlignment" Value="Center"/>
+            <Setter Property="FontSize" Value="15"/>
+        </Style>
+    </UserControl.Resources>
+
+    <Grid x:Name="LayoutRoot" Background="White">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+        <sdk:Label Content="{Binding Path=labelHeaderText, Source={StaticResource ResStr}}" 
+                   Name="labelHeader" 
+                   Style="{StaticResource SHeaderText}" />
+        <sdk:DataGrid x:Name="OffiseList" CanUserReorderColumns="False" 
+                      CanUserSortColumns="False" ItemsSource="{Binding Offices}" SelectedItem="{Binding CurOffice, Mode=TwoWay}"
+                      RowDetailsVisibilityMode="VisibleWhenSelected" ScrollViewer.VerticalScrollBarVisibility="Auto" 
+                      AutoGenerateColumns="False" Grid.Row="1">
+            <sdk:DataGrid.Columns>
+                <sdk:DataGridTextColumn Width="auto" Header="№" Binding="{Binding Make.Name}"/>
+                <sdk:DataGridTextColumn Width="auto" Header="Code" Binding="{Binding Name}"/>
+                <sdk:DataGridTextColumn Width="auto" Header="Name" Binding="{Binding KmRate}"/>
+                <sdk:DataGridTextColumn Width="auto" Header="City" Binding="{Binding DayRate}"/>
+            </sdk:DataGrid.Columns>
+            <sdk:DataGrid.RowGroupHeaderStyles>
+                <Style TargetType="sdk:DataGridRowGroupHeader">
+                    <Setter Property="PropertyNameVisibility" Value="Collapsed" />
+                    <Setter Property="Background" Value="#708090" />
+                    <Setter Property="Foreground" Value="#FFEEEEEE" />
+                    <Setter Property="SublevelIndent" Value="15" />
+                </Style>
+                <Style TargetType="sdk:DataGridRowGroupHeader">
+                    <Setter Property="Background" Value="#44225566" />
+                </Style>
+            </sdk:DataGrid.RowGroupHeaderStyles>
+            <sdk:DataGrid.RowDetailsTemplate>
+                <DataTemplate>
+                    <Border BorderBrush="Black" 
+                      BorderThickness="1" Background="White">
+                        <Grid>
+                            <Grid.Background>
+                                <LinearGradientBrush StartPoint="0,0" EndPoint="0,1">
+                                    <GradientStop Color="White" Offset="0"/>
+                                    <GradientStop Color="LightSteelBlue" Offset="1"/>
+                                </LinearGradientBrush>
+                            </Grid.Background>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="0.3*" />
+                                <ColumnDefinition Width="0.5*" />
+                                <ColumnDefinition Width="0.2*" />
+                            </Grid.ColumnDefinitions>
+                            <Image Width="200" Height="140" Source="/CustomerModule;component/Images/Mazda.jpg" 
+                               Grid.Column="0" HorizontalAlignment="Right"  />
+                            <StackPanel Orientation="Vertical" Grid.Column="1" Margin="10,0,0,0" >
+                                <StackPanel Orientation="Horizontal">
+                                    <TextBlock FontSize="14" Text="{Binding Make.Name}" />
+                                    <TextBlock FontSize="14" Text="{Binding Name}" Margin="5,0,0,0" />
+                                </StackPanel>
+                                <StackPanel Orientation="Horizontal">
+                                    <TextBlock FontSize="12" Text="{Binding Seats, Source={StaticResource Res}}" />
+                                    <TextBlock FontSize="12" Text="{Binding Seats}" Margin="5,0,0,0" />
+                                </StackPanel>
+                                <StackPanel Orientation="Horizontal">
+                                    <TextBlock FontSize="12" Text="{Binding Engine, Source={StaticResource Res}}" />
+                                    <TextBlock FontSize="12" Text="{Binding EngineCapacity}" Margin="5,0,0,0" />
+                                </StackPanel>
+                                <StackPanel Orientation="Horizontal">
+                                    <TextBlock FontSize="12" Text="{Binding KmRate, Source={StaticResource Res}}" />
+                                    <TextBlock FontSize="12" Text="{Binding KmRate}" Margin="5,0,0,0" />
+                                </StackPanel>
+                                <StackPanel Orientation="Horizontal">
+                                    <TextBlock FontSize="12" Text="{Binding DayRate, Source={StaticResource Res}}" />
+                                    <TextBlock FontSize="12" Text="{Binding DayRate}" />
+                                </StackPanel>
+                                <StackPanel Orientation="Horizontal">
+                                    <TextBlock FontSize="12" Text="{Binding Deposit, Source={StaticResource Res}}" />
+                                    <TextBlock FontSize="12" Text="{Binding Deposit}" />
+                                </StackPanel>
+                            </StackPanel>
+                        </Grid>
+                    </Border>
+                </DataTemplate>
+            </sdk:DataGrid.RowDetailsTemplate>
+        </sdk:DataGrid>
     </Grid>
 </UserControl>
