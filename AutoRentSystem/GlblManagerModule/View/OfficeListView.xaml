@@ -49,47 +49,6 @@
                 <DataTemplate>
                     <Border BorderBrush="Black" 
                       BorderThickness="1" Background="White">
-                        <Grid>
-                            <Grid.Background>
-                                <LinearGradientBrush StartPoint="0,0" EndPoint="0,1">
-                                    <GradientStop Color="White" Offset="0"/>
-                                    <GradientStop Color="LightSteelBlue" Offset="1"/>
-                                </LinearGradientBrush>
-                            </Grid.Background>
-                            <Grid.ColumnDefinitions>
-                                <ColumnDefinition Width="0.3*" />
-                                <ColumnDefinition Width="0.5*" />
-                                <ColumnDefinition Width="0.2*" />
-                            </Grid.ColumnDefinitions>
-                            <Image Width="200" Height="140" Source="/CustomerModule;component/Images/Mazda.jpg" 
-                               Grid.Column="0" HorizontalAlignment="Right"  />
-                            <StackPanel Orientation="Vertical" Grid.Column="1" Margin="10,0,0,0" >
-                                <StackPanel Orientation="Horizontal">
-                                    <TextBlock FontSize="14" Text="{Binding Make.Name}" />
-                                    <TextBlock FontSize="14" Text="{Binding Name}" Margin="5,0,0,0" />
-                                </StackPanel>
-                                <StackPanel Orientation="Horizontal">
-                                    <TextBlock FontSize="12" Text="{Binding Seats, Source={StaticResource Res}}" />
-                                    <TextBlock FontSize="12" Text="{Binding Seats}" Margin="5,0,0,0" />
-                                </StackPanel>
-                                <StackPanel Orientation="Horizontal">
-                                    <TextBlock FontSize="12" Text="{Binding Engine, Source={StaticResource Res}}" />
-                                    <TextBlock FontSize="12" Text="{Binding EngineCapacity}" Margin="5,0,0,0" />
-                                </StackPanel>
-                                <StackPanel Orientation="Horizontal">
-                                    <TextBlock FontSize="12" Text="{Binding KmRate, Source={StaticResource Res}}" />
-                                    <TextBlock FontSize="12" Text="{Binding KmRate}" Margin="5,0,0,0" />
-                                </StackPanel>
-                                <StackPanel Orientation="Horizontal">
-                                    <TextBlock FontSize="12" Text="{Binding DayRate, Source={StaticResource Res}}" />
-                                    <TextBlock FontSize="12" Text="{Binding DayRate}" />
-                                </StackPanel>
-                                <StackPanel Orientation="Horizontal">
-                                    <TextBlock FontSize="12" Text="{Binding Deposit, Source={StaticResource Res}}" />
-                                    <TextBlock FontSize="12" Text="{Binding Deposit}" />
-                                </StackPanel>
-                            </StackPanel>
-                        </Grid>
                     </Border>
                 </DataTemplate>
             </sdk:DataGrid.RowDetailsTemplate>
