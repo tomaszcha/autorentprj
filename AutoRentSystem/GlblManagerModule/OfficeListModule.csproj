@@ -46,6 +46,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Microsoft.Practices.Prism.UnityExtensions">
+      <HintPath>..\LibCommon\prism\Silverlight\Microsoft.Practices.Prism.UnityExtensions.dll</HintPath>
+    </Reference>
     <Reference Include="mscorlib" />
     <Reference Include="System.Windows" />
     <Reference Include="system" />
@@ -55,8 +58,32 @@
     <Reference Include="System.Windows.Browser" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="GlblManagerModule.cs" />
+    <Compile Include="Assets\Resources\ModuleStrings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ModuleStrings.resx</DependentUpon>
+    </Compile>
+    <Compile Include="OfficeListModule.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Assets\Resources\ModuleStrings.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>ModuleStrings.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\EventInfrastracture\EventInfrastracture.csproj">
+      <Project>{8B4993D7-A007-4A0E-8EF4-B7323DAAEEEE}</Project>
+      <Name>EventInfrastracture</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ModulesInfrastructure\ModulesInfrastructure.csproj">
+      <Project>{9EC7A04C-4450-4C9C-B03F-91ECF50189F3}</Project>
+      <Name>ModulesInfrastructure</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Silverlight\$(SilverlightVersion)\Microsoft.Silverlight.CSharp.targets" />
   <ProjectExtensions>
