@@ -9,18 +9,17 @@ using System.Windows.Media;
 using System.Windows.Media.Animation;
 using System.Windows.Shapes;
 using ModulesInfrastructure;
-using GlblManagerModule.View;
+using GlblManagerMenuModule.View;
+using Microsoft.Practices.Prism.Modularity;
+using Microsoft.Practices.Prism.Regions;
 
-namespace GlblManagerModule
+namespace GlblManagerMenuModule
 {
-    /// <summary>
-    /// presents a list of offices
-    /// </summary>
-    public class OfficeListModule : ModuleBase
+    public class GlblManagerMenuModule : ModuleBase
     {
         protected override void RegisterViewsInRegions()
         {
-            RegionManager.RegisterViewWithRegion("LeftRegion", typeof(OfficeListView));
+            RegionManager.RegisterViewWithRegion("MenuRegion", typeof(GlblManagerMenuView));
         }
 
         protected override void RegisterTypesDependencies()

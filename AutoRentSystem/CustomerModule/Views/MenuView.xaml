@@ -10,7 +10,7 @@
             <Setter Property="Background" Value="Red"/>
             <Setter Property="Width" Value="auto"/>
             <Setter Property="MinWidth" Value="150"/>
-            <Setter Property="Margin" Value="3,5,3,0"/>
+            <Setter Property="Margin" Value="5"/>
             <Setter Property="Opacity" Value="0.6"/>
             <Setter Property="Foreground" Value="Black"/>
             <Setter Property="FontWeight" Value="ExtraBlack"/>

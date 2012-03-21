@@ -1,0 +1,30 @@
+﻿<UserControl x:Class="GlblManagerMenuModule.View.GlblManagerMenuView"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:MainRes="clr-namespace:GlblManagerMenuModule.Assets.Resources"
+    mc:Ignorable="d" d:DesignHeight="50" d:DesignWidth="818">
+    <UserControl.Resources>
+        <MainRes:ModuleStrings x:Key="ResStr" />
+        <Style x:Key="MenuButton" TargetType="Button">
+            <Setter Property="Background" Value="Red"/>
+            <Setter Property="Width" Value="auto"/>
+            <Setter Property="MinWidth" Value="150"/>
+            <Setter Property="Margin" Value="5"/>
+            <Setter Property="Opacity" Value="0.6"/>
+            <Setter Property="Foreground" Value="Black"/>
+            <Setter Property="FontWeight" Value="ExtraBlack"/>
+            <Setter Property="FontSize" Value="13"/>
+        </Style>
+    </UserControl.Resources>
+    <Grid>
+        <StackPanel Orientation="Horizontal">
+            <Button Name="btnOffice" Style="{StaticResource MenuButton}" Content="{Binding Path=btnOfficeText, Source={StaticResource ResStr}}" Command="{Binding OnMenuCliclCommand}" CommandParameter="btnOffice"/>
+            <Button Name="btnAuto" Style="{StaticResource MenuButton}" Content="{Binding Path=btnAutoText, Source={StaticResource ResStr}}" Command="{Binding OnMenuCliclCommand}" CommandParameter="btnAuto"/>
+            <Button Name="btnEmploye" Style="{StaticResource MenuButton}" Content="{Binding Path=btnEmployeText, Source={StaticResource ResStr}}" Command="{Binding OnMenuCliclCommand}" CommandParameter="btnEmploye"/>
+            <Button Name="btnInsurance" Style="{StaticResource MenuButton}" Content="{Binding Path=btnInsuranceText, Source={StaticResource ResStr}}" Command="{Binding OnMenuCliclCommand}" CommandParameter="btnInsurance"/>
+            <Button Name="btnReports" Style="{StaticResource MenuButton}" Content="{Binding Path=btnReportsText, Source={StaticResource ResStr}}" Command="{Binding OnMenuCliclCommand}" CommandParameter="btnReports"/>
+        </StackPanel>
+    </Grid>
+</UserControl>
