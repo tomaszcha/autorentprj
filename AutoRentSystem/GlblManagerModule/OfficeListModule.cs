@@ -9,11 +9,16 @@ using System.Windows.Media;
 using System.Windows.Media.Animation;
 using System.Windows.Shapes;
 using ModulesInfrastructure;
+using GlblManagerModule.View;
 
 namespace GlblManagerModule
 {
     public class OfficeListModule : ModuleBase
     {
+        protected override void RegisterViewsInRegions()
+        {
+            RegionManager.RegisterViewWithRegion("LeftRegion", typeof(OfficeListView));
+        }
 
     }
 }

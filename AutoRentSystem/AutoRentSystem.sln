@@ -96,7 +96,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "ManagerModule", "ManagerMod
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "GlblManagerModule", "GlblManagerModule", "{C0E79E23-D691-4EC5-BBF4-30133A6EAB4D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GlblManagerModule", "GlblManagerModule\GlblManagerModule.csproj", "{C52B8EF8-0717-44B1-B485-2ADDE962E566}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OfficeListModule", "GlblManagerModule\OfficeListModule.csproj", "{C52B8EF8-0717-44B1-B485-2ADDE962E566}"
 EndProject
 Global
 	GlobalSection(SubversionScc) = preSolution
