@@ -18,7 +18,7 @@ namespace GlblManagerModule
     /// <summary>
     /// presents a list of offices
     /// </summary>
-    public class OfficeListModule : ModuleBase
+    public class OfficeDataModule : ModuleBase
     {
         protected override void RegisterViewsInRegions()
         {
