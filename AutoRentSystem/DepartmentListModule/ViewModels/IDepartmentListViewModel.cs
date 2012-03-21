@@ -11,7 +11,7 @@ using System.Windows.Shapes;
 
 namespace DepartmentListModule.ViewModels
 {
-    public class IDepartmentListViewModel
+    public interface IDepartmentListViewModel
     {
 
     }
