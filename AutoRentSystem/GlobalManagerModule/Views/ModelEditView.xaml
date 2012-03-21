@@ -1,0 +1,53 @@
+﻿<UserControl x:Class="GlobalManagerModule.Views.ModelEditView"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    d:DesignHeight="345" d:DesignWidth="400" xmlns:sdk="http://schemas.microsoft.com/winfx/2006/xaml/presentation/sdk">
+    
+    <Grid x:Name="LayoutRoot" Background="White" Height="337">
+        <StackPanel Orientation="Vertical" Margin="20">
+            <StackPanel Orientation="Horizontal">
+                <sdk:Label Height="28" Content="Category" HorizontalAlignment="Left" Name="lblCategory" VerticalAlignment="Top" Width="120"/>
+                <ComboBox Height="23" Name="comboCategory" Width="200" />
+            </StackPanel>
+            <StackPanel Orientation="Horizontal">
+                <sdk:Label Height="28" Content="Make" HorizontalAlignment="Left" Name="lblMake" VerticalAlignment="Top" Width="120"/>
+                <ComboBox Height="23" Name="comboMakeName" Width="200" />
+            </StackPanel>
+            <StackPanel Orientation="Horizontal">
+                <sdk:Label Height="28" Content="Model name" HorizontalAlignment="Left" Name="lblName" VerticalAlignment="Top" Width="120"/>
+                <TextBox Height="23" HorizontalAlignment="Left" Name="textBoxName" VerticalAlignment="Top" Width="200"/>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal">
+                <sdk:Label Height="28" Content="Phone" HorizontalAlignment="Left" Name="lblPhone" VerticalAlignment="Top" Width="120"/>
+                <TextBox Height="23" HorizontalAlignment="Left" Name="textBoxPhone" VerticalAlignment="Top" Width="200"/>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal">
+                <sdk:Label Height="28" Content="Seats" HorizontalAlignment="Left" Name="lblSeats" VerticalAlignment="Top" Width="120"/>
+                <TextBox Height="23" HorizontalAlignment="Left" Name="textBoxSeats" VerticalAlignment="Top" Width="200"/>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal">
+                <sdk:Label Height="28" Content="Engine" HorizontalAlignment="Left" Name="lblEngine" VerticalAlignment="Top" Width="120"/>
+                <TextBox Height="23" HorizontalAlignment="Left" Name="textBoxEngine" VerticalAlignment="Top" Width="200"/>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal">
+                <sdk:Label Height="28" Content="Km rate" HorizontalAlignment="Left" Name="lblKmRate" VerticalAlignment="Top" Width="120"/>
+                <TextBox Height="23" HorizontalAlignment="Left" Name="textBoxKmRate" VerticalAlignment="Top" Width="200"/>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal">
+                <sdk:Label Height="28" Content="Day rate" HorizontalAlignment="Left" Name="lblDayRate" VerticalAlignment="Top" Width="120"/>
+                <TextBox Height="23" HorizontalAlignment="Left" Name="textBoxDayRate" VerticalAlignment="Top" Width="200"/>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal">
+                <sdk:Label Height="28" Content="Deposit" HorizontalAlignment="Left" Name="lblDeposit" VerticalAlignment="Top" Width="120"/>
+                <TextBox Height="23" HorizontalAlignment="Left" Name="textBoxDeposit" VerticalAlignment="Top" Width="200"/>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Margin="0,4,0,0">
+                <Button Content="Save" Height="23" Name="btnSave" Width="75" />
+                <Button Content="Cancel" Height="23" Name="btnCancel" Width="75" Margin="4,0,0,0"/>
+            </StackPanel>            
+        </StackPanel>
+    </Grid>
+</UserControl>

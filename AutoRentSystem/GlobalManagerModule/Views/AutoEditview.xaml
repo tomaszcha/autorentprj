@@ -1,0 +1,57 @@
+﻿<UserControl x:Class="GlobalManagerModule.Views.AutoEditView"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    d:DesignHeight="361" d:DesignWidth="400" xmlns:sdk="http://schemas.microsoft.com/winfx/2006/xaml/presentation/sdk">
+    
+    <Grid x:Name="LayoutRoot" Background="White">
+        <StackPanel Orientation="Vertical" Margin="20">
+            <StackPanel Orientation="Horizontal">
+                <sdk:Label Height="28" Content="Auto number" HorizontalAlignment="Left" Name="lblNumber" VerticalAlignment="Top" Width="120"/>
+                <TextBox Height="23" HorizontalAlignment="Left" Name="textBoxNumber" VerticalAlignment="Top" Width="200"/>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal">
+                <sdk:Label Height="28" Content="Insuarance agency" HorizontalAlignment="Left" Name="lblAgency" VerticalAlignment="Top" Width="120"/>
+                <ComboBox Height="23" Name="cmbBoxAgency" Width="200" />
+            </StackPanel>
+            <StackPanel Orientation="Horizontal">
+                <sdk:Label Height="28" Content="Insuarance number" HorizontalAlignment="Left" Name="lblInsuar" VerticalAlignment="Top" Width="120"/>
+                <TextBox Height="23" HorizontalAlignment="Left" Name="textBoxInsuar" VerticalAlignment="Top" Width="200"/>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal">
+                <sdk:Label Height="28" Content="Make" HorizontalAlignment="Left" Name="lblMake" VerticalAlignment="Top" Width="120"/>
+                <ComboBox Height="23" Name="cmboBoxMake" Width="200" />
+            </StackPanel>
+            <StackPanel Orientation="Horizontal">
+                <sdk:Label Height="28" Content="Model" HorizontalAlignment="Left" Name="lblModel" VerticalAlignment="Top" Width="120"/>
+                <ComboBox Height="23" Name="cmbBoxModel" Width="200" />
+            </StackPanel>
+            <StackPanel Orientation="Horizontal">
+                <sdk:Label Height="28" Content="Year" HorizontalAlignment="Left" Name="lblYear" VerticalAlignment="Top" Width="120"/>
+                <TextBox Height="23" HorizontalAlignment="Left" Name="textBoxYear" VerticalAlignment="Top" Width="200"/>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal">
+                <sdk:Label Height="28" Content="Mileage" HorizontalAlignment="Left" Name="lblMileage" VerticalAlignment="Top" Width="120"/>
+                <TextBox Height="23" HorizontalAlignment="Left" Name="textBoxMileage" VerticalAlignment="Top" Width="200"/>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal">
+                <sdk:Label Height="28" Content="Color" HorizontalAlignment="Left" Name="lblColor" VerticalAlignment="Top" Width="120"/>
+                <ComboBox Height="23" Name="cmbBoxColor" Width="200" />
+            </StackPanel>
+            <StackPanel Orientation="Horizontal">
+                <sdk:Label Height="28" Content="LastCheckDate" HorizontalAlignment="Left" Name="lblLastCheckDate" VerticalAlignment="Top" Width="120"/>
+                <sdk:DatePicker Name="datePickerLastCheckDate" Height ="23" Width="200"/>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal">
+                <sdk:Label Height="28" Content="Description" HorizontalAlignment="Left" Name="lblDescr" VerticalAlignment="Top" Width="120"/>
+                <TextBox Height="23" HorizontalAlignment="Left" Name="textBoxDescr" VerticalAlignment="Top" Width="200"/>
+            </StackPanel>           
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Margin="0,4,0,0">
+                <Button Content="Save" Height="23" Name="btnSave" Width="75" />
+                <Button Content="Cancel" Height="23" Name="btnCancel" Width="75" Margin="4,0,0,0"/>
+            </StackPanel>
+        </StackPanel>
+    </Grid>
+</UserControl>
