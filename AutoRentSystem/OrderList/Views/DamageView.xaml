@@ -1,0 +1,47 @@
+﻿<UserControl x:Class="OrderList.Views.DamageView"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    d:DesignHeight="300" d:DesignWidth="420" xmlns:sdk="http://schemas.microsoft.com/winfx/2006/xaml/presentation/sdk">
+
+    <Grid x:Name="LayoutRoot" Background="White">
+        <StackPanel Orientation="Vertical" Margin="20">
+            <StackPanel Orientation="Horizontal">
+                <sdk:Label Height="28" Content="Auto number" HorizontalAlignment="Left" Name="lblNumber" VerticalAlignment="Top" Width="120"/>
+                <TextBox Height="23" Name="textNumber" Width="200"/>
+                <Button Content="Select" Height="23" Name="btnSelectAuto" Width="50" />
+            </StackPanel>
+            <StackPanel Orientation="Horizontal">
+                <sdk:Label Height="28" Content="Make" HorizontalAlignment="Left" Name="lblMake" VerticalAlignment="Top" Width="120"/>
+                <TextBox Height="23" Name="textMake" Width="200"/>                
+            </StackPanel>
+            <StackPanel Orientation="Horizontal">
+                <sdk:Label Height="28" Content="Model" HorizontalAlignment="Left" Name="lblModel" VerticalAlignment="Top" Width="120"/>
+                <TextBox Height="23" Name="txtModel" Width="200"/>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal">
+                <sdk:Label Height="28" Content="Damage" HorizontalAlignment="Left" Name="lblDamageName" VerticalAlignment="Top" Width="120"/>
+                <TextBox Height="23" Name="txtDamageName" Width="200"/>
+                <Button Content="Select" Height="23" Name="btnSelectDmg" Width="50" />
+            </StackPanel>
+            <StackPanel Orientation="Horizontal">
+                <sdk:Label Height="28" Content="Price" HorizontalAlignment="Left" Name="lblPrice" VerticalAlignment="Top" Width="120"/>
+                <TextBox Height="23" Name="txtPrice" Width="200"/>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal">
+                <sdk:Label Height="28" Content="DamageDate" HorizontalAlignment="Left" Name="lblDmgDate" VerticalAlignment="Top" Width="120"/>
+                <sdk:DatePicker Height="23" Name="datePickerDmgDate" Width="200" />
+            </StackPanel>
+            <StackPanel Orientation="Horizontal">
+                <sdk:Label Height="28" Content="FixDate" HorizontalAlignment="Left" Name="lblFixDate" VerticalAlignment="Top" Width="120"/>
+                <sdk:DatePicker Height="23" Name="dateFixDate" Width="200" />
+            </StackPanel>
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Margin="0,4,0,0">
+                <Button Content="Save" Height="23" Name="btnSave" Width="75" />
+                <Button Content="Cancel" Height="23" Name="btnCancel" Width="75" Margin="4,0,0,0"/>
+            </StackPanel>
+        </StackPanel>
+    </Grid>
+</UserControl>
