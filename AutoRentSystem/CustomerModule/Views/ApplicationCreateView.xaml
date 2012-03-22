@@ -42,6 +42,16 @@
         </Style>
 
         </UserControl.Resources>
+    <Border x:Name="brdTest" BorderThickness="4">
+        <Border.BorderBrush>
+            <LinearGradientBrush x:Name="borderLinearGradientBrush" MappingMode="RelativeToBoundingBox" StartPoint="0.5,0" EndPoint="0.5,1">
+                <LinearGradientBrush.GradientStops>
+                    <GradientStop Color="Red" Offset="0" />
+                    <GradientStop Color="SteelBlue" Offset="0.5" />
+                    <GradientStop Color="DarkSlateGray" Offset="1" />
+                </LinearGradientBrush.GradientStops>
+            </LinearGradientBrush>
+        </Border.BorderBrush>
         <Grid x:Name="LayoutRoot" Opacity="0.8" Background="White">
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto"/>
@@ -102,4 +112,5 @@
         <Rectangle Grid.Column="1" Grid.Row="18" Grid.ColumnSpan="2" Margin="0,0,-9,0" />
         
     </Grid>
+        </Border>
 </UserControl>
