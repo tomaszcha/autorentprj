@@ -22,7 +22,7 @@
             </Grid.RowDefinitions>
             <sdk:Label Height="28" HorizontalAlignment="Left" Name="lblRentalConditions" VerticalAlignment="Top" 
                    Width="225" Content="Rental conditions" FontSize="18" FontWeight="Bold" />
-            <RichTextBox HorizontalAlignment="Left" Margin="20" Name="richTextBox1" VerticalAlignment="Top" MinWidth="500"
+            <RichTextBox HorizontalAlignment="Left" Margin="20" Name="richTextBoxConditions" VerticalAlignment="Top" MinWidth="500"
                      MinHeight="500" IsReadOnly="True" VerticalScrollBarVisibility="Auto" Background="White" Grid.Row="1">
                 <Paragraph TextAlignment="Justify" FontSize="14">
                     <Run Text="{Binding Path=ConditionsHead, Mode=OneWay}" FontWeight="Bold" FontStyle="Italic" />
