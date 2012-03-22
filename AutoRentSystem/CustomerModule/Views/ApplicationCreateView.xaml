@@ -42,7 +42,7 @@
         </Style>
 
     </UserControl.Resources>
-    <Border x:Name="brdTest" BorderThickness="4">
+    <Border x:Name="brdTest" BorderThickness="4" >
         <Border.BorderBrush>
             <LinearGradientBrush x:Name="borderLinearGradientBrush" MappingMode="RelativeToBoundingBox" StartPoint="0.5,0" EndPoint="0.5,1">
                 <LinearGradientBrush.GradientStops>
