@@ -5,6 +5,16 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d"
     d:DesignHeight="600" d:DesignWidth="600" xmlns:sdk="http://schemas.microsoft.com/winfx/2006/xaml/presentation/sdk">
+    <Border x:Name="brdTest" BorderThickness="4">
+        <Border.BorderBrush>
+            <LinearGradientBrush x:Name="borderLinearGradientBrush" MappingMode="RelativeToBoundingBox" StartPoint="0.5,0" EndPoint="0.5,1">
+                <LinearGradientBrush.GradientStops>
+                    <GradientStop Color="Red" Offset="0" />
+                    <GradientStop Color="SteelBlue" Offset="0.5" />
+                    <GradientStop Color="DarkSlateGray" Offset="1" />
+                </LinearGradientBrush.GradientStops>
+            </LinearGradientBrush>
+        </Border.BorderBrush>
     
     <Grid x:Name="LayoutRoot" Background="White" Opacity="0.8">
         <Grid.RowDefinitions>
@@ -39,6 +49,7 @@
             <Paragraph TextAlignment="Justify" FontSize="14">
                 <Run Text="{Binding Path=AddFees, Mode=OneWay}" />
             </Paragraph>               
-        </RichTextBox>        
-    </Grid>
+        </RichTextBox>
+        </Grid>
+    </Border>
 </UserControl>
