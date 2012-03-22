@@ -100,6 +100,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OfficeDataModule", "GlblMan
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GlblManagerMenuModule", "GlblManagerMenuModule\GlblManagerMenuModule.csproj", "{2D0BBE01-9419-46E8-9550-DA1054DE48D7}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GlobalManagerModule", "GlobalManagerModule\GlobalManagerModule.csproj", "{BA543BCD-B8BC-444E-855F-86911587571E}"
+EndProject
 Global
 	GlobalSection(SubversionScc) = preSolution
 		Svn-Managed = True
@@ -284,6 +286,16 @@ Global
 		{2D0BBE01-9419-46E8-9550-DA1054DE48D7}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
 		{2D0BBE01-9419-46E8-9550-DA1054DE48D7}.Release|Mixed Platforms.Build.0 = Release|Any CPU
 		{2D0BBE01-9419-46E8-9550-DA1054DE48D7}.Release|x86.ActiveCfg = Release|Any CPU
+		{BA543BCD-B8BC-444E-855F-86911587571E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BA543BCD-B8BC-444E-855F-86911587571E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BA543BCD-B8BC-444E-855F-86911587571E}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{BA543BCD-B8BC-444E-855F-86911587571E}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
+		{BA543BCD-B8BC-444E-855F-86911587571E}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{BA543BCD-B8BC-444E-855F-86911587571E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BA543BCD-B8BC-444E-855F-86911587571E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BA543BCD-B8BC-444E-855F-86911587571E}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{BA543BCD-B8BC-444E-855F-86911587571E}.Release|Mixed Platforms.Build.0 = Release|Any CPU
+		{BA543BCD-B8BC-444E-855F-86911587571E}.Release|x86.ActiveCfg = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -310,5 +322,6 @@ Global
 		{75B57483-B628-4406-807B-71EF179DB068} = {783DB40E-F2E3-4C2D-B6E5-3E2A1FBE20DD}
 		{C52B8EF8-0717-44B1-B485-2ADDE962E566} = {C0E79E23-D691-4EC5-BBF4-30133A6EAB4D}
 		{2D0BBE01-9419-46E8-9550-DA1054DE48D7} = {C0E79E23-D691-4EC5-BBF4-30133A6EAB4D}
+		{BA543BCD-B8BC-444E-855F-86911587571E} = {C0E79E23-D691-4EC5-BBF4-30133A6EAB4D}
 	EndGlobalSection
 EndGlobal
