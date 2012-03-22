@@ -15,41 +15,40 @@
                 </LinearGradientBrush.GradientStops>
             </LinearGradientBrush>
         </Border.BorderBrush>
-    
-    <Grid x:Name="LayoutRoot" Background="White" Opacity="0.8">
-        <Grid.RowDefinitions>
-            <RowDefinition Height="50"/>
-            <RowDefinition Height="*"/>
-        </Grid.RowDefinitions>
-        <sdk:Label Height="28" HorizontalAlignment="Left" Name="lblRentalConditions" VerticalAlignment="Top" 
+        <Grid x:Name="LayoutRoot" Background="White" Opacity="0.8">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="50"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+            <sdk:Label Height="28" HorizontalAlignment="Left" Name="lblRentalConditions" VerticalAlignment="Top" 
                    Width="225" Content="Rental conditions" FontSize="18" FontWeight="Bold" />
-        <RichTextBox HorizontalAlignment="Left" Margin="20" Name="richTextBox1" VerticalAlignment="Top" MinWidth="500"
+            <RichTextBox HorizontalAlignment="Left" Margin="20" Name="richTextBox1" VerticalAlignment="Top" MinWidth="500"
                      MinHeight="500" IsReadOnly="True" VerticalScrollBarVisibility="Auto" Background="White" Grid.Row="1">
-            <Paragraph TextAlignment="Justify" FontSize="14">
-                <Run Text="{Binding Path=ConditionsHead, Mode=OneWay}" FontWeight="Bold" FontStyle="Italic" />
-            </Paragraph>
-            <Paragraph TextAlignment="Justify" FontSize="14">
-                <Run Text="{Binding Path=Conditions, Mode=OneWay}" />
-            </Paragraph>                     
-            <Paragraph TextAlignment="Justify" FontSize="14">
-                <Run Text="{Binding Path=IncludePriceHead, Mode=OneWay}" FontWeight="Bold" FontStyle="Italic" />
-            </Paragraph>
-            <Paragraph TextAlignment="Justify" FontSize="14">
-                <Run Text="{Binding Path=IncludePrice, Mode=OneWay}" />
-            </Paragraph>
-            <Paragraph TextAlignment="Justify" FontSize="14">
-                <Run Text="{Binding Path=ExcludePriceHead, Mode=OneWay}" FontWeight="Bold" FontStyle="Italic" />
-            </Paragraph>
-            <Paragraph TextAlignment="Justify" FontSize="14">
-                <Run Text="{Binding Path=ExcludePrice, Mode=OneWay}" />
-            </Paragraph>
-            <Paragraph TextAlignment="Justify" FontSize="14">
-                <Run Text="{Binding Path=AddFeesHead, Mode=OneWay}" FontWeight="Bold" FontStyle="Italic" />
-            </Paragraph>
-            <Paragraph TextAlignment="Justify" FontSize="14">
-                <Run Text="{Binding Path=AddFees, Mode=OneWay}" />
-            </Paragraph>               
-        </RichTextBox>
+                <Paragraph TextAlignment="Justify" FontSize="14">
+                    <Run Text="{Binding Path=ConditionsHead, Mode=OneWay}" FontWeight="Bold" FontStyle="Italic" />
+                </Paragraph>
+                <Paragraph TextAlignment="Justify" FontSize="14">
+                    <Run Text="{Binding Path=Conditions, Mode=OneWay}" />
+                </Paragraph>
+                <Paragraph TextAlignment="Justify" FontSize="14">
+                    <Run Text="{Binding Path=IncludePriceHead, Mode=OneWay}" FontWeight="Bold" FontStyle="Italic" />
+                </Paragraph>
+                <Paragraph TextAlignment="Justify" FontSize="14">
+                    <Run Text="{Binding Path=IncludePrice, Mode=OneWay}" />
+                </Paragraph>
+                <Paragraph TextAlignment="Justify" FontSize="14">
+                    <Run Text="{Binding Path=ExcludePriceHead, Mode=OneWay}" FontWeight="Bold" FontStyle="Italic" />
+                </Paragraph>
+                <Paragraph TextAlignment="Justify" FontSize="14">
+                    <Run Text="{Binding Path=ExcludePrice, Mode=OneWay}" />
+                </Paragraph>
+                <Paragraph TextAlignment="Justify" FontSize="14">
+                    <Run Text="{Binding Path=AddFeesHead, Mode=OneWay}" FontWeight="Bold" FontStyle="Italic" />
+                </Paragraph>
+                <Paragraph TextAlignment="Justify" FontSize="14">
+                    <Run Text="{Binding Path=AddFees, Mode=OneWay}" />
+                </Paragraph>
+            </RichTextBox>
         </Grid>
     </Border>
 </UserControl>
