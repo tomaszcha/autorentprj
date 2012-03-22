@@ -76,24 +76,39 @@ namespace ModulesInfrastructure.ViewModels
 
         #endregion Public Method
 
-        #region IDataErrorInfo members
+        #region IDataErrorInfo members     
+
+        public string this[string columnName]
+        {
+            get
+            {
+                string error;
+                if (columnName == "Name")
+                    error = ValidateName();                
+                else error = (this as IDataErrorInfo)[columnName];
+                return error;
+            }
+        }
+
+        string ValidateName()
+        {
+            string res = null;
+            if (_name == null)
+                return "Missing";
+            if (_name.Length > 20)
+                res = "Too long";
+
+            return res;
+        }
+               
 
         public string Error
         {
             get { return (this as IDataErrorInfo).Error; }
         }
 
-        public string this[string columnName]
-        {
-            get 
-            {
-                string error = (this as IDataErrorInfo)[columnName];
-
-                //CommandManager.InvalidateRequerySuggested();
-                return error;
-            }
-        }
-
         #endregion IDataErrorInfo members
+
+
     }
 }

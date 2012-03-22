@@ -139,7 +139,7 @@ namespace CustomerModule.ViewModels
             get { return _firstName; }
             set
             {
-                if (!String.IsNullOrEmpty(value))
+                if (value != null)
                 {
                     _firstName = value;
                     OnPropertyChanged("FirstName");
@@ -155,7 +155,7 @@ namespace CustomerModule.ViewModels
             get { return _lastName; }
             set
             {
-                if (!String.IsNullOrEmpty(value))
+                if (value != null)
                 {
                     _lastName = value;
                     OnPropertyChanged("LastName");
@@ -171,7 +171,7 @@ namespace CustomerModule.ViewModels
             get { return _phone; }
             set
             {
-                if (!String.IsNullOrEmpty(value))
+               if (value != null)
                 {
                     _phone = value;
                     OnPropertyChanged("Phone");
@@ -187,7 +187,7 @@ namespace CustomerModule.ViewModels
             get { return _email; }
             set
             {
-                if (!String.IsNullOrEmpty(value))
+                if (value != null)
                 {
                     _email = value;
                     OnPropertyChanged("LastName");
@@ -201,7 +201,11 @@ namespace CustomerModule.ViewModels
         public ModelViewModel Model 
         {
             get { return _model; }
-            set { _model = value; } 
+            set 
+            { 
+                _model = value;
+                OnPropertyChanged("Model");
+            } 
         }
 
         /// <summary>
@@ -210,7 +214,11 @@ namespace CustomerModule.ViewModels
         public DateTime PickupDate
         {
             get { return _pickupDate; }
-            set { _pickupDate = value; }
+            set 
+            { 
+                _pickupDate = value;
+                OnPropertyChanged("PickupDate");
+            }
         }
 
         /// <summary>
@@ -219,7 +227,11 @@ namespace CustomerModule.ViewModels
         public DepartmentViewModel PickupDepartment 
         {
             get { return _pickupDepartment; }
-            set { _pickupDepartment = value; }
+            set 
+            { 
+                _pickupDepartment = value;
+                OnPropertyChanged("PickupDepartment");
+            }
         }  
 
         /// <summary>
@@ -228,7 +240,11 @@ namespace CustomerModule.ViewModels
         public DateTime ReturnDate
         {
             get { return _returnDate; }
-            set { _returnDate = value; }
+            set 
+            { 
+                _returnDate = value;
+                OnPropertyChanged("ReturnDate");
+            }
         }
 
         /// <summary>
@@ -237,7 +253,11 @@ namespace CustomerModule.ViewModels
         public DepartmentViewModel ReturnDepartment
         {
             get { return _returnDepartment; }
-            set { _returnDepartment = value; }
+            set 
+            { 
+                _returnDepartment = value;
+                OnPropertyChanged("ReturnDepartment");
+            }
         }  
 
         /// <summary>
@@ -248,8 +268,11 @@ namespace CustomerModule.ViewModels
             get { return _preference; }
             set
             {
-                if (!String.IsNullOrEmpty(value))
+                if (value != null)
+                {
                     _preference = value;
+                    OnPropertyChanged("Preference");
+                }
             }
         }
 
@@ -261,8 +284,11 @@ namespace CustomerModule.ViewModels
             get { return _status; }
             set
             {
-                if (!String.IsNullOrEmpty(value))
+                if (value != null)
+                {
                     _status = value;
+                    OnPropertyChanged("Satus");
+                }
             }
         }
 
