@@ -25,13 +25,13 @@ namespace ModelMock
         /// <summary>
         /// The date of the order creation
         /// </summary>
-        public DateTime CreationDate { get; set; }
+        public DateTime CreateDate { get; set; }
 
 
         /// <summary>
         /// The date of the order closing
         /// </summary>
-        public DateTime ClosingDate { get; set; }
+        public DateTime CloseDate { get; set; }
 
 
         /// <summary>

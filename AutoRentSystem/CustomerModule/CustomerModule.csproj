@@ -97,6 +97,9 @@
     <Compile Include="Views\ApplicationCreateView.xaml.cs">
       <DependentUpon>ApplicationCreateView.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Views\ApplicationListView.xaml.cs">
+      <DependentUpon>ApplicationListView.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Views\AutoParkView.xaml.cs">
       <DependentUpon>AutoParkView.xaml</DependentUpon>
     </Compile>
@@ -121,6 +124,10 @@
     <Page Include="Views\ApplicationCreateView.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\ApplicationListView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Views\AutoParkView.xaml">
       <Generator>MSBuild:Compile</Generator>

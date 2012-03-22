@@ -23,8 +23,8 @@ namespace OrderEdit.ViewModels
         #region Fields
 
         private int _id;
-        private DateTime _creationDate;
-        private DateTime _closingDate;
+        private DateTime _createDate;
+        private DateTime _closeDate;
         private Customer _customer;
         private Auto _auto;
         private DateTime _pickupDate;
@@ -53,8 +53,8 @@ namespace OrderEdit.ViewModels
         public OrderViewModel(Order order)
         {
             _id = order.Id;
-            _creationDate = order.CreationDate;
-            _closingDate = order.ClosingDate;
+            _createDate = order.CreateDate;
+            _closeDate = order.CloseDate;
             _customer = order.Customer;
             _auto = order.Auto;
             _pickupDate = order.PickupDate;
@@ -88,13 +88,13 @@ namespace OrderEdit.ViewModels
         /// <summary>
         /// The date of the order creation
         /// </summary>
-        public DateTime CreationDate
+        public DateTime CreateDate
         {
-            get { return _creationDate; }
+            get { return _createDate; }
             set
             {
-                _creationDate = value;
-                OnPropertyChanged("CreationDate");
+                _createDate = value;
+                OnPropertyChanged("CreateDate");
             }
         }
 
@@ -102,13 +102,13 @@ namespace OrderEdit.ViewModels
         /// <summary>
         /// The date of the order closing
         /// </summary>
-        public DateTime ClosingDate
+        public DateTime CloseDate
         {
-            get { return _closingDate; }
+            get { return _closeDate; }
             set
             {
-                _closingDate = value;
-                OnPropertyChanged("ClosingDate");
+                _closeDate = value;
+                OnPropertyChanged("CloseDate");
             }
         }
 
