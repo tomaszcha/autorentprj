@@ -161,11 +161,6 @@ namespace CustomerModule.ViewModels
             }
         }       
 
-        /// <summary>
-        /// Category of the auto
-        /// </summary>
-        //public CategoryViewModel Category;
-
         #endregion public
 
         #region private
@@ -194,20 +189,78 @@ namespace CustomerModule.ViewModels
 
         #region IDataErrorInfo members
 
-        public string Error
-        {
-            get { return (this as IDataErrorInfo).Error; }
-        }
-
         public string this[string columnName]
         {
             get
             {
-                string error = (this as IDataErrorInfo)[columnName];
-
-                //CommandManager.InvalidateRequerySuggested();
+                string error;
+                if (columnName == "Name")
+                    error = ValidateName();
+                else if (columnName == "Seats")
+                    error = ValidateSeats();
+                else if (columnName == "Engine")
+                    error = ValidateEngine();
+                else if (columnName == "Photo")
+                    error = ValidatePhoto();
+                else if (columnName == "KmRate" || columnName == "DayRate")
+                    error = ValidateRate();
+                else if (columnName == "Deposit")
+                    error = ValidateDeposit();
+                else if (columnName == "Category")
+                    error = ValidateCategory();
+                else error = (this as IDataErrorInfo)[columnName];
                 return error;
             }
+        }
+
+        string ValidateName()
+        {
+            string res = null;
+            if (_name == null)
+                return "Missing";
+            if (_name.Length > 20)
+                res = "Too long";
+
+            return res;
+        }
+
+        string ValidateSeats()
+        {
+            if (_seats == null)
+                return "Missing";           
+            return null;
+        }
+
+        string ValidateEngine()
+        {
+            if (_engine == null)
+                return "Missing";            
+            return null;
+        }
+
+        string ValidatePhoto()
+        {
+            return null;
+        }
+
+        string ValidateRate()
+        {
+            return null;
+        }
+
+        string ValidateDeposit()
+        {
+            return null;
+        }
+
+        string ValidateCategory()
+        {
+            return null;
+        }
+
+        public string Error
+        {
+            get { return (this as IDataErrorInfo).Error; }
         }
 
         #endregion IDataErrorInfo members
