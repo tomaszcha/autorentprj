@@ -34,6 +34,7 @@ namespace CustomerModule
             UnityContainer.RegisterType<IViewLeftRegion, ApplicationCreateView>("ApplicationCreate", new ContainerControlledLifetimeManager());
 
             UnityContainer.RegisterType<IViewRightRegion, HomeView>("HomeView", new ContainerControlledLifetimeManager());
+            UnityContainer.RegisterType<IConditionalOfRentalViewModel, ConditionalOfRentalViewModel>();
             UnityContainer.RegisterType<IViewRightRegion, ConditionalOfRentalView>("Conditions", new ContainerControlledLifetimeManager());
             UnityContainer.RegisterType<IViewRightRegion, AboutUsView>("AboutUs", new ContainerControlledLifetimeManager());
             UnityContainer.RegisterType<IViewRightRegion, ContactsView>("Contacts", new ContainerControlledLifetimeManager());

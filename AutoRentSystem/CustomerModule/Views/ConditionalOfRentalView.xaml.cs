@@ -10,6 +10,8 @@ using System.Windows.Media;
 using System.Windows.Media.Animation;
 using System.Windows.Shapes;
 using ModulesInfrastructure.Views;
+using Microsoft.Practices.Unity;
+using CustomerModule.ViewModels;
 
 namespace CustomerModule.Views
 {
@@ -18,6 +20,13 @@ namespace CustomerModule.Views
         public ConditionalOfRentalView()
         {
             InitializeComponent();
+        }
+             
+        [Dependency]
+        public IConditionalOfRentalViewModel ViewModel
+        {
+            get { return DataContext as IConditionalOfRentalViewModel; }
+            set { DataContext = value; }
         }
     }
 }
