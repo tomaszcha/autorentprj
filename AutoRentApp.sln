@@ -1,7 +1,52 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 11.00
 # Visual Studio 2010
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Infrasatracture", "Infrasatracture", "{79E7E531-CCDC-4481-8EAE-CF976F597C72}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EventInfrastracture", "EventInfrastracture\EventInfrastracture.csproj", "{434F9A5F-7303-459A-9BBA-06C487C6A5D8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ModuleInfrastracture", "ModuleInfrastracture\ModuleInfrastracture.csproj", "{8D54AB83-F6C5-49A9-AF1A-313E6C5EC3AE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ShellInfrastracture", "ShellInfrastracture\ShellInfrastracture.csproj", "{FBE74DE8-0696-44A5-8838-AEF3F7AFE32B}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Libraries", "Libraries", "{94419369-9B7B-4AF1-836E-E23CF20D797E}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Prism", "Prism", "{57028D33-A160-47E7-A9A4-BA6B426F7DA2}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Silverlight", "Silverlight", "{D023A665-FE71-4AA6-8F36-D8093C69A4A5}"
+	ProjectSection(SolutionItems) = preProject
+		Libraries\Prism\Silverlight\Microsoft.Practices.Prism.dll = Libraries\Prism\Silverlight\Microsoft.Practices.Prism.dll
+		Libraries\Prism\Silverlight\Microsoft.Practices.Prism.extmap.xml = Libraries\Prism\Silverlight\Microsoft.Practices.Prism.extmap.xml
+		Libraries\Prism\Silverlight\Microsoft.Practices.Prism.Interactivity.dll = Libraries\Prism\Silverlight\Microsoft.Practices.Prism.Interactivity.dll
+		Libraries\Prism\Silverlight\Microsoft.Practices.Prism.Interactivity.extmap.xml = Libraries\Prism\Silverlight\Microsoft.Practices.Prism.Interactivity.extmap.xml
+		Libraries\Prism\Silverlight\Microsoft.Practices.Prism.Interactivity.pdb = Libraries\Prism\Silverlight\Microsoft.Practices.Prism.Interactivity.pdb
+		Libraries\Prism\Silverlight\Microsoft.Practices.Prism.Interactivity.XML = Libraries\Prism\Silverlight\Microsoft.Practices.Prism.Interactivity.XML
+		Libraries\Prism\Silverlight\Microsoft.Practices.Prism.MefExtensions.dll = Libraries\Prism\Silverlight\Microsoft.Practices.Prism.MefExtensions.dll
+		Libraries\Prism\Silverlight\Microsoft.Practices.Prism.MefExtensions.extmap.xml = Libraries\Prism\Silverlight\Microsoft.Practices.Prism.MefExtensions.extmap.xml
+		Libraries\Prism\Silverlight\Microsoft.Practices.Prism.MefExtensions.pdb = Libraries\Prism\Silverlight\Microsoft.Practices.Prism.MefExtensions.pdb
+		Libraries\Prism\Silverlight\Microsoft.Practices.Prism.MefExtensions.xml = Libraries\Prism\Silverlight\Microsoft.Practices.Prism.MefExtensions.xml
+		Libraries\Prism\Silverlight\Microsoft.Practices.Prism.pdb = Libraries\Prism\Silverlight\Microsoft.Practices.Prism.pdb
+		Libraries\Prism\Silverlight\Microsoft.Practices.Prism.UnityExtensions.dll = Libraries\Prism\Silverlight\Microsoft.Practices.Prism.UnityExtensions.dll
+		Libraries\Prism\Silverlight\Microsoft.Practices.Prism.UnityExtensions.extmap.xml = Libraries\Prism\Silverlight\Microsoft.Practices.Prism.UnityExtensions.extmap.xml
+		Libraries\Prism\Silverlight\Microsoft.Practices.Prism.UnityExtensions.pdb = Libraries\Prism\Silverlight\Microsoft.Practices.Prism.UnityExtensions.pdb
+		Libraries\Prism\Silverlight\Microsoft.Practices.Prism.UnityExtensions.xml = Libraries\Prism\Silverlight\Microsoft.Practices.Prism.UnityExtensions.xml
+		Libraries\Prism\Silverlight\Microsoft.Practices.Prism.xml = Libraries\Prism\Silverlight\Microsoft.Practices.Prism.xml
+		Libraries\Prism\Silverlight\Microsoft.Practices.ServiceLocation.dll = Libraries\Prism\Silverlight\Microsoft.Practices.ServiceLocation.dll
+		Libraries\Prism\Silverlight\Microsoft.Practices.ServiceLocation.extmap.xml = Libraries\Prism\Silverlight\Microsoft.Practices.ServiceLocation.extmap.xml
+		Libraries\Prism\Silverlight\Microsoft.Practices.ServiceLocation.XML = Libraries\Prism\Silverlight\Microsoft.Practices.ServiceLocation.XML
+		Libraries\Prism\Silverlight\Microsoft.Practices.Unity.Silverlight.dll = Libraries\Prism\Silverlight\Microsoft.Practices.Unity.Silverlight.dll
+		Libraries\Prism\Silverlight\Microsoft.Practices.Unity.Silverlight.extmap.xml = Libraries\Prism\Silverlight\Microsoft.Practices.Unity.Silverlight.extmap.xml
+		Libraries\Prism\Silverlight\Microsoft.Practices.Unity.Silverlight.xml = Libraries\Prism\Silverlight\Microsoft.Practices.Unity.Silverlight.xml
+	EndProjectSection
+EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Model", "Model\Model.csproj", "{11A1EB43-829E-4547-B0DF-9D842ED32DDB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Main", "Main\Main.csproj", "{F5C6A70B-D388-448C-BFE6-08C5F0387844}"
+	ProjectSection(ProjectDependencies) = postProject
+		{D8201D16-850F-4EA7-AFD0-B2E77E527B61} = {D8201D16-850F-4EA7-AFD0-B2E77E527B61}
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Main.Web", "Main.Web\Main.Web.csproj", "{D8201D16-850F-4EA7-AFD0-B2E77E527B61}"
 EndProject
 Global
 	GlobalSection(SubversionScc) = preSolution
@@ -13,12 +58,33 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{434F9A5F-7303-459A-9BBA-06C487C6A5D8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{434F9A5F-7303-459A-9BBA-06C487C6A5D8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8D54AB83-F6C5-49A9-AF1A-313E6C5EC3AE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8D54AB83-F6C5-49A9-AF1A-313E6C5EC3AE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FBE74DE8-0696-44A5-8838-AEF3F7AFE32B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FBE74DE8-0696-44A5-8838-AEF3F7AFE32B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{11A1EB43-829E-4547-B0DF-9D842ED32DDB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{11A1EB43-829E-4547-B0DF-9D842ED32DDB}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{11A1EB43-829E-4547-B0DF-9D842ED32DDB}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{11A1EB43-829E-4547-B0DF-9D842ED32DDB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F5C6A70B-D388-448C-BFE6-08C5F0387844}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F5C6A70B-D388-448C-BFE6-08C5F0387844}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F5C6A70B-D388-448C-BFE6-08C5F0387844}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F5C6A70B-D388-448C-BFE6-08C5F0387844}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D8201D16-850F-4EA7-AFD0-B2E77E527B61}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D8201D16-850F-4EA7-AFD0-B2E77E527B61}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D8201D16-850F-4EA7-AFD0-B2E77E527B61}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D8201D16-850F-4EA7-AFD0-B2E77E527B61}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{434F9A5F-7303-459A-9BBA-06C487C6A5D8} = {79E7E531-CCDC-4481-8EAE-CF976F597C72}
+		{8D54AB83-F6C5-49A9-AF1A-313E6C5EC3AE} = {79E7E531-CCDC-4481-8EAE-CF976F597C72}
+		{FBE74DE8-0696-44A5-8838-AEF3F7AFE32B} = {79E7E531-CCDC-4481-8EAE-CF976F597C72}
+		{57028D33-A160-47E7-A9A4-BA6B426F7DA2} = {94419369-9B7B-4AF1-836E-E23CF20D797E}
+		{D023A665-FE71-4AA6-8F36-D8093C69A4A5} = {57028D33-A160-47E7-A9A4-BA6B426F7DA2}
 	EndGlobalSection
 EndGlobal
