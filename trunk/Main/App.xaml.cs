@@ -26,7 +26,8 @@ namespace Main
 
         private void Application_Startup(object sender, StartupEventArgs e)
         {
-            this.RootVisual = new Shell();
+            Bootstrapper bootstrapper = new Bootstrapper();
+            bootstrapper.Run();
         }
 
         private void Application_Exit(object sender, EventArgs e)

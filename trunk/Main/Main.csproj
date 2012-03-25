@@ -112,6 +112,10 @@
       <Project>{8D54AB83-F6C5-49A9-AF1A-313E6C5EC3AE}</Project>
       <Name>ModuleInfrastracture</Name>
     </ProjectReference>
+    <ProjectReference Include="..\ShellInfrastracture\ShellInfrastracture.csproj">
+      <Project>{FBE74DE8-0696-44A5-8838-AEF3F7AFE32B}</Project>
+      <Name>ShellInfrastracture</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Silverlight\$(SilverlightVersion)\Microsoft.Silverlight.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
