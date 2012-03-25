@@ -48,6 +48,11 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Main", "Main\Main.csproj", 
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Main.Web", "Main.Web\Main.Web.csproj", "{D8201D16-850F-4EA7-AFD0-B2E77E527B61}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Scripts", "Scripts", "{D5E5AF5B-7F00-4B92-A6FD-F5410C48E63A}"
+	ProjectSection(SolutionItems) = preProject
+		Scripts\script.sql = Scripts\script.sql
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SubversionScc) = preSolution
 		Svn-Managed = True
