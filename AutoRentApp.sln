@@ -53,6 +53,10 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Scripts", "Scripts", "{D5E5
 		Scripts\script.sql = Scripts\script.sql
 	EndProjectSection
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Modules", "Modules", "{8A6BBA72-DD02-405F-8D0A-283595D2001F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AutoModule", "AutoModule\AutoModule.csproj", "{4E1A9990-FF0E-4F46-8990-F39184DB041C}"
+EndProject
 Global
 	GlobalSection(SubversionScc) = preSolution
 		Svn-Managed = True
@@ -81,6 +85,10 @@ Global
 		{D8201D16-850F-4EA7-AFD0-B2E77E527B61}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D8201D16-850F-4EA7-AFD0-B2E77E527B61}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D8201D16-850F-4EA7-AFD0-B2E77E527B61}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4E1A9990-FF0E-4F46-8990-F39184DB041C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4E1A9990-FF0E-4F46-8990-F39184DB041C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4E1A9990-FF0E-4F46-8990-F39184DB041C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4E1A9990-FF0E-4F46-8990-F39184DB041C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -91,5 +99,6 @@ Global
 		{FBE74DE8-0696-44A5-8838-AEF3F7AFE32B} = {79E7E531-CCDC-4481-8EAE-CF976F597C72}
 		{57028D33-A160-47E7-A9A4-BA6B426F7DA2} = {94419369-9B7B-4AF1-836E-E23CF20D797E}
 		{D023A665-FE71-4AA6-8F36-D8093C69A4A5} = {57028D33-A160-47E7-A9A4-BA6B426F7DA2}
+		{4E1A9990-FF0E-4F46-8990-F39184DB041C} = {8A6BBA72-DD02-405F-8D0A-283595D2001F}
 	EndGlobalSection
 EndGlobal
