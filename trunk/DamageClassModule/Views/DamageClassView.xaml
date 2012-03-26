@@ -10,7 +10,7 @@
             <Setter Property="FontWeight" Value="Bold"/>
             <Setter Property="FontSize" Value="14"/>
             <Setter Property="Width" Value="120"/>
-            <Setter Property="Foreground" Value="MidnightBlue" />
+            <Setter Property="Foreground" Value="LightSlateGray" />
         </Style>
         <Style x:Key="LblFieldStyle" TargetType="sdk:Label">
             <Setter Property="Width" Value="120"/>
