@@ -99,7 +99,7 @@ namespace EmployeeModule.ViewModels
         /// <summary>
         /// Department id 
         /// </summary>
-        public int Departmentid
+        public int DepartmentId
         {
             get { return _departmentId; }
             set
