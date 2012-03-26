@@ -12,14 +12,12 @@ using ModuleInfrastracture.ViewModels;
 using System.ComponentModel;
 
 namespace DamageClassModule.ViewModels
-{
-    public class DamageClassViewModel : ViewModelBase, IDataErrorInfo
-    {
-        /// <summary>
+{       
+    /// <summary>
     /// This class provides a UI-friendly wrapper for the DamageClass object
     /// and contains properties that an DamageClassView can data bind to
     /// </summary>  
-    public class EmployeeViewModel : ViewModelBase, IDataErrorInfo
+    public class DamageClassViewModel : ViewModelBase, IDataErrorInfo
     {
         #region PrivateFields
 
