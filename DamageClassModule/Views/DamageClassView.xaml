@@ -5,27 +5,50 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d"
     d:DesignHeight="250" d:DesignWidth="400" xmlns:sdk="http://schemas.microsoft.com/winfx/2006/xaml/presentation/sdk">
-    
+    <UserControl.Resources>
+        <Style x:Key="LblTitleStyle" TargetType="sdk:Label">
+            <Setter Property="FontWeight" Value="Bold"/>
+            <Setter Property="FontSize" Value="14"/>
+            <Setter Property="Width" Value="120"/>
+            <Setter Property="Foreground" Value="MidnightBlue" />
+        </Style>
+        <Style x:Key="LblFieldStyle" TargetType="sdk:Label">
+            <Setter Property="Width" Value="120"/>
+        </Style>
+        <Style x:Key="TextBoxStyle" TargetType="TextBox">
+            <Setter Property="Width" Value="200"/>
+            <Setter Property="Height" Value="23"/>
+            <Setter Property="VerticalAlignment" Value="Top"/>
+        </Style>       
+        <Style x:Key="StackPnlStyle" TargetType="StackPanel">
+            <Setter Property="Orientation" Value="Horizontal"/>
+            <Setter Property="Margin" Value="5"/>
+        </Style>
+        <Style x:Key="BtnStyle" TargetType="Button">
+            <Setter Property="Height" Value="23"/>
+            <Setter Property="Width" Value="80"/>
+        </Style>
+    </UserControl.Resources>
     <Grid x:Name="LayoutRoot" Background="White">
         <StackPanel Orientation="Vertical" HorizontalAlignment="Center">
-            <StackPanel Orientation="Horizontal" Margin="5">
-                <sdk:Label Content="Damage class" Width="120" FontSize="14" FontWeight="Bold"/>
+            <StackPanel Style="{StaticResource StackPnlStyle}">
+                <sdk:Label Content="Damage class" Style="{StaticResource LblTitleStyle}"/>
             </StackPanel>
-            <StackPanel Orientation="Horizontal" Margin="5">
-                <sdk:Label Content="Class" Width="120"/>
-                <TextBox Height="23" Name="txtBoxClass"  Text="{Binding Class}"  VerticalAlignment="Top" Width="200" />
+            <StackPanel Style="{StaticResource StackPnlStyle}">
+                <sdk:Label Content="Class" Style="{StaticResource LblFieldStyle}"/>
+                <TextBox Name="txtBoxClass"  Text="{Binding Class}" Style="{StaticResource TextBoxStyle}"/>
             </StackPanel>
-            <StackPanel Orientation="Horizontal" Margin="5">
-                <sdk:Label Content="Name" Width="120"/>
-                <TextBox Height="23" Name="txtBoxName"  Text="{Binding Name}"  VerticalAlignment="Top" Width="200" />
+            <StackPanel Style="{StaticResource StackPnlStyle}">
+                <sdk:Label Content="Name" Style="{StaticResource LblFieldStyle}"/>
+                <TextBox Name="txtBoxName" Text="{Binding Name}" Style="{StaticResource TextBoxStyle}"/>
             </StackPanel>                      
-            <StackPanel Orientation="Horizontal" Margin="5">
-                <sdk:Label Content="Description" Width="120" VerticalAlignment="Top" />
-                <TextBox Height="88" Name="txtBoxDescr" Text="{Binding Description}" VerticalAlignment="Top" Width="200" />
+            <StackPanel Style="{StaticResource StackPnlStyle}">
+                <sdk:Label Content="Description" VerticalAlignment="Top" Style="{StaticResource LblFieldStyle}"/>
+                <TextBox Height="90" Name="txtBoxDescr" Text="{Binding Description}" Style="{StaticResource TextBoxStyle}"/>
             </StackPanel>
-            <StackPanel Orientation="Horizontal" Margin="5" HorizontalAlignment="Center">
-                <Button Content="Save" Height="23" Name="btnSave" Width="80" Command="{Binding Path=SaveCommand}"/>
-                <Button Content="Cancel" Height="23" Name="btnCancel" Width="80" Command="{Binding Path=CancelCommand}" Margin="4,0,0,0"/>
+            <StackPanel Style="{StaticResource StackPnlStyle}" HorizontalAlignment="Center">
+                <Button Content="Save" Name="btnSave" Command="{Binding Path=SaveCommand}" Style="{StaticResource BtnStyle}"/>
+                <Button Content="Cancel" Name="btnCancel" Command="{Binding Path=CancelCommand}" Margin="4,0,0,0" Style="{StaticResource BtnStyle}"/>
             </StackPanel>
         </StackPanel>
     </Grid>
