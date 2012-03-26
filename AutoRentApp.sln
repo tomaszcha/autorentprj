@@ -63,6 +63,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EmployeeModule", "EmployeeM
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DamageClassModule", "DamageClassModule\DamageClassModule.csproj", "{7F4CC7DE-7A81-46B1-9F89-E02825FB0A9F}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DepartmentModule", "DepartmentModule\DepartmentModule.csproj", "{EED71B31-6673-4BFC-83BC-AC1DF2DDA550}"
+EndProject
 Global
 	GlobalSection(SubversionScc) = preSolution
 		Svn-Managed = True
@@ -107,6 +109,10 @@ Global
 		{7F4CC7DE-7A81-46B1-9F89-E02825FB0A9F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7F4CC7DE-7A81-46B1-9F89-E02825FB0A9F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7F4CC7DE-7A81-46B1-9F89-E02825FB0A9F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EED71B31-6673-4BFC-83BC-AC1DF2DDA550}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EED71B31-6673-4BFC-83BC-AC1DF2DDA550}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EED71B31-6673-4BFC-83BC-AC1DF2DDA550}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EED71B31-6673-4BFC-83BC-AC1DF2DDA550}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -121,5 +127,6 @@ Global
 		{483C33F4-8C08-40D3-B0B7-E0516926E87C} = {8A6BBA72-DD02-405F-8D0A-283595D2001F}
 		{CFA6CA45-B3D5-4C59-8E88-5361F31DC9D4} = {8A6BBA72-DD02-405F-8D0A-283595D2001F}
 		{7F4CC7DE-7A81-46B1-9F89-E02825FB0A9F} = {8A6BBA72-DD02-405F-8D0A-283595D2001F}
+		{EED71B31-6673-4BFC-83BC-AC1DF2DDA550} = {8A6BBA72-DD02-405F-8D0A-283595D2001F}
 	EndGlobalSection
 EndGlobal
