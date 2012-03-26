@@ -20,7 +20,7 @@ namespace CustomerModule.ViewModels
         int _id;
         string _name;
         string _type;
-        string _address
+        string _address;
         string _phone;
         string _insuaranceNumber;
         string _licenceNumber;
