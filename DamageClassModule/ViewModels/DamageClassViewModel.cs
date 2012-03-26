@@ -72,21 +72,7 @@ namespace DamageClassModule.ViewModels
                 OnPropertyChanged("Description");
             }
         }
-
-
-        /// <summary>
-        /// Birthday of the employee
-        /// </summary>
-        public DateTime BirthDay
-        {
-            get { return _birthDay; }
-            set
-            {
-                _birthDay = value;
-                OnPropertyChanged("BirthDay");
-            }
-        }
-        
+                
         #endregion //Properties
 
         #region IDataErrorInfo
