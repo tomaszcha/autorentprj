@@ -23,9 +23,9 @@ namespace DamageClassModule.Views
         }
 
         [Dependency]
-        public IAutoViewModel ViewModel
+        public IDamageClassViewModel ViewModel
         {
-            get { return DataContext as IAutoViewModel; }
+            get { return DataContext as IDamageClassViewModel; }
             set { DataContext = value; }
         }   
     }
