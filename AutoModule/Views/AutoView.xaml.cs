@@ -11,7 +11,7 @@ using System.Windows.Media.Animation;
 using System.Windows.Shapes;
 using ModuleInfrastracture.Views;
 using Microsoft.Practices.Unity;
-
+using AutoModule.ViewModels;
 
 namespace AutoModule.Views
 {
