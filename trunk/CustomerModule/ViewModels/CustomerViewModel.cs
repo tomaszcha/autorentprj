@@ -13,6 +13,10 @@ using System.ComponentModel;
 
 namespace CustomerModule.ViewModels
 {
+    /// <summary>
+    /// This class provides a UI-friendly wrapper for the Customer object
+    /// and contains properties that an CustomerView can data bind to
+    /// </summary>  
     public class CustomerViewModel : ViewModelBase, IDataErrorInfo
     {
         #region PrivateFields
