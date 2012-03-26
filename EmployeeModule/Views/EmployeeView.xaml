@@ -4,9 +4,66 @@
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d"
-    d:DesignHeight="300" d:DesignWidth="400">
-    
+    d:DesignHeight="500" d:DesignWidth="400" xmlns:sdk="http://schemas.microsoft.com/winfx/2006/xaml/presentation/sdk">    
     <Grid x:Name="LayoutRoot" Background="White">
-
+        <StackPanel Orientation="Vertical" HorizontalAlignment="Center">
+            <StackPanel Orientation="Horizontal" Margin="5">
+                <sdk:Label Content="Employee" Width="120" FontSize="14" FontWeight="Bold"/>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal" Margin="5">
+                <sdk:Label Content="First name" Width="120"/>
+                <TextBox Height="23" Name="txtBoxFirstName"  Text="{Binding FirstName}"  VerticalAlignment="Top" Width="200" />
+            </StackPanel>
+            <StackPanel Orientation="Horizontal" Margin="5">
+                <sdk:Label Content="Last name" Width="120"/>
+                <TextBox Height="23" Name="txtBoxLastName"  Text="{Binding LastName}"  VerticalAlignment="Top" Width="200" />
+            </StackPanel>
+            <StackPanel Orientation="Horizontal" Margin="5">
+                <sdk:Label Content="BirthDay" Width="120"/>
+                <sdk:DatePicker Height="23" Name="datePickerBirthDay" Text="{Binding BirthDay}" VerticalAlignment ="Top" Width="200" />
+            </StackPanel>
+            <StackPanel Orientation="Horizontal" Margin="5">
+                <sdk:Label Content="Position" Width="120"/>
+                <ComboBox Height="23" Name="cmbPosition" VerticalAlignment="Top" Width="200" ItemsSource="{Binding}" 
+                          SelectedValue="{Binding}" DisplayMemberPath="Name" SelectedValuePath="Id" />
+            </StackPanel>
+            <StackPanel Orientation="Horizontal" Margin="5">
+                <sdk:Label Content="Department" Width="120"/>
+                <ComboBox Height="23" Name="cmbDepartment" VerticalAlignment="Top" Width="200" ItemsSource="{Binding}" 
+                          SelectedValue="{Binding}" DisplayMemberPath="Name" SelectedValuePath="Id" />
+            </StackPanel>
+            <StackPanel Orientation="Horizontal" Margin="5">
+                <sdk:Label Content="Address" Width="120"/>
+                <TextBox Height="23" Name="txtBoxAddress" Text="{Binding Address}" VerticalAlignment="Top" Width="200" />
+            </StackPanel>
+            <StackPanel Orientation="Horizontal" Margin="5">
+                <sdk:Label Content="Phone" Width="120"/>
+                <TextBox Height="23" Name="txtBoxPhone" Text="{Binding Phone}" VerticalAlignment="Top" Width="200" />
+            </StackPanel>
+            <StackPanel Orientation="Horizontal" Margin="5">
+                <sdk:Label Content="HireDate" Width="120"/>
+                <sdk:DatePicker Height="23" Name="datePickerHireDate" Text="{Binding HireDate}" VerticalAlignment ="Top" Width="200" />
+            </StackPanel>
+            <StackPanel Orientation="Horizontal" Margin="5">
+                <sdk:Label Content="FireDate" Width="120"/>
+                <sdk:DatePicker Height="23" Name="datePickerFireDate" Text="{Binding FireDate}" VerticalAlignment ="Top" Width="200" />
+            </StackPanel>
+            <StackPanel Orientation="Horizontal" Margin="5">
+                <sdk:Label Content="Insuarance number" Width="120"/>
+                <TextBox Height="23" Name="txtBoxInsNumber" Text="{Binding InsuaranceNumber}" VerticalAlignment="Top" Width="200" />
+            </StackPanel>
+            <StackPanel Orientation="Horizontal" Margin="5">
+                <sdk:Label Content="Licence number" Width="120"/>
+                <TextBox Height="23" Name="txtBoxLicNumber" Text="{Binding LicenceNumber}" VerticalAlignment="Top" Width="200" />
+            </StackPanel>                   
+            <StackPanel Orientation="Horizontal" Margin="5">
+                <sdk:Label Content="Data" Width="120" VerticalAlignment="Top" />
+                <TextBox Height="47" Name="txtBoxData" Text="{Binding Data}" VerticalAlignment="Top" Width="200" />
+            </StackPanel>
+            <StackPanel Orientation="Horizontal" Margin="5" HorizontalAlignment="Center">
+                <Button Content="Save" Height="23" Name="btnSave" Width="80" Command="{Binding Path=SaveCommand}"/>
+                <Button Content="Cancel" Height="23" Name="btnCancel" Width="80" Command="{Binding Path=CancelCommand}" Margin="4,0,0,0"/>
+            </StackPanel>
+        </StackPanel>
     </Grid>
 </UserControl>
