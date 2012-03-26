@@ -80,7 +80,7 @@ namespace AutoModule.ViewModels
         /// <summary>
         /// Insuarance number of the auto
         /// </summary>
-        public string InsuaranceId
+        public string InsuaranceNumber
         {
             get { return _insuaranceId; }
             set
