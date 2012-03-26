@@ -19,7 +19,7 @@
                 <TextBox Height="23" Name="txtBoxLastName"  Text="{Binding LastName}"  VerticalAlignment="Top" Width="200" />
             </StackPanel>
             <StackPanel Orientation="Horizontal" Margin="5">
-                <sdk:Label Content="BirthDay" Width="120"/>
+                <sdk:Label Content="Birthday" Width="120"/>
                 <sdk:DatePicker Height="23" Name="datePickerBirthDay" Text="{Binding BirthDay}" VerticalAlignment ="Top" Width="200" />
             </StackPanel>
             <StackPanel Orientation="Horizontal" Margin="5">
@@ -41,11 +41,11 @@
                 <TextBox Height="23" Name="txtBoxPhone" Text="{Binding Phone}" VerticalAlignment="Top" Width="200" />
             </StackPanel>
             <StackPanel Orientation="Horizontal" Margin="5">
-                <sdk:Label Content="HireDate" Width="120"/>
+                <sdk:Label Content="Hire date" Width="120"/>
                 <sdk:DatePicker Height="23" Name="datePickerHireDate" Text="{Binding HireDate}" VerticalAlignment ="Top" Width="200" />
             </StackPanel>
             <StackPanel Orientation="Horizontal" Margin="5">
-                <sdk:Label Content="FireDate" Width="120"/>
+                <sdk:Label Content="Fire date" Width="120"/>
                 <sdk:DatePicker Height="23" Name="datePickerFireDate" Text="{Binding FireDate}" VerticalAlignment ="Top" Width="200" />
             </StackPanel>
             <StackPanel Orientation="Horizontal" Margin="5">
