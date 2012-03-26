@@ -59,6 +59,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AutoModule", "AutoModule\Au
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CustomerModule", "CustomerModule\CustomerModule.csproj", "{483C33F4-8C08-40D3-B0B7-E0516926E87C}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EmployeeModule", "EmployeeModule\EmployeeModule.csproj", "{CFA6CA45-B3D5-4C59-8E88-5361F31DC9D4}"
+EndProject
 Global
 	GlobalSection(SubversionScc) = preSolution
 		Svn-Managed = True
@@ -95,6 +97,10 @@ Global
 		{483C33F4-8C08-40D3-B0B7-E0516926E87C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{483C33F4-8C08-40D3-B0B7-E0516926E87C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{483C33F4-8C08-40D3-B0B7-E0516926E87C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CFA6CA45-B3D5-4C59-8E88-5361F31DC9D4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CFA6CA45-B3D5-4C59-8E88-5361F31DC9D4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CFA6CA45-B3D5-4C59-8E88-5361F31DC9D4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CFA6CA45-B3D5-4C59-8E88-5361F31DC9D4}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -107,5 +113,6 @@ Global
 		{D023A665-FE71-4AA6-8F36-D8093C69A4A5} = {57028D33-A160-47E7-A9A4-BA6B426F7DA2}
 		{4E1A9990-FF0E-4F46-8990-F39184DB041C} = {8A6BBA72-DD02-405F-8D0A-283595D2001F}
 		{483C33F4-8C08-40D3-B0B7-E0516926E87C} = {8A6BBA72-DD02-405F-8D0A-283595D2001F}
+		{CFA6CA45-B3D5-4C59-8E88-5361F31DC9D4} = {8A6BBA72-DD02-405F-8D0A-283595D2001F}
 	EndGlobalSection
 EndGlobal
