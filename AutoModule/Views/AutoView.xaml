@@ -5,73 +5,107 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d"
     d:DesignHeight="540" d:DesignWidth="400">
+    <UserControl.Resources>
+        <Style x:Key="LblTitleStyle" TargetType="sdk:Label">
+            <Setter Property="FontWeight" Value="Bold"/>
+            <Setter Property="FontSize" Value="14"/>            
+            <Setter Property="Width" Value="120"/>
+            <Setter Property="Foreground" Value="MidnightBlue" />
+        </Style>
+        <Style x:Key="LblTitleSmall" TargetType="sdk:Label">
+            <Setter Property="FontWeight" Value="Bold"/>
+            <Setter Property="FontSize" Value="12"/>
+            <Setter Property="Width" Value="120"/>             
+        </Style>
+        <Style x:Key="LblFieldStyle" TargetType="sdk:Label">
+            <Setter Property="Width" Value="120"/>           
+        </Style>
+        <Style x:Key="TextBoxStyle" TargetType="TextBox">
+            <Setter Property="Width" Value="200"/>
+            <Setter Property="Height" Value="23"/>
+            <Setter Property="VerticalAlignment" Value="Top"/>
+        </Style>
+        <Style x:Key="CmbBoxStyle" TargetType="ComboBox">
+            <Setter Property="Width" Value="200"/>
+            <Setter Property="Height" Value="23"/>
+            <Setter Property="VerticalAlignment" Value="Top"/>
+        </Style>
+        <Style x:Key="StackPnlStyle" TargetType="StackPanel">
+            <Setter Property="Orientation" Value="Horizontal"/>
+            <Setter Property="Margin" Value="5"/>           
+        </Style>
+        <Style x:Key="BtnStyle" TargetType="Button">
+            <Setter Property="Height" Value="23"/>
+            <Setter Property="Width" Value="80"/>
+        </Style>
+    </UserControl.Resources>
     <Grid x:Name="LayoutRoot" Background="White">
         <StackPanel Orientation="Vertical" HorizontalAlignment="Center">
-            <StackPanel Orientation="Horizontal" Margin="5">
-                <sdk:Label Content="Auto" Width="120" FontSize="14" FontWeight="Bold"/>               
+            <StackPanel Style="{StaticResource StackPnlStyle}">
+                <sdk:Label Content="Auto" Style="{StaticResource LblTitleStyle}"/>               
             </StackPanel>
-            <StackPanel Orientation="Horizontal" Margin="5">
-                <sdk:Label Content="Auto number" Width="120"/>
-                <TextBox Height="23" Name="txtBoxNumber"  Text="{Binding Number}"  VerticalAlignment="Top" Width="200" />
+            <StackPanel Style="{StaticResource StackPnlStyle}">
+                <sdk:Label Content="Auto number" Style="{StaticResource LblFieldStyle}"/>
+                <TextBox Name="txtBoxNumber" Text="{Binding Number}" Style="{StaticResource TextBoxStyle}"/>
             </StackPanel>
-            <StackPanel Orientation="Horizontal" Margin="5">
-                <sdk:Label Content="Model" Width="120"/>
-                <TextBox Height="23" Name="txtBoxModel" Text="{Binding ModelName}" VerticalAlignment="Top" Width="200" />
+            <StackPanel Style="{StaticResource StackPnlStyle}">
+                <sdk:Label Content="Model" Style="{StaticResource LblFieldStyle}"/>
+                <TextBox Name="txtBoxModel" Text="{Binding ModelName}" Style="{StaticResource TextBoxStyle}" />
             </StackPanel>
-            <StackPanel Orientation="Horizontal" Margin="5">
-                <sdk:Label Content="Class" Width="120"/>
-                <ComboBox Height="23" Name="cmbClass" VerticalAlignment="Top" Width="200" ItemsSource="{Binding}" 
-                          SelectedValue="{Binding}" DisplayMemberPath="Name" SelectedValuePath="Id" />
+            <StackPanel Style="{StaticResource StackPnlStyle}">
+                <sdk:Label Content="Class" Style="{StaticResource LblFieldStyle}"/>
+                <ComboBox Name="cmbClass" ItemsSource="{Binding}" SelectedValue="{Binding}" 
+                          DisplayMemberPath="Name" SelectedValuePath="Id" Style="{StaticResource CmbBoxStyle}"/>
             </StackPanel>
-            <StackPanel Orientation="Horizontal" Margin="5">
-                <sdk:Label Content="Year" Width="120"/>
-                <TextBox Height="23" Name="txtBoxYear" Text="{Binding Year}" VerticalAlignment="Top" Width="200" />
+            <StackPanel Style="{StaticResource StackPnlStyle}">
+                <sdk:Label Content="Year" Style="{StaticResource LblFieldStyle}"/>
+                <TextBox Name="txtBoxYear" Text="{Binding Year}" Style="{StaticResource TextBoxStyle}" />
             </StackPanel>
-            <StackPanel Orientation="Horizontal" Margin="5">
-                <sdk:Label Content="Mileage" Width="120"/>
-                <TextBox Height="23" Name="txtBoxMileage" Text="{Binding Mileage}" VerticalAlignment="Top" Width="200" />
+            <StackPanel Style="{StaticResource StackPnlStyle}">
+                <sdk:Label Content="Mileage" Style="{StaticResource LblFieldStyle}"/>
+                <TextBox Name="txtBoxMileage" Text="{Binding Mileage}" Style="{StaticResource TextBoxStyle}"/>
             </StackPanel>
-            <StackPanel Orientation="Horizontal" Margin="5">
-                <sdk:Label Content="Engine" Width="120"/>
-                <TextBox Height="23" Name="txtBoxEngine" Text="{Binding Engine}" VerticalAlignment="Top" Width="200" />
+            <StackPanel Style="{StaticResource StackPnlStyle}">
+                <sdk:Label Content="Engine" Style="{StaticResource LblFieldStyle}"/>
+                <TextBox Name="txtBoxEngine" Text="{Binding Engine}" Style="{StaticResource TextBoxStyle}"/>
             </StackPanel>
-            <StackPanel Orientation="Horizontal" Margin="5">
-                <sdk:Label Content="Body type" Width="120"/>
-                <ComboBox Height="23" Name="cmbBodyType" VerticalAlignment="Top" Width="200" ItemsSource="{Binding}" 
-                          SelectedValue="{Binding}" DisplayMemberPath="Name" SelectedValuePath="Id" />
+            <StackPanel Style="{StaticResource StackPnlStyle}">
+                <sdk:Label Content="Body type" Style="{StaticResource LblFieldStyle}"/>
+                <ComboBox Name="cmbBodyType" ItemsSource="{Binding}" SelectedValue="{Binding}" 
+                          DisplayMemberPath="Name" SelectedValuePath="Id" Style="{StaticResource CmbBoxStyle}"/>
             </StackPanel>
-            <StackPanel Orientation="Horizontal" Margin="5">
-                <sdk:Label Content="Color" Width="120"/>
-                <ComboBox Height="23" Name="cmbColorGroup" VerticalAlignment="Top" Width="200" ItemsSource="{Binding}" 
-                          SelectedValue="{Binding}" DisplayMemberPath="Name" SelectedValuePath="Id" />
+            <StackPanel Style="{StaticResource StackPnlStyle}">
+                <sdk:Label Content="Color" Style="{StaticResource LblFieldStyle}"/>
+                <ComboBox Name="cmbColorGroup" ItemsSource="{Binding}" SelectedValue="{Binding}" 
+                          DisplayMemberPath="Name" SelectedValuePath="Id" Style="{StaticResource CmbBoxStyle}" />
             </StackPanel>
-            <StackPanel Orientation="Horizontal" Margin="5">
-                <sdk:Label Content="Insuarance" Width="120"/>
-                <TextBox Height="23" Name="txtBoxInsuarance" Text="{Binding Insuarance}" VerticalAlignment="Top" Width="200" />
+            <StackPanel Style="{StaticResource StackPnlStyle}">
+                <sdk:Label Content="Insuarance" Style="{StaticResource LblFieldStyle}"/>
+                <TextBox Name="txtBoxInsuarance" Text="{Binding Insuarance}" Style="{StaticResource TextBoxStyle}"/>
             </StackPanel>
-            <StackPanel Orientation="Horizontal" Margin="5">
-                <sdk:Label Content="Rental info" Width="120" FontSize="12" FontWeight="Bold"/>
+            <StackPanel Style="{StaticResource StackPnlStyle}">
+                <sdk:Label Content="Rental info" Style="{StaticResource LblTitleSmall}"/>
             </StackPanel>
-            <StackPanel Orientation="Horizontal" Margin="5">
-                <sdk:Label Content="Rate per km" Width="120"/>
-                <TextBox Height="23" Name="txtKmRate"  Text="{Binding KmRate}" VerticalAlignment="Top" Width="200" />
+            <StackPanel Style="{StaticResource StackPnlStyle}">
+                <sdk:Label Content="Rate per km" Style="{StaticResource LblFieldStyle}"/>
+                <TextBox Name="txtKmRate"  Text="{Binding KmRate}" Style="{StaticResource TextBoxStyle}"/>
             </StackPanel>
-            <StackPanel Orientation="Horizontal" Margin="5">
-                <sdk:Label Content="Rate per day" Width="120"/>
-                <TextBox Height="23" Name="txtDayRate"  Text="{Binding DayRate}" VerticalAlignment="Top" Width="200" />
+            <StackPanel Style="{StaticResource StackPnlStyle}">
+                <sdk:Label Content="Rate per day" Style="{StaticResource LblFieldStyle}"/>
+                <TextBox Name="txtDayRate" Text="{Binding DayRate}" Style="{StaticResource TextBoxStyle}"/>
             </StackPanel>
-            <StackPanel Orientation="Horizontal" Margin="5">
-                <sdk:Label Content="Advance" Width="120"/>
-                <TextBox Height="23" Name="txtAdvance"  Text="{Binding Advance}" VerticalAlignment="Top" Width="200" />
+            <StackPanel Style="{StaticResource StackPnlStyle}">
+                <sdk:Label Content="Advance" Style="{StaticResource LblFieldStyle}"/>
+                <TextBox Name="txtAdvance" Text="{Binding Advance}" Style="{StaticResource TextBoxStyle}"/>
             </StackPanel>            
-            <StackPanel Orientation="Horizontal" Margin="5">
+            <StackPanel Style="{StaticResource StackPnlStyle}">
                 <sdk:Label Content="Status" Width="120"/>
-                <ComboBox Height="23" Name="cmbStatus" VerticalAlignment="Top" Width="200" ItemsSource="{Binding}" 
-                          SelectedValue="{Binding}" DisplayMemberPath="Name" SelectedValuePath="Id" />
+                <ComboBox Name="cmbStatus" ItemsSource="{Binding}" SelectedValue="{Binding}" 
+                          DisplayMemberPath="Name" SelectedValuePath="Id" Style="{StaticResource CmbBoxStyle}" />
             </StackPanel>
-            <StackPanel Orientation="Horizontal" Margin="5" HorizontalAlignment="Center">
-                <Button Content="Save" Height="23" Name="btnSave" Width="80" Command="{Binding Path=SaveCommand}"/>
-                <Button Content="Cancel" Height="23" Name="btnCancel" Width="80" Command="{Binding Path=CancelCommand}" Margin="4,0,0,0"/>
+            <StackPanel Style="{StaticResource StackPnlStyle}" HorizontalAlignment="Center">
+                <Button Content="Save" Name="btnSave" Command="{Binding Path=SaveCommand}" Style="{StaticResource BtnStyle}"/>
+                <Button Content="Cancel" Name="btnCancel" Command="{Binding Path=CancelCommand}" Margin="4,0,0,0" Style="{StaticResource BtnStyle}"/>
             </StackPanel>            
         </StackPanel>
     </Grid>
