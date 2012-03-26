@@ -13,8 +13,13 @@ using System.ComponentModel;
 
 namespace AutoModule.ViewModels
 {
+    /// <summary>
+    /// This class provides a UI-friendly wrapper for the Auto object
+    /// and contains properties that an AutoView can data bind to
+    /// </summary>   
     public class AutoViewModel : ViewModelBase, IDataErrorInfo
     {
+
         #region PrivateFields
 
         string _number;
