@@ -12,7 +12,7 @@
             </StackPanel>
             <StackPanel Orientation="Horizontal" Margin="5">
                 <sdk:Label Content="Name" Width="120"/>
-                <TextBox Height="23" Name="txtBoxNumber"  Text="{Binding Namer}"  VerticalAlignment="Top" Width="200" />
+                <TextBox Height="23" Name="txtBoxName"  Text="{Binding Name}"  VerticalAlignment="Top" Width="200" />
             </StackPanel>
             <StackPanel Orientation="Horizontal" Margin="5">
                 <sdk:Label Content="Type" Width="120"/>
