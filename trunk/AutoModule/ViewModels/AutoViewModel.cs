@@ -122,7 +122,7 @@ namespace AutoModule.ViewModels
         /// <summary>
         /// Current mileage of the auto
         /// </summary>
-        public int Mileage 
+        public short Mileage 
         { 
             get { return _mileage; }
             set
@@ -164,7 +164,7 @@ namespace AutoModule.ViewModels
         /// <summary>
         /// Rental rate per one day
         /// </summary>
-        public float DayRate
+        public decimal DayRate
         {
             get { return _dayRate; }
             set
