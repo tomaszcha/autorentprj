@@ -99,7 +99,7 @@
                 <TextBox Name="txtAdvance" Text="{Binding Advance}" Style="{StaticResource TextBoxStyle}"/>
             </StackPanel>            
             <StackPanel Style="{StaticResource StackPnlStyle}">
-                <sdk:Label Content="Status" Width="120"/>
+                <sdk:Label Content="Status" Style="{StaticResource LblFieldStyle}"/>
                 <ComboBox Name="cmbStatus" ItemsSource="{Binding}" SelectedValue="{Binding}" 
                           DisplayMemberPath="Name" SelectedValuePath="Id" Style="{StaticResource CmbBoxStyle}" />
             </StackPanel>
