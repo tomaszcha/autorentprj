@@ -41,7 +41,7 @@
             </StackPanel>
             <StackPanel Orientation="Horizontal" Margin="5">
                 <sdk:Label Content="BirthDay" Width="120"/>
-                <TextBox Height="23" Name="txtBoxBirthDay" Text="{Binding BirthDay}" VerticalAlignment="Top" Width="200" />
+                <sdk:DatePicker Height="23" Name="datePickerBirthDay" Text="{Binding BirthDay}" VerticalAlignment ="Top" Width="200" />
             </StackPanel>
             <StackPanel Orientation="Horizontal" Margin="5">
                 <sdk:Label Content="Data" Width="120" VerticalAlignment="Top" />
