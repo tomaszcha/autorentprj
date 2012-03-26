@@ -40,7 +40,7 @@
                 <TextBox Height="23" Name="txtBoxPassport" Text="{Binding Passport}" VerticalAlignment="Top" Width="200" />
             </StackPanel>
             <StackPanel Orientation="Horizontal" Margin="5">
-                <sdk:Label Content="BirthDay" Width="120"/>
+                <sdk:Label Content="Birthday" Width="120"/>
                 <sdk:DatePicker Height="23" Name="datePickerBirthDay" Text="{Binding BirthDay}" VerticalAlignment ="Top" Width="200" />
             </StackPanel>
             <StackPanel Orientation="Horizontal" Margin="5">
