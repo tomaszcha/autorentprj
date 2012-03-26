@@ -6,7 +6,7 @@
     mc:Ignorable="d"
     d:DesignHeight="540" d:DesignWidth="400">
     <Grid x:Name="LayoutRoot" Background="White">
-        <StackPanel Orientation="Vertical">
+        <StackPanel Orientation="Vertical" HorizontalAlignment="Center">
             <StackPanel Orientation="Horizontal" Margin="5">
                 <sdk:Label Content="Auto" Width="120" FontSize="14" FontWeight="Bold"/>               
             </StackPanel>
