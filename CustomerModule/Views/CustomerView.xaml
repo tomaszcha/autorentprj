@@ -79,7 +79,7 @@
             </StackPanel>
             <StackPanel Style="{StaticResource StackPnlStyle}">
                 <sdk:Label Content="Data" Style="{StaticResource LblFieldStyle}" VerticalAlignment="Top" />
-                <TextBox Name="txtBoxData" Text="{Binding Data}" Height="50" VerticalAlignment="Top" Width="200" />
+                <TextBox Name="txtBoxData" Text="{Binding Data}" Height="50" Style="{StaticResource TextBoxStyle}" />
             </StackPanel>
             <StackPanel Style="{StaticResource StackPnlStyle}" HorizontalAlignment="Center">
                 <Button Content="Save" Name="btnSave" Command="{Binding Path=SaveCommand}" Style="{StaticResource BtnStyle}"/>
