@@ -33,11 +33,7 @@
         <StackPanel Orientation="Vertical" HorizontalAlignment="Center">
             <StackPanel Style="{StaticResource StackPnlStyle}">
                 <sdk:Label Content="Damage class" Style="{StaticResource LblTitleStyle}"/>
-            </StackPanel>
-            <StackPanel Style="{StaticResource StackPnlStyle}">
-                <sdk:Label Content="Class" Style="{StaticResource LblFieldStyle}"/>
-                <TextBox Name="txtBoxClass"  Text="{Binding Class}" Style="{StaticResource TextBoxStyle}"/>
-            </StackPanel>
+            </StackPanel>            
             <StackPanel Style="{StaticResource StackPnlStyle}">
                 <sdk:Label Content="Name" Style="{StaticResource LblFieldStyle}"/>
                 <TextBox Name="txtBoxName" Text="{Binding Name}" Style="{StaticResource TextBoxStyle}"/>

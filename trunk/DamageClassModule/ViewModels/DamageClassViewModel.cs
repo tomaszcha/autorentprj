@@ -17,7 +17,7 @@ namespace DamageClassModule.ViewModels
     /// This class provides a UI-friendly wrapper for the DamageClass object
     /// and contains properties that an DamageClassView can data bind to
     /// </summary>  
-    public class DamageClassViewModel : ViewModelBase, IDataErrorInfo
+    public class DamageClassViewModel : ViewModelBase, IDamageClassViewModel, IDataErrorInfo
     {
         #region PrivateFields
 
