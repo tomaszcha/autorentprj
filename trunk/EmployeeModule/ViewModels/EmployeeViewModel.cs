@@ -105,7 +105,7 @@ namespace EmployeeModule.ViewModels
             get { return _position; }
             set
             {
-                _birthDay = value;
+                _position = value;
                 OnPropertyChanged("Position");
             }
         }
