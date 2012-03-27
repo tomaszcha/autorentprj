@@ -93,7 +93,26 @@ namespace DAL.Administration
 
         public void RemoveCustomerProfile(Guid guid)
         {
-            throw new NotImplementedException();
+            AutoRentEntities context = new AutoRentEntities();
+            DbTransaction transaction = null;
+            try
+            {
+                context.Connection.Open();
+                transaction = context.Connection.BeginTransaction();
+
+                context.Customer.DeleteObject(context.Customer.First(o => o.Id == guid));
+
+                context.SaveChanges();
+                transaction.Commit();
+            }
+            catch
+            {
+                transaction.Rollback();
+            }
+            finally
+            {
+                context.Connection.Close();
+            }     
         }
 
         public List<Members> UsersInRole(string roleName)
