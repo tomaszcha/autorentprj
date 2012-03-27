@@ -50,6 +50,11 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Microsoft.Practices.Prism, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.Practices.Prism.UnityExtensions, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\New\Libraries\Prism\Silverlight\Microsoft.Practices.Prism.UnityExtensions.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.Practices.Unity.Silverlight, Version=2.0.414.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\Libraries\Prism\Silverlight\Microsoft.Practices.Unity.Silverlight.dll</HintPath>
@@ -80,9 +85,17 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\EventInfrastracture\EventInfrastracture.csproj">
+      <Project>{434F9A5F-7303-459A-9BBA-06C487C6A5D8}</Project>
+      <Name>EventInfrastracture</Name>
+    </ProjectReference>
     <ProjectReference Include="..\ModuleInfrastracture\ModuleInfrastracture.csproj">
       <Project>{8D54AB83-F6C5-49A9-AF1A-313E6C5EC3AE}</Project>
       <Name>ModuleInfrastracture</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ShellInfrastracture\ShellInfrastracture.csproj">
+      <Project>{FBE74DE8-0696-44A5-8838-AEF3F7AFE32B}</Project>
+      <Name>ShellInfrastracture</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>

@@ -18,7 +18,7 @@ namespace EmployeeModule.ViewModels
     /// This class provides a UI-friendly wrapper for the Employee object
     /// and contains properties that an EmployeeView can data bind to
     /// </summary>  
-    public class EmployfeViewModel : ViewModelBase, IDataErrorInfo
+    public class EmployeeViewModel : ViewModelBase, IEmployeeViewModel, IDataErrorInfo
     {
         #region Private Fields
 
