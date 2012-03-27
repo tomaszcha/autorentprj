@@ -19,7 +19,7 @@ namespace CustomerModule.ViewModels
     /// </summary>  
     public class CustomerViewModel : ViewModelBase, IDataErrorInfo
     {
-        #region PrivateFields
+        #region Private Fields
 
         int _id;
         string _name;
@@ -181,14 +181,130 @@ namespace CustomerModule.ViewModels
 
         public string Error
         {
-            get { throw new NotImplementedException(); }
+            get { return (this as IDataErrorInfo).Error; }
         }
 
         public string this[string columnName]
         {
-            get { throw new NotImplementedException(); }
+            get
+            {
+                string error;
+
+                switch (columnName)
+                {
+                    case "Name":
+                        error = ValidateName();
+                        break;
+                    case "Type":
+                        error = ValidateType();
+                        break;
+                    case "Address":
+                        error = ValidateAddress();
+                        break;
+                    case "Phone":
+                        error = ValidatePhone();
+                        break;
+                    case "InsuaranceNumber":
+                    case "LicenceNumber":
+                        error = ValidateInsuarLicenceNumber();
+                        break;                    
+                    case "Passport":
+                        error = ValidatePassport();
+                        break;
+                    case "Birthday":
+                        error = ValidateBirthDay();
+                        break;                                      
+                    default:
+                        error = (this as IDataErrorInfo)[columnName];
+                        break;
+                }
+                return error;
+            }
         }
 
+
+        private string ValidateName()
+        {
+            string res = String.Empty;
+            if (string.IsNullOrEmpty(_name))
+            {
+                res = Properties.Resources.EmptyField;
+            }
+            else if (_name.Length > 150)
+            {
+                res = Properties.Resources.LongString;
+            }
+            return res;
+        }
+
+        private string ValidateType()
+        {
+            string res = String.Empty;
+            if (string.IsNullOrEmpty(_type))
+            {
+                res = Properties.Resources.EmptyField;
+            }
+            else if (_type.Length > 25)
+            {
+                res = Properties.Resources.LongString;
+            }
+            return res;
+        }
+
+        private string ValidateAddress()
+        {
+            string res = String.Empty;
+            if (_address.Length > 150)
+            {
+                res = Properties.Resources.LongString;
+            }
+            return res;
+        }
+
+        private string ValidatePhone()
+        {
+            string res = String.Empty;
+            if (_phone.Length > 16)
+            {
+                res = Properties.Resources.LongString;
+            }
+            else if (!Regex.IsMatch(_phone, Properties.Resources.PhoneRegEx))
+            {
+                res = Properties.Resources.InvalidPhone;
+            }
+            return res;
+        }
+
+        private string ValidateInsuarLicenceNumber()
+        {
+            string res = String.Empty;
+            if (_insuaranceNumber.Length > 26 || _licenceNumber > 26)
+            {
+                res = Properties.Resources.LongString;
+            }
+            return res;
+        }
+
+        private string ValidatePassport()
+        {
+            string res = String.Empty;
+            if (_passport.Length > 26)
+            {
+                res = Properties.Resources.LongString;
+            }
+            return res;
+        }
+
+        private string BirthDay()
+        {
+            string res = String.Empty;
+            if (_birthDay > System.DateTime.Today.AddYears(-16))
+            {
+                res = Properties.Resources.InvalidDate;
+            }
+            return res;
+        }
+                
         #endregion // IDataErrorInfo
     }
 }
