@@ -118,12 +118,66 @@ namespace DAL.Administration
 
         public void Lock(string login)
         {
-            throw new NotImplementedException();
+            AutoRentEntities context = new AutoRentEntities();
+            IEnumerable<Members> members = 
+                from memb in context.Members
+                where memb.Login==login
+                select memb;
+            if (members != null)
+            {
+                Members member = members.First();
+                DbTransaction transaction = null;
+                try
+                {
+                    context.Connection.Open();
+                    transaction = context.Connection.BeginTransaction();
+
+                    member.Lock = true;
+
+                    context.SaveChanges();
+                    transaction.Commit();
+                }
+                catch
+                {
+                    transaction.Rollback();
+                }
+                finally
+                {
+                    context.Connection.Close();
+                }                
+            }
         }
 
         public void UnLock(string login)
         {
-            throw new NotImplementedException();
+            AutoRentEntities context = new AutoRentEntities();
+            IEnumerable<Members> members =
+                from memb in context.Members
+                where memb.Login == login
+                select memb;
+            if (members != null)
+            {
+                Members member = members.First();
+                DbTransaction transaction = null;
+                try
+                {
+                    context.Connection.Open();
+                    transaction = context.Connection.BeginTransaction();
+
+                    member.Lock = false;
+
+                    context.SaveChanges();
+                    transaction.Commit();
+                }
+                catch
+                {
+                    transaction.Rollback();
+                }
+                finally
+                {
+                    context.Connection.Close();
+                }
+            }
         }
 
         public void Registrate(Members member)
