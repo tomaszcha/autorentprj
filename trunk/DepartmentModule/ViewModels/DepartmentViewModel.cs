@@ -119,10 +119,7 @@ namespace DepartmentModule.ViewModels
                 string error;
 
                 switch (columnName)
-                {
-                    case "CityCode":
-                        error = ValidateCityCode();
-                        break;
+                {                   
                     case "Name":
                         error = ValidateName();
                         break;
@@ -139,14 +136,7 @@ namespace DepartmentModule.ViewModels
                 return error;
             }
         }
-
-        private string ValidateCityCode()
-        {
-            string res = String.Empty;            
-            return res;
-        }
-
-
+        
         private string ValidateName()
         {
             string res = String.Empty;
@@ -165,7 +155,11 @@ namespace DepartmentModule.ViewModels
         private string ValidateAddress()
         {
             string res = String.Empty;
-            if (_address.Length > 150)
+            if (string.IsNullOrEmpty(_address))
+            {
+                res = Properties.Resources.EmptyField;
+            }
+            else if (_address.Length > 150)
             {
                 res = Properties.Resources.LongString;
             }
@@ -175,6 +169,10 @@ namespace DepartmentModule.ViewModels
         private string ValidatePhone()
         {
             string res = String.Empty;
+            if (string.IsNullOrEmpty(_phone))
+            {
+                res = Properties.Resources.EmptyField;
+            }
             if (_phone.Length > 24)
             {
                 res = Properties.Resources.LongString;
