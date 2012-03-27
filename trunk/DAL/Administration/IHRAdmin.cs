@@ -16,7 +16,7 @@ namespace DAL.Administration
         void UsersInRole(string roleName);
         void RemoveUsersFromRoles(string[] logins, string[] role);
         void AddUsersToRoles(string[] logins, string[] roles);
-        void RolesForLogin(string login);
+        List<Roles> RolesForLogin(string login);
         void Lock(string login);
         void UnLock(string login);
     }
