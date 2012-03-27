@@ -38,24 +38,71 @@ namespace DAL.Administration
             throw new NotImplementedException();
         }
 
-        public void ListObjPermRulles()
+        public List<PermissionRule> ListObjPermRulles()
         {
-            throw new NotImplementedException();
+            AutoRentEntities context = new AutoRentEntities();
+            return context.PermissionRule.Select(o => o).ToList();
         }
 
-        public void AddPermissionsToRole(string role, string permid)
+        public void AddPermissionsToRole (Roles role, PermissionRule permission, RulesInRole rulesInRole)
         {
-            throw new NotImplementedException();
+            AutoRentEntities context = new AutoRentEntities();
+            DbTransaction transaction = null;
+            try
+            {
+                context.Connection.Open();
+                transaction = context.Connection.BeginTransaction();
+
+                //Roles roles = context.Roles.First(o => o.Name == role);
+                rulesInRole.RoleId = role.Id;
+                rulesInRole.PermId = permission.Id;
+                
+                context.SaveChanges();
+                transaction.Commit();
+            }
+            catch
+            {
+                transaction.Rollback();
+            }
+            finally
+            {
+                context.Connection.Close();
+            }
         }
 
-        public void RemovePermissions(string role, string permid)
+        public void RemovePermissions(Roles role, PermissionRule[] permissions)
         {
-            throw new NotImplementedException();
+            AutoRentEntities context = new AutoRentEntities();
+            DbTransaction transaction = null;
+            try
+            {
+                context.Connection.Open();
+                transaction = context.Connection.BeginTransaction();
+
+                foreach (PermissionRule perm in permissions)
+                {
+                    RulesInRole rules = context.RulesInRole.First(o => o.RoleId == role.Id && o.PermId == perm.Id);
+                    context.RulesInRole.DeleteObject(rules);
+                }
+
+                context.SaveChanges();
+                transaction.Commit();
+            }
+            catch
+            {
+                transaction.Rollback();
+            }
+            finally
+            {
+                context.Connection.Close();
+            }
         }
 
-        public void PermissionsForRole(string role)
+        public List<PermissionRule> PermissionsForRole(Roles role)
         {
-            throw new NotImplementedException();
+            AutoRentEntities context = new AutoRentEntities();
+            List<PermissionRule> list = 
+                from rulesInRole in context.RulesInRole   
         }
 
         #endregion IPermissionAdmin Members

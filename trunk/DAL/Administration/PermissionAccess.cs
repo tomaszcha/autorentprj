@@ -9,34 +9,69 @@ namespace DAL.Administration
 {
     public class PermissionAccess : IPermissionAccess
     {
+
         #region IPermissionAccess Members
 
-        public void CheckPermissionForUser(string login, string perm)
+        public RulesInRole CheckPermissionForUser(string login, PermissionRule permission)
         {
-            throw new NotImplementedException();
+            RulesInRole res = null;
+            AutoRentEntities context = new AutoRentEntities();
+            IEnumerable<RulesInRole> list =
+               from roles in context.Members.First(o => o.Login == login).Roles
+               from perm in context.PermissionRule
+               from rulesInRole in context.RulesInRole
+               where rulesInRole.RoleId == roles.Id && rulesInRole.PermId == perm.Id
+               select rulesInRole;
+            if (list != null)
+                res = list.First();
+            return res;
+
         }
 
-        public void CheckPermissionForRole(string role, string perm)
+        public RulesInRole CheckPermissionForRole(Roles role, PermissionRule permission)
         {
-            throw new NotImplementedException();
+            RulesInRole res = null;
+            AutoRentEntities context = new AutoRentEntities();
+            IEnumerable<RulesInRole> list =
+               from perm in context.PermissionRule
+               from rulesInRole in context.RulesInRole
+               where rulesInRole.RoleId == role.Id && rulesInRole.PermId == perm.Id
+               select rulesInRole;
+            if (list != null)
+                res = list.First();
+            return res;
         }
 
-        public void GetPermissionsListForRole(string role)
+        public List<PermissionRule> GetPermissionsListForRole(Roles role)
         {
-            throw new NotImplementedException();
+            AutoRentEntities context = new AutoRentEntities();
+            IEnumerable<PermissionRule> list =
+               from perm in context.PermissionRule
+               from rulesInRole in context.RulesInRole
+               where rulesInRole.RoleId == role.Id && rulesInRole.PermId == perm.Id
+               select perm;
+            return list.ToList();
         }
 
-        public void GetPermissionsListForLogin(string login)
+        public List<PermissionRule> GetPermissionsListForLogin(string login)
         {
-            throw new NotImplementedException();
+            AutoRentEntities context = new AutoRentEntities();
+            IEnumerable<PermissionRule> list =
+               from roles in context.Members.First(o => o.Login == login).Roles
+               from perm in context.PermissionRule
+               from rulesInRole in context.RulesInRole
+               where rulesInRole.RoleId == roles.Id && rulesInRole.PermId == perm.Id
+               select perm;
+            return list.ToList();
         }
 
         public bool Authorize(string login, string passwd)
         {
             AutoRentEntities context = new AutoRentEntities();
-            return context.Members.Any(o => o.Login == login && o.Password == passwd);
+            return context.Members.Any(o => o.Lock == false && o.Login == login && o.Password == passwd);
         }
 
         #endregion IPermissionAccess Members
+
     }
 }
