@@ -22,7 +22,7 @@ namespace EmployeeModule.ViewModels
     {
         #region Private Fields
 
-        int _id;
+        Guid _id;
         string _firstName;
         string _lastName;
         DateTime _birthDay;
@@ -44,7 +44,7 @@ namespace EmployeeModule.ViewModels
         /// <summary>
         /// Unique employee id
         /// </summary>
-        public int Id
+        public Guid Id
         {
             get { return _id; }
             private set
