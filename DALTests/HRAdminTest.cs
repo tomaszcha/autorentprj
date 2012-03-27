@@ -10,7 +10,15 @@ namespace DALTests
 {
     [TestFixture]
     class HRAdminTest
-    {
+    {        
+        #region Data
+
+        private List<Employee> emploies;
+        private List<Members> members;
+
+        
+        #endregion Data
+
         [Test]
         public void CreateEmployeProfileWithRegistration()
         {
@@ -43,5 +51,7 @@ namespace DALTests
             Guid id = admin.CreateCustomerProfile(cust);
             admin.Registrate(new Members { CRecord = id, Created = DateTime.Now, Email = "lev@gmail.com", Login = "Lev", Password = "Lev" });
         }
+
+
     }
 }
