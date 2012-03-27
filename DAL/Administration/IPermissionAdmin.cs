@@ -10,9 +10,9 @@ namespace DAL.Administration
     {
         void AddObjPermissionRule(PermissionRule rule);
         void RemoveObjPermissionRule(long id);
-        void ListObjPermRulles();
-        void AddPermissionsToRole(string role, string permid);
-        void RemovePermissions(string role, string permid);
-        void PermissionsForRole(string role);
+        List<PermissionRule> ListObjPermRulles();
+        void AddPermissionsToRole(string role, PermissionRule permissions, RulesInRole rulesInRole);
+        void RemovePermissions(string role, PermissionRule permissions, RulesInRole rulesInRole);
+        List<PermissionRule> PermissionsForRole(string role);
     }
 }
