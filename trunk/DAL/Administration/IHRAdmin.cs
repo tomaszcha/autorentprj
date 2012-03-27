@@ -14,8 +14,8 @@ namespace DAL.Administration
         void RemoveEmployeProfile(Guid guid);
         void RemoveCustomerProfile(Guid guid);
         void UsersInRole(string roleName);
-        void RemoveUsersFromRoles(string[] logins, string[] role);
-        void AddUsersToRoles(string[] logins, string[] roles);
+        void RemoveUsersFromRoles(string[] logins, Roles[] role);
+        void AddUsersToRoles(string[] logins, Roles[] roles);
         List<Roles> RolesForLogin(string login);
         void Lock(string login);
         void UnLock(string login);

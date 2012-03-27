@@ -101,12 +101,12 @@ namespace DAL.Administration
             throw new NotImplementedException();
         }
 
-        public void RemoveUsersFromRoles(string[] logins, string[] role)
+        public void RemoveUsersFromRoles(string[] logins, Roles[] role)
         {
             throw new NotImplementedException();
         }
 
-        public void AddUsersToRoles(string[] logins, string[] roles)
+        public void AddUsersToRoles(string[] logins, Roles[] roles)
         {
             throw new NotImplementedException();
         }
