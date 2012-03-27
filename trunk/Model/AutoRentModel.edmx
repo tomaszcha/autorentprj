@@ -4,106 +4,106 @@
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-      <Schema Namespace="AutoRentModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
-        <EntityContainer Name="AutoRentModelStoreContainer">
-          <EntitySet Name="Auto" EntityType="AutoRentModel.Store.Auto" store:Type="Tables" Schema="dbo" />
-          <EntitySet Name="AutoPhotos" EntityType="AutoRentModel.Store.AutoPhotos" store:Type="Tables" Schema="dbo" />
-          <EntitySet Name="Customer" EntityType="AutoRentModel.Store.Customer" store:Type="Tables" Schema="dbo" />
-          <EntitySet Name="DamageClass" EntityType="AutoRentModel.Store.DamageClass" store:Type="Tables" Schema="dbo" />
-          <EntitySet Name="Damages" EntityType="AutoRentModel.Store.Damages" store:Type="Tables" Schema="dbo" />
-          <EntitySet Name="Department" EntityType="AutoRentModel.Store.Department" store:Type="Tables" Schema="dbo" />
-          <EntitySet Name="Employe" EntityType="AutoRentModel.Store.Employe" store:Type="Tables" Schema="dbo" />
-          <EntitySet Name="Members" EntityType="AutoRentModel.Store.Members" store:Type="Tables" Schema="dbo" />
-          <EntitySet Name="Order" EntityType="AutoRentModel.Store.Order" store:Type="Tables" Schema="dbo" />
-          <EntitySet Name="Payment" EntityType="AutoRentModel.Store.Payment" store:Type="Tables" Schema="dbo" />
-          <EntitySet Name="PrermissionRule" EntityType="AutoRentModel.Store.PrermissionRule" store:Type="Tables" Schema="dbo" />
-          <EntitySet Name="Revisions" EntityType="AutoRentModel.Store.Revisions" store:Type="Tables" Schema="dbo" />
-          <EntitySet Name="Roles" EntityType="AutoRentModel.Store.Roles" store:Type="Tables" Schema="dbo" />
-          <EntitySet Name="RulesInRole" EntityType="AutoRentModel.Store.RulesInRole" store:Type="Tables" Schema="dbo" />
-          <EntitySet Name="Ticket" EntityType="AutoRentModel.Store.Ticket" store:Type="Tables" Schema="dbo" />
-          <EntitySet Name="TicketHistory" EntityType="AutoRentModel.Store.TicketHistory" store:Type="Tables" Schema="dbo" />
-          <EntitySet Name="UserInRoles" EntityType="AutoRentModel.Store.UserInRoles" store:Type="Tables" Schema="dbo" />
-          <AssociationSet Name="FK_AutoPhotos_Auto" Association="AutoRentModel.Store.FK_AutoPhotos_Auto">
+      <Schema Namespace="Model.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
+        <EntityContainer Name="ModelStoreContainer">
+          <EntitySet Name="Auto" EntityType="Model.Store.Auto" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="AutoPhotos" EntityType="Model.Store.AutoPhotos" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Customer" EntityType="Model.Store.Customer" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="DamageClass" EntityType="Model.Store.DamageClass" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Damages" EntityType="Model.Store.Damages" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Department" EntityType="Model.Store.Department" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Employee" EntityType="Model.Store.Employee" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Members" EntityType="Model.Store.Members" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Order" EntityType="Model.Store.Order" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Payment" EntityType="Model.Store.Payment" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="PermissionRule" EntityType="Model.Store.PermissionRule" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Revisions" EntityType="Model.Store.Revisions" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Roles" EntityType="Model.Store.Roles" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="RulesInRole" EntityType="Model.Store.RulesInRole" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Ticket" EntityType="Model.Store.Ticket" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="TicketHistory" EntityType="Model.Store.TicketHistory" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="UserInRoles" EntityType="Model.Store.UserInRoles" store:Type="Tables" Schema="dbo" />
+          <AssociationSet Name="FK_AutoPhotos_Auto" Association="Model.Store.FK_AutoPhotos_Auto">
             <End Role="Auto" EntitySet="Auto" />
             <End Role="AutoPhotos" EntitySet="AutoPhotos" />
           </AssociationSet>
-          <AssociationSet Name="FK_AutoPhotos_DamageClass" Association="AutoRentModel.Store.FK_AutoPhotos_DamageClass">
+          <AssociationSet Name="FK_AutoPhotos_DamageClass" Association="Model.Store.FK_AutoPhotos_DamageClass">
             <End Role="DamageClass" EntitySet="DamageClass" />
             <End Role="AutoPhotos" EntitySet="AutoPhotos" />
           </AssociationSet>
-          <AssociationSet Name="FK_Damages_DamageClass" Association="AutoRentModel.Store.FK_Damages_DamageClass">
+          <AssociationSet Name="FK_Damages_DamageClass" Association="Model.Store.FK_Damages_DamageClass">
             <End Role="DamageClass" EntitySet="DamageClass" />
             <End Role="Damages" EntitySet="Damages" />
           </AssociationSet>
-          <AssociationSet Name="FK_Damages_Revisions" Association="AutoRentModel.Store.FK_Damages_Revisions">
+          <AssociationSet Name="FK_Damages_Revisions" Association="Model.Store.FK_Damages_Revisions">
             <End Role="Revisions" EntitySet="Revisions" />
             <End Role="Damages" EntitySet="Damages" />
           </AssociationSet>
-          <AssociationSet Name="FK_Employe_Department" Association="AutoRentModel.Store.FK_Employe_Department">
+          <AssociationSet Name="FK_Employe_Department" Association="Model.Store.FK_Employe_Department">
             <End Role="Department" EntitySet="Department" />
-            <End Role="Employe" EntitySet="Employe" />
+            <End Role="Employee" EntitySet="Employee" />
           </AssociationSet>
-          <AssociationSet Name="FK_Members_Customer" Association="AutoRentModel.Store.FK_Members_Customer">
+          <AssociationSet Name="FK_Members_Customer" Association="Model.Store.FK_Members_Customer">
             <End Role="Customer" EntitySet="Customer" />
             <End Role="Members" EntitySet="Members" />
           </AssociationSet>
-          <AssociationSet Name="FK_Members_Employe" Association="AutoRentModel.Store.FK_Members_Employe">
-            <End Role="Employe" EntitySet="Employe" />
+          <AssociationSet Name="FK_Members_Employe" Association="Model.Store.FK_Members_Employe">
+            <End Role="Employee" EntitySet="Employee" />
             <End Role="Members" EntitySet="Members" />
           </AssociationSet>
-          <AssociationSet Name="FK_Order_Customer" Association="AutoRentModel.Store.FK_Order_Customer">
+          <AssociationSet Name="FK_Order_Customer" Association="Model.Store.FK_Order_Customer">
             <End Role="Customer" EntitySet="Customer" />
             <End Role="Order" EntitySet="Order" />
           </AssociationSet>
-          <AssociationSet Name="FK_Order_Department" Association="AutoRentModel.Store.FK_Order_Department">
+          <AssociationSet Name="FK_Order_Department" Association="Model.Store.FK_Order_Department">
             <End Role="Department" EntitySet="Department" />
             <End Role="Order" EntitySet="Order" />
           </AssociationSet>
-          <AssociationSet Name="FK_Order_Employe" Association="AutoRentModel.Store.FK_Order_Employe">
-            <End Role="Employe" EntitySet="Employe" />
+          <AssociationSet Name="FK_Order_Employe" Association="Model.Store.FK_Order_Employe">
+            <End Role="Employee" EntitySet="Employee" />
             <End Role="Order" EntitySet="Order" />
           </AssociationSet>
-          <AssociationSet Name="FK_Payment_Customer" Association="AutoRentModel.Store.FK_Payment_Customer">
+          <AssociationSet Name="FK_Payment_Customer" Association="Model.Store.FK_Payment_Customer">
             <End Role="Customer" EntitySet="Customer" />
             <End Role="Payment" EntitySet="Payment" />
           </AssociationSet>
-          <AssociationSet Name="FK_Revisions_TicketHistory" Association="AutoRentModel.Store.FK_Revisions_TicketHistory">
+          <AssociationSet Name="FK_Revisions_TicketHistory" Association="Model.Store.FK_Revisions_TicketHistory">
             <End Role="TicketHistory" EntitySet="TicketHistory" />
             <End Role="Revisions" EntitySet="Revisions" />
           </AssociationSet>
-          <AssociationSet Name="FK_RulesInRole_PrermissionRule" Association="AutoRentModel.Store.FK_RulesInRole_PrermissionRule">
-            <End Role="PrermissionRule" EntitySet="PrermissionRule" />
+          <AssociationSet Name="FK_RulesInRole_PrermissionRule" Association="Model.Store.FK_RulesInRole_PrermissionRule">
+            <End Role="PermissionRule" EntitySet="PermissionRule" />
             <End Role="RulesInRole" EntitySet="RulesInRole" />
           </AssociationSet>
-          <AssociationSet Name="FK_RulesInRole_Roles" Association="AutoRentModel.Store.FK_RulesInRole_Roles">
+          <AssociationSet Name="FK_RulesInRole_Roles" Association="Model.Store.FK_RulesInRole_Roles">
             <End Role="Roles" EntitySet="Roles" />
             <End Role="RulesInRole" EntitySet="RulesInRole" />
           </AssociationSet>
-          <AssociationSet Name="FK_Ticket_Auto" Association="AutoRentModel.Store.FK_Ticket_Auto">
+          <AssociationSet Name="FK_Ticket_Auto" Association="Model.Store.FK_Ticket_Auto">
             <End Role="Auto" EntitySet="Auto" />
             <End Role="Ticket" EntitySet="Ticket" />
           </AssociationSet>
-          <AssociationSet Name="FK_Ticket_Customer" Association="AutoRentModel.Store.FK_Ticket_Customer">
+          <AssociationSet Name="FK_Ticket_Customer" Association="Model.Store.FK_Ticket_Customer">
             <End Role="Customer" EntitySet="Customer" />
             <End Role="Ticket" EntitySet="Ticket" />
           </AssociationSet>
-          <AssociationSet Name="FK_Ticket_Department" Association="AutoRentModel.Store.FK_Ticket_Department">
+          <AssociationSet Name="FK_Ticket_Department" Association="Model.Store.FK_Ticket_Department">
             <End Role="Department" EntitySet="Department" />
             <End Role="Ticket" EntitySet="Ticket" />
           </AssociationSet>
-          <AssociationSet Name="FK_Ticket_Employe" Association="AutoRentModel.Store.FK_Ticket_Employe">
-            <End Role="Employe" EntitySet="Employe" />
+          <AssociationSet Name="FK_Ticket_Employe" Association="Model.Store.FK_Ticket_Employe">
+            <End Role="Employee" EntitySet="Employee" />
             <End Role="Ticket" EntitySet="Ticket" />
           </AssociationSet>
-          <AssociationSet Name="FK_TicketHistory_Ticket" Association="AutoRentModel.Store.FK_TicketHistory_Ticket">
+          <AssociationSet Name="FK_TicketHistory_Ticket" Association="Model.Store.FK_TicketHistory_Ticket">
             <End Role="Ticket" EntitySet="Ticket" />
             <End Role="TicketHistory" EntitySet="TicketHistory" />
           </AssociationSet>
-          <AssociationSet Name="FK_UserInRoles_Members" Association="AutoRentModel.Store.FK_UserInRoles_Members">
+          <AssociationSet Name="FK_UserInRoles_Members" Association="Model.Store.FK_UserInRoles_Members">
             <End Role="Members" EntitySet="Members" />
             <End Role="UserInRoles" EntitySet="UserInRoles" />
           </AssociationSet>
-          <AssociationSet Name="FK_UserInRoles_Roles" Association="AutoRentModel.Store.FK_UserInRoles_Roles">
+          <AssociationSet Name="FK_UserInRoles_Roles" Association="Model.Store.FK_UserInRoles_Roles">
             <End Role="Roles" EntitySet="Roles" />
             <End Role="UserInRoles" EntitySet="UserInRoles" />
           </AssociationSet>
@@ -115,7 +115,7 @@
           <Property Name="Number" Type="nvarchar" Nullable="false" MaxLength="10" />
           <Property Name="ModelName" Type="nvarchar" Nullable="false" MaxLength="75" />
           <Property Name="BodyType" Type="int" Nullable="false" />
-          <Property Name="InsuaranceId" Type="nvarchar" Nullable="false" MaxLength="24" />
+          <Property Name="InsuaranceNumber" Type="nvarchar" Nullable="false" MaxLength="24" />
           <Property Name="Class" Type="smallint" Nullable="false" />
           <Property Name="Year" Type="smallint" Nullable="false" />
           <Property Name="Mileage" Type="int" Nullable="false" />
@@ -143,7 +143,7 @@
           <Property Name="Id" Type="uniqueidentifier" Nullable="false" />
           <Property Name="Name" Type="nvarchar" Nullable="false" MaxLength="150" />
           <Property Name="Type" Type="nvarchar" Nullable="false" MaxLength="25" />
-          <Property Name="Addresse" Type="nvarchar" MaxLength="150" />
+          <Property Name="Address" Type="nvarchar" MaxLength="150" />
           <Property Name="Phone" Type="nvarchar" Nullable="false" MaxLength="16" />
           <Property Name="InsuranceNumber" Type="nvarchar" MaxLength="26" />
           <Property Name="LicenceNumber" Type="nvarchar" MaxLength="26" />
@@ -178,17 +178,17 @@
           <Property Name="Addresse" Type="nvarchar" Nullable="false" MaxLength="150" />
           <Property Name="Phone" Type="nvarchar" Nullable="false" MaxLength="24" />
         </EntityType>
-        <EntityType Name="Employe">
+        <EntityType Name="Employee">
           <Key>
             <PropertyRef Name="Id" />
           </Key>
           <Property Name="Id" Type="uniqueidentifier" Nullable="false" />
           <Property Name="FirstName" Type="nvarchar" Nullable="false" MaxLength="50" />
-          <Property Name="Family" Type="nvarchar" Nullable="false" MaxLength="50" />
+          <Property Name="LastName" Type="nvarchar" Nullable="false" MaxLength="50" />
           <Property Name="BirthDay" Type="date" />
           <Property Name="Position" Type="nchar" MaxLength="10" />
           <Property Name="DepartmentId" Type="uniqueidentifier" />
-          <Property Name="Addresse" Type="nvarchar" MaxLength="150" />
+          <Property Name="Address" Type="nvarchar" MaxLength="150" />
           <Property Name="Phone" Type="nvarchar" Nullable="false" MaxLength="16" />
           <Property Name="HireDate" Type="date" Nullable="false" />
           <Property Name="FireDate" Type="date" />
@@ -206,6 +206,7 @@
           <Property Name="Email" Type="nvarchar" Nullable="false" MaxLength="150" />
           <Property Name="ERecord" Type="uniqueidentifier" />
           <Property Name="CRecord" Type="uniqueidentifier" />
+          <Property Name="Lock" Type="bit" Nullable="false" />
         </EntityType>
         <EntityType Name="Order">
           <Key>
@@ -237,7 +238,7 @@
           <Property Name="Date" Type="datetime" Nullable="false" />
           <Property Name="Destination" Type="nvarchar" MaxLength="250" />
         </EntityType>
-        <EntityType Name="PrermissionRule">
+        <EntityType Name="PermissionRule">
           <Key>
             <PropertyRef Name="Id" />
           </Key>
@@ -316,10 +317,10 @@
           <Property Name="RoleId" Type="uniqueidentifier" Nullable="false" />
         </EntityType>
         <Association Name="FK_AutoPhotos_Auto">
-          <End Role="Auto" Type="AutoRentModel.Store.Auto" Multiplicity="1">
+          <End Role="Auto" Type="Model.Store.Auto" Multiplicity="1">
             <OnDelete Action="Cascade" />
           </End>
-          <End Role="AutoPhotos" Type="AutoRentModel.Store.AutoPhotos" Multiplicity="*" />
+          <End Role="AutoPhotos" Type="Model.Store.AutoPhotos" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="Auto">
               <PropertyRef Name="Number" />
@@ -330,8 +331,8 @@
           </ReferentialConstraint>
         </Association>
         <Association Name="FK_AutoPhotos_DamageClass">
-          <End Role="DamageClass" Type="AutoRentModel.Store.DamageClass" Multiplicity="0..1" />
-          <End Role="AutoPhotos" Type="AutoRentModel.Store.AutoPhotos" Multiplicity="*" />
+          <End Role="DamageClass" Type="Model.Store.DamageClass" Multiplicity="0..1" />
+          <End Role="AutoPhotos" Type="Model.Store.AutoPhotos" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="DamageClass">
               <PropertyRef Name="Class" />
@@ -342,10 +343,10 @@
           </ReferentialConstraint>
         </Association>
         <Association Name="FK_Damages_DamageClass">
-          <End Role="DamageClass" Type="AutoRentModel.Store.DamageClass" Multiplicity="1">
+          <End Role="DamageClass" Type="Model.Store.DamageClass" Multiplicity="1">
             <OnDelete Action="Cascade" />
           </End>
-          <End Role="Damages" Type="AutoRentModel.Store.Damages" Multiplicity="*" />
+          <End Role="Damages" Type="Model.Store.Damages" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="DamageClass">
               <PropertyRef Name="Class" />
@@ -356,10 +357,10 @@
           </ReferentialConstraint>
         </Association>
         <Association Name="FK_Damages_Revisions">
-          <End Role="Revisions" Type="AutoRentModel.Store.Revisions" Multiplicity="1">
+          <End Role="Revisions" Type="Model.Store.Revisions" Multiplicity="1">
             <OnDelete Action="Cascade" />
           </End>
-          <End Role="Damages" Type="AutoRentModel.Store.Damages" Multiplicity="*" />
+          <End Role="Damages" Type="Model.Store.Damages" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="Revisions">
               <PropertyRef Name="Id" />
@@ -370,20 +371,20 @@
           </ReferentialConstraint>
         </Association>
         <Association Name="FK_Employe_Department">
-          <End Role="Department" Type="AutoRentModel.Store.Department" Multiplicity="0..1" />
-          <End Role="Employe" Type="AutoRentModel.Store.Employe" Multiplicity="*" />
+          <End Role="Department" Type="Model.Store.Department" Multiplicity="0..1" />
+          <End Role="Employee" Type="Model.Store.Employee" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="Department">
               <PropertyRef Name="Id" />
             </Principal>
-            <Dependent Role="Employe">
+            <Dependent Role="Employee">
               <PropertyRef Name="DepartmentId" />
             </Dependent>
           </ReferentialConstraint>
         </Association>
         <Association Name="FK_Members_Customer">
-          <End Role="Customer" Type="AutoRentModel.Store.Customer" Multiplicity="0..1" />
-          <End Role="Members" Type="AutoRentModel.Store.Members" Multiplicity="*" />
+          <End Role="Customer" Type="Model.Store.Customer" Multiplicity="0..1" />
+          <End Role="Members" Type="Model.Store.Members" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="Customer">
               <PropertyRef Name="Id" />
@@ -394,10 +395,10 @@
           </ReferentialConstraint>
         </Association>
         <Association Name="FK_Members_Employe">
-          <End Role="Employe" Type="AutoRentModel.Store.Employe" Multiplicity="0..1" />
-          <End Role="Members" Type="AutoRentModel.Store.Members" Multiplicity="*" />
+          <End Role="Employee" Type="Model.Store.Employee" Multiplicity="0..1" />
+          <End Role="Members" Type="Model.Store.Members" Multiplicity="*" />
           <ReferentialConstraint>
-            <Principal Role="Employe">
+            <Principal Role="Employee">
               <PropertyRef Name="Id" />
             </Principal>
             <Dependent Role="Members">
@@ -406,10 +407,10 @@
           </ReferentialConstraint>
         </Association>
         <Association Name="FK_Order_Customer">
-          <End Role="Customer" Type="AutoRentModel.Store.Customer" Multiplicity="1">
+          <End Role="Customer" Type="Model.Store.Customer" Multiplicity="1">
             <OnDelete Action="Cascade" />
           </End>
-          <End Role="Order" Type="AutoRentModel.Store.Order" Multiplicity="*" />
+          <End Role="Order" Type="Model.Store.Order" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="Customer">
               <PropertyRef Name="Id" />
@@ -420,10 +421,10 @@
           </ReferentialConstraint>
         </Association>
         <Association Name="FK_Order_Department">
-          <End Role="Department" Type="AutoRentModel.Store.Department" Multiplicity="0..1">
+          <End Role="Department" Type="Model.Store.Department" Multiplicity="0..1">
             <OnDelete Action="Cascade" />
           </End>
-          <End Role="Order" Type="AutoRentModel.Store.Order" Multiplicity="*" />
+          <End Role="Order" Type="Model.Store.Order" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="Department">
               <PropertyRef Name="Id" />
@@ -434,10 +435,10 @@
           </ReferentialConstraint>
         </Association>
         <Association Name="FK_Order_Employe">
-          <End Role="Employe" Type="AutoRentModel.Store.Employe" Multiplicity="0..1" />
-          <End Role="Order" Type="AutoRentModel.Store.Order" Multiplicity="*" />
+          <End Role="Employee" Type="Model.Store.Employee" Multiplicity="0..1" />
+          <End Role="Order" Type="Model.Store.Order" Multiplicity="*" />
           <ReferentialConstraint>
-            <Principal Role="Employe">
+            <Principal Role="Employee">
               <PropertyRef Name="Id" />
             </Principal>
             <Dependent Role="Order">
@@ -446,8 +447,8 @@
           </ReferentialConstraint>
         </Association>
         <Association Name="FK_Payment_Customer">
-          <End Role="Customer" Type="AutoRentModel.Store.Customer" Multiplicity="1" />
-          <End Role="Payment" Type="AutoRentModel.Store.Payment" Multiplicity="*" />
+          <End Role="Customer" Type="Model.Store.Customer" Multiplicity="1" />
+          <End Role="Payment" Type="Model.Store.Payment" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="Customer">
               <PropertyRef Name="Id" />
@@ -458,8 +459,8 @@
           </ReferentialConstraint>
         </Association>
         <Association Name="FK_Revisions_TicketHistory">
-          <End Role="TicketHistory" Type="AutoRentModel.Store.TicketHistory" Multiplicity="1" />
-          <End Role="Revisions" Type="AutoRentModel.Store.Revisions" Multiplicity="*" />
+          <End Role="TicketHistory" Type="Model.Store.TicketHistory" Multiplicity="1" />
+          <End Role="Revisions" Type="Model.Store.Revisions" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="TicketHistory">
               <PropertyRef Name="TicketId" />
@@ -472,12 +473,12 @@
           </ReferentialConstraint>
         </Association>
         <Association Name="FK_RulesInRole_PrermissionRule">
-          <End Role="PrermissionRule" Type="AutoRentModel.Store.PrermissionRule" Multiplicity="1">
+          <End Role="PermissionRule" Type="Model.Store.PermissionRule" Multiplicity="1">
             <OnDelete Action="Cascade" />
           </End>
-          <End Role="RulesInRole" Type="AutoRentModel.Store.RulesInRole" Multiplicity="*" />
+          <End Role="RulesInRole" Type="Model.Store.RulesInRole" Multiplicity="*" />
           <ReferentialConstraint>
-            <Principal Role="PrermissionRule">
+            <Principal Role="PermissionRule">
               <PropertyRef Name="Id" />
             </Principal>
             <Dependent Role="RulesInRole">
@@ -486,10 +487,10 @@
           </ReferentialConstraint>
         </Association>
         <Association Name="FK_RulesInRole_Roles">
-          <End Role="Roles" Type="AutoRentModel.Store.Roles" Multiplicity="1">
+          <End Role="Roles" Type="Model.Store.Roles" Multiplicity="1">
             <OnDelete Action="Cascade" />
           </End>
-          <End Role="RulesInRole" Type="AutoRentModel.Store.RulesInRole" Multiplicity="*" />
+          <End Role="RulesInRole" Type="Model.Store.RulesInRole" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="Roles">
               <PropertyRef Name="Id" />
@@ -500,8 +501,8 @@
           </ReferentialConstraint>
         </Association>
         <Association Name="FK_Ticket_Auto">
-          <End Role="Auto" Type="AutoRentModel.Store.Auto" Multiplicity="1" />
-          <End Role="Ticket" Type="AutoRentModel.Store.Ticket" Multiplicity="*" />
+          <End Role="Auto" Type="Model.Store.Auto" Multiplicity="1" />
+          <End Role="Ticket" Type="Model.Store.Ticket" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="Auto">
               <PropertyRef Name="Number" />
@@ -512,8 +513,8 @@
           </ReferentialConstraint>
         </Association>
         <Association Name="FK_Ticket_Customer">
-          <End Role="Customer" Type="AutoRentModel.Store.Customer" Multiplicity="0..1" />
-          <End Role="Ticket" Type="AutoRentModel.Store.Ticket" Multiplicity="*" />
+          <End Role="Customer" Type="Model.Store.Customer" Multiplicity="0..1" />
+          <End Role="Ticket" Type="Model.Store.Ticket" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="Customer">
               <PropertyRef Name="Id" />
@@ -524,10 +525,10 @@
           </ReferentialConstraint>
         </Association>
         <Association Name="FK_Ticket_Department">
-          <End Role="Department" Type="AutoRentModel.Store.Department" Multiplicity="1">
+          <End Role="Department" Type="Model.Store.Department" Multiplicity="1">
             <OnDelete Action="Cascade" />
           </End>
-          <End Role="Ticket" Type="AutoRentModel.Store.Ticket" Multiplicity="*" />
+          <End Role="Ticket" Type="Model.Store.Ticket" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="Department">
               <PropertyRef Name="Id" />
@@ -538,10 +539,10 @@
           </ReferentialConstraint>
         </Association>
         <Association Name="FK_Ticket_Employe">
-          <End Role="Employe" Type="AutoRentModel.Store.Employe" Multiplicity="0..1" />
-          <End Role="Ticket" Type="AutoRentModel.Store.Ticket" Multiplicity="*" />
+          <End Role="Employee" Type="Model.Store.Employee" Multiplicity="0..1" />
+          <End Role="Ticket" Type="Model.Store.Ticket" Multiplicity="*" />
           <ReferentialConstraint>
-            <Principal Role="Employe">
+            <Principal Role="Employee">
               <PropertyRef Name="Id" />
             </Principal>
             <Dependent Role="Ticket">
@@ -550,10 +551,10 @@
           </ReferentialConstraint>
         </Association>
         <Association Name="FK_TicketHistory_Ticket">
-          <End Role="Ticket" Type="AutoRentModel.Store.Ticket" Multiplicity="1">
+          <End Role="Ticket" Type="Model.Store.Ticket" Multiplicity="1">
             <OnDelete Action="Cascade" />
           </End>
-          <End Role="TicketHistory" Type="AutoRentModel.Store.TicketHistory" Multiplicity="*" />
+          <End Role="TicketHistory" Type="Model.Store.TicketHistory" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="Ticket">
               <PropertyRef Name="Id" />
@@ -564,10 +565,10 @@
           </ReferentialConstraint>
         </Association>
         <Association Name="FK_UserInRoles_Members">
-          <End Role="Members" Type="AutoRentModel.Store.Members" Multiplicity="1">
+          <End Role="Members" Type="Model.Store.Members" Multiplicity="1">
             <OnDelete Action="Cascade" />
           </End>
-          <End Role="UserInRoles" Type="AutoRentModel.Store.UserInRoles" Multiplicity="*" />
+          <End Role="UserInRoles" Type="Model.Store.UserInRoles" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="Members">
               <PropertyRef Name="Login" />
@@ -578,10 +579,10 @@
           </ReferentialConstraint>
         </Association>
         <Association Name="FK_UserInRoles_Roles">
-          <End Role="Roles" Type="AutoRentModel.Store.Roles" Multiplicity="1">
+          <End Role="Roles" Type="Model.Store.Roles" Multiplicity="1">
             <OnDelete Action="Cascade" />
           </End>
-          <End Role="UserInRoles" Type="AutoRentModel.Store.UserInRoles" Multiplicity="*" />
+          <End Role="UserInRoles" Type="Model.Store.UserInRoles" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="Roles">
               <PropertyRef Name="Id" />
@@ -595,101 +596,101 @@
     </edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
-      <Schema Namespace="AutoRentModel" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
+      <Schema Namespace="Model" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
         <EntityContainer Name="AutoRentEntities" annotation:LazyLoadingEnabled="true">
-          <EntitySet Name="Auto" EntityType="AutoRentModel.Auto" />
-          <EntitySet Name="AutoPhotos" EntityType="AutoRentModel.AutoPhotos" />
-          <EntitySet Name="Customer" EntityType="AutoRentModel.Customer" />
-          <EntitySet Name="DamageClass" EntityType="AutoRentModel.DamageClass" />
-          <EntitySet Name="Damages" EntityType="AutoRentModel.Damages" />
-          <EntitySet Name="Department" EntityType="AutoRentModel.Department" />
-          <EntitySet Name="Employe" EntityType="AutoRentModel.Employe" />
-          <EntitySet Name="Members" EntityType="AutoRentModel.Members" />
-          <EntitySet Name="Order" EntityType="AutoRentModel.Order" />
-          <EntitySet Name="Payment" EntityType="AutoRentModel.Payment" />
-          <EntitySet Name="PrermissionRule" EntityType="AutoRentModel.PrermissionRule" />
-          <EntitySet Name="Revisions" EntityType="AutoRentModel.Revisions" />
-          <EntitySet Name="Roles" EntityType="AutoRentModel.Roles" />
-          <EntitySet Name="RulesInRole" EntityType="AutoRentModel.RulesInRole" />
-          <EntitySet Name="Ticket" EntityType="AutoRentModel.Ticket" />
-          <EntitySet Name="TicketHistory" EntityType="AutoRentModel.TicketHistory" />
-          <AssociationSet Name="FK_AutoPhotos_Auto" Association="AutoRentModel.FK_AutoPhotos_Auto">
+          <EntitySet Name="Auto" EntityType="Model.Auto" />
+          <EntitySet Name="AutoPhotos" EntityType="Model.AutoPhotos" />
+          <EntitySet Name="Customer" EntityType="Model.Customer" />
+          <EntitySet Name="DamageClass" EntityType="Model.DamageClass" />
+          <EntitySet Name="Damages" EntityType="Model.Damages" />
+          <EntitySet Name="Department" EntityType="Model.Department" />
+          <EntitySet Name="Employee" EntityType="Model.Employee" />
+          <EntitySet Name="Members" EntityType="Model.Members" />
+          <EntitySet Name="Order" EntityType="Model.Order" />
+          <EntitySet Name="Payment" EntityType="Model.Payment" />
+          <EntitySet Name="PermissionRule" EntityType="Model.PermissionRule" />
+          <EntitySet Name="Revisions" EntityType="Model.Revisions" />
+          <EntitySet Name="Roles" EntityType="Model.Roles" />
+          <EntitySet Name="RulesInRole" EntityType="Model.RulesInRole" />
+          <EntitySet Name="Ticket" EntityType="Model.Ticket" />
+          <EntitySet Name="TicketHistory" EntityType="Model.TicketHistory" />
+          <AssociationSet Name="FK_AutoPhotos_Auto" Association="Model.FK_AutoPhotos_Auto">
             <End Role="Auto" EntitySet="Auto" />
             <End Role="AutoPhotos" EntitySet="AutoPhotos" />
           </AssociationSet>
-          <AssociationSet Name="FK_Ticket_Auto" Association="AutoRentModel.FK_Ticket_Auto">
+          <AssociationSet Name="FK_Ticket_Auto" Association="Model.FK_Ticket_Auto">
             <End Role="Auto" EntitySet="Auto" />
             <End Role="Ticket" EntitySet="Ticket" />
           </AssociationSet>
-          <AssociationSet Name="FK_AutoPhotos_DamageClass" Association="AutoRentModel.FK_AutoPhotos_DamageClass">
+          <AssociationSet Name="FK_AutoPhotos_DamageClass" Association="Model.FK_AutoPhotos_DamageClass">
             <End Role="DamageClass" EntitySet="DamageClass" />
             <End Role="AutoPhotos" EntitySet="AutoPhotos" />
           </AssociationSet>
-          <AssociationSet Name="FK_Members_Customer" Association="AutoRentModel.FK_Members_Customer">
+          <AssociationSet Name="FK_Members_Customer" Association="Model.FK_Members_Customer">
             <End Role="Customer" EntitySet="Customer" />
             <End Role="Members" EntitySet="Members" />
           </AssociationSet>
-          <AssociationSet Name="FK_Order_Customer" Association="AutoRentModel.FK_Order_Customer">
+          <AssociationSet Name="FK_Order_Customer" Association="Model.FK_Order_Customer">
             <End Role="Customer" EntitySet="Customer" />
             <End Role="Order" EntitySet="Order" />
           </AssociationSet>
-          <AssociationSet Name="FK_Payment_Customer" Association="AutoRentModel.FK_Payment_Customer">
+          <AssociationSet Name="FK_Payment_Customer" Association="Model.FK_Payment_Customer">
             <End Role="Customer" EntitySet="Customer" />
             <End Role="Payment" EntitySet="Payment" />
           </AssociationSet>
-          <AssociationSet Name="FK_Ticket_Customer" Association="AutoRentModel.FK_Ticket_Customer">
+          <AssociationSet Name="FK_Ticket_Customer" Association="Model.FK_Ticket_Customer">
             <End Role="Customer" EntitySet="Customer" />
             <End Role="Ticket" EntitySet="Ticket" />
           </AssociationSet>
-          <AssociationSet Name="FK_Damages_DamageClass" Association="AutoRentModel.FK_Damages_DamageClass">
+          <AssociationSet Name="FK_Damages_DamageClass" Association="Model.FK_Damages_DamageClass">
             <End Role="DamageClass" EntitySet="DamageClass" />
             <End Role="Damages" EntitySet="Damages" />
           </AssociationSet>
-          <AssociationSet Name="FK_Damages_Revisions" Association="AutoRentModel.FK_Damages_Revisions">
+          <AssociationSet Name="FK_Damages_Revisions" Association="Model.FK_Damages_Revisions">
             <End Role="Revisions" EntitySet="Revisions" />
             <End Role="Damages" EntitySet="Damages" />
           </AssociationSet>
-          <AssociationSet Name="FK_Employe_Department" Association="AutoRentModel.FK_Employe_Department">
+          <AssociationSet Name="FK_Employe_Department" Association="Model.FK_Employe_Department">
             <End Role="Department" EntitySet="Department" />
-            <End Role="Employe" EntitySet="Employe" />
+            <End Role="Employee" EntitySet="Employee" />
           </AssociationSet>
-          <AssociationSet Name="FK_Order_Department" Association="AutoRentModel.FK_Order_Department">
+          <AssociationSet Name="FK_Order_Department" Association="Model.FK_Order_Department">
             <End Role="Department" EntitySet="Department" />
             <End Role="Order" EntitySet="Order" />
           </AssociationSet>
-          <AssociationSet Name="FK_Ticket_Department" Association="AutoRentModel.FK_Ticket_Department">
+          <AssociationSet Name="FK_Ticket_Department" Association="Model.FK_Ticket_Department">
             <End Role="Department" EntitySet="Department" />
             <End Role="Ticket" EntitySet="Ticket" />
           </AssociationSet>
-          <AssociationSet Name="FK_Members_Employe" Association="AutoRentModel.FK_Members_Employe">
-            <End Role="Employe" EntitySet="Employe" />
+          <AssociationSet Name="FK_Members_Employe" Association="Model.FK_Members_Employe">
+            <End Role="Employee" EntitySet="Employee" />
             <End Role="Members" EntitySet="Members" />
           </AssociationSet>
-          <AssociationSet Name="FK_Order_Employe" Association="AutoRentModel.FK_Order_Employe">
-            <End Role="Employe" EntitySet="Employe" />
+          <AssociationSet Name="FK_Order_Employe" Association="Model.FK_Order_Employe">
+            <End Role="Employee" EntitySet="Employee" />
             <End Role="Order" EntitySet="Order" />
           </AssociationSet>
-          <AssociationSet Name="FK_Ticket_Employe" Association="AutoRentModel.FK_Ticket_Employe">
-            <End Role="Employe" EntitySet="Employe" />
+          <AssociationSet Name="FK_Ticket_Employe" Association="Model.FK_Ticket_Employe">
+            <End Role="Employee" EntitySet="Employee" />
             <End Role="Ticket" EntitySet="Ticket" />
           </AssociationSet>
-          <AssociationSet Name="FK_RulesInRole_PrermissionRule" Association="AutoRentModel.FK_RulesInRole_PrermissionRule">
-            <End Role="PrermissionRule" EntitySet="PrermissionRule" />
+          <AssociationSet Name="FK_RulesInRole_PrermissionRule" Association="Model.FK_RulesInRole_PrermissionRule">
+            <End Role="PermissionRule" EntitySet="PermissionRule" />
             <End Role="RulesInRole" EntitySet="RulesInRole" />
           </AssociationSet>
-          <AssociationSet Name="FK_Revisions_TicketHistory" Association="AutoRentModel.FK_Revisions_TicketHistory">
+          <AssociationSet Name="FK_Revisions_TicketHistory" Association="Model.FK_Revisions_TicketHistory">
             <End Role="TicketHistory" EntitySet="TicketHistory" />
             <End Role="Revisions" EntitySet="Revisions" />
           </AssociationSet>
-          <AssociationSet Name="FK_RulesInRole_Roles" Association="AutoRentModel.FK_RulesInRole_Roles">
+          <AssociationSet Name="FK_RulesInRole_Roles" Association="Model.FK_RulesInRole_Roles">
             <End Role="Roles" EntitySet="Roles" />
             <End Role="RulesInRole" EntitySet="RulesInRole" />
           </AssociationSet>
-          <AssociationSet Name="FK_TicketHistory_Ticket" Association="AutoRentModel.FK_TicketHistory_Ticket">
+          <AssociationSet Name="FK_TicketHistory_Ticket" Association="Model.FK_TicketHistory_Ticket">
             <End Role="Ticket" EntitySet="Ticket" />
             <End Role="TicketHistory" EntitySet="TicketHistory" />
           </AssociationSet>
-          <AssociationSet Name="UserInRoles" Association="AutoRentModel.UserInRoles">
+          <AssociationSet Name="UserInRoles" Association="Model.UserInRoles">
             <End Role="Members" EntitySet="Members" />
             <End Role="Roles" EntitySet="Roles" />
           </AssociationSet>
@@ -701,7 +702,7 @@
           <Property Name="Number" Type="String" Nullable="false" MaxLength="10" Unicode="true" FixedLength="false" />
           <Property Name="ModelName" Type="String" Nullable="false" MaxLength="75" Unicode="true" FixedLength="false" />
           <Property Name="BodyType" Type="Int32" Nullable="false" />
-          <Property Name="InsuaranceId" Type="String" Nullable="false" MaxLength="24" Unicode="true" FixedLength="false" />
+          <Property Name="InsuaranceNumber" Type="String" Nullable="false" MaxLength="24" Unicode="true" FixedLength="false" />
           <Property Name="Class" Type="Int16" Nullable="false" />
           <Property Name="Year" Type="Int16" Nullable="false" />
           <Property Name="Mileage" Type="Int32" Nullable="false" />
@@ -711,8 +712,8 @@
           <Property Name="KmRate" Type="Decimal" Precision="19" Scale="4" />
           <Property Name="Status" Type="Int16" Nullable="false" />
           <Property Name="Advance" Type="Decimal" Precision="19" Scale="4" />
-          <NavigationProperty Name="AutoPhotos" Relationship="AutoRentModel.FK_AutoPhotos_Auto" FromRole="Auto" ToRole="AutoPhotos" />
-          <NavigationProperty Name="Ticket" Relationship="AutoRentModel.FK_Ticket_Auto" FromRole="Auto" ToRole="Ticket" />
+          <NavigationProperty Name="AutoPhotos" Relationship="Model.FK_AutoPhotos_Auto" FromRole="Auto" ToRole="AutoPhotos" />
+          <NavigationProperty Name="Ticket" Relationship="Model.FK_Ticket_Auto" FromRole="Auto" ToRole="Ticket" />
         </EntityType>
         <EntityType Name="AutoPhotos">
           <Key>
@@ -723,8 +724,8 @@
           <Property Name="DoDate" Type="DateTime" Nullable="false" />
           <Property Name="PhotoFileName" Type="String" Nullable="false" MaxLength="250" Unicode="true" FixedLength="false" />
           <Property Name="DmgClass" Type="Int32" />
-          <NavigationProperty Name="Auto" Relationship="AutoRentModel.FK_AutoPhotos_Auto" FromRole="AutoPhotos" ToRole="Auto" />
-          <NavigationProperty Name="DamageClass" Relationship="AutoRentModel.FK_AutoPhotos_DamageClass" FromRole="AutoPhotos" ToRole="DamageClass" />
+          <NavigationProperty Name="Auto" Relationship="Model.FK_AutoPhotos_Auto" FromRole="AutoPhotos" ToRole="Auto" />
+          <NavigationProperty Name="DamageClass" Relationship="Model.FK_AutoPhotos_DamageClass" FromRole="AutoPhotos" ToRole="DamageClass" />
         </EntityType>
         <EntityType Name="Customer">
           <Key>
@@ -733,17 +734,17 @@
           <Property Name="Id" Type="Guid" Nullable="false" />
           <Property Name="Name" Type="String" Nullable="false" MaxLength="150" Unicode="true" FixedLength="false" />
           <Property Name="Type" Type="String" Nullable="false" MaxLength="25" Unicode="true" FixedLength="false" />
-          <Property Name="Addresse" Type="String" MaxLength="150" Unicode="true" FixedLength="false" />
+          <Property Name="Address" Type="String" MaxLength="150" Unicode="true" FixedLength="false" />
           <Property Name="Phone" Type="String" Nullable="false" MaxLength="16" Unicode="true" FixedLength="false" />
           <Property Name="InsuranceNumber" Type="String" MaxLength="26" Unicode="true" FixedLength="false" />
           <Property Name="LicenceNumber" Type="String" MaxLength="26" Unicode="true" FixedLength="false" />
           <Property Name="Passport" Type="String" MaxLength="26" Unicode="true" FixedLength="false" />
           <Property Name="BirthDay" Type="DateTime" />
           <Property Name="Data" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
-          <NavigationProperty Name="Members" Relationship="AutoRentModel.FK_Members_Customer" FromRole="Customer" ToRole="Members" />
-          <NavigationProperty Name="Order" Relationship="AutoRentModel.FK_Order_Customer" FromRole="Customer" ToRole="Order" />
-          <NavigationProperty Name="Payment" Relationship="AutoRentModel.FK_Payment_Customer" FromRole="Customer" ToRole="Payment" />
-          <NavigationProperty Name="Ticket" Relationship="AutoRentModel.FK_Ticket_Customer" FromRole="Customer" ToRole="Ticket" />
+          <NavigationProperty Name="Members" Relationship="Model.FK_Members_Customer" FromRole="Customer" ToRole="Members" />
+          <NavigationProperty Name="Order" Relationship="Model.FK_Order_Customer" FromRole="Customer" ToRole="Order" />
+          <NavigationProperty Name="Payment" Relationship="Model.FK_Payment_Customer" FromRole="Customer" ToRole="Payment" />
+          <NavigationProperty Name="Ticket" Relationship="Model.FK_Ticket_Customer" FromRole="Customer" ToRole="Ticket" />
         </EntityType>
         <EntityType Name="DamageClass">
           <Key>
@@ -752,8 +753,8 @@
           <Property Name="Class" Type="Int32" Nullable="false" />
           <Property Name="Name" Type="String" Nullable="false" MaxLength="150" Unicode="true" FixedLength="false" />
           <Property Name="Description" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
-          <NavigationProperty Name="AutoPhotos" Relationship="AutoRentModel.FK_AutoPhotos_DamageClass" FromRole="DamageClass" ToRole="AutoPhotos" />
-          <NavigationProperty Name="Damages" Relationship="AutoRentModel.FK_Damages_DamageClass" FromRole="DamageClass" ToRole="Damages" />
+          <NavigationProperty Name="AutoPhotos" Relationship="Model.FK_AutoPhotos_DamageClass" FromRole="DamageClass" ToRole="AutoPhotos" />
+          <NavigationProperty Name="Damages" Relationship="Model.FK_Damages_DamageClass" FromRole="DamageClass" ToRole="Damages" />
         </EntityType>
         <EntityType Name="Damages">
           <Key>
@@ -763,8 +764,8 @@
           <Property Name="RevisionId" Type="Int64" Nullable="false" />
           <Property Name="Class" Type="Int32" Nullable="false" />
           <Property Name="Rate" Type="Byte" Nullable="false" />
-          <NavigationProperty Name="DamageClass" Relationship="AutoRentModel.FK_Damages_DamageClass" FromRole="Damages" ToRole="DamageClass" />
-          <NavigationProperty Name="Revisions" Relationship="AutoRentModel.FK_Damages_Revisions" FromRole="Damages" ToRole="Revisions" />
+          <NavigationProperty Name="DamageClass" Relationship="Model.FK_Damages_DamageClass" FromRole="Damages" ToRole="DamageClass" />
+          <NavigationProperty Name="Revisions" Relationship="Model.FK_Damages_Revisions" FromRole="Damages" ToRole="Revisions" />
         </EntityType>
         <EntityType Name="Department">
           <Key>
@@ -775,31 +776,31 @@
           <Property Name="Name" Type="String" Nullable="false" MaxLength="150" Unicode="true" FixedLength="false" />
           <Property Name="Addresse" Type="String" Nullable="false" MaxLength="150" Unicode="true" FixedLength="false" />
           <Property Name="Phone" Type="String" Nullable="false" MaxLength="24" Unicode="true" FixedLength="false" />
-          <NavigationProperty Name="Employe" Relationship="AutoRentModel.FK_Employe_Department" FromRole="Department" ToRole="Employe" />
-          <NavigationProperty Name="Order" Relationship="AutoRentModel.FK_Order_Department" FromRole="Department" ToRole="Order" />
-          <NavigationProperty Name="Ticket" Relationship="AutoRentModel.FK_Ticket_Department" FromRole="Department" ToRole="Ticket" />
+          <NavigationProperty Name="Employee" Relationship="Model.FK_Employe_Department" FromRole="Department" ToRole="Employee" />
+          <NavigationProperty Name="Order" Relationship="Model.FK_Order_Department" FromRole="Department" ToRole="Order" />
+          <NavigationProperty Name="Ticket" Relationship="Model.FK_Ticket_Department" FromRole="Department" ToRole="Ticket" />
         </EntityType>
-        <EntityType Name="Employe">
+        <EntityType Name="Employee">
           <Key>
             <PropertyRef Name="Id" />
           </Key>
           <Property Name="Id" Type="Guid" Nullable="false" />
           <Property Name="FirstName" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="false" />
-          <Property Name="Family" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="LastName" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="false" />
           <Property Name="BirthDay" Type="DateTime" />
           <Property Name="Position" Type="String" MaxLength="10" Unicode="true" FixedLength="true" />
           <Property Name="DepartmentId" Type="Guid" />
-          <Property Name="Addresse" Type="String" MaxLength="150" Unicode="true" FixedLength="false" />
+          <Property Name="Address" Type="String" MaxLength="150" Unicode="true" FixedLength="false" />
           <Property Name="Phone" Type="String" Nullable="false" MaxLength="16" Unicode="true" FixedLength="false" />
           <Property Name="HireDate" Type="DateTime" Nullable="false" />
           <Property Name="FireDate" Type="DateTime" />
           <Property Name="InsuranceNumber" Type="String" MaxLength="26" Unicode="true" FixedLength="false" />
           <Property Name="LicenceNumber" Type="String" MaxLength="24" Unicode="true" FixedLength="false" />
           <Property Name="Data" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
-          <NavigationProperty Name="Department" Relationship="AutoRentModel.FK_Employe_Department" FromRole="Employe" ToRole="Department" />
-          <NavigationProperty Name="Members" Relationship="AutoRentModel.FK_Members_Employe" FromRole="Employe" ToRole="Members" />
-          <NavigationProperty Name="Order" Relationship="AutoRentModel.FK_Order_Employe" FromRole="Employe" ToRole="Order" />
-          <NavigationProperty Name="Ticket" Relationship="AutoRentModel.FK_Ticket_Employe" FromRole="Employe" ToRole="Ticket" />
+          <NavigationProperty Name="Department" Relationship="Model.FK_Employe_Department" FromRole="Employee" ToRole="Department" />
+          <NavigationProperty Name="Members" Relationship="Model.FK_Members_Employe" FromRole="Employee" ToRole="Members" />
+          <NavigationProperty Name="Order" Relationship="Model.FK_Order_Employe" FromRole="Employee" ToRole="Order" />
+          <NavigationProperty Name="Ticket" Relationship="Model.FK_Ticket_Employe" FromRole="Employee" ToRole="Ticket" />
         </EntityType>
         <EntityType Name="Members">
           <Key>
@@ -811,9 +812,10 @@
           <Property Name="Email" Type="String" Nullable="false" MaxLength="150" Unicode="true" FixedLength="false" />
           <Property Name="ERecord" Type="Guid" />
           <Property Name="CRecord" Type="Guid" />
-          <NavigationProperty Name="Customer" Relationship="AutoRentModel.FK_Members_Customer" FromRole="Members" ToRole="Customer" />
-          <NavigationProperty Name="Employe" Relationship="AutoRentModel.FK_Members_Employe" FromRole="Members" ToRole="Employe" />
-          <NavigationProperty Name="Roles" Relationship="AutoRentModel.UserInRoles" FromRole="Members" ToRole="Roles" />
+          <Property Name="Lock" Type="Boolean" Nullable="false" />
+          <NavigationProperty Name="Customer" Relationship="Model.FK_Members_Customer" FromRole="Members" ToRole="Customer" />
+          <NavigationProperty Name="Employee" Relationship="Model.FK_Members_Employe" FromRole="Members" ToRole="Employee" />
+          <NavigationProperty Name="Roles" Relationship="Model.UserInRoles" FromRole="Members" ToRole="Roles" />
         </EntityType>
         <EntityType Name="Order">
           <Key>
@@ -831,9 +833,9 @@
           <Property Name="Description" Type="String" MaxLength="250" Unicode="true" FixedLength="false" />
           <Property Name="Data" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
           <Property Name="Template" Type="String" MaxLength="150" Unicode="true" FixedLength="false" />
-          <NavigationProperty Name="Customer" Relationship="AutoRentModel.FK_Order_Customer" FromRole="Order" ToRole="Customer" />
-          <NavigationProperty Name="Department" Relationship="AutoRentModel.FK_Order_Department" FromRole="Order" ToRole="Department" />
-          <NavigationProperty Name="Employe" Relationship="AutoRentModel.FK_Order_Employe" FromRole="Order" ToRole="Employe" />
+          <NavigationProperty Name="Customer" Relationship="Model.FK_Order_Customer" FromRole="Order" ToRole="Customer" />
+          <NavigationProperty Name="Department" Relationship="Model.FK_Order_Department" FromRole="Order" ToRole="Department" />
+          <NavigationProperty Name="Employee" Relationship="Model.FK_Order_Employe" FromRole="Order" ToRole="Employee" />
         </EntityType>
         <EntityType Name="Payment">
           <Key>
@@ -847,9 +849,9 @@
           <Property Name="Amount" Type="Decimal" Nullable="false" Precision="19" Scale="4" />
           <Property Name="Date" Type="DateTime" Nullable="false" />
           <Property Name="Destination" Type="String" MaxLength="250" Unicode="true" FixedLength="false" />
-          <NavigationProperty Name="Customer" Relationship="AutoRentModel.FK_Payment_Customer" FromRole="Payment" ToRole="Customer" />
+          <NavigationProperty Name="Customer" Relationship="Model.FK_Payment_Customer" FromRole="Payment" ToRole="Customer" />
         </EntityType>
-        <EntityType Name="PrermissionRule">
+        <EntityType Name="PermissionRule">
           <Key>
             <PropertyRef Name="Id" />
           </Key>
@@ -857,7 +859,7 @@
           <Property Name="Name" Type="String" Nullable="false" MaxLength="150" Unicode="true" FixedLength="false" />
           <Property Name="ObjectType" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="false" />
           <Property Name="ObjectSubType" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
-          <NavigationProperty Name="RulesInRole" Relationship="AutoRentModel.FK_RulesInRole_PrermissionRule" FromRole="PrermissionRule" ToRole="RulesInRole" />
+          <NavigationProperty Name="RulesInRole" Relationship="Model.FK_RulesInRole_PrermissionRule" FromRole="PermissionRule" ToRole="RulesInRole" />
         </EntityType>
         <EntityType Name="Revisions">
           <Key>
@@ -868,8 +870,8 @@
           <Property Name="DoDate" Type="DateTime" Nullable="false" />
           <Property Name="Type" Type="Int32" />
           <Property Name="AutoNumber" Type="String" MaxLength="10" Unicode="true" FixedLength="false" />
-          <NavigationProperty Name="Damages" Relationship="AutoRentModel.FK_Damages_Revisions" FromRole="Revisions" ToRole="Damages" />
-          <NavigationProperty Name="TicketHistory" Relationship="AutoRentModel.FK_Revisions_TicketHistory" FromRole="Revisions" ToRole="TicketHistory" />
+          <NavigationProperty Name="Damages" Relationship="Model.FK_Damages_Revisions" FromRole="Revisions" ToRole="Damages" />
+          <NavigationProperty Name="TicketHistory" Relationship="Model.FK_Revisions_TicketHistory" FromRole="Revisions" ToRole="TicketHistory" />
         </EntityType>
         <EntityType Name="Roles">
           <Key>
@@ -877,8 +879,8 @@
           </Key>
           <Property Name="Id" Type="Guid" Nullable="false" />
           <Property Name="Name" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="false" />
-          <NavigationProperty Name="RulesInRole" Relationship="AutoRentModel.FK_RulesInRole_Roles" FromRole="Roles" ToRole="RulesInRole" />
-          <NavigationProperty Name="Members" Relationship="AutoRentModel.UserInRoles" FromRole="Roles" ToRole="Members" />
+          <NavigationProperty Name="RulesInRole" Relationship="Model.FK_RulesInRole_Roles" FromRole="Roles" ToRole="RulesInRole" />
+          <NavigationProperty Name="Members" Relationship="Model.UserInRoles" FromRole="Roles" ToRole="Members" />
         </EntityType>
         <EntityType Name="RulesInRole">
           <Key>
@@ -892,8 +894,8 @@
           <Property Name="Delete" Type="Boolean" Nullable="false" />
           <Property Name="Execute" Type="Boolean" Nullable="false" />
           <Property Name="New" Type="Boolean" Nullable="false" />
-          <NavigationProperty Name="PrermissionRule" Relationship="AutoRentModel.FK_RulesInRole_PrermissionRule" FromRole="RulesInRole" ToRole="PrermissionRule" />
-          <NavigationProperty Name="Roles" Relationship="AutoRentModel.FK_RulesInRole_Roles" FromRole="RulesInRole" ToRole="Roles" />
+          <NavigationProperty Name="PermissionRule" Relationship="Model.FK_RulesInRole_PrermissionRule" FromRole="RulesInRole" ToRole="PermissionRule" />
+          <NavigationProperty Name="Roles" Relationship="Model.FK_RulesInRole_Roles" FromRole="RulesInRole" ToRole="Roles" />
         </EntityType>
         <EntityType Name="Ticket">
           <Key>
@@ -912,11 +914,11 @@
           <Property Name="OrderNumber" Type="Int32" />
           <Property Name="Description" Type="String" MaxLength="200" Unicode="true" FixedLength="false" />
           <Property Name="XmlData" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
-          <NavigationProperty Name="Auto" Relationship="AutoRentModel.FK_Ticket_Auto" FromRole="Ticket" ToRole="Auto" />
-          <NavigationProperty Name="Customer" Relationship="AutoRentModel.FK_Ticket_Customer" FromRole="Ticket" ToRole="Customer" />
-          <NavigationProperty Name="Department" Relationship="AutoRentModel.FK_Ticket_Department" FromRole="Ticket" ToRole="Department" />
-          <NavigationProperty Name="Employe" Relationship="AutoRentModel.FK_Ticket_Employe" FromRole="Ticket" ToRole="Employe" />
-          <NavigationProperty Name="TicketHistory" Relationship="AutoRentModel.FK_TicketHistory_Ticket" FromRole="Ticket" ToRole="TicketHistory" />
+          <NavigationProperty Name="Auto" Relationship="Model.FK_Ticket_Auto" FromRole="Ticket" ToRole="Auto" />
+          <NavigationProperty Name="Customer" Relationship="Model.FK_Ticket_Customer" FromRole="Ticket" ToRole="Customer" />
+          <NavigationProperty Name="Department" Relationship="Model.FK_Ticket_Department" FromRole="Ticket" ToRole="Department" />
+          <NavigationProperty Name="Employee" Relationship="Model.FK_Ticket_Employe" FromRole="Ticket" ToRole="Employee" />
+          <NavigationProperty Name="TicketHistory" Relationship="Model.FK_TicketHistory_Ticket" FromRole="Ticket" ToRole="TicketHistory" />
         </EntityType>
         <EntityType Name="TicketHistory">
           <Key>
@@ -930,14 +932,14 @@
           <Property Name="DepartmentId" Type="Guid" Nullable="false" />
           <Property Name="Description" Type="String" MaxLength="150" Unicode="true" FixedLength="false" />
           <Property Name="XmlData" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
-          <NavigationProperty Name="Revisions" Relationship="AutoRentModel.FK_Revisions_TicketHistory" FromRole="TicketHistory" ToRole="Revisions" />
-          <NavigationProperty Name="Ticket" Relationship="AutoRentModel.FK_TicketHistory_Ticket" FromRole="TicketHistory" ToRole="Ticket" />
+          <NavigationProperty Name="Revisions" Relationship="Model.FK_Revisions_TicketHistory" FromRole="TicketHistory" ToRole="Revisions" />
+          <NavigationProperty Name="Ticket" Relationship="Model.FK_TicketHistory_Ticket" FromRole="TicketHistory" ToRole="Ticket" />
         </EntityType>
         <Association Name="FK_AutoPhotos_Auto">
-          <End Role="Auto" Type="AutoRentModel.Auto" Multiplicity="1">
+          <End Role="Auto" Type="Model.Auto" Multiplicity="1">
             <OnDelete Action="Cascade" />
           </End>
-          <End Role="AutoPhotos" Type="AutoRentModel.AutoPhotos" Multiplicity="*" />
+          <End Role="AutoPhotos" Type="Model.AutoPhotos" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="Auto">
               <PropertyRef Name="Number" />
@@ -948,8 +950,8 @@
           </ReferentialConstraint>
         </Association>
         <Association Name="FK_Ticket_Auto">
-          <End Role="Auto" Type="AutoRentModel.Auto" Multiplicity="1" />
-          <End Role="Ticket" Type="AutoRentModel.Ticket" Multiplicity="*" />
+          <End Role="Auto" Type="Model.Auto" Multiplicity="1" />
+          <End Role="Ticket" Type="Model.Ticket" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="Auto">
               <PropertyRef Name="Number" />
@@ -960,8 +962,8 @@
           </ReferentialConstraint>
         </Association>
         <Association Name="FK_AutoPhotos_DamageClass">
-          <End Role="DamageClass" Type="AutoRentModel.DamageClass" Multiplicity="0..1" />
-          <End Role="AutoPhotos" Type="AutoRentModel.AutoPhotos" Multiplicity="*" />
+          <End Role="DamageClass" Type="Model.DamageClass" Multiplicity="0..1" />
+          <End Role="AutoPhotos" Type="Model.AutoPhotos" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="DamageClass">
               <PropertyRef Name="Class" />
@@ -972,8 +974,8 @@
           </ReferentialConstraint>
         </Association>
         <Association Name="FK_Members_Customer">
-          <End Role="Customer" Type="AutoRentModel.Customer" Multiplicity="0..1" />
-          <End Role="Members" Type="AutoRentModel.Members" Multiplicity="*" />
+          <End Role="Customer" Type="Model.Customer" Multiplicity="0..1" />
+          <End Role="Members" Type="Model.Members" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="Customer">
               <PropertyRef Name="Id" />
@@ -984,10 +986,10 @@
           </ReferentialConstraint>
         </Association>
         <Association Name="FK_Order_Customer">
-          <End Role="Customer" Type="AutoRentModel.Customer" Multiplicity="1">
+          <End Role="Customer" Type="Model.Customer" Multiplicity="1">
             <OnDelete Action="Cascade" />
           </End>
-          <End Role="Order" Type="AutoRentModel.Order" Multiplicity="*" />
+          <End Role="Order" Type="Model.Order" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="Customer">
               <PropertyRef Name="Id" />
@@ -998,8 +1000,8 @@
           </ReferentialConstraint>
         </Association>
         <Association Name="FK_Payment_Customer">
-          <End Role="Customer" Type="AutoRentModel.Customer" Multiplicity="1" />
-          <End Role="Payment" Type="AutoRentModel.Payment" Multiplicity="*" />
+          <End Role="Customer" Type="Model.Customer" Multiplicity="1" />
+          <End Role="Payment" Type="Model.Payment" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="Customer">
               <PropertyRef Name="Id" />
@@ -1010,8 +1012,8 @@
           </ReferentialConstraint>
         </Association>
         <Association Name="FK_Ticket_Customer">
-          <End Role="Customer" Type="AutoRentModel.Customer" Multiplicity="0..1" />
-          <End Role="Ticket" Type="AutoRentModel.Ticket" Multiplicity="*" />
+          <End Role="Customer" Type="Model.Customer" Multiplicity="0..1" />
+          <End Role="Ticket" Type="Model.Ticket" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="Customer">
               <PropertyRef Name="Id" />
@@ -1022,10 +1024,10 @@
           </ReferentialConstraint>
         </Association>
         <Association Name="FK_Damages_DamageClass">
-          <End Role="DamageClass" Type="AutoRentModel.DamageClass" Multiplicity="1">
+          <End Role="DamageClass" Type="Model.DamageClass" Multiplicity="1">
             <OnDelete Action="Cascade" />
           </End>
-          <End Role="Damages" Type="AutoRentModel.Damages" Multiplicity="*" />
+          <End Role="Damages" Type="Model.Damages" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="DamageClass">
               <PropertyRef Name="Class" />
@@ -1036,10 +1038,10 @@
           </ReferentialConstraint>
         </Association>
         <Association Name="FK_Damages_Revisions">
-          <End Role="Revisions" Type="AutoRentModel.Revisions" Multiplicity="1">
+          <End Role="Revisions" Type="Model.Revisions" Multiplicity="1">
             <OnDelete Action="Cascade" />
           </End>
-          <End Role="Damages" Type="AutoRentModel.Damages" Multiplicity="*" />
+          <End Role="Damages" Type="Model.Damages" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="Revisions">
               <PropertyRef Name="Id" />
@@ -1050,22 +1052,22 @@
           </ReferentialConstraint>
         </Association>
         <Association Name="FK_Employe_Department">
-          <End Role="Department" Type="AutoRentModel.Department" Multiplicity="0..1" />
-          <End Role="Employe" Type="AutoRentModel.Employe" Multiplicity="*" />
+          <End Role="Department" Type="Model.Department" Multiplicity="0..1" />
+          <End Role="Employee" Type="Model.Employee" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="Department">
               <PropertyRef Name="Id" />
             </Principal>
-            <Dependent Role="Employe">
+            <Dependent Role="Employee">
               <PropertyRef Name="DepartmentId" />
             </Dependent>
           </ReferentialConstraint>
         </Association>
         <Association Name="FK_Order_Department">
-          <End Role="Department" Type="AutoRentModel.Department" Multiplicity="0..1">
+          <End Role="Department" Type="Model.Department" Multiplicity="0..1">
             <OnDelete Action="Cascade" />
           </End>
-          <End Role="Order" Type="AutoRentModel.Order" Multiplicity="*" />
+          <End Role="Order" Type="Model.Order" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="Department">
               <PropertyRef Name="Id" />
@@ -1076,10 +1078,10 @@
           </ReferentialConstraint>
         </Association>
         <Association Name="FK_Ticket_Department">
-          <End Role="Department" Type="AutoRentModel.Department" Multiplicity="1">
+          <End Role="Department" Type="Model.Department" Multiplicity="1">
             <OnDelete Action="Cascade" />
           </End>
-          <End Role="Ticket" Type="AutoRentModel.Ticket" Multiplicity="*" />
+          <End Role="Ticket" Type="Model.Ticket" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="Department">
               <PropertyRef Name="Id" />
@@ -1090,10 +1092,10 @@
           </ReferentialConstraint>
         </Association>
         <Association Name="FK_Members_Employe">
-          <End Role="Employe" Type="AutoRentModel.Employe" Multiplicity="0..1" />
-          <End Role="Members" Type="AutoRentModel.Members" Multiplicity="*" />
+          <End Role="Employee" Type="Model.Employee" Multiplicity="0..1" />
+          <End Role="Members" Type="Model.Members" Multiplicity="*" />
           <ReferentialConstraint>
-            <Principal Role="Employe">
+            <Principal Role="Employee">
               <PropertyRef Name="Id" />
             </Principal>
             <Dependent Role="Members">
@@ -1102,10 +1104,10 @@
           </ReferentialConstraint>
         </Association>
         <Association Name="FK_Order_Employe">
-          <End Role="Employe" Type="AutoRentModel.Employe" Multiplicity="0..1" />
-          <End Role="Order" Type="AutoRentModel.Order" Multiplicity="*" />
+          <End Role="Employee" Type="Model.Employee" Multiplicity="0..1" />
+          <End Role="Order" Type="Model.Order" Multiplicity="*" />
           <ReferentialConstraint>
-            <Principal Role="Employe">
+            <Principal Role="Employee">
               <PropertyRef Name="Id" />
             </Principal>
             <Dependent Role="Order">
@@ -1114,10 +1116,10 @@
           </ReferentialConstraint>
         </Association>
         <Association Name="FK_Ticket_Employe">
-          <End Role="Employe" Type="AutoRentModel.Employe" Multiplicity="0..1" />
-          <End Role="Ticket" Type="AutoRentModel.Ticket" Multiplicity="*" />
+          <End Role="Employee" Type="Model.Employee" Multiplicity="0..1" />
+          <End Role="Ticket" Type="Model.Ticket" Multiplicity="*" />
           <ReferentialConstraint>
-            <Principal Role="Employe">
+            <Principal Role="Employee">
               <PropertyRef Name="Id" />
             </Principal>
             <Dependent Role="Ticket">
@@ -1126,12 +1128,12 @@
           </ReferentialConstraint>
         </Association>
         <Association Name="FK_RulesInRole_PrermissionRule">
-          <End Role="PrermissionRule" Type="AutoRentModel.PrermissionRule" Multiplicity="1">
+          <End Role="PermissionRule" Type="Model.PermissionRule" Multiplicity="1">
             <OnDelete Action="Cascade" />
           </End>
-          <End Role="RulesInRole" Type="AutoRentModel.RulesInRole" Multiplicity="*" />
+          <End Role="RulesInRole" Type="Model.RulesInRole" Multiplicity="*" />
           <ReferentialConstraint>
-            <Principal Role="PrermissionRule">
+            <Principal Role="PermissionRule">
               <PropertyRef Name="Id" />
             </Principal>
             <Dependent Role="RulesInRole">
@@ -1140,8 +1142,8 @@
           </ReferentialConstraint>
         </Association>
         <Association Name="FK_Revisions_TicketHistory">
-          <End Role="TicketHistory" Type="AutoRentModel.TicketHistory" Multiplicity="1" />
-          <End Role="Revisions" Type="AutoRentModel.Revisions" Multiplicity="*" />
+          <End Role="TicketHistory" Type="Model.TicketHistory" Multiplicity="1" />
+          <End Role="Revisions" Type="Model.Revisions" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="TicketHistory">
               <PropertyRef Name="TicketId" />
@@ -1154,10 +1156,10 @@
           </ReferentialConstraint>
         </Association>
         <Association Name="FK_RulesInRole_Roles">
-          <End Role="Roles" Type="AutoRentModel.Roles" Multiplicity="1">
+          <End Role="Roles" Type="Model.Roles" Multiplicity="1">
             <OnDelete Action="Cascade" />
           </End>
-          <End Role="RulesInRole" Type="AutoRentModel.RulesInRole" Multiplicity="*" />
+          <End Role="RulesInRole" Type="Model.RulesInRole" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="Roles">
               <PropertyRef Name="Id" />
@@ -1168,10 +1170,10 @@
           </ReferentialConstraint>
         </Association>
         <Association Name="FK_TicketHistory_Ticket">
-          <End Role="Ticket" Type="AutoRentModel.Ticket" Multiplicity="1">
+          <End Role="Ticket" Type="Model.Ticket" Multiplicity="1">
             <OnDelete Action="Cascade" />
           </End>
-          <End Role="TicketHistory" Type="AutoRentModel.TicketHistory" Multiplicity="*" />
+          <End Role="TicketHistory" Type="Model.TicketHistory" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="Ticket">
               <PropertyRef Name="Id" />
@@ -1182,20 +1184,20 @@
           </ReferentialConstraint>
         </Association>
         <Association Name="UserInRoles">
-          <End Role="Members" Type="AutoRentModel.Members" Multiplicity="*" />
-          <End Role="Roles" Type="AutoRentModel.Roles" Multiplicity="*" />
+          <End Role="Members" Type="Model.Members" Multiplicity="*" />
+          <End Role="Roles" Type="Model.Roles" Multiplicity="*" />
         </Association>
       </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
     <edmx:Mappings>
       <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2008/09/mapping/cs">
-        <EntityContainerMapping StorageEntityContainer="AutoRentModelStoreContainer" CdmEntityContainer="AutoRentEntities">
-          <EntitySetMapping Name="Auto"><EntityTypeMapping TypeName="AutoRentModel.Auto"><MappingFragment StoreEntitySet="Auto">
+        <EntityContainerMapping StorageEntityContainer="ModelStoreContainer" CdmEntityContainer="AutoRentEntities">
+          <EntitySetMapping Name="Auto"><EntityTypeMapping TypeName="Model.Auto"><MappingFragment StoreEntitySet="Auto">
             <ScalarProperty Name="Number" ColumnName="Number" />
             <ScalarProperty Name="ModelName" ColumnName="ModelName" />
             <ScalarProperty Name="BodyType" ColumnName="BodyType" />
-            <ScalarProperty Name="InsuaranceId" ColumnName="InsuaranceId" />
+            <ScalarProperty Name="InsuaranceNumber" ColumnName="InsuaranceNumber" />
             <ScalarProperty Name="Class" ColumnName="Class" />
             <ScalarProperty Name="Year" ColumnName="Year" />
             <ScalarProperty Name="Mileage" ColumnName="Mileage" />
@@ -1206,17 +1208,17 @@
             <ScalarProperty Name="Status" ColumnName="Status" />
             <ScalarProperty Name="Advance" ColumnName="Advance" />
           </MappingFragment></EntityTypeMapping></EntitySetMapping>
-          <EntitySetMapping Name="AutoPhotos"><EntityTypeMapping TypeName="AutoRentModel.AutoPhotos"><MappingFragment StoreEntitySet="AutoPhotos">
+          <EntitySetMapping Name="AutoPhotos"><EntityTypeMapping TypeName="Model.AutoPhotos"><MappingFragment StoreEntitySet="AutoPhotos">
             <ScalarProperty Name="AutoNumber" ColumnName="AutoNumber" />
             <ScalarProperty Name="DoDate" ColumnName="DoDate" />
             <ScalarProperty Name="PhotoFileName" ColumnName="PhotoFileName" />
             <ScalarProperty Name="DmgClass" ColumnName="DmgClass" />
           </MappingFragment></EntityTypeMapping></EntitySetMapping>
-          <EntitySetMapping Name="Customer"><EntityTypeMapping TypeName="AutoRentModel.Customer"><MappingFragment StoreEntitySet="Customer">
+          <EntitySetMapping Name="Customer"><EntityTypeMapping TypeName="Model.Customer"><MappingFragment StoreEntitySet="Customer">
             <ScalarProperty Name="Id" ColumnName="Id" />
             <ScalarProperty Name="Name" ColumnName="Name" />
             <ScalarProperty Name="Type" ColumnName="Type" />
-            <ScalarProperty Name="Addresse" ColumnName="Addresse" />
+            <ScalarProperty Name="Address" ColumnName="Address" />
             <ScalarProperty Name="Phone" ColumnName="Phone" />
             <ScalarProperty Name="InsuranceNumber" ColumnName="InsuranceNumber" />
             <ScalarProperty Name="LicenceNumber" ColumnName="LicenceNumber" />
@@ -1224,32 +1226,32 @@
             <ScalarProperty Name="BirthDay" ColumnName="BirthDay" />
             <ScalarProperty Name="Data" ColumnName="Data" />
           </MappingFragment></EntityTypeMapping></EntitySetMapping>
-          <EntitySetMapping Name="DamageClass"><EntityTypeMapping TypeName="AutoRentModel.DamageClass"><MappingFragment StoreEntitySet="DamageClass">
+          <EntitySetMapping Name="DamageClass"><EntityTypeMapping TypeName="Model.DamageClass"><MappingFragment StoreEntitySet="DamageClass">
             <ScalarProperty Name="Class" ColumnName="Class" />
             <ScalarProperty Name="Name" ColumnName="Name" />
             <ScalarProperty Name="Description" ColumnName="Description" />
           </MappingFragment></EntityTypeMapping></EntitySetMapping>
-          <EntitySetMapping Name="Damages"><EntityTypeMapping TypeName="AutoRentModel.Damages"><MappingFragment StoreEntitySet="Damages">
+          <EntitySetMapping Name="Damages"><EntityTypeMapping TypeName="Model.Damages"><MappingFragment StoreEntitySet="Damages">
             <ScalarProperty Name="Id" ColumnName="Id" />
             <ScalarProperty Name="RevisionId" ColumnName="RevisionId" />
             <ScalarProperty Name="Class" ColumnName="Class" />
             <ScalarProperty Name="Rate" ColumnName="Rate" />
           </MappingFragment></EntityTypeMapping></EntitySetMapping>
-          <EntitySetMapping Name="Department"><EntityTypeMapping TypeName="AutoRentModel.Department"><MappingFragment StoreEntitySet="Department">
+          <EntitySetMapping Name="Department"><EntityTypeMapping TypeName="Model.Department"><MappingFragment StoreEntitySet="Department">
             <ScalarProperty Name="Id" ColumnName="Id" />
             <ScalarProperty Name="CityCode" ColumnName="CityCode" />
             <ScalarProperty Name="Name" ColumnName="Name" />
             <ScalarProperty Name="Addresse" ColumnName="Addresse" />
             <ScalarProperty Name="Phone" ColumnName="Phone" />
           </MappingFragment></EntityTypeMapping></EntitySetMapping>
-          <EntitySetMapping Name="Employe"><EntityTypeMapping TypeName="AutoRentModel.Employe"><MappingFragment StoreEntitySet="Employe">
+          <EntitySetMapping Name="Employee"><EntityTypeMapping TypeName="Model.Employee"><MappingFragment StoreEntitySet="Employee">
             <ScalarProperty Name="Id" ColumnName="Id" />
             <ScalarProperty Name="FirstName" ColumnName="FirstName" />
-            <ScalarProperty Name="Family" ColumnName="Family" />
+            <ScalarProperty Name="LastName" ColumnName="LastName" />
             <ScalarProperty Name="BirthDay" ColumnName="BirthDay" />
             <ScalarProperty Name="Position" ColumnName="Position" />
             <ScalarProperty Name="DepartmentId" ColumnName="DepartmentId" />
-            <ScalarProperty Name="Addresse" ColumnName="Addresse" />
+            <ScalarProperty Name="Address" ColumnName="Address" />
             <ScalarProperty Name="Phone" ColumnName="Phone" />
             <ScalarProperty Name="HireDate" ColumnName="HireDate" />
             <ScalarProperty Name="FireDate" ColumnName="FireDate" />
@@ -1257,15 +1259,16 @@
             <ScalarProperty Name="LicenceNumber" ColumnName="LicenceNumber" />
             <ScalarProperty Name="Data" ColumnName="Data" />
           </MappingFragment></EntityTypeMapping></EntitySetMapping>
-          <EntitySetMapping Name="Members"><EntityTypeMapping TypeName="AutoRentModel.Members"><MappingFragment StoreEntitySet="Members">
+          <EntitySetMapping Name="Members"><EntityTypeMapping TypeName="Model.Members"><MappingFragment StoreEntitySet="Members">
             <ScalarProperty Name="Login" ColumnName="Login" />
             <ScalarProperty Name="Password" ColumnName="Password" />
             <ScalarProperty Name="Created" ColumnName="Created" />
             <ScalarProperty Name="Email" ColumnName="Email" />
             <ScalarProperty Name="ERecord" ColumnName="ERecord" />
             <ScalarProperty Name="CRecord" ColumnName="CRecord" />
+            <ScalarProperty Name="Lock" ColumnName="Lock" />
           </MappingFragment></EntityTypeMapping></EntitySetMapping>
-          <EntitySetMapping Name="Order"><EntityTypeMapping TypeName="AutoRentModel.Order"><MappingFragment StoreEntitySet="Order">
+          <EntitySetMapping Name="Order"><EntityTypeMapping TypeName="Model.Order"><MappingFragment StoreEntitySet="Order">
             <ScalarProperty Name="Number" ColumnName="Number" />
             <ScalarProperty Name="AutoNumber" ColumnName="AutoNumber" />
             <ScalarProperty Name="CustomerId" ColumnName="CustomerId" />
@@ -1279,7 +1282,7 @@
             <ScalarProperty Name="Data" ColumnName="Data" />
             <ScalarProperty Name="Template" ColumnName="Template" />
           </MappingFragment></EntityTypeMapping></EntitySetMapping>
-          <EntitySetMapping Name="Payment"><EntityTypeMapping TypeName="AutoRentModel.Payment"><MappingFragment StoreEntitySet="Payment">
+          <EntitySetMapping Name="Payment"><EntityTypeMapping TypeName="Model.Payment"><MappingFragment StoreEntitySet="Payment">
             <ScalarProperty Name="Id" ColumnName="Id" />
             <ScalarProperty Name="TicketId" ColumnName="TicketId" />
             <ScalarProperty Name="OrderId" ColumnName="OrderId" />
@@ -1289,24 +1292,24 @@
             <ScalarProperty Name="Date" ColumnName="Date" />
             <ScalarProperty Name="Destination" ColumnName="Destination" />
           </MappingFragment></EntityTypeMapping></EntitySetMapping>
-          <EntitySetMapping Name="PrermissionRule"><EntityTypeMapping TypeName="AutoRentModel.PrermissionRule"><MappingFragment StoreEntitySet="PrermissionRule">
+          <EntitySetMapping Name="PermissionRule"><EntityTypeMapping TypeName="Model.PermissionRule"><MappingFragment StoreEntitySet="PermissionRule">
             <ScalarProperty Name="Id" ColumnName="Id" />
             <ScalarProperty Name="Name" ColumnName="Name" />
             <ScalarProperty Name="ObjectType" ColumnName="ObjectType" />
             <ScalarProperty Name="ObjectSubType" ColumnName="ObjectSubType" />
           </MappingFragment></EntityTypeMapping></EntitySetMapping>
-          <EntitySetMapping Name="Revisions"><EntityTypeMapping TypeName="AutoRentModel.Revisions"><MappingFragment StoreEntitySet="Revisions">
+          <EntitySetMapping Name="Revisions"><EntityTypeMapping TypeName="Model.Revisions"><MappingFragment StoreEntitySet="Revisions">
             <ScalarProperty Name="Id" ColumnName="Id" />
             <ScalarProperty Name="TicketId" ColumnName="TicketId" />
             <ScalarProperty Name="DoDate" ColumnName="DoDate" />
             <ScalarProperty Name="Type" ColumnName="Type" />
             <ScalarProperty Name="AutoNumber" ColumnName="AutoNumber" />
           </MappingFragment></EntityTypeMapping></EntitySetMapping>
-          <EntitySetMapping Name="Roles"><EntityTypeMapping TypeName="AutoRentModel.Roles"><MappingFragment StoreEntitySet="Roles">
+          <EntitySetMapping Name="Roles"><EntityTypeMapping TypeName="Model.Roles"><MappingFragment StoreEntitySet="Roles">
             <ScalarProperty Name="Id" ColumnName="Id" />
             <ScalarProperty Name="Name" ColumnName="Name" />
           </MappingFragment></EntityTypeMapping></EntitySetMapping>
-          <EntitySetMapping Name="RulesInRole"><EntityTypeMapping TypeName="AutoRentModel.RulesInRole"><MappingFragment StoreEntitySet="RulesInRole">
+          <EntitySetMapping Name="RulesInRole"><EntityTypeMapping TypeName="Model.RulesInRole"><MappingFragment StoreEntitySet="RulesInRole">
             <ScalarProperty Name="RoleId" ColumnName="RoleId" />
             <ScalarProperty Name="PermId" ColumnName="PermId" />
             <ScalarProperty Name="Read" ColumnName="Read" />
@@ -1315,7 +1318,7 @@
             <ScalarProperty Name="Execute" ColumnName="Execute" />
             <ScalarProperty Name="New" ColumnName="New" />
           </MappingFragment></EntityTypeMapping></EntitySetMapping>
-          <EntitySetMapping Name="Ticket"><EntityTypeMapping TypeName="AutoRentModel.Ticket"><MappingFragment StoreEntitySet="Ticket">
+          <EntitySetMapping Name="Ticket"><EntityTypeMapping TypeName="Model.Ticket"><MappingFragment StoreEntitySet="Ticket">
             <ScalarProperty Name="Id" ColumnName="Id" />
             <ScalarProperty Name="Created" ColumnName="Created" />
             <ScalarProperty Name="Closed" ColumnName="Closed" />
@@ -1330,7 +1333,7 @@
             <ScalarProperty Name="Description" ColumnName="Description" />
             <ScalarProperty Name="XmlData" ColumnName="XmlData" />
           </MappingFragment></EntityTypeMapping></EntitySetMapping>
-          <EntitySetMapping Name="TicketHistory"><EntityTypeMapping TypeName="AutoRentModel.TicketHistory"><MappingFragment StoreEntitySet="TicketHistory">
+          <EntitySetMapping Name="TicketHistory"><EntityTypeMapping TypeName="Model.TicketHistory"><MappingFragment StoreEntitySet="TicketHistory">
             <ScalarProperty Name="TicketId" ColumnName="TicketId" />
             <ScalarProperty Name="DoDate" ColumnName="DoDate" />
             <ScalarProperty Name="Action" ColumnName="Action" />
@@ -1339,7 +1342,7 @@
             <ScalarProperty Name="Description" ColumnName="Description" />
             <ScalarProperty Name="XmlData" ColumnName="XmlData" />
           </MappingFragment></EntityTypeMapping></EntitySetMapping>
-          <AssociationSetMapping Name="UserInRoles" TypeName="AutoRentModel.UserInRoles" StoreEntitySet="UserInRoles">
+          <AssociationSetMapping Name="UserInRoles" TypeName="Model.UserInRoles" StoreEntitySet="UserInRoles">
             <EndProperty Name="Members">
               <ScalarProperty Name="Login" ColumnName="Login" />
             </EndProperty>
@@ -1368,142 +1371,145 @@
     <!-- Diagram content (shape and connector positions) -->
     <Diagrams>
       <Diagram Name="AutoRentModel">
-        <EntityTypeShape EntityType="AutoRentModel.Auto" Width="1.5" PointX="0.75" PointY="12.375" Height="3.9033007812499996" IsExpanded="true" />
-        <EntityTypeShape EntityType="AutoRentModel.AutoPhotos" Width="1.5" PointX="9.75" PointY="7.375" Height="2.1725878906249987" IsExpanded="true" />
-        <EntityTypeShape EntityType="AutoRentModel.Customer" Width="1.5" PointX="0.75" PointY="7.875" Height="3.7109993489583308" IsExpanded="true" />
-        <EntityTypeShape EntityType="AutoRentModel.DamageClass" Width="1.5" PointX="7.5" PointY="0.75" Height="1.9802864583333335" IsExpanded="true" />
-        <EntityTypeShape EntityType="AutoRentModel.Damages" Width="1.5" PointX="9.75" PointY="3.625" Height="2.1725878906249996" IsExpanded="true" />
-        <EntityTypeShape EntityType="AutoRentModel.Department" Width="1.5" PointX="0.75" PointY="17" Height="2.5571907552083317" IsExpanded="true" />
-        <EntityTypeShape EntityType="AutoRentModel.Employe" Width="1.5" PointX="0.75" PointY="20.375" Height="4.2879036458333317" IsExpanded="true" />
-        <EntityTypeShape EntityType="AutoRentModel.Members" Width="1.5" PointX="3" PointY="8.375" Height="2.7494921874999996" IsExpanded="true" />
-        <EntityTypeShape EntityType="AutoRentModel.Order" Width="1.5" PointX="6" PointY="7.75" Height="3.9033007812500005" IsExpanded="true" />
-        <EntityTypeShape EntityType="AutoRentModel.Payment" Width="1.5" PointX="3" PointY="16.5" Height="2.7494921875000031" IsExpanded="true" />
-        <EntityTypeShape EntityType="AutoRentModel.PrermissionRule" Width="1.5" PointX="5.25" PointY="15.75" Height="1.9802864583333317" IsExpanded="true" />
-        <EntityTypeShape EntityType="AutoRentModel.Revisions" Width="1.5" PointX="7.5" PointY="3.5" Height="2.3648893229166674" IsExpanded="true" />
-        <EntityTypeShape EntityType="AutoRentModel.Roles" Width="1.5" PointX="5.25" PointY="12.875" Height="1.7879850260416674" IsExpanded="true" />
-        <EntityTypeShape EntityType="AutoRentModel.RulesInRole" Width="1.5" PointX="7.5" PointY="13.375" Height="2.749492187499996" IsExpanded="true" />
-        <EntityTypeShape EntityType="AutoRentModel.Ticket" Width="1.5" PointX="3" PointY="2.5" Height="4.480205078124996" IsExpanded="true" />
-        <EntityTypeShape EntityType="AutoRentModel.TicketHistory" Width="1.5" PointX="5.25" PointY="3.375" Height="2.749492187499996" IsExpanded="true" />
-        <AssociationConnector Association="AutoRentModel.FK_AutoPhotos_Auto" ManuallyRouted="false">
-          <ConnectorPoint PointX="2.25" PointY="12.59375" />
-          <ConnectorPoint PointX="2.6041666666666665" PointY="12.593749999999998" />
-          <ConnectorPoint PointX="3.0208333333333335" PointY="12.59375" />
-          <ConnectorPoint PointX="3.6666666666666665" PointY="12.59375" />
-          <ConnectorPoint PointX="3.8333333333333335" PointY="12.59375" />
-          <ConnectorPoint PointX="6.8541641666666671" PointY="12.59375" />
-          <ConnectorPoint PointX="7.0208308333333331" PointY="12.59375" />
-          <ConnectorPoint PointX="7.041666666666667" PointY="12.59375" />
-          <ConnectorPoint PointX="7.208333333333333" PointY="12.59375" />
-          <ConnectorPoint PointX="10.5" PointY="12.59375" />
-          <ConnectorPoint PointX="10.5" PointY="9.547587890625" />
+        <EntityTypeShape EntityType="Model.Auto" Width="1.5" PointX="0.75" PointY="12.5" Height="3.9033007812499978" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.AutoPhotos" Width="1.5" PointX="9.75" PointY="7.5" Height="2.1725878906249996" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.Customer" Width="1.5" PointX="0.75" PointY="8" Height="3.7109993489583317" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.DamageClass" Width="1.5" PointX="7.5" PointY="0.875" Height="1.9802864583333335" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.Damages" Width="1.5" PointX="9.75" PointY="3.75" Height="2.1725878906249996" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.Department" Width="1.5" PointX="0.75" PointY="17.125" Height="2.5571907552083317" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.Employee" Width="1.5" PointX="0.75" PointY="20.375" Height="4.2879036458333317" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.Members" Width="1.5" PointX="3" PointY="8.375" Height="2.9417936197916674" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.Order" Width="1.5" PointX="6" PointY="7.875" Height="3.9033007812499996" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.Payment" Width="1.5" PointX="3" PointY="16.75" Height="2.7494921875000031" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.PermissionRule" Width="1.5" PointX="5.25" PointY="15.875" Height="1.9802864583333371" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.Revisions" Width="1.5" PointX="7.5" PointY="3.625" Height="2.3648893229166674" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.Roles" Width="1.5" PointX="5.25" PointY="12.875" Height="1.7879850260416674" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.RulesInRole" Width="1.5" PointX="7.5" PointY="13.375" Height="2.7494921874999942" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.Ticket" Width="1.5" PointX="3" PointY="2.625" Height="4.480205078124996" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.TicketHistory" Width="1.5" PointX="5.25" PointY="3.375" Height="2.749492187499996" IsExpanded="true" />
+        <AssociationConnector Association="Model.FK_AutoPhotos_Auto" ManuallyRouted="false">
+          <ConnectorPoint PointX="2.25" PointY="12.65625" />
+          <ConnectorPoint PointX="2.6041666666666665" PointY="12.656249999999998" />
+          <ConnectorPoint PointX="3.0208333333333335" PointY="12.65625" />
+          <ConnectorPoint PointX="3.6666666666666665" PointY="12.65625" />
+          <ConnectorPoint PointX="3.8333333333333335" PointY="12.65625" />
+          <ConnectorPoint PointX="6.8541641666666671" PointY="12.65625" />
+          <ConnectorPoint PointX="7.0208308333333331" PointY="12.65625" />
+          <ConnectorPoint PointX="7.041666666666667" PointY="12.65625" />
+          <ConnectorPoint PointX="7.208333333333333" PointY="12.65625" />
+          <ConnectorPoint PointX="10.5" PointY="12.65625" />
+          <ConnectorPoint PointX="10.5" PointY="9.672587890625" />
         </AssociationConnector>
-        <AssociationConnector Association="AutoRentModel.FK_Ticket_Auto" ManuallyRouted="false">
-          <ConnectorPoint PointX="2.25" PointY="12.376152846153847" />
-          <ConnectorPoint PointX="2.625" PointY="12.001152846153847" />
-          <ConnectorPoint PointX="2.625" PointY="4.740102539062498" />
-          <ConnectorPoint PointX="3" PointY="4.740102539062498" />
+        <AssociationConnector Association="Model.FK_Ticket_Auto" ManuallyRouted="false">
+          <ConnectorPoint PointX="2.25" PointY="12.501152846153847" />
+          <ConnectorPoint PointX="2.625" PointY="12.126152846153847" />
+          <ConnectorPoint PointX="2.625" PointY="4.865102539062498" />
+          <ConnectorPoint PointX="3" PointY="4.865102539062498" />
         </AssociationConnector>
-        <AssociationConnector Association="AutoRentModel.FK_AutoPhotos_DamageClass" ManuallyRouted="false">
-          <ConnectorPoint PointX="9" PointY="2.7291316121794873" />
-          <ConnectorPoint PointX="9.375" PointY="3.1041316121794873" />
-          <ConnectorPoint PointX="9.375" PointY="8.4612939453125" />
-          <ConnectorPoint PointX="9.75" PointY="8.4612939453125" />
+        <AssociationConnector Association="Model.FK_AutoPhotos_DamageClass" ManuallyRouted="false">
+          <ConnectorPoint PointX="9" PointY="2.8541316121794873" />
+          <ConnectorPoint PointX="9.375" PointY="3.2291316121794873" />
+          <ConnectorPoint PointX="9.375" PointY="8.5862939453125" />
+          <ConnectorPoint PointX="9.75" PointY="8.5862939453125" />
         </AssociationConnector>
-        <AssociationConnector Association="AutoRentModel.FK_Members_Customer" ManuallyRouted="false">
-          <ConnectorPoint PointX="2.25" PointY="9.74974609375" />
-          <ConnectorPoint PointX="2.5416666666666665" PointY="9.74974609375" />
-          <ConnectorPoint PointX="2.7708333333333335" PointY="9.74974609375" />
-          <ConnectorPoint PointX="2.8229166666666665" PointY="9.74974609375" />
-          <ConnectorPoint PointX="2.9895833333333335" PointY="9.74974609375" />
-          <ConnectorPoint PointX="3" PointY="9.74974609375" />
+        <AssociationConnector Association="Model.FK_Members_Customer" ManuallyRouted="false">
+          <ConnectorPoint PointX="2.25" PointY="9.8458968098958337" />
+          <ConnectorPoint PointX="2.5416666666666665" PointY="9.8458968098958337" />
+          <ConnectorPoint PointX="2.7708333333333335" PointY="9.8458968098958337" />
+          <ConnectorPoint PointX="2.8229166666666665" PointY="9.8458968098958337" />
+          <ConnectorPoint PointX="2.9895833333333335" PointY="9.8458968098958337" />
+          <ConnectorPoint PointX="3" PointY="9.8458968098958337" />
         </AssociationConnector>
-        <AssociationConnector Association="AutoRentModel.FK_Order_Customer" ManuallyRouted="false">
-          <ConnectorPoint PointX="2.25" PointY="8.09375" />
-          <ConnectorPoint PointX="2.5416666666666665" PointY="8.09375" />
-          <ConnectorPoint PointX="2.7708333333333335" PointY="8.09375" />
-          <ConnectorPoint PointX="2.8229166666666665" PointY="8.09375" />
-          <ConnectorPoint PointX="2.9895833333333335" PointY="8.09375" />
-          <ConnectorPoint PointX="6" PointY="8.09375" />
+        <AssociationConnector Association="Model.FK_Order_Customer" ManuallyRouted="false">
+          <ConnectorPoint PointX="2.25" PointY="11.545146484375" />
+          <ConnectorPoint PointX="2.5416666666666665" PointY="11.545146484375" />
+          <ConnectorPoint PointX="2.7708333333333335" PointY="11.545146484375" />
+          <ConnectorPoint PointX="2.8229166666666665" PointY="11.545146484375" />
+          <ConnectorPoint PointX="3.0208333333333335" PointY="11.545146484375" />
+          <ConnectorPoint PointX="3.6666666666666665" PointY="11.545146484375" />
+          <ConnectorPoint PointX="3.8333333333333335" PointY="11.545146484375" />
+          <ConnectorPoint PointX="6" PointY="11.545146484375" />
         </AssociationConnector>
-        <AssociationConnector Association="AutoRentModel.FK_Payment_Customer" ManuallyRouted="false">
-          <ConnectorPoint PointX="2.25" PointY="11.52369065665064" />
-          <ConnectorPoint PointX="2.5660744349011217" PointY="11.83976509155176" />
-          <ConnectorPoint PointX="2.7464255650988791" PointY="12.020116221749518" />
-          <ConnectorPoint PointX="2.8125" PointY="12.08619065665064" />
-          <ConnectorPoint PointX="2.8125" PointY="17.87474609375" />
-          <ConnectorPoint PointX="2.8229166666666665" PointY="17.87474609375" />
-          <ConnectorPoint PointX="2.9895833333333335" PointY="17.87474609375" />
-          <ConnectorPoint PointX="3" PointY="17.87474609375" />
+        <AssociationConnector Association="Model.FK_Payment_Customer" ManuallyRouted="false">
+          <ConnectorPoint PointX="2.25" PointY="11.64869065665064" />
+          <ConnectorPoint PointX="2.5660744349011217" PointY="11.96476509155176" />
+          <ConnectorPoint PointX="2.7464255650988791" PointY="12.145116221749518" />
+          <ConnectorPoint PointX="2.8125" PointY="12.21119065665064" />
+          <ConnectorPoint PointX="2.8125" PointY="18.12474609375" />
+          <ConnectorPoint PointX="2.8229166666666665" PointY="18.12474609375" />
+          <ConnectorPoint PointX="2.9895833333333335" PointY="18.12474609375" />
+          <ConnectorPoint PointX="3" PointY="18.12474609375" />
         </AssociationConnector>
-        <AssociationConnector Association="AutoRentModel.FK_Ticket_Customer" ManuallyRouted="false">
-          <ConnectorPoint PointX="1.5" PointY="7.875" />
-          <ConnectorPoint PointX="1.5" PointY="5.8914063085937407" />
-          <ConnectorPoint PointX="2.5416666666666665" PointY="5.89140630859374" />
-          <ConnectorPoint PointX="2.7708333333333335" PointY="5.8914063085937407" />
-          <ConnectorPoint PointX="2.8229166666666665" PointY="5.89140630859374" />
-          <ConnectorPoint PointX="2.9895833333333335" PointY="5.8914063085937407" />
-          <ConnectorPoint PointX="3" PointY="5.8914063085937407" />
+        <AssociationConnector Association="Model.FK_Ticket_Customer" ManuallyRouted="false">
+          <ConnectorPoint PointX="1.5" PointY="8" />
+          <ConnectorPoint PointX="1.5" PointY="6.0164063085937407" />
+          <ConnectorPoint PointX="2.5416666666666665" PointY="6.01640630859374" />
+          <ConnectorPoint PointX="2.7708333333333335" PointY="6.0164063085937407" />
+          <ConnectorPoint PointX="2.8229166666666665" PointY="6.01640630859374" />
+          <ConnectorPoint PointX="2.9895833333333335" PointY="6.0164063085937407" />
+          <ConnectorPoint PointX="3" PointY="6.0164063085937407" />
         </AssociationConnector>
-        <AssociationConnector Association="AutoRentModel.FK_Damages_DamageClass" ManuallyRouted="false">
-          <ConnectorPoint PointX="9" PointY="1.7083133060897429" />
-          <ConnectorPoint PointX="10.5" PointY="1.7083133060897429" />
-          <ConnectorPoint PointX="10.5" PointY="3.625" />
+        <AssociationConnector Association="Model.FK_Damages_DamageClass" ManuallyRouted="false">
+          <ConnectorPoint PointX="9" PointY="1.8333133060897429" />
+          <ConnectorPoint PointX="10.5" PointY="1.8333133060897429" />
+          <ConnectorPoint PointX="10.5" PointY="3.75" />
         </AssociationConnector>
-        <AssociationConnector Association="AutoRentModel.FK_Damages_Revisions" ManuallyRouted="false">
-          <ConnectorPoint PointX="9" PointY="4.7112939453125" />
-          <ConnectorPoint PointX="9.2916666666666661" PointY="4.7112939453124989" />
-          <ConnectorPoint PointX="9.4583333333333339" PointY="4.7112939453125" />
-          <ConnectorPoint PointX="9.75" PointY="4.7112939453125" />
+        <AssociationConnector Association="Model.FK_Damages_Revisions" ManuallyRouted="false">
+          <ConnectorPoint PointX="9" PointY="4.8362939453125" />
+          <ConnectorPoint PointX="9.2916666666666661" PointY="4.8362939453124989" />
+          <ConnectorPoint PointX="9.4583333333333339" PointY="4.8362939453125" />
+          <ConnectorPoint PointX="9.75" PointY="4.8362939453125" />
         </AssociationConnector>
-        <AssociationConnector Association="AutoRentModel.FK_Employe_Department" ManuallyRouted="false">
-          <ConnectorPoint PointX="1.5" PointY="19.557190755208332" />
+        <AssociationConnector Association="Model.FK_Employe_Department" ManuallyRouted="false">
+          <ConnectorPoint PointX="1.5" PointY="19.682190755208332" />
           <ConnectorPoint PointX="1.5" PointY="20.375" />
         </AssociationConnector>
-        <AssociationConnector Association="AutoRentModel.FK_Order_Department" ManuallyRouted="false">
-          <ConnectorPoint PointX="2.25" PointY="19.434591471354167" />
-          <ConnectorPoint PointX="2.8229166666666665" PointY="19.434591471354167" />
-          <ConnectorPoint PointX="3.0208333333333335" PointY="19.434591471354167" />
-          <ConnectorPoint PointX="6.8541641666666671" PointY="19.434591471354167" />
-          <ConnectorPoint PointX="7.0208308333333331" PointY="19.434591471354167" />
-          <ConnectorPoint PointX="7.125" PointY="19.434591471354167" />
-          <ConnectorPoint PointX="7.125" PointY="11.65330078125" />
+        <AssociationConnector Association="Model.FK_Order_Department" ManuallyRouted="false">
+          <ConnectorPoint PointX="2.25" PointY="19.622091471354167" />
+          <ConnectorPoint PointX="2.8229166666666665" PointY="19.622091471354167" />
+          <ConnectorPoint PointX="3.0208333333333335" PointY="19.622091471354167" />
+          <ConnectorPoint PointX="6.8541641666666671" PointY="19.622091471354167" />
+          <ConnectorPoint PointX="7.0208308333333331" PointY="19.622091471354167" />
+          <ConnectorPoint PointX="7.125" PointY="19.622091471354167" />
+          <ConnectorPoint PointX="7.125" PointY="11.77830078125" />
         </AssociationConnector>
-        <AssociationConnector Association="AutoRentModel.FK_Ticket_Department" ManuallyRouted="false">
-          <ConnectorPoint PointX="2.25" PointY="17.063460538461534" />
-          <ConnectorPoint PointX="2.6875" PointY="16.625960538461534" />
-          <ConnectorPoint PointX="2.6875" PointY="3.5887992695312554" />
-          <ConnectorPoint PointX="3" PointY="3.5887992695312554" />
+        <AssociationConnector Association="Model.FK_Ticket_Department" ManuallyRouted="false">
+          <ConnectorPoint PointX="2.25" PointY="17.188460538461534" />
+          <ConnectorPoint PointX="2.6875" PointY="16.750960538461534" />
+          <ConnectorPoint PointX="2.6875" PointY="3.7137992695312554" />
+          <ConnectorPoint PointX="3" PointY="3.7137992695312554" />
         </AssociationConnector>
-        <AssociationConnector Association="AutoRentModel.FK_Members_Employe" ManuallyRouted="false">
+        <AssociationConnector Association="Model.FK_Members_Employe" ManuallyRouted="false">
           <ConnectorPoint PointX="2.25" PointY="20.40153746153846" />
           <ConnectorPoint PointX="2.9375" PointY="19.71403746153846" />
-          <ConnectorPoint PointX="2.9375" PointY="10.468371140625" />
-          <ConnectorPoint PointX="3" PointY="10.468371140625" />
+          <ConnectorPoint PointX="2.9375" PointY="10.612597214843753" />
+          <ConnectorPoint PointX="3" PointY="10.612597214843753" />
         </AssociationConnector>
-        <AssociationConnector Association="AutoRentModel.FK_Order_Employe" ManuallyRouted="false">
+        <AssociationConnector Association="Model.FK_Order_Employe" ManuallyRouted="false">
           <ConnectorPoint PointX="2.25" PointY="22.566357669070513" />
           <ConnectorPoint PointX="6.9374975" PointY="22.566357669070513" />
-          <ConnectorPoint PointX="6.9374975" PointY="11.65330078125" />
+          <ConnectorPoint PointX="6.9374975" PointY="11.77830078125" />
         </AssociationConnector>
-        <AssociationConnector Association="AutoRentModel.FK_Ticket_Employe" ManuallyRouted="false">
+        <AssociationConnector Association="Model.FK_Ticket_Employe" ManuallyRouted="false">
           <ConnectorPoint PointX="2.25" PointY="20.38307592307692" />
           <ConnectorPoint PointX="2.90625" PointY="19.72682592307692" />
-          <ConnectorPoint PointX="2.90625" PointY="5.3157544238281194" />
-          <ConnectorPoint PointX="3" PointY="5.3157544238281194" />
+          <ConnectorPoint PointX="2.90625" PointY="5.4407544238281194" />
+          <ConnectorPoint PointX="3" PointY="5.4407544238281194" />
         </AssociationConnector>
-        <AssociationConnector Association="AutoRentModel.FK_RulesInRole_PrermissionRule" ManuallyRouted="false">
-          <ConnectorPoint PointX="6.75" PointY="15.937246093749998" />
-          <ConnectorPoint PointX="6.8541641666666671" PointY="15.937246093749998" />
-          <ConnectorPoint PointX="7.0208308333333331" PointY="15.937246093749998" />
-          <ConnectorPoint PointX="7.041666666666667" PointY="15.937246093749998" />
-          <ConnectorPoint PointX="7.208333333333333" PointY="15.937246093749998" />
-          <ConnectorPoint PointX="7.5" PointY="15.937246093749998" />
+        <AssociationConnector Association="Model.FK_RulesInRole_PrermissionRule" ManuallyRouted="false">
+          <ConnectorPoint PointX="6.75" PointY="16.989889822916666" />
+          <ConnectorPoint PointX="6.8541641666666671" PointY="16.989889822916666" />
+          <ConnectorPoint PointX="7.0208308333333331" PointY="16.989889822916666" />
+          <ConnectorPoint PointX="7.041666666666667" PointY="16.989889822916666" />
+          <ConnectorPoint PointX="7.208333333333333" PointY="16.989889822916666" />
+          <ConnectorPoint PointX="8.25" PointY="16.989889822916666" />
+          <ConnectorPoint PointX="8.25" PointY="16.124492187499996" />
         </AssociationConnector>
-        <AssociationConnector Association="AutoRentModel.FK_Revisions_TicketHistory" ManuallyRouted="false">
-          <ConnectorPoint PointX="6.75" PointY="4.6824446614583337" />
-          <ConnectorPoint PointX="7.5" PointY="4.6824446614583337" />
+        <AssociationConnector Association="Model.FK_Revisions_TicketHistory" ManuallyRouted="false">
+          <ConnectorPoint PointX="6.75" PointY="4.8074446614583337" />
+          <ConnectorPoint PointX="7.5" PointY="4.8074446614583337" />
         </AssociationConnector>
-        <AssociationConnector Association="AutoRentModel.FK_RulesInRole_Roles" ManuallyRouted="false">
+        <AssociationConnector Association="Model.FK_RulesInRole_Roles" ManuallyRouted="false">
           <ConnectorPoint PointX="6.75" PointY="14.018992513020834" />
           <ConnectorPoint PointX="6.8541641666666671" PointY="14.018992513020834" />
           <ConnectorPoint PointX="7.0208308333333331" PointY="14.018992513020834" />
@@ -1511,12 +1517,12 @@
           <ConnectorPoint PointX="7.208333333333333" PointY="14.018992513020834" />
           <ConnectorPoint PointX="7.5" PointY="14.018992513020834" />
         </AssociationConnector>
-        <AssociationConnector Association="AutoRentModel.FK_TicketHistory_Ticket" ManuallyRouted="false">
+        <AssociationConnector Association="Model.FK_TicketHistory_Ticket" ManuallyRouted="false">
           <ConnectorPoint PointX="4.5" PointY="4.749746093749998" />
           <ConnectorPoint PointX="5.25" PointY="4.749746093749998" />
         </AssociationConnector>
-        <AssociationConnector Association="AutoRentModel.UserInRoles" ManuallyRouted="false">
-          <ConnectorPoint PointX="3.75" PointY="11.1244921875" />
+        <AssociationConnector Association="Model.UserInRoles" ManuallyRouted="false">
+          <ConnectorPoint PointX="3.75" PointY="11.316793619791667" />
           <ConnectorPoint PointX="3.75" PointY="13.768992513020834" />
           <ConnectorPoint PointX="5.25" PointY="13.768992513020834" />
         </AssociationConnector>

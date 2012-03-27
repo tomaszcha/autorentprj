@@ -18,26 +18,26 @@ using System.Runtime.Serialization;
 [assembly: EdmSchemaAttribute()]
 #region EDM Relationship Metadata
 
-[assembly: EdmRelationshipAttribute("AutoRentModel", "FK_AutoPhotos_Auto", "Auto", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(Model.Auto), "AutoPhotos", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(Model.AutoPhotos), true)]
-[assembly: EdmRelationshipAttribute("AutoRentModel", "FK_Ticket_Auto", "Auto", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(Model.Auto), "Ticket", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(Model.Ticket), true)]
-[assembly: EdmRelationshipAttribute("AutoRentModel", "FK_AutoPhotos_DamageClass", "DamageClass", System.Data.Metadata.Edm.RelationshipMultiplicity.ZeroOrOne, typeof(Model.DamageClass), "AutoPhotos", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(Model.AutoPhotos), true)]
-[assembly: EdmRelationshipAttribute("AutoRentModel", "FK_Members_Customer", "Customer", System.Data.Metadata.Edm.RelationshipMultiplicity.ZeroOrOne, typeof(Model.Customer), "Members", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(Model.Members), true)]
-[assembly: EdmRelationshipAttribute("AutoRentModel", "FK_Order_Customer", "Customer", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(Model.Customer), "Order", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(Model.Order), true)]
-[assembly: EdmRelationshipAttribute("AutoRentModel", "FK_Payment_Customer", "Customer", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(Model.Customer), "Payment", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(Model.Payment), true)]
-[assembly: EdmRelationshipAttribute("AutoRentModel", "FK_Ticket_Customer", "Customer", System.Data.Metadata.Edm.RelationshipMultiplicity.ZeroOrOne, typeof(Model.Customer), "Ticket", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(Model.Ticket), true)]
-[assembly: EdmRelationshipAttribute("AutoRentModel", "FK_Damages_DamageClass", "DamageClass", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(Model.DamageClass), "Damages", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(Model.Damages), true)]
-[assembly: EdmRelationshipAttribute("AutoRentModel", "FK_Damages_Revisions", "Revisions", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(Model.Revisions), "Damages", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(Model.Damages), true)]
-[assembly: EdmRelationshipAttribute("AutoRentModel", "FK_Employe_Department", "Department", System.Data.Metadata.Edm.RelationshipMultiplicity.ZeroOrOne, typeof(Model.Department), "Employe", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(Model.Employe), true)]
-[assembly: EdmRelationshipAttribute("AutoRentModel", "FK_Order_Department", "Department", System.Data.Metadata.Edm.RelationshipMultiplicity.ZeroOrOne, typeof(Model.Department), "Order", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(Model.Order), true)]
-[assembly: EdmRelationshipAttribute("AutoRentModel", "FK_Ticket_Department", "Department", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(Model.Department), "Ticket", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(Model.Ticket), true)]
-[assembly: EdmRelationshipAttribute("AutoRentModel", "FK_Members_Employe", "Employe", System.Data.Metadata.Edm.RelationshipMultiplicity.ZeroOrOne, typeof(Model.Employe), "Members", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(Model.Members), true)]
-[assembly: EdmRelationshipAttribute("AutoRentModel", "FK_Order_Employe", "Employe", System.Data.Metadata.Edm.RelationshipMultiplicity.ZeroOrOne, typeof(Model.Employe), "Order", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(Model.Order), true)]
-[assembly: EdmRelationshipAttribute("AutoRentModel", "FK_Ticket_Employe", "Employe", System.Data.Metadata.Edm.RelationshipMultiplicity.ZeroOrOne, typeof(Model.Employe), "Ticket", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(Model.Ticket), true)]
-[assembly: EdmRelationshipAttribute("AutoRentModel", "FK_RulesInRole_PrermissionRule", "PrermissionRule", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(Model.PrermissionRule), "RulesInRole", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(Model.RulesInRole), true)]
-[assembly: EdmRelationshipAttribute("AutoRentModel", "FK_Revisions_TicketHistory", "TicketHistory", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(Model.TicketHistory), "Revisions", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(Model.Revisions), true)]
-[assembly: EdmRelationshipAttribute("AutoRentModel", "FK_RulesInRole_Roles", "Roles", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(Model.Roles), "RulesInRole", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(Model.RulesInRole), true)]
-[assembly: EdmRelationshipAttribute("AutoRentModel", "FK_TicketHistory_Ticket", "Ticket", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(Model.Ticket), "TicketHistory", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(Model.TicketHistory), true)]
-[assembly: EdmRelationshipAttribute("AutoRentModel", "UserInRoles", "Members", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(Model.Members), "Roles", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(Model.Roles))]
+[assembly: EdmRelationshipAttribute("Model", "FK_AutoPhotos_Auto", "Auto", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(Model.Auto), "AutoPhotos", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(Model.AutoPhotos), true)]
+[assembly: EdmRelationshipAttribute("Model", "FK_Ticket_Auto", "Auto", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(Model.Auto), "Ticket", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(Model.Ticket), true)]
+[assembly: EdmRelationshipAttribute("Model", "FK_AutoPhotos_DamageClass", "DamageClass", System.Data.Metadata.Edm.RelationshipMultiplicity.ZeroOrOne, typeof(Model.DamageClass), "AutoPhotos", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(Model.AutoPhotos), true)]
+[assembly: EdmRelationshipAttribute("Model", "FK_Members_Customer", "Customer", System.Data.Metadata.Edm.RelationshipMultiplicity.ZeroOrOne, typeof(Model.Customer), "Members", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(Model.Members), true)]
+[assembly: EdmRelationshipAttribute("Model", "FK_Order_Customer", "Customer", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(Model.Customer), "Order", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(Model.Order), true)]
+[assembly: EdmRelationshipAttribute("Model", "FK_Payment_Customer", "Customer", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(Model.Customer), "Payment", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(Model.Payment), true)]
+[assembly: EdmRelationshipAttribute("Model", "FK_Ticket_Customer", "Customer", System.Data.Metadata.Edm.RelationshipMultiplicity.ZeroOrOne, typeof(Model.Customer), "Ticket", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(Model.Ticket), true)]
+[assembly: EdmRelationshipAttribute("Model", "FK_Damages_DamageClass", "DamageClass", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(Model.DamageClass), "Damages", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(Model.Damages), true)]
+[assembly: EdmRelationshipAttribute("Model", "FK_Damages_Revisions", "Revisions", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(Model.Revisions), "Damages", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(Model.Damages), true)]
+[assembly: EdmRelationshipAttribute("Model", "FK_Employe_Department", "Department", System.Data.Metadata.Edm.RelationshipMultiplicity.ZeroOrOne, typeof(Model.Department), "Employee", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(Model.Employee), true)]
+[assembly: EdmRelationshipAttribute("Model", "FK_Order_Department", "Department", System.Data.Metadata.Edm.RelationshipMultiplicity.ZeroOrOne, typeof(Model.Department), "Order", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(Model.Order), true)]
+[assembly: EdmRelationshipAttribute("Model", "FK_Ticket_Department", "Department", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(Model.Department), "Ticket", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(Model.Ticket), true)]
+[assembly: EdmRelationshipAttribute("Model", "FK_Members_Employe", "Employee", System.Data.Metadata.Edm.RelationshipMultiplicity.ZeroOrOne, typeof(Model.Employee), "Members", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(Model.Members), true)]
+[assembly: EdmRelationshipAttribute("Model", "FK_Order_Employe", "Employee", System.Data.Metadata.Edm.RelationshipMultiplicity.ZeroOrOne, typeof(Model.Employee), "Order", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(Model.Order), true)]
+[assembly: EdmRelationshipAttribute("Model", "FK_Ticket_Employe", "Employee", System.Data.Metadata.Edm.RelationshipMultiplicity.ZeroOrOne, typeof(Model.Employee), "Ticket", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(Model.Ticket), true)]
+[assembly: EdmRelationshipAttribute("Model", "FK_RulesInRole_PrermissionRule", "PermissionRule", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(Model.PermissionRule), "RulesInRole", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(Model.RulesInRole), true)]
+[assembly: EdmRelationshipAttribute("Model", "FK_Revisions_TicketHistory", "TicketHistory", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(Model.TicketHistory), "Revisions", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(Model.Revisions), true)]
+[assembly: EdmRelationshipAttribute("Model", "FK_RulesInRole_Roles", "Roles", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(Model.Roles), "RulesInRole", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(Model.RulesInRole), true)]
+[assembly: EdmRelationshipAttribute("Model", "FK_TicketHistory_Ticket", "Ticket", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(Model.Ticket), "TicketHistory", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(Model.TicketHistory), true)]
+[assembly: EdmRelationshipAttribute("Model", "UserInRoles", "Members", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(Model.Members), "Roles", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(Model.Roles))]
 
 #endregion
 
@@ -188,18 +188,18 @@ namespace Model
         /// <summary>
         /// No Metadata Documentation available.
         /// </summary>
-        public ObjectSet<Employe> Employe
+        public ObjectSet<Employee> Employee
         {
             get
             {
-                if ((_Employe == null))
+                if ((_Employee == null))
                 {
-                    _Employe = base.CreateObjectSet<Employe>("Employe");
+                    _Employee = base.CreateObjectSet<Employee>("Employee");
                 }
-                return _Employe;
+                return _Employee;
             }
         }
-        private ObjectSet<Employe> _Employe;
+        private ObjectSet<Employee> _Employee;
     
         /// <summary>
         /// No Metadata Documentation available.
@@ -252,18 +252,18 @@ namespace Model
         /// <summary>
         /// No Metadata Documentation available.
         /// </summary>
-        public ObjectSet<PrermissionRule> PrermissionRule
+        public ObjectSet<PermissionRule> PermissionRule
         {
             get
             {
-                if ((_PrermissionRule == null))
+                if ((_PermissionRule == null))
                 {
-                    _PrermissionRule = base.CreateObjectSet<PrermissionRule>("PrermissionRule");
+                    _PermissionRule = base.CreateObjectSet<PermissionRule>("PermissionRule");
                 }
-                return _PrermissionRule;
+                return _PermissionRule;
             }
         }
-        private ObjectSet<PrermissionRule> _PrermissionRule;
+        private ObjectSet<PermissionRule> _PermissionRule;
     
         /// <summary>
         /// No Metadata Documentation available.
@@ -397,11 +397,11 @@ namespace Model
         }
     
         /// <summary>
-        /// Deprecated Method for adding a new object to the Employe EntitySet. Consider using the .Add method of the associated ObjectSet&lt;T&gt; property instead.
+        /// Deprecated Method for adding a new object to the Employee EntitySet. Consider using the .Add method of the associated ObjectSet&lt;T&gt; property instead.
         /// </summary>
-        public void AddToEmploye(Employe employe)
+        public void AddToEmployee(Employee employee)
         {
-            base.AddObject("Employe", employe);
+            base.AddObject("Employee", employee);
         }
     
         /// <summary>
@@ -429,11 +429,11 @@ namespace Model
         }
     
         /// <summary>
-        /// Deprecated Method for adding a new object to the PrermissionRule EntitySet. Consider using the .Add method of the associated ObjectSet&lt;T&gt; property instead.
+        /// Deprecated Method for adding a new object to the PermissionRule EntitySet. Consider using the .Add method of the associated ObjectSet&lt;T&gt; property instead.
         /// </summary>
-        public void AddToPrermissionRule(PrermissionRule prermissionRule)
+        public void AddToPermissionRule(PermissionRule permissionRule)
         {
-            base.AddObject("PrermissionRule", prermissionRule);
+            base.AddObject("PermissionRule", permissionRule);
         }
     
         /// <summary>
@@ -487,7 +487,7 @@ namespace Model
     /// <summary>
     /// No Metadata Documentation available.
     /// </summary>
-    [EdmEntityTypeAttribute(NamespaceName="AutoRentModel", Name="Auto")]
+    [EdmEntityTypeAttribute(NamespaceName="Model", Name="Auto")]
     [Serializable()]
     [DataContractAttribute(IsReference=true)]
     public partial class Auto : EntityObject
@@ -500,20 +500,20 @@ namespace Model
         /// <param name="number">Initial value of the Number property.</param>
         /// <param name="modelName">Initial value of the ModelName property.</param>
         /// <param name="bodyType">Initial value of the BodyType property.</param>
-        /// <param name="insuaranceId">Initial value of the InsuaranceId property.</param>
+        /// <param name="insuaranceNumber">Initial value of the InsuaranceNumber property.</param>
         /// <param name="class">Initial value of the Class property.</param>
         /// <param name="year">Initial value of the Year property.</param>
         /// <param name="mileage">Initial value of the Mileage property.</param>
         /// <param name="engine">Initial value of the Engine property.</param>
         /// <param name="colorGroup">Initial value of the ColorGroup property.</param>
         /// <param name="status">Initial value of the Status property.</param>
-        public static Auto CreateAuto(global::System.String number, global::System.String modelName, global::System.Int32 bodyType, global::System.String insuaranceId, global::System.Int16 @class, global::System.Int16 year, global::System.Int32 mileage, global::System.Int32 engine, global::System.String colorGroup, global::System.Int16 status)
+        public static Auto CreateAuto(global::System.String number, global::System.String modelName, global::System.Int32 bodyType, global::System.String insuaranceNumber, global::System.Int16 @class, global::System.Int16 year, global::System.Int32 mileage, global::System.Int32 engine, global::System.String colorGroup, global::System.Int16 status)
         {
             Auto auto = new Auto();
             auto.Number = number;
             auto.ModelName = modelName;
             auto.BodyType = bodyType;
-            auto.InsuaranceId = insuaranceId;
+            auto.InsuaranceNumber = insuaranceNumber;
             auto.Class = @class;
             auto.Year = year;
             auto.Mileage = mileage;
@@ -606,24 +606,24 @@ namespace Model
         /// </summary>
         [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=false)]
         [DataMemberAttribute()]
-        public global::System.String InsuaranceId
+        public global::System.String InsuaranceNumber
         {
             get
             {
-                return _InsuaranceId;
+                return _InsuaranceNumber;
             }
             set
             {
-                OnInsuaranceIdChanging(value);
-                ReportPropertyChanging("InsuaranceId");
-                _InsuaranceId = StructuralObject.SetValidValue(value, false);
-                ReportPropertyChanged("InsuaranceId");
-                OnInsuaranceIdChanged();
+                OnInsuaranceNumberChanging(value);
+                ReportPropertyChanging("InsuaranceNumber");
+                _InsuaranceNumber = StructuralObject.SetValidValue(value, false);
+                ReportPropertyChanged("InsuaranceNumber");
+                OnInsuaranceNumberChanged();
             }
         }
-        private global::System.String _InsuaranceId;
-        partial void OnInsuaranceIdChanging(global::System.String value);
-        partial void OnInsuaranceIdChanged();
+        private global::System.String _InsuaranceNumber;
+        partial void OnInsuaranceNumberChanging(global::System.String value);
+        partial void OnInsuaranceNumberChanged();
     
         /// <summary>
         /// No Metadata Documentation available.
@@ -851,18 +851,18 @@ namespace Model
         [XmlIgnoreAttribute()]
         [SoapIgnoreAttribute()]
         [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("AutoRentModel", "FK_AutoPhotos_Auto", "AutoPhotos")]
+        [EdmRelationshipNavigationPropertyAttribute("Model", "FK_AutoPhotos_Auto", "AutoPhotos")]
         public EntityCollection<AutoPhotos> AutoPhotos
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<AutoPhotos>("AutoRentModel.FK_AutoPhotos_Auto", "AutoPhotos");
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<AutoPhotos>("Model.FK_AutoPhotos_Auto", "AutoPhotos");
             }
             set
             {
                 if ((value != null))
                 {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<AutoPhotos>("AutoRentModel.FK_AutoPhotos_Auto", "AutoPhotos", value);
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<AutoPhotos>("Model.FK_AutoPhotos_Auto", "AutoPhotos", value);
                 }
             }
         }
@@ -873,18 +873,18 @@ namespace Model
         [XmlIgnoreAttribute()]
         [SoapIgnoreAttribute()]
         [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("AutoRentModel", "FK_Ticket_Auto", "Ticket")]
+        [EdmRelationshipNavigationPropertyAttribute("Model", "FK_Ticket_Auto", "Ticket")]
         public EntityCollection<Ticket> Ticket
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<Ticket>("AutoRentModel.FK_Ticket_Auto", "Ticket");
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<Ticket>("Model.FK_Ticket_Auto", "Ticket");
             }
             set
             {
                 if ((value != null))
                 {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<Ticket>("AutoRentModel.FK_Ticket_Auto", "Ticket", value);
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<Ticket>("Model.FK_Ticket_Auto", "Ticket", value);
                 }
             }
         }
@@ -895,7 +895,7 @@ namespace Model
     /// <summary>
     /// No Metadata Documentation available.
     /// </summary>
-    [EdmEntityTypeAttribute(NamespaceName="AutoRentModel", Name="AutoPhotos")]
+    [EdmEntityTypeAttribute(NamespaceName="Model", Name="AutoPhotos")]
     [Serializable()]
     [DataContractAttribute(IsReference=true)]
     public partial class AutoPhotos : EntityObject
@@ -1032,16 +1032,16 @@ namespace Model
         [XmlIgnoreAttribute()]
         [SoapIgnoreAttribute()]
         [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("AutoRentModel", "FK_AutoPhotos_Auto", "Auto")]
+        [EdmRelationshipNavigationPropertyAttribute("Model", "FK_AutoPhotos_Auto", "Auto")]
         public Auto Auto
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Auto>("AutoRentModel.FK_AutoPhotos_Auto", "Auto").Value;
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Auto>("Model.FK_AutoPhotos_Auto", "Auto").Value;
             }
             set
             {
-                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Auto>("AutoRentModel.FK_AutoPhotos_Auto", "Auto").Value = value;
+                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Auto>("Model.FK_AutoPhotos_Auto", "Auto").Value = value;
             }
         }
         /// <summary>
@@ -1053,13 +1053,13 @@ namespace Model
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Auto>("AutoRentModel.FK_AutoPhotos_Auto", "Auto");
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Auto>("Model.FK_AutoPhotos_Auto", "Auto");
             }
             set
             {
                 if ((value != null))
                 {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<Auto>("AutoRentModel.FK_AutoPhotos_Auto", "Auto", value);
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<Auto>("Model.FK_AutoPhotos_Auto", "Auto", value);
                 }
             }
         }
@@ -1070,16 +1070,16 @@ namespace Model
         [XmlIgnoreAttribute()]
         [SoapIgnoreAttribute()]
         [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("AutoRentModel", "FK_AutoPhotos_DamageClass", "DamageClass")]
+        [EdmRelationshipNavigationPropertyAttribute("Model", "FK_AutoPhotos_DamageClass", "DamageClass")]
         public DamageClass DamageClass
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<DamageClass>("AutoRentModel.FK_AutoPhotos_DamageClass", "DamageClass").Value;
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<DamageClass>("Model.FK_AutoPhotos_DamageClass", "DamageClass").Value;
             }
             set
             {
-                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<DamageClass>("AutoRentModel.FK_AutoPhotos_DamageClass", "DamageClass").Value = value;
+                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<DamageClass>("Model.FK_AutoPhotos_DamageClass", "DamageClass").Value = value;
             }
         }
         /// <summary>
@@ -1091,13 +1091,13 @@ namespace Model
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<DamageClass>("AutoRentModel.FK_AutoPhotos_DamageClass", "DamageClass");
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<DamageClass>("Model.FK_AutoPhotos_DamageClass", "DamageClass");
             }
             set
             {
                 if ((value != null))
                 {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<DamageClass>("AutoRentModel.FK_AutoPhotos_DamageClass", "DamageClass", value);
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<DamageClass>("Model.FK_AutoPhotos_DamageClass", "DamageClass", value);
                 }
             }
         }
@@ -1108,7 +1108,7 @@ namespace Model
     /// <summary>
     /// No Metadata Documentation available.
     /// </summary>
-    [EdmEntityTypeAttribute(NamespaceName="AutoRentModel", Name="Customer")]
+    [EdmEntityTypeAttribute(NamespaceName="Model", Name="Customer")]
     [Serializable()]
     [DataContractAttribute(IsReference=true)]
     public partial class Customer : EntityObject
@@ -1215,24 +1215,24 @@ namespace Model
         /// </summary>
         [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
         [DataMemberAttribute()]
-        public global::System.String Addresse
+        public global::System.String Address
         {
             get
             {
-                return _Addresse;
+                return _Address;
             }
             set
             {
-                OnAddresseChanging(value);
-                ReportPropertyChanging("Addresse");
-                _Addresse = StructuralObject.SetValidValue(value, true);
-                ReportPropertyChanged("Addresse");
-                OnAddresseChanged();
+                OnAddressChanging(value);
+                ReportPropertyChanging("Address");
+                _Address = StructuralObject.SetValidValue(value, true);
+                ReportPropertyChanged("Address");
+                OnAddressChanged();
             }
         }
-        private global::System.String _Addresse;
-        partial void OnAddresseChanging(global::System.String value);
-        partial void OnAddresseChanged();
+        private global::System.String _Address;
+        partial void OnAddressChanging(global::System.String value);
+        partial void OnAddressChanged();
     
         /// <summary>
         /// No Metadata Documentation available.
@@ -1388,18 +1388,18 @@ namespace Model
         [XmlIgnoreAttribute()]
         [SoapIgnoreAttribute()]
         [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("AutoRentModel", "FK_Members_Customer", "Members")]
+        [EdmRelationshipNavigationPropertyAttribute("Model", "FK_Members_Customer", "Members")]
         public EntityCollection<Members> Members
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<Members>("AutoRentModel.FK_Members_Customer", "Members");
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<Members>("Model.FK_Members_Customer", "Members");
             }
             set
             {
                 if ((value != null))
                 {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<Members>("AutoRentModel.FK_Members_Customer", "Members", value);
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<Members>("Model.FK_Members_Customer", "Members", value);
                 }
             }
         }
@@ -1410,18 +1410,18 @@ namespace Model
         [XmlIgnoreAttribute()]
         [SoapIgnoreAttribute()]
         [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("AutoRentModel", "FK_Order_Customer", "Order")]
+        [EdmRelationshipNavigationPropertyAttribute("Model", "FK_Order_Customer", "Order")]
         public EntityCollection<Order> Order
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<Order>("AutoRentModel.FK_Order_Customer", "Order");
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<Order>("Model.FK_Order_Customer", "Order");
             }
             set
             {
                 if ((value != null))
                 {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<Order>("AutoRentModel.FK_Order_Customer", "Order", value);
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<Order>("Model.FK_Order_Customer", "Order", value);
                 }
             }
         }
@@ -1432,18 +1432,18 @@ namespace Model
         [XmlIgnoreAttribute()]
         [SoapIgnoreAttribute()]
         [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("AutoRentModel", "FK_Payment_Customer", "Payment")]
+        [EdmRelationshipNavigationPropertyAttribute("Model", "FK_Payment_Customer", "Payment")]
         public EntityCollection<Payment> Payment
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<Payment>("AutoRentModel.FK_Payment_Customer", "Payment");
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<Payment>("Model.FK_Payment_Customer", "Payment");
             }
             set
             {
                 if ((value != null))
                 {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<Payment>("AutoRentModel.FK_Payment_Customer", "Payment", value);
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<Payment>("Model.FK_Payment_Customer", "Payment", value);
                 }
             }
         }
@@ -1454,18 +1454,18 @@ namespace Model
         [XmlIgnoreAttribute()]
         [SoapIgnoreAttribute()]
         [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("AutoRentModel", "FK_Ticket_Customer", "Ticket")]
+        [EdmRelationshipNavigationPropertyAttribute("Model", "FK_Ticket_Customer", "Ticket")]
         public EntityCollection<Ticket> Ticket
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<Ticket>("AutoRentModel.FK_Ticket_Customer", "Ticket");
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<Ticket>("Model.FK_Ticket_Customer", "Ticket");
             }
             set
             {
                 if ((value != null))
                 {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<Ticket>("AutoRentModel.FK_Ticket_Customer", "Ticket", value);
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<Ticket>("Model.FK_Ticket_Customer", "Ticket", value);
                 }
             }
         }
@@ -1476,7 +1476,7 @@ namespace Model
     /// <summary>
     /// No Metadata Documentation available.
     /// </summary>
-    [EdmEntityTypeAttribute(NamespaceName="AutoRentModel", Name="DamageClass")]
+    [EdmEntityTypeAttribute(NamespaceName="Model", Name="DamageClass")]
     [Serializable()]
     [DataContractAttribute(IsReference=true)]
     public partial class DamageClass : EntityObject
@@ -1584,18 +1584,18 @@ namespace Model
         [XmlIgnoreAttribute()]
         [SoapIgnoreAttribute()]
         [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("AutoRentModel", "FK_AutoPhotos_DamageClass", "AutoPhotos")]
+        [EdmRelationshipNavigationPropertyAttribute("Model", "FK_AutoPhotos_DamageClass", "AutoPhotos")]
         public EntityCollection<AutoPhotos> AutoPhotos
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<AutoPhotos>("AutoRentModel.FK_AutoPhotos_DamageClass", "AutoPhotos");
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<AutoPhotos>("Model.FK_AutoPhotos_DamageClass", "AutoPhotos");
             }
             set
             {
                 if ((value != null))
                 {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<AutoPhotos>("AutoRentModel.FK_AutoPhotos_DamageClass", "AutoPhotos", value);
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<AutoPhotos>("Model.FK_AutoPhotos_DamageClass", "AutoPhotos", value);
                 }
             }
         }
@@ -1606,18 +1606,18 @@ namespace Model
         [XmlIgnoreAttribute()]
         [SoapIgnoreAttribute()]
         [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("AutoRentModel", "FK_Damages_DamageClass", "Damages")]
+        [EdmRelationshipNavigationPropertyAttribute("Model", "FK_Damages_DamageClass", "Damages")]
         public EntityCollection<Damages> Damages
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<Damages>("AutoRentModel.FK_Damages_DamageClass", "Damages");
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<Damages>("Model.FK_Damages_DamageClass", "Damages");
             }
             set
             {
                 if ((value != null))
                 {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<Damages>("AutoRentModel.FK_Damages_DamageClass", "Damages", value);
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<Damages>("Model.FK_Damages_DamageClass", "Damages", value);
                 }
             }
         }
@@ -1628,7 +1628,7 @@ namespace Model
     /// <summary>
     /// No Metadata Documentation available.
     /// </summary>
-    [EdmEntityTypeAttribute(NamespaceName="AutoRentModel", Name="Damages")]
+    [EdmEntityTypeAttribute(NamespaceName="Model", Name="Damages")]
     [Serializable()]
     [DataContractAttribute(IsReference=true)]
     public partial class Damages : EntityObject
@@ -1764,16 +1764,16 @@ namespace Model
         [XmlIgnoreAttribute()]
         [SoapIgnoreAttribute()]
         [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("AutoRentModel", "FK_Damages_DamageClass", "DamageClass")]
+        [EdmRelationshipNavigationPropertyAttribute("Model", "FK_Damages_DamageClass", "DamageClass")]
         public DamageClass DamageClass
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<DamageClass>("AutoRentModel.FK_Damages_DamageClass", "DamageClass").Value;
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<DamageClass>("Model.FK_Damages_DamageClass", "DamageClass").Value;
             }
             set
             {
-                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<DamageClass>("AutoRentModel.FK_Damages_DamageClass", "DamageClass").Value = value;
+                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<DamageClass>("Model.FK_Damages_DamageClass", "DamageClass").Value = value;
             }
         }
         /// <summary>
@@ -1785,13 +1785,13 @@ namespace Model
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<DamageClass>("AutoRentModel.FK_Damages_DamageClass", "DamageClass");
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<DamageClass>("Model.FK_Damages_DamageClass", "DamageClass");
             }
             set
             {
                 if ((value != null))
                 {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<DamageClass>("AutoRentModel.FK_Damages_DamageClass", "DamageClass", value);
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<DamageClass>("Model.FK_Damages_DamageClass", "DamageClass", value);
                 }
             }
         }
@@ -1802,16 +1802,16 @@ namespace Model
         [XmlIgnoreAttribute()]
         [SoapIgnoreAttribute()]
         [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("AutoRentModel", "FK_Damages_Revisions", "Revisions")]
+        [EdmRelationshipNavigationPropertyAttribute("Model", "FK_Damages_Revisions", "Revisions")]
         public Revisions Revisions
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Revisions>("AutoRentModel.FK_Damages_Revisions", "Revisions").Value;
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Revisions>("Model.FK_Damages_Revisions", "Revisions").Value;
             }
             set
             {
-                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Revisions>("AutoRentModel.FK_Damages_Revisions", "Revisions").Value = value;
+                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Revisions>("Model.FK_Damages_Revisions", "Revisions").Value = value;
             }
         }
         /// <summary>
@@ -1823,13 +1823,13 @@ namespace Model
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Revisions>("AutoRentModel.FK_Damages_Revisions", "Revisions");
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Revisions>("Model.FK_Damages_Revisions", "Revisions");
             }
             set
             {
                 if ((value != null))
                 {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<Revisions>("AutoRentModel.FK_Damages_Revisions", "Revisions", value);
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<Revisions>("Model.FK_Damages_Revisions", "Revisions", value);
                 }
             }
         }
@@ -1840,7 +1840,7 @@ namespace Model
     /// <summary>
     /// No Metadata Documentation available.
     /// </summary>
-    [EdmEntityTypeAttribute(NamespaceName="AutoRentModel", Name="Department")]
+    [EdmEntityTypeAttribute(NamespaceName="Model", Name="Department")]
     [Serializable()]
     [DataContractAttribute(IsReference=true)]
     public partial class Department : EntityObject
@@ -2002,18 +2002,18 @@ namespace Model
         [XmlIgnoreAttribute()]
         [SoapIgnoreAttribute()]
         [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("AutoRentModel", "FK_Employe_Department", "Employe")]
-        public EntityCollection<Employe> Employe
+        [EdmRelationshipNavigationPropertyAttribute("Model", "FK_Employe_Department", "Employee")]
+        public EntityCollection<Employee> Employee
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<Employe>("AutoRentModel.FK_Employe_Department", "Employe");
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<Employee>("Model.FK_Employe_Department", "Employee");
             }
             set
             {
                 if ((value != null))
                 {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<Employe>("AutoRentModel.FK_Employe_Department", "Employe", value);
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<Employee>("Model.FK_Employe_Department", "Employee", value);
                 }
             }
         }
@@ -2024,18 +2024,18 @@ namespace Model
         [XmlIgnoreAttribute()]
         [SoapIgnoreAttribute()]
         [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("AutoRentModel", "FK_Order_Department", "Order")]
+        [EdmRelationshipNavigationPropertyAttribute("Model", "FK_Order_Department", "Order")]
         public EntityCollection<Order> Order
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<Order>("AutoRentModel.FK_Order_Department", "Order");
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<Order>("Model.FK_Order_Department", "Order");
             }
             set
             {
                 if ((value != null))
                 {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<Order>("AutoRentModel.FK_Order_Department", "Order", value);
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<Order>("Model.FK_Order_Department", "Order", value);
                 }
             }
         }
@@ -2046,18 +2046,18 @@ namespace Model
         [XmlIgnoreAttribute()]
         [SoapIgnoreAttribute()]
         [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("AutoRentModel", "FK_Ticket_Department", "Ticket")]
+        [EdmRelationshipNavigationPropertyAttribute("Model", "FK_Ticket_Department", "Ticket")]
         public EntityCollection<Ticket> Ticket
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<Ticket>("AutoRentModel.FK_Ticket_Department", "Ticket");
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<Ticket>("Model.FK_Ticket_Department", "Ticket");
             }
             set
             {
                 if ((value != null))
                 {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<Ticket>("AutoRentModel.FK_Ticket_Department", "Ticket", value);
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<Ticket>("Model.FK_Ticket_Department", "Ticket", value);
                 }
             }
         }
@@ -2068,30 +2068,30 @@ namespace Model
     /// <summary>
     /// No Metadata Documentation available.
     /// </summary>
-    [EdmEntityTypeAttribute(NamespaceName="AutoRentModel", Name="Employe")]
+    [EdmEntityTypeAttribute(NamespaceName="Model", Name="Employee")]
     [Serializable()]
     [DataContractAttribute(IsReference=true)]
-    public partial class Employe : EntityObject
+    public partial class Employee : EntityObject
     {
         #region Factory Method
     
         /// <summary>
-        /// Create a new Employe object.
+        /// Create a new Employee object.
         /// </summary>
         /// <param name="id">Initial value of the Id property.</param>
         /// <param name="firstName">Initial value of the FirstName property.</param>
-        /// <param name="family">Initial value of the Family property.</param>
+        /// <param name="lastName">Initial value of the LastName property.</param>
         /// <param name="phone">Initial value of the Phone property.</param>
         /// <param name="hireDate">Initial value of the HireDate property.</param>
-        public static Employe CreateEmploye(global::System.Guid id, global::System.String firstName, global::System.String family, global::System.String phone, global::System.DateTime hireDate)
+        public static Employee CreateEmployee(global::System.Guid id, global::System.String firstName, global::System.String lastName, global::System.String phone, global::System.DateTime hireDate)
         {
-            Employe employe = new Employe();
-            employe.Id = id;
-            employe.FirstName = firstName;
-            employe.Family = family;
-            employe.Phone = phone;
-            employe.HireDate = hireDate;
-            return employe;
+            Employee employee = new Employee();
+            employee.Id = id;
+            employee.FirstName = firstName;
+            employee.LastName = lastName;
+            employee.Phone = phone;
+            employee.HireDate = hireDate;
+            return employee;
         }
 
         #endregion
@@ -2153,24 +2153,24 @@ namespace Model
         /// </summary>
         [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=false)]
         [DataMemberAttribute()]
-        public global::System.String Family
+        public global::System.String LastName
         {
             get
             {
-                return _Family;
+                return _LastName;
             }
             set
             {
-                OnFamilyChanging(value);
-                ReportPropertyChanging("Family");
-                _Family = StructuralObject.SetValidValue(value, false);
-                ReportPropertyChanged("Family");
-                OnFamilyChanged();
+                OnLastNameChanging(value);
+                ReportPropertyChanging("LastName");
+                _LastName = StructuralObject.SetValidValue(value, false);
+                ReportPropertyChanged("LastName");
+                OnLastNameChanged();
             }
         }
-        private global::System.String _Family;
-        partial void OnFamilyChanging(global::System.String value);
-        partial void OnFamilyChanged();
+        private global::System.String _LastName;
+        partial void OnLastNameChanging(global::System.String value);
+        partial void OnLastNameChanged();
     
         /// <summary>
         /// No Metadata Documentation available.
@@ -2249,24 +2249,24 @@ namespace Model
         /// </summary>
         [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
         [DataMemberAttribute()]
-        public global::System.String Addresse
+        public global::System.String Address
         {
             get
             {
-                return _Addresse;
+                return _Address;
             }
             set
             {
-                OnAddresseChanging(value);
-                ReportPropertyChanging("Addresse");
-                _Addresse = StructuralObject.SetValidValue(value, true);
-                ReportPropertyChanged("Addresse");
-                OnAddresseChanged();
+                OnAddressChanging(value);
+                ReportPropertyChanging("Address");
+                _Address = StructuralObject.SetValidValue(value, true);
+                ReportPropertyChanged("Address");
+                OnAddressChanged();
             }
         }
-        private global::System.String _Addresse;
-        partial void OnAddresseChanging(global::System.String value);
-        partial void OnAddresseChanged();
+        private global::System.String _Address;
+        partial void OnAddressChanging(global::System.String value);
+        partial void OnAddressChanged();
     
         /// <summary>
         /// No Metadata Documentation available.
@@ -2422,16 +2422,16 @@ namespace Model
         [XmlIgnoreAttribute()]
         [SoapIgnoreAttribute()]
         [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("AutoRentModel", "FK_Employe_Department", "Department")]
+        [EdmRelationshipNavigationPropertyAttribute("Model", "FK_Employe_Department", "Department")]
         public Department Department
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Department>("AutoRentModel.FK_Employe_Department", "Department").Value;
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Department>("Model.FK_Employe_Department", "Department").Value;
             }
             set
             {
-                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Department>("AutoRentModel.FK_Employe_Department", "Department").Value = value;
+                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Department>("Model.FK_Employe_Department", "Department").Value = value;
             }
         }
         /// <summary>
@@ -2443,13 +2443,13 @@ namespace Model
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Department>("AutoRentModel.FK_Employe_Department", "Department");
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Department>("Model.FK_Employe_Department", "Department");
             }
             set
             {
                 if ((value != null))
                 {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<Department>("AutoRentModel.FK_Employe_Department", "Department", value);
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<Department>("Model.FK_Employe_Department", "Department", value);
                 }
             }
         }
@@ -2460,18 +2460,18 @@ namespace Model
         [XmlIgnoreAttribute()]
         [SoapIgnoreAttribute()]
         [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("AutoRentModel", "FK_Members_Employe", "Members")]
+        [EdmRelationshipNavigationPropertyAttribute("Model", "FK_Members_Employe", "Members")]
         public EntityCollection<Members> Members
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<Members>("AutoRentModel.FK_Members_Employe", "Members");
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<Members>("Model.FK_Members_Employe", "Members");
             }
             set
             {
                 if ((value != null))
                 {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<Members>("AutoRentModel.FK_Members_Employe", "Members", value);
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<Members>("Model.FK_Members_Employe", "Members", value);
                 }
             }
         }
@@ -2482,18 +2482,18 @@ namespace Model
         [XmlIgnoreAttribute()]
         [SoapIgnoreAttribute()]
         [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("AutoRentModel", "FK_Order_Employe", "Order")]
+        [EdmRelationshipNavigationPropertyAttribute("Model", "FK_Order_Employe", "Order")]
         public EntityCollection<Order> Order
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<Order>("AutoRentModel.FK_Order_Employe", "Order");
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<Order>("Model.FK_Order_Employe", "Order");
             }
             set
             {
                 if ((value != null))
                 {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<Order>("AutoRentModel.FK_Order_Employe", "Order", value);
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<Order>("Model.FK_Order_Employe", "Order", value);
                 }
             }
         }
@@ -2504,18 +2504,18 @@ namespace Model
         [XmlIgnoreAttribute()]
         [SoapIgnoreAttribute()]
         [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("AutoRentModel", "FK_Ticket_Employe", "Ticket")]
+        [EdmRelationshipNavigationPropertyAttribute("Model", "FK_Ticket_Employe", "Ticket")]
         public EntityCollection<Ticket> Ticket
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<Ticket>("AutoRentModel.FK_Ticket_Employe", "Ticket");
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<Ticket>("Model.FK_Ticket_Employe", "Ticket");
             }
             set
             {
                 if ((value != null))
                 {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<Ticket>("AutoRentModel.FK_Ticket_Employe", "Ticket", value);
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<Ticket>("Model.FK_Ticket_Employe", "Ticket", value);
                 }
             }
         }
@@ -2526,7 +2526,7 @@ namespace Model
     /// <summary>
     /// No Metadata Documentation available.
     /// </summary>
-    [EdmEntityTypeAttribute(NamespaceName="AutoRentModel", Name="Members")]
+    [EdmEntityTypeAttribute(NamespaceName="Model", Name="Members")]
     [Serializable()]
     [DataContractAttribute(IsReference=true)]
     public partial class Members : EntityObject
@@ -2539,12 +2539,14 @@ namespace Model
         /// <param name="login">Initial value of the Login property.</param>
         /// <param name="created">Initial value of the Created property.</param>
         /// <param name="email">Initial value of the Email property.</param>
-        public static Members CreateMembers(global::System.String login, global::System.DateTime created, global::System.String email)
+        /// <param name="lock">Initial value of the Lock property.</param>
+        public static Members CreateMembers(global::System.String login, global::System.DateTime created, global::System.String email, global::System.Boolean @lock)
         {
             Members members = new Members();
             members.Login = login;
             members.Created = created;
             members.Email = email;
+            members.Lock = @lock;
             return members;
         }
 
@@ -2697,6 +2699,30 @@ namespace Model
         private Nullable<global::System.Guid> _CRecord;
         partial void OnCRecordChanging(Nullable<global::System.Guid> value);
         partial void OnCRecordChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=false)]
+        [DataMemberAttribute()]
+        public global::System.Boolean Lock
+        {
+            get
+            {
+                return _Lock;
+            }
+            set
+            {
+                OnLockChanging(value);
+                ReportPropertyChanging("Lock");
+                _Lock = StructuralObject.SetValidValue(value);
+                ReportPropertyChanged("Lock");
+                OnLockChanged();
+            }
+        }
+        private global::System.Boolean _Lock;
+        partial void OnLockChanging(global::System.Boolean value);
+        partial void OnLockChanged();
 
         #endregion
     
@@ -2708,16 +2734,16 @@ namespace Model
         [XmlIgnoreAttribute()]
         [SoapIgnoreAttribute()]
         [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("AutoRentModel", "FK_Members_Customer", "Customer")]
+        [EdmRelationshipNavigationPropertyAttribute("Model", "FK_Members_Customer", "Customer")]
         public Customer Customer
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Customer>("AutoRentModel.FK_Members_Customer", "Customer").Value;
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Customer>("Model.FK_Members_Customer", "Customer").Value;
             }
             set
             {
-                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Customer>("AutoRentModel.FK_Members_Customer", "Customer").Value = value;
+                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Customer>("Model.FK_Members_Customer", "Customer").Value = value;
             }
         }
         /// <summary>
@@ -2729,13 +2755,13 @@ namespace Model
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Customer>("AutoRentModel.FK_Members_Customer", "Customer");
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Customer>("Model.FK_Members_Customer", "Customer");
             }
             set
             {
                 if ((value != null))
                 {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<Customer>("AutoRentModel.FK_Members_Customer", "Customer", value);
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<Customer>("Model.FK_Members_Customer", "Customer", value);
                 }
             }
         }
@@ -2746,16 +2772,16 @@ namespace Model
         [XmlIgnoreAttribute()]
         [SoapIgnoreAttribute()]
         [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("AutoRentModel", "FK_Members_Employe", "Employe")]
-        public Employe Employe
+        [EdmRelationshipNavigationPropertyAttribute("Model", "FK_Members_Employe", "Employee")]
+        public Employee Employee
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Employe>("AutoRentModel.FK_Members_Employe", "Employe").Value;
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Employee>("Model.FK_Members_Employe", "Employee").Value;
             }
             set
             {
-                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Employe>("AutoRentModel.FK_Members_Employe", "Employe").Value = value;
+                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Employee>("Model.FK_Members_Employe", "Employee").Value = value;
             }
         }
         /// <summary>
@@ -2763,17 +2789,17 @@ namespace Model
         /// </summary>
         [BrowsableAttribute(false)]
         [DataMemberAttribute()]
-        public EntityReference<Employe> EmployeReference
+        public EntityReference<Employee> EmployeeReference
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Employe>("AutoRentModel.FK_Members_Employe", "Employe");
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Employee>("Model.FK_Members_Employe", "Employee");
             }
             set
             {
                 if ((value != null))
                 {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<Employe>("AutoRentModel.FK_Members_Employe", "Employe", value);
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<Employee>("Model.FK_Members_Employe", "Employee", value);
                 }
             }
         }
@@ -2784,18 +2810,18 @@ namespace Model
         [XmlIgnoreAttribute()]
         [SoapIgnoreAttribute()]
         [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("AutoRentModel", "UserInRoles", "Roles")]
+        [EdmRelationshipNavigationPropertyAttribute("Model", "UserInRoles", "Roles")]
         public EntityCollection<Roles> Roles
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<Roles>("AutoRentModel.UserInRoles", "Roles");
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<Roles>("Model.UserInRoles", "Roles");
             }
             set
             {
                 if ((value != null))
                 {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<Roles>("AutoRentModel.UserInRoles", "Roles", value);
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<Roles>("Model.UserInRoles", "Roles", value);
                 }
             }
         }
@@ -2806,7 +2832,7 @@ namespace Model
     /// <summary>
     /// No Metadata Documentation available.
     /// </summary>
-    [EdmEntityTypeAttribute(NamespaceName="AutoRentModel", Name="Order")]
+    [EdmEntityTypeAttribute(NamespaceName="Model", Name="Order")]
     [Serializable()]
     [DataContractAttribute(IsReference=true)]
     public partial class Order : EntityObject
@@ -3140,16 +3166,16 @@ namespace Model
         [XmlIgnoreAttribute()]
         [SoapIgnoreAttribute()]
         [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("AutoRentModel", "FK_Order_Customer", "Customer")]
+        [EdmRelationshipNavigationPropertyAttribute("Model", "FK_Order_Customer", "Customer")]
         public Customer Customer
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Customer>("AutoRentModel.FK_Order_Customer", "Customer").Value;
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Customer>("Model.FK_Order_Customer", "Customer").Value;
             }
             set
             {
-                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Customer>("AutoRentModel.FK_Order_Customer", "Customer").Value = value;
+                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Customer>("Model.FK_Order_Customer", "Customer").Value = value;
             }
         }
         /// <summary>
@@ -3161,13 +3187,13 @@ namespace Model
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Customer>("AutoRentModel.FK_Order_Customer", "Customer");
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Customer>("Model.FK_Order_Customer", "Customer");
             }
             set
             {
                 if ((value != null))
                 {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<Customer>("AutoRentModel.FK_Order_Customer", "Customer", value);
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<Customer>("Model.FK_Order_Customer", "Customer", value);
                 }
             }
         }
@@ -3178,16 +3204,16 @@ namespace Model
         [XmlIgnoreAttribute()]
         [SoapIgnoreAttribute()]
         [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("AutoRentModel", "FK_Order_Department", "Department")]
+        [EdmRelationshipNavigationPropertyAttribute("Model", "FK_Order_Department", "Department")]
         public Department Department
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Department>("AutoRentModel.FK_Order_Department", "Department").Value;
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Department>("Model.FK_Order_Department", "Department").Value;
             }
             set
             {
-                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Department>("AutoRentModel.FK_Order_Department", "Department").Value = value;
+                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Department>("Model.FK_Order_Department", "Department").Value = value;
             }
         }
         /// <summary>
@@ -3199,13 +3225,13 @@ namespace Model
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Department>("AutoRentModel.FK_Order_Department", "Department");
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Department>("Model.FK_Order_Department", "Department");
             }
             set
             {
                 if ((value != null))
                 {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<Department>("AutoRentModel.FK_Order_Department", "Department", value);
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<Department>("Model.FK_Order_Department", "Department", value);
                 }
             }
         }
@@ -3216,16 +3242,16 @@ namespace Model
         [XmlIgnoreAttribute()]
         [SoapIgnoreAttribute()]
         [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("AutoRentModel", "FK_Order_Employe", "Employe")]
-        public Employe Employe
+        [EdmRelationshipNavigationPropertyAttribute("Model", "FK_Order_Employe", "Employee")]
+        public Employee Employee
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Employe>("AutoRentModel.FK_Order_Employe", "Employe").Value;
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Employee>("Model.FK_Order_Employe", "Employee").Value;
             }
             set
             {
-                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Employe>("AutoRentModel.FK_Order_Employe", "Employe").Value = value;
+                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Employee>("Model.FK_Order_Employe", "Employee").Value = value;
             }
         }
         /// <summary>
@@ -3233,17 +3259,17 @@ namespace Model
         /// </summary>
         [BrowsableAttribute(false)]
         [DataMemberAttribute()]
-        public EntityReference<Employe> EmployeReference
+        public EntityReference<Employee> EmployeeReference
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Employe>("AutoRentModel.FK_Order_Employe", "Employe");
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Employee>("Model.FK_Order_Employe", "Employee");
             }
             set
             {
                 if ((value != null))
                 {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<Employe>("AutoRentModel.FK_Order_Employe", "Employe", value);
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<Employee>("Model.FK_Order_Employe", "Employee", value);
                 }
             }
         }
@@ -3254,7 +3280,7 @@ namespace Model
     /// <summary>
     /// No Metadata Documentation available.
     /// </summary>
-    [EdmEntityTypeAttribute(NamespaceName="AutoRentModel", Name="Payment")]
+    [EdmEntityTypeAttribute(NamespaceName="Model", Name="Payment")]
     [Serializable()]
     [DataContractAttribute(IsReference=true)]
     public partial class Payment : EntityObject
@@ -3490,16 +3516,16 @@ namespace Model
         [XmlIgnoreAttribute()]
         [SoapIgnoreAttribute()]
         [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("AutoRentModel", "FK_Payment_Customer", "Customer")]
+        [EdmRelationshipNavigationPropertyAttribute("Model", "FK_Payment_Customer", "Customer")]
         public Customer Customer
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Customer>("AutoRentModel.FK_Payment_Customer", "Customer").Value;
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Customer>("Model.FK_Payment_Customer", "Customer").Value;
             }
             set
             {
-                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Customer>("AutoRentModel.FK_Payment_Customer", "Customer").Value = value;
+                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Customer>("Model.FK_Payment_Customer", "Customer").Value = value;
             }
         }
         /// <summary>
@@ -3511,13 +3537,13 @@ namespace Model
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Customer>("AutoRentModel.FK_Payment_Customer", "Customer");
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Customer>("Model.FK_Payment_Customer", "Customer");
             }
             set
             {
                 if ((value != null))
                 {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<Customer>("AutoRentModel.FK_Payment_Customer", "Customer", value);
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<Customer>("Model.FK_Payment_Customer", "Customer", value);
                 }
             }
         }
@@ -3528,26 +3554,26 @@ namespace Model
     /// <summary>
     /// No Metadata Documentation available.
     /// </summary>
-    [EdmEntityTypeAttribute(NamespaceName="AutoRentModel", Name="PrermissionRule")]
+    [EdmEntityTypeAttribute(NamespaceName="Model", Name="PermissionRule")]
     [Serializable()]
     [DataContractAttribute(IsReference=true)]
-    public partial class PrermissionRule : EntityObject
+    public partial class PermissionRule : EntityObject
     {
         #region Factory Method
     
         /// <summary>
-        /// Create a new PrermissionRule object.
+        /// Create a new PermissionRule object.
         /// </summary>
         /// <param name="id">Initial value of the Id property.</param>
         /// <param name="name">Initial value of the Name property.</param>
         /// <param name="objectType">Initial value of the ObjectType property.</param>
-        public static PrermissionRule CreatePrermissionRule(global::System.Int64 id, global::System.String name, global::System.String objectType)
+        public static PermissionRule CreatePermissionRule(global::System.Int64 id, global::System.String name, global::System.String objectType)
         {
-            PrermissionRule prermissionRule = new PrermissionRule();
-            prermissionRule.Id = id;
-            prermissionRule.Name = name;
-            prermissionRule.ObjectType = objectType;
-            return prermissionRule;
+            PermissionRule permissionRule = new PermissionRule();
+            permissionRule.Id = id;
+            permissionRule.Name = name;
+            permissionRule.ObjectType = objectType;
+            return permissionRule;
         }
 
         #endregion
@@ -3662,18 +3688,18 @@ namespace Model
         [XmlIgnoreAttribute()]
         [SoapIgnoreAttribute()]
         [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("AutoRentModel", "FK_RulesInRole_PrermissionRule", "RulesInRole")]
+        [EdmRelationshipNavigationPropertyAttribute("Model", "FK_RulesInRole_PrermissionRule", "RulesInRole")]
         public EntityCollection<RulesInRole> RulesInRole
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<RulesInRole>("AutoRentModel.FK_RulesInRole_PrermissionRule", "RulesInRole");
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<RulesInRole>("Model.FK_RulesInRole_PrermissionRule", "RulesInRole");
             }
             set
             {
                 if ((value != null))
                 {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<RulesInRole>("AutoRentModel.FK_RulesInRole_PrermissionRule", "RulesInRole", value);
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<RulesInRole>("Model.FK_RulesInRole_PrermissionRule", "RulesInRole", value);
                 }
             }
         }
@@ -3684,7 +3710,7 @@ namespace Model
     /// <summary>
     /// No Metadata Documentation available.
     /// </summary>
-    [EdmEntityTypeAttribute(NamespaceName="AutoRentModel", Name="Revisions")]
+    [EdmEntityTypeAttribute(NamespaceName="Model", Name="Revisions")]
     [Serializable()]
     [DataContractAttribute(IsReference=true)]
     public partial class Revisions : EntityObject
@@ -3842,18 +3868,18 @@ namespace Model
         [XmlIgnoreAttribute()]
         [SoapIgnoreAttribute()]
         [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("AutoRentModel", "FK_Damages_Revisions", "Damages")]
+        [EdmRelationshipNavigationPropertyAttribute("Model", "FK_Damages_Revisions", "Damages")]
         public EntityCollection<Damages> Damages
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<Damages>("AutoRentModel.FK_Damages_Revisions", "Damages");
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<Damages>("Model.FK_Damages_Revisions", "Damages");
             }
             set
             {
                 if ((value != null))
                 {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<Damages>("AutoRentModel.FK_Damages_Revisions", "Damages", value);
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<Damages>("Model.FK_Damages_Revisions", "Damages", value);
                 }
             }
         }
@@ -3864,16 +3890,16 @@ namespace Model
         [XmlIgnoreAttribute()]
         [SoapIgnoreAttribute()]
         [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("AutoRentModel", "FK_Revisions_TicketHistory", "TicketHistory")]
+        [EdmRelationshipNavigationPropertyAttribute("Model", "FK_Revisions_TicketHistory", "TicketHistory")]
         public TicketHistory TicketHistory
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<TicketHistory>("AutoRentModel.FK_Revisions_TicketHistory", "TicketHistory").Value;
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<TicketHistory>("Model.FK_Revisions_TicketHistory", "TicketHistory").Value;
             }
             set
             {
-                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<TicketHistory>("AutoRentModel.FK_Revisions_TicketHistory", "TicketHistory").Value = value;
+                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<TicketHistory>("Model.FK_Revisions_TicketHistory", "TicketHistory").Value = value;
             }
         }
         /// <summary>
@@ -3885,13 +3911,13 @@ namespace Model
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<TicketHistory>("AutoRentModel.FK_Revisions_TicketHistory", "TicketHistory");
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<TicketHistory>("Model.FK_Revisions_TicketHistory", "TicketHistory");
             }
             set
             {
                 if ((value != null))
                 {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<TicketHistory>("AutoRentModel.FK_Revisions_TicketHistory", "TicketHistory", value);
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<TicketHistory>("Model.FK_Revisions_TicketHistory", "TicketHistory", value);
                 }
             }
         }
@@ -3902,7 +3928,7 @@ namespace Model
     /// <summary>
     /// No Metadata Documentation available.
     /// </summary>
-    [EdmEntityTypeAttribute(NamespaceName="AutoRentModel", Name="Roles")]
+    [EdmEntityTypeAttribute(NamespaceName="Model", Name="Roles")]
     [Serializable()]
     [DataContractAttribute(IsReference=true)]
     public partial class Roles : EntityObject
@@ -3986,18 +4012,18 @@ namespace Model
         [XmlIgnoreAttribute()]
         [SoapIgnoreAttribute()]
         [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("AutoRentModel", "FK_RulesInRole_Roles", "RulesInRole")]
+        [EdmRelationshipNavigationPropertyAttribute("Model", "FK_RulesInRole_Roles", "RulesInRole")]
         public EntityCollection<RulesInRole> RulesInRole
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<RulesInRole>("AutoRentModel.FK_RulesInRole_Roles", "RulesInRole");
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<RulesInRole>("Model.FK_RulesInRole_Roles", "RulesInRole");
             }
             set
             {
                 if ((value != null))
                 {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<RulesInRole>("AutoRentModel.FK_RulesInRole_Roles", "RulesInRole", value);
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<RulesInRole>("Model.FK_RulesInRole_Roles", "RulesInRole", value);
                 }
             }
         }
@@ -4008,18 +4034,18 @@ namespace Model
         [XmlIgnoreAttribute()]
         [SoapIgnoreAttribute()]
         [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("AutoRentModel", "UserInRoles", "Members")]
+        [EdmRelationshipNavigationPropertyAttribute("Model", "UserInRoles", "Members")]
         public EntityCollection<Members> Members
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<Members>("AutoRentModel.UserInRoles", "Members");
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<Members>("Model.UserInRoles", "Members");
             }
             set
             {
                 if ((value != null))
                 {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<Members>("AutoRentModel.UserInRoles", "Members", value);
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<Members>("Model.UserInRoles", "Members", value);
                 }
             }
         }
@@ -4030,7 +4056,7 @@ namespace Model
     /// <summary>
     /// No Metadata Documentation available.
     /// </summary>
-    [EdmEntityTypeAttribute(NamespaceName="AutoRentModel", Name="RulesInRole")]
+    [EdmEntityTypeAttribute(NamespaceName="Model", Name="RulesInRole")]
     [Serializable()]
     [DataContractAttribute(IsReference=true)]
     public partial class RulesInRole : EntityObject
@@ -4247,16 +4273,16 @@ namespace Model
         [XmlIgnoreAttribute()]
         [SoapIgnoreAttribute()]
         [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("AutoRentModel", "FK_RulesInRole_PrermissionRule", "PrermissionRule")]
-        public PrermissionRule PrermissionRule
+        [EdmRelationshipNavigationPropertyAttribute("Model", "FK_RulesInRole_PrermissionRule", "PermissionRule")]
+        public PermissionRule PermissionRule
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<PrermissionRule>("AutoRentModel.FK_RulesInRole_PrermissionRule", "PrermissionRule").Value;
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<PermissionRule>("Model.FK_RulesInRole_PrermissionRule", "PermissionRule").Value;
             }
             set
             {
-                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<PrermissionRule>("AutoRentModel.FK_RulesInRole_PrermissionRule", "PrermissionRule").Value = value;
+                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<PermissionRule>("Model.FK_RulesInRole_PrermissionRule", "PermissionRule").Value = value;
             }
         }
         /// <summary>
@@ -4264,17 +4290,17 @@ namespace Model
         /// </summary>
         [BrowsableAttribute(false)]
         [DataMemberAttribute()]
-        public EntityReference<PrermissionRule> PrermissionRuleReference
+        public EntityReference<PermissionRule> PermissionRuleReference
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<PrermissionRule>("AutoRentModel.FK_RulesInRole_PrermissionRule", "PrermissionRule");
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<PermissionRule>("Model.FK_RulesInRole_PrermissionRule", "PermissionRule");
             }
             set
             {
                 if ((value != null))
                 {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<PrermissionRule>("AutoRentModel.FK_RulesInRole_PrermissionRule", "PrermissionRule", value);
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<PermissionRule>("Model.FK_RulesInRole_PrermissionRule", "PermissionRule", value);
                 }
             }
         }
@@ -4285,16 +4311,16 @@ namespace Model
         [XmlIgnoreAttribute()]
         [SoapIgnoreAttribute()]
         [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("AutoRentModel", "FK_RulesInRole_Roles", "Roles")]
+        [EdmRelationshipNavigationPropertyAttribute("Model", "FK_RulesInRole_Roles", "Roles")]
         public Roles Roles
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Roles>("AutoRentModel.FK_RulesInRole_Roles", "Roles").Value;
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Roles>("Model.FK_RulesInRole_Roles", "Roles").Value;
             }
             set
             {
-                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Roles>("AutoRentModel.FK_RulesInRole_Roles", "Roles").Value = value;
+                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Roles>("Model.FK_RulesInRole_Roles", "Roles").Value = value;
             }
         }
         /// <summary>
@@ -4306,13 +4332,13 @@ namespace Model
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Roles>("AutoRentModel.FK_RulesInRole_Roles", "Roles");
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Roles>("Model.FK_RulesInRole_Roles", "Roles");
             }
             set
             {
                 if ((value != null))
                 {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<Roles>("AutoRentModel.FK_RulesInRole_Roles", "Roles", value);
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<Roles>("Model.FK_RulesInRole_Roles", "Roles", value);
                 }
             }
         }
@@ -4323,7 +4349,7 @@ namespace Model
     /// <summary>
     /// No Metadata Documentation available.
     /// </summary>
-    [EdmEntityTypeAttribute(NamespaceName="AutoRentModel", Name="Ticket")]
+    [EdmEntityTypeAttribute(NamespaceName="Model", Name="Ticket")]
     [Serializable()]
     [DataContractAttribute(IsReference=true)]
     public partial class Ticket : EntityObject
@@ -4679,16 +4705,16 @@ namespace Model
         [XmlIgnoreAttribute()]
         [SoapIgnoreAttribute()]
         [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("AutoRentModel", "FK_Ticket_Auto", "Auto")]
+        [EdmRelationshipNavigationPropertyAttribute("Model", "FK_Ticket_Auto", "Auto")]
         public Auto Auto
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Auto>("AutoRentModel.FK_Ticket_Auto", "Auto").Value;
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Auto>("Model.FK_Ticket_Auto", "Auto").Value;
             }
             set
             {
-                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Auto>("AutoRentModel.FK_Ticket_Auto", "Auto").Value = value;
+                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Auto>("Model.FK_Ticket_Auto", "Auto").Value = value;
             }
         }
         /// <summary>
@@ -4700,13 +4726,13 @@ namespace Model
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Auto>("AutoRentModel.FK_Ticket_Auto", "Auto");
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Auto>("Model.FK_Ticket_Auto", "Auto");
             }
             set
             {
                 if ((value != null))
                 {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<Auto>("AutoRentModel.FK_Ticket_Auto", "Auto", value);
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<Auto>("Model.FK_Ticket_Auto", "Auto", value);
                 }
             }
         }
@@ -4717,16 +4743,16 @@ namespace Model
         [XmlIgnoreAttribute()]
         [SoapIgnoreAttribute()]
         [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("AutoRentModel", "FK_Ticket_Customer", "Customer")]
+        [EdmRelationshipNavigationPropertyAttribute("Model", "FK_Ticket_Customer", "Customer")]
         public Customer Customer
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Customer>("AutoRentModel.FK_Ticket_Customer", "Customer").Value;
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Customer>("Model.FK_Ticket_Customer", "Customer").Value;
             }
             set
             {
-                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Customer>("AutoRentModel.FK_Ticket_Customer", "Customer").Value = value;
+                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Customer>("Model.FK_Ticket_Customer", "Customer").Value = value;
             }
         }
         /// <summary>
@@ -4738,13 +4764,13 @@ namespace Model
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Customer>("AutoRentModel.FK_Ticket_Customer", "Customer");
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Customer>("Model.FK_Ticket_Customer", "Customer");
             }
             set
             {
                 if ((value != null))
                 {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<Customer>("AutoRentModel.FK_Ticket_Customer", "Customer", value);
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<Customer>("Model.FK_Ticket_Customer", "Customer", value);
                 }
             }
         }
@@ -4755,16 +4781,16 @@ namespace Model
         [XmlIgnoreAttribute()]
         [SoapIgnoreAttribute()]
         [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("AutoRentModel", "FK_Ticket_Department", "Department")]
+        [EdmRelationshipNavigationPropertyAttribute("Model", "FK_Ticket_Department", "Department")]
         public Department Department
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Department>("AutoRentModel.FK_Ticket_Department", "Department").Value;
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Department>("Model.FK_Ticket_Department", "Department").Value;
             }
             set
             {
-                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Department>("AutoRentModel.FK_Ticket_Department", "Department").Value = value;
+                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Department>("Model.FK_Ticket_Department", "Department").Value = value;
             }
         }
         /// <summary>
@@ -4776,13 +4802,13 @@ namespace Model
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Department>("AutoRentModel.FK_Ticket_Department", "Department");
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Department>("Model.FK_Ticket_Department", "Department");
             }
             set
             {
                 if ((value != null))
                 {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<Department>("AutoRentModel.FK_Ticket_Department", "Department", value);
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<Department>("Model.FK_Ticket_Department", "Department", value);
                 }
             }
         }
@@ -4793,16 +4819,16 @@ namespace Model
         [XmlIgnoreAttribute()]
         [SoapIgnoreAttribute()]
         [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("AutoRentModel", "FK_Ticket_Employe", "Employe")]
-        public Employe Employe
+        [EdmRelationshipNavigationPropertyAttribute("Model", "FK_Ticket_Employe", "Employee")]
+        public Employee Employee
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Employe>("AutoRentModel.FK_Ticket_Employe", "Employe").Value;
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Employee>("Model.FK_Ticket_Employe", "Employee").Value;
             }
             set
             {
-                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Employe>("AutoRentModel.FK_Ticket_Employe", "Employe").Value = value;
+                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Employee>("Model.FK_Ticket_Employe", "Employee").Value = value;
             }
         }
         /// <summary>
@@ -4810,17 +4836,17 @@ namespace Model
         /// </summary>
         [BrowsableAttribute(false)]
         [DataMemberAttribute()]
-        public EntityReference<Employe> EmployeReference
+        public EntityReference<Employee> EmployeeReference
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Employe>("AutoRentModel.FK_Ticket_Employe", "Employe");
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Employee>("Model.FK_Ticket_Employe", "Employee");
             }
             set
             {
                 if ((value != null))
                 {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<Employe>("AutoRentModel.FK_Ticket_Employe", "Employe", value);
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<Employee>("Model.FK_Ticket_Employe", "Employee", value);
                 }
             }
         }
@@ -4831,18 +4857,18 @@ namespace Model
         [XmlIgnoreAttribute()]
         [SoapIgnoreAttribute()]
         [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("AutoRentModel", "FK_TicketHistory_Ticket", "TicketHistory")]
+        [EdmRelationshipNavigationPropertyAttribute("Model", "FK_TicketHistory_Ticket", "TicketHistory")]
         public EntityCollection<TicketHistory> TicketHistory
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<TicketHistory>("AutoRentModel.FK_TicketHistory_Ticket", "TicketHistory");
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<TicketHistory>("Model.FK_TicketHistory_Ticket", "TicketHistory");
             }
             set
             {
                 if ((value != null))
                 {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<TicketHistory>("AutoRentModel.FK_TicketHistory_Ticket", "TicketHistory", value);
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<TicketHistory>("Model.FK_TicketHistory_Ticket", "TicketHistory", value);
                 }
             }
         }
@@ -4853,7 +4879,7 @@ namespace Model
     /// <summary>
     /// No Metadata Documentation available.
     /// </summary>
-    [EdmEntityTypeAttribute(NamespaceName="AutoRentModel", Name="TicketHistory")]
+    [EdmEntityTypeAttribute(NamespaceName="Model", Name="TicketHistory")]
     [Serializable()]
     [DataContractAttribute(IsReference=true)]
     public partial class TicketHistory : EntityObject
@@ -5064,18 +5090,18 @@ namespace Model
         [XmlIgnoreAttribute()]
         [SoapIgnoreAttribute()]
         [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("AutoRentModel", "FK_Revisions_TicketHistory", "Revisions")]
+        [EdmRelationshipNavigationPropertyAttribute("Model", "FK_Revisions_TicketHistory", "Revisions")]
         public EntityCollection<Revisions> Revisions
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<Revisions>("AutoRentModel.FK_Revisions_TicketHistory", "Revisions");
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<Revisions>("Model.FK_Revisions_TicketHistory", "Revisions");
             }
             set
             {
                 if ((value != null))
                 {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<Revisions>("AutoRentModel.FK_Revisions_TicketHistory", "Revisions", value);
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<Revisions>("Model.FK_Revisions_TicketHistory", "Revisions", value);
                 }
             }
         }
@@ -5086,16 +5112,16 @@ namespace Model
         [XmlIgnoreAttribute()]
         [SoapIgnoreAttribute()]
         [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("AutoRentModel", "FK_TicketHistory_Ticket", "Ticket")]
+        [EdmRelationshipNavigationPropertyAttribute("Model", "FK_TicketHistory_Ticket", "Ticket")]
         public Ticket Ticket
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Ticket>("AutoRentModel.FK_TicketHistory_Ticket", "Ticket").Value;
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Ticket>("Model.FK_TicketHistory_Ticket", "Ticket").Value;
             }
             set
             {
-                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Ticket>("AutoRentModel.FK_TicketHistory_Ticket", "Ticket").Value = value;
+                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Ticket>("Model.FK_TicketHistory_Ticket", "Ticket").Value = value;
             }
         }
         /// <summary>
@@ -5107,13 +5133,13 @@ namespace Model
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Ticket>("AutoRentModel.FK_TicketHistory_Ticket", "Ticket");
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Ticket>("Model.FK_TicketHistory_Ticket", "Ticket");
             }
             set
             {
                 if ((value != null))
                 {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<Ticket>("AutoRentModel.FK_TicketHistory_Ticket", "Ticket", value);
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<Ticket>("Model.FK_TicketHistory_Ticket", "Ticket", value);
                 }
             }
         }
