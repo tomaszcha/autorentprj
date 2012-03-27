@@ -11,6 +11,7 @@ using System.Windows.Shapes;
 using System.Windows.Shapes;
 using ModuleInfrastracture.ViewModels;
 using System.ComponentModel;
+using System.Text.RegularExpressions;
 
 namespace DepartmentModule.ViewModels
 {
@@ -108,14 +109,83 @@ namespace DepartmentModule.ViewModels
 
         public string Error
         {
-            get { throw new NotImplementedException(); }
+            get { return (this as IDataErrorInfo).Error; }
         }
 
         public string this[string columnName]
         {
-            get { throw new NotImplementedException(); }
+            get
+            {
+                string error;
+
+                switch (columnName)
+                {
+                    case "CityCode":
+                        error = ValidateCityCode();
+                        break;
+                    case "Name":
+                        error = ValidateName();
+                        break;
+                    case "Address":
+                        error = ValidateAddress();
+                        break;
+                    case "Phone":
+                        error = ValidatePhone();
+                        break;                   
+                    default:
+                        error = (this as IDataErrorInfo)[columnName];
+                        break;
+                }
+                return error;
+            }
         }
 
+        private string ValidateCityCode()
+        {
+            string res = String.Empty;            
+            return res;
+        }
+
+
+        private string ValidateName()
+        {
+            string res = String.Empty;
+            if (string.IsNullOrEmpty(_name))
+            {
+                res = Properties.Resources.EmptyField;
+            }
+            else if (_name.Length > 150)
+            {
+                res = Properties.Resources.LongString;
+            }
+            return res;
+        }
+
+        
+        private string ValidateAddress()
+        {
+            string res = String.Empty;
+            if (_address.Length > 150)
+            {
+                res = Properties.Resources.LongString;
+            }
+            return res;
+        }
+
+        private string ValidatePhone()
+        {
+            string res = String.Empty;
+            if (_phone.Length > 24)
+            {
+                res = Properties.Resources.LongString;
+            }
+            else if (!Regex.IsMatch(_phone, Properties.Resources.PhoneRegEx))
+            {
+                res = Properties.Resources.InvalidPhone;
+            }
+            return res;
+        }
+               
         #endregion // IDataErrorInfo
     }
 }
