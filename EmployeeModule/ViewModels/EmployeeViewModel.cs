@@ -98,6 +98,20 @@ namespace EmployeeModule.ViewModels
 
 
         /// <summary>
+        /// Position of the employee
+        /// </summary>
+        public string Position
+        {
+            get { return _position; }
+            set
+            {
+                _birthDay = value;
+                OnPropertyChanged("Position");
+            }
+        }
+
+
+        /// <summary>
         /// Department id 
         /// </summary>
         public int DepartmentId
