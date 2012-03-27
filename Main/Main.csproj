@@ -118,6 +118,10 @@
     <None Include="Properties\AppManifest.xml" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\AutoModule\AutoModule.csproj">
+      <Project>{4E1A9990-FF0E-4F46-8990-F39184DB041C}</Project>
+      <Name>AutoModule</Name>
+    </ProjectReference>
     <ProjectReference Include="..\CustomerMenuModule\CustomerMenuModule.csproj">
       <Project>{A3722293-CB87-41CD-B7A1-10FB992D517F}</Project>
       <Name>CustomerMenuModule</Name>
@@ -125,6 +129,14 @@
     <ProjectReference Include="..\CustomerModule\CustomerModule.csproj">
       <Project>{483C33F4-8C08-40D3-B0B7-E0516926E87C}</Project>
       <Name>CustomerModule</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DamageClassModule\DamageClassModule.csproj">
+      <Project>{7F4CC7DE-7A81-46B1-9F89-E02825FB0A9F}</Project>
+      <Name>DamageClassModule</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DepartmentModule\DepartmentModule.csproj">
+      <Project>{EED71B31-6673-4BFC-83BC-AC1DF2DDA550}</Project>
+      <Name>DepartmentModule</Name>
     </ProjectReference>
     <ProjectReference Include="..\EmployeeModule\EmployeeModule.csproj">
       <Project>{CFA6CA45-B3D5-4C59-8E88-5361F31DC9D4}</Project>

@@ -6,6 +6,9 @@ using System.Windows;
 using ModuleInfrastracture.Views;
 using EmployeeModule;
 using UserRegistrationModule;
+using AutoModule;
+using CustomerModule;
+using DamageClassModule;
 
 
 namespace Main
@@ -45,7 +48,11 @@ namespace Main
             base.ConfigureModuleCatalog();
             ModuleCatalog moduleCatalog = (ModuleCatalog)ModuleCatalog;
             //moduleCatalog.AddModule(typeof(UserRegistrationModule.UserRegistrationModule));
-            moduleCatalog.AddModule(typeof(EmployeeModule.EmployeeModule));
+            //moduleCatalog.AddModule(typeof(EmployeeModule.EmployeeModule));
+            //moduleCatalog.AddModule(typeof(AutoModule.AutoModule));
+            //moduleCatalog.AddModule(typeof(CustomerModule.CustomerModule));
+            //moduleCatalog.AddModule(typeof(DamageClassModule.DamageClassModule));
+            moduleCatalog.AddModule(typeof(DepartmentModule.DepartmentModule));
             moduleCatalog.AddModule(typeof(CustomerMenuModule.CustomerMenuModule));
         }
 
