@@ -1,0 +1,3882 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>VIBlend.Silverlight.Extensions</name>
+    </assembly>
+    <members>
+        <member name="T:VIBlend.Silverlight.Controls.DatePickerTextBox">
+            <summary>
+            Represents the text input of a
+            <see cref="T:System.Windows.Controls.DateTimePicker" />.
+            </summary>
+            <QualityBand>Mature</QualityBand>
+        </member>
+        <member name="F:VIBlend.Silverlight.Controls.DatePickerTextBox.ElementContentName">
+            <summary>
+            Inherited code: Requires comment.
+            </summary>
+        </member>
+        <member name="M:VIBlend.Silverlight.Controls.DatePickerTextBox.#ctor">
+            <summary>
+            Initializes a new instance of the
+            <see cref="T:System.Windows.Controls.Primitives.DatePickerTextBox" />
+            class.
+            </summary>
+        </member>
+        <member name="M:VIBlend.Silverlight.Controls.DatePickerTextBox.OnLoaded(System.Object,System.Windows.RoutedEventArgs)">
+            <summary>
+            Inherited code: Requires comment.
+            </summary>
+            <param name="sender">Inherited code: Requires comment 1.</param>
+            <param name="e">Inherited code: Requires comment 2.</param>
+        </member>
+        <member name="M:VIBlend.Silverlight.Controls.DatePickerTextBox.ChangeVisualState">
+            <summary>
+            Change to the correct visual state for the textbox.
+            </summary>
+        </member>
+        <member name="M:VIBlend.Silverlight.Controls.DatePickerTextBox.ChangeVisualState(System.Boolean)">
+            <summary>
+            Change to the correct visual state for the textbox.
+            </summary>
+            <param name="useTransitions">
+            True to use transitions when updating the visual state, false to
+            snap directly to the new visual state.
+            </param>
+        </member>
+        <member name="M:VIBlend.Silverlight.Controls.DatePickerTextBox.OnApplyTemplate">
+            <summary>
+            Builds the visual tree for the
+            <see cref="T:System.Windows.Controls.Primitives.DatePickerTextBox" />
+            when a new template is applied.
+            </summary>
+        </member>
+        <member name="F:VIBlend.Silverlight.Controls.DatePickerTextBox.WatermarkProperty">
+            <summary>
+            Watermark dependency property.
+            </summary>
+        </member>
+        <member name="M:VIBlend.Silverlight.Controls.DatePickerTextBox.ExtractTemplatePart``1(System.String)">
+            <summary>
+            Inherited code: Requires comment.
+            </summary>
+            <typeparam name="T">Inherited code: Requires comment 1.</typeparam>
+            <param name="partName">Inherited code: Requires comment 2.</param>
+            <returns>Inherited code: Requires comment 3.</returns>
+        </member>
+        <member name="M:VIBlend.Silverlight.Controls.DatePickerTextBox.ExtractTemplatePart``1(System.String,System.Windows.DependencyObject)">
+            <summary>
+            Inherited code: Requires comment.
+            </summary>
+            <typeparam name="T">Inherited code: Requires comment 1.</typeparam>
+            <param name="partName">Inherited code: Requires comment 2.</param>
+            <param name="obj">Inherited code: Requires comment 3.</param>
+            <returns>Inherited code: Requires comment 4.</returns>
+        </member>
+        <member name="M:VIBlend.Silverlight.Controls.DatePickerTextBox.OnGotFocus(System.Object,System.Windows.RoutedEventArgs)">
+            <summary>
+            Inherited code: Requires comment.
+            </summary>
+            <param name="sender">Inherited code: Requires comment 1.</param>
+            <param name="e">Inherited code: Requires comment 2.</param>
+        </member>
+        <member name="M:VIBlend.Silverlight.Controls.DatePickerTextBox.OnIsEnabledChanged(System.Object,System.Windows.DependencyPropertyChangedEventArgs)">
+            <summary>
+            Called when the IsEnabled property changes.
+            </summary>
+            <param name="sender">Sender object.</param>
+            <param name="e">Property changed args.</param>
+        </member>
+        <member name="M:VIBlend.Silverlight.Controls.DatePickerTextBox.OnLostFocus(System.Object,System.Windows.RoutedEventArgs)">
+            <summary>
+            Inherited code: Requires comment.
+            </summary>
+            <param name="sender">Inherited code: Requires comment 1.</param>
+            <param name="e">Inherited code: Requires comment 2.</param>
+        </member>
+        <member name="M:VIBlend.Silverlight.Controls.DatePickerTextBox.OnMouseEnter(System.Object,System.Windows.Input.MouseEventArgs)">
+            <summary>
+            Inherited code: Requires comment.
+            </summary>
+            <param name="sender">Inherited code: Requires comment 1.</param>
+            <param name="e">Inherited code: Requires comment 2.</param>
+        </member>
+        <member name="M:VIBlend.Silverlight.Controls.DatePickerTextBox.OnMouseLeave(System.Object,System.Windows.Input.MouseEventArgs)">
+            <summary>
+            Inherited code: Requires comment.
+            </summary>
+            <param name="sender">Inherited code: Requires comment 1.</param>
+            <param name="e">Inherited code: Requires comment 2.</param>
+        </member>
+        <member name="M:VIBlend.Silverlight.Controls.DatePickerTextBox.OnTextChanged(System.Object,System.Windows.Controls.TextChangedEventArgs)">
+            <summary>
+            Inherited code: Requires comment.
+            </summary>
+            <param name="sender">Inherited code: Requires comment 1.</param>
+            <param name="e">Inherited code: Requires comment 2.</param>
+        </member>
+        <member name="M:VIBlend.Silverlight.Controls.DatePickerTextBox.OnWatermarkChanged">
+            <summary>
+            Inherited code: Requires comment.
+            </summary>
+        </member>
+        <member name="M:VIBlend.Silverlight.Controls.DatePickerTextBox.OnWatermarkPropertyChanged(System.Windows.DependencyObject,System.Windows.DependencyPropertyChangedEventArgs)">
+            <summary>
+            Called when watermark property is changed.
+            </summary>
+            <param name="sender">The sender.</param>
+            <param name="args">
+            The <see cref="T:System.Windows.DependencyPropertyChangedEventArgs"/>
+            instance containing the event data.
+            </param>
+        </member>
+        <member name="M:VIBlend.Silverlight.Controls.DatePickerTextBox.SetDefaults">
+            <summary>
+            Inherited code: Requires comment.
+            </summary>
+        </member>
+        <member name="P:VIBlend.Silverlight.Controls.DatePickerTextBox.ElementContent">
+            <summary>
+            Gets or sets Inherited code: Requires comment.
+            </summary>
+        </member>
+        <member name="P:VIBlend.Silverlight.Controls.DatePickerTextBox.IsHovered">
+            <summary>
+            Gets or sets a value indicating whether Inherited code: Requires comment.
+            </summary>
+        </member>
+        <member name="P:VIBlend.Silverlight.Controls.DatePickerTextBox.HasFocusInternal">
+            <summary>
+            Gets or sets a value indicating whether Inherited code: Requires comment.
+            </summary>
+        </member>
+        <member name="P:VIBlend.Silverlight.Controls.DatePickerTextBox.Watermark">
+            <summary>
+            Gets or sets the Watermark content.
+            </summary>
+            <value>The watermark.</value>
+        </member>
+        <member name="T:VIBlend.Silverlight.Controls.DateTimeTypeConverter">
+            <summary>
+            Provides a converter to convert <see cref="T:System.DateTime" /> objects
+            to and from other representations.
+            </summary>
+            <QualityBand>Mature</QualityBand>
+        </member>
+        <member name="M:VIBlend.Silverlight.Controls.DateTimeTypeConverter.#ctor">
+            <summary>
+            Initializes a new instance of the
+            <see cref="T:VIBlend.Silverlight.Controls.DateTimeTypeConverter" />
+            class.
+            </summary>
+        </member>
+        <member name="M:VIBlend.Silverlight.Controls.DateTimeTypeConverter.CanConvertFrom(System.ComponentModel.ITypeDescriptorContext,System.Type)">
+            <summary>
+            Gets a value indicating whether it is possible to convert the
+            specified type to a <see cref="T:System.DateTime" /> with the
+            specified format context.
+            </summary>
+            <param name="context">
+            The format context that is used to convert the specified type.
+            </param>
+            <param name="sourceType">The type to convert.</param>
+            <returns>
+            True if the conversion is possible; otherwise, false.
+            </returns>
+        </member>
+        <member name="M:VIBlend.Silverlight.Controls.DateTimeTypeConverter.ConvertFrom(System.ComponentModel.ITypeDescriptorContext,System.Globalization.CultureInfo,System.Object)">
+            <summary>
+            Converts the specified object to a <see cref="T:System.DateTime"/>
+            with the specified culture with the specified format context.
+            </summary>
+            <param name="context">
+            The format context that is used to convert the specified type.
+            </param>
+            <param name="culture">The culture to use for the result.</param>
+            <param name="value">The value to convert.</param>
+            <returns>
+            A <see cref="T:System.DateTime"/> object that represents
+            <paramref name="value"/>.
+            </returns>
+            <exception cref="T:System.FormatException">
+            The conversion cannot be performed.
+            </exception>
+            <exception cref="T:System.ArgumentNullException">
+            The culture is null.
+            </exception>
+            <exception cref="T:System.ArgumentNullException">
+            The value is null.
+            </exception>
+        </member>
+        <member name="M:VIBlend.Silverlight.Controls.DateTimeTypeConverter.CanConvertTo(System.ComponentModel.ITypeDescriptorContext,System.Type)">
+            <summary>
+            Gets a value indicating whether it is possible to convert a
+            <see cref="T:System.DateTime" /> to the specified type within the
+            specified format context.
+            </summary>
+            <param name="context">
+            The format context that is used to convert.
+            </param>
+            <param name="destinationType">The type to convert to.</param>
+            <returns>
+            True if the conversion is possible; otherwise, false.
+            </returns>
+        </member>
+        <member name="M:VIBlend.Silverlight.Controls.DateTimeTypeConverter.ConvertTo(System.ComponentModel.ITypeDescriptorContext,System.Globalization.CultureInfo,System.Object,System.Type)">
+            <summary>
+            Converts a <see cref="T:System.DateTime"/> with the specified
+            culture to the specified object with the specified format context.
+            </summary>
+            <param name="context">
+            The format context that is used to convert to the specified type.
+            </param>
+            <param name="culture">
+            The culture to use for the converting date.
+            </param>
+            <param name="value">The date to convert.</param>
+            <param name="destinationType">The type to convert to.</param>
+            <returns>
+            An object of the specified type that represents
+            <paramref name="value"/>.
+            </returns>
+            <exception cref="T:System.ArgumentNullException">
+            The culture is a null reference (Nothing in Visual Basic).
+            </exception>
+            <exception cref="T:System.ArgumentNullException">
+            The destinationType is a null reference (Nothing in Visual Basic).
+            </exception>
+            <exception cref="T:System.NotSupportedException">
+            The value is not a DateTime or the destinationType is not a string.
+            </exception>
+        </member>
+        <member name="T:VIBlend.Silverlight.Controls.CalendarSelectionMode">
+            <summary>
+            Specifies values that describe the available selection modes for a
+            <see cref="T:VIBlend.Silverlight.Controls.Calendar" />.
+            </summary>
+            <remarks>
+            This enumeration provides the values that are used by the SelectionMode
+            property.
+            </remarks>
+            <QualityBand>Mature</QualityBand>
+        </member>
+        <member name="F:VIBlend.Silverlight.Controls.CalendarSelectionMode.SingleDate">
+            <summary>
+            Only a single date can be selected. Use the
+            <see cref="P:VIBlend.Silverlight.Controls.Calendar.SelectedDate" />
+            property to retrieve the selected date.
+            </summary>
+        </member>
+        <member name="F:VIBlend.Silverlight.Controls.CalendarSelectionMode.SingleRange">
+            <summary>
+            A single range of dates can be selected. Use 
+            <see cref="P:VIBlend.Silverlight.Controls.Calendar.SelectedDates" />
+            property to retrieve the selected dates.
+            </summary>
+        </member>
+        <member name="F:VIBlend.Silverlight.Controls.CalendarSelectionMode.MultipleRange">
+            <summary>
+            Multiple non-contiguous ranges of dates can be selected. Use the
+            <see cref="P:VIBlend.Silverlight.Controls.Calendar.SelectedDates" />
+            property to retrieve the selected dates.
+            </summary>
+        </member>
+        <member name="F:VIBlend.Silverlight.Controls.CalendarSelectionMode.None">
+            <summary>
+            No selections are allowed.
+            </summary>
+        </member>
+        <member name="T:VIBlend.Silverlight.Controls.CalendarMode">
+            <summary>
+            Specifies values for the different modes of operation of a
+            <see cref="T:VIBlend.Silverlight.Controls.Calendar" />.
+            </summary>
+            <QualityBand>Mature</QualityBand>
+        </member>
+        <member name="F:VIBlend.Silverlight.Controls.CalendarMode.Month">
+            <summary>
+            The <see cref="T:VIBlend.Silverlight.Controls.Calendar" /> displays a
+            month at a time.
+            </summary>
+        </member>
+        <member name="F:VIBlend.Silverlight.Controls.CalendarMode.Year">
+            <summary>
+            The <see cref="T:VIBlend.Silverlight.Controls.Calendar" /> displays a
+            year at a time.
+            </summary>
+        </member>
+        <member name="F:VIBlend.Silverlight.Controls.CalendarMode.Decade">
+            <summary>
+            The <see cref="T:VIBlend.Silverlight.Controls.Calendar" /> displays a
+            decade at a time.
+            </summary>
+        </member>
+        <member name="T:VIBlend.Silverlight.Controls.CalendarDateChangedEventArgs">
+            <exclude/>   
+            <summary>
+            Provides data for the
+            <see cref="E:VIBlend.Silverlight.Controls.Calendar.DisplayDateChanged" />
+            event.
+            </summary>
+            <QualityBand>Mature</QualityBand>
+        </member>
+        <member name="M:VIBlend.Silverlight.Controls.CalendarDateChangedEventArgs.#ctor(System.Nullable{System.DateTime},System.Nullable{System.DateTime})">
+            <summary>
+            Initializes a new instance of the CalendarDateChangedEventArgs
+            class.
+            </summary>
+            <param name="removedDate">
+            The date that was previously displayed.
+            </param>
+            <param name="addedDate">The date to be newly displayed.</param>
+        </member>
+        <member name="P:VIBlend.Silverlight.Controls.CalendarDateChangedEventArgs.RemovedDate">
+            <summary>
+            Gets the date that was previously displayed.
+            </summary>
+            <value>
+            The date previously displayed.
+            </value>
+        </member>
+        <member name="P:VIBlend.Silverlight.Controls.CalendarDateChangedEventArgs.AddedDate">
+            <summary>
+            Gets the date to be newly displayed.
+            </summary>
+            <value>The new date to display.</value>
+        </member>
+        <member name="T:System.Windows.Automation.Peers.CalendarButtonAutomationPeer">
+            <exclude/>   
+            <summary>
+            Exposes
+            <see cref="T:VIBlend.Silverlight.Controls.Primitives.CalendarButton" /> types
+            to UI automation.
+            </summary>
+            <QualityBand>Mature</QualityBand>
+        </member>
+        <member name="M:System.Windows.Automation.Peers.CalendarButtonAutomationPeer.#ctor(VIBlend.Silverlight.Controls.CalendarButton)">
+            <summary>
+            Initializes a new instance of the
+            <see cref="T:System.Windows.Automation.Peers.CalendarButtonAutomationPeer" />
+            class.
+            </summary>
+            <param name="owner">
+            The
+            <see cref="T:VIBlend.Silverlight.Controls.Primitives.CalendarButton" />
+            to associate with this
+            <see cref="T:System.Windows.Automation.Peers.AutomationPeer" />.
+            </param>
+        </member>
+        <member name="M:System.Windows.Automation.Peers.CalendarButtonAutomationPeer.GetPattern(System.Windows.Automation.Peers.PatternInterface)">
+            <summary>
+            Gets the control pattern for this
+            <see cref="T:System.Windows.Automation.Peers.CalendarButtonAutomationPeer" />.
+            </summary>
+            <param name="patternInterface">
+            One of the enumeration values.
+            </param>
+            <returns>
+            The object that implements the pattern interface, or null if the
+            specified pattern interface is not implemented by this peer.
+            </returns>
+        </member>
+        <member name="M:System.Windows.Automation.Peers.CalendarButtonAutomationPeer.GetAutomationControlTypeCore">
+            <summary>
+            Returns the control type for the CalendarButton that is associated
+            with this CalendarButtonAutomationPeer.  This method is called by
+            GetAutomationControlType.
+            </summary>
+            <returns>A value of the AutomationControlType enumeration.</returns>
+        </member>
+        <member name="M:System.Windows.Automation.Peers.CalendarButtonAutomationPeer.GetLocalizedControlTypeCore">
+            <summary>
+            Returns the localized version of the control type for the owner type
+            that is associated with this CalendarButtonAutomationPeer.
+            </summary>
+            <returns>The string that contains the type of control.</returns>
+        </member>
+        <member name="M:System.Windows.Automation.Peers.CalendarButtonAutomationPeer.GetHelpTextCore">
+            <summary>
+            Returns the string that describes the functionality of the
+            CalendarButton that is associated with this
+            CalendarButtonAutomationPeer.  This method is called by GetHelpText.
+            </summary>
+            <returns>
+            The help text, or String.Empty if there is no help text.
+            </returns>
+        </member>
+        <member name="M:System.Windows.Automation.Peers.CalendarButtonAutomationPeer.GetClassNameCore">
+            <summary>
+            Returns the name of the CalendarButton that is associated with this
+            CalendarButtonAutomationPeer.  This method is called by
+            GetClassName.
+            </summary>
+            <returns>
+            The name of the owner type that is associated with this
+            CalendarButtonAutomationPeer.
+            </returns>
+        </member>
+        <member name="M:System.Windows.Automation.Peers.CalendarButtonAutomationPeer.GetNameCore">
+            <summary>
+            Returns the text label of the CalendarButton that is associated with
+            this CalendarButtonAutomationPeer. This method is called by GetName.
+            </summary>
+            <returns>
+            The text label of the element that is associated with this
+            automation peer.
+            </returns>
+            <remarks>
+            The name property can be thought of as the string of text that a
+            user would use to explain which control is being referred to.  It is
+            important to have a textual representation for all controls in the
+            graphical user interface (GUI) so that you can programmatically
+            refer to the control in a localized manner.  The value is settable
+            on control instances through the AutomationProperties.Name attached
+            property.
+            </remarks>
+        </member>
+        <member name="M:System.Windows.Automation.Peers.CalendarButtonAutomationPeer.System#Windows#Automation#Provider#IInvokeProvider#Invoke">
+            <summary>
+            Sends a request to activate the control and initiate its single,
+            unambiguous action.
+            </summary>
+        </member>
+        <member name="M:System.Windows.Automation.Peers.CalendarButtonAutomationPeer.System#Windows#Automation#Provider#ISelectionItemProvider#AddToSelection">
+            <summary>
+            Adds the current element to the collection of selected items.
+            </summary>
+        </member>
+        <member name="M:System.Windows.Automation.Peers.CalendarButtonAutomationPeer.System#Windows#Automation#Provider#ISelectionItemProvider#RemoveFromSelection">
+            <summary>
+            Removes the current element from the collection of selected items.
+            </summary>
+        </member>
+        <member name="M:System.Windows.Automation.Peers.CalendarButtonAutomationPeer.System#Windows#Automation#Provider#ISelectionItemProvider#Select">
+            <summary>
+            Clears any existing selection and then selects the current element.
+            </summary>
+        </member>
+        <member name="P:System.Windows.Automation.Peers.CalendarButtonAutomationPeer.OwningCalendarButton">
+            <summary>
+            Gets the CalendarButton to associate with this AutomationPeer.
+            </summary>
+        </member>
+        <member name="P:System.Windows.Automation.Peers.CalendarButtonAutomationPeer.OwningCalendar">
+            <summary>
+            Gets the Calendar associated with the button.
+            </summary>
+        </member>
+        <member name="P:System.Windows.Automation.Peers.CalendarButtonAutomationPeer.OwningCalendarAutomationPeer">
+            <summary>
+            Gets the automation peer for the Calendar associated with the
+            button.
+            </summary>
+        </member>
+        <member name="P:System.Windows.Automation.Peers.CalendarButtonAutomationPeer.System#Windows#Automation#Provider#IGridItemProvider#Column">
+            <summary>
+            Gets the ordinal number of the column that contains the cell or
+            item.
+            </summary>
+            <value>
+            A zero-based ordinal number that identifies the column that contains
+            the cell or item.
+            </value>
+        </member>
+        <member name="P:System.Windows.Automation.Peers.CalendarButtonAutomationPeer.System#Windows#Automation#Provider#IGridItemProvider#ColumnSpan">
+            <summary>
+            Gets the number of columns that are spanned by a cell or item.
+            </summary>
+            <value>
+            The number of columns spanned.
+            </value>
+        </member>
+        <member name="P:System.Windows.Automation.Peers.CalendarButtonAutomationPeer.System#Windows#Automation#Provider#IGridItemProvider#ContainingGrid">
+            <summary>
+            Gets a UI Automation provider that implements
+            <see cref="T:System.Windows.Automation.Provider.IGridProvider" />
+            and that represents the container of the cell or item.
+            </summary>
+        </member>
+        <member name="P:System.Windows.Automation.Peers.CalendarButtonAutomationPeer.System#Windows#Automation#Provider#IGridItemProvider#Row">
+            <summary>
+            Gets the ordinal number of the row that contains the cell or item.
+            </summary>
+            <value>
+            A zero-based ordinal number that identifies the row that contains
+            the cell or item.
+            </value>
+        </member>
+        <member name="P:System.Windows.Automation.Peers.CalendarButtonAutomationPeer.System#Windows#Automation#Provider#IGridItemProvider#RowSpan">
+            <summary>
+            Gets the number of rows that are spanned by a cell or item.
+            </summary>
+            <value>
+            The number of rows that are spanned.
+            </value>
+        </member>
+        <member name="P:System.Windows.Automation.Peers.CalendarButtonAutomationPeer.System#Windows#Automation#Provider#ISelectionItemProvider#IsSelected">
+            <summary>
+            Gets a value indicating whether an item is selected.
+            </summary>
+            <value>
+            True if the element is selected; otherwise, false.
+            </value>
+        </member>
+        <member name="P:System.Windows.Automation.Peers.CalendarButtonAutomationPeer.System#Windows#Automation#Provider#ISelectionItemProvider#SelectionContainer">
+            <summary>
+            Gets the UI Automation provider that implements
+            <see cref="T:System.Windows.Automation.Provider.ISelectionProvider" />
+            and that acts as the container for the calling object.
+            </summary>
+            <value>
+            The provider that supports
+            <see cref="T:System.Windows.Automation.Provider.ISelectionProvider" />.
+            </value>
+        </member>
+        <member name="M:VIBlend.Silverlight.Controls.DateTimeHelper.AddDays(System.DateTime,System.Int32)">
+            <summary>
+            Adds the days.
+            </summary>
+            <param name="time">The time.</param>
+            <param name="days">The days.</param>
+            <returns></returns>
+        </member>
+        <member name="M:VIBlend.Silverlight.Controls.DateTimeHelper.AddMonths(System.DateTime,System.Int32)">
+            <summary>
+            Adds the months.
+            </summary>
+            <param name="time">The time.</param>
+            <param name="months">The months.</param>
+            <returns></returns>
+        </member>
+        <member name="M:VIBlend.Silverlight.Controls.DateTimeHelper.AddYears(System.DateTime,System.Int32)">
+            <summary>
+            Adds the years.
+            </summary>
+            <param name="time">The time.</param>
+            <param name="years">The years.</param>
+            <returns></returns>
+        </member>
+        <member name="M:VIBlend.Silverlight.Controls.DateTimeHelper.CompareDays(System.DateTime,System.DateTime)">
+            <summary>
+            Compares the days.
+            </summary>
+            <param name="dt1">The DT1.</param>
+            <param name="dt2">The DT2.</param>
+            <returns></returns>
+        </member>
+        <member name="M:VIBlend.Silverlight.Controls.DateTimeHelper.CompareYearMonth(System.DateTime,System.DateTime)">
+            <summary>
+            Compares the year month.
+            </summary>
+            <param name="dt1">The DT1.</param>
+            <param name="dt2">The DT2.</param>
+            <returns></returns>
+        </member>
+        <member name="M:VIBlend.Silverlight.Controls.DateTimeHelper.DecadeOfDate(System.DateTime)">
+            <summary>
+            Decades the of date.
+            </summary>
+            <param name="date">The date.</param>
+            <returns></returns>
+        </member>
+        <member name="M:VIBlend.Silverlight.Controls.DateTimeHelper.DiscardDayTime(System.DateTime)">
+            <summary>
+            Discards the day time.
+            </summary>
+            <param name="d">The d.</param>
+            <returns></returns>
+        </member>
+        <member name="M:VIBlend.Silverlight.Controls.DateTimeHelper.DiscardTime(System.Nullable{System.DateTime})">
+            <summary>
+            Discards the time.
+            </summary>
+            <param name="d">The d.</param>
+            <returns></returns>
+        </member>
+        <member name="M:VIBlend.Silverlight.Controls.DateTimeHelper.EndOfDecade(System.DateTime)">
+            <summary>
+            Ends the of decade.
+            </summary>
+            <param name="date">The date.</param>
+            <returns></returns>
+        </member>
+        <member name="M:VIBlend.Silverlight.Controls.DateTimeHelper.GetCurrentDateFormat">
+            <summary>
+            Gets the current date format.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:VIBlend.Silverlight.Controls.DateTimeHelper.InRange(System.DateTime,VIBlend.Silverlight.Controls.CalendarDateRange)">
+            <summary>
+            Ins the range.
+            </summary>
+            <param name="date">The date.</param>
+            <param name="range">The range.</param>
+            <returns></returns>
+        </member>
+        <member name="T:VIBlend.Silverlight.Controls.CalendarModeChangedEventArgs">
+            <summary>
+            Provides data for the
+            <see cref="E:VIBlend.Silverlight.Controls.Calendar.DisplayModeChanged" />
+            event.
+            </summary>
+            <QualityBand>Mature</QualityBand>
+        </member>
+        <member name="M:VIBlend.Silverlight.Controls.CalendarModeChangedEventArgs.#ctor(VIBlend.Silverlight.Controls.CalendarMode,VIBlend.Silverlight.Controls.CalendarMode)">
+            <summary>
+            Initializes a new instance of the
+            <see cref="T:VIBlend.Silverlight.Controls.CalendarModeChangedEventArgs" />
+            class.
+            </summary>
+            <param name="oldMode">The previous mode.</param>
+            <param name="newMode">The new mode.</param>
+        </member>
+        <member name="P:VIBlend.Silverlight.Controls.CalendarModeChangedEventArgs.OldMode">
+            <summary>
+            Gets the previous mode of the
+            <see cref="T:VIBlend.Silverlight.Controls.Calendar" />.
+            </summary>
+            <value>
+            A <see cref="T:VIBlend.Silverlight.Controls.CalendarMode" /> representing
+            the previous mode.
+            </value>
+        </member>
+        <member name="P:VIBlend.Silverlight.Controls.CalendarModeChangedEventArgs.NewMode">
+            <summary>
+            Gets the new mode of the
+            <see cref="T:VIBlend.Silverlight.Controls.Calendar" />.
+            </summary>
+            <value>
+            A <see cref="T:VIBlend.Silverlight.Controls.CalendarMode" /> 
+            the new mode.
+            </value>
+        </member>
+        <member name="T:VIBlend.Silverlight.Controls.CalendarItem">
+            <summary>
+            Represents the currently displayed month or year on a
+            <see cref="T:VIBlend.Silverlight.Controls.Calendar" />.
+            </summary>
+            <QualityBand>Mature</QualityBand>
+        </member>
+        <member name="F:VIBlend.Silverlight.Controls.CalendarItem.NumberOfDaysPerWeek">
+            <summary>
+            The number of days per week.
+            </summary>
+        </member>
+        <member name="F:VIBlend.Silverlight.Controls.CalendarItem.ElementRoot">
+            <summary>
+            The name of the Root template part.
+            </summary>
+            <remarks>
+            TODO: It appears this template part is no longer used.  Verify with
+            compat whether we can remove the attribute.
+            </remarks>
+        </member>
+        <member name="F:VIBlend.Silverlight.Controls.CalendarItem.ElementHeaderButton">
+            <summary>
+            The name of the HeaderButton template part.
+            </summary>
+        </member>
+        <member name="F:VIBlend.Silverlight.Controls.CalendarItem.ElementPreviousButton">
+            <summary>
+            The name of the PreviousButton template part.
+            </summary>
+        </member>
+        <member name="F:VIBlend.Silverlight.Controls.CalendarItem.ElementNextButton">
+            <summary>
+            The name of the NextButton template part.
+            </summary>
+        </member>
+        <member name="F:VIBlend.Silverlight.Controls.CalendarItem.ElementDayTitleTemplate">
+            <summary>
+            The name of the DayTitleTemplate template part.
+            </summary>
+        </member>
+        <member name="F:VIBlend.Silverlight.Controls.CalendarItem.ElementMonthView">
+            <summary>
+            The name of the MonthView template part.
+            </summary>
+        </member>
+        <member name="F:VIBlend.Silverlight.Controls.CalendarItem.ElementYearView">
+            <summary>
+            The name of the YearView template part.
+            </summary>
+        </member>
+        <member name="F:VIBlend.Silverlight.Controls.CalendarItem.ElementDisabledVisual">
+            <summary>
+            The name of the DisabledVisual template part.
+            </summary>
+        </member>
+        <member name="F:VIBlend.Silverlight.Controls.CalendarItem._headerButton">
+            <summary>
+            The button that allows switching between month mode, year mode, and
+            decade mode. 
+            </summary>
+        </member>
+        <member name="F:VIBlend.Silverlight.Controls.CalendarItem._nextButton">
+            <summary>
+            The button that displays the next page of the calendar when it is
+            clicked.
+            </summary>
+        </member>
+        <member name="F:VIBlend.Silverlight.Controls.CalendarItem._previousButton">
+            <summary>
+            The button that displays the previous page of the calendar when it
+            is clicked.
+            </summary>
+        </member>
+        <member name="F:VIBlend.Silverlight.Controls.CalendarItem._dayTitleTemplate">
+            <summary>
+            Inherited code: Requires comment.
+            </summary>
+        </member>
+        <member name="F:VIBlend.Silverlight.Controls.CalendarItem._monthView">
+            <summary>
+            Hosts the content when in month mode.
+            </summary>
+        </member>
+        <member name="F:VIBlend.Silverlight.Controls.CalendarItem._yearView">
+            <summary>
+            Hosts the content when in year or decade mode.
+            </summary>
+        </member>
+        <member name="F:VIBlend.Silverlight.Controls.CalendarItem._disabledVisual">
+            <summary>
+            The overlay for the disabled state.
+            </summary>
+            <remarks>
+            The disabled visual isn't necessary given that we also have a
+            Disabled visual state.  It's only being left in for compatability
+            with existing templates.
+            </remarks>
+        </member>
+        <member name="F:VIBlend.Silverlight.Controls.CalendarItem._lastCalendarButton">
+            <summary>
+            Inherited code: Requires comment.
+            </summary>
+        </member>
+        <member name="F:VIBlend.Silverlight.Controls.CalendarItem._lastCalendarDayButton">
+            <summary>
+            Inherited code: Requires comment.
+            </summary>
+        </member>
+        <member name="F:VIBlend.Silverlight.Controls.CalendarItem._downEventArg">
+            <summary>
+            Inherited code: Requires comment.
+            </summary>
+        </member>
+        <member name="F:VIBlend.Silverlight.Controls.CalendarItem._downEventArgYearView">
+            <summary>
+            Inherited code: Requires comment.
+            </summary>
+        </member>
+        <member name="F:VIBlend.Silverlight.Controls.CalendarItem._isMouseLeftButtonDown">
+            <summary>
+            Inherited code: Requires comment.
+            </summary>
+        </member>
+        <member name="F:VIBlend.Silverlight.Controls.CalendarItem._isMouseLeftButtonDownYearView">
+            <summary>
+            Inherited code: Requires comment.
+            </summary>
+        </member>
+        <member name="F:VIBlend.Silverlight.Controls.CalendarItem._isTopLeftMostMonth">
+            <summary>
+            Inherited code: Requires comment.
+            </summary>
+        </member>
+        <member name="F:VIBlend.Silverlight.Controls.CalendarItem._isTopRightMostMonth">
+            <summary>
+            Inherited code: Requires comment.
+            </summary>
+        </member>
+        <member name="F:VIBlend.Silverlight.Controls.CalendarItem._currentMonth">
+            <summary>
+            Inherited code: Requires comment.
+            </summary>
+        </member>
+        <member name="F:VIBlend.Silverlight.Controls.CalendarItem._calendar">
+            <summary>
+            Inherited code: Requires comment.
+            </summary>
+        </member>
+        <member name="M:VIBlend.Silverlight.Controls.CalendarItem.#ctor">
+            <summary>
+            Initializes a new instance of the
+            <see cref="T:VIBlend.Silverlight.Controls.Primitives.CalendarItem" />
+            class.
+            </summary>
+        </member>
+        <member name="M:VIBlend.Silverlight.Controls.CalendarItem.OnApplyTemplate">
+            <summary>
+            Builds the visual tree for the
+            <see cref="T:VIBlend.Silverlight.Controls.Primitives.CalendarItem" />
+            when a new template is applied.
+            </summary>
+        </member>
+        <member name="M:VIBlend.Silverlight.Controls.CalendarItem.PopulateGrids">
+            <summary>
+            Inherited code: Requires comment.
+            </summary>
+        </member>
+        <member name="M:VIBlend.Silverlight.Controls.CalendarItem.UpdateDisabledGrid(System.Boolean)">
+            <summary>
+            Inherited code: Requires comment.
+            </summary>
+            <param name="isEnabled">Inherited code: Requires comment 1.</param>
+        </member>
+        <member name="M:VIBlend.Silverlight.Controls.CalendarItem.UpdateMonthMode">
+            <summary>
+            Inherited code: Requires comment.
+            </summary>
+        </member>
+        <member name="M:VIBlend.Silverlight.Controls.CalendarItem.SetDayTitles">
+            <summary>
+            Inherited code: Requires comment.
+            </summary>
+        </member>
+        <member name="M:VIBlend.Silverlight.Controls.CalendarItem.PreviousMonthDays(System.DateTime)">
+            <summary>
+            How many days of the previous month need to be displayed.
+            </summary>
+            <param name="firstOfMonth">Inherited code: Requires comment.</param>
+            <returns>Inherited code: Requires comment 1.</returns>
+        </member>
+        <member name="M:VIBlend.Silverlight.Controls.CalendarItem.SetButtonState(VIBlend.Silverlight.Controls.CalendarDayButton,System.DateTime)">
+            <summary>
+            Inherited code: Requires comment.
+            </summary>
+            <param name="childButton">Inherited code: Requires comment 1.</param>
+            <param name="dateToAdd">Inherited code: Requires comment 2.</param>
+        </member>
+        <member name="M:VIBlend.Silverlight.Controls.CalendarItem.SetCalendarDayButtons(System.DateTime)">
+            <summary>
+            Inherited code: Requires comment.
+            </summary>
+            <param name="firstDayOfMonth">Inherited code: Requires comment 1.</param>
+        </member>
+        <member name="M:VIBlend.Silverlight.Controls.CalendarItem.SetMonthButtonsForYearMode">
+            <summary>
+            Inherited code: Requires comment.
+            </summary>
+        </member>
+        <member name="M:VIBlend.Silverlight.Controls.CalendarItem.SetMonthModeHeaderButton">
+            <summary>
+            Inherited code: Requires comment.
+            </summary>
+        </member>
+        <member name="M:VIBlend.Silverlight.Controls.CalendarItem.SetMonthModeNextButton(System.DateTime)">
+            <summary>
+            Inherited code: Requires comment.
+            </summary>
+            <param name="firstDayOfMonth">Inherited code: Requires comment 1.</param>
+        </member>
+        <member name="M:VIBlend.Silverlight.Controls.CalendarItem.SetMonthModePreviousButton(System.DateTime)">
+            <summary>
+            Inherited code: Requires comment.
+            </summary>
+            <param name="firstDayOfMonth">Inherited code: Requires comment 1.</param>
+        </member>
+        <member name="M:VIBlend.Silverlight.Controls.CalendarItem.UpdateYearMode">
+            <summary>
+            Inherited code: Requires comment.
+            </summary>
+        </member>
+        <member name="M:VIBlend.Silverlight.Controls.CalendarItem.SetYearButtons(System.Int32,System.Int32)">
+            <summary>
+            Inherited code: Requires comment.
+            </summary>
+            <param name="decade">Inherited code: Requires comment 1.</param>
+            <param name="decadeEnd">Inherited code: Requires comment 2.</param>
+        </member>
+        <member name="M:VIBlend.Silverlight.Controls.CalendarItem.SetYearModeHeaderButton">
+            <summary>
+            Inherited code: Requires comment.
+            </summary>
+        </member>
+        <member name="M:VIBlend.Silverlight.Controls.CalendarItem.SetYearModePreviousButton">
+            <summary>
+            Inherited code: Requires comment.
+            </summary>
+        </member>
+        <member name="M:VIBlend.Silverlight.Controls.CalendarItem.SetYearModeNextButton">
+            <summary>
+            Inherited code: Requires comment.
+            </summary>
+        </member>
+        <member name="M:VIBlend.Silverlight.Controls.CalendarItem.UpdateYearViewSelection(VIBlend.Silverlight.Controls.CalendarButton)">
+            <summary>
+            Inherited code: Requires comment.
+            </summary>
+            <param name="calendarButton">Inherited code: Requires comment 1.</param>
+        </member>
+        <member name="M:VIBlend.Silverlight.Controls.CalendarItem.UpdateDecadeMode">
+            <summary>
+            Inherited code: Requires comment.
+            </summary>
+        </member>
+        <member name="M:VIBlend.Silverlight.Controls.CalendarItem.SetDecadeModeHeaderButton(System.Int32,System.Int32)">
+            <summary>
+            Inherited code: Requires comment.
+            </summary>
+            <param name="decade">Inherited code: Requires comment 1.</param>
+            <param name="decadeEnd">Inherited code: Requires comment 2.</param>
+        </member>
+        <member name="M:VIBlend.Silverlight.Controls.CalendarItem.SetDecadeModeNextButton(System.Int32)">
+            <summary>
+            Inherited code: Requires comment.
+            </summary>
+            <param name="decadeEnd">Inherited code: Requires comment 1.</param>
+        </member>
+        <member name="M:VIBlend.Silverlight.Controls.CalendarItem.SetDecadeModePreviousButton(System.Int32)">
+            <summary>
+            Inherited code: Requires comment.
+            </summary>
+            <param name="decade">Inherited code: Requires comment 1.</param>
+        </member>
+        <member name="M:VIBlend.Silverlight.Controls.CalendarItem.Cell_MouseEnter(System.Object,System.Windows.Input.MouseEventArgs)">
+            <summary>
+            Inherited code: Requires comment.
+            </summary>
+            <param name="sender">Inherited code: Requires comment 1.</param>
+            <param name="e">Inherited code: Requires comment 2.</param>
+        </member>
+        <member name="M:VIBlend.Silverlight.Controls.CalendarItem.Cell_MouseLeave(System.Object,System.Windows.Input.MouseEventArgs)">
+            <summary>
+            Inherited code: Requires comment.
+            </summary>
+            <param name="sender">Inherited code: Requires comment 1.</param>
+            <param name="e">Inherited code: Requires comment 2.</param>
+        </member>
+        <member name="M:VIBlend.Silverlight.Controls.CalendarItem.Cell_MouseLeftButtonDown(System.Object,System.Windows.Input.MouseButtonEventArgs)">
+            <summary>
+            Inherited code: Requires comment.
+            </summary>
+            <param name="sender">Inherited code: Requires comment 1.</param>
+            <param name="e">Inherited code: Requires comment 2.</param>
+        </member>
+        <member name="M:VIBlend.Silverlight.Controls.CalendarItem.AddSelection(VIBlend.Silverlight.Controls.CalendarDayButton)">
+            <summary>
+            Inherited code: Requires comment.
+            </summary>
+            <param name="b">Inherited code: Requires comment 1.</param>
+        </member>
+        <member name="M:VIBlend.Silverlight.Controls.CalendarItem.Cell_MouseLeftButtonUp(System.Object,System.Windows.Input.MouseButtonEventArgs)">
+            <summary>
+            Inherited code: Requires comment.
+            </summary>
+            <param name="sender">Inherited code: Requires comment 1.</param>
+            <param name="e">Inherited code: Requires comment 2.</param>
+        </member>
+        <member name="M:VIBlend.Silverlight.Controls.CalendarItem.Cell_Click(System.Object,System.Windows.RoutedEventArgs)">
+            <summary>
+            Inherited code: Requires comment.
+            </summary>
+            <param name="sender">Inherited code: Requires comment 1.</param>
+            <param name="e">Inherited code: Requires comment 2.</param>
+        </member>
+        <member name="M:VIBlend.Silverlight.Controls.CalendarItem.HeaderButton_Click(System.Object,System.Windows.RoutedEventArgs)">
+            <summary>
+            Inherited code: Requires comment.
+            </summary>
+            <param name="sender">Inherited code: Requires comment 1.</param>
+            <param name="e">Inherited code: Requires comment 2.</param>
+        </member>
+        <member name="M:VIBlend.Silverlight.Controls.CalendarItem.PreviousButton_Click(System.Object,System.Windows.RoutedEventArgs)">
+            <summary>
+            Inherited code: Requires comment.
+            </summary>
+            <param name="sender">Inherited code: Requires comment 1.</param>
+            <param name="e">Inherited code: Requires comment 2.</param>
+        </member>
+        <member name="M:VIBlend.Silverlight.Controls.CalendarItem.NextButton_Click(System.Object,System.Windows.RoutedEventArgs)">
+            <summary>
+            Inherited code: Requires comment.
+            </summary>
+            <param name="sender">Inherited code: Requires comment 1.</param>
+            <param name="e">Inherited code: Requires comment 2.</param>
+        </member>
+        <member name="M:VIBlend.Silverlight.Controls.CalendarItem.Month_CalendarButtonMouseDown(System.Object,System.Windows.Input.MouseButtonEventArgs)">
+            <summary>
+            Inherited code: Requires comment.
+            </summary>
+            <param name="sender">Inherited code: Requires comment 1.</param>
+            <param name="e">Inherited code: Requires comment 2.</param>
+        </member>
+        <member name="M:VIBlend.Silverlight.Controls.CalendarItem.Month_CalendarButtonMouseUp(System.Object,System.Windows.Input.MouseButtonEventArgs)">
+            <summary>
+            Inherited code: Requires comment.
+            </summary>
+            <param name="sender">Inherited code: Requires comment 1.</param>
+            <param name="e">Inherited code: Requires comment 2.</param>
+        </member>
+        <member name="M:VIBlend.Silverlight.Controls.CalendarItem.Month_MouseEnter(System.Object,System.Windows.Input.MouseEventArgs)">
+            <summary>
+            Inherited code: Requires comment.
+            </summary>
+            <param name="sender">Inherited code: Requires comment 1.</param>
+            <param name="e">Inherited code: Requires comment 2.</param>
+        </member>
+        <member name="M:VIBlend.Silverlight.Controls.CalendarItem.Month_MouseLeave(System.Object,System.Windows.Input.MouseEventArgs)">
+            <summary>
+            Inherited code: Requires comment.
+            </summary>
+            <param name="sender">Inherited code: Requires comment 1.</param>
+            <param name="e">Inherited code: Requires comment 2.</param>
+        </member>
+        <member name="M:VIBlend.Silverlight.Controls.CalendarItem.MonthView_MouseLeave(System.Object,System.Windows.Input.MouseEventArgs)">
+            <summary>
+            Inherited code: Requires comment.
+            </summary>
+            <param name="sender">Inherited code: Requires comment 1.</param>
+            <param name="e">Inherited code: Requires comment 2.</param>
+        </member>
+        <member name="M:VIBlend.Silverlight.Controls.CalendarItem.YearView_MouseLeave(System.Object,System.Windows.Input.MouseEventArgs)">
+            <summary>
+            Inherited code: Requires comment.
+            </summary>
+            <param name="sender">Inherited code: Requires comment 1.</param>
+            <param name="e">Inherited code: Requires comment 2.</param>
+        </member>
+        <member name="P:VIBlend.Silverlight.Controls.CalendarItem.HeaderButton">
+            <summary>
+            Gets the button that allows switching between month mode, year mode,
+            and decade mode. 
+            </summary>
+        </member>
+        <member name="P:VIBlend.Silverlight.Controls.CalendarItem.NextButton">
+            <summary>
+            Gets the button that displays the next page of the calendar when it
+            is clicked.
+            </summary>
+        </member>
+        <member name="P:VIBlend.Silverlight.Controls.CalendarItem.PreviousButton">
+            <summary>
+            Gets the button that displays the previous page of the calendar when
+            it is clicked.
+            </summary>
+        </member>
+        <member name="P:VIBlend.Silverlight.Controls.CalendarItem.MonthView">
+            <summary>
+            Gets the Grid that hosts the content when in month mode.
+            </summary>
+        </member>
+        <member name="P:VIBlend.Silverlight.Controls.CalendarItem.YearView">
+            <summary>
+            Gets the Grid that hosts the content when in year or decade mode.
+            </summary>
+        </member>
+        <member name="P:VIBlend.Silverlight.Controls.CalendarItem.Owner">
+            <summary>
+            Gets or sets Inherited code: Requires comment.
+            </summary>
+        </member>
+        <member name="P:VIBlend.Silverlight.Controls.CalendarItem.CurrentButton">
+            <summary>
+            Gets or sets Inherited code: Requires comment.
+            </summary>
+        </member>
+        <member name="T:VIBlend.Silverlight.Controls.CalendarDayButton">
+            <exclude/>   
+            <summary>
+            Represents a day on a <see cref="T:VIBlend.Silverlight.Controls.Calendar" />.
+            </summary>
+            <QualityBand>Mature</QualityBand>
+        </member>
+        <member name="F:VIBlend.Silverlight.Controls.CalendarDayButton.StateToday">
+            <summary>
+            Identifies the Today state.
+            </summary>
+        </member>
+        <member name="F:VIBlend.Silverlight.Controls.CalendarDayButton.StateRegularDay">
+            <summary>
+            Identifies the RegularDay state.
+            </summary>
+        </member>
+        <member name="F:VIBlend.Silverlight.Controls.CalendarDayButton.GroupDay">
+            <summary>
+            Name of the Day state group.
+            </summary>
+        </member>
+        <member name="F:VIBlend.Silverlight.Controls.CalendarDayButton.StateBlackoutDay">
+            <summary>
+            Identifies the BlackoutDay state.
+            </summary>
+        </member>
+        <member name="F:VIBlend.Silverlight.Controls.CalendarDayButton.StateNormalDay">
+            <summary>
+            Identifies the NormalDay state.
+            </summary>
+        </member>
+        <member name="F:VIBlend.Silverlight.Controls.CalendarDayButton.GroupBlackout">
+            <summary>
+            Name of the BlackoutDay state group.
+            </summary>
+        </member>
+        <member name="F:VIBlend.Silverlight.Controls.CalendarDayButton.DefaultContent">
+            <summary>
+            Default content for the CalendarDayButton.
+            </summary>
+        </member>
+        <member name="F:VIBlend.Silverlight.Controls.CalendarDayButton._ignoringMouseOverState">
+            <summary>
+            A value indicating whether the button should ignore the MouseOver
+            visual state.
+            </summary>
+        </member>
+        <member name="F:VIBlend.Silverlight.Controls.CalendarDayButton._isBlackout">
+            <summary>
+            A value indicating whether this is a blackout date.
+            </summary>
+        </member>
+        <member name="F:VIBlend.Silverlight.Controls.CalendarDayButton._isToday">
+            <summary>
+            A value indicating whether this button represents today.
+            </summary>
+        </member>
+        <member name="F:VIBlend.Silverlight.Controls.CalendarDayButton._isCurrent">
+            <summary>
+            A value indicating whether the button is the focused element on the
+            Calendar control.
+            </summary>
+        </member>
+        <member name="F:VIBlend.Silverlight.Controls.CalendarDayButton._isInactive">
+            <summary>
+            A value indicating whether the button is inactive.
+            </summary>
+        </member>
+        <member name="F:VIBlend.Silverlight.Controls.CalendarDayButton._isSelected">
+            <summary>
+            A value indicating whether the button is selected.
+            </summary>
+        </member>
+        <member name="M:VIBlend.Silverlight.Controls.CalendarDayButton.#ctor">
+            <summary>
+            Initializes a new instance of the
+            <see cref="T:VIBlend.Silverlight.Controls.Primitives.CalendarDayButton" />
+            class.
+            </summary>
+        </member>
+        <member name="M:VIBlend.Silverlight.Controls.CalendarDayButton.OnLoad(System.Object,System.Windows.RoutedEventArgs)">
+            <summary>
+            Handle the Loaded event.
+            </summary>
+            <param name="sender">The CalendarButton.</param>
+            <param name="e">Event arguments.</param>
+        </member>
+        <member name="M:VIBlend.Silverlight.Controls.CalendarDayButton.OnApplyTemplate">
+            <summary>
+            Builds the visual tree for the
+            <see cref="T:VIBlend.Silverlight.Controls.Primitives.CalendarDayButton" />
+            when a new template is applied.
+            </summary>
+        </member>
+        <member name="M:VIBlend.Silverlight.Controls.CalendarDayButton.OnCreateAutomationPeer">
+            <summary>
+            Returns a CalendarDayButtonAutomationPeer for use by the Silverlight
+            automation infrastructure.
+            </summary>
+            <returns>
+            CalendarDayButtonAutomationPeer for the Button object.
+            </returns>
+            <remarks>
+            <para>
+            This method creates a new CalendarDayButtonAutomationPeer instance
+            if one has not been created for the CalendarButton; otherwise, it
+            returns the CalendarDayButtonAutomationPeer previously created.
+            </para>
+            <para>
+            Classes that participate in the Silverlight automation
+            infrastructure must implement this method to return a class-specific
+            derived class of AutomationPeer that reports information for
+            automation behavior.
+            </para>
+            </remarks>
+        </member>
+        <member name="M:VIBlend.Silverlight.Controls.CalendarDayButton.OnMouseLeftButtonDown(System.Windows.Input.MouseButtonEventArgs)">
+            <summary>
+            Provides class handling for the MouseLeftButtonDown event that
+            occurs when the left mouse button is pressed while the mouse pointer
+            is over this control.
+            </summary>
+            <param name="e">The event data. </param>
+            <exception cref="T:System.ArgumentNullException">
+            e is a null reference (Nothing in Visual Basic).
+            </exception>
+            <remarks>
+            This method marks the MouseLeftButtonDown event as handled by
+            setting the MouseButtonEventArgs.Handled property of the event data
+            to true when the button is enabled and its ClickMode is not set to
+            Hover.  Since this method marks the MouseLeftButtonDown event as
+            handled in some situations, you should use the Click event instead
+            to detect a button click.
+            </remarks>
+        </member>
+        <member name="M:VIBlend.Silverlight.Controls.CalendarDayButton.OnMouseLeftButtonUp(System.Windows.Input.MouseButtonEventArgs)">
+            <summary>
+            Provides handling for the MouseLeftButtonUp event that occurs when
+            the left mouse button is released while the mouse pointer is over
+            this control. 
+            </summary>
+            <param name="e">The event data.</param>
+            <exception cref="T:System.ArgumentNullException">
+            e is a null reference (Nothing in Visual Basic).
+            </exception>
+            <remarks>
+            This method marks the MouseLeftButtonUp event as handled by setting
+            the MouseButtonEventArgs.Handled property of the event data to true
+            when the button is enabled and its ClickMode is not set to Hover.
+            Since this method marks the MouseLeftButtonUp event as handled in
+            some situations, you should use the Click event instead to detect a
+            button click.
+            </remarks>
+        </member>
+        <member name="M:VIBlend.Silverlight.Controls.CalendarDayButton.SendMouseLeftButtonUp(System.Windows.Input.MouseButtonEventArgs)">
+            <summary>
+            We need to simulate the MouseLeftButtonUp event for the
+            CalendarDayButton that stays in Pressed state after MouseCapture is
+            released since there is no actual MouseLeftButtonUp event for the
+            release.
+            </summary>
+            <param name="e">Event arguments.</param>
+        </member>
+        <member name="M:VIBlend.Silverlight.Controls.CalendarDayButton.IgnoreMouseOverState">
+            <summary>
+            Ensure the button is not in the MouseOver state.
+            </summary>
+            <remarks>
+            If a button is in the MouseOver state when a Popup is closed (as is
+            the case when you select a date in the DateTimePicker control), it will
+            continue to think it's in the mouse over state even when the Popup
+            opens again and it's not.  This method is used to forcibly clear the
+            state by changing the CommonStates state group.
+            </remarks>
+        </member>
+        <member name="M:VIBlend.Silverlight.Controls.CalendarDayButton.ChangeVisualState(System.Boolean)">
+            <summary>
+            Change to the correct visual state for the button.
+            </summary>
+            <param name="useTransitions">
+            True to use transitions when updating the visual state, false to
+            snap directly to the new visual state.
+            </param>
+        </member>
+        <member name="P:VIBlend.Silverlight.Controls.CalendarDayButton.Owner">
+            <summary>
+            Gets or sets the Calendar associated with this button.
+            </summary>
+        </member>
+        <member name="P:VIBlend.Silverlight.Controls.CalendarDayButton.Index">
+            <summary>
+            Gets or sets Inherited code: Requires comment.
+            </summary>
+        </member>
+        <member name="P:VIBlend.Silverlight.Controls.CalendarDayButton.IsBlackout">
+            <summary>
+            Gets or sets a value indicating whether this is a blackout date.
+            </summary>
+        </member>
+        <member name="P:VIBlend.Silverlight.Controls.CalendarDayButton.IsToday">
+            <summary>
+            Gets or sets a value indicating whether this button represents
+            today.
+            </summary>
+        </member>
+        <member name="P:VIBlend.Silverlight.Controls.CalendarDayButton.IsCurrent">
+            <summary>
+            Gets or sets a value indicating whether the button is the focused
+            element on the Calendar control.
+            </summary>
+        </member>
+        <member name="P:VIBlend.Silverlight.Controls.CalendarDayButton.IsInactive">
+            <summary>
+            Gets or sets a value indicating whether the button is inactive.
+            </summary>
+        </member>
+        <member name="P:VIBlend.Silverlight.Controls.CalendarDayButton.IsSelected">
+            <summary>
+            Gets or sets a value indicating whether the button is selected.
+            </summary>
+        </member>
+        <member name="E:VIBlend.Silverlight.Controls.CalendarDayButton.CalendarDayButtonMouseDown">
+            <summary>
+            Occurs when the left mouse button is pressed (or when the tip of the
+            stylus touches the tablet PC) while the mouse pointer is over a
+            UIElement.
+            </summary>
+        </member>
+        <member name="E:VIBlend.Silverlight.Controls.CalendarDayButton.CalendarDayButtonMouseUp">
+            <summary>
+            Occurs when the left mouse button is released (or the tip of the
+            stylus is removed from the tablet PC) while the mouse (or the
+            stylus) is over a UIElement (or while a UIElement holds mouse
+            capture).
+            </summary>
+        </member>
+        <member name="T:System.Windows.Automation.Peers.CalendarAutomationPeer">
+            <exclude/>   
+            <summary>
+            Exposes <see cref="T:VIBlend.Silverlight.Controls.Calendar" /> types to UI automation.
+            </summary>
+            <QualityBand>Mature</QualityBand>
+        </member>
+        <member name="M:System.Windows.Automation.Peers.CalendarAutomationPeer.#ctor(VIBlend.Silverlight.Controls.Calendar)">
+            <summary>
+            Initializes a new instance of the
+            <see cref="T:System.Windows.Automation.Peers.CalendarAutomationPeer" />
+            class.
+            </summary>
+            <param name="owner">
+            The <see cref="T:VIBlend.Silverlight.Controls.Calendar" /> instance to
+            associate with the
+            <see cref="T:System.Windows.Automation.Peers.CalendarAutomationPeer" />.
+            </param>
+        </member>
+        <member name="M:System.Windows.Automation.Peers.CalendarAutomationPeer.GetPattern(System.Windows.Automation.Peers.PatternInterface)">
+            <summary>
+            Gets the control pattern for this
+            <see cref="T:System.Windows.Automation.Peers.CalendarAutomationPeer" />.
+            </summary>
+            <param name="patternInterface">
+            One of the enumeration values.
+            </param>
+            <returns>
+            The object that implements the pattern interface, or null if the
+            specified pattern interface is not implemented by this peer.
+            </returns>
+        </member>
+        <member name="M:System.Windows.Automation.Peers.CalendarAutomationPeer.GetAutomationControlTypeCore">
+            <summary>
+            Returns the control type for the Calendar that is associated with
+            this CalendarAutomationPeer.  This method is called by
+            GetAutomationControlType.
+            </summary>
+            <returns>A value of the AutomationControlType enumeration.</returns>
+        </member>
+        <member name="M:System.Windows.Automation.Peers.CalendarAutomationPeer.GetClassNameCore">
+            <summary>
+            Returns the name of the UIElement that is associated with this
+            FrameworkElementAutomationPeer.  This method is called by
+            GetClassName.
+            </summary>
+            <returns>
+            The name of the owner type that is associated with this
+            CalendarAutomationPeer. 
+            </returns>
+        </member>
+        <member name="M:System.Windows.Automation.Peers.CalendarAutomationPeer.GetNameCore">
+            <summary>
+            Returns the text label of the Calendar that is associated with this
+            CalendarAutomationPeer.  This method is called by GetName.
+            </summary>
+            <returns>
+            The text label of the element that is associated with this
+            automation peer.
+            </returns>
+        </member>
+        <member name="M:System.Windows.Automation.Peers.CalendarAutomationPeer.System#Windows#Automation#Provider#IGridProvider#GetItem(System.Int32,System.Int32)">
+            <summary>
+            Retrieves the UI automation provider for the specified cell.
+            </summary>
+            <param name="row">
+            The ordinal number of the row.
+            </param>
+            <param name="column">
+            The ordinal number of the column.
+            </param>
+            <returns>
+            The UI automation provider for the specified cell.
+            </returns>
+            <remarks>
+            <para>
+            Grid coordinates are zero-based. The upper-left cell (or upper-right
+            cell, depending on locale) has coordinates (0,0).
+            </para>
+            <para>
+            If a cell is empty, a UI Automation provider must still be returned
+            in order to support the ContainingGrid property for that cell.  This
+            is possible when the layout of child elements in the grid is similar
+            to a ragged array.
+            </para>
+            <para>
+            Hidden rows and columns can be loaded in the tree, depending on the
+            provider implementation.  Therefore, they will be reflected in the
+            RowCount and ColumnCount properties.  If the hidden rows and columns
+            have not yet been loaded, they should not be counted.
+            </para>
+            </remarks>
+        </member>
+        <member name="M:System.Windows.Automation.Peers.CalendarAutomationPeer.System#Windows#Automation#Provider#IMultipleViewProvider#GetSupportedViews">
+            <summary>
+            Retrieves a collection of control-specific view identifiers.
+            </summary>
+            <returns>
+            A collection of values that identifies the views that are available
+            for a UI automation element.
+            </returns>
+            <remarks>
+            The collection of view identifiers must be identical across
+            instances.  View identifier values can be passed to GetViewName.
+            </remarks>
+        </member>
+        <member name="M:System.Windows.Automation.Peers.CalendarAutomationPeer.System#Windows#Automation#Provider#IMultipleViewProvider#GetViewName(System.Int32)">
+            <summary>
+            Retrieves the name of a control-specific view.
+            </summary>
+            <param name="viewId">The view identifier.</param>
+            <returns>A localized name for the view.</returns>
+            <remarks>
+            View identifiers can be retrieved by using GetSupportedViews.  The
+            collection of view identifiers must be identical across instances.
+            View names must be suitable for use in text-to-speech, Braille, and
+            other accessible applications.
+            </remarks>
+        </member>
+        <member name="M:System.Windows.Automation.Peers.CalendarAutomationPeer.System#Windows#Automation#Provider#IMultipleViewProvider#SetCurrentView(System.Int32)">
+            <summary>
+            Sets the current control-specific view.
+            </summary>
+            <param name="viewId">A view identifier.</param>
+            <remarks>
+            View identifiers can be retrieved by using GetSupportedViews.
+            </remarks>
+        </member>
+        <member name="M:System.Windows.Automation.Peers.CalendarAutomationPeer.System#Windows#Automation#Provider#ISelectionProvider#GetSelection">
+            <summary>
+            Retrieves a UI automation provider for each child element that is
+            selected.
+            </summary>
+            <returns>
+            A collection of UI automation providers.
+            </returns>
+        </member>
+        <member name="M:System.Windows.Automation.Peers.CalendarAutomationPeer.RaiseSelectionEvents(System.Windows.Controls.SelectionChangedEventArgs)">
+            <summary>
+            Raise selection AutomationEvents when the Calendar's SelectedDates
+            collection changes.
+            </summary>
+            <param name="e">Event arguments.</param>
+        </member>
+        <member name="M:System.Windows.Automation.Peers.CalendarAutomationPeer.RaiseDayButtonSelectionEvent(VIBlend.Silverlight.Controls.Calendar,System.DateTime,System.Windows.Automation.Peers.AutomationEvents)">
+            <summary>
+            Raise an automation peer event for the selection of a day button.
+            </summary>
+            <param name="calendar">
+            The Calendar associated with this automation peer.
+            </param>
+            <param name="date">The selected date.</param>
+            <param name="eventToRaise">The selection event to raise.</param>
+        </member>
+        <member name="M:System.Windows.Automation.Peers.CalendarAutomationPeer.System#Windows#Automation#Provider#ITableProvider#GetColumnHeaders">
+            <summary>
+            Gets a collection of UI automation providers that represents all the
+            column headers in a table.
+            </summary>
+            <returns>A collection of UI automation providers.</returns>
+        </member>
+        <member name="M:System.Windows.Automation.Peers.CalendarAutomationPeer.System#Windows#Automation#Provider#ITableProvider#GetRowHeaders">
+            <summary>
+            Retrieves a collection of UI automation providers that represents
+            all row headers in the table.
+            </summary>
+            <returns>A collection of UI automation providers.</returns>
+        </member>
+        <member name="P:System.Windows.Automation.Peers.CalendarAutomationPeer.OwningCalendar">
+            <summary>
+            Gets the Calendar associated with the CalendarAutomationPeer.
+            </summary>
+        </member>
+        <member name="P:System.Windows.Automation.Peers.CalendarAutomationPeer.OwningGrid">
+            <summary>
+            Gets the current top-level Grid of with the Calendar.
+            </summary>
+        </member>
+        <member name="P:System.Windows.Automation.Peers.CalendarAutomationPeer.System#Windows#Automation#Provider#IGridProvider#ColumnCount">
+            <summary>
+            Gets the total number of columns in a grid.
+            </summary>
+            <value>
+            The total number of columns in a grid.
+            </value>
+        </member>
+        <member name="P:System.Windows.Automation.Peers.CalendarAutomationPeer.System#Windows#Automation#Provider#IGridProvider#RowCount">
+            <summary>
+            Gets the total number of rows in a grid.
+            </summary>
+            <value>
+            The total number of rows in a grid.
+            </value>
+        </member>
+        <member name="P:System.Windows.Automation.Peers.CalendarAutomationPeer.System#Windows#Automation#Provider#IMultipleViewProvider#CurrentView">
+            <summary>
+            Gets the current control-specific view.
+            </summary>
+            <value>
+            The value for the current view of the UI automation element.
+            </value>
+        </member>
+        <member name="P:System.Windows.Automation.Peers.CalendarAutomationPeer.System#Windows#Automation#Provider#ISelectionProvider#CanSelectMultiple">
+            <summary>
+            Gets a value indicating whether the UI automation provider allows
+            more than one child element to be selected at the same time.
+            </summary>
+            <value>
+            True if multiple selection is allowed; otherwise, false.
+            </value>
+        </member>
+        <member name="P:System.Windows.Automation.Peers.CalendarAutomationPeer.System#Windows#Automation#Provider#ISelectionProvider#IsSelectionRequired">
+            <summary>
+            Gets a value indicating whether the UI automation provider
+            requires at least one child element to be selected.
+            </summary>
+            <value>
+            True if selection is required; otherwise, false.
+            </value>
+        </member>
+        <member name="P:System.Windows.Automation.Peers.CalendarAutomationPeer.System#Windows#Automation#Provider#ITableProvider#RowOrColumnMajor">
+            <summary>
+            Gets the primary direction of traversal for the table.
+            </summary>
+            <value>
+            The primary direction of traversal.
+            </value>
+        </member>
+        <member name="T:VIBlend.Silverlight.Controls.DateTimePicker">
+            <summary>
+            Represents a control that allows the user to select a date.
+            </summary>
+            <QualityBand>Mature</QualityBand>
+        </member>
+        <member name="F:VIBlend.Silverlight.Controls.DateTimePicker.ElementRoot">
+            <summary>
+            Inherited code: Requires comment.
+            </summary>
+        </member>
+        <member name="F:VIBlend.Silverlight.Controls.DateTimePicker.ElementTextBox">
+            <summary>
+            Inherited code: Requires comment.
+            </summary>
+        </member>
+        <member name="F:VIBlend.Silverlight.Controls.DateTimePicker.ElementButton">
+            <summary>
+            Inherited code: Requires comment.
+            </summary>
+        </member>
+        <member name="F:VIBlend.Silverlight.Controls.DateTimePicker.ElementPopup">
+            <summary>
+            Inherited code: Requires comment.
+            </summary>
+        </member>
+        <member name="F:VIBlend.Silverlight.Controls.DateTimePicker.calendar">
+            <summary>
+            Inherited code: Requires comment.
+            </summary>
+        </member>
+        <member name="F:VIBlend.Silverlight.Controls.DateTimePicker._defaultText">
+            <summary>
+            Inherited code: Requires comment.
+            </summary>
+        </member>
+        <member name="F:VIBlend.Silverlight.Controls.DateTimePicker.dropDownButton">
+            <summary>
+            Inherited code: Requires comment.
+            </summary>
+        </member>
+        <member name="F:VIBlend.Silverlight.Controls.DateTimePicker._outsideCanvas">
+            <summary>
+            Inherited code: Requires comment.
+            </summary>
+        </member>
+        <member name="F:VIBlend.Silverlight.Controls.DateTimePicker.outsidePopupCanvas">
+            <summary>
+            Inherited code: Requires comment.
+            </summary>
+        </member>
+        <member name="F:VIBlend.Silverlight.Controls.DateTimePicker.popUp">
+            <summary>
+            Inherited code: Requires comment.
+            </summary>
+        </member>
+        <member name="F:VIBlend.Silverlight.Controls.DateTimePicker.root">
+            <summary>
+            Inherited code: Requires comment.
+            </summary>
+        </member>
+        <member name="F:VIBlend.Silverlight.Controls.DateTimePicker.onOpenSelectedDate">
+            <summary>
+            The value of the SelectedDate just before the Calendar Popup is opened.
+            This is used for cancelling the date selection with ESC key.
+            </summary>
+        </member>
+        <member name="F:VIBlend.Silverlight.Controls.DateTimePicker.settingSelectedDate">
+            <summary>
+            Inherited code: Requires comment.
+            </summary>
+        </member>
+        <member name="F:VIBlend.Silverlight.Controls.DateTimePicker.dateTimeEditor">
+            <summary>
+            Inherited code: Requires comment.
+            </summary>
+        </member>
+        <member name="M:VIBlend.Silverlight.Controls.DateTimePicker.#ctor">
+            <summary>
+            Initializes a new instance of the
+            <see cref="T:System.Windows.Controls.DateTimePicker" /> class.
+            </summary>
+        </member>
+        <member name="F:VIBlend.Silverlight.Controls.DateTimePicker.ShowUpDownProperty">
+            <exclude/>
+        </member>
+        <member name="F:VIBlend.Silverlight.Controls.DateTimePicker.CalendarStyleProperty">
+            <summary>
+            Identifies the
+            <see cref="P:System.Windows.Controls.DateTimePicker.CalendarStyle" />
+            dependency property.
+            </summary>
+            <value>
+            The identifier for the
+            <see cref="P:System.Windows.Controls.DateTimePicker.CalendarStyle" />
+            dependency property.
+            </value>
+        </member>
+        <member name="M:VIBlend.Silverlight.Controls.DateTimePicker.OnCalendarStyleChanged(System.Windows.DependencyObject,System.Windows.DependencyPropertyChangedEventArgs)">
+            <summary>
+            CalendarStyleProperty property changed handler.
+            </summary>
+            <param name="d">DateTimePicker that changed its CalendarStyle.</param>
+            <param name="e">The DependencyPropertyChangedEventArgs.</param>
+        </member>
+        <member name="F:VIBlend.Silverlight.Controls.DateTimePicker.DisplayDateProperty">
+            <summary>
+            Identifies the
+            <see cref="P:System.Windows.Controls.DateTimePicker.DisplayDate" />
+            dependency property.
+            </summary>
+            <value>
+            The identifier for the
+            <see cref="P:System.Windows.Controls.DateTimePicker.DisplayDate" />
+            dependency property.
+            </value>
+        </member>
+        <member name="M:VIBlend.Silverlight.Controls.DateTimePicker.OnDisplayDateChanged(System.Windows.DependencyObject,System.Windows.DependencyPropertyChangedEventArgs)">
+            <summary>
+            DisplayDateProperty property changed handler.
+            </summary>
+            <param name="d">DateTimePicker that changed its DisplayDate.</param>
+            <param name="e">The DependencyPropertyChangedEventArgs.</param>
+        </member>
+        <member name="F:VIBlend.Silverlight.Controls.DateTimePicker.DisplayDateEndProperty">
+            <summary>
+            Identifies the
+            <see cref="P:System.Windows.Controls.DateTimePicker.DisplayDateEnd" />
+            dependency property.
+            </summary>
+            <value>
+            The identifier for the
+            <see cref="P:System.Windows.Controls.DateTimePicker.DisplayDateEnd" />
+            dependency property.
+            </value>
+        </member>
+        <member name="M:VIBlend.Silverlight.Controls.DateTimePicker.OnDisplayDateEndChanged(System.Windows.DependencyObject,System.Windows.DependencyPropertyChangedEventArgs)">
+            <summary>
+            DisplayDateEndProperty property changed handler.
+            </summary>
+            <param name="d">DateTimePicker that changed its DisplayDateEnd.</param>
+            <param name="e">The DependencyPropertyChangedEventArgs.</param>
+        </member>
+        <member name="F:VIBlend.Silverlight.Controls.DateTimePicker.DisplayDateStartProperty">
+            <summary>
+            Identifies the
+            <see cref="P:System.Windows.Controls.DateTimePicker.DisplayDateStart" />
+            dependency property.
+            </summary>
+            <value>
+            The identifier for the
+            <see cref="P:System.Windows.Controls.DateTimePicker.DisplayDateStart" />
+            dependency property.
+            </value>
+        </member>
+        <member name="M:VIBlend.Silverlight.Controls.DateTimePicker.OnDisplayDateStartChanged(System.Windows.DependencyObject,System.Windows.DependencyPropertyChangedEventArgs)">
+            <summary>
+            DisplayDateStartProperty property changed handler.
+            </summary>
+            <param name="d">
+            DateTimePicker that changed its DisplayDateStart.</param>
+            <param name="e">The DependencyPropertyChangedEventArgs.
+            </param>
+        </member>
+        <member name="F:VIBlend.Silverlight.Controls.DateTimePicker.FirstDayOfWeekProperty">
+            <summary>
+            Identifies the
+            <see cref="P:System.Windows.Controls.DateTimePicker.FirstDayOfWeek" />
+            dependency property.
+            </summary>
+            <value>
+            The identifier for the
+            <see cref="P:System.Windows.Controls.DateTimePicker.FirstDayOfWeek" />
+            dependency property.
+            </value>
+        </member>
+        <member name="M:VIBlend.Silverlight.Controls.DateTimePicker.OnFirstDayOfWeekChanged(System.Windows.DependencyObject,System.Windows.DependencyPropertyChangedEventArgs)">
+            <summary>
+            FirstDayOfWeekProperty property changed handler.
+            </summary>
+            <param name="d">DateTimePicker that changed its FirstDayOfWeek.</param>
+            <param name="e">The DependencyPropertyChangedEventArgs.</param>
+        </member>
+        <member name="F:VIBlend.Silverlight.Controls.DateTimePicker.IsDropDownOpenProperty">
+            <summary>
+            Identifies the
+            <see cref="P:System.Windows.Controls.DateTimePicker.IsDropDownOpen" />
+            dependency property.
+            </summary>
+            <value>
+            The identifier for the
+            <see cref="P:System.Windows.Controls.DateTimePicker.IsDropDownOpen" />
+            dependency property.
+            </value>
+        </member>
+        <member name="M:VIBlend.Silverlight.Controls.DateTimePicker.OnIsDropDownOpenChanged(System.Windows.DependencyObject,System.Windows.DependencyPropertyChangedEventArgs)">
+            <summary>
+            IsDropDownOpenProperty property changed handler.
+            </summary>
+            <param name="d">DateTimePicker that changed its IsDropDownOpen.</param>
+            <param name="e">The DependencyPropertyChangedEventArgs.</param>
+        </member>
+        <member name="M:VIBlend.Silverlight.Controls.DateTimePicker.OnIsEnabledChanged(System.Object,System.Windows.DependencyPropertyChangedEventArgs)">
+            <summary>
+            Called when the IsEnabled property changes.
+            </summary>
+            <param name="sender">Sender object.</param>
+            <param name="e">Property changed args.</param>
+        </member>
+        <member name="F:VIBlend.Silverlight.Controls.DateTimePicker.IsTodayHighlightedProperty">
+            <summary>
+            Identifies the
+            <see cref="P:System.Windows.Controls.DateTimePicker.IsTodayHighlighted" />
+            dependency property.
+            </summary>
+            <value>
+            The identifier for the
+            <see cref="P:System.Windows.Controls.DateTimePicker.IsTodayHighlighted" />
+            dependency property.
+            </value>
+        </member>
+        <member name="M:VIBlend.Silverlight.Controls.DateTimePicker.OnIsTodayHighlightedChanged(System.Windows.DependencyObject,System.Windows.DependencyPropertyChangedEventArgs)">
+            <summary>
+            IsTodayHighlightedProperty property changed handler.
+            </summary>
+            <param name="d">
+            DateTimePicker that changed its IsTodayHighlighted.
+            </param>
+            <param name="e">The DependencyPropertyChangedEventArgs.</param>
+        </member>
+        <member name="F:VIBlend.Silverlight.Controls.DateTimePicker.SelectedDateProperty">
+            <exclude/>
+        </member>
+        <member name="F:VIBlend.Silverlight.Controls.DateTimePicker.SelectionBackgroundProperty">
+            <summary>
+            Identifies the
+            <see cref="P:System.Windows.Controls.DateTimePicker.SelectionBackground" />
+            dependency property.
+            </summary>
+            <value>
+            The identifier for the
+            <see cref="P:System.Windows.Controls.DateTimePicker.SelectionBackground" />
+            dependency property.
+            </value>
+        </member>
+        <member name="F:VIBlend.Silverlight.Controls.DateTimePicker.timepickerLayout">
+            <summary>
+            Builds the visual tree for the
+            <see cref="T:System.Windows.Controls.DateTimePicker" /> control when a
+            new template is applied.
+            </summary>
+            
+        </member>
+        <member name="M:VIBlend.Silverlight.Controls.DateTimePicker.OnApplyTemplate">
+            <summary>
+            When overridden in a derived class, is invoked whenever application code or internal processes (such as a rebuilding layout pass) call <see cref="M:System.Windows.Controls.Control.ApplyTemplate"/>. In simplest terms, this means the method is called just before a UI element displays in an application. For more information, see Remarks.
+            </summary>
+        </member>
+        <member name="M:VIBlend.Silverlight.Controls.DateTimePicker.OnSpinUp(VIBlend.Silverlight.Controls.DateTimeValueEventArgs)">
+            <summary>
+            Called when the value is spinned up.
+            </summary>
+        </member>
+        <member name="M:VIBlend.Silverlight.Controls.DateTimePicker.OnSpinDown(VIBlend.Silverlight.Controls.DateTimeValueEventArgs)">
+            <summary>
+            Raises the <see cref="E:SpinDown"/> event.
+            </summary>
+            <param name="args">The <see cref="T:VIBlend.Silverlight.Controls.DateTimeValueEventArgs"/> instance containing the event data.</param>
+        </member>
+        <member name="M:VIBlend.Silverlight.Controls.DateTimePicker.SpinUp">
+            <summary>
+            Spins up.
+            </summary>
+        </member>
+        <member name="M:VIBlend.Silverlight.Controls.DateTimePicker.SpinDown">
+            <summary>
+            Spins down.
+            </summary>
+        </member>
+        <member name="M:VIBlend.Silverlight.Controls.DateTimePicker.ChangeState(System.Boolean)">
+            <summary>
+            Changes the state.
+            </summary>
+            <param name="useTransitions">if set to <c>true</c> [use transitions].</param>
+        </member>
+        <member name="M:VIBlend.Silverlight.Controls.DateTimePicker.ToString">
+            <summary>
+            Provides a text representation of the selected date.
+            </summary>
+            <returns>
+            A text representation of the selected date, or an empty string if
+            SelectedDate is a null reference.
+            </returns>
+        </member>
+        <member name="M:VIBlend.Silverlight.Controls.DateTimePicker.Calendar_DisplayDateChanged(System.Object,VIBlend.Silverlight.Controls.CalendarDateChangedEventArgs)">
+            <summary>
+            Inherited code: Requires comment.
+            </summary>
+            <param name="sender">Inherited code: Requires comment 1.</param>
+            <param name="e">Inherited code: Requires comment 2.</param>
+        </member>
+        <member name="M:VIBlend.Silverlight.Controls.DateTimePicker.Calendar_KeyDown(System.Object,System.Windows.Input.KeyEventArgs)">
+            <summary>
+            Inherited code: Requires comment.
+            </summary>
+            <param name="sender">Inherited code: Requires comment 1.</param>
+            <param name="e">Inherited code: Requires comment 2.</param>
+        </member>
+        <member name="M:VIBlend.Silverlight.Controls.DateTimePicker.Calendar_MouseLeftButtonDown(System.Object,System.Windows.Input.MouseButtonEventArgs)">
+            <summary>
+            Inherited code: Requires comment.
+            </summary>
+            <param name="sender">Inherited code: Requires comment 1.</param>
+            <param name="e">Inherited code: Requires comment 2.</param>
+        </member>
+        <member name="M:VIBlend.Silverlight.Controls.DateTimePicker.Calendar_SelectedDatesChanged(System.Object,System.Windows.Controls.SelectionChangedEventArgs)">
+            <summary>
+            Inherited code: Requires comment.
+            </summary>
+            <param name="sender">Inherited code: Requires comment 1.</param>
+            <param name="e">Inherited code: Requires comment 2.</param>
+        </member>
+        <member name="M:VIBlend.Silverlight.Controls.DateTimePicker.Calendar_SizeChanged(System.Object,System.Windows.SizeChangedEventArgs)">
+            <summary>
+            Inherited code: Requires comment.
+            </summary>
+            <param name="sender">Inherited code: Requires comment 1.</param>
+            <param name="e">Inherited code: Requires comment 2.</param>
+        </member>
+        <member name="M:VIBlend.Silverlight.Controls.DateTimePicker.DatePicker_LostFocus(System.Object,System.Windows.RoutedEventArgs)">
+            <summary>
+            Inherited code: Requires comment.
+            </summary>
+            <param name="sender">Inherited code: Requires comment 1.</param>
+            <param name="e">Inherited code: Requires comment 2.</param>
+        </member>
+        <member name="M:VIBlend.Silverlight.Controls.DateTimePicker.DatePicker_GotFocus(System.Object,System.Windows.RoutedEventArgs)">
+            <summary>
+            Inherited code: Requires comment.
+            </summary>
+            <param name="sender">Inherited code: Requires comment 1.</param>
+            <param name="e">Inherited code: Requires comment 2.</param>
+        </member>
+        <member name="M:VIBlend.Silverlight.Controls.DateTimePicker.DiscardDayTime(System.DateTime)">
+            <summary>
+            Inherited code: Requires comment.
+            </summary>
+            <param name="d">Inherited code: Requires comment 1.</param>
+            <returns>Inherited code: Requires comment 2.</returns>
+        </member>
+        <member name="M:VIBlend.Silverlight.Controls.DateTimePicker.DiscardTime(System.Nullable{System.DateTime})">
+            <summary>
+            Inherited code: Requires comment.
+            </summary>
+            <param name="d">Inherited code: Requires comment 1.</param>
+            <returns>Inherited code: Requires comment 2.</returns>
+        </member>
+        <member name="M:VIBlend.Silverlight.Controls.DateTimePicker.DropDownButton_Click(System.Object,System.Windows.RoutedEventArgs)">
+            <summary>
+            Inherited code: Requires comment.
+            </summary>
+            <param name="sender">Inherited code: Requires comment 1.</param>
+            <param name="e">Inherited code: Requires comment 2.</param>
+        </member>
+        <member name="M:VIBlend.Silverlight.Controls.DateTimePicker.HandlePopUp">
+            <summary>
+            Inherited code: Requires comment.
+            </summary>
+        </member>
+        <member name="M:VIBlend.Silverlight.Controls.DateTimePicker.InitializeCalendar">
+            <summary>
+            Inherited code: Requires comment.
+            </summary>
+        </member>
+        <member name="M:VIBlend.Silverlight.Controls.DateTimePicker.OnCalendarOpened(System.Windows.RoutedEventArgs)">
+            <summary>
+            Inherited code: Requires comment.
+            </summary>
+            <param name="e">Inherited code: Requires comment 1.</param>
+        </member>
+        <member name="M:VIBlend.Silverlight.Controls.DateTimePicker.OpenDropDown">
+            <summary>
+            Inherited code: Requires comment.
+            </summary>
+        </member>
+        <member name="M:VIBlend.Silverlight.Controls.DateTimePicker.OpenPopUp">
+            <summary>
+            Inherited code: Requires comment.
+            </summary>
+        </member>
+        <member name="M:VIBlend.Silverlight.Controls.DateTimePicker.OutsidePopupCanvas_MouseLeftButtonDown(System.Object,System.Windows.Input.MouseButtonEventArgs)">
+            <summary>
+            Inherited code: Requires comment.
+            </summary>
+            <param name="sender">Inherited code: Requires comment 1.</param>
+            <param name="e">Inherited code: Requires comment 2.</param>
+        </member>
+        <member name="M:VIBlend.Silverlight.Controls.DateTimePicker.ProcessDatePickerKey(System.Windows.Input.KeyEventArgs)">
+            <summary>
+            Inherited code: Requires comment.
+            </summary>
+            <param name="e">Inherited code: Requires comment 1.</param>
+            <returns>Inherited code: Requires comment 2.</returns>
+        </member>
+        <member name="M:VIBlend.Silverlight.Controls.DateTimePicker.ProcessTextBox">
+            <summary>
+            Inherited code: Requires comment.
+            </summary>
+        </member>
+        <member name="M:VIBlend.Silverlight.Controls.DateTimePicker.SetPopUpPosition">
+            <summary>
+            Inherited code: Requires comment.
+            </summary>
+        </member>
+        <member name="M:VIBlend.Silverlight.Controls.DateTimePicker.SetSelectedDate">
+            <summary>
+            Inherited code: Requires comment.
+            </summary>
+        </member>
+        <member name="M:VIBlend.Silverlight.Controls.DateTimePicker.SetTextBoxValue(System.DateTime)">
+            <summary>
+            Sets the text box value.
+            </summary>
+            <param name="value">The value.</param>
+            <returns></returns>
+        </member>
+        <member name="M:VIBlend.Silverlight.Controls.DateTimePicker.TextBox_GotFocus(System.Object,System.Windows.RoutedEventArgs)">
+            <summary>
+            Inherited code: Requires comment.
+            </summary>
+            <param name="sender">Inherited code: Requires comment 1.</param>
+            <param name="e">Inherited code: Requires comment 2.</param>
+        </member>
+        <member name="M:VIBlend.Silverlight.Controls.DateTimePicker.TextBox_KeyDown(System.Object,System.Windows.Input.KeyEventArgs)">
+            <summary>
+            Inherited code: Requires comment.
+            </summary>
+            <param name="sender">Inherited code: Requires comment 1.</param>
+            <param name="e">Inherited code: Requires comment 2.</param>
+        </member>
+        <member name="M:VIBlend.Silverlight.Controls.DateTimePicker.UpdateDisabledVisual">
+            <summary>
+            Inherited code: Requires comment.
+            </summary>
+        </member>
+        <member name="E:VIBlend.Silverlight.Controls.DateTimePicker.CalendarClosed">
+            <summary>
+            Occurs when the drop-down
+            <see cref="T:System.Windows.Controls.Calendar" /> is closed.
+            </summary>
+        </member>
+        <member name="E:VIBlend.Silverlight.Controls.DateTimePicker.CalendarOpened">
+            <summary>
+            Occurs when the drop-down
+            <see cref="T:System.Windows.Controls.Calendar" /> is opened.
+            </summary>
+        </member>
+        <member name="P:VIBlend.Silverlight.Controls.DateTimePicker.FormatValue">
+            <summary>
+            Gets or sets a mask expression.
+            </summary>
+        </member>
+        <member name="P:VIBlend.Silverlight.Controls.DateTimePicker.Culture">
+            <summary>
+            Gets or sets the culture.
+            </summary>
+            <value>The culture.</value>
+        </member>
+        <member name="P:VIBlend.Silverlight.Controls.DateTimePicker.DefaultDateTimeFormat">
+            <summary>
+            Gets or sets the default date time format.
+            </summary>
+            <value>The default date time format.</value> 
+        </member>
+        <member name="E:VIBlend.Silverlight.Controls.DateTimePicker.SelectedDateChanged">
+            <summary>
+            Occurs when the
+            <see cref="P:System.Windows.Controls.DateTimePicker.SelectedDate" />
+            property is changed.
+            </summary>
+        </member>
+        <member name="P:VIBlend.Silverlight.Controls.DateTimePicker.ShowUpDown">
+            <summary>
+            Gets or sets a value indicating whether the time picker mode is enabled.
+            </summary>
+        </member>
+        <member name="P:VIBlend.Silverlight.Controls.DateTimePicker.BlackoutDates">
+            <summary>
+            Gets a collection of dates that are marked as not selectable.
+            </summary>
+            <value>
+            A collection of dates that cannot be selected. The default value is
+            an empty collection.
+            </value>
+        </member>
+        <member name="P:VIBlend.Silverlight.Controls.DateTimePicker.CalendarStyle">
+            <summary>
+            Gets or sets the style that is used when rendering the calendar.
+            </summary>
+            <value>
+            The style that is used when rendering the calendar.
+            </value>
+        </member>
+        <member name="P:VIBlend.Silverlight.Controls.DateTimePicker.DisplayDate">
+            <summary>
+            Gets or sets the date to display.
+            </summary>
+            <value>
+            The date to display. The default 
+            <see cref="P:System.DateTime.Today" />.
+            </value>
+            <exception cref="T:System.ArgumentOutOfRangeException">
+            The specified date is not in the range defined by
+            <see cref="P:System.Windows.Controls.DateTimePicker.DisplayDateStart" />
+            and
+            <see cref="P:System.Windows.Controls.DateTimePicker.DisplayDateEnd" />.
+            </exception>
+        </member>
+        <member name="P:VIBlend.Silverlight.Controls.DateTimePicker.DisplayDateEnd">
+            <summary>
+            Gets or sets the last date to be displayed.
+            </summary>
+            <value>The last date to display.</value>
+        </member>
+        <member name="P:VIBlend.Silverlight.Controls.DateTimePicker.DisplayDateStart">
+            <summary>
+            Gets or sets the first date to be displayed.
+            </summary>
+            <value>The first date to display.</value>
+        </member>
+        <member name="P:VIBlend.Silverlight.Controls.DateTimePicker.FirstDayOfWeek">
+            <summary>
+            Gets or sets the day that is considered the beginning of the week.
+            </summary>
+            <value>
+            A <see cref="T:System.DayOfWeek" /> representing the beginning of
+            the week. The default is <see cref="F:System.DayOfWeek.Sunday" />.
+            </value>
+        </member>
+        <member name="P:VIBlend.Silverlight.Controls.DateTimePicker.IsDropDownOpen">
+            <summary>
+            Gets or sets a value indicating whether the drop-down
+            <see cref="T:System.Windows.Controls.Calendar" /> is open or closed.
+            </summary>
+            <value>
+            True if the <see cref="T:System.Windows.Controls.Calendar" /> is
+            open; otherwise, false. The default is false.
+            </value>
+        </member>
+        <member name="P:VIBlend.Silverlight.Controls.DateTimePicker.IsTodayHighlighted">
+            <summary>
+            Gets or sets a value indicating whether the current date will be
+            highlighted.
+            </summary>
+            <value>
+            True if the current date is highlighted; otherwise, false. The
+            default is true.
+            </value>
+        </member>
+        <member name="P:VIBlend.Silverlight.Controls.DateTimePicker.SelectedDate">
+            <summary>
+            Gets or sets the selected date.
+            </summary>
+            <value>The selected date.</value>
+        </member>
+        <member name="P:VIBlend.Silverlight.Controls.DateTimePicker.SelectionBackground">
+            <summary>
+            Gets or sets the background used for selected dates.
+            </summary>
+            <value>
+            The background used for selected dates.
+            </value>
+        </member>
+        <member name="E:VIBlend.Silverlight.Controls.DateTimePicker.SpinUpValue">
+            <exclude/>
+        </member>
+        <member name="E:VIBlend.Silverlight.Controls.DateTimePicker.SpinDownValue">
+            <exclude/>
+        </member>
+        <member name="P:VIBlend.Silverlight.Controls.DateTimePicker.DateTimeEditor">
+            <summary>
+            Gets the date time editor.
+            </summary>
+            <value>The date time editor.</value>
+        </member>
+        <member name="T:System.Windows.Automation.Peers.CalendarDayButtonAutomationPeer">
+            <summary>
+            Exposes
+            <see cref="T:VIBlend.Silverlight.Controls.Primitives.CalendarDayButton" />
+            types to UI Automation.
+            </summary>
+            <QualityBand>Mature</QualityBand>
+        </member>
+        <member name="M:System.Windows.Automation.Peers.CalendarDayButtonAutomationPeer.#ctor(VIBlend.Silverlight.Controls.CalendarDayButton)">
+            <summary>
+            Initializes a new instance of the
+            <see cref="T:System.Windows.Automation.Peers.CalendarDayButtonAutomationPeer" />
+            class.
+            </summary>
+            <param name="owner">
+            The
+            <see cref="T:VIBlend.Silverlight.Controls.Primitives.CalendarDayButton" />
+            instance that is associated with this
+            <see cref="T:System.Windows.Automation.Peers.CalendarDayButtonAutomationPeer" />.
+            </param>
+        </member>
+        <member name="M:System.Windows.Automation.Peers.CalendarDayButtonAutomationPeer.GetPattern(System.Windows.Automation.Peers.PatternInterface)">
+            <summary>
+            Gets the control pattern implementation for this
+            <see cref="T:System.Windows.Automation.Peers.CalendarDayButtonAutomationPeer" />.
+            </summary>
+            <param name="patternInterface">
+            One of the enumeration values.
+            </param>
+            <returns>
+            The object that implements the pattern interface, or null if the
+            specified pattern interface is not implemented by this peer.
+            </returns>
+        </member>
+        <member name="M:System.Windows.Automation.Peers.CalendarDayButtonAutomationPeer.GetAutomationControlTypeCore">
+            <summary>
+            Returns the control type for the CalendarDayButton that is
+            associated with this CalendarDayButtonAutomationPeer.  This method
+            is called by GetAutomationControlType.
+            </summary>
+            <returns>A value of the AutomationControlType enumeration.</returns>
+        </member>
+        <member name="M:System.Windows.Automation.Peers.CalendarDayButtonAutomationPeer.GetLocalizedControlTypeCore">
+            <summary>
+            Returns the localized version of the control type for the owner type
+            that is associated with this CalendarDayButtonAutomationPeer.
+            </summary>
+            <returns>The string that contains the type of control.</returns>
+        </member>
+        <member name="M:System.Windows.Automation.Peers.CalendarDayButtonAutomationPeer.GetHelpTextCore">
+            <summary>
+            Returns the string that describes the functionality of the
+            CalendarDayButton that is associated with this
+            CalendarDayButtonAutomationPeer.  This method is called by
+            GetHelpText.
+            </summary>
+            <returns>
+            The help text, or String.Empty if there is no help text.
+            </returns>
+        </member>
+        <member name="M:System.Windows.Automation.Peers.CalendarDayButtonAutomationPeer.GetClassNameCore">
+            <summary>
+            Returns the name of the CalendarDayButton that is associated with
+            this CalendarDayButtonAutomationPeer.  This method is called by
+            GetClassName.
+            </summary>
+            <returns>
+            The name of the owner type that is associated with this
+            CalendarDayButtonAutomationPeer.
+            </returns>
+        </member>
+        <member name="M:System.Windows.Automation.Peers.CalendarDayButtonAutomationPeer.GetNameCore">
+            <summary>
+            Returns the text label of the CalendarDayButton that is associated
+            with this CalendarDayButtonAutomationPeer. This method is called by
+            GetName.
+            </summary>
+            <returns>
+            The text label of the element that is associated with this
+            automation peer.
+            </returns>
+            <remarks>
+            The name property can be thought of as the string of text that a
+            user would use to explain which control is being referred to.  It is
+            important to have a textual representation for all controls in the
+            graphical user interface (GUI) so that you can programmatically
+            refer to the control in a localized manner.  The value is settable
+            on control instances through the AutomationProperties.Name attached
+            property.
+            </remarks>
+        </member>
+        <member name="M:System.Windows.Automation.Peers.CalendarDayButtonAutomationPeer.System#Windows#Automation#Provider#IInvokeProvider#Invoke">
+            <summary>
+            Sends a request to activate the control and to initiate its single,
+            unambiguous action.
+            </summary>
+        </member>
+        <member name="M:System.Windows.Automation.Peers.CalendarDayButtonAutomationPeer.System#Windows#Automation#Provider#ISelectionItemProvider#AddToSelection">
+            <summary>
+            Adds the current element to the collection of selected items.
+            </summary>
+        </member>
+        <member name="M:System.Windows.Automation.Peers.CalendarDayButtonAutomationPeer.System#Windows#Automation#Provider#ISelectionItemProvider#RemoveFromSelection">
+            <summary>
+            Removes the current element from the collection of selected items.
+            </summary>
+        </member>
+        <member name="M:System.Windows.Automation.Peers.CalendarDayButtonAutomationPeer.System#Windows#Automation#Provider#ISelectionItemProvider#Select">
+            <summary>
+            Clear any existing selection and then selects the current element.
+            </summary>
+        </member>
+        <member name="M:System.Windows.Automation.Peers.CalendarDayButtonAutomationPeer.EnsureSelection">
+            <summary>
+            Ensure selection of the CalendarDayButton is possible.
+            </summary>
+            <returns>
+            A value indicating whether selection of the CalendarDayButton is
+            possible.
+            </returns>
+        </member>
+        <member name="M:System.Windows.Automation.Peers.CalendarDayButtonAutomationPeer.System#Windows#Automation#Provider#ITableItemProvider#GetColumnHeaderItems">
+            <summary>
+            Retrieves a collection of UI Automation providers that represent all
+            the column headers that are associated with a table item or cell.
+            </summary>
+            <returns>A collection of UI Automation providers.</returns>
+        </member>
+        <member name="M:System.Windows.Automation.Peers.CalendarDayButtonAutomationPeer.System#Windows#Automation#Provider#ITableItemProvider#GetRowHeaderItems">
+            <summary>
+            Retrieves a collection of UI Automation providers that represent all
+            the row headers that are associated with a table item or cell.
+            </summary>
+            <returns>A collection of UI Automation providers.</returns>
+        </member>
+        <member name="P:System.Windows.Automation.Peers.CalendarDayButtonAutomationPeer.OwningCalendarDayButton">
+            <summary>
+            Gets the CalendarDayButton instance that is associated with this
+            CalendarDayButtonAutomationPeer.
+            </summary>
+        </member>
+        <member name="P:System.Windows.Automation.Peers.CalendarDayButtonAutomationPeer.OwningCalendar">
+            <summary>
+            Gets the Calendar associated with the button.
+            </summary>
+        </member>
+        <member name="P:System.Windows.Automation.Peers.CalendarDayButtonAutomationPeer.OwningCalendarAutomationPeer">
+            <summary>
+            Gets the automation peer for the Calendar associated with the
+            button.
+            </summary>
+        </member>
+        <member name="P:System.Windows.Automation.Peers.CalendarDayButtonAutomationPeer.System#Windows#Automation#Provider#IGridItemProvider#Column">
+            <summary>
+            Gets the ordinal number of the column that contains the cell or
+            item.
+            </summary>
+            <value>
+            A zero-based ordinal number that identifies the column that contains
+            the cell or item.
+            </value>
+        </member>
+        <member name="P:System.Windows.Automation.Peers.CalendarDayButtonAutomationPeer.System#Windows#Automation#Provider#IGridItemProvider#ColumnSpan">
+            <summary>
+            Gets the number of columns that are spanned by a cell or item.
+            </summary>
+            <value>
+            The number of columns.
+            </value>
+        </member>
+        <member name="P:System.Windows.Automation.Peers.CalendarDayButtonAutomationPeer.System#Windows#Automation#Provider#IGridItemProvider#ContainingGrid">
+            <summary>
+            Gets a UI Automation provider that implements
+            <see cref="T:System.Windows.Automation.Provider.IGridProvider" />
+            and that represents the container of the cell or item.
+            </summary>
+            <value>
+            The UI Automation provider.
+            </value>
+        </member>
+        <member name="P:System.Windows.Automation.Peers.CalendarDayButtonAutomationPeer.System#Windows#Automation#Provider#IGridItemProvider#Row">
+            <summary>
+            Gets the ordinal number of the row that contains the cell or item.
+            </summary>
+            <value>
+            A zero-based ordinal number that identifies the row that contains
+            the cell or item.
+            </value>
+        </member>
+        <member name="P:System.Windows.Automation.Peers.CalendarDayButtonAutomationPeer.System#Windows#Automation#Provider#IGridItemProvider#RowSpan">
+            <summary>
+            Gets the number of rows that are spanned by a cell or item.
+            </summary>
+            <value>The number of rows.</value>
+        </member>
+        <member name="P:System.Windows.Automation.Peers.CalendarDayButtonAutomationPeer.System#Windows#Automation#Provider#ISelectionItemProvider#IsSelected">
+            <summary>
+            Gets a value indicating whether an item is selected.
+            </summary>
+            <value>True if the element is selected; otherwise, false.</value>
+        </member>
+        <member name="P:System.Windows.Automation.Peers.CalendarDayButtonAutomationPeer.System#Windows#Automation#Provider#ISelectionItemProvider#SelectionContainer">
+            <summary>
+            Gets the UI Automation provider that implements
+            <see cref="T:System.Windows.Automation.Provider.ISelectionProvider" />
+            and that acts as the container for the calling object.
+            </summary>
+            <value>The UI Automation provider.</value>
+        </member>
+        <member name="T:VIBlend.Silverlight.Controls.Calendar">
+            <summary>
+            Represents a control that enables a user to select a date by using a
+            visual calendar display.
+            </summary>
+            <remarks>
+            <para>
+            A Calendar control can be used on its own, or as a drop-down part of a
+            DateTimePicker control. For more information, see DateTimePicker.  A Calendar
+            displays either the days of a month, the months of a year, or the years
+            of a decade, depending on the value of the DisplayMode property.  When
+            displaying the days of a month, the user can select a date, a range of
+            dates, or multiple ranges of dates.  The kinds of selections that are
+            allowed are controlled by the SelectionMode property.
+            </para>
+            <para>
+            The range of dates displayed is governed by the DisplayDateStart and
+            DisplayDateEnd properties.  If DisplayMode is Year or Decade, only
+            months or years that contain displayable dates will be displayed.
+            Setting the displayable range to a range that does not include the
+            current DisplayDate will throw an ArgumentOutOfRangeException.
+            </para>
+            <para>
+            The BlackoutDates property can be used to specify dates that cannot be
+            selected. These dates will be displayed as dimmed and disabled.
+            </para>
+            <para>
+            By default, Today is highlighted.  This can be disabled by setting
+            IsTodayHighlighted to false.
+            </para>
+            <para>
+            The Calendar control provides basic navigation using either the mouse or
+            keyboard. The following table summarizes keyboard navigation.
+            
+                Key Combination     DisplayMode     Action
+                ARROW               Any             Change focused date, unselect
+                                                    all selected dates, and select
+                                                    new focused date.
+                                                    
+                SHIFT+ARROW         Any             If SelectionMode is not set to
+                                                    SingleDate or None begin
+                                                    selecting a range of dates.
+                                                    
+                CTRL+UP ARROW       Any             Switch to the next larger
+                                                    DisplayMode.  If DisplayMode is
+                                                    already Decade, no action.
+                                                    
+                CTRL+DOWN ARROW     Any             Switch to the next smaller
+                                                    DisplayMode.  If DisplayMode is
+                                                    already Month, no action.
+                                                    
+                SPACEBAR            Month           Select focused date.
+                
+                SPACEBAR            Year or Decade  Switch DisplayMode to the Month
+                                                    or Year represented by focused
+                                                    item.
+            </para>
+            <para>
+            XAML Usage for Classes Derived from Calendar
+            If you define a class that derives from Calendar, the class can be used
+            as an object element in XAML, and all of the inherited properties and
+            events that show a XAML usage in the reference for the Calendar members
+            can have the same XAML usage for the derived class. However, the object
+            element itself must have a different prefix mapping than the controls:
+            mapping shown in the usages, because the derived class comes from an
+            assembly and namespace that you create and define.  You must define your
+            own prefix mapping to an XML namespace to use the class as an object
+            element in XAML.
+            </para>
+            </remarks>
+            <QualityBand>Mature</QualityBand>
+        </member>
+        <member name="F:VIBlend.Silverlight.Controls.Calendar.RowsPerMonth">
+            <summary>
+            Inherited code: Requires comment.
+            </summary>
+        </member>
+        <member name="F:VIBlend.Silverlight.Controls.Calendar.ColumnsPerMonth">
+            <summary>
+            Inherited code: Requires comment.
+            </summary>
+        </member>
+        <member name="F:VIBlend.Silverlight.Controls.Calendar.RowsPerYear">
+            <summary>
+            Inherited code: Requires comment.
+            </summary>
+        </member>
+        <member name="F:VIBlend.Silverlight.Controls.Calendar.ColumnsPerYear">
+            <summary>
+            Inherited code: Requires comment.
+            </summary>
+        </member>
+        <member name="F:VIBlend.Silverlight.Controls.Calendar.ElementRoot">
+            <summary>
+            Inherited code: Requires comment.
+            </summary>
+        </member>
+        <member name="F:VIBlend.Silverlight.Controls.Calendar.ElementMonth">
+            <summary>
+            Inherited code: Requires comment.
+            </summary>
+        </member>
+        <member name="F:VIBlend.Silverlight.Controls.Calendar.CalendarButtonStyleProperty">
+            <summary>
+            Identifies the
+            <see cref="P:VIBlend.Silverlight.Controls.Calendar.CalendarButtonStyle" />
+            dependency property.
+            </summary>
+            <value>
+            The identifier for the
+            <see cref="P:VIBlend.Silverlight.Controls.Calendar.CalendarButtonStyle" />
+            dependency property.
+            </value>
+        </member>
+        <member name="M:VIBlend.Silverlight.Controls.Calendar.OnCalendarButtonStyleChanged(System.Windows.DependencyObject,System.Windows.DependencyPropertyChangedEventArgs)">
+            <summary>
+            Inherited code: Requires comment.
+            </summary>
+            <param name="d">Inherited code: Requires comment 1.</param>
+            <param name="e">Inherited code: Requires comment 2.</param>
+        </member>
+        <member name="M:VIBlend.Silverlight.Controls.Calendar.EnsureCalendarButtonStyle(VIBlend.Silverlight.Controls.CalendarButton,System.Windows.Style,System.Windows.Style)">
+            <summary>
+            Inherited code: Requires comment.
+            </summary>
+            <param name="calendarButton">Inherited code: Requires comment 1.</param>
+            <param name="oldCalendarButtonStyle">Inherited code: Requires comment 2.</param>
+            <param name="newCalendarButtonStyle">Inherited code: Requires comment 3.</param>
+        </member>
+        <member name="F:VIBlend.Silverlight.Controls.Calendar.CalendarDayButtonStyleProperty">
+            <summary>
+            Identifies the
+            <see cref="P:VIBlend.Silverlight.Controls.Calendar.CalendarDayButtonStyle" />
+            dependency property.
+            </summary>
+            <remarks>
+            The identifier for the
+            <see cref="P:VIBlend.Silverlight.Controls.Calendar.CalendarDayButtonStyle" />
+            dependency property.
+            </remarks>
+        </member>
+        <member name="M:VIBlend.Silverlight.Controls.Calendar.OnCalendarDayButtonStyleChanged(System.Windows.DependencyObject,System.Windows.DependencyPropertyChangedEventArgs)">
+            <summary>
+            Inherited code: Requires comment.
+            </summary>
+            <param name="d">Inherited code: Requires comment 1.</param>
+            <param name="e">Inherited code: Requires comment 2.</param>
+        </member>
+        <member name="M:VIBlend.Silverlight.Controls.Calendar.EnsureDayButtonStyle(VIBlend.Silverlight.Controls.CalendarDayButton,System.Windows.Style,System.Windows.Style)">
+            <summary>
+            Inherited code: Requires comment.
+            </summary>
+            <param name="dayButton">Inherited code: Requires comment 1.</param>
+            <param name="oldDayButtonStyle">Inherited code: Requires comment 2.</param>
+            <param name="newDayButtonStyle">Inherited code: Requires comment 3.</param>
+        </member>
+        <member name="F:VIBlend.Silverlight.Controls.Calendar.CalendarItemStyleProperty">
+            <summary>
+            Identifies the
+            <see cref="P:VIBlend.Silverlight.Controls.Calendar.CalendarItemStyle" />
+            dependency property.
+            </summary>
+            <value>
+            The identifier for the
+            <see cref="P:VIBlend.Silverlight.Controls.Calendar.CalendarItemStyle" />
+            dependency property.
+            </value>
+        </member>
+        <member name="M:VIBlend.Silverlight.Controls.Calendar.OnCalendarItemStyleChanged(System.Windows.DependencyObject,System.Windows.DependencyPropertyChangedEventArgs)">
+            <summary>
+            Inherited code: Requires comment.
+            </summary>
+            <param name="d">Inherited code: Requires comment 1.</param>
+            <param name="e">Inherited code: Requires comment 2.</param>
+        </member>
+        <member name="M:VIBlend.Silverlight.Controls.Calendar.EnsureMonthStyle(VIBlend.Silverlight.Controls.CalendarItem,System.Windows.Style,System.Windows.Style)">
+            <summary>
+            Inherited code: Requires comment.
+            </summary>
+            <param name="month">Inherited code: Requires comment 1 .</param>
+            <param name="oldMonthStyle">Inherited code: Requires comment 2 .</param>
+            <param name="newMonthStyle">Inherited code: Requires comment 3.</param>
+        </member>
+        <member name="F:VIBlend.Silverlight.Controls.Calendar.IsTodayHighlightedProperty">
+            <summary>
+            Identifies the
+            <see cref="P:VIBlend.Silverlight.Controls.Calendar.IsTodayHighlighted" />
+            dependency property.
+            </summary>
+            <value>
+            The identifier for the
+            <see cref="P:VIBlend.Silverlight.Controls.Calendar.IsTodayHighlighted" />
+            dependency property.
+            </value>
+        </member>
+        <member name="M:VIBlend.Silverlight.Controls.Calendar.OnIsTodayHighlightedChanged(System.Windows.DependencyObject,System.Windows.DependencyPropertyChangedEventArgs)">
+            <summary>
+            IsTodayHighlightedProperty property changed handler.
+            </summary>
+            <param name="d">
+            Calendar that changed its IsTodayHighlighted.
+            </param>
+            <param name="e">The DependencyPropertyChangedEventArgs.</param>
+        </member>
+        <member name="F:VIBlend.Silverlight.Controls.Calendar.DisplayModeProperty">
+            <summary>
+            Identifies the
+            <see cref="P:VIBlend.Silverlight.Controls.Calendar.DisplayMode" />
+            dependency property.
+            </summary>
+            <value>
+            The identifier for the
+            <see cref="P:VIBlend.Silverlight.Controls.Calendar.DisplayMode" />
+            dependency property.
+            </value>
+        </member>
+        <member name="M:VIBlend.Silverlight.Controls.Calendar.OnDisplayModePropertyChanged(System.Windows.DependencyObject,System.Windows.DependencyPropertyChangedEventArgs)">
+            <summary>
+            DisplayModeProperty property changed handler.
+            </summary>
+            <param name="d">Calendar that changed its DisplayMode.</param>
+            <param name="e">The DependencyPropertyChangedEventArgs.</param>
+        </member>
+        <member name="M:VIBlend.Silverlight.Controls.Calendar.IsValidDisplayMode(VIBlend.Silverlight.Controls.CalendarMode)">
+            <summary>
+            Inherited code: Requires comment.
+            </summary>
+            <param name="mode">Inherited code: Requires comment 1.</param>
+            <returns>Inherited code: Requires comment 2.</returns>
+        </member>
+        <member name="M:VIBlend.Silverlight.Controls.Calendar.OnDisplayModeChanged(VIBlend.Silverlight.Controls.CalendarModeChangedEventArgs)">
+            <summary>
+            Inherited code: Requires comment.
+            </summary>
+            <param name="args">Inherited code: Requires comment 1.</param>
+        </member>
+        <member name="F:VIBlend.Silverlight.Controls.Calendar.FirstDayOfWeekProperty">
+            <summary>
+            Identifies the
+            <see cref="P:VIBlend.Silverlight.Controls.Calendar.FirstDayOfWeek" />
+            dependency property.
+            </summary>
+            <value>
+            The identifier for the
+            <see cref="P:VIBlend.Silverlight.Controls.Calendar.FirstDayOfWeek" />
+            dependency property.
+            </value>
+        </member>
+        <member name="M:VIBlend.Silverlight.Controls.Calendar.OnFirstDayOfWeekChanged(System.Windows.DependencyObject,System.Windows.DependencyPropertyChangedEventArgs)">
+            <summary>
+            FirstDayOfWeekProperty property changed handler.
+            </summary>
+            <param name="d">Calendar that changed its FirstDayOfWeek.</param>
+            <param name="e">The DependencyPropertyChangedEventArgs.</param>
+        </member>
+        <member name="M:VIBlend.Silverlight.Controls.Calendar.IsValidFirstDayOfWeek(System.Object)">
+            <summary>
+            Inherited code: Requires comment.
+            </summary>
+            <param name="value">Inherited code: Requires comment 1.</param>
+            <returns>Inherited code: Requires comment 2.</returns>
+        </member>
+        <member name="F:VIBlend.Silverlight.Controls.Calendar.SelectionModeProperty">
+            <summary>
+            Identifies the
+            <see cref="P:VIBlend.Silverlight.Controls.Calendar.SelectionMode" />
+            dependency property.
+            </summary>
+            <value>
+            The identifier for the
+            <see cref="P:VIBlend.Silverlight.Controls.Calendar.SelectionMode" />
+            dependency property.
+            </value>
+        </member>
+        <member name="M:VIBlend.Silverlight.Controls.Calendar.OnSelectionModeChanged(System.Windows.DependencyObject,System.Windows.DependencyPropertyChangedEventArgs)">
+            <summary>
+            Inherited code: Requires comment.
+            </summary>
+            <param name="d">Inherited code: Requires comment 1.</param>
+            <param name="e">Inherited code: Requires comment 2.</param>
+        </member>
+        <member name="M:VIBlend.Silverlight.Controls.Calendar.IsValidSelectionMode(System.Object)">
+            <summary>
+            Inherited code: Requires comment.
+            </summary>
+            <param name="value">Inherited code: Requires comment 1.</param>
+            <returns>Inherited code: Requires comment 2.</returns>
+        </member>
+        <member name="F:VIBlend.Silverlight.Controls.Calendar.SelectedDateProperty">
+            <summary>
+            Identifies the
+            <see cref="P:VIBlend.Silverlight.Controls.Calendar.SelectedDate" />
+            dependency property.
+            </summary>
+            <value>
+            The identifier for the
+            <see cref="P:VIBlend.Silverlight.Controls.Calendar.SelectedDate" />
+            dependency property.
+            </value>
+        </member>
+        <member name="M:VIBlend.Silverlight.Controls.Calendar.OnSelectedDateChanged(System.Windows.DependencyObject,System.Windows.DependencyPropertyChangedEventArgs)">
+            <summary>
+            SelectedDateProperty property changed handler.
+            </summary>
+            <param name="d">Calendar that changed its SelectedDate.</param>
+            <param name="e">The DependencyPropertyChangedEventArgs.</param>
+        </member>
+        <member name="M:VIBlend.Silverlight.Controls.Calendar.IsSelectionChanged(System.Windows.Controls.SelectionChangedEventArgs)">
+            <summary>
+            Inherited code: Requires comment.
+            </summary>
+            <param name="e">Inherited code: Requires comment 1.</param>
+            <returns>Inherited code: Requires comment 2.</returns>
+        </member>
+        <member name="M:VIBlend.Silverlight.Controls.Calendar.OnSelectedDatesCollectionChanged(System.Windows.Controls.SelectionChangedEventArgs)">
+            <summary>
+            Inherited code: Requires comment.
+            </summary>
+            <param name="e">Inherited code: Requires comment 1.</param>
+        </member>
+        <member name="F:VIBlend.Silverlight.Controls.Calendar._selectedMonth">
+            <summary>
+            Inherited code: Requires comment.
+            </summary>
+        </member>
+        <member name="F:VIBlend.Silverlight.Controls.Calendar._selectedYear">
+            <summary>
+            Inherited code: Requires comment.
+            </summary>
+        </member>
+        <member name="F:VIBlend.Silverlight.Controls.Calendar.DisplayDateProperty">
+            <summary>
+            Identifies the
+            <see cref="P:VIBlend.Silverlight.Controls.Calendar.DisplayDate" />
+            dependency property.
+            </summary>
+            <value>
+            The identifier for the
+            <see cref="P:VIBlend.Silverlight.Controls.Calendar.DisplayDate" />
+            dependency property.
+            </value>
+        </member>
+        <member name="M:VIBlend.Silverlight.Controls.Calendar.OnDisplayDateChanged(System.Windows.DependencyObject,System.Windows.DependencyPropertyChangedEventArgs)">
+            <summary>
+            DisplayDateProperty property changed handler.
+            </summary>
+            <param name="d">Calendar that changed its DisplayDate.</param>
+            <param name="e">The DependencyPropertyChangedEventArgs.</param>
+        </member>
+        <member name="M:VIBlend.Silverlight.Controls.Calendar.OnDisplayDate(VIBlend.Silverlight.Controls.CalendarDateChangedEventArgs)">
+            <summary>
+            Inherited code: Requires comment.
+            </summary>
+            <param name="e">Inherited code: Requires comment 1.</param>
+        </member>
+        <member name="F:VIBlend.Silverlight.Controls.Calendar.DisplayDateStartProperty">
+            <summary>
+            Identifies the
+            <see cref="P:VIBlend.Silverlight.Controls.Calendar.DisplayDateStart" />
+            dependency property.
+            </summary>
+            <value>
+            The identifier for the
+            <see cref="P:VIBlend.Silverlight.Controls.Calendar.DisplayDateStart" />
+            dependency property.
+            </value>
+        </member>
+        <member name="M:VIBlend.Silverlight.Controls.Calendar.OnDisplayDateStartChanged(System.Windows.DependencyObject,System.Windows.DependencyPropertyChangedEventArgs)">
+            <summary>
+            DisplayDateStartProperty property changed handler.
+            </summary>
+            <param name="d">Calendar that changed its DisplayDateStart.</param>
+            <param name="e">The DependencyPropertyChangedEventArgs.</param>
+        </member>
+        <member name="M:VIBlend.Silverlight.Controls.Calendar.SelectedDateMin(VIBlend.Silverlight.Controls.Calendar)">
+            <summary>
+            Inherited code: Requires comment.
+            </summary>
+            <param name="cal">Inherited code: Requires comment 1.</param>
+            <returns>Inherited code: Requires comment 2.</returns>
+        </member>
+        <member name="F:VIBlend.Silverlight.Controls.Calendar.DisplayDateEndProperty">
+            <summary>
+            Identifies the
+            <see cref="P:VIBlend.Silverlight.Controls.Calendar.DisplayDateEnd" />
+            dependency property.
+            </summary>
+            <value>
+            The identifier for the
+            <see cref="P:VIBlend.Silverlight.Controls.Calendar.DisplayDateEnd" />
+            dependency property.
+            </value>
+        </member>
+        <member name="M:VIBlend.Silverlight.Controls.Calendar.OnDisplayDateEndChanged(System.Windows.DependencyObject,System.Windows.DependencyPropertyChangedEventArgs)">
+            <summary>
+            DisplayDateEndProperty property changed handler.
+            </summary>
+            <param name="d">Calendar that changed its DisplayDateEnd.</param>
+            <param name="e">The DependencyPropertyChangedEventArgs.</param>
+        </member>
+        <member name="M:VIBlend.Silverlight.Controls.Calendar.SelectedDateMax(VIBlend.Silverlight.Controls.Calendar)">
+            <summary>
+            Inherited code: Requires comment.
+            </summary>
+            <param name="cal">Inherited code: Requires comment 1.</param>
+            <returns>Inherited code: Requires comment 2.</returns>
+        </member>
+        <member name="F:VIBlend.Silverlight.Controls.Calendar._isShiftPressed">
+            <summary>
+            Inherited code: Requires comment.
+            </summary>
+        </member>
+        <member name="M:VIBlend.Silverlight.Controls.Calendar.#ctor">
+            <summary>
+            Initializes a new instance of the
+            <see cref="T:VIBlend.Silverlight.Controls.Calendar" /> class.
+            </summary>
+        </member>
+        <member name="M:VIBlend.Silverlight.Controls.Calendar.OnApplyTemplate">
+            <summary>
+            Builds the visual tree for the
+            <see cref="T:VIBlend.Silverlight.Controls.Calendar" /> when a new
+            template is applied.
+            </summary>
+        </member>
+        <member name="M:VIBlend.Silverlight.Controls.Calendar.Calendar_SizeChanged(System.Object,System.Windows.SizeChangedEventArgs)">
+            <summary>
+            Inherited code: Requires comment.
+            </summary>
+            <param name="sender">Inherited code: Requires comment 1.</param>
+            <param name="e">Inherited code: Requires comment 2.</param>
+        </member>
+        <member name="M:VIBlend.Silverlight.Controls.Calendar.ResetStates">
+            <summary>
+            Inherited code: Requires comment.
+            </summary>
+        </member>
+        <member name="M:VIBlend.Silverlight.Controls.Calendar.ToString">
+            <summary>
+            Provides a text representation of the selected date.
+            </summary>
+            <returns>
+            A text representation of the selected date, or an empty string if
+            <see cref="P:VIBlend.Silverlight.Controls.Calendar.SelectedDate" /> is
+            null.
+            </returns>
+        </member>
+        <member name="M:VIBlend.Silverlight.Controls.Calendar.OnCreateAutomationPeer">
+            <summary>
+            Returns a
+            <see cref="T:System.Windows.Automation.Peers.CalendarAutomationPeer" />
+            for use by the Silverlight automation infrastructure.
+            </summary>
+            <returns>
+            A
+            <see cref="T:System.Windows.Automation.Peers.CalendarAutomationPeer" />
+            for the <see cref="T:VIBlend.Silverlight.Controls.Calendar" /> object.
+            </returns>
+            <remarks>
+            <para>
+            This method creates a new CalendarAutomationPeer instance if one has
+            not been created for the control instance; otherwise, it returns the
+            CalendarAutomationPeer previously created.
+            </para>
+            <para>
+            Classes that participate in the Silverlight automation
+            infrastructure must implement this method to return a class-specific
+            derived class of AutomationPeer that reports information for
+            automation behavior.
+            </para>
+            </remarks>
+        </member>
+        <member name="M:VIBlend.Silverlight.Controls.Calendar.OnIsEnabledChanged(System.Object,System.Windows.DependencyPropertyChangedEventArgs)">
+            <summary>
+             Called when the IsEnabled property changes.
+            </summary>
+            <param name="sender">Sender object.</param>
+            <param name="e">Property changed args.</param>
+        </member>
+        <member name="M:VIBlend.Silverlight.Controls.Calendar.FindDayButtonFromDay(System.DateTime)">
+            <summary>
+            Inherited code: Requires comment.
+            </summary>
+            <param name="day">Inherited code: Requires comment 1.</param>
+            <returns>Inherited code: Requires comment 2.</returns>
+        </member>
+        <member name="M:VIBlend.Silverlight.Controls.Calendar.UpdateMonths">
+            <summary>
+            Inherited code: Requires comment.
+            </summary>
+        </member>
+        <member name="M:VIBlend.Silverlight.Controls.Calendar.OnSelectedMonthChanged(System.Nullable{System.DateTime})">
+            <summary>
+            Inherited code: Requires comment.
+            </summary>
+            <param name="selectedMonth">Inherited code: Requires comment 1.</param>
+        </member>
+        <member name="M:VIBlend.Silverlight.Controls.Calendar.OnSelectedYearChanged(System.Nullable{System.DateTime})">
+            <summary>
+            Inherited code: Requires comment.
+            </summary>
+            <param name="selectedYear">Inherited code: Requires comment 1.</param>
+        </member>
+        <member name="M:VIBlend.Silverlight.Controls.Calendar.IsValidDateSelection(VIBlend.Silverlight.Controls.Calendar,System.Object)">
+            <summary>
+            Inherited code: Requires comment.
+            </summary>
+            <param name="cal">Inherited code: Requires comment 1.</param>
+            <param name="value">Inherited code: Requires comment 2.</param>
+            <returns>Inherited code: Requires comment 3.</returns>
+        </member>
+        <member name="M:VIBlend.Silverlight.Controls.Calendar.IsValidKeyboardSelection(VIBlend.Silverlight.Controls.Calendar,System.Object)">
+            <summary>
+            Inherited code: Requires comment.
+            </summary>
+            <param name="cal">Inherited code: Requires comment 1.</param>
+            <param name="value">Inherited code: Requires comment 2.</param>
+            <returns>Inherited code: Requires comment 3.</returns>
+        </member>
+        <member name="M:VIBlend.Silverlight.Controls.Calendar.AddSelection">
+            <summary>
+            This method adds the days that were selected by Keyboard to the
+            SelectedDays Collection.
+            </summary>
+        </member>
+        <member name="M:VIBlend.Silverlight.Controls.Calendar.ProcessSelection(System.Boolean,System.Nullable{System.DateTime},System.Nullable{System.Int32})">
+            <summary>
+            Inherited code: Requires comment.
+            </summary>
+            <param name="shift">Inherited code: Requires comment 1.</param>
+            <param name="lastSelectedDate">Inherited code: Requires comment 2.</param>
+            <param name="index">Inherited code: Requires comment 3.</param>
+        </member>
+        <member name="M:VIBlend.Silverlight.Controls.Calendar.HighlightDays">
+            <summary>
+            This method highlights the days in MultiSelection mode without
+            adding them to the SelectedDates collection.
+            </summary>
+        </member>
+        <member name="M:VIBlend.Silverlight.Controls.Calendar.UnHighlightDays">
+            <summary>
+            This method un-highlights the days that were hovered over but not
+            added to the SelectedDates collection or un-highlighted the
+            previously selected days in SingleRange Mode.
+            </summary>
+        </member>
+        <member name="M:VIBlend.Silverlight.Controls.Calendar.SortHoverIndexes(System.Int32@,System.Int32@)">
+            <summary>
+            Inherited code: Requires comment.
+            </summary>
+            <param name="startIndex">Inherited code: Requires comment 1.</param>
+            <param name="endIndex">Inherited code: Requires comment 2.</param>
+        </member>
+        <member name="M:VIBlend.Silverlight.Controls.Calendar.Calendar_MouseLeftButtonUp(System.Object,System.Windows.Input.MouseButtonEventArgs)">
+            <summary>
+            Inherited code: Requires comment.
+            </summary>
+            <param name="sender">Inherited code: Requires comment 1.</param>
+            <param name="e">Inherited code: Requires comment 2.</param>
+        </member>
+        <member name="M:VIBlend.Silverlight.Controls.Calendar.OnHeaderClick">
+            <summary>
+            Inherited code: Requires comment.
+            </summary>
+        </member>
+        <member name="M:VIBlend.Silverlight.Controls.Calendar.OnNextClick">
+            <summary>
+            Inherited code: Requires comment.
+            </summary>
+        </member>
+        <member name="M:VIBlend.Silverlight.Controls.Calendar.OnPreviousClick">
+            <summary>
+            Inherited code: Requires comment.
+            </summary>
+        </member>
+        <member name="M:VIBlend.Silverlight.Controls.Calendar.OnDayClick(System.DateTime)">
+            <summary>
+            If the day is a trailing day, Update the DisplayDate.
+            </summary>
+            <param name="selectedDate">Inherited code: Requires comment.</param>
+        </member>
+        <member name="M:VIBlend.Silverlight.Controls.Calendar.OnMonthClick">
+            <summary>
+            Inherited code: Requires comment.
+            </summary>
+        </member>
+        <member name="M:VIBlend.Silverlight.Controls.Calendar.OnDayButtonMouseUp(System.Windows.Input.MouseButtonEventArgs)">
+            <summary>
+            Inherited code: Requires comment.
+            </summary>
+            <param name="e">Inherited code: Requires comment 1.</param>
+        </member>
+        <member name="M:VIBlend.Silverlight.Controls.Calendar.Calendar_KeyDown(System.Object,System.Windows.Input.KeyEventArgs)">
+            <summary>
+            Inherited code: Requires comment.
+            </summary>
+            <param name="sender">Inherited code: Requires comment 1.</param>
+            <param name="e">Inherited code: Requires comment 2.</param>
+        </member>
+        <member name="M:VIBlend.Silverlight.Controls.Calendar.ProcessCalendarKey(System.Windows.Input.KeyEventArgs)">
+            <summary>
+            Inherited code: Requires comment.
+            </summary>
+            <param name="e">Inherited code: Requires comment 1.</param>
+            <returns>Inherited code: Requires comment 2.</returns>
+        </member>
+        <member name="M:VIBlend.Silverlight.Controls.Calendar.ProcessUpKey(System.Boolean,System.Boolean)">
+            <summary>
+            Inherited code: Requires comment.
+            </summary>
+            <param name="ctrl">Inherited code: Requires comment 1.</param>
+            <param name="shift">Inherited code: Requires comment 2.</param>
+        </member>
+        <member name="M:VIBlend.Silverlight.Controls.Calendar.ProcessDownKey(System.Boolean,System.Boolean)">
+            <summary>
+            Inherited code: Requires comment.
+            </summary>
+            <param name="ctrl">Inherited code: Requires comment 1.</param>
+            <param name="shift">Inherited code: Requires comment 2.</param>
+        </member>
+        <member name="M:VIBlend.Silverlight.Controls.Calendar.ProcessLeftKey(System.Boolean)">
+            <summary>
+            Inherited code: Requires comment.
+            </summary>
+            <param name="shift">Inherited code: Requires comment 1.</param>
+        </member>
+        <member name="M:VIBlend.Silverlight.Controls.Calendar.ProcessRightKey(System.Boolean)">
+            <summary>
+            Inherited code: Requires comment.
+            </summary>
+            <param name="shift">Inherited code: Requires comment 1.</param>
+        </member>
+        <member name="M:VIBlend.Silverlight.Controls.Calendar.ProcessEnterKey">
+            <summary>
+            Inherited code: Requires comment.
+            </summary>
+            <returns>Inherited code: Requires comment 1.</returns>
+        </member>
+        <member name="M:VIBlend.Silverlight.Controls.Calendar.ProcessHomeKey(System.Boolean)">
+            <summary>
+            Inherited code: Requires comment.
+            </summary>
+            <param name="shift">Inherited code: Requires comment 1.</param>
+        </member>
+        <member name="M:VIBlend.Silverlight.Controls.Calendar.ProcessEndKey(System.Boolean)">
+            <summary>
+            Inherited code: Requires comment.
+            </summary>
+            <param name="shift">Inherited code: Requires comment 1.</param>
+        </member>
+        <member name="M:VIBlend.Silverlight.Controls.Calendar.ProcessPageDownKey(System.Boolean)">
+            <summary>
+            Inherited code: Requires comment.
+            </summary>
+            <param name="shift">Inherited code: Requires comment 1.</param>
+        </member>
+        <member name="M:VIBlend.Silverlight.Controls.Calendar.ProcessPageUpKey(System.Boolean)">
+            <summary>
+            Inherited code: Requires comment.
+            </summary>
+            <param name="shift">Inherited code: Requires comment 1.</param>
+        </member>
+        <member name="M:VIBlend.Silverlight.Controls.Calendar.Calendar_KeyUp(System.Object,System.Windows.Input.KeyEventArgs)">
+            <summary>
+            Inherited code: Requires comment.
+            </summary>
+            <param name="sender">Inherited code: Requires comment 1.</param>
+            <param name="e">Inherited code: Requires comment 2.</param>
+        </member>
+        <member name="M:VIBlend.Silverlight.Controls.Calendar.ProcessShiftKeyUp">
+            <summary>
+            Inherited code: Requires comment.
+            </summary>
+        </member>
+        <member name="M:VIBlend.Silverlight.Controls.Calendar.Calendar_GotFocus(System.Object,System.Windows.RoutedEventArgs)">
+            <summary>
+            Inherited code: Requires comment.
+            </summary>
+            <param name="sender">Inherited code: Requires comment 1.</param>
+            <param name="e">Inherited code: Requires comment 2.</param>
+        </member>
+        <member name="M:VIBlend.Silverlight.Controls.Calendar.Calendar_LostFocus(System.Object,System.Windows.RoutedEventArgs)">
+            <summary>
+            Inherited code: Requires comment.
+            </summary>
+            <param name="sender">Inherited code: Requires comment1 .</param>
+            <param name="e">Inherited code: Requires comment 2.</param>
+        </member>
+        <member name="P:VIBlend.Silverlight.Controls.Calendar.Root">
+            <summary>
+            Gets or sets Inherited code: Requires comment.
+            </summary>
+        </member>
+        <member name="P:VIBlend.Silverlight.Controls.Calendar.MonthControl">
+            <summary>
+            Gets Inherited code: Requires comment.
+            </summary>
+        </member>
+        <member name="P:VIBlend.Silverlight.Controls.Calendar.FocusButton">
+            <summary>
+            Gets or sets Inherited code: Requires comment.
+            </summary>
+        </member>
+        <member name="P:VIBlend.Silverlight.Controls.Calendar.FocusCalendarButton">
+            <summary>
+            Gets or sets Inherited code: Requires comment.
+            </summary>
+        </member>
+        <member name="P:VIBlend.Silverlight.Controls.Calendar.CalendarButtonStyle">
+            <summary>
+            Gets or sets the <see cref="T:System.Windows.Style" /> associated
+            with the control's internal
+            <see cref="T:VIBlend.Silverlight.Controls.Primitives.CalendarButton" />
+            object.
+            </summary>
+            <value>
+            The current style of the
+            <see cref="T:VIBlend.Silverlight.Controls.Primitives.CalendarButton" />
+            object.
+            </value>
+        </member>
+        <member name="P:VIBlend.Silverlight.Controls.Calendar.CalendarDayButtonStyle">
+            <summary>
+            Gets or sets the <see cref="T:System.Windows.Style" /> associated
+            with the control's internal
+            <see cref="T:VIBlend.Silverlight.Controls.Primitives.CalendarDayButton" />
+            object.
+            </summary>
+            <value>
+            The current style of the
+            <see cref="T:VIBlend.Silverlight.Controls.Primitives.CalendarDayButton" />
+            object.
+            </value>
+        </member>
+        <member name="P:VIBlend.Silverlight.Controls.Calendar.CalendarItemStyle">
+            <summary>
+            Gets or sets the <see cref="T:System.Windows.Style" /> associated
+            with the control's internal
+            <see cref="T:VIBlend.Silverlight.Controls.Primitives.CalendarItem" />
+            object.
+            </summary>
+            <value>
+            The current style of the
+            <see cref="T:VIBlend.Silverlight.Controls.Primitives.CalendarItem" />
+            object.
+            </value>
+        </member>
+        <member name="P:VIBlend.Silverlight.Controls.Calendar.IsTodayHighlighted">
+            <summary>
+            Gets or sets a value indicating whether the current date is
+            highlighted.
+            </summary>
+            <value>
+            True if the current date is highlighted; otherwise, false. The
+            default is true.
+            </value>
+        </member>
+        <member name="P:VIBlend.Silverlight.Controls.Calendar.DisplayMode">
+            <summary>
+            Gets or sets a value indicating whether the calendar is displayed in
+            months, years, or decades.
+            </summary>
+            <value>
+            A value indicating what length of time the
+            <see cref="T:VIBlend.Silverlight.Controls.Calendar" /> should display.
+            </value>
+        </member>
+        <member name="P:VIBlend.Silverlight.Controls.Calendar.FirstDayOfWeek">
+            <summary>
+            Gets or sets the day that is considered the beginning of the week.
+            </summary>
+            <value>
+            A <see cref="T:System.DayOfWeek" /> representing the beginning of
+            the week. The default is <see cref="F:System.DayOfWeek.Sunday" />.
+            </value>
+        </member>
+        <member name="P:VIBlend.Silverlight.Controls.Calendar.SelectionMode">
+            <summary>
+            Gets or sets a value that indicates what kind of selections are
+            allowed.
+            </summary>
+            <value>
+            A value that indicates the current selection mode. The default is
+            <see cref="F:VIBlend.Silverlight.Controls.CalendarSelectionMode.SingleDate" />.
+            </value>
+            <remarks>
+            <para>
+            This property determines whether the Calendar allows no selection,
+            selection of a single date, or selection of multiple dates.  The
+            selection mode is specified with the CalendarSelectionMode
+            enumeration.
+            </para>
+            <para>
+            When this property is changed, all selected dates will be cleared.
+            </para>
+            </remarks>
+        </member>
+        <member name="P:VIBlend.Silverlight.Controls.Calendar.SelectedDate">
+            <summary>
+            Gets or sets the currently selected date.
+            </summary>
+            <value>The date currently selected. The default is null.</value>
+            <exception cref="T:System.ArgumentOutOfRangeException">
+            The given date is outside the range specified by
+            <see cref="P:VIBlend.Silverlight.Controls.Calendar.DisplayDateStart" />
+            and <see cref="P:VIBlend.Silverlight.Controls.Calendar.DisplayDateEnd" />
+            -or-
+            The given date is in the
+            <see cref="P:VIBlend.Silverlight.Controls.Calendar.BlackoutDates" />
+            collection.
+            </exception>
+            <exception cref="T:System.InvalidOperationException">
+            If set to anything other than null when
+            <see cref="P:VIBlend.Silverlight.Controls.Calendar.SelectionMode" /> is
+            set to
+            <see cref="F:VIBlend.Silverlight.Controls.CalendarSelectionMode.None" />.
+            </exception>
+            <remarks>
+            Use this property when SelectionMode is set to SingleDate.  In other
+            modes, this property will always be the first date in SelectedDates.
+            </remarks>
+        </member>
+        <member name="P:VIBlend.Silverlight.Controls.Calendar.SelectedDates">
+            <summary>
+            Gets a collection of selected dates.
+            </summary>
+            <value>
+            A <see cref="T:VIBlend.Silverlight.Controls.SelectedDatesCollection" />
+            object that contains the currently selected dates. The default is an
+            empty collection.
+            </value>
+            <remarks>
+            Dates can be added to the collection either individually or in a
+            range using the AddRange method.  Depending on the value of the
+            SelectionMode property, adding a date or range to the collection may
+            cause it to be cleared.  The following table lists how
+            CalendarSelectionMode affects the SelectedDates property.
+            
+                CalendarSelectionMode   Description
+                None                    No selections are allowed.  SelectedDate
+                                        cannot be set and no values can be added
+                                        to SelectedDates.
+                                        
+                SingleDate              Only a single date can be selected,
+                                        either by setting SelectedDate or the
+                                        first value in SelectedDates.  AddRange
+                                        cannot be used.
+                                        
+                SingleRange             A single range of dates can be selected.
+                                        Setting SelectedDate, adding a date
+                                        individually to SelectedDates, or using
+                                        AddRange will clear all previous values
+                                        from SelectedDates.
+                MultipleRange           Multiple non-contiguous ranges of dates
+                                        can be selected. Adding a date
+                                        individually to SelectedDates or using
+                                        AddRange will not clear SelectedDates.
+                                        Setting SelectedDate will still clear
+                                        SelectedDates, but additional dates or
+                                        range can then be added.  Adding a range
+                                        that includes some dates that are
+                                        already selected or overlaps with
+                                        another range results in the union of
+                                        the ranges and does not cause an
+                                        exception.
+            </remarks>
+        </member>
+        <member name="P:VIBlend.Silverlight.Controls.Calendar.RemovedItems">
+            <summary>
+            Gets or sets Inherited code: Requires comment.
+            </summary>
+        </member>
+        <member name="P:VIBlend.Silverlight.Controls.Calendar.LastSelectedDateInternal">
+            <summary>
+            Gets or sets Inherited code: Requires comment.
+            </summary>
+        </member>
+        <member name="P:VIBlend.Silverlight.Controls.Calendar.LastSelectedDate">
+            <summary>
+            Gets or sets Inherited code: Requires comment.
+            </summary>
+        </member>
+        <member name="P:VIBlend.Silverlight.Controls.Calendar.SelectedMonth">
+            <summary>
+            Gets or sets Inherited code: Requires comment.
+            </summary>
+        </member>
+        <member name="P:VIBlend.Silverlight.Controls.Calendar.SelectedYear">
+            <summary>
+            Gets or sets Inherited code: Requires comment.
+            </summary>
+        </member>
+        <member name="P:VIBlend.Silverlight.Controls.Calendar.BlackoutDates">
+            <summary>
+            Gets a collection of dates that are marked as not selectable.
+            </summary>
+            <value>
+            A collection of dates that cannot be selected. The default value is
+            an empty collection.
+            </value>
+            <exception cref="T:System.ArgumentOutOfRangeException">
+            Adding a date to this collection when it is already selected or
+            adding a date outside the range specified by DisplayDateStart and
+            DisplayDateEnd.
+            </exception>
+            <remarks>
+            <para>
+            Dates in this collection will appear as disabled on the calendar.
+            </para>
+            <para>
+            To make all past dates not selectable, you can use the
+            AddDatesInPast method provided by the collection returned by this
+            property.
+            </para>
+            </remarks>
+        </member>
+        <member name="P:VIBlend.Silverlight.Controls.Calendar.DisplayDate">
+            <summary>
+            Gets or sets the date to display.
+            </summary>
+            <value>The date to display.</value>
+            <exception cref="T:System.ArgumentOutOfRangeException">
+            The given date is not in the range specified by
+            <see cref="P:VIBlend.Silverlight.Controls.Calendar.DisplayDateStart" />
+            and
+            <see cref="P:VIBlend.Silverlight.Controls.Calendar.DisplayDateEnd" />.
+            </exception>
+            <remarks>
+            <para>
+            This property allows the developer to specify a date to display.  If
+            this property is a null reference (Nothing in Visual Basic),
+            SelectedDate is displayed.  If SelectedDate is also a null reference
+            (Nothing in Visual Basic), Today is displayed.  The default is
+            Today.
+            </para>
+            <para>
+            To set this property in XAML, use a date specified in the format
+            yyyy/mm/dd.  The mm and dd components must always consist of two
+            characters, with a leading zero if necessary.  For instance, the
+            month of May should be specified as 05.
+            </para>
+            </remarks>
+        </member>
+        <member name="P:VIBlend.Silverlight.Controls.Calendar.DisplayDateInternal">
+            <summary>
+            Gets Inherited code: Requires comment.
+            </summary>
+        </member>
+        <member name="P:VIBlend.Silverlight.Controls.Calendar.DisplayDateStart">
+            <summary>
+            Gets or sets the first date to be displayed.
+            </summary>
+            <value>The first date to display.</value>
+            <remarks>
+            To set this property in XAML, use a date specified in the format
+            yyyy/mm/dd.  The mm and dd components must always consist of two
+            characters, with a leading zero if necessary.  For instance, the
+            month of May should be specified as 05.
+            </remarks>
+        </member>
+        <member name="P:VIBlend.Silverlight.Controls.Calendar.DisplayDateRangeStart">
+            <summary>
+            Gets Inherited code: Requires comment.
+            </summary>
+        </member>
+        <member name="P:VIBlend.Silverlight.Controls.Calendar.DisplayDateEnd">
+            <summary>
+            Gets or sets the last date to be displayed.
+            </summary>
+            <value>The last date to display.</value>
+            <remarks>
+            To set this property in XAML, use a date specified in the format
+            yyyy/mm/dd.  The mm and dd components must always consist of two
+            characters, with a leading zero if necessary.  For instance, the
+            month of May should be specified as 05.
+            </remarks>
+        </member>
+        <member name="P:VIBlend.Silverlight.Controls.Calendar.DisplayDateRangeEnd">
+            <summary>
+            Gets Inherited code: Requires comment.
+            </summary>
+        </member>
+        <member name="P:VIBlend.Silverlight.Controls.Calendar.HoverStart">
+            <summary>
+            Gets or sets Inherited code: Requires comment.
+            </summary>
+        </member>
+        <member name="P:VIBlend.Silverlight.Controls.Calendar.HoverStartIndex">
+            <summary>
+            Gets or sets Inherited code: Requires comment.
+            </summary>
+        </member>
+        <member name="P:VIBlend.Silverlight.Controls.Calendar.HoverEndInternal">
+            <summary>
+            Gets or sets Inherited code: Requires comment.
+            </summary>
+        </member>
+        <member name="P:VIBlend.Silverlight.Controls.Calendar.HoverEnd">
+            <summary>
+            Gets or sets Inherited code: Requires comment.
+            </summary>
+        </member>
+        <member name="P:VIBlend.Silverlight.Controls.Calendar.HoverEndIndex">
+            <summary>
+            Gets or sets Inherited code: Requires comment.
+            </summary>
+        </member>
+        <member name="P:VIBlend.Silverlight.Controls.Calendar.HasFocusInternal">
+            <summary>
+            Gets or sets a value indicating whether Inherited code: Requires comment.
+            </summary>
+        </member>
+        <member name="P:VIBlend.Silverlight.Controls.Calendar.IsMouseSelection">
+            <summary>
+            Gets or sets a value indicating whether Inherited code: Requires comment.
+            </summary>
+        </member>
+        <member name="P:VIBlend.Silverlight.Controls.Calendar.DatePickerDisplayDateFlag">
+            <summary>
+            Gets or sets a value indicating whether DateTimePicker should change its 
+            DisplayDate because of a SelectedDate change on its Calendar.
+            </summary>
+        </member>
+        <member name="E:VIBlend.Silverlight.Controls.Calendar.SelectedDatesChanged">
+            <summary>
+            Occurs when the collection returned by the
+            <see cref="P:VIBlend.Silverlight.Controls.Calendar.SelectedDates" />
+            property is changed.
+            </summary>
+        </member>
+        <member name="E:VIBlend.Silverlight.Controls.Calendar.DisplayDateChanged">
+            <summary>
+            Occurs when the
+            <see cref="P:VIBlend.Silverlight.Controls.Calendar.DisplayDate" />
+            property is changed.
+            </summary>
+            <remarks>
+            This event occurs after DisplayDate is assigned its new value.
+            </remarks>
+        </member>
+        <member name="E:VIBlend.Silverlight.Controls.Calendar.DisplayModeChanged">
+            <summary>
+            Occurs when the
+            <see cref="P:VIBlend.Silverlight.Controls.Calendar.DisplayMode" />
+            property is changed.
+            </summary>
+        </member>
+        <member name="E:VIBlend.Silverlight.Controls.Calendar.DayButtonMouseUp">
+            <summary>
+            Inherited code: Requires comment.
+            </summary>
+        </member>
+        <member name="T:VIBlend.Silverlight.Controls.CalendarBlackoutDatesCollection">
+            <exclude/>   
+            <summary>
+            Represents a collection of non-selectable dates in a
+            <see cref="T:VIBlend.Silverlight.Controls.Calendar" />.
+            </summary>
+            <QualityBand>Mature</QualityBand>
+        </member>
+        <member name="F:VIBlend.Silverlight.Controls.CalendarBlackoutDatesCollection._owner">
+            <summary>
+            The Calendar whose dates this object represents.
+            </summary>
+        </member>
+        <member name="F:VIBlend.Silverlight.Controls.CalendarBlackoutDatesCollection._dispatcherThread">
+            <summary>
+            The dispatcher thread.
+            </summary>
+        </member>
+        <member name="M:VIBlend.Silverlight.Controls.CalendarBlackoutDatesCollection.#ctor(VIBlend.Silverlight.Controls.Calendar)">
+            <summary>
+            Initializes a new instance of the
+            <see cref="T:VIBlend.Silverlight.Controls.CalendarBlackoutDatesCollection" />
+            class.
+            </summary>
+            <param name="owner">
+            The <see cref="T:VIBlend.Silverlight.Controls.Calendar" /> whose dates
+            this object represents.
+            </param>
+        </member>
+        <member name="M:VIBlend.Silverlight.Controls.CalendarBlackoutDatesCollection.AddDatesInPast">
+            <summary>
+            Adds all dates before <see cref="P:System.DateTime.Today" /> to the
+            collection.
+            </summary>
+        </member>
+        <member name="M:VIBlend.Silverlight.Controls.CalendarBlackoutDatesCollection.Contains(System.DateTime)">
+            <summary>
+            Returns a value that represents whether this collection contains the
+            specified date.
+            </summary>
+            <param name="date">The date to search for.</param>
+            <returns>
+            True if the collection contains the specified date; otherwise,
+            false.
+            </returns>
+        </member>
+        <member name="M:VIBlend.Silverlight.Controls.CalendarBlackoutDatesCollection.Contains(System.DateTime,System.DateTime)">
+            <summary>
+            Returns a value that represents whether this collection contains the
+            specified range of dates.
+            </summary>
+            <param name="start">The start of the date range.</param>
+            <param name="end">The end of the date range.</param>
+            <returns>
+            True if all dates in the range are contained in the collection;
+            otherwise, false.
+            </returns>
+        </member>
+        <member name="M:VIBlend.Silverlight.Controls.CalendarBlackoutDatesCollection.ContainsAny(VIBlend.Silverlight.Controls.CalendarDateRange)">
+            <summary>
+            Returns a value that represents whether this collection contains any
+            date in the specified range.
+            </summary>
+            <param name="range">The range of dates to search for.</param>
+            <returns>
+            True if any date in the range is contained in the collection;
+            otherwise, false.
+            </returns>
+        </member>
+        <member name="M:VIBlend.Silverlight.Controls.CalendarBlackoutDatesCollection.ClearItems">
+            <summary>
+            Removes all items from the collection.
+            </summary>
+            <remarks>
+            This implementation raises the CollectionChanged event.
+            </remarks>
+        </member>
+        <member name="M:VIBlend.Silverlight.Controls.CalendarBlackoutDatesCollection.InsertItem(System.Int32,VIBlend.Silverlight.Controls.CalendarDateRange)">
+            <summary>
+            Inserts an item into the collection at the specified index.
+            </summary>
+            <param name="index">
+            The zero-based index at which item should be inserted.
+            </param>
+            <param name="item">The object to insert.</param>
+            <remarks>
+            This implementation raises the CollectionChanged event.
+            </remarks>
+        </member>
+        <member name="M:VIBlend.Silverlight.Controls.CalendarBlackoutDatesCollection.RemoveItem(System.Int32)">
+            <summary>
+            Removes the item at the specified index of the collection.
+            </summary>
+            <param name="index">
+            The zero-based index of the element to remove.
+            </param>
+            <remarks>
+            This implementation raises the CollectionChanged event.
+            </remarks>
+        </member>
+        <member name="M:VIBlend.Silverlight.Controls.CalendarBlackoutDatesCollection.SetItem(System.Int32,VIBlend.Silverlight.Controls.CalendarDateRange)">
+            <summary>
+            Replaces the element at the specified index.
+            </summary>
+            <param name="index">
+            The zero-based index of the element to replace.
+            </param>
+            <param name="item">
+            The new value for the element at the specified index.
+            </param>
+            <remarks>
+            This implementation raises the CollectionChanged event.
+            </remarks>
+        </member>
+        <member name="M:VIBlend.Silverlight.Controls.CalendarBlackoutDatesCollection.IsValid(VIBlend.Silverlight.Controls.CalendarDateRange)">
+            <summary>
+            Inherited code: Requires comment.
+            </summary>
+            <param name="item">Inherited code: Requires comment 1.</param>
+            <returns>Inherited code: Requires comment 2.</returns>
+        </member>
+        <member name="M:VIBlend.Silverlight.Controls.CalendarBlackoutDatesCollection.EnsureValidThread">
+            <summary>
+            Inherited code: Requires comment.
+            </summary>
+        </member>
+        <member name="T:VIBlend.Silverlight.Controls.SelectedDatesCollection">
+            <summary>
+            Represents a set of selected dates in a
+            <see cref="T:VIBlend.Silverlight.Controls.Calendar" />.
+            </summary>
+            <QualityBand>Mature</QualityBand>
+        </member>
+        <member name="F:VIBlend.Silverlight.Controls.SelectedDatesCollection._addedItems">
+            <summary>
+            Inherited code: Requires comment.
+            </summary>
+        </member>
+        <member name="F:VIBlend.Silverlight.Controls.SelectedDatesCollection._dispatcherThread">
+            <summary>
+            Inherited code: Requires comment.
+            </summary>
+        </member>
+        <member name="F:VIBlend.Silverlight.Controls.SelectedDatesCollection._isCleared">
+            <summary>
+            Inherited code: Requires comment.
+            </summary>
+        </member>
+        <member name="F:VIBlend.Silverlight.Controls.SelectedDatesCollection._isRangeAdded">
+            <summary>
+            Inherited code: Requires comment.
+            </summary>
+        </member>
+        <member name="F:VIBlend.Silverlight.Controls.SelectedDatesCollection._owner">
+            <summary>
+            Inherited code: Requires comment.
+            </summary>
+        </member>
+        <member name="M:VIBlend.Silverlight.Controls.SelectedDatesCollection.#ctor(VIBlend.Silverlight.Controls.Calendar)">
+            <summary>
+            Initializes a new instance of the
+            <see cref="T:VIBlend.Silverlight.Controls.SelectedDatesCollection" />
+            class.
+            </summary>
+            <param name="owner">
+            The <see cref="T:VIBlend.Silverlight.Controls.Calendar" /> associated
+            with this object.
+            </param>
+        </member>
+        <member name="M:VIBlend.Silverlight.Controls.SelectedDatesCollection.AddRange(System.DateTime,System.DateTime)">
+            <summary>
+            Adds all the dates in the specified range, which includes the first
+            and last dates, to the collection.
+            </summary>
+            <param name="start">The first date to add to the collection.</param>
+            <param name="end">The last date to add to the collection.</param>
+        </member>
+        <member name="M:VIBlend.Silverlight.Controls.SelectedDatesCollection.ClearItems">
+            <summary>
+            Removes all items from the collection.
+            </summary>
+            <remarks>
+            This implementation raises the CollectionChanged event.
+            </remarks>
+        </member>
+        <member name="M:VIBlend.Silverlight.Controls.SelectedDatesCollection.InsertItem(System.Int32,System.DateTime)">
+            <summary>
+            Inserts an item into the collection at the specified index.
+            </summary>
+            <param name="index">
+            The zero-based index at which item should be inserted.
+            </param>
+            <param name="item">The object to insert.</param>
+            <remarks>
+            This implementation raises the CollectionChanged event.
+            </remarks>
+        </member>
+        <member name="M:VIBlend.Silverlight.Controls.SelectedDatesCollection.RemoveItem(System.Int32)">
+            <summary>
+            Removes the item at the specified index of the collection.
+            </summary>
+            <param name="index">
+            The zero-based index of the element to remove.
+            </param>
+            <remarks>
+            This implementation raises the CollectionChanged event.
+            </remarks>
+        </member>
+        <member name="M:VIBlend.Silverlight.Controls.SelectedDatesCollection.SetItem(System.Int32,System.DateTime)">
+            <summary>
+            Replaces the element at the specified index.
+            </summary>
+            <param name="index">
+            The zero-based index of the element to replace.
+            </param>
+            <param name="item">
+            The new value for the element at the specified index.
+            </param>
+            <remarks>
+            This implementation raises the CollectionChanged event.
+            </remarks>
+        </member>
+        <member name="M:VIBlend.Silverlight.Controls.SelectedDatesCollection.ClearInternal">
+            <summary>
+            Inherited code: Requires comment.
+            </summary>
+        </member>
+        <member name="M:VIBlend.Silverlight.Controls.SelectedDatesCollection.CheckSelectionMode">
+            <summary>
+            Inherited code: Requires comment.
+            </summary>
+            <returns>Inherited code: Requires comment 1.</returns>
+        </member>
+        <member name="M:VIBlend.Silverlight.Controls.SelectedDatesCollection.IsValidThread">
+            <summary>
+            Inherited code: Requires comment.
+            </summary>
+            <returns>Inherited code: Requires comment 1.</returns>
+        </member>
+        <member name="T:VIBlend.Silverlight.Controls.CalendarDateRange">
+            <exclude/>   
+            <summary>
+            Represents a range of dates in a
+            <see cref="T:VIBlend.Silverlight.Controls.Calendar" />.
+            </summary>
+            <QualityBand>Mature</QualityBand>
+        </member>
+        <member name="M:VIBlend.Silverlight.Controls.CalendarDateRange.#ctor(System.DateTime)">
+            <summary>
+            Initializes a new instance of the
+            <see cref="T:VIBlend.Silverlight.Controls.CalendarDateRange" /> class
+            with a single date.
+            </summary>
+            <param name="day">The date to be represented by the range.</param>
+        </member>
+        <member name="M:VIBlend.Silverlight.Controls.CalendarDateRange.#ctor(System.DateTime,System.DateTime)">
+            <summary>
+            Initializes a new instance of the
+            <see cref="T:VIBlend.Silverlight.Controls.CalendarDateRange" /> class
+            with a range of dates.
+            </summary>
+            <param name="start">
+            The start of the range to be represented.
+            </param>
+            <param name="end">The end of the range to be represented.</param>
+        </member>
+        <member name="M:VIBlend.Silverlight.Controls.CalendarDateRange.ContainsAny(VIBlend.Silverlight.Controls.CalendarDateRange)">
+            <summary>
+            Returns true if any day in the given DateTime range is contained in
+            the current CalendarDateRange.
+            </summary>
+            <param name="range">Inherited code: Requires comment 1.</param>
+            <returns>Inherited code: Requires comment 2.</returns>
+        </member>
+        <member name="P:VIBlend.Silverlight.Controls.CalendarDateRange.Start">
+            <summary>
+            Gets the first date in the represented range.
+            </summary>
+            <value>The first date in the represented range.</value>
+        </member>
+        <member name="P:VIBlend.Silverlight.Controls.CalendarDateRange.End">
+            <summary>
+            Gets the last date in the represented range.
+            </summary>
+            <value>The last date in the represented range.</value>
+        </member>
+        <member name="T:VIBlend.Silverlight.Controls.CalendarExtensions">
+            <summary>
+            Inherited code: Requires comment.
+            </summary>
+            <QualityBand>Mature</QualityBand>
+        </member>
+        <member name="F:VIBlend.Silverlight.Controls.CalendarExtensions._suspendedHandlers">
+            <summary>
+            Inherited code: Requires comment.
+            </summary>
+        </member>
+        <member name="M:VIBlend.Silverlight.Controls.CalendarExtensions.IsHandlerSuspended(System.Windows.DependencyObject,System.Windows.DependencyProperty)">
+            <summary>
+            Inherited code: Requires comment.
+            </summary>
+            <param name="obj">Inherited code: Requires comment 1.</param>
+            <param name="dependencyProperty">Inherited code: Requires comment 2.</param>
+            <returns>Inherited code: Requires comment 3.</returns>
+        </member>
+        <member name="M:VIBlend.Silverlight.Controls.CalendarExtensions.SetValueNoCallback(System.Windows.DependencyObject,System.Windows.DependencyProperty,System.Object)">
+            <summary>
+            Inherited code: Requires comment.
+            </summary>
+            <param name="obj">Inherited code: Requires comment 1.</param>
+            <param name="property">Inherited code: Requires comment 2.</param>
+            <param name="value">Inherited code: Requires comment 3.</param>
+        </member>
+        <member name="M:VIBlend.Silverlight.Controls.CalendarExtensions.SuspendHandler(System.Windows.DependencyObject,System.Windows.DependencyProperty,System.Boolean)">
+            <summary>
+            Inherited code: Requires comment.
+            </summary>
+            <param name="obj">Inherited code: Requires comment 1.</param>
+            <param name="dependencyProperty">Inherited code: Requires comment 2.</param>
+            <param name="suspend">Inherited code: Requires comment 3.</param>
+        </member>
+        <member name="M:VIBlend.Silverlight.Controls.CalendarExtensions.GetMetaKeyState(System.Boolean@)">
+            <summary>
+            Inherited code: Requires comment.
+            </summary>
+            <param name="ctrl">Inherited code: Requires comment 1.</param>
+        </member>
+        <member name="M:VIBlend.Silverlight.Controls.CalendarExtensions.GetMetaKeyState(System.Boolean@,System.Boolean@)">
+            <summary>
+            Inherited code: Requires comment.
+            </summary>
+            <param name="ctrl">Inherited code: Requires comment 2.</param>
+            <param name="shift">Inherited code: Requires comment 3.</param>
+        </member>
+        <member name="T:VIBlend.Silverlight.Controls.CalendarButton">
+            <exclude/>   
+            <summary>
+            Represents a button on a
+            <see cref="T:VIBlend.Silverlight.Controls.Calendar" />.
+            </summary>
+            <QualityBand>Mature</QualityBand>
+        </member>
+        <member name="F:VIBlend.Silverlight.Controls.CalendarButton._isCalendarButtonFocused">
+            <summary>
+            A value indicating whether the button is focused.
+            </summary>
+        </member>
+        <member name="F:VIBlend.Silverlight.Controls.CalendarButton._isInactive">
+            <summary>
+            A value indicating whether the button is inactive.
+            </summary>
+        </member>
+        <member name="F:VIBlend.Silverlight.Controls.CalendarButton._isSelected">
+            <summary>
+            A value indicating whether the button is selected.
+            </summary>
+        </member>
+        <member name="M:VIBlend.Silverlight.Controls.CalendarButton.#ctor">
+            <summary>
+            Initializes a new instance of the
+            <see cref="T:VIBlend.Silverlight.Controls.Primitives.CalendarButton" />
+            class.
+            </summary>
+        </member>
+        <member name="M:VIBlend.Silverlight.Controls.CalendarButton.OnLoad(System.Object,System.Windows.RoutedEventArgs)">
+            <summary>
+            Handle the Loaded event.
+            </summary>
+            <param name="sender">The CalendarButton.</param>
+            <param name="e">Event arguments.</param>
+        </member>
+        <member name="M:VIBlend.Silverlight.Controls.CalendarButton.OnApplyTemplate">
+            <summary>
+            Builds the visual tree for the
+            <see cref="T:VIBlend.Silverlight.Controls.Primitives.CalendarButton" />
+            when a new template is applied.
+            </summary>
+        </member>
+        <member name="M:VIBlend.Silverlight.Controls.CalendarButton.OnCreateAutomationPeer">
+            <summary>
+            Returns a CalendarButtonAutomationPeer for use by the Silverlight
+            automation infrastructure.
+            </summary>
+            <returns>
+            CalendarButtonAutomationPeer for the Button object.
+            </returns>
+            <remarks>
+            <para>
+            This method creates a new CalendarButtonAutomationPeer instance if
+            one has not been created for the CalendarButton; otherwise, it
+            returns the CalendarButtonAutomationPeer previously created.
+            </para>
+            <para>
+            Classes that participate in the Silverlight automation
+            infrastructure must implement this method to return a class-specific
+            derived class of AutomationPeer that reports information for
+            automation behavior.
+            </para>
+            </remarks>
+        </member>
+        <member name="M:VIBlend.Silverlight.Controls.CalendarButton.OnMouseLeftButtonDown(System.Windows.Input.MouseButtonEventArgs)">
+            <summary>
+            Provides class handling for the MouseLeftButtonDown event that
+            occurs when the left mouse button is pressed while the mouse pointer
+            is over this control.
+            </summary>
+            <param name="e">The event data. </param>
+            <exception cref="T:System.ArgumentNullException">
+            e is a null reference (Nothing in Visual Basic).
+            </exception>
+            <remarks>
+            This method marks the MouseLeftButtonDown event as handled by
+            setting the MouseButtonEventArgs.Handled property of the event data
+            to true when the button is enabled and its ClickMode is not set to
+            Hover.  Since this method marks the MouseLeftButtonDown event as
+            handled in some situations, you should use the Click event instead
+            to detect a button click.
+            </remarks>
+        </member>
+        <member name="M:VIBlend.Silverlight.Controls.CalendarButton.OnMouseLeftButtonUp(System.Windows.Input.MouseButtonEventArgs)">
+            <summary>
+            Provides handling for the MouseLeftButtonUp event that occurs when
+            the left mouse button is released while the mouse pointer is over
+            this control. 
+            </summary>
+            <param name="e">The event data.</param>
+            <exception cref="T:System.ArgumentNullException">
+            e is a null reference (Nothing in Visual Basic).
+            </exception>
+            <remarks>
+            This method marks the MouseLeftButtonUp event as handled by setting
+            the MouseButtonEventArgs.Handled property of the event data to true
+            when the button is enabled and its ClickMode is not set to Hover.
+            Since this method marks the MouseLeftButtonUp event as handled in
+            some situations, you should use the Click event instead to detect a
+            button click.
+            </remarks>
+        </member>
+        <member name="M:VIBlend.Silverlight.Controls.CalendarButton.SendMouseLeftButtonUp(System.Windows.Input.MouseButtonEventArgs)">
+            <summary>
+            We need to simulate the MouseLeftButtonUp event for the
+            CalendarButton that stays in Pressed state after MouseCapture is
+            released since there is no actual MouseLeftButtonUp event for the
+            release.
+            </summary>
+            <param name="e">Event arguments.</param>
+        </member>
+        <member name="M:VIBlend.Silverlight.Controls.CalendarButton.ChangeVisualState(System.Boolean)">
+            <summary>
+            Change to the correct visual state for the button.
+            </summary>
+            <param name="useTransitions">
+            True to use transitions when updating the visual state, false to
+            snap directly to the new visual state.
+            </param>
+        </member>
+        <member name="P:VIBlend.Silverlight.Controls.CalendarButton.Owner">
+            <summary>
+            Gets or sets the Calendar associated with this button.
+            </summary>
+        </member>
+        <member name="P:VIBlend.Silverlight.Controls.CalendarButton.IsCalendarButtonFocused">
+            <summary>
+            Gets or sets a value indicating whether the button is focused.
+            </summary>
+        </member>
+        <member name="P:VIBlend.Silverlight.Controls.CalendarButton.IsInactive">
+            <summary>
+            Gets or sets a value indicating whether the button is inactive.
+            </summary>
+        </member>
+        <member name="P:VIBlend.Silverlight.Controls.CalendarButton.IsSelected">
+            <summary>
+            Gets or sets a value indicating whether the button is selected.
+            </summary>
+        </member>
+        <member name="E:VIBlend.Silverlight.Controls.CalendarButton.CalendarButtonMouseDown">
+            <summary>
+            Occurs when the left mouse button is pressed (or when the tip of the
+            stylus touches the tablet PC) while the mouse pointer is over a
+            UIElement.
+            </summary>
+        </member>
+        <member name="E:VIBlend.Silverlight.Controls.CalendarButton.CalendarButtonMouseUp">
+            <summary>
+            Occurs when the left mouse button is released (or the tip of the
+            stylus is removed from the tablet PC) while the mouse (or the
+            stylus) is over a UIElement (or while a UIElement holds mouse
+            capture).
+            </summary>
+        </member>
+    </members>
+</doc>
