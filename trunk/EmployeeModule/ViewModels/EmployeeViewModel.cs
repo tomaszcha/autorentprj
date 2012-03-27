@@ -10,6 +10,7 @@ using System.Windows.Media.Animation;
 using System.Windows.Shapes;
 using ModuleInfrastracture.ViewModels;
 using System.ComponentModel;
+using System.Text.RegularExpressions;
 
 namespace EmployeeModule.ViewModels
 {
@@ -17,9 +18,9 @@ namespace EmployeeModule.ViewModels
     /// This class provides a UI-friendly wrapper for the Employee object
     /// and contains properties that an EmployeeView can data bind to
     /// </summary>  
-    public class EmployeeViewModel : ViewModelBase, IDataErrorInfo
+    public class EmployfeViewModel : ViewModelBase, IDataErrorInfo
     {
-        #region PrivateFields
+        #region Private Fields
 
         int _id;
         string _firstName;
@@ -212,13 +213,148 @@ namespace EmployeeModule.ViewModels
 
         public string Error
         {
-            get { throw new NotImplementedException(); }
+            get { return (this as IDataErrorInfo).Error; }
         }
 
         public string this[string columnName]
         {
-            get { throw new NotImplementedException(); }
+            get
+            {
+                string error;
+
+                switch (columnName)
+                {
+                    case "FirstName":
+                    case "LastName":
+                        error = ValidateName();
+                        break;
+                    case "Position":
+                        error = ValidatePosition();
+                        break;
+                    case "Address":
+                        error = ValidateAddress();
+                        break;
+                    case "Phone":
+                        error = ValidatePhone();
+                        break;
+                    case "InsuaranceNumber":
+                    case "LicenceNumber":
+                        error = ValidateInsuarLicenceNumber();
+                        break;                   
+                    case "BirthDay":
+                        error = ValidateBirthDay();
+                        break;
+                    case "HireDate":
+                        error = ValidateHireDate();
+                        break;
+                    case "FireDate":
+                        error = ValidateFireDate();
+                        break;
+                    default:
+                        error = (this as IDataErrorInfo)[columnName];
+                        break;
+                }
+                return error;
+            }
         }
+
+
+        private string ValidateName()
+        {
+            string res = String.Empty;
+            if (string.IsNullOrEmpty(_firstName) || string.IsNullOrEmpty(_lastName))
+            {
+                res = Properties.Resources.EmptyField;
+            }
+            else if (_firstName.Length > 50 || _lastName.Length > 50)
+            {
+                res = Properties.Resources.LongString;
+            }
+            return res;
+        }
+
+        private string ValidatePosition()
+        {
+            string res = String.Empty;
+            if (string.IsNullOrEmpty(_position))
+            {
+                res = Properties.Resources.EmptyField;
+            }
+            else if (_position.Length > 10)
+            {
+                res = Properties.Resources.LongString;
+            }
+            return res;
+        }
+
+        private string ValidateAddress()
+        {
+            string res = String.Empty;
+            if (_address.Length > 150)
+            {
+                res = Properties.Resources.LongString;
+            }
+            return res;
+        }
+
+        private string ValidatePhone()
+        {
+            string res = String.Empty;
+            if (string.IsNullOrEmpty(_phone))
+            {
+                res = Properties.Resources.EmptyField;
+            }
+            else if (_phone.Length > 16)
+            {
+                res = Properties.Resources.LongString;
+            }
+            else if (!Regex.IsMatch(_phone, Properties.Resources.PhoneRegEx))
+            {
+                res = Properties.Resources.InvalidPhone;
+            }
+            return res;
+        }
+
+        private string ValidateInsuarLicenceNumber()
+        {
+            string res = String.Empty;
+            if (_insuaranceNumber.Length > 26 || _licenceNumber.Length > 26)
+            {
+                res = Properties.Resources.LongString;
+            }
+            return res;
+        }               
+
+        private string ValidateBirthDay()
+        {
+            string res = String.Empty;
+            if (_birthDay > System.DateTime.Today.AddYears(-16))
+            {
+                res = Properties.Resources.InvalidDate;
+            }
+            return res;
+        }
+
+        private string ValidateHireDate()
+        {
+            string res = String.Empty;
+            if(_hireDate > System.DateTime.Today)
+            {
+                res = Properties.Resources.InvalidDate;
+            }
+            return res;
+        }       
+        
+        private string ValidateFireDate()
+        {
+            string res = String.Empty;
+            if(_fireDate > System.DateTime.Today)
+            {
+                res = Properties.Resources.InvalidDate;
+            }
+            return res;
+        }     
+
 
         #endregion // IDataErrorInfo
     }
