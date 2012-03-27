@@ -74,8 +74,8 @@ namespace DAL.Administration
             try
             {
                 context.Connection.Open();
-                transaction = context.Connection.BeginTransaction();
-                ////////////////
+                transaction = context.Connection.BeginTransaction();                
+                
                 context.Employee.DeleteObject(context.Employee.First(o => o.Id == guid));
 
                 context.SaveChanges();
@@ -96,9 +96,10 @@ namespace DAL.Administration
             throw new NotImplementedException();
         }
 
-        public void UsersInRole(string roleName)
+        public List<Members> UsersInRole(string roleName)
         {
-            throw new NotImplementedException();
+            AutoRentEntities context = new AutoRentEntities();
+            return context.Roles.First(o => o.Name == roleName).Members.ToList();
         }
 
         public void RemoveUsersFromRoles(string[] logins, Roles[] role)
@@ -108,7 +109,33 @@ namespace DAL.Administration
 
         public void AddUsersToRoles(string[] logins, Roles[] roles)
         {
-            throw new NotImplementedException();
+            AutoRentEntities context = new AutoRentEntities();
+            DbTransaction transaction = null;
+            try
+            {
+                context.Connection.Open();
+                transaction = context.Connection.BeginTransaction();
+
+                foreach (string login in logins)
+                {
+                    Members member = context.Members.First(o => o.Login == login);
+                    foreach (Roles role in roles)
+                    {
+                        member.Roles.Add(role);
+                    }
+                }
+
+                context.SaveChanges();
+                transaction.Commit();
+            }
+            catch
+            {
+                transaction.Rollback();
+            }
+            finally
+            {
+                context.Connection.Close();
+            } 
         }
 
         public List<Roles> RolesForLogin(string login)

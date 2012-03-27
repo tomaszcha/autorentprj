@@ -53,7 +53,6 @@ namespace DAL.Administration
                 context.Connection.Open();
                 transaction = context.Connection.BeginTransaction();
 
-                //Roles roles = context.Roles.First(o => o.Name == role);
                 rulesInRole.RoleId = role.Id;
                 rulesInRole.PermId = permission.Id;
                 
