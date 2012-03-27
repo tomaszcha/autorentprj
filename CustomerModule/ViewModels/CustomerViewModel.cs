@@ -18,7 +18,7 @@ namespace CustomerModule.ViewModels
     /// This class provides a UI-friendly wrapper for the Customer object
     /// and contains properties that an CustomerView can data bind to
     /// </summary>  
-    public class CustomerViewModel : ViewModelBase, IDataErrorInfo
+    public class CustomerViewModel : ViewModelBase, ICustomerViewModel, IDataErrorInfo
     {
         #region Private Fields
 
