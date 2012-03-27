@@ -96,7 +96,7 @@
             </StackPanel>
             <StackPanel Style="{StaticResource StackPnlStyle}" HorizontalAlignment="Center">
                 <Button Content="Save" Name="btnSave" Command="{Binding Path=SaveCommand}" Style="{StaticResource BtnStyle}"/>
-                <Button Content="Cancel" Name="btnCancel" Command="{Binding Path=CancelCommand}" Margin="4,0,0,0" Style="{StaticResource TextBoxStyle}"/>
+                <Button Content="Cancel" Name="btnCancel" Command="{Binding Path=CancelCommand}" Margin="4,0,0,0" Style="{StaticResource BtnStyle}"/>
             </StackPanel>
         </StackPanel>
     </Grid>
