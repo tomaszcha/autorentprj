@@ -13,6 +13,5 @@ namespace DAL.Administration
         List<PermissionRule> ListObjPermRulles();
         void AddPermissionsToRole(string role, PermissionRule permissions, RulesInRole rulesInRole);
         void RemovePermissions(string role, PermissionRule permissions, RulesInRole rulesInRole);
-        List<PermissionRule> PermissionsForRole(string role);
     }
 }

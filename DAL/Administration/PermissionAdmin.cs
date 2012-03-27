@@ -98,13 +98,6 @@ namespace DAL.Administration
             }
         }
 
-        public List<PermissionRule> PermissionsForRole(Roles role)
-        {
-            AutoRentEntities context = new AutoRentEntities();
-            List<PermissionRule> list = 
-                from rulesInRole in context.RulesInRole   
-        }
-
         #endregion IPermissionAdmin Members
     }
 }
