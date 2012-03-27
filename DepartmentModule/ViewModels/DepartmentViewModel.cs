@@ -18,7 +18,7 @@ namespace DepartmentModule.ViewModels
     /// This class provides a UI-friendly wrapper for the Department object
     /// and contains properties that an DepartmentView can data bind to
     /// </summary>  
-    public class DepartmentViewModel : ViewModelBase, IDataErrorInfo
+    public class DepartmentViewModel : ViewModelBase, IDepartmentViewModel, IDataErrorInfo
     {
         #region PrivateFields
 
