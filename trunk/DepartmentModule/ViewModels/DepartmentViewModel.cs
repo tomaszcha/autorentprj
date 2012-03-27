@@ -23,7 +23,7 @@ namespace DepartmentModule.ViewModels
     {
         #region PrivateFields
 
-        int _id;
+        Guid _id;
         int _cityCode;
         string _name;
         string _address;
@@ -37,7 +37,7 @@ namespace DepartmentModule.ViewModels
         /// <summary>
         /// Unique identifier of the department
         /// </summary>
-        public int Id
+        public Guid Id
         {
             get { return _id; }
             private set
