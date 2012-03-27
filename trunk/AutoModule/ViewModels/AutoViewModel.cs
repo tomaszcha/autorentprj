@@ -25,7 +25,7 @@ namespace AutoModule.ViewModels
         string _number;
         string _modelName;
         int _bodyType;
-        string _insuaranceId;
+        string _insuaranceNumber;
         short _class;
         short _year;
         short _mileage;
@@ -87,11 +87,11 @@ namespace AutoModule.ViewModels
         /// </summary>
         public string InsuaranceNumber
         {
-            get { return _insuaranceId; }
+            get { return _insuaranceNumber; }
             set
             {
-                _insuaranceId = value;
-                OnPropertyChanged("InsuaranceId");
+                _insuaranceNumber = value;
+                OnPropertyChanged("InsuaranceNumber");
             }
         }
 
@@ -227,12 +227,157 @@ namespace AutoModule.ViewModels
 
         public string Error
         {
-            get { throw new NotImplementedException(); }
+            get { return (this as IDataErrorInfo).Error; }
         }
 
         public string this[string columnName]
         {
-            get { throw new NotImplementedException(); }
+            get
+            {
+                string error;
+
+                switch (columnName)
+                {
+                    case "Number":
+                        error = ValidateAutoNumber();
+                        break;
+                    case "ModelName":
+                        error = ValidateModelName();
+                        break;
+                    case "BodyType":
+                        error = ValidateBodyType();
+                        break;
+                    case "InsuaranceNumber":
+                        error = ValidateInsuaranceNumber();
+                        break;
+                    case "Class":
+                        error = ValidateClass();
+                        break;
+                    case "Year":
+                        error = ValidateYear();
+                        break;
+                    case "Mileage":
+                        error = ValidateMileage();
+                        break;
+                    case "Engine":
+                        error = ValidateEngine();
+                        break;                   
+                    case "ColorGroup":
+                        error = ValidateColorGroup();
+                        break;
+                    case "DayRate":
+                    case "KmRate":
+                    case "Advance":
+                        error = ValidateRate();
+                        break;
+                    case "Status":
+                        error = ValidateStatus();
+                        break;
+                    default:
+                        error = (this as IDataErrorInfo)[columnName];
+                        break;
+                }
+                return error;
+            }
+        }
+
+
+        private string ValidateAutoNumber()
+        {
+            string res = String.Empty;
+            if (string.IsNullOrEmpty(_number))
+            {
+                res = Properties.Resources.EmptyField;
+            }
+            else if (_number.Length > 10)
+            {
+                res = Properties.Resources.LongString;
+            }
+            return res;
+        }
+
+        private string ValidateModelName()
+        {
+            string res = String.Empty;
+            if (string.IsNullOrEmpty(_modelName))
+            {
+                res = Properties.Resources.EmptyField;
+            }
+            else if (_modelName.Length > 75)
+            {
+                res = Properties.Resources.LongString;
+            }
+            return res;
+        }
+
+        private string ValidateBodyType()
+        {
+            string res = String.Empty;                  
+            return res;
+        }
+
+        private string ValidateInsuaranceNumber()
+        {
+            string res = String.Empty;
+            if (string.IsNullOrEmpty(_insuaranceNumber))
+            {
+                res = Properties.Resources.EmptyField;
+            }
+            else if (_insuaranceNumber.Length > 24)
+            {
+                res = Properties.Resources.LongString;
+            }
+            return res;
+        }
+
+        private string ValidateClass()
+        {
+            string res = String.Empty;               
+            return res;
+        }
+        
+        private string ValidateYear()
+        {
+            string res = String.Empty; 
+            if (_year < 1950 || _year > System.DateTime.Today.Year)
+            {
+                res = Properties.Resources.InvalidDate;
+            }
+            return res;
+        }
+        
+        private string ValidateMileage()
+        {
+            string res = String.Empty;                    
+            return res;
+        }
+        
+        private string ValidateEngine()
+        {
+            string res = String.Empty;           
+            return res;
+        }
+        
+        private string ValidateColorGroup()
+        {
+            string res = String.Empty;            
+            return res;
+        }
+        
+        private string ValidateRate()
+        {
+            string res = String.Empty;
+            if (_dayRate < 0 || _kmRate < 0 || _advance < 0)
+            {
+                res = Properties.Resources.EmptyField;
+            }
+            return res;
+        }
+        
+        private string ValidateStatus()
+        {
+            string res = String.Empty;            
+            return res;
         }
 
         #endregion // IDataErrorInfo
