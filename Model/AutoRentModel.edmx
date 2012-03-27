@@ -1370,7 +1370,7 @@
     </Options>
     <!-- Diagram content (shape and connector positions) -->
     <Diagrams>
-      <Diagram Name="AutoRentModel">
+      <Diagram Name="AutoRentModel" ZoomLevel="86">
         <EntityTypeShape EntityType="Model.Auto" Width="1.5" PointX="0.75" PointY="12.5" Height="3.9033007812499978" IsExpanded="true" />
         <EntityTypeShape EntityType="Model.AutoPhotos" Width="1.5" PointX="9.75" PointY="7.5" Height="2.1725878906249996" IsExpanded="true" />
         <EntityTypeShape EntityType="Model.Customer" Width="1.5" PointX="0.75" PointY="8" Height="3.7109993489583317" IsExpanded="true" />
