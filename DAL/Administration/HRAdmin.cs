@@ -111,9 +111,15 @@ namespace DAL.Administration
             throw new NotImplementedException();
         }
 
-        public void RolesForLogin(string login)
+        public List<Roles> RolesForLogin(string login)
         {
-            throw new NotImplementedException();
+            AutoRentEntities context = new AutoRentEntities();
+            IEnumerable<Roles> list =
+              from roles in context.Members.First(o => o.Login == login).Roles
+              from rulesInRole in context.RulesInRole
+            where rulesInRole.RoleId == roles.Id
+              select roles;
+            return list.ToList(); 
         }
 
         public void Lock(string login)
