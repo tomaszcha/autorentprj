@@ -4,6 +4,8 @@ using Microsoft.Practices.ServiceLocation;
 using Microsoft.Practices.Unity;
 using System.Windows;
 using ModuleInfrastracture.Views;
+using EmployeeModule;
+
 
 namespace Main
 {
@@ -41,7 +43,8 @@ namespace Main
         {
             base.ConfigureModuleCatalog();
             ModuleCatalog moduleCatalog = (ModuleCatalog)ModuleCatalog;
-            //moduleCatalog.AddModule(typeof(CustomerModule.CustomerModule));
+            moduleCatalog.AddModule(typeof(EmployeeModule.EmployeeModule));
+            moduleCatalog.AddModule(typeof(CustomerMenuModule.CustomerMenuModule));
         }
 
         #endregion Overrides of Bootstrapper

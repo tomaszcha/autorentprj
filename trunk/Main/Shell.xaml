@@ -5,8 +5,10 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     xmlns:prism="clr-namespace:Microsoft.Practices.Prism.Regions;assembly=Microsoft.Practices.Prism"
     xmlns:regions="clr-namespace:ShellInfrastracture;assembly=ShellInfrastracture"
+    xmlns:menu="clr-namespace:VIBlend.Silverlight.Controls;assembly=VIBlend.Silverlight.Menu"
+             
     mc:Ignorable="d"
-    d:DesignHeight="300" d:DesignWidth="400">
+    d:DesignHeight="300" d:DesignWidth="400" xmlns:sdk="http://schemas.microsoft.com/winfx/2006/xaml/presentation/sdk">
 
     <Grid x:Name="LayoutRoot" Background="White">
             <Grid.RowDefinitions>
@@ -26,6 +28,7 @@
                        prism:RegionManager.RegionName="LeftRegion"/>
             <ContentControl Grid.Column="1" Grid.Row="1" HorizontalAlignment="Stretch"
                        VerticalAlignment="Stretch"
-                       prism:RegionManager.RegionName="RightRegion"/>
+                       prism:RegionManager.RegionName="RightRegion">            
+        </ContentControl>
     </Grid>
 </UserControl>
