@@ -5,22 +5,22 @@ using System.Runtime.InteropServices;
 // Управление общими сведениями о сборке осуществляется с помощью 
 // набора атрибутов. Измените значения этих атрибутов, чтобы изменить сведения,
 // связанные со сборкой.
-[assembly: AssemblyTitle("EventInfrastracture")]
+[assembly: AssemblyTitle("BLL")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("EventInfrastracture")]
+[assembly: AssemblyProduct("BLL")]
 [assembly: AssemblyCopyright("Copyright ©  2012")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 
-// Установка значения false атрибута ComVisible делает типы этой сборки невидимыми 
-// для компонентов COM.  Если необходимо обратиться к типу в этой сборке через 
-// COM, задайте атрибуту ComVisible значение true для требуемого типа.
+// Параметр ComVisible со значением FALSE делает типы в сборке невидимыми 
+// для COM-компонентов.  Если требуется обратиться к типу в этой сборке через 
+// COM, задайте атрибуту ComVisible значение TRUE для этого типа.
 [assembly: ComVisible(false)]
 
-// Следующий GUID служит для идентификации библиотеки типов, если этот проект видим для COM
-[assembly: Guid("bfb73145-6396-4dc5-b030-eb76b51ec068")]
+// Следующий GUID служит для идентификации библиотеки типов, если этот проект будет видимым для COM
+[assembly: Guid("de87f4d2-cc21-4a67-9b34-3c0402987901")]
 
 // Сведения о версии сборки состоят из следующих четырех значений:
 //
@@ -30,6 +30,7 @@ using System.Runtime.InteropServices;
 //      Редакция
 //
 // Можно задать все значения или принять номер построения и номер редакции по умолчанию, 
-// с помощью знака "*", как показано ниже:
+// используя "*", как показано ниже:
+// [assembly: AssemblyVersion("1.0.*")]
 [assembly: AssemblyVersion("1.0.0.0")]
 [assembly: AssemblyFileVersion("1.0.0.0")]
