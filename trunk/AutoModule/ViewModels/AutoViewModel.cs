@@ -17,7 +17,7 @@ namespace AutoModule.ViewModels
     /// This class provides a UI-friendly wrapper for the Auto object
     /// and contains properties that an AutoView can data bind to
     /// </summary>   
-    public class AutoViewModel : ViewModelBase, IDataErrorInfo
+    public class AutoViewModel : ViewModelBase, IAutoViewModel, IDataErrorInfo
     {
 
         #region PrivateFields
