@@ -13,7 +13,7 @@ namespace DAL.Administration
         void Registrate(Members member);
         void RemoveEmployeProfile(Guid guid);
         void RemoveCustomerProfile(Guid guid);
-        void UsersInRole(string roleName);
+        List<Members> UsersInRole(string roleName);
         void RemoveUsersFromRoles(string[] logins, Roles[] role);
         void AddUsersToRoles(string[] logins, Roles[] roles);
         List<Roles> RolesForLogin(string login);
