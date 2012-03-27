@@ -10,6 +10,7 @@ using System.Windows.Media.Animation;
 using System.Windows.Shapes;
 using ModuleInfrastracture.ViewModels;
 using System.ComponentModel;
+using System.Text.RegularExpressions;
 
 namespace CustomerModule.ViewModels
 {
@@ -211,7 +212,7 @@ namespace CustomerModule.ViewModels
                     case "Passport":
                         error = ValidatePassport();
                         break;
-                    case "Birthday":
+                    case "BirthDay":
                         error = ValidateBirthDay();
                         break;                                      
                     default:
@@ -278,7 +279,7 @@ namespace CustomerModule.ViewModels
         private string ValidateInsuarLicenceNumber()
         {
             string res = String.Empty;
-            if (_insuaranceNumber.Length > 26 || _licenceNumber > 26)
+            if (_insuaranceNumber.Length > 26 || _licenceNumber.Length > 26)
             {
                 res = Properties.Resources.LongString;
             }
@@ -295,7 +296,7 @@ namespace CustomerModule.ViewModels
             return res;
         }
 
-        private string BirthDay()
+        private string ValidateBirthDay()
         {
             string res = String.Empty;
             if (_birthDay > System.DateTime.Today.AddYears(-16))
