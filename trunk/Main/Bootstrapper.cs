@@ -5,6 +5,7 @@ using Microsoft.Practices.Unity;
 using System.Windows;
 using ModuleInfrastracture.Views;
 using EmployeeModule;
+using UserRegistrationModule;
 
 
 namespace Main
@@ -43,6 +44,7 @@ namespace Main
         {
             base.ConfigureModuleCatalog();
             ModuleCatalog moduleCatalog = (ModuleCatalog)ModuleCatalog;
+            //moduleCatalog.AddModule(typeof(UserRegistrationModule.UserRegistrationModule));
             moduleCatalog.AddModule(typeof(EmployeeModule.EmployeeModule));
             moduleCatalog.AddModule(typeof(CustomerMenuModule.CustomerMenuModule));
         }
