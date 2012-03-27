@@ -4,9 +4,64 @@
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d"
-    d:DesignHeight="300" d:DesignWidth="400">
-    
+    d:DesignHeight="300" d:DesignWidth="400" xmlns:sdk="http://schemas.microsoft.com/winfx/2006/xaml/presentation/sdk">
+    <UserControl.Resources>
+        <Style x:Key="LblTitleStyle" TargetType="sdk:Label">
+            <Setter Property="FontWeight" Value="Bold"/>
+            <Setter Property="FontSize" Value="14"/>
+            <Setter Property="Width" Value="200"/>
+            <Setter Property="Foreground" Value="LightSlateGray" />
+        </Style>
+        <Style x:Key="LblFieldStyle" TargetType="sdk:Label">
+            <Setter Property="Width" Value="120"/>
+        </Style>
+        <Style x:Key="TextBoxStyle" TargetType="TextBox">
+            <Setter Property="Width" Value="200"/>
+            <Setter Property="Height" Value="23"/>
+            <Setter Property="VerticalAlignment" Value="Top"/>
+        </Style>
+        <Style x:Key="TextBlockStyle" TargetType="TextBlock">          
+            <Setter Property="HorizontalAlignment" Value="Center"/>
+            <Setter Property="FontSize" Value="14"/>
+            <Setter Property="Margin" Value="10"/>            
+        </Style>
+        <Style x:Key="StackPnlStyle" TargetType="StackPanel">
+            <Setter Property="Orientation" Value="Horizontal"/>
+            <Setter Property="Margin" Value="5"/>
+        </Style>
+        <Style x:Key="BtnStyle" TargetType="Button">
+            <Setter Property="Height" Value="23"/>
+            <Setter Property="Width" Value="80"/>
+        </Style>
+    </UserControl.Resources>
     <Grid x:Name="LayoutRoot" Background="White">
-
+        <StackPanel Orientation="Vertical" HorizontalAlignment="Center">
+            <StackPanel Style="{StaticResource StackPnlStyle}">
+                <sdk:Label Content="User registration" Style="{StaticResource LblTitleStyle}"/>
+            </StackPanel>
+            <StackPanel Style="{StaticResource StackPnlStyle}">
+                <TextBlock Name="txtBoxFirstName" Text="{Binding FirstName}" Style="{StaticResource TextBlockStyle}"/>
+                <TextBlock Name="txtBoxLastName" Text="{Binding LastName}" Style="{StaticResource TextBlockStyle}"/>
+            </StackPanel>
+            <StackPanel Style="{StaticResource StackPnlStyle}">
+                <TextBlock Name="txtBoxPosition" Text="{Binding Position}" Style="{StaticResource TextBlockStyle}"/>                
+            </StackPanel>
+            <StackPanel Style="{StaticResource StackPnlStyle}">
+                <sdk:Label Content="Login" Style="{StaticResource LblFieldStyle}"/>
+                <TextBox Name="txtBoxLogin" Text="{Binding Login}" Style="{StaticResource TextBoxStyle}"/>
+            </StackPanel>            
+            <StackPanel Style="{StaticResource StackPnlStyle}">
+                <sdk:Label Content="Password" Style="{StaticResource LblFieldStyle}"/>
+                <TextBox Name="txtBoxPassword" Text="{Binding Password}" Style="{StaticResource TextBoxStyle}"/>
+            </StackPanel>
+            <StackPanel Style="{StaticResource StackPnlStyle}">
+                <sdk:Label Content="Email" VerticalAlignment="Top" Style="{StaticResource LblFieldStyle}"/>
+                <TextBox Name="txtBoxEmail" Text="{Binding Description}" Style="{StaticResource TextBoxStyle}"/>
+            </StackPanel>
+            <StackPanel Style="{StaticResource StackPnlStyle}" HorizontalAlignment="Center">
+                <Button Content="Save" Name="btnSave" Command="{Binding Path=SaveCommand}" Style="{StaticResource BtnStyle}"/>
+                <Button Content="Cancel" Name="btnCancel" Command="{Binding Path=CancelCommand}" Margin="4,0,0,0" Style="{StaticResource BtnStyle}"/>
+            </StackPanel>            
+        </StackPanel>
     </Grid>
 </UserControl>
