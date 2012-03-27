@@ -1,0 +1,4 @@
+﻿[$RootKey$\ToolboxControlsInstaller\VIBlend.Silverlight.Extensions, Version=6.0.0.0, Culture=neutral, PublicKeyToken=d6e3f33798f73756, processorArchitecture=MSIL]
+@="VIBlend Silverlight Controls 6.0"
+"Codebase"="$PackageFolder$\VIBlend.Silverlight.Extensions.dll"
+"SilverlightControls"="2"
