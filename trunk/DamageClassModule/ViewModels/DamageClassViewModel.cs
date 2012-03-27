@@ -77,14 +77,44 @@ namespace DamageClassModule.ViewModels
 
         public string Error
         {
-            get { throw new NotImplementedException(); }
+            get { return (this as IDataErrorInfo).Error; }
         }
 
         public string this[string columnName]
         {
-            get { throw new NotImplementedException(); }
-        }
+            get
+            {
+                string error;
 
+                switch (columnName)
+                {                    
+                    case "Name":
+                        error = ValidateName();
+                        break;                                    
+                    default:
+                        error = (this as IDataErrorInfo)[columnName];
+                        break;
+                }
+
+                return error;
+            }
+        }
+        
+        private string ValidateName()
+        {
+            string res = String.Empty;
+
+            if (string.IsNullOrEmpty(_name))
+            {
+                res = Properties.Resources.EmptyField;
+            }
+            else if (_name.Length > 150)
+            {
+                res = Properties.Resources.LongString;
+            }
+            return res;
+        }
+               
         #endregion // IDataErrorInfo
     }
 }
