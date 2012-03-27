@@ -138,6 +138,10 @@
       <Project>{FBE74DE8-0696-44A5-8838-AEF3F7AFE32B}</Project>
       <Name>ShellInfrastracture</Name>
     </ProjectReference>
+    <ProjectReference Include="..\UserRegistrationModule\UserRegistrationModule.csproj">
+      <Project>{A30B7169-A6B1-4D0A-A4F6-C1D83730CC3C}</Project>
+      <Name>UserRegistrationModule</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Silverlight\$(SilverlightVersion)\Microsoft.Silverlight.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
