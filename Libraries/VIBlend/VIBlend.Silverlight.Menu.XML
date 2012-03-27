@@ -1,0 +1,979 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>VIBlend.Silverlight.Menu</name>
+    </assembly>
+    <members>
+        <member name="T:VIBlend.Silverlight.Controls.MenuCancelEventHandler">
+            <exclude/>   
+        </member>
+        <member name="T:VIBlend.Silverlight.Controls.MenuCancelEventArgs">
+            <summary>
+            Provides data for Menu's cancelable events.
+            </summary>
+        </member>
+        <member name="M:VIBlend.Silverlight.Controls.MenuCancelEventArgs.#ctor(VIBlend.Silverlight.Controls.MenuItem)">
+            <summary>
+            Initializes a new instance of the <see cref="T:VIBlend.Silverlight.Controls.MenuCancelEventArgs"/> class.
+            </summary>
+            <param name="item">The item.</param>
+        </member>
+        <member name="P:VIBlend.Silverlight.Controls.MenuCancelEventArgs.Item">
+            <summary>
+            Gets the item.
+            </summary>
+            <value>The item.</value>
+        </member>
+        <member name="T:VIBlend.Silverlight.Controls.ContextMenu">
+            <summary>
+            Represents a Menu opened in a pop-up control.
+            </summary>
+        </member>
+        <member name="T:VIBlend.Silverlight.Controls.Menu">
+            <summary>
+            Represents a Menu control.
+            </summary>
+        </member>
+        <member name="M:VIBlend.Silverlight.Controls.Menu.OnPopupLocationChanging(VIBlend.Silverlight.Controls.PopupOffsetEventArgs)">
+            <summary>
+            Raises the <see cref="E:PopupLocationChanging"/> event.
+            </summary>
+            <param name="args">The <see cref="T:VIBlend.Silverlight.Controls.PopupOffsetEventArgs"/> instance containing the event data.</param>
+        </member>
+        <member name="M:VIBlend.Silverlight.Controls.Menu.OnCreateAutomationPeer">
+            <summary>
+            When implemented in a derived class, returns class-specific <see cref="T:System.Windows.Automation.Peers.AutomationPeer"/> implementations for the Silverlight automation infrastructure.
+            </summary>
+            <returns>
+            The class-specific <see cref="T:System.Windows.Automation.Peers.AutomationPeer"/> subclass to return.
+            </returns>
+        </member>
+        <member name="M:VIBlend.Silverlight.Controls.Menu.OnShortcutKeyPressed(VIBlend.Silverlight.Controls.ShortcutKeyEventArgs)">
+            <summary>
+            Represents the ShortcutKeyPressed event's event handler.
+            </summary>
+            <param name="args"></param>
+        </member>
+        <member name="M:VIBlend.Silverlight.Controls.Menu.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:VIBlend.Silverlight.Controls.Menu"/> class.
+            </summary>
+        </member>
+        <member name="M:VIBlend.Silverlight.Controls.Menu.OnKeyDown(System.Windows.Input.KeyEventArgs)">
+            <summary>
+            Called before the <see cref="E:System.Windows.UIElement.KeyDown"/> event occurs.
+            </summary>
+            <param name="e">The data for the event.</param>
+        </member>
+        <member name="M:VIBlend.Silverlight.Controls.Menu.ResetItemHighlight(VIBlend.Silverlight.Controls.MenuItem)">
+            <summary>
+            Resets the item highlight.
+            </summary>
+            <param name="item">The item.</param>
+        </member>
+        <member name="M:VIBlend.Silverlight.Controls.Menu.OpenMenuItem(VIBlend.Silverlight.Controls.MenuItem)">
+            <summary>
+            Opens the menu item popup control and all parent menu items popup controls.
+            </summary>
+            <param name="item"></param>
+        </member>
+        <member name="M:VIBlend.Silverlight.Controls.Menu.CloseMenuItem(VIBlend.Silverlight.Controls.MenuItem)">
+            <summary>
+            Closes the menu item pop up
+            </summary>
+            <param name="item">The item.</param>
+        </member>
+        <member name="M:VIBlend.Silverlight.Controls.Menu.ProcessDownKey">
+            <summary>
+            Processes down key.
+            </summary>
+        </member>
+        <member name="M:VIBlend.Silverlight.Controls.Menu.OnKeyUp(System.Windows.Input.KeyEventArgs)">
+            <summary>
+            Called before the <see cref="E:System.Windows.UIElement.KeyUp"/> event occurs.
+            </summary>
+            <param name="e">The data for the event.</param>
+        </member>
+        <member name="M:VIBlend.Silverlight.Controls.Menu.OnLostFocus(System.Windows.RoutedEventArgs)">
+            <summary>
+            Called before the <see cref="E:System.Windows.UIElement.LostFocus"/> event occurs.
+            </summary>
+            <param name="e">The data for the event.</param>
+        </member>
+        <member name="M:VIBlend.Silverlight.Controls.Menu.OnPopupOpening(VIBlend.Silverlight.Controls.MenuCancelEventArgs)">
+            <summary>
+            Fires the PopupOpening event.
+            </summary>
+            <param name="args"></param>
+        </member>
+        <member name="M:VIBlend.Silverlight.Controls.Menu.OnItemClicked(VIBlend.Silverlight.Controls.MenuEventArgs)">
+            <summary>
+            Fires the ItemClicked event.
+            </summary>
+            <param name="args"></param>
+        </member>
+        <member name="M:VIBlend.Silverlight.Controls.Menu.OnPopupClosing(VIBlend.Silverlight.Controls.MenuCancelEventArgs)">
+            <summary>
+            Fires the PopupClosing event.
+            </summary>
+            <param name="args"></param>
+        </member>
+        <member name="M:VIBlend.Silverlight.Controls.Menu.OnPopupOpened(VIBlend.Silverlight.Controls.MenuEventArgs)">
+            <summary>
+            Fires the PopupOpened event.
+            </summary>
+            <param name="args"></param>
+        </member>
+        <member name="M:VIBlend.Silverlight.Controls.Menu.OnPopupClosed(VIBlend.Silverlight.Controls.MenuEventArgs)">
+            <summary>
+            Fires the PopupClosed event.
+            </summary>
+            <param name="args"></param>
+        </member>
+        <member name="F:VIBlend.Silverlight.Controls.Menu.HorizontalTemplateProperty">
+            <summary>
+            Represents the HorizontalThemplateProperty.
+            </summary>
+        </member>
+        <member name="F:VIBlend.Silverlight.Controls.Menu.VerticalTemplateProperty">
+            <summary>
+            Represents the VerticalTemplateProperty.
+            </summary>
+        </member>
+        <member name="F:VIBlend.Silverlight.Controls.Menu.EnableClickToOpenProperty">
+            <summary>
+            Represents the EnableClickToOpenProperty.
+            </summary>
+        </member>
+        <member name="F:VIBlend.Silverlight.Controls.Menu.OrientationProperty">
+            <exclude/>
+        </member>
+        <member name="M:VIBlend.Silverlight.Controls.Menu.GetContainerForItemOverride">
+            <summary>
+            Creates or identifies the element that is used to display the given item.
+            </summary>
+            <returns>
+            The element that is used to display the given item.
+            </returns>
+        </member>
+        <member name="M:VIBlend.Silverlight.Controls.Menu.ClearContainerForItemOverride(System.Windows.DependencyObject,System.Object)">
+            <summary>
+            Undoes the effects of the <see cref="M:System.Windows.Controls.ItemsControl.PrepareContainerForItemOverride(System.Windows.DependencyObject,System.Object)"/> method.
+            </summary>
+            <param name="element">The container element.</param>
+            <param name="item">The item.</param>
+        </member>
+        <member name="M:VIBlend.Silverlight.Controls.Menu.IsItemItsOwnContainerOverride(System.Object)">
+            <summary>
+            Determines if the specified item is (or is eligible to be) its own container.
+            </summary>
+            <param name="item">The item to check.</param>
+            <returns>
+            true if the item is (or is eligible to be) its own container; otherwise, false.
+            </returns>
+        </member>
+        <member name="M:VIBlend.Silverlight.Controls.Menu.PrepareContainerForItemOverride(System.Windows.DependencyObject,System.Object)">
+            <summary>
+            Prepares the specified element to display the specified item.
+            </summary>
+            <param name="element">The element used to display the specified item.</param>
+            <param name="item">The item to display.</param>
+        </member>
+        <member name="F:VIBlend.Silverlight.Controls.Menu.ItemContainerStyleProperty">
+            <summary>
+            Identifies the
+            <see cref="P:System.Windows.Controls.TreeView.ItemContainerStyle" />
+            dependency property.
+            </summary>
+            <value>
+            The identifier for the
+            <see cref="P:System.Windows.Controls.TreeView.ItemContainerStyle" />
+            dependency property.
+            </value>
+        </member>
+        <member name="M:VIBlend.Silverlight.Controls.Menu.OnItemContainerStylePropertyChanged(System.Windows.DependencyObject,System.Windows.DependencyPropertyChangedEventArgs)">
+            <summary>
+            ItemContainerStyleProperty property changed handler.
+            </summary>
+            <param name="d">
+            TreeView that changed its ItemContainerStyle.
+            </param>
+            <param name="e">Event arguments.</param>
+        </member>
+        <member name="M:VIBlend.Silverlight.Controls.Menu.OnItemsChanged(System.Collections.Specialized.NotifyCollectionChangedEventArgs)">
+            <summary>
+            Fires the ItemsChanged event.
+            </summary>
+            <param name="e"></param>
+        </member>
+        <member name="M:VIBlend.Silverlight.Controls.Menu.OnApplyTemplate">
+            <summary>
+            When overridden in a derived class, is invoked whenever application code or internal processes (such as a rebuilding layout pass) call <see cref="M:System.Windows.Controls.Control.ApplyTemplate"/>. In simplest terms, this means the method is called just before a UI element displays in an application. For more information, see Remarks.
+            </summary>
+        </member>
+        <member name="M:VIBlend.Silverlight.Controls.Menu.OnPropertyChanged(System.String)">
+            <summary>
+            Called when a property is changed.
+            </summary>
+            <param name="propertyName">Name of the property.</param>
+        </member>
+        <member name="E:VIBlend.Silverlight.Controls.Menu.PopupLocationChanging">
+            <summary>
+            Occurs when the popup is opening. 
+            </summary>
+        </member>
+        <member name="E:VIBlend.Silverlight.Controls.Menu.ShortcutKeyPressed">
+            <summary>
+            Occurs when a shortcut key is pressed.
+            </summary>
+        </member>
+        <member name="P:VIBlend.Silverlight.Controls.Menu.AnimationType">
+            <summary>
+            Gets or sets the pop up control expand animation type.
+            </summary>
+        </member>
+        <member name="P:VIBlend.Silverlight.Controls.Menu.Items">
+            <summary>
+            Gets the collection used to generate the content of the control.
+            </summary>
+            <value></value>
+            <returns>The collection that is used to generate the content of the control, if it exists; otherwise, null. The default is an empty collection.</returns>
+        </member>
+        <member name="E:VIBlend.Silverlight.Controls.Menu.PopupOpening">
+            <summary>
+            Occurs when popup is opening.
+            </summary>
+        </member>
+        <member name="E:VIBlend.Silverlight.Controls.Menu.PopupClosing">
+            <summary>
+            Occurs when popup is closing.
+            </summary>
+        </member>
+        <member name="E:VIBlend.Silverlight.Controls.Menu.PopupOpened">
+            <summary>
+            Occurs when popup is opened.
+            </summary>
+        </member>
+        <member name="E:VIBlend.Silverlight.Controls.Menu.ItemClicked">
+            <summary>
+            Occurs when item is clicked.
+            </summary>
+        </member>
+        <member name="E:VIBlend.Silverlight.Controls.Menu.PopupClosed">
+            <summary>
+            Occurs when popup is closed.
+            </summary>
+        </member>
+        <member name="P:VIBlend.Silverlight.Controls.Menu.HorizontalTemplate">
+            <summary>
+            Gets or sets the horizontal menu template.
+            </summary>
+        </member>
+        <member name="P:VIBlend.Silverlight.Controls.Menu.VerticalTemplate">
+            <summary>
+            Gets or sets the vertical menu template.
+            </summary>
+        </member>
+        <member name="P:VIBlend.Silverlight.Controls.Menu.EnableClickToOpen">
+            <summary>
+            Gets or sets whether the user should click to open the pop up control.
+            </summary>
+        </member>
+        <member name="P:VIBlend.Silverlight.Controls.Menu.Orientation">
+            <summary>
+            Gets or sets the menu orientation. The menu could be horizontal or vertical.
+            </summary>
+        </member>
+        <member name="P:VIBlend.Silverlight.Controls.Menu.ItemContainerStyle">
+            <summary>
+            Gets or sets the <see cref="T:System.Windows.Style" /> that is
+            applied to the container element generated for each item.
+            </summary>
+            <value>
+            The <see cref="T:System.Windows.Style" /> applied to the container
+            element that contains each item.
+            </value>
+        </member>
+        <member name="E:VIBlend.Silverlight.Controls.Menu.PropertyChanged">
+            <summary>
+            Occurs when a property is changed.
+            </summary>
+        </member>
+        <member name="F:VIBlend.Silverlight.Controls.ContextMenu.IsPopupEnabledProperty">
+            <exclude/>
+        </member>
+        <member name="M:VIBlend.Silverlight.Controls.ContextMenu.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:VIBlend.Silverlight.Controls.ContextMenu"/> class.
+            </summary>
+        </member>
+        <member name="M:VIBlend.Silverlight.Controls.ContextMenu.OnApplyTemplate">
+            <summary>
+            When overridden in a derived class, is invoked whenever application code or internal processes (such as a rebuilding layout pass) call <see cref="M:System.Windows.Controls.Control.ApplyTemplate"/>. In simplest terms, this means the method is called just before a UI element displays in an application. For more information, see Remarks.
+            </summary>
+        </member>
+        <member name="M:VIBlend.Silverlight.Controls.ContextMenu.OnLostFocus(System.Windows.RoutedEventArgs)">
+            <summary>
+            Called before the <see cref="E:System.Windows.UIElement.LostFocus"/> event occurs.
+            </summary>
+            <param name="e">The data for the event.</param>
+        </member>
+        <member name="M:VIBlend.Silverlight.Controls.ContextMenu.OnKeyDown(System.Windows.Input.KeyEventArgs)">
+            <summary>
+            Called before the <see cref="E:System.Windows.UIElement.KeyDown"/> event occurs.
+            </summary>
+            <param name="e">The data for the event.</param>
+        </member>
+        <member name="M:VIBlend.Silverlight.Controls.ContextMenu.Open(System.Windows.Point,System.Boolean)">
+            <summary>
+            Opens the context menu.
+            </summary>
+            <param name="location"></param>
+            <param name="useApplicationBoundariesAsRestriction"></param>
+        </member>
+        <member name="M:VIBlend.Silverlight.Controls.ContextMenu.AddToVisualTree(VIBlend.Silverlight.Controls.ContextMenu)">
+            <summary>
+            Adds to visual tree.
+            </summary>
+            <param name="menu">The menu.</param>
+        </member>
+        <member name="M:VIBlend.Silverlight.Controls.ContextMenu.Open(System.Windows.Point)">
+            <summary>
+            Opens the context menu on a specified location.
+            </summary>
+            <param name="location"></param>
+        </member>
+        <member name="M:VIBlend.Silverlight.Controls.ContextMenu.OnItemsChanged(System.Collections.Specialized.NotifyCollectionChangedEventArgs)">
+            <summary>
+            Fires the ItemsChanged event.
+            </summary>
+            <param name="e"></param>
+        </member>
+        <member name="M:VIBlend.Silverlight.Controls.ContextMenu.Close">
+            <summary>
+            Closes this instance.
+            </summary>
+        </member>
+        <member name="P:VIBlend.Silverlight.Controls.ContextMenu.IsPopupEnabled">
+            <summary>
+            Gets or sets whether the context menu can display a popup control.
+            </summary>
+        </member>
+        <member name="P:VIBlend.Silverlight.Controls.ContextMenu.Popup">
+            <summary>
+            Gets the context menu popup.
+            </summary>
+        </member>
+        <member name="P:VIBlend.Silverlight.Controls.ContextMenu.CanCloseOnLostFocus">
+            <summary>
+            Gets or sets a value indicating whether this instance can scroll into view.
+            </summary>
+            <value>
+            	<c>true</c> if this instance can scroll into view; otherwise, <c>false</c>.
+            </value>
+        </member>
+        <member name="P:VIBlend.Silverlight.Controls.ContextMenu.IsOpened">
+            <summary>
+            Gets a value indicating whether this instance is opened.
+            </summary>
+            <value><c>true</c> if this instance is opened; otherwise, <c>false</c>.</value>
+        </member>
+        <member name="T:VIBlend.Silverlight.Controls.PopupOffsetEventArgs">
+            <exclude/>
+        </member>
+        <member name="M:VIBlend.Silverlight.Controls.PopupOffsetEventArgs.#ctor(System.Windows.Point)">
+            <summary>
+            Initializes a new instance of the <see cref="T:VIBlend.Silverlight.Controls.PopupOffsetEventArgs"/> class.
+            </summary>
+            <param name="location">The location.</param>
+        </member>
+        <member name="P:VIBlend.Silverlight.Controls.PopupOffsetEventArgs.Location">
+            <summary>
+            Gets or sets the location.
+            </summary>
+            <value>The location.</value>
+        </member>
+        <member name="P:VIBlend.Silverlight.Controls.PopupOffsetEventArgs.Handled">
+            <summary>
+            Gets or sets a value indicating whether this <see cref="T:VIBlend.Silverlight.Controls.PopupOffsetEventArgs"/> is handled.
+            </summary>
+            <value><c>true</c> if handled; otherwise, <c>false</c>.</value>
+        </member>
+        <member name="T:VIBlend.Silverlight.Controls.ShortcutKeyEventHandler">
+            <exclude/>   
+        </member>
+        <member name="T:VIBlend.Silverlight.Controls.ShortcutKeyEventArgs">
+            <exclude/>   
+        </member>
+        <member name="M:VIBlend.Silverlight.Controls.ShortcutKeyEventArgs.#ctor(VIBlend.Silverlight.Controls.MenuItem)">
+            <summary>
+            Initializes a new instance of the <see cref="T:VIBlend.Silverlight.Controls.ShortcutKeyEventArgs"/> class.
+            </summary>
+            <param name="sender">The sender.</param>
+        </member>
+        <member name="P:VIBlend.Silverlight.Controls.ShortcutKeyEventArgs.Item">
+            <summary>
+            Gets or sets the item.
+            </summary>
+            <value>The item.</value>
+        </member>
+        <member name="T:VIBlend.Silverlight.Controls.PopupBoundsCalculatedEventArgs">
+            <summary>
+            Represents a class that contains Popup event data.
+            </summary>
+        </member>
+        <member name="M:VIBlend.Silverlight.Controls.PopupBoundsCalculatedEventArgs.#ctor(System.Windows.Controls.Primitives.Popup,System.Double,System.Double,System.Double,System.Double)">
+            <summary>
+            Initializes a new instance of the <see cref="T:VIBlend.Silverlight.Controls.PopupBoundsCalculatedEventArgs"/> class.
+            </summary>
+            <param name="popup">The popup.</param>
+            <param name="width">The width.</param>
+            <param name="height">The height.</param>
+            <param name="verticalOffset">The vertical offset.</param>
+            <param name="horizontalOffset">The horizontal offset.</param>
+        </member>
+        <member name="P:VIBlend.Silverlight.Controls.PopupBoundsCalculatedEventArgs.Width">
+            <summary>
+            Gets or sets the width.
+            </summary>
+            <value>The width.</value>
+        </member>
+        <member name="P:VIBlend.Silverlight.Controls.PopupBoundsCalculatedEventArgs.Height">
+            <summary>
+            Gets or sets the height.
+            </summary>
+            <value>The height.</value>
+        </member>
+        <member name="P:VIBlend.Silverlight.Controls.PopupBoundsCalculatedEventArgs.HorizontalOffset">
+            <summary>
+            Gets or sets the horizontal offset.
+            </summary>
+            <value>The horizontal offset.</value>
+        </member>
+        <member name="P:VIBlend.Silverlight.Controls.PopupBoundsCalculatedEventArgs.VerticalOffset">
+            <summary>
+            Gets or sets the vertical offset.
+            </summary>
+            <value>The vertical offset.</value>
+        </member>
+        <member name="T:VIBlend.Silverlight.Controls.MenuItem">
+            <summary>
+            Represents a MenuItem control. The MenuItem represents a single item in the Menu and ContextMenu controls.
+            </summary>
+        </member>
+        <member name="M:VIBlend.Silverlight.Controls.MenuItem.OnPopupBoundsCalculated(VIBlend.Silverlight.Controls.PopupBoundsCalculatedEventArgs)">
+            <summary>
+            Raises the <see cref="E:PopupBoundsCalculated"/> event.
+            </summary>
+            <param name="args">The <see cref="T:VIBlend.Silverlight.Controls.PopupBoundsCalculatedEventArgs"/> instance containing the event data.</param>
+        </member>
+        <member name="F:VIBlend.Silverlight.Controls.MenuItem.UseApplicationBoundariesDetectionProperty">
+            <exclude/>
+        </member>
+        <member name="F:VIBlend.Silverlight.Controls.MenuItem.CommandProperty">
+            <exclude/>
+        </member>
+        <member name="F:VIBlend.Silverlight.Controls.MenuItem.CommandParameterProperty">
+            <exclude/>
+        </member>
+        <member name="F:VIBlend.Silverlight.Controls.MenuItem.UseBoundaryDetectionProperty">
+            <exclude/>
+        </member>
+        <member name="F:VIBlend.Silverlight.Controls.MenuItem.VerticalScrollBarVisibilityProperty">
+            <exclude/>
+        </member>
+        <member name="F:VIBlend.Silverlight.Controls.MenuItem.DropDownHeightProperty">
+            <exclude/>
+        </member>
+        <member name="F:VIBlend.Silverlight.Controls.MenuItem.DropDownWidthProperty">
+            <exclude/>
+        </member>
+        <member name="F:VIBlend.Silverlight.Controls.MenuItem.RootNormalForeBrushProperty">
+            <exclude/>
+        </member>
+        <member name="F:VIBlend.Silverlight.Controls.MenuItem.RootHighlightForeBrushProperty">
+            <exclude/>
+        </member>
+        <member name="F:VIBlend.Silverlight.Controls.MenuItem.HighlightForeBrushProperty">
+            <exclude/>
+        </member>
+        <member name="F:VIBlend.Silverlight.Controls.MenuItem.NormalForeBrushProperty">
+            <exclude/>
+        </member>
+        <member name="F:VIBlend.Silverlight.Controls.MenuItem.DisabledForeBrushProperty">
+            <exclude/>
+        </member>
+        <member name="F:VIBlend.Silverlight.Controls.MenuItem.TextProperty">
+            <exclude/>
+        </member>
+        <member name="F:VIBlend.Silverlight.Controls.MenuItem.ImageSourceProperty">
+            <exclude/>
+        </member>
+        <member name="M:VIBlend.Silverlight.Controls.MenuItem.OnVisualStateChanged">
+            <summary>
+            Called when a visual state is changed.
+            </summary>
+        </member>
+        <member name="F:VIBlend.Silverlight.Controls.MenuItem.CloseOnClickProperty">
+            <exclude/>
+        </member>
+        <member name="F:VIBlend.Silverlight.Controls.MenuItem.AllowCheckStateProperty">
+            <exclude/>
+        </member>
+        <member name="M:VIBlend.Silverlight.Controls.MenuItem.SetImageMarginWidth(System.Double)">
+            <summary>
+            Sets the width of the image margin.
+            </summary>
+            <param name="width">The width.</param>
+        </member>
+        <member name="M:VIBlend.Silverlight.Controls.MenuItem.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:VIBlend.Silverlight.Controls.MenuItem"/> class.
+            </summary>
+        </member>
+        <member name="M:VIBlend.Silverlight.Controls.MenuItem.#ctor(System.String)">
+            <summary>
+            Initializes a new instance of the <see cref="T:VIBlend.Silverlight.Controls.MenuItem"/> class.
+            </summary>
+            <param name="text">The text.</param>
+        </member>
+        <member name="M:VIBlend.Silverlight.Controls.MenuItem.#ctor(System.Windows.Media.ImageSource,System.String)">
+            <summary>
+            Initializes a new instance of the <see cref="T:VIBlend.Silverlight.Controls.MenuItem"/> class.
+            </summary>
+            <param name="imageSource">The image source.</param>
+            <param name="text">The text.</param>
+        </member>
+        <member name="F:VIBlend.Silverlight.Controls.MenuItem.IsSeparatorProperty">
+            <exclude/>
+        </member>
+        <member name="F:VIBlend.Silverlight.Controls.MenuItem.IsSelectedProperty">
+            <exclude/>
+        </member>
+        <member name="F:VIBlend.Silverlight.Controls.MenuItem.IsCheckedProperty">
+            <exclude/>
+        </member>
+        <member name="M:VIBlend.Silverlight.Controls.MenuItem.MeasureOverride(System.Windows.Size)">
+            <summary>
+            Provides the behavior for the Measure pass of Silverlight layout. Classes can override this method to define their own Measure pass behavior.
+            </summary>
+            <param name="availableSize">The available size that this object can give to child objects. Infinity (<see cref="F:System.Double.PositiveInfinity"/>) can be specified as a value to indicate that the object will size to whatever content is available.</param>
+            <returns>
+            The size that this object determines it needs during layout, based on its calculations of the allocated sizes for child objects; or based on other considerations, such as a fixed container size.
+            </returns>
+        </member>
+        <member name="M:VIBlend.Silverlight.Controls.MenuItem.ClosePopup(System.Boolean)">
+            <summary>
+            Closes the menu item.
+            </summary>
+            <param name="useTransitions">if set to <c>true</c> [use transitions].</param>
+        </member>
+        <member name="M:VIBlend.Silverlight.Controls.MenuItem.OpenPopup(System.Boolean)">
+            <summary>
+            Opens the popup.
+            </summary>
+            <param name="useTransitions">if set to <c>true</c> [use transitions].</param>
+        </member>
+        <member name="M:VIBlend.Silverlight.Controls.MenuItem.CalculatePopupBounds">
+            <summary>
+            Calculates the popup bounds.
+            </summary>
+        </member>
+        <member name="M:VIBlend.Silverlight.Controls.MenuItem.GetContainerForItemOverride">
+            <summary>
+            Creates or identifies the element that is used to display the given item.
+            </summary>
+            <returns>
+            The element that is used to display the given item.
+            </returns>
+        </member>
+        <member name="M:VIBlend.Silverlight.Controls.MenuItem.IsItemItsOwnContainerOverride(System.Object)">
+            <summary>
+            Determines if the specified item is (or is eligible to be) its own container.
+            </summary>
+            <param name="item">The item to check.</param>
+            <returns>
+            true if the item is (or is eligible to be) its own container; otherwise, false.
+            </returns>
+        </member>
+        <member name="M:VIBlend.Silverlight.Controls.MenuItem.PrepareContainerForItemOverride(System.Windows.DependencyObject,System.Object)">
+            <summary>
+            Prepares the container for item override.
+            </summary>
+            <param name="element">The element.</param>
+            <param name="item">The item.</param>
+        </member>
+        <member name="M:VIBlend.Silverlight.Controls.MenuItem.ClearContainerForItemOverride(System.Windows.DependencyObject,System.Object)">
+            <summary>
+            Undoes the effects of the <see cref="M:System.Windows.Controls.ItemsControl.PrepareContainerForItemOverride(System.Windows.DependencyObject,System.Object)"/> method.
+            </summary>
+            <param name="element">The container element.</param>
+            <param name="item">The item.</param>
+        </member>
+        <member name="M:VIBlend.Silverlight.Controls.MenuItem.ArrangeOverride(System.Windows.Size)">
+            <summary>
+            Provides the behavior for the Arrange pass of Silverlight layout. Classes can override this method to define their own Arrange pass behavior.
+            </summary>
+            <param name="finalSize">The final area within the parent that this object should use to arrange itself and its children.</param>
+            <returns>
+            The actual size used once the element is arranged.
+            </returns>
+        </member>
+        <member name="F:VIBlend.Silverlight.Controls.MenuItem.ScrollTypeProperty">
+            <exclude/>
+        </member>
+        <member name="M:VIBlend.Silverlight.Controls.MenuItem.OnApplyTemplate">
+            <summary>
+            Called when the template is applied.
+            </summary>
+        </member>
+        <member name="M:VIBlend.Silverlight.Controls.MenuItem.OnItemsChanged(System.Collections.Specialized.NotifyCollectionChangedEventArgs)">
+            <summary>
+            Called when the value of the <see cref="P:System.Windows.Controls.ItemsControl.Items"/> property changes.
+            </summary>
+            <param name="e">A <see cref="T:System.Collections.Specialized.NotifyCollectionChangedEventArgs"/> that contains the event data</param>
+        </member>
+        <member name="M:VIBlend.Silverlight.Controls.MenuItem.OnGotFocus(System.Windows.RoutedEventArgs)">
+            <summary>
+            Called before the <see cref="E:System.Windows.UIElement.GotFocus"/> event occurs.
+            </summary>
+            <param name="e">The data for the event.</param>
+        </member>
+        <member name="M:VIBlend.Silverlight.Controls.MenuItem.OnLostFocus(System.Windows.RoutedEventArgs)">
+            <summary>
+            Called before the <see cref="E:System.Windows.UIElement.LostFocus"/> event occurs.
+            </summary>
+            <param name="e">The data for the event.</param>
+        </member>
+        <member name="M:VIBlend.Silverlight.Controls.MenuItem.OnMouseEnter(System.Windows.Input.MouseEventArgs)">
+            <summary>
+            Called before the <see cref="E:System.Windows.UIElement.MouseEnter"/> event occurs.
+            </summary>
+            <param name="e">The data for the event.</param>
+        </member>
+        <member name="M:VIBlend.Silverlight.Controls.MenuItem.OnMouseLeave(System.Windows.Input.MouseEventArgs)">
+            <summary>
+            Called before the <see cref="E:System.Windows.UIElement.MouseLeave"/> event occurs.
+            </summary>
+            <param name="e">The data for the event.</param>
+        </member>
+        <member name="M:VIBlend.Silverlight.Controls.MenuItem.PerformClick(System.Boolean)">
+            <summary>
+            Performs Item Click
+            </summary>
+            <param name="closePopup"></param>
+        </member>
+        <member name="M:VIBlend.Silverlight.Controls.MenuItem.OnClick">
+            <summary>
+            Called when the item is clicked.
+            </summary>
+        </member>
+        <member name="M:VIBlend.Silverlight.Controls.MenuItem.OnMouseLeftButtonUp(System.Windows.Input.MouseButtonEventArgs)">
+            <summary>
+            Called before the <see cref="E:System.Windows.UIElement.MouseLeftButtonUp"/> event occurs.
+            </summary>
+            <param name="e">The data for the event.</param>
+        </member>
+        <member name="M:VIBlend.Silverlight.Controls.MenuItem.OnMouseLeftButtonDown(System.Windows.Input.MouseButtonEventArgs)">
+            <summary>
+            Called before the <see cref="E:System.Windows.UIElement.MouseLeftButtonDown"/> event occurs.
+            </summary>
+            <param name="e">The data for the event.</param>
+        </member>
+        <member name="F:VIBlend.Silverlight.Controls.MenuItem.IsHighlightEnabledProperty">
+            <exclude/>
+        </member>
+        <member name="F:VIBlend.Silverlight.Controls.MenuItem.IsImageAreaVisibleProperty">
+            <exclude/>
+        </member>
+        <member name="F:VIBlend.Silverlight.Controls.MenuItem.ShortcutKeyProperty">
+            <summary>
+            Represents the ShortcutKeyProperty.
+            </summary>
+        </member>
+        <member name="F:VIBlend.Silverlight.Controls.MenuItem.ShortcutModifierKeysProperty">
+            <summary>
+            Represents the ShortcutModifiedKeysProperty
+            </summary>
+        </member>
+        <member name="M:VIBlend.Silverlight.Controls.MenuItem.OnPropertyChanged(System.String)">
+            <summary>
+            Fires the PropertyChanged event.
+            </summary>
+            <param name="propertyName"></param>
+        </member>
+        <member name="E:VIBlend.Silverlight.Controls.MenuItem.Click">
+            <summary>
+            Occurs when a user clicks on a menu item.
+            </summary>
+        </member>
+        <member name="E:VIBlend.Silverlight.Controls.MenuItem.PopupBoundsCalculated">
+            <summary>
+            Occurs when the Popup bounds are calculated.
+            </summary>
+        </member>
+        <member name="P:VIBlend.Silverlight.Controls.MenuItem.UseApplicationBoundariesDetection">
+            <summary>
+            Gets or sets a value indicating whether to use application's boundaries detection.
+            </summary>
+        </member>
+        <member name="P:VIBlend.Silverlight.Controls.MenuItem.Command">
+            <summary>
+            Gets or sets the command.
+            </summary>
+            <value>The command.</value>
+        </member>
+        <member name="P:VIBlend.Silverlight.Controls.MenuItem.CommandParameter">
+            <summary>
+            Gets or sets the command parameter.
+            </summary>
+            <value>The command parameter.</value>
+        </member>
+        <member name="P:VIBlend.Silverlight.Controls.MenuItem.UseBoundaryDetection">
+            <summary>
+            Gets or sets a value indicating whether to fit the control to its container's boundaries.
+            </summary>
+        </member>
+        <member name="P:VIBlend.Silverlight.Controls.MenuItem.VerticalScrollBarVisibility">
+            <summary>
+            Gets or sets the vertical scroll bar visibility.
+            </summary>
+            <value>The vertical scroll bar visibility.</value>
+        </member>
+        <member name="P:VIBlend.Silverlight.Controls.MenuItem.DropDownHeight">
+            <summary>
+            Gets or sets the height of the drop down.
+            </summary>
+            <value>The height of the drop down.</value>
+        </member>
+        <member name="P:VIBlend.Silverlight.Controls.MenuItem.DropDownWidth">
+            <summary>
+            Gets or sets the width of the drop down.
+            </summary>
+            <value>The width of the drop down.</value>
+        </member>
+        <member name="P:VIBlend.Silverlight.Controls.MenuItem.DisabledForeBrush">
+            <summary>
+            Gets or sets the Item's text disabled brush. 
+            </summary>
+        </member>
+        <member name="P:VIBlend.Silverlight.Controls.MenuItem.RootHighlightForeBrush">
+            <summary>
+            Gets or sets the Root Item's text highlight brush. 
+            </summary>
+        </member>
+        <member name="P:VIBlend.Silverlight.Controls.MenuItem.Text">
+            <summary>
+            Gets or sets item's text.
+            </summary>
+        </member>
+        <member name="P:VIBlend.Silverlight.Controls.MenuItem.ImageSource">
+            <summary>
+            Gets or sets item's image.
+            </summary>
+        </member>
+        <member name="P:VIBlend.Silverlight.Controls.MenuItem.RootNormalForeBrush">
+            <summary>
+            Gets or sets the Root Item's text normal brush. 
+            </summary>
+        </member>
+        <member name="P:VIBlend.Silverlight.Controls.MenuItem.HighlightForeBrush">
+            <summary>
+            Gets or sets the Item's text highlight brush. 
+            </summary>
+        </member>
+        <member name="P:VIBlend.Silverlight.Controls.MenuItem.NormalForeBrush">
+            <summary>
+            Gets or sets the Item's text normal brush
+            </summary>
+        </member>
+        <member name="E:VIBlend.Silverlight.Controls.MenuItem.VisualStateChanged">
+            <summary>
+            Occurs when visual state has changed.
+            </summary>
+        </member>
+        <member name="P:VIBlend.Silverlight.Controls.MenuItem.IsRootItem">
+            <summary>
+            Gets whether the menu item is a root item.
+            </summary>
+        </member>
+        <member name="P:VIBlend.Silverlight.Controls.MenuItem.CloseOnClick">
+            <summary>
+            Gets or sets whether the popup should be closed when the item is clicked.
+            </summary>
+        </member>
+        <member name="P:VIBlend.Silverlight.Controls.MenuItem.AllowCheckState">
+            <summary>
+            Gets or sets whether menu item has a check box.
+            </summary>
+        </member>
+        <member name="P:VIBlend.Silverlight.Controls.MenuItem.Level">
+            <summary>
+            Gets the MenuItem level in the items hierarchy.
+            </summary>
+        </member>
+        <member name="P:VIBlend.Silverlight.Controls.MenuItem.ParentItem">
+            <summary>
+            Gets the parent menu item.
+            </summary>
+        </member>
+        <member name="P:VIBlend.Silverlight.Controls.MenuItem.RootItem">
+            <summary>
+            Gets or sets the parent RootItem.
+            </summary>
+        </member>
+        <member name="P:VIBlend.Silverlight.Controls.MenuItem.Menu">
+            <summary>
+            Gets the parent Menu.
+            </summary>
+        </member>
+        <member name="P:VIBlend.Silverlight.Controls.MenuItem.Popup">
+            <summary>
+            Gets the pop up.
+            </summary>
+        </member>
+        <member name="P:VIBlend.Silverlight.Controls.MenuItem.BackgroundHighlight">
+            <summary>
+            Gets or sets the Background highlight rectangle.
+            </summary>
+        </member>
+        <member name="P:VIBlend.Silverlight.Controls.MenuItem.BackgroundFill">
+            <summary>
+            Gets or sets the Background
+            </summary>
+        </member>
+        <member name="P:VIBlend.Silverlight.Controls.MenuItem.HeaderBackground">
+            <summary>
+            Gets or sets the header item's backgrounds.
+            </summary>
+        </member>
+        <member name="P:VIBlend.Silverlight.Controls.MenuItem.ImageMargin">
+            <summary>
+            Gets or sets the image margin.
+            </summary>
+            <value>The image margin.</value>
+        </member>
+        <member name="P:VIBlend.Silverlight.Controls.MenuItem.ScrollType">
+            <summary>
+            Gets or sets the type of the scroll.
+            </summary>
+            <value>The type of the scroll.</value>
+        </member>
+        <member name="P:VIBlend.Silverlight.Controls.MenuItem.IsHighlightEnabled">
+            <summary>
+            Gets or sets whether the menu item has a highlight state.
+            </summary>
+        </member>
+        <member name="P:VIBlend.Silverlight.Controls.MenuItem.IsImageAreaVisible">
+            <summary>
+            Gets or sets whether the menu item has a highlight state.
+            </summary>
+        </member>
+        <member name="P:VIBlend.Silverlight.Controls.MenuItem.IsSelected">
+            <summary>
+            Gets or sets whether the menu item is selected.
+            </summary>
+        </member>
+        <member name="P:VIBlend.Silverlight.Controls.MenuItem.IsSeparator">
+            <summary>
+            Gets or sets whether the menu item is a separator item.
+            </summary>
+        </member>
+        <member name="P:VIBlend.Silverlight.Controls.MenuItem.IsChecked">
+            <summary>
+            Gets or sets whether the item is checked.
+            </summary>
+        </member>
+        <member name="P:VIBlend.Silverlight.Controls.MenuItem.ShortcutKey">
+            <summary>
+            Gets or sets the Shortcut key.
+            </summary>
+        </member>
+        <member name="P:VIBlend.Silverlight.Controls.MenuItem.ShortcutModifierKeys">
+            <summary>
+            Gets or sets the modifier keys.
+            </summary>
+        </member>
+        <member name="E:VIBlend.Silverlight.Controls.MenuItem.PropertyChanged">
+            <summary>
+            Occurs when a property is changed.
+            </summary>
+        </member>
+        <member name="M:VIBlend.Silverlight.Controls.MenuAutomationPeer.#ctor(VIBlend.Silverlight.Controls.Menu)">
+            <summary>
+            Initializes a new instance of the <see cref="T:VIBlend.Silverlight.Controls.MenuAutomationPeer"/> class.
+            </summary>
+            <param name="owner">The owner.</param>
+        </member>
+        <member name="M:VIBlend.Silverlight.Controls.MenuAutomationPeer.GetClassNameCore">
+            <summary>
+            Returns the name of the <see cref="T:System.Windows.UIElement"/> that is associated with this <see cref="T:System.Windows.Automation.Peers.FrameworkElementAutomationPeer"/>. This method is called by <see cref="M:System.Windows.Automation.Peers.AutomationPeer.GetClassName"/>.
+            </summary>
+            <returns>
+            The name of the owner type that is associated with this <see cref="T:System.Windows.Automation.Peers.FrameworkElementAutomationPeer"/>. See Remarks.
+            </returns>
+        </member>
+        <member name="M:VIBlend.Silverlight.Controls.MenuAutomationPeer.GetAutomationControlTypeCore">
+            <summary>
+            Returns the control type for the <see cref="T:System.Windows.UIElement"/> that is associated with this <see cref="T:System.Windows.Automation.Peers.FrameworkElementAutomationPeer"/>. This method is called by <see cref="M:System.Windows.Automation.Peers.AutomationPeer.GetAutomationControlType"/>.
+            </summary>
+            <returns>A value of the enumeration.</returns>
+        </member>
+        <member name="M:VIBlend.Silverlight.Controls.MenuAutomationPeer.GetPattern(System.Windows.Automation.Peers.PatternInterface)">
+            <summary>
+            Gets a control pattern for the <see cref="T:System.Windows.Controls.ItemsControl"/> that is associated with this <see cref="T:System.Windows.Automation.Peers.ItemsControlAutomationPeer"/>.
+            </summary>
+            <param name="patternInterface">One of the enumeration values that indicates the control pattern.</param>
+            <returns>
+            The object that implements the pattern interface, or null if the specified pattern interface is not implemented by this peer.
+            </returns>
+        </member>
+        <member name="M:VIBlend.Silverlight.Controls.MenuAutomationPeer.GetChildrenCore">
+            <summary>
+            Gets the collection of child elements of the <see cref="T:System.Windows.Controls.ItemsControl"/> that is associated with this <see cref="T:System.Windows.Automation.Peers.ItemsControlAutomationPeer"/>.
+            </summary>
+            <returns>The collection of child elements.</returns>
+        </member>
+        <member name="M:VIBlend.Silverlight.Controls.MenuAutomationPeer.GetSelection">
+            <summary>
+            Retrieves a UI automation provider for each child element that is selected.
+            </summary>
+            <returns>
+            A generic list of UI automation providers.
+            </returns>
+        </member>
+        <member name="P:VIBlend.Silverlight.Controls.MenuAutomationPeer.CanSelectMultiple">
+            <summary>
+            Gets a value that indicates whether the UI automation provider allows more than one child element to be selected concurrently.
+            </summary>
+            <value></value>
+            <returns>true if multiple selection is allowed; otherwise, false.</returns>
+        </member>
+        <member name="P:VIBlend.Silverlight.Controls.MenuAutomationPeer.IsSelectionRequired">
+            <summary>
+            Gets a value that indicates whether the UI automation provider requires at least one child element to be selected.
+            </summary>
+            <value></value>
+            <returns>true if selection is required; otherwise, false.</returns>
+        </member>
+        <member name="T:VIBlend.Silverlight.Controls.MenuEventHandler">
+            <exclude/>   
+        </member>
+        <member name="T:VIBlend.Silverlight.Controls.MenuEventArgs">
+            <summary>
+            Providers data for Menu events.
+            </summary>
+        </member>
+        <member name="M:VIBlend.Silverlight.Controls.MenuEventArgs.#ctor(VIBlend.Silverlight.Controls.MenuItem)">
+            <summary>
+            Initializes a new instance of the <see cref="T:VIBlend.Silverlight.Controls.MenuEventArgs"/> class.
+            </summary>
+            <param name="item">The item.</param>
+        </member>
+        <member name="P:VIBlend.Silverlight.Controls.MenuEventArgs.Item">
+            <summary>
+            Gets the associated menu item.
+            </summary>
+        </member>
+    </members>
+</doc>
