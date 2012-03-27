@@ -52,6 +52,20 @@ namespace DALTests
             admin.Registrate(new Members { CRecord = id, Created = DateTime.Now, Email = "lev@gmail.com", Login = "Lev", Password = "Lev" });
         }
 
-
+        /*
+        [Test]
+        public void RemoveCustomerProfileWithRegistration()
+        {
+            HRAdmin admin = new HRAdmin();
+            admin.RemoveCustomerProfile(new Guid("660A2FBE-1EBB-4C3B-9A01-852F1ACDC781"));           
+        }
+         
+        [Test]
+        public void RemoveEmployeeProfileWithRegistration()
+        {
+            HRAdmin admin = new HRAdmin();
+            admin.RemoveEmployeeProfile(new Guid("C4F1B6EB-C406-4AB9-B014-E7743E774722"));           
+        }
+        */
     }
 }
