@@ -10,7 +10,7 @@
     <Grid x:Name="LayoutRoot" Background="White">
         <menu:Menu>
             <menu:MenuItem Text="Auto park">
-            </menu:MenuItem>
+            </menu:MenuItem>            
             <menu:MenuItem Text="Rental conditions"/>
             <menu:MenuItem Text="Contacts"/>
         </menu:Menu>
