@@ -45,6 +45,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AutoAccessorTest.cs" />
+    <Compile Include="DamageClassAccessorTest.cs" />
     <Compile Include="DepartmentAccessorTest.cs" />
     <Compile Include="HRAdminTest.cs" />
     <Compile Include="PermissionAccessTest.cs" />
