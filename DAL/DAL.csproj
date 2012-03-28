@@ -48,6 +48,7 @@
     <Compile Include="Administration\Interfaces\IPermissionAdmin.cs" />
     <Compile Include="Administration\PermissionAccess.cs" />
     <Compile Include="Administration\PermissionAdmin.cs" />
+    <Compile Include="DepartmentAccessor.cs" />
     <Compile Include="ITicketAdmin.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Tickets\TicketClientRent.cs" />
