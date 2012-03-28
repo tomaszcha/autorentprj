@@ -56,7 +56,7 @@ namespace DALTests
 
         /*
         [Test]
-        public void RemoveCustomerProfileWithRegistration()
+        public void RemoveDepartment()
         {
             DepartmentAccessor deptAccessor = new DepartmentAccessor();
             deptAccessor.RemoveDepartment(new Guid("2F56BC3B-D25B-4353-A008-381688ED4C4C"));           
