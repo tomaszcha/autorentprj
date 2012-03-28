@@ -43,9 +43,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Administration\HRAdmin.cs" />
-    <Compile Include="Administration\IHRAdmin.cs" />
-    <Compile Include="Administration\IPermissionAccess.cs" />
-    <Compile Include="Administration\IPermissionAdmin.cs" />
+    <Compile Include="Administration\Interfaces\IHRAdmin.cs" />
+    <Compile Include="Administration\Interfaces\IPermissionAccess.cs" />
+    <Compile Include="Administration\Interfaces\IPermissionAdmin.cs" />
     <Compile Include="Administration\PermissionAccess.cs" />
     <Compile Include="Administration\PermissionAdmin.cs" />
     <Compile Include="ITicketAdmin.cs" />

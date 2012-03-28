@@ -39,7 +39,7 @@ namespace DAL.Administration
         }
 
         public List<PermissionRule> ListObjPermRulles()
-        {
+        {                                                        
             AutoRentEntities context = new AutoRentEntities();
             return context.PermissionRule.Select(o => o).ToList();
         }
