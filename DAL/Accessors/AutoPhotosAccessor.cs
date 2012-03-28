@@ -7,24 +7,22 @@ using System.Data.Common;
 
 namespace DAL.Accessors
 {
-    public class AutoAccessor
+    public class AutoPhotosAccessor
     {
-        #region AutoAccessor members
+        #region AutoPhotosAccessor members
 
         /// <summary>
-        /// /// <summary>
-        /// Get list of autos
-        /// </summary>          
-        /// <returns>List of autos</returns>   
-        public List<Auto> GetAutos()
+        /// Get list of auto photoss
+        /// </summary>       
+        public List<AutoPhotos> GetAutoPhotoss()
         {
             AutoRentEntities context = new AutoRentEntities();
-            List<Auto> Autos = new List<Auto>();
+            List<AutoPhotos> photos = new List<AutoPhotos>();
             try
             {
-                Autos = (from auto in context.Auto
-                               orderby auto.Number
-                               select auto).ToList();
+                photos = (from autoPhotos in context.AutoPhotos
+                               orderby autoPhotos.AutoNumber, autoPhotos.DoDate
+                               select autoPhotos).ToList();
             }
             catch { }
             finally
@@ -32,15 +30,15 @@ namespace DAL.Accessors
                 context.Connection.Close();
             }
 
-            return Autos;
+            return photos;
         }
 
 
         /// <summary>
-        /// Create new auto
+        /// Create new auto photo
         /// </summary>
-        /// <param name="auto">Auto to add</param>
-        public void CreateAuto(Auto auto)
+        /// <param name="AutoPhotos">Auto photos to add</param>
+        public void CreateAutoPhotos(AutoPhotos autoPhoto)
         {
             AutoRentEntities context = new AutoRentEntities();
             DbTransaction transaction = null;
@@ -48,7 +46,7 @@ namespace DAL.Accessors
             {                
                 context.Connection.Open();
                 transaction = context.Connection.BeginTransaction();
-                context.AddToAuto(auto);
+                context.AddToAutoPhotos(autoPhoto);
                 context.SaveChanges();
                 transaction.Commit();
             }
@@ -61,13 +59,13 @@ namespace DAL.Accessors
                 context.Connection.Close();
             }            
         }
-        
-        
+
+
         /// <summary>
-        /// Update auto
+        /// Update auto photos
         /// </summary>
-        /// <param name="Auto">Auto to update</param>
-        public void UpdateAuto(Auto auto)
+        /// <param name="autoPhoto">Auto photo to update</param>
+        public void UpdateAutoPhotos(AutoPhotos autoPhoto)
         {
             AutoRentEntities context = new AutoRentEntities();
             DbTransaction transaction = null;
@@ -76,8 +74,8 @@ namespace DAL.Accessors
                 context.Connection.Open();
                 transaction = context.Connection.BeginTransaction();
 
-                context.Auto.Attach(context.Auto.Single(o => o.Number == auto.Number));
-                context.Auto.ApplyCurrentValues(auto);
+                context.AutoPhotos.Attach(context.AutoPhotos.Single(o => o.AutoNumber == autoPhoto.AutoNumber && o.DoDate == autoPhoto.DoDate));
+                context.AutoPhotos.ApplyCurrentValues(autoPhoto);
 
                 context.SaveChanges();
                 transaction.Commit();
@@ -93,11 +91,12 @@ namespace DAL.Accessors
         }
 
 
-        /// <summary>
-        /// Remove auto
-        /// </summary>
-        /// <param name="number">Number of the auto to delete</param>
-        public void RemoveAuto(string number)
+        /// <summary>      
+        /// Remove auto photos
+        /// </summary>        
+        /// <param name="number">Auto number</param>
+        /// <param name="doDate">DoDate</param>
+        public void RemoveAutoPhotos(string number, DateTime doDate)
         {
             AutoRentEntities context = new AutoRentEntities();
             DbTransaction transaction = null;
@@ -106,7 +105,7 @@ namespace DAL.Accessors
                 context.Connection.Open();
                 transaction = context.Connection.BeginTransaction();
 
-                context.Auto.DeleteObject(context.Auto.First(o => o.Number == number));
+                context.AutoPhotos.DeleteObject(context.AutoPhotos.First(o => o.AutoNumber == number && o.DoDate == doDate));
 
                 context.SaveChanges();
                 transaction.Commit();
@@ -119,7 +118,7 @@ namespace DAL.Accessors
             {
                 context.Connection.Close();
             }
-        }       
+        }
 
         #endregion
     }
