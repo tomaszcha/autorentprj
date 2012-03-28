@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using NUnit.Framework;
 using Model;
-using DAL;
+using DAL.Accessors;
 
 namespace DALTests
 {
