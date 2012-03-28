@@ -46,6 +46,7 @@
     <Compile Include="Accessors\AutoPhotosAccessor.cs" />
     <Compile Include="Accessors\DamageClassAccessor.cs" />
     <Compile Include="Accessors\DamagesAccessor.cs" />
+    <Compile Include="Accessors\OrderAccessor.cs" />
     <Compile Include="Accessors\RevisionsAccessor.cs" />
     <Compile Include="Administration\HRAdmin.cs" />
     <Compile Include="Administration\Interfaces\IHRAdmin.cs" />
