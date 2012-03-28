@@ -37,7 +37,7 @@ namespace DAL.Accessors
         /// <summary>
         /// Create new auto photo
         /// </summary>
-        /// <param name="AutoPhotos">Auto photos to add</param>
+        /// <param name="autoPhoto">Auto photo to add</param>
         public void CreateAutoPhotos(AutoPhotos autoPhoto)
         {
             AutoRentEntities context = new AutoRentEntities();
