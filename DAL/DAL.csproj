@@ -43,6 +43,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Accessors\AutoAccessor.cs" />
+    <Compile Include="Accessors\DamageClassAccessor.cs" />
     <Compile Include="Administration\HRAdmin.cs" />
     <Compile Include="Administration\Interfaces\IHRAdmin.cs" />
     <Compile Include="Administration\Interfaces\IPermissionAccess.cs" />
