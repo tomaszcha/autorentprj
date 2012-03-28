@@ -14,33 +14,33 @@ namespace DALTests
         [Test]
         public void CreateDamageClassTest()
         {
-            DamageClassAccessor deptAccessor = new DamageClassAccessor();
+            DamageClassAccessor accessor = new DamageClassAccessor();
             DamageClass DamageClass = new DamageClass
             {
                 Class = 2,
                 Name = "Motor"               
             };
-            deptAccessor.CreateDamageClass(DamageClass);
+            accessor.CreateDamageClass(DamageClass);
         }
 
         [Test]
         public void UpdateDamageClassTest()
         {
-            DamageClassAccessor deptAccessor = new DamageClassAccessor();
+            DamageClassAccessor accessor = new DamageClassAccessor();
             DamageClass DamageClass = new DamageClass
             {
                 Class = 2,
                 Name = "Bumper"
             };
 
-            deptAccessor.UpdateDamageClass(DamageClass);
+            accessor.UpdateDamageClass(DamageClass);
         }
 
         [Test]
         public void GetDamageClasssTest()
         {
-            DamageClassAccessor deptAccessor = new DamageClassAccessor();
-            List<DamageClass> DamageClasss = deptAccessor.GetDamageClasss();
+            DamageClassAccessor accessor = new DamageClassAccessor();
+            List<DamageClass> DamageClasss = accessor.GetDamageClasss();
             foreach (DamageClass d in DamageClasss)
             {
                 Console.WriteLine("{0}, {1}", d.Class, d.Name);
@@ -51,8 +51,8 @@ namespace DALTests
         [Test]
         public void RemoveDamageClass()
         {
-            DamageClassAccessor deptAccessor = new DamageClassAccessor();
-            deptAccessor.RemoveDamageClass(2);
+            DamageClassAccessor accessor = new DamageClassAccessor();
+            accessor.RemoveDamageClass(2);
         }
     }
 }
