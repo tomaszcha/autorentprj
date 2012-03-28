@@ -15,7 +15,7 @@ namespace DALTests
         [Test]
         public void CreateDepartmentTest()
         {
-            DepartmentAccessor deptAccessor = new DepartmentAccessor();
+            DepartmentAccessor accessor = new DepartmentAccessor();
             Department department = new Department
             {
                 CityCode = 10,
@@ -23,13 +23,13 @@ namespace DALTests
                 Addresse = "Straus Str., 12",                
                 Phone = "(065)6035282"
             };
-            Guid id = deptAccessor.CreateDepartment(department);
+            Guid id = accessor.CreateDepartment(department);
         }
                 
         [Test]
         public void UpdateDepartmentTest()
         {
-            DepartmentAccessor deptAccessor = new DepartmentAccessor();
+            DepartmentAccessor accessor = new DepartmentAccessor();
             Department department = new Department
             {                
                 CityCode = 20,
@@ -37,16 +37,16 @@ namespace DALTests
                 Addresse = "Central st., 74",
                 Phone = "(050)2536789"
             };
-            department.Id = deptAccessor.CreateDepartment(department);
+            department.Id = accessor.CreateDepartment(department);
             department.Phone = "(098)1212111";
-            deptAccessor.UpdateDepartment(department);
+            accessor.UpdateDepartment(department);
         }
 
         [Test]
         public void GetDepartmentsTest()
         {
-            DepartmentAccessor deptAccessor = new DepartmentAccessor();
-            List<Department> departments = deptAccessor.GetDepartments();
+            DepartmentAccessor accessor = new DepartmentAccessor();
+            List<Department> departments = accessor.GetDepartments();
             foreach (Department d in departments)
             {
                 Console.WriteLine("ID:{0}, Name:{1}, CityCode:{2}, Addresse:{3}, Phone{4}", 
@@ -58,8 +58,8 @@ namespace DALTests
         [Test]
         public void RemoveDepartment()
         {
-            DepartmentAccessor deptAccessor = new DepartmentAccessor();
-            deptAccessor.RemoveDepartment(new Guid("2F56BC3B-D25B-4353-A008-381688ED4C4C"));           
+            DepartmentAccessor accessor = new DepartmentAccessor();
+            accessor.RemoveDepartment(new Guid("2F56BC3B-D25B-4353-A008-381688ED4C4C"));           
         }*/
     }
 }

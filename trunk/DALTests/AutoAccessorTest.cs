@@ -14,7 +14,7 @@ namespace DALTests
         [Test]
         public void CreateAutoTest()
         {
-            AutoAccessor deptAccessor = new AutoAccessor();
+            AutoAccessor accessor = new AutoAccessor();
             Auto auto = new Auto
             {
                 Number = "AA 5676 CH",
@@ -30,13 +30,13 @@ namespace DALTests
                 KmRate = 20,
                 Status = 2
             };
-            deptAccessor.CreateAuto(auto);
+            accessor.CreateAuto(auto);
         }
 
         [Test]
         public void UpdateAutoTest()
         {
-            AutoAccessor deptAccessor = new AutoAccessor();
+            AutoAccessor accessor = new AutoAccessor();
             Auto auto = new Auto
             {
                 Number = "AA 5676 CH",
@@ -53,14 +53,14 @@ namespace DALTests
                 Status = 2
             };           
             
-            deptAccessor.UpdateAuto(auto);
+            accessor.UpdateAuto(auto);
         }
 
         [Test]
         public void GetAutosTest()
         {
-            AutoAccessor deptAccessor = new AutoAccessor();
-            List<Auto> autos = deptAccessor.GetAutos();
+            AutoAccessor accessor = new AutoAccessor();
+            List<Auto> autos = accessor.GetAutos();
             foreach (Auto a in autos)
             {
                 Console.WriteLine("{0}, {1}, {2}, {3}, {4}, {5}, {6}, {7}, {8}, {9}, {10}, {11}",
@@ -73,8 +73,8 @@ namespace DALTests
         [Test]
         public void RemoveAuto()
         {
-            AutoAccessor deptAccessor = new AutoAccessor();
-            deptAccessor.RemoveAuto("AA 5676 CH");           
+            AutoAccessor accessor = new AutoAccessor();
+            accessor.RemoveAuto("AA 5676 CH");           
         }
     }
 }
