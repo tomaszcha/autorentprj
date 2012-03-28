@@ -35,7 +35,31 @@ namespace DAL.Administration
 
         public void RemoveObjPermissionRule(long id)
         {
-            throw new NotImplementedException();
+            AutoRentEntities context = new AutoRentEntities();
+            DbTransaction transaction = null;
+            try
+            {
+                context.Connection.Open();
+                transaction = context.Connection.BeginTransaction();
+
+                PermissionRule rule = context.PermissionRule.First(o => o.Id == id);
+                foreach (RulesInRole rulesInRole in rule.RulesInRole)
+                {
+                    context.RulesInRole.DeleteObject(rulesInRole);
+                }
+                context.PermissionRule.DeleteObject(rule);
+
+                context.SaveChanges();
+                transaction.Commit();
+            }
+            catch
+            {
+                transaction.Rollback();
+            }
+            finally
+            {
+                context.Connection.Close();
+            }
         }
 
         public List<PermissionRule> ListObjPermRulles()
