@@ -13,7 +13,8 @@ namespace DAL.Accessors
 
         /// <summary>
         /// Get list of damage classes
-        /// </summary>       
+        /// </summary>
+        /// <returns>List of damage classes</returns> 
         public List<DamageClass> GetDamageClasss()
         {
             AutoRentEntities context = new AutoRentEntities();
@@ -94,7 +95,7 @@ namespace DAL.Accessors
         /// <summary>
         /// Remove DamageClass
         /// </summary>
-        /// <param name="number">Number of the DamageClass to delete</param>
+        /// <param name="cls">Class of the damage to delete</param>
         public void RemoveDamageClass(int cls)
         {
             AutoRentEntities context = new AutoRentEntities();
