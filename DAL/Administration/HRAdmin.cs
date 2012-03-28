@@ -121,9 +121,35 @@ namespace DAL.Administration
             return context.Roles.First(o => o.Name == roleName).Members.ToList();
         }
 
-        public void RemoveUsersFromRoles(string[] logins, Roles[] role)
+        public void RemoveUsersFromRoles(string[] logins, Roles[] roles)
         {
-            throw new NotImplementedException();
+            AutoRentEntities context = new AutoRentEntities();
+            DbTransaction transaction = null;
+            try
+            {
+                context.Connection.Open();
+                transaction = context.Connection.BeginTransaction();
+
+                foreach (string login in logins)
+                {
+                    Members member = context.Members.First(o => o.Login == login);
+                    foreach (Roles role in roles)
+                    {
+                        member.Roles.Remove(role);
+                    }
+                }
+
+                context.SaveChanges();
+                transaction.Commit();
+            }
+            catch
+            {
+                transaction.Rollback();
+            }
+            finally
+            {
+                context.Connection.Close();
+            } 
         }
 
         public void AddUsersToRoles(string[] logins, Roles[] roles)
