@@ -64,6 +64,36 @@ namespace DAL.Accessors
 
 
         /// <summary>
+        /// Update department
+        /// </summary>
+        /// <param name="department">Department to update</param>
+        public void UpdateDepartment(Department department)
+        {
+            AutoRentEntities context = new AutoRentEntities();
+            DbTransaction transaction = null;
+            try
+            {
+                context.Connection.Open();
+                transaction = context.Connection.BeginTransaction();
+
+                context.Department.Attach(context.Department.Single(c => c.Id == department.Id));
+                context.Department.ApplyCurrentValues(department);
+
+                context.SaveChanges();
+                transaction.Commit();
+            }
+            catch
+            {
+                transaction.Rollback();
+            }
+            finally
+            {
+                context.Connection.Close();
+            }
+        }
+
+
+        /// <summary>
         /// Remove department
         /// </summary>
         /// <param name="guid">Guid of the department to delete</param>
@@ -89,36 +119,6 @@ namespace DAL.Accessors
             {
                 context.Connection.Close();
             }
-        }
-
-        /// <summary>
-        /// Update department
-        /// </summary>
-        /// <param name="department">Department to update</param>
-        public void UpdateDepartment(Department department)
-        {
-            AutoRentEntities context = new AutoRentEntities();
-            DbTransaction transaction = null;
-            try
-            {
-                context.Connection.Open();
-                transaction = context.Connection.BeginTransaction();
-                
-                context.Department.Attach(context.Department.Single(c => c.Id == department.Id));
-                context.Department.ApplyCurrentValues(department);     
-         
-                context.SaveChanges();
-                transaction.Commit();
-            }
-            catch
-            {
-                transaction.Rollback();
-            }
-            finally
-            {
-                context.Connection.Close();
-            }
-            
         }
 
         #endregion
