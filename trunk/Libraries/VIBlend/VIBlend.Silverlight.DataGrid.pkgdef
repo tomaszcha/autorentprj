@@ -1,0 +1,4 @@
+﻿[$RootKey$\ToolboxControlsInstaller\VIBlend.Silverlight.DataGrid, Version=6.0.0.0, Culture=neutral, PublicKeyToken=77d0cde755fee43c, processorArchitecture=MSIL]
+@="VIBlend Silverlight Controls 6.0"
+"Codebase"="$PackageFolder$\VIBlend.Silverlight.DataGrid.dll"
+"SilverlightControls"="2"

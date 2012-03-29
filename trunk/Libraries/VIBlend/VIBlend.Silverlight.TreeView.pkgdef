@@ -1,0 +1,4 @@
+﻿[$RootKey$\ToolboxControlsInstaller\VIBlend.Silverlight.TreeView, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7c851330d1470db6, processorArchitecture=MSIL]
+@="VIBlend Silverlight Controls 6.0"
+"Codebase"="$PackageFolder$\VIBlend.Silverlight.TreeView.dll"
+"SilverlightControls"="2"

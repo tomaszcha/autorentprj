@@ -1,0 +1,1607 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>VIBlend.Silverlight.TreeView</name>
+    </assembly>
+    <members>
+        <member name="T:VIBlend.Silverlight.Controls.TreeViewItem">
+            <summary>
+            Represents a single item in a TreeView.
+            </summary>
+        </member>
+        <member name="F:VIBlend.Silverlight.Controls.TreeViewItem.HeaderName">
+            <summary>
+            The name of the Header template part.
+            </summary>
+        </member>
+        <member name="M:VIBlend.Silverlight.Controls.TreeViewItem.OnIsExpandedChanged">
+            <summary>
+            Called when IsExpanded is changed.
+            </summary>
+        </member>
+        <member name="F:VIBlend.Silverlight.Controls.TreeViewItem.CommandProperty">
+            <exclude/>
+        </member>
+        <member name="F:VIBlend.Silverlight.Controls.TreeViewItem.CommandParameterProperty">
+            <exclude/>
+        </member>
+        <member name="M:VIBlend.Silverlight.Controls.TreeViewItem.ExecuteCommand(System.Windows.Input.ICommand,System.Object)">
+            <summary>
+            Executes the command.
+            </summary>
+            <param name="command">The command.</param>
+            <param name="commandParameter">The command parameter.</param>
+        </member>
+        <member name="F:VIBlend.Silverlight.Controls.TreeViewItem.IndicatorsAlwaysHiddenProperty">
+            <exclude/>
+        </member>
+        <member name="F:VIBlend.Silverlight.Controls.TreeViewItem.AllowDefaultIndicatorsRotationProperty">
+            <exclude/>
+        </member>
+        <member name="F:VIBlend.Silverlight.Controls.TreeViewItem.EditTemplateProperty">
+            <exclude/>   
+        </member>
+        <member name="F:VIBlend.Silverlight.Controls.TreeViewItem.EnableItemEditProperty">
+            <exclude/>
+        </member>
+        <member name="F:VIBlend.Silverlight.Controls.TreeViewItem.DisabledForeBrushProperty">
+            <exclude/>
+        </member>
+        <member name="F:VIBlend.Silverlight.Controls.TreeViewItem.SelectedForeBrushProperty">
+            <exclude/>
+        </member>
+        <member name="F:VIBlend.Silverlight.Controls.TreeViewItem.HighlightForeBrushProperty">
+            <exclude/>
+        </member>
+        <member name="F:VIBlend.Silverlight.Controls.TreeViewItem.NormalForeBrushProperty">
+            <exclude/>
+        </member>
+        <member name="F:VIBlend.Silverlight.Controls.TreeViewItem.DisplayValueProperty">
+            <exclude/>
+        </member>
+        <member name="F:VIBlend.Silverlight.Controls.TreeViewItem.ValueProperty">
+            <exclude/>
+        </member>
+        <member name="F:VIBlend.Silverlight.Controls.TreeViewItem.ImageSourceProperty">
+            <exclude/>
+        </member>
+        <member name="F:VIBlend.Silverlight.Controls.TreeViewItem.SelectedImageSourceProperty">
+            <exclude/>
+        </member>
+        <member name="F:VIBlend.Silverlight.Controls.TreeViewItem.StateImageSourceProperty">
+            <exclude/>
+        </member>
+        <member name="M:VIBlend.Silverlight.Controls.TreeViewItem.OnVisualStateChanged">
+            <summary>
+            Called when the visual state is changed.
+            </summary>
+        </member>
+        <member name="M:VIBlend.Silverlight.Controls.TreeViewItem.GetContainerForItemOverride">
+            <summary>
+            Creates or identifies the element that is used to display the given item.
+            </summary>
+            <returns>
+            The element that is used to display the given item.
+            </returns>
+        </member>
+        <member name="M:VIBlend.Silverlight.Controls.TreeViewItem.IsItemItsOwnContainerOverride(System.Object)">
+            <summary>
+            Determines whether an object is a
+            <see cref="T:System.Windows.Controls.TreeViewItem" />.
+            </summary>
+            <param name="item">The object to evaluate.</param>
+            <returns>
+            True if <paramref name="item" /> is a
+            <see cref="T:System.Windows.Controls.TreeViewItem" />; otherwise,
+            false.
+            </returns>
+        </member>
+        <member name="M:VIBlend.Silverlight.Controls.TreeViewItem.PrepareContainerForItemOverride(System.Windows.DependencyObject,System.Object)">
+            <summary>
+            Prepares the specified container element to display the specified
+            item.
+            </summary>
+            <param name="element">
+            Container element used to display the specified item.
+            </param>
+            <param name="item">The item to display.</param>
+        </member>
+        <member name="M:VIBlend.Silverlight.Controls.TreeViewItem.ClearContainerForItemOverride(System.Windows.DependencyObject,System.Object)">
+            <summary>
+            Removes all templates, styles, and bindings for the object displayed
+            as a <see cref="T:System.Windows.Controls.TreeViewItem" />.
+            </summary>
+            <param name="element">
+            The <see cref="T:System.Windows.Controls.TreeViewItem" /> element to
+            clear.
+            </param>
+            <param name="item">
+            The item that is contained in the
+            <see cref="T:System.Windows.Controls.TreeViewItem" />.
+            </param>
+        </member>
+        <member name="M:VIBlend.Silverlight.Controls.TreeViewItem.SetExpandElementFill(System.Windows.Shapes.Path)">
+            <summary>
+            Sets the expand element fill.
+            </summary>
+            <param name="newPath">The new path.</param>
+        </member>
+        <member name="M:VIBlend.Silverlight.Controls.TreeViewItem.SetCollapseElementFill(System.Windows.Shapes.Path)">
+            <summary>
+            Sets the collapse element fill.
+            </summary>
+            <param name="newPath">The new path.</param>
+        </member>
+        <member name="F:VIBlend.Silverlight.Controls.TreeViewItem.ExpandElementProperty">
+            <exclude/>
+        </member>
+        <member name="F:VIBlend.Silverlight.Controls.TreeViewItem.CollapseElementProperty">
+            <exclude/>
+        </member>
+        <member name="M:VIBlend.Silverlight.Controls.TreeViewItem.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:VIBlend.Silverlight.Controls.TreeViewItem"/> class.
+            </summary>
+        </member>
+        <member name="M:VIBlend.Silverlight.Controls.TreeViewItem.#ctor(System.String)">
+            <summary>
+            Initializes a new instance of the <see cref="T:VIBlend.Silverlight.Controls.TreeViewItem"/> class.
+            </summary>
+            <param name="text">The text.</param>
+        </member>
+        <member name="M:VIBlend.Silverlight.Controls.TreeViewItem.#ctor(System.Windows.Media.ImageSource,System.String)">
+            <summary>
+            Initializes a new instance of the <see cref="T:VIBlend.Silverlight.Controls.TreeViewItem"/> class.
+            </summary>
+            <param name="imageSource">The image source.</param>
+            <param name="text">The text.</param>
+        </member>
+        <member name="F:VIBlend.Silverlight.Controls.TreeViewItem.SelectedCommandProperty">
+            <exclude/>
+        </member>
+        <member name="F:VIBlend.Silverlight.Controls.TreeViewItem.SelectedCommandParameterProperty">
+            <exclude/>
+        </member>
+        <member name="F:VIBlend.Silverlight.Controls.TreeViewItem.ExpandCommandProperty">
+            <exclude/>
+        </member>
+        <member name="F:VIBlend.Silverlight.Controls.TreeViewItem.ExpandCommandParameterProperty">
+            <exclude/>
+        </member>
+        <member name="F:VIBlend.Silverlight.Controls.TreeViewItem.CollapseCommandProperty">
+            <exclude/>
+        </member>
+        <member name="F:VIBlend.Silverlight.Controls.TreeViewItem.CollapseCommandParameterProperty">
+            <exclude/>
+        </member>
+        <member name="F:VIBlend.Silverlight.Controls.TreeViewItem.IsSelectedProperty">
+            <exclude/>
+        </member>
+        <member name="F:VIBlend.Silverlight.Controls.TreeViewItem.IsExpandedProperty">
+            <exclude/>
+        </member>
+        <member name="F:VIBlend.Silverlight.Controls.TreeViewItem.IsCheckedProperty">
+            <exclude/>
+        </member>
+        <member name="M:VIBlend.Silverlight.Controls.TreeViewItem.Toggle">
+            <summary>
+            Toggles the item's state.
+            </summary>
+        </member>
+        <member name="M:VIBlend.Silverlight.Controls.TreeViewItem.GetItemAtPoint(System.Windows.Point,System.Windows.Controls.ItemsControl)">
+            <summary>
+            Gets the item at point.
+            </summary>
+            <param name="point">The point.</param>
+            <param name="control">The control.</param>
+            <returns></returns>
+        </member>
+        <member name="F:VIBlend.Silverlight.Controls.TreeViewItem.VerticalTemplateProperty">
+            <summary>
+            Represents the VerticalTemplateProperty.
+            </summary>
+        </member>
+        <member name="F:VIBlend.Silverlight.Controls.TreeViewItem.ExpandImageSourceProperty">
+            <summary>
+            Represents the ExpandImageSourceProperty.
+            </summary>
+        </member>
+        <member name="F:VIBlend.Silverlight.Controls.TreeViewItem.CollapseImageSourceProperty">
+            <summary>
+            Represents the CollapseImageSourceProperty.
+            </summary>
+        </member>
+        <member name="M:VIBlend.Silverlight.Controls.TreeViewItem.OnApplyTemplate">
+            <summary>
+            Called when the template is applied.
+            </summary>
+        </member>
+        <member name="M:VIBlend.Silverlight.Controls.TreeViewItem.UpdateExpandCollapseIndicators">
+            <summary>
+            Updates the expand and collapse indicators.
+            </summary>
+        </member>
+        <member name="M:VIBlend.Silverlight.Controls.TreeViewItem.GetLastVisibleItem(System.Windows.Controls.ItemsControl)">
+            <summary>
+            Gets the last visible item.
+            </summary>
+            <param name="itemsControl"></param>
+            <returns></returns>
+        </member>
+        <member name="M:VIBlend.Silverlight.Controls.TreeViewItem.Remove">
+            <summary>
+            Removes this instance.
+            </summary>
+        </member>
+        <member name="M:VIBlend.Silverlight.Controls.TreeViewItem.SetIndicatorsAngle(System.Double)">
+            <summary>
+            Sets the indicators angle.
+            </summary>
+            <param name="percentage">The percentage.</param>
+        </member>
+        <member name="M:VIBlend.Silverlight.Controls.TreeViewItem.OnItemsChanged(System.Collections.Specialized.NotifyCollectionChangedEventArgs)">
+            <summary>
+            Called when the value of the <see cref="P:System.Windows.Controls.ItemsControl.Items"/> property changes.
+            </summary>
+            <param name="e">A <see cref="T:System.Collections.Specialized.NotifyCollectionChangedEventArgs"/> that contains the event data</param>
+        </member>
+        <member name="M:VIBlend.Silverlight.Controls.TreeViewItem.OnGotFocus(System.Windows.RoutedEventArgs)">
+            <summary>
+            Called before the <see cref="E:System.Windows.UIElement.GotFocus"/> event occurs.
+            </summary>
+            <param name="e">The data for the event.</param>
+        </member>
+        <member name="M:VIBlend.Silverlight.Controls.TreeViewItem.OnLostFocus(System.Windows.RoutedEventArgs)">
+            <summary>
+            Called before the <see cref="E:System.Windows.UIElement.LostFocus"/> event occurs.
+            </summary>
+            <param name="e">The data for the event.</param>
+        </member>
+        <member name="M:VIBlend.Silverlight.Controls.TreeViewItem.OnClick">
+            <summary>
+            Called when the item is clicked.
+            </summary>
+        </member>
+        <member name="M:VIBlend.Silverlight.Controls.TreeViewItem.GetFirstVisibleChild(VIBlend.Silverlight.Controls.TreeViewItem)">
+            <summary>
+            Gets the first visible child.
+            </summary>
+            <param name="n">The n.</param>
+            <returns></returns>
+        </member>
+        <member name="M:VIBlend.Silverlight.Controls.TreeViewItem.OnMouseLeftButtonUp(System.Windows.Input.MouseButtonEventArgs)">
+            <summary>
+            Called before the <see cref="E:System.Windows.UIElement.MouseLeftButtonUp"/> event occurs.
+            </summary>
+            <param name="e">The data for the event.</param>
+        </member>
+        <member name="M:VIBlend.Silverlight.Controls.TreeViewItem.OnMouseLeftButtonDown(System.Windows.Input.MouseButtonEventArgs)">
+            <summary>
+            Called before the <see cref="E:System.Windows.UIElement.MouseLeftButtonDown"/> event occurs.
+            </summary>
+            <param name="e">The data for the event.</param>
+        </member>
+        <member name="F:VIBlend.Silverlight.Controls.TreeViewItem.IsThreeStateProperty">
+            <exclude/>
+        </member>
+        <member name="M:VIBlend.Silverlight.Controls.TreeViewItem.ToString">
+            <summary>
+            Returns a <see cref="T:System.String"/> that represents this instance.
+            </summary>
+            <returns>
+            A <see cref="T:System.String"/> that represents this instance.
+            </returns>
+        </member>
+        <member name="M:VIBlend.Silverlight.Controls.TreeViewItem.OnPropertyChanged(System.String)">
+            <summary>
+            Called when a property is changed.
+            </summary>
+            <param name="propertyName">Name of the property.</param>
+        </member>
+        <member name="E:VIBlend.Silverlight.Controls.TreeViewItem.Click">
+            <summary>
+            Occurs when the user clicks the item.
+            </summary>
+        </member>
+        <member name="E:VIBlend.Silverlight.Controls.TreeViewItem.IsExpandedChanged">
+            <summary>
+            Occurs when the IsExpanded property is changed.
+            </summary>
+        </member>
+        <member name="P:VIBlend.Silverlight.Controls.TreeViewItem.Command">
+            <summary>
+            Gets or sets the command.
+            </summary>
+            <value>The command.</value>
+        </member>
+        <member name="P:VIBlend.Silverlight.Controls.TreeViewItem.CommandParameter">
+            <summary>
+            Gets or sets the command parameter.
+            </summary>
+            <value>The command parameter.</value>
+        </member>
+        <member name="P:VIBlend.Silverlight.Controls.TreeViewItem.IndicatorsAlwaysHidden">
+            <summary>
+            Gets or sets a value indicating whether the expand/collapse indicators are always hidden
+            </summary>
+        </member>
+        <member name="P:VIBlend.Silverlight.Controls.TreeViewItem.AllowDefaultIndicatorsRotation">
+            <summary>
+            Gets or sets a value indicating whether the expand/collapse indicators are rotated by default.
+            </summary>
+        </member>
+        <member name="P:VIBlend.Silverlight.Controls.TreeViewItem.DefaultHeader">
+            <summary>
+            Gets or sets the default header.
+            </summary>
+            <value>The default header.</value>
+        </member>
+        <member name="P:VIBlend.Silverlight.Controls.TreeViewItem.EditTemplate">
+            <summary>
+            Gets or sets the edit template.
+            </summary>
+            <value>The edit template.</value>
+        </member>
+        <member name="P:VIBlend.Silverlight.Controls.TreeViewItem.EnableItemEdit">
+            <summary>
+            Gets or sets whether the items values can be edited.
+            </summary>
+        </member>
+        <member name="P:VIBlend.Silverlight.Controls.TreeViewItem.DisplayValue">
+            <summary>
+            Gets or sets the item's value.
+            </summary>
+        </member>
+        <member name="P:VIBlend.Silverlight.Controls.TreeViewItem.Value">
+            <summary>
+            Gets or sets the item's value.
+            </summary>
+        </member>
+        <member name="P:VIBlend.Silverlight.Controls.TreeViewItem.ImageSource">
+            <summary>
+            Gets or sets item's image.
+            </summary>
+        </member>
+        <member name="P:VIBlend.Silverlight.Controls.TreeViewItem.SelectedImageSource">
+            <summary>
+            Gets or sets item's image.
+            </summary>
+        </member>
+        <member name="P:VIBlend.Silverlight.Controls.TreeViewItem.StateImageSource">
+            <summary>
+            Gets or sets item's image.
+            </summary>
+        </member>
+        <member name="P:VIBlend.Silverlight.Controls.TreeViewItem.SelectedForeBrush">
+            <summary>
+            Gets or sets the brush which is used when the item is selected.
+            </summary>
+        </member>
+        <member name="P:VIBlend.Silverlight.Controls.TreeViewItem.DisabledForeBrush">
+            <summary>
+            Gets or sets the brush which is used when the item is disabled.
+            </summary>
+        </member>
+        <member name="P:VIBlend.Silverlight.Controls.TreeViewItem.HighlightForeBrush">
+            <summary>
+            Gets or sets the brush which is used when the item is highlighted.
+            </summary>
+        </member>
+        <member name="P:VIBlend.Silverlight.Controls.TreeViewItem.NormalForeBrush">
+            <summary>
+            Gets or sets the brush which is used when the item is in the default state.
+            </summary>
+        </member>
+        <member name="E:VIBlend.Silverlight.Controls.TreeViewItem.VisualStateChanged">
+            <summary>
+            Occurs when the visual state is changed.
+            </summary>
+        </member>
+        <member name="P:VIBlend.Silverlight.Controls.TreeViewItem.IsRootItem">
+            <summary>
+            Gets whether the treeView item is a root item.
+            </summary>
+        </member>
+        <member name="P:VIBlend.Silverlight.Controls.TreeViewItem.ListItemType">
+            <summary>
+            Gets or sets the current ListItemType.
+            </summary>
+        </member>
+        <member name="P:VIBlend.Silverlight.Controls.TreeViewItem.RootItem">
+            <summary>
+            Gets or sets the parent RootItem.
+            </summary>
+        </member>
+        <member name="P:VIBlend.Silverlight.Controls.TreeViewItem.TreeViewItems">
+            <summary>
+            Gets the TreeView items.
+            </summary>
+        </member>
+        <member name="P:VIBlend.Silverlight.Controls.TreeViewItem.TreeView">
+            <summary>
+            Gets the parent TreeView.
+            </summary>
+        </member>
+        <member name="P:VIBlend.Silverlight.Controls.TreeViewItem.ParentItemsControl">
+            <summary>
+            Gets or sets a reference to the parent ItemsControl of a
+            TreeViewItem.
+            </summary>
+        </member>
+        <member name="P:VIBlend.Silverlight.Controls.TreeViewItem.ParentTreeViewItem">
+            <summary>
+            Gets a reference to the parent TreeViewItem of this TreeViewItem.
+            </summary>
+        </member>
+        <member name="P:VIBlend.Silverlight.Controls.TreeViewItem.ParentTreeView">
+            <summary>
+            Gets a reference to the parent TreeView of the TreeViewItem.
+            </summary>
+        </member>
+        <member name="P:VIBlend.Silverlight.Controls.TreeViewItem.ExpandElement">
+            <summary>
+            Gets or sets tree node's Expand element.
+            </summary>
+        </member>
+        <member name="P:VIBlend.Silverlight.Controls.TreeViewItem.CollapseElement">
+            <summary>
+            Gets or sets tree node's collapse element.
+            </summary>
+        </member>
+        <member name="P:VIBlend.Silverlight.Controls.TreeViewItem.BackgroundHighlight">
+            <summary>
+            Gets or sets the background highlight rectangle.
+            </summary>
+        </member>
+        <member name="P:VIBlend.Silverlight.Controls.TreeViewItem.SelectedCommand">
+            <summary>
+            Gets or sets the SelectedCommand.
+            </summary>
+            <value>The command.</value>
+        </member>
+        <member name="P:VIBlend.Silverlight.Controls.TreeViewItem.SelectedCommandParameter">
+            <summary>
+            Gets or sets the selected command parameter.
+            </summary>
+            <value>The command parameter.</value>
+        </member>
+        <member name="P:VIBlend.Silverlight.Controls.TreeViewItem.ExpandCommand">
+            <summary>
+            Gets or sets the ExpandCommand.
+            </summary>
+            <value>The command.</value>
+        </member>
+        <member name="P:VIBlend.Silverlight.Controls.TreeViewItem.ExpandCommandParameter">
+            <summary>
+            Gets or sets the Expand command parameter.
+            </summary>
+            <value>The command parameter.</value>
+        </member>
+        <member name="P:VIBlend.Silverlight.Controls.TreeViewItem.CollapseCommand">
+            <summary>
+            Gets or sets the CollapseCommand.
+            </summary>
+            <value>The command.</value>
+        </member>
+        <member name="P:VIBlend.Silverlight.Controls.TreeViewItem.CollapseCommandParameter">
+            <summary>
+            Gets or sets the Collapse command parameter.
+            </summary>
+            <value>The command parameter.</value>
+        </member>
+        <member name="P:VIBlend.Silverlight.Controls.TreeViewItem.IsExpanded">
+            <summary>
+            Gets or sets the isExpanded state.
+            </summary>
+        </member>
+        <member name="P:VIBlend.Silverlight.Controls.TreeViewItem.HeaderElement">
+            <summary>
+            Gets the Header template part that is used to distinguish the bound
+            Header content of the TreeViewItem.
+            </summary>
+        </member>
+        <member name="P:VIBlend.Silverlight.Controls.TreeViewItem.VerticalTemplate">
+            <summary>
+            Gets or sets the vertical item template.
+            </summary>
+        </member>
+        <member name="P:VIBlend.Silverlight.Controls.TreeViewItem.ExpanderButton">
+            <summary>
+            Gets the expander button.
+            </summary>
+            <value>The expander button.</value>
+        </member>
+        <member name="P:VIBlend.Silverlight.Controls.TreeViewItem.CollapseButton">
+            <summary>
+            Gets the collapse button.
+            </summary>
+            <value>The collapse button.</value>
+        </member>
+        <member name="P:VIBlend.Silverlight.Controls.TreeViewItem.ExpandImageSource">
+            <summary>
+            Gets or sets the expand image source.
+            </summary>
+            <value>The expand image source.</value>
+        </member>
+        <member name="P:VIBlend.Silverlight.Controls.TreeViewItem.CollapseImageSource">
+            <summary>
+            Gets or sets the Collapse image source.
+            </summary>
+            <value>The Collapse image source.</value>
+        </member>
+        <member name="P:VIBlend.Silverlight.Controls.TreeViewItem.ParentCollection">
+            <summary>
+            Gets the parent collection.
+            </summary>
+            <value>The parent collection.</value>
+        </member>
+        <member name="P:VIBlend.Silverlight.Controls.TreeViewItem.PrevItem">
+            <summary>
+            Gets the previous item.
+            </summary>
+        </member>
+        <member name="P:VIBlend.Silverlight.Controls.TreeViewItem.PrevVisibleItem">
+            <summary>
+            Gets the previous visible item.
+            </summary>
+        </member>
+        <member name="P:VIBlend.Silverlight.Controls.TreeViewItem.PrevSiblingItem">
+            <summary>
+            Gets the previous sibling item.
+            </summary>
+        </member>
+        <member name="P:VIBlend.Silverlight.Controls.TreeViewItem.NextSiblingItem">
+            <summary>
+            Gets the next sibling item.
+            </summary>
+        </member>
+        <member name="P:VIBlend.Silverlight.Controls.TreeViewItem.Level">
+            <summary>
+            Gets the level in the hierarchy of this item.
+            </summary>
+        </member>
+        <member name="P:VIBlend.Silverlight.Controls.TreeViewItem.NextItem">
+            <summary>
+            Gets the next item.
+            </summary>
+        </member>
+        <member name="P:VIBlend.Silverlight.Controls.TreeViewItem.NextVisibleItem">
+            <summary>
+            Gets the next visible item.
+            </summary>
+        </member>
+        <member name="P:VIBlend.Silverlight.Controls.TreeViewItem.IsMouseOver">
+            <summary>
+            Gets or sets a value indicating whether this instance is mouse over.
+            </summary>
+            <value>
+            	<c>true</c> if this instance is mouse over; otherwise, <c>false</c>.
+            </value>
+        </member>
+        <member name="P:VIBlend.Silverlight.Controls.TreeViewItem.IsSelected">
+            <summary>
+            Gets or sets whether the item is selected.
+            </summary>
+        </member>
+        <member name="P:VIBlend.Silverlight.Controls.TreeViewItem.IsThreeState">
+            <summary>
+            Gets or sets whether the item has 3 states.
+            </summary>
+        </member>
+        <member name="P:VIBlend.Silverlight.Controls.TreeViewItem.IsChecked">
+            <summary>
+            Gets or sets whether the item is checked.
+            </summary>
+        </member>
+        <member name="E:VIBlend.Silverlight.Controls.TreeViewItem.PropertyChanged">
+            <summary>
+            Occurs when a property value changes.
+            </summary>
+        </member>
+        <member name="T:VIBlend.Silverlight.Controls.TreeViewAction">
+            <summary>
+            TreeViewAction enumeration.
+            </summary>
+        </member>
+        <member name="F:VIBlend.Silverlight.Controls.TreeViewAction.None">
+            <summary>
+            None
+            </summary>
+        </member>
+        <member name="F:VIBlend.Silverlight.Controls.TreeViewAction.Expanded">
+            <summary>
+            Expanded action
+            </summary>
+        </member>
+        <member name="F:VIBlend.Silverlight.Controls.TreeViewAction.Collapsed">
+            <summary>
+            Collapsed action
+            </summary>
+        </member>
+        <member name="F:VIBlend.Silverlight.Controls.TreeViewAction.Edit">
+            <summary>
+            Item is edited.
+            </summary>
+        </member>
+        <member name="T:VIBlend.Silverlight.Controls.TreeViewEventArgs">
+            <summary>
+            Represents a base class for the TreeView event data.
+            </summary>
+        </member>
+        <member name="M:VIBlend.Silverlight.Controls.TreeViewEventArgs.#ctor(VIBlend.Silverlight.Controls.TreeViewItem,VIBlend.Silverlight.Controls.TreeViewAction)">
+            <summary>
+            Initializes a new instance of the <see cref="T:VIBlend.Silverlight.Controls.TreeViewEventArgs"/> class.
+            </summary>
+            <param name="item">The item.</param>
+            <param name="action">The action.</param>
+        </member>
+        <member name="P:VIBlend.Silverlight.Controls.TreeViewEventArgs.Action">
+            <summary>
+            Gets the action.
+            </summary>
+            <value>The action.</value>
+        </member>
+        <member name="P:VIBlend.Silverlight.Controls.TreeViewEventArgs.Item">
+            <summary>
+            Gets the item.
+            </summary>
+            <value>The item.</value>
+        </member>
+        <member name="T:VIBlend.Silverlight.Controls.TreeViewEditEventArgs">
+            <summary>
+            Represents a class that contains event data.
+            </summary>
+        </member>
+        <member name="M:VIBlend.Silverlight.Controls.TreeViewEditEventArgs.#ctor(VIBlend.Silverlight.Controls.TreeViewItem,System.Windows.FrameworkElement)">
+            <summary>
+            Initializes a new instance of the <see cref="T:VIBlend.Silverlight.Controls.TreeViewEditEventArgs"/> class.
+            </summary>
+            <param name="item">The item.</param>
+            <param name="editor">The editor.</param>
+        </member>
+        <member name="P:VIBlend.Silverlight.Controls.TreeViewEditEventArgs.Item">
+            <summary>
+            Gets the item.
+            </summary>
+            <value>The item.</value>
+        </member>
+        <member name="T:VIBlend.Silverlight.Controls.TreeViewCancelEventArgs">
+            <summary>
+            Provides data for a cancelable event.
+            </summary>
+        </member>
+        <member name="M:VIBlend.Silverlight.Controls.TreeViewCancelEventArgs.#ctor(VIBlend.Silverlight.Controls.TreeViewItem,System.Boolean,VIBlend.Silverlight.Controls.TreeViewAction)">
+            <summary>
+            Initializes a new instance of the <see cref="T:VIBlend.Silverlight.Controls.TreeViewCancelEventArgs"/> class.
+            </summary>
+            <param name="item">The item.</param>
+            <param name="cancel">if set to <c>true</c> [cancel].</param>
+            <param name="action">The action.</param>
+        </member>
+        <member name="P:VIBlend.Silverlight.Controls.TreeViewCancelEventArgs.Action">
+            <summary>
+            Gets the action.
+            </summary>
+            <value>The action.</value>
+        </member>
+        <member name="P:VIBlend.Silverlight.Controls.TreeViewCancelEventArgs.Item">
+            <summary>
+            Gets the item.
+            </summary>
+            <value>The item.</value>
+        </member>
+        <member name="T:VIBlend.Silverlight.Controls.TreeView">
+            <summary>
+            Represents a TreeView control.
+            </summary>
+        </member>
+        <member name="F:VIBlend.Silverlight.Controls.TreeView.FilterProperty">
+            <exclude/>
+        </member>
+        <member name="F:VIBlend.Silverlight.Controls.TreeView.EnableIncrementalSearchProperty">
+            <exclude/>
+        </member>
+        <member name="F:VIBlend.Silverlight.Controls.TreeView.EnableMultipleSelectionProperty">
+            <exclude/>
+        </member>
+        <member name="F:VIBlend.Silverlight.Controls.TreeView.IncrementalSearchModeProperty">
+            <exclude/>
+        </member>
+        <member name="M:VIBlend.Silverlight.Controls.TreeView.GetTreeViewItems">
+            <summary>
+            Gets the tree view items.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="F:VIBlend.Silverlight.Controls.TreeView.ScrollAnimationTimeProperty">
+            <exclude/>
+        </member>
+        <member name="F:VIBlend.Silverlight.Controls.TreeView.ScrollAnimationModeProperty">
+            <exclude/>
+        </member>
+        <member name="M:VIBlend.Silverlight.Controls.TreeView.OnItemCheckedChanged(System.Object,VIBlend.Silverlight.Controls.TreeViewCheckEventArgs)">
+            <summary>
+            Called when item is checked.
+            </summary>
+            <param name="sender">The sender.</param>
+            <param name="args">The <see cref="T:VIBlend.Silverlight.Controls.TreeViewCheckEventArgs"/> instance containing the event data.</param>
+        </member>
+        <member name="M:VIBlend.Silverlight.Controls.TreeView.GetItemAtPoint(System.Windows.Point)">
+            <summary>
+            Gets the item at point.
+            </summary>
+            <param name="point">The point.</param>
+            <returns></returns>
+        </member>
+        <member name="M:VIBlend.Silverlight.Controls.TreeView.GetItemAtPoint(System.Windows.Point,System.Windows.Controls.ItemsControl)">
+            <summary>
+            Gets the item at point.
+            </summary>
+            <param name="point">The point.</param>
+            <param name="control">The control.</param>
+            <returns></returns>
+        </member>
+        <member name="M:VIBlend.Silverlight.Controls.TreeView.GetFilteredItems">
+            <summary>
+            Gets the filtered items.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:VIBlend.Silverlight.Controls.TreeView.PrepareIncrementalSearch">
+            <summary>
+            Prepares the incremental search.
+            </summary>
+        </member>
+        <member name="F:VIBlend.Silverlight.Controls.TreeView.VerticalTemplateProperty">
+            <summary>
+            Represents the VerticalTemplateProperty.
+            </summary>
+        </member>
+        <member name="F:VIBlend.Silverlight.Controls.TreeView.FilterModeProperty">
+            <exclude/>
+        </member>
+        <member name="M:VIBlend.Silverlight.Controls.TreeView.OnItemBeginEditing(VIBlend.Silverlight.Controls.TreeViewCancelEventArgs)">
+            <summary>
+            Raises the <see cref="E:ItemBeginEditing"/> event.
+            </summary>
+            <param name="args">The <see cref="T:VIBlend.Silverlight.Controls.TreeViewCancelEventArgs"/> instance containing the event data.</param>
+        </member>
+        <member name="M:VIBlend.Silverlight.Controls.TreeView.OnItemBeginEdit(VIBlend.Silverlight.Controls.TreeViewEventArgs)">
+            <summary>
+            Fires the ItemBeginEdit event.
+            </summary>
+            <param name="args"></param>
+        </member>
+        <member name="M:VIBlend.Silverlight.Controls.TreeView.OnItemEndEditing(VIBlend.Silverlight.Controls.TreeViewCancelEventArgs)">
+            <summary>
+            Fires the ItemEndEditing event.
+            </summary>
+            <param name="args"></param>
+        </member>
+        <member name="M:VIBlend.Silverlight.Controls.TreeView.OnItemEndEdit(VIBlend.Silverlight.Controls.TreeViewEventArgs)">
+            <summary>
+            Fires the ItemEndEdit event.
+            </summary>
+            <param name="args"></param>
+        </member>
+        <member name="M:VIBlend.Silverlight.Controls.TreeView.OnItemExpandedChanging(VIBlend.Silverlight.Controls.TreeViewCancelEventArgs)">
+            <summary>
+            Fires the ItemExpandedChanging event.
+            </summary>
+            <param name="args"></param>
+        </member>
+        <member name="M:VIBlend.Silverlight.Controls.TreeView.OnItemExpandedChanged(VIBlend.Silverlight.Controls.TreeViewEventArgs)">
+            <summary>
+            Fires the ItemExpandedChanged event.
+            </summary>
+            <param name="args"></param>
+        </member>
+        <member name="M:VIBlend.Silverlight.Controls.TreeView.OnItemLoading(VIBlend.Silverlight.Controls.TreeViewEventArgs)">
+            <summary>
+            Fires the ItemLoading event.
+            </summary>
+            <param name="args"></param>
+        </member>
+        <member name="M:VIBlend.Silverlight.Controls.TreeView.OnItemDragStarted(VIBlend.Silverlight.Controls.TreeViewEventArgs)">
+            <summary>
+            Fires the ItemDragStarted event.
+            </summary>
+            <param name="args"></param>
+        </member>
+        <member name="M:VIBlend.Silverlight.Controls.TreeView.OnItemDragEnded(VIBlend.Silverlight.Controls.TreeViewEventArgs)">
+            <summary>
+            Fires the ItemDragEnded event.
+            </summary>
+            <param name="args"></param>
+        </member>
+        <member name="M:VIBlend.Silverlight.Controls.TreeView.OnItemDragStarting(VIBlend.Silverlight.Controls.TreeViewCancelEventArgs)">
+            <summary>
+            Fires the ItemDragStarting event.
+            </summary>
+            <param name="args"></param>
+        </member>
+        <member name="M:VIBlend.Silverlight.Controls.TreeView.OnItemDragEnding(VIBlend.Silverlight.Controls.TreeViewCancelEventArgs)">
+            <summary>
+            Fires the ItemDragEnding event.
+            </summary>
+            <param name="args"></param>
+        </member>
+        <member name="M:VIBlend.Silverlight.Controls.TreeView.OnItemMouseDown(VIBlend.Silverlight.Controls.TreeViewMouseEventArgs)">
+            <summary>
+            Raises the <see cref="E:ItemMouseDown"/> event.
+            </summary>
+            <param name="args">The <see cref="T:VIBlend.Silverlight.Controls.TreeViewMouseEventArgs"/> instance containing the event data.</param>
+        </member>
+        <member name="M:VIBlend.Silverlight.Controls.TreeView.OnItemMouseUp(VIBlend.Silverlight.Controls.TreeViewMouseEventArgs)">
+            <summary>
+            Raises the <see cref="E:ItemMouseUp"/> event.
+            </summary>
+            <param name="args">The <see cref="T:VIBlend.Silverlight.Controls.TreeViewMouseEventArgs"/> instance containing the event data.</param>
+        </member>
+        <member name="M:VIBlend.Silverlight.Controls.TreeView.OnItemSelectionChanged(VIBlend.Silverlight.Controls.TreeViewEventArgs)">
+            <summary>
+            Fires the ItemSelectionChanged event.
+            </summary>
+            <param name="args"></param>
+        </member>
+        <member name="M:VIBlend.Silverlight.Controls.TreeView.OnItemSelectionChanging(VIBlend.Silverlight.Controls.TreeViewCancelEventArgs)">
+            <summary>
+            Fires the ItemSelectionChanging event.
+            </summary>
+            <param name="args"></param>
+        </member>
+        <member name="F:VIBlend.Silverlight.Controls.TreeView.ContextMenuProperty">
+            <exclude/>
+        </member>
+        <member name="M:VIBlend.Silverlight.Controls.TreeView.OnMouseRightButtonDown(System.Windows.Input.MouseButtonEventArgs)">
+            <summary>
+            Raises the <see cref="E:System.Windows.UIElement.MouseRightButtonDown"/> event.
+            </summary>
+            <param name="e">A <see cref="T:System.Windows.Input.MouseButtonEventArgs"/> that contains the event data.</param>
+        </member>
+        <member name="F:VIBlend.Silverlight.Controls.TreeView.ExpandTypeProperty">
+            <exclude/>
+        </member>
+        <member name="F:VIBlend.Silverlight.Controls.TreeView.EnableSingleNodeExpandProperty">
+            <exclude/>
+        </member>
+        <member name="F:VIBlend.Silverlight.Controls.TreeView.EnableDragDropProperty">
+            <exclude/>
+        </member>
+        <member name="F:VIBlend.Silverlight.Controls.TreeView.EnableTriStateCheckBoxesProperty">
+            <exclude/>
+        </member>
+        <member name="F:VIBlend.Silverlight.Controls.TreeView.EnableItemEditProperty">
+            <exclude/>
+        </member>
+        <member name="F:VIBlend.Silverlight.Controls.TreeView.EnableKeyboardNavigationProperty">
+            <exclude/>
+        </member>
+        <member name="F:VIBlend.Silverlight.Controls.TreeView.EnableCheckBoxesProperty">
+            <exclude/>
+        </member>
+        <member name="F:VIBlend.Silverlight.Controls.TreeView.EnableExpandCollapseMarkersAnimationProperty">
+            <exclude/>
+        </member>
+        <member name="M:VIBlend.Silverlight.Controls.TreeView.SetListItemType(System.Int32,VIBlend.Silverlight.Controls.ListItemType)">
+            <summary>
+            Sets the type of the list item.
+            </summary>
+            <param name="level">The level.</param>
+            <param name="itemType">Type of the item.</param>
+        </member>
+        <member name="M:VIBlend.Silverlight.Controls.TreeView.SetListItemType(System.Windows.Controls.ItemsControl,System.Int32,VIBlend.Silverlight.Controls.ListItemType)">
+            <summary>
+            Sets the type of the list item.
+            </summary>
+            <param name="itemsControl">The items control.</param>
+            <param name="level">The level.</param>
+            <param name="itemType">Type of the item.</param>
+        </member>
+        <member name="M:VIBlend.Silverlight.Controls.TreeView.SetListItemType(System.Windows.Controls.ItemsControl,VIBlend.Silverlight.Controls.ListItemType)">
+            <summary>
+            Sets the type of the list item.
+            </summary>
+            <param name="itemsControl">The items control.</param>
+            <param name="itemType">Type of the item.</param>
+        </member>
+        <member name="M:VIBlend.Silverlight.Controls.TreeView.CollapseAll">
+            <summary>
+            Collapses all.
+            </summary>
+        </member>
+        <member name="M:VIBlend.Silverlight.Controls.TreeView.CollapseItems(System.Windows.Controls.ItemsControl)">
+            <summary>
+            Collapses the items.
+            </summary>
+        </member>
+        <member name="M:VIBlend.Silverlight.Controls.TreeView.CollapseItems(System.Windows.Controls.ItemCollection)">
+            <summary>
+            Collapses the items.
+            </summary>
+            <param name="items">The items.</param>
+        </member>
+        <member name="M:VIBlend.Silverlight.Controls.TreeView.ExpandAll">
+            <summary>
+            Expands all.
+            </summary>
+        </member>
+        <member name="M:VIBlend.Silverlight.Controls.TreeView.ExpandItem(VIBlend.Silverlight.Controls.TreeViewItem)">
+            <summary>
+            Expands the item.
+            </summary>
+            <param name="item">The item.</param>
+        </member>
+        <member name="M:VIBlend.Silverlight.Controls.TreeView.CollapseItem(VIBlend.Silverlight.Controls.TreeViewItem)">
+            <summary>
+            Collapses the item.
+            </summary>
+            <param name="item">The item.</param>
+        </member>
+        <member name="M:VIBlend.Silverlight.Controls.TreeView.ExpandItems(System.Windows.Controls.ItemCollection)">
+            <summary>
+            Expands the items.
+            </summary>
+            <param name="items">The items.</param>
+        </member>
+        <member name="M:VIBlend.Silverlight.Controls.TreeView.ExpandItems(System.Windows.Controls.ItemsControl)">
+            <summary>
+            Expands the items.
+            </summary>
+            <param name="itemsControl">The items control.</param>
+        </member>
+        <member name="M:VIBlend.Silverlight.Controls.TreeView.ExpandItems(System.Windows.Controls.ItemsControl,System.Boolean)">
+            <summary>
+            Expands the items.
+            </summary>
+        </member>
+        <member name="M:VIBlend.Silverlight.Controls.TreeView.BeginEdit">
+            <summary>
+            Begins the edit.
+            </summary>
+        </member>
+        <member name="M:VIBlend.Silverlight.Controls.TreeView.OnLostFocus(System.Windows.RoutedEventArgs)">
+            <summary>
+            Called before the <see cref="E:System.Windows.UIElement.LostFocus"/> event occurs.
+            </summary>
+            <param name="e">The data for the event.</param>
+        </member>
+        <member name="M:VIBlend.Silverlight.Controls.TreeView.EndEdit(System.Boolean)">
+            <summary>
+            Ends the edit.
+            </summary>
+            <param name="cancelEdit">if set to <c>true</c> cancels edit.</param>
+        </member>
+        <member name="M:VIBlend.Silverlight.Controls.TreeView.OnKeyDown(System.Windows.Input.KeyEventArgs)">
+            <summary>
+            Called before the <see cref="E:System.Windows.UIElement.KeyDown"/> event occurs.
+            </summary>
+            <param name="e">The data for the event.</param>
+        </member>
+        <member name="M:VIBlend.Silverlight.Controls.TreeView.EnsureVisible(VIBlend.Silverlight.Controls.TreeViewItem)">
+            <summary>
+            Scrolls to a treeview item.
+            </summary>
+            <param name="item"></param>
+        </member>
+        <member name="M:VIBlend.Silverlight.Controls.TreeView.OnMouseEnter(System.Windows.Input.MouseEventArgs)">
+            <summary>
+            Called before the <see cref="E:System.Windows.UIElement.MouseEnter"/> event occurs.
+            </summary>
+            <param name="e">The data for the event.</param>
+        </member>
+        <member name="M:VIBlend.Silverlight.Controls.TreeView.OnMouseLeave(System.Windows.Input.MouseEventArgs)">
+            <summary>
+            Called before the <see cref="E:System.Windows.UIElement.MouseLeave"/> event occurs.
+            </summary>
+            <param name="e">The data for the event.</param>
+        </member>
+        <member name="M:VIBlend.Silverlight.Controls.TreeView.UpdateSelectedItems">
+            <summary>
+            Updates the selected nodes.
+            </summary>
+        </member>
+        <member name="F:VIBlend.Silverlight.Controls.TreeView.EditCommandProperty">
+            <exclude/>
+        </member>
+        <member name="F:VIBlend.Silverlight.Controls.TreeView.EditCommandParameterProperty">
+            <exclude/>
+        </member>
+        <member name="F:VIBlend.Silverlight.Controls.TreeView.EditedCommandProperty">
+            <exclude/>
+        </member>
+        <member name="F:VIBlend.Silverlight.Controls.TreeView.EditedCommandParameterProperty">
+            <exclude/>
+        </member>
+        <member name="M:VIBlend.Silverlight.Controls.TreeView.ExecuteCommand(System.Windows.Input.ICommand,System.Object)">
+            <summary>
+            Executes the command.
+            </summary>
+            <param name="command">The command.</param>
+            <param name="commandParameter">The command parameter.</param>
+        </member>
+        <member name="M:VIBlend.Silverlight.Controls.TreeView.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:VIBlend.Silverlight.Controls.TreeView"/> class.
+            </summary>
+        </member>
+        <member name="M:VIBlend.Silverlight.Controls.TreeView.OnMouseWheel(System.Windows.Input.MouseWheelEventArgs)">
+            <summary>
+            Called before the <see cref="E:System.Windows.UIElement.MouseWheel"/> event occurs to provide handling for the event in a derived class without attaching a delegate.
+            </summary>
+            <param name="e">A <see cref="T:System.Windows.Input.MouseWheelEventArgs"/> that contains the event data.</param>
+        </member>
+        <member name="M:VIBlend.Silverlight.Controls.TreeView.OnKeyUp(System.Windows.Input.KeyEventArgs)">
+            <summary>
+            Called before the <see cref="E:System.Windows.UIElement.KeyUp"/> event occurs.
+            </summary>
+            <param name="e">The data for the event.</param>
+        </member>
+        <member name="M:VIBlend.Silverlight.Controls.TreeView.IsCtrlDown">
+            <summary>
+            Determines whether the ctrl is down.
+            </summary>
+        </member>
+        <member name="M:VIBlend.Silverlight.Controls.TreeView.GetContainerForItemOverride">
+            <summary>
+            Creates or identifies the element that is used to display the given item.
+            </summary>
+            <returns>
+            The element that is used to display the given item.
+            </returns>
+        </member>
+        <member name="M:VIBlend.Silverlight.Controls.TreeView.IsItemItsOwnContainerOverride(System.Object)">
+            <summary>
+            Determines if the specified item is (or is eligible to be) its own container.
+            </summary>
+            <param name="item">The item to check.</param>
+            <returns>
+            true if the item is (or is eligible to be) its own container; otherwise, false.
+            </returns>
+        </member>
+        <member name="F:VIBlend.Silverlight.Controls.TreeView.ItemContainerStyleProperty">
+            <summary>
+            Identifies the
+            <see cref="P:System.Windows.Controls.TreeView.ItemContainerStyle" />
+            dependency property.
+            </summary>
+            <value>
+            The identifier for the
+            <see cref="P:System.Windows.Controls.TreeView.ItemContainerStyle" />
+            dependency property.
+            </value>
+        </member>
+        <member name="M:VIBlend.Silverlight.Controls.TreeView.OnItemContainerStylePropertyChanged(System.Windows.DependencyObject,System.Windows.DependencyPropertyChangedEventArgs)">
+            <summary>
+            ItemContainerStyleProperty property changed handler.
+            </summary>
+            <param name="d">
+            TreeView that changed its ItemContainerStyle.
+            </param>
+            <param name="e">Event arguments.</param>
+        </member>
+        <member name="M:VIBlend.Silverlight.Controls.TreeView.PrepareContainerForItemOverride(System.Windows.DependencyObject,System.Object)">
+            <summary>
+            Prepares the specified element to display the specified item.
+            </summary>
+            <param name="element">The element used to display the specified item.</param>
+            <param name="item">The item to display.</param>
+        </member>
+        <member name="M:VIBlend.Silverlight.Controls.TreeView.OnItemsChanged(System.Collections.Specialized.NotifyCollectionChangedEventArgs)">
+            <summary>
+            Called when the value of the <see cref="P:System.Windows.Controls.ItemsControl.Items"/> property changes.
+            </summary>
+            <param name="e">A <see cref="T:System.Collections.Specialized.NotifyCollectionChangedEventArgs"/> that contains the event data</param>
+        </member>
+        <member name="M:VIBlend.Silverlight.Controls.TreeView.OnApplyTemplate">
+            <summary>
+            When overridden in a derived class, is invoked whenever application code or internal processes (such as a rebuilding layout pass) call <see cref="M:System.Windows.Controls.Control.ApplyTemplate"/>.
+            </summary>
+        </member>
+        <member name="M:VIBlend.Silverlight.Controls.TreeView.OnPropertyChanged(System.String)">
+            <summary>
+            Called when a property is changed.
+            </summary>
+            <param name="propertyName">Name of the property.</param>
+        </member>
+        <member name="P:VIBlend.Silverlight.Controls.TreeView.TreeViewItems">
+            <summary>
+            Gets the TreeView items.
+            </summary>
+        </member>
+        <member name="P:VIBlend.Silverlight.Controls.TreeView.ScrollAnimationTime">
+            <summary>
+            Gets or sets the duration of the scroll animation.
+            </summary>
+        </member>
+        <member name="P:VIBlend.Silverlight.Controls.TreeView.ScrollAnimationMode">
+            <summary>
+            Gets or sets the scroll animation mode.
+            </summary>
+        </member>
+        <member name="E:VIBlend.Silverlight.Controls.TreeView.ItemCheckedChanged">
+            <summary>
+            Occurs when item is checked.
+            </summary>
+        </member>
+        <member name="P:VIBlend.Silverlight.Controls.TreeView.IncrementalSearchMode">
+            <summary>
+            Gets or sets the incremental search mode.
+            </summary>
+        </member>
+        <member name="P:VIBlend.Silverlight.Controls.TreeView.EnableMultipleSelection">
+            <summary>
+            Gets or sets a value indicating whether the multi selection is enabled.
+            </summary>
+        </member>
+        <member name="P:VIBlend.Silverlight.Controls.TreeView.EnableIncrementalSearch">
+            <summary>
+            Gets or sets a value indicating whether the incremental search is enabled.
+            </summary>
+        </member>
+        <member name="P:VIBlend.Silverlight.Controls.TreeView.SearchString">
+            <summary>
+            Gets or sets the search string.
+            </summary>
+            <value>The search string.</value>
+        </member>
+        <member name="P:VIBlend.Silverlight.Controls.TreeView.Filter">
+            <summary>
+            Gets or sets the search filter.
+            </summary>
+        </member>
+        <member name="P:VIBlend.Silverlight.Controls.TreeView.FilterMode">
+            <summary>
+            Gets or sets the filter mode.
+            </summary>
+        </member>
+        <member name="P:VIBlend.Silverlight.Controls.TreeView.ActiveEditor">
+            <summary>
+            Gets the active editor.
+            </summary>
+            <value>The active editor.</value>
+        </member>
+        <member name="E:VIBlend.Silverlight.Controls.TreeView.ItemBeginEditing">
+            <summary>
+            Occurs when the item is editing.
+            </summary>
+        </member>
+        <member name="E:VIBlend.Silverlight.Controls.TreeView.ItemBeginEdit">
+            <summary>
+            Occurs when the edit mode has started.
+            </summary>
+        </member>
+        <member name="E:VIBlend.Silverlight.Controls.TreeView.ItemEndEditing">
+            <summary>
+            Occurs when the edit mode is ending.
+            </summary>
+        </member>
+        <member name="E:VIBlend.Silverlight.Controls.TreeView.ItemEndEdit">
+            <summary>
+            Occurs when the item edit mode has ended.
+            </summary>
+        </member>
+        <member name="E:VIBlend.Silverlight.Controls.TreeView.ItemExpandedChanging">
+            <summary>
+            Occurs when item is expanding.
+            </summary>
+        </member>
+        <member name="E:VIBlend.Silverlight.Controls.TreeView.ItemExpandedChanged">
+            <summary>
+            Occurs when item is expanded.
+            </summary>
+        </member>
+        <member name="E:VIBlend.Silverlight.Controls.TreeView.ItemLoading">
+            <summary>
+            Occurs when item is expanded and lazy loading is enabled.
+            </summary>
+        </member>
+        <member name="E:VIBlend.Silverlight.Controls.TreeView.ItemDragStarted">
+            <summary>
+            Occurs when the dragging is started.
+            </summary>
+        </member>
+        <member name="E:VIBlend.Silverlight.Controls.TreeView.ItemDragEnded">
+            <summary>
+            Occurs when the dragging is ended.
+            </summary>
+        </member>
+        <member name="E:VIBlend.Silverlight.Controls.TreeView.ItemDragStarting">
+            <summary>
+            Occurs when the dragging is starting.
+            </summary>
+        </member>
+        <member name="E:VIBlend.Silverlight.Controls.TreeView.ItemDragEnding">
+            <summary>
+            Occurs when the dragging is ending.
+            </summary>
+        </member>
+        <member name="E:VIBlend.Silverlight.Controls.TreeView.ItemMouseDown">
+            <summary>
+            Occurs when the mouse button is up over a TreeViewItem.
+            </summary>
+        </member>
+        <member name="E:VIBlend.Silverlight.Controls.TreeView.ItemMouseUp">
+            <summary>
+            Occurs when the mouse button is up over a TreeViewItem.
+            </summary>
+        </member>
+        <member name="E:VIBlend.Silverlight.Controls.TreeView.ItemSelectionChanged">
+            <summary>
+            Occurs when the selection is changed.
+            </summary>
+        </member>
+        <member name="E:VIBlend.Silverlight.Controls.TreeView.ItemSelectionChanging">
+            <summary>
+            Occurs when the selection is changing.
+            </summary>
+        </member>
+        <member name="P:VIBlend.Silverlight.Controls.TreeView.IsControlKeyDown">
+            <summary>
+            Gets a value indicating whether the Control key is currently
+            pressed.
+            </summary>
+        </member>
+        <member name="P:VIBlend.Silverlight.Controls.TreeView.IsShiftKeyDown">
+            <summary>
+            Gets a value indicating whether the Shift key is currently pressed.
+            </summary>
+        </member>
+        <member name="P:VIBlend.Silverlight.Controls.TreeView.EnableLazyLoading">
+            <summary>
+            Gets or sets whether the lazy items loading is enabled.
+            </summary>
+        </member>
+        <member name="P:VIBlend.Silverlight.Controls.TreeView.ContextMenu">
+            <summary>
+            Gets or sets the ContextMenu.
+            </summary>
+        </member>
+        <member name="P:VIBlend.Silverlight.Controls.TreeView.ExpandType">
+            <summary>
+            Gets or sets the expand type.
+            </summary>
+        </member>
+        <member name="P:VIBlend.Silverlight.Controls.TreeView.EnableSingleNodeExpand">
+            <summary>
+            Gets or sets a value indicating whether an expanded node collapses all other sibling nodes.
+            </summary>
+        </member>
+        <member name="P:VIBlend.Silverlight.Controls.TreeView.EnableDragDrop">
+            <summary>
+            Gets or sets a value indicating whether drag drop is enabled.
+            </summary>
+        </member>
+        <member name="P:VIBlend.Silverlight.Controls.TreeView.EnableTriStateCheckBoxes">
+            <summary>
+            Enables or disabled the tri state checkboxes mode.
+            </summary>
+        </member>
+        <member name="P:VIBlend.Silverlight.Controls.TreeView.EnableItemEdit">
+            <summary>
+            Gets or sets whether the items values can be edited.
+            </summary>
+        </member>
+        <member name="P:VIBlend.Silverlight.Controls.TreeView.EnableKeyboardNavigation">
+            <summary>
+            Gets or sets whether the keyboard navigation is enabled.
+            </summary>
+        </member>
+        <member name="P:VIBlend.Silverlight.Controls.TreeView.EnableCheckBoxes">
+            <summary>
+            Gets or sets whether the treeview should display checkboxes.
+            </summary>
+        </member>
+        <member name="P:VIBlend.Silverlight.Controls.TreeView.EnableExpandCollapseMarkersAnimation">
+            <summary>
+            Gets or sets whether the expand and collapse indicators should be animated.
+            </summary>
+        </member>
+        <member name="P:VIBlend.Silverlight.Controls.TreeView.IsEditing">
+            <summary>
+            Gets whether the control is in edit mode.
+            </summary>
+        </member>
+        <member name="P:VIBlend.Silverlight.Controls.TreeView.EditorActivationKey">
+            <summary>
+            Gets or sets the editor activation key.
+            </summary>
+            <value>The editor activation key.</value>
+        </member>
+        <member name="P:VIBlend.Silverlight.Controls.TreeView.EditorDeActivationKey">
+            <summary>
+            Gets or sets the editor deactivation key.
+            </summary>
+            <value>The editor deactivation key.</value>
+        </member>
+        <member name="P:VIBlend.Silverlight.Controls.TreeView.EditorSaveChangesKey">
+            <summary>
+            Gets or sets the editor save changes key.
+            </summary>
+            <value>The editor save changes key.</value>
+        </member>
+        <member name="P:VIBlend.Silverlight.Controls.TreeView.SelectedItems">
+            <summary>
+            Gets the selected items.
+            </summary>
+            <value>The selected items.</value>
+        </member>
+        <member name="P:VIBlend.Silverlight.Controls.TreeView.EditCommand">
+            <summary>
+            Gets or sets the EditCommand.
+            </summary>
+            <value>The command.</value>
+        </member>
+        <member name="P:VIBlend.Silverlight.Controls.TreeView.EditCommandParameter">
+            <summary>
+            Gets or sets the Edit command parameter.
+            </summary>
+            <value>The command parameter.</value>
+        </member>
+        <member name="P:VIBlend.Silverlight.Controls.TreeView.EditedCommand">
+            <summary>
+            Gets or sets the EditedCommand.
+            </summary>
+            <value>The command.</value>
+        </member>
+        <member name="P:VIBlend.Silverlight.Controls.TreeView.EditedCommandParameter">
+            <summary>
+            Gets or sets the Edited command parameter.
+            </summary>
+            <value>The command parameter.</value>
+        </member>
+        <member name="P:VIBlend.Silverlight.Controls.TreeView.SelectedItem">
+            <summary>
+            Gets or sets the selected item.
+            </summary>
+        </member>
+        <member name="P:VIBlend.Silverlight.Controls.TreeView.AnimationType">
+            <summary>
+            Gets or sets the animation type.
+            </summary>
+        </member>
+        <member name="P:VIBlend.Silverlight.Controls.TreeView.ItemContainerStyle">
+            <summary>
+            Gets or sets the <see cref="T:System.Windows.Style" /> that is
+            applied to the container element generated for each item.
+            </summary>
+            <value>
+            The <see cref="T:System.Windows.Style" /> applied to the container
+            element that contains each item.
+            </value>
+        </member>
+        <member name="E:VIBlend.Silverlight.Controls.TreeView.PropertyChanged">
+            <summary>
+            Occurs when a property is changed.
+            </summary>
+        </member>
+        <member name="T:VIBlend.Silverlight.Controls.TreeView.ItemStateChangedHandler">
+            <exclude/>
+        </member>
+        <member name="T:VIBlend.Silverlight.Controls.TreeView.ItemStateChangingHandler">
+            <exclude/>
+        </member>
+        <member name="T:VIBlend.Silverlight.Controls.TreeView.ItemCheckStateChangedHandler">
+            <exclude/>
+        </member>
+        <member name="T:VIBlend.Silverlight.Controls.ScrollChangedEventArgs">
+            <summary>
+            Provides data for the TreeView's scroll events.
+            </summary>
+        </member>
+        <member name="P:VIBlend.Silverlight.Controls.ScrollChangedEventArgs.HorizontalOffset">
+            <summary>
+            Gets or sets the horizontal offset.
+            </summary>
+            <value>The horizontal offset.</value>
+        </member>
+        <member name="P:VIBlend.Silverlight.Controls.ScrollChangedEventArgs.VerticalOffset">
+            <summary>
+            Gets or sets the vertical offset.
+            </summary>
+            <value>The vertical offset.</value>
+        </member>
+        <member name="P:VIBlend.Silverlight.Controls.ScrollChangedEventArgs.HorizontalChange">
+            <summary>
+            Gets or sets the horizontal change.
+            </summary>
+            <value>The horizontal change.</value>
+        </member>
+        <member name="P:VIBlend.Silverlight.Controls.ScrollChangedEventArgs.VerticalChange">
+            <summary>
+            Gets or sets the vertical change.
+            </summary>
+            <value>The vertical change.</value>
+        </member>
+        <member name="T:VIBlend.Silverlight.Controls.IncrementalSearchMode">
+            <summary>
+            Represents the IncrementalSearchMode enumeration.
+            </summary>
+        </member>
+        <member name="F:VIBlend.Silverlight.Controls.IncrementalSearchMode.ShowAllItems">
+            <summary>
+            Shows all items while searching.
+            </summary>
+        </member>
+        <member name="F:VIBlend.Silverlight.Controls.IncrementalSearchMode.ShowOnlyFilteredItems">
+            <summary>
+            Shows only the filtered items.
+            </summary>
+        </member>
+        <member name="T:VIBlend.Silverlight.Controls.TreeViewMouseEventArgs">
+            <summary>
+            Represents a base class for all TreeView event data.
+            </summary>
+        </member>
+        <member name="M:VIBlend.Silverlight.Controls.TreeViewMouseEventArgs.#ctor(VIBlend.Silverlight.Controls.TreeViewItem,System.Windows.Input.MouseButtonEventArgs,VIBlend.Silverlight.Controls.MouseButton)">
+            <summary>
+            Initializes a new instance of the <see cref="!:ListBoxMouseEventArgs"/> class.
+            </summary>
+            <param name="item">The item.</param>
+        </member>
+        <member name="P:VIBlend.Silverlight.Controls.TreeViewMouseEventArgs.MouseArgs">
+            <summary>
+            Gets or sets the mouse args.
+            </summary>
+            <value>The mouse args.</value>
+        </member>
+        <member name="P:VIBlend.Silverlight.Controls.TreeViewMouseEventArgs.HitItem">
+            <summary>
+            Gets or sets the hit item.
+            </summary>
+            <value>The hit item.</value>
+        </member>
+        <member name="P:VIBlend.Silverlight.Controls.TreeViewMouseEventArgs.ChangedButton">
+            <summary>
+            Gets the mouse button assoicated with the event.
+            </summary>
+        </member>
+        <member name="T:VIBlend.Silverlight.Controls.TreeViewCheckEventArgs">
+            <summary>
+            Provides data for a check event.
+            </summary>
+        </member>
+        <member name="M:VIBlend.Silverlight.Controls.TreeViewCheckEventArgs.#ctor(VIBlend.Silverlight.Controls.TreeViewItem,VIBlend.Silverlight.Controls.TreeViewAction,System.Nullable{System.Boolean})">
+            <summary>
+            Initializes a new instance of the <see cref="T:VIBlend.Silverlight.Controls.TreeViewCheckEventArgs"/> class.
+            </summary>
+            <param name="item">The item.</param>
+            <param name="action">The action.</param>
+            <param name="isChecked">The is checked.</param>
+        </member>
+        <member name="P:VIBlend.Silverlight.Controls.TreeViewCheckEventArgs.IsChecked">
+            <summary>
+            Gets or sets the is checked.
+            </summary>
+            <value>The is checked.</value>
+        </member>
+        <member name="T:VIBlend.Silverlight.Controls.ExpandType">
+            <summary>
+            Represents the ExpandType enumeration.
+            </summary>
+        </member>
+        <member name="F:VIBlend.Silverlight.Controls.ExpandType.SingleClick">
+            <summary>
+            Expands when the item is clicked.
+            </summary>
+        </member>
+        <member name="F:VIBlend.Silverlight.Controls.ExpandType.DoubleClick">
+            <summary>
+            Expands when the item is double-clicked.
+            </summary>
+        </member>
+        <member name="T:VIBlend.Silverlight.Controls.ListItemType">
+            <summary>
+            Represents a ListItemType enumeration.
+            </summary>
+        </member>
+        <member name="F:VIBlend.Silverlight.Controls.ListItemType.None">
+            <summary>
+            None
+            </summary>
+        </member>
+        <member name="F:VIBlend.Silverlight.Controls.ListItemType.CheckBox">
+            <summary>
+            Checkbox
+            </summary>
+        </member>
+        <member name="F:VIBlend.Silverlight.Controls.ListItemType.RadioButton">
+            <summary>
+            RadioButton
+            </summary>
+        </member>
+        <member name="T:VIBlend.Silverlight.Controls.IndicatorButton">
+            <exclude/>   
+        </member>
+        <member name="M:VIBlend.Silverlight.Controls.IndicatorButton.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:VIBlend.Silverlight.Controls.IndicatorButton"/> class.
+            </summary>
+        </member>
+        <member name="M:VIBlend.Silverlight.Controls.IndicatorButton.OnMouseEnter(System.Windows.Input.MouseEventArgs)">
+            <summary>
+            Provides class handling for the <see cref="E:System.Windows.UIElement.MouseEnter"/> event that occurs when the mouse enters this control.
+            </summary>
+            <param name="e">The event data.</param>
+            <exception cref="T:System.ArgumentNullException">
+            	<paramref name="e"/> is null.</exception>
+        </member>
+        <member name="M:VIBlend.Silverlight.Controls.IndicatorButton.OnMouseLeave(System.Windows.Input.MouseEventArgs)">
+            <summary>
+            Provides class handling for the <see cref="E:System.Windows.UIElement.MouseLeave"/> routed event that occurs when the mouse leaves an element.
+            </summary>
+            <param name="e">The event data for the <see cref="E:System.Windows.UIElement.MouseLeave"/> event.</param>
+            <exception cref="T:System.ArgumentNullException">
+            	<paramref name="e"/> is null.</exception>
+        </member>
+        <member name="F:VIBlend.Silverlight.Controls.IndicatorButton.ForeBrushProperty">
+            <exclude/>
+        </member>
+        <member name="F:VIBlend.Silverlight.Controls.IndicatorButton.StrokeBrushProperty">
+            <exclude/>
+        </member>
+        <member name="F:VIBlend.Silverlight.Controls.IndicatorButton.HighlightForeColorProperty">
+            <exclude/>
+        </member>
+        <member name="F:VIBlend.Silverlight.Controls.IndicatorButton.HighlightStrokeForeColorProperty">
+            <exclude/>
+        </member>
+        <member name="F:VIBlend.Silverlight.Controls.IndicatorButton.StrokeForeColorProperty">
+            <exclude/>
+        </member>
+        <member name="F:VIBlend.Silverlight.Controls.IndicatorButton.ForeColorProperty">
+            <exclude/>
+        </member>
+        <member name="F:VIBlend.Silverlight.Controls.IndicatorButton.NormalForeColorProperty">
+            <exclude/>
+        </member>
+        <member name="F:VIBlend.Silverlight.Controls.IndicatorButton.NormalStrokeForeColorProperty">
+            <exclude/>
+        </member>
+        <member name="M:VIBlend.Silverlight.Controls.IndicatorButton.OnApplyTemplate">
+            <summary>
+            Builds the visual tree for the <see cref="T:System.Windows.Controls.Primitives.ToggleButton"/> when a new template is applied.
+            </summary>
+        </member>
+        <member name="P:VIBlend.Silverlight.Controls.IndicatorButton.ForeBrush">
+            <summary>
+            Gets or sets the Color which is used when the item is highlighted.
+            </summary>
+        </member>
+        <member name="P:VIBlend.Silverlight.Controls.IndicatorButton.StrokeBrush">
+            <summary>
+            Gets or sets the Color which is used when the item is highlighted.
+            </summary>
+        </member>
+        <member name="P:VIBlend.Silverlight.Controls.IndicatorButton.HighlightForeColor">
+            <summary>
+            Gets or sets the Color which is used when the item is highlighted.
+            </summary>
+        </member>
+        <member name="P:VIBlend.Silverlight.Controls.IndicatorButton.HighlightStrokeForeColor">
+            <summary>
+            Gets or sets the Color which is used when the item is highlighted.
+            </summary>
+        </member>
+        <member name="P:VIBlend.Silverlight.Controls.IndicatorButton.StrokeForeColor">
+            <summary>
+            Gets or sets the Color which is used when the item is highlighted.
+            </summary>
+        </member>
+        <member name="P:VIBlend.Silverlight.Controls.IndicatorButton.ForeColor">
+            <summary>
+            Gets or sets the Color which is used when the item is highlighted.
+            </summary>
+        </member>
+        <member name="P:VIBlend.Silverlight.Controls.IndicatorButton.NormalForeColor">
+            <summary>
+            Gets or sets the Color which is used when the item is highlighted.
+            </summary>
+        </member>
+        <member name="P:VIBlend.Silverlight.Controls.IndicatorButton.NormalStrokeForeColor">
+            <summary>
+            Gets or sets the Color which is used when the item is highlighted.
+            </summary>
+        </member>
+    </members>
+</doc>

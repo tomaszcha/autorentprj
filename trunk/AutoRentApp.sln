@@ -91,6 +91,65 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MockModel", "MockModel\Mock
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CommandsInfrastracture", "CommandsInfrastracture\CommandsInfrastracture.csproj", "{D2FBF449-378E-48A7-95AB-74D0DD98021A}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "VIBlend", "VIBlend", "{D9B30171-B056-45DA-A81C-15A8D2514404}"
+	ProjectSection(SolutionItems) = preProject
+		Libraries\VIBlend\VIBlend.Silverlight.BannerRotator.dll = Libraries\VIBlend\VIBlend.Silverlight.BannerRotator.dll
+		Libraries\VIBlend\VIBlend.Silverlight.BannerRotator.pkgdef = Libraries\VIBlend\VIBlend.Silverlight.BannerRotator.pkgdef
+		Libraries\VIBlend\VIBlend.Silverlight.BannerRotator.XML = Libraries\VIBlend\VIBlend.Silverlight.BannerRotator.XML
+		Libraries\VIBlend\VIBlend.Silverlight.DataGrid.dll = Libraries\VIBlend\VIBlend.Silverlight.DataGrid.dll
+		Libraries\VIBlend\VIBlend.Silverlight.DataGrid.pkgdef = Libraries\VIBlend\VIBlend.Silverlight.DataGrid.pkgdef
+		Libraries\VIBlend\VIBlend.Silverlight.DataGrid.XML = Libraries\VIBlend\VIBlend.Silverlight.DataGrid.XML
+		Libraries\VIBlend\VIBlend.Silverlight.Editors.dll = Libraries\VIBlend\VIBlend.Silverlight.Editors.dll
+		Libraries\VIBlend\VIBlend.Silverlight.Editors.pkgdef = Libraries\VIBlend\VIBlend.Silverlight.Editors.pkgdef
+		Libraries\VIBlend\VIBlend.Silverlight.Editors.XML = Libraries\VIBlend\VIBlend.Silverlight.Editors.XML
+		Libraries\VIBlend\VIBlend.Silverlight.Extensions.dll = Libraries\VIBlend\VIBlend.Silverlight.Extensions.dll
+		Libraries\VIBlend\VIBlend.Silverlight.Extensions.pkgdef = Libraries\VIBlend\VIBlend.Silverlight.Extensions.pkgdef
+		Libraries\VIBlend\VIBlend.Silverlight.Extensions.XML = Libraries\VIBlend\VIBlend.Silverlight.Extensions.XML
+		Libraries\VIBlend\VIBlend.Silverlight.Menu.dll = Libraries\VIBlend\VIBlend.Silverlight.Menu.dll
+		Libraries\VIBlend\VIBlend.Silverlight.Menu.pkgdef = Libraries\VIBlend\VIBlend.Silverlight.Menu.pkgdef
+		Libraries\VIBlend\VIBlend.Silverlight.Menu.XML = Libraries\VIBlend\VIBlend.Silverlight.Menu.XML
+		Libraries\VIBlend\VIBlend.Silverlight.NavigationPanes.dll = Libraries\VIBlend\VIBlend.Silverlight.NavigationPanes.dll
+		Libraries\VIBlend\VIBlend.Silverlight.NavigationPanes.pkgdef = Libraries\VIBlend\VIBlend.Silverlight.NavigationPanes.pkgdef
+		Libraries\VIBlend\VIBlend.Silverlight.NavigationPanes.XML = Libraries\VIBlend\VIBlend.Silverlight.NavigationPanes.XML
+		Libraries\VIBlend\VIBlend.Silverlight.RibbonBar.dll = Libraries\VIBlend\VIBlend.Silverlight.RibbonBar.dll
+		Libraries\VIBlend\VIBlend.Silverlight.RibbonBar.pkgdef = Libraries\VIBlend\VIBlend.Silverlight.RibbonBar.pkgdef
+		Libraries\VIBlend\VIBlend.Silverlight.RibbonBar.XML = Libraries\VIBlend\VIBlend.Silverlight.RibbonBar.XML
+		Libraries\VIBlend\VIBlend.Silverlight.Scheduler.dll = Libraries\VIBlend\VIBlend.Silverlight.Scheduler.dll
+		Libraries\VIBlend\VIBlend.Silverlight.Scheduler.pkgdef = Libraries\VIBlend\VIBlend.Silverlight.Scheduler.pkgdef
+		Libraries\VIBlend\VIBlend.Silverlight.Scheduler.XML = Libraries\VIBlend\VIBlend.Silverlight.Scheduler.XML
+		Libraries\VIBlend\VIBlend.Silverlight.TabControl.dll = Libraries\VIBlend\VIBlend.Silverlight.TabControl.dll
+		Libraries\VIBlend\VIBlend.Silverlight.TabControl.pkgdef = Libraries\VIBlend\VIBlend.Silverlight.TabControl.pkgdef
+		Libraries\VIBlend\VIBlend.Silverlight.TabControl.xml = Libraries\VIBlend\VIBlend.Silverlight.TabControl.xml
+		Libraries\VIBlend\VIBlend.Silverlight.Theme.BlackPearl.dll = Libraries\VIBlend\VIBlend.Silverlight.Theme.BlackPearl.dll
+		Libraries\VIBlend\VIBlend.Silverlight.Theme.Custom.dll = Libraries\VIBlend\VIBlend.Silverlight.Theme.Custom.dll
+		Libraries\VIBlend\VIBlend.Silverlight.Theme.Lime.dll = Libraries\VIBlend\VIBlend.Silverlight.Theme.Lime.dll
+		Libraries\VIBlend\VIBlend.Silverlight.Theme.MetroBlue.dll = Libraries\VIBlend\VIBlend.Silverlight.Theme.MetroBlue.dll
+		Libraries\VIBlend\VIBlend.Silverlight.Theme.MetroGreen.dll = Libraries\VIBlend\VIBlend.Silverlight.Theme.MetroGreen.dll
+		Libraries\VIBlend\VIBlend.Silverlight.Theme.MetroOrange.dll = Libraries\VIBlend\VIBlend.Silverlight.Theme.MetroOrange.dll
+		Libraries\VIBlend\VIBlend.Silverlight.Theme.Office2007Black.dll = Libraries\VIBlend\VIBlend.Silverlight.Theme.Office2007Black.dll
+		Libraries\VIBlend\VIBlend.Silverlight.Theme.Office2007Blue.dll = Libraries\VIBlend\VIBlend.Silverlight.Theme.Office2007Blue.dll
+		Libraries\VIBlend\VIBlend.Silverlight.Theme.Office2007Silver.dll = Libraries\VIBlend\VIBlend.Silverlight.Theme.Office2007Silver.dll
+		Libraries\VIBlend\VIBlend.Silverlight.Theme.Office2010Black.dll = Libraries\VIBlend\VIBlend.Silverlight.Theme.Office2010Black.dll
+		Libraries\VIBlend\VIBlend.Silverlight.Theme.Office2010Blue.dll = Libraries\VIBlend\VIBlend.Silverlight.Theme.Office2010Blue.dll
+		Libraries\VIBlend\VIBlend.Silverlight.Theme.Office2010Silver.dll = Libraries\VIBlend\VIBlend.Silverlight.Theme.Office2010Silver.dll
+		Libraries\VIBlend\VIBlend.Silverlight.Theme.Silver.dll = Libraries\VIBlend\VIBlend.Silverlight.Theme.Silver.dll
+		Libraries\VIBlend\VIBlend.Silverlight.Theme.SteelBlue.dll = Libraries\VIBlend\VIBlend.Silverlight.Theme.SteelBlue.dll
+		Libraries\VIBlend\VIBlend.Silverlight.Theme.UltraBlue.dll = Libraries\VIBlend\VIBlend.Silverlight.Theme.UltraBlue.dll
+		Libraries\VIBlend\VIBlend.Silverlight.Theme.Vista.dll = Libraries\VIBlend\VIBlend.Silverlight.Theme.Vista.dll
+		Libraries\VIBlend\VIBlend.Silverlight.Theme.WebBlue.dll = Libraries\VIBlend\VIBlend.Silverlight.Theme.WebBlue.dll
+		Libraries\VIBlend\VIBlend.Silverlight.TreeView.dll = Libraries\VIBlend\VIBlend.Silverlight.TreeView.dll
+		Libraries\VIBlend\VIBlend.Silverlight.TreeView.pkgdef = Libraries\VIBlend\VIBlend.Silverlight.TreeView.pkgdef
+		Libraries\VIBlend\VIBlend.Silverlight.TreeView.XML = Libraries\VIBlend\VIBlend.Silverlight.TreeView.XML
+		Libraries\VIBlend\VIBlend.Silverlight.Utilities.dll = Libraries\VIBlend\VIBlend.Silverlight.Utilities.dll
+		Libraries\VIBlend\VIBlend.Silverlight.Utilities.pkgdef = Libraries\VIBlend\VIBlend.Silverlight.Utilities.pkgdef
+		Libraries\VIBlend\VIBlend.Silverlight.Utilities.XML = Libraries\VIBlend\VIBlend.Silverlight.Utilities.XML
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "NUnit", "NUnit", "{56C99152-DF0C-4684-93CB-C7FB18852DF2}"
+	ProjectSection(SolutionItems) = preProject
+		Libraries\NUnit\nunit.framework.dll = Libraries\NUnit\nunit.framework.dll
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SubversionScc) = preSolution
 		Svn-Managed = True
@@ -189,6 +248,8 @@ Global
 		{FBE74DE8-0696-44A5-8838-AEF3F7AFE32B} = {79E7E531-CCDC-4481-8EAE-CF976F597C72}
 		{D2FBF449-378E-48A7-95AB-74D0DD98021A} = {79E7E531-CCDC-4481-8EAE-CF976F597C72}
 		{57028D33-A160-47E7-A9A4-BA6B426F7DA2} = {94419369-9B7B-4AF1-836E-E23CF20D797E}
+		{D9B30171-B056-45DA-A81C-15A8D2514404} = {94419369-9B7B-4AF1-836E-E23CF20D797E}
+		{56C99152-DF0C-4684-93CB-C7FB18852DF2} = {94419369-9B7B-4AF1-836E-E23CF20D797E}
 		{D023A665-FE71-4AA6-8F36-D8093C69A4A5} = {57028D33-A160-47E7-A9A4-BA6B426F7DA2}
 		{4E1A9990-FF0E-4F46-8990-F39184DB041C} = {8A6BBA72-DD02-405F-8D0A-283595D2001F}
 		{483C33F4-8C08-40D3-B0B7-E0516926E87C} = {8A6BBA72-DD02-405F-8D0A-283595D2001F}

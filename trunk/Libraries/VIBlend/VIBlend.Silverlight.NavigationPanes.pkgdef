@@ -1,0 +1,4 @@
+﻿[$RootKey$\ToolboxControlsInstaller\VIBlend.Silverlight.NavigationPanes, Version=6.0.0.0, Culture=neutral, PublicKeyToken=91fd29d07a5e1d01, processorArchitecture=MSIL]
+@="VIBlend Silverlight Controls 6.0"
+"Codebase"="$PackageFolder$\VIBlend.Silverlight.NavigationPanes.dll"
+"SilverlightControls"="2"
