@@ -61,6 +61,8 @@
     <Compile Include="Customers.cs" />
     <Compile Include="Employee.cs" />
     <Compile Include="Employees.cs" />
+    <Compile Include="Order.cs" />
+    <Compile Include="Orders.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Silverlight\$(SilverlightVersion)\Microsoft.Silverlight.CSharp.targets" />
