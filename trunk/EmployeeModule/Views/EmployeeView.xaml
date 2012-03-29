@@ -40,7 +40,7 @@
         </Style>
     </UserControl.Resources>
     <Grid x:Name="LayoutRoot" Background="White">
-        <toolkit:Expander ExpandDirection="Left">
+        <!--<toolkit:Expander ExpandDirection="Left">-->
             <StackPanel Orientation="Vertical" HorizontalAlignment="Center">
                 <StackPanel Style="{StaticResource StackPnlStyle}">
                     <sdk:Label Content="Employee" Style="{StaticResource LblTitleStyle}"/>
@@ -100,6 +100,6 @@
                     <Button Content="Cancel" Name="btnCancel" Command="{Binding Path=CancelCommand}" Margin="4,0,0,0" Style="{StaticResource BtnStyle}"/>
                 </StackPanel>
             </StackPanel>
-        </toolkit:Expander>
+        <!--</toolkit:Expander>-->
     </Grid>
 </UserControl>
