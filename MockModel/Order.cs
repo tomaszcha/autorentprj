@@ -166,7 +166,7 @@ namespace MockModel
         /// <summary>
         /// Data
         /// </summary>
-        public string InsuaranceNumber
+        public string Data
         {
             get { return _data; }
             set
