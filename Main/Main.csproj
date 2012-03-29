@@ -85,9 +85,15 @@
     <Reference Include="System.Windows.Controls.Toolkit, Version=4.0.5.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
     <Reference Include="System.Xml" />
     <Reference Include="System.Windows.Browser" />
-    <Reference Include="VIBlend.Silverlight.Editors, Version=6.0.0.0, Culture=neutral, PublicKeyToken=6546306d640fbdbb, processorArchitecture=MSIL" />
-    <Reference Include="VIBlend.Silverlight.Menu, Version=6.0.0.0, Culture=neutral, PublicKeyToken=85c7390eefa587df, processorArchitecture=MSIL" />
-    <Reference Include="VIBlend.Silverlight.RibbonBar, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b48a61db02a9a805, processorArchitecture=MSIL" />
+    <Reference Include="VIBlend.Silverlight.Editors, Version=6.0.0.0, Culture=neutral, PublicKeyToken=6546306d640fbdbb, processorArchitecture=MSIL">
+      <HintPath>..\Libraries\VIBlend\VIBlend.Silverlight.Editors.dll</HintPath>
+    </Reference>
+    <Reference Include="VIBlend.Silverlight.Menu, Version=6.0.0.0, Culture=neutral, PublicKeyToken=85c7390eefa587df, processorArchitecture=MSIL">
+      <HintPath>..\Libraries\VIBlend\VIBlend.Silverlight.Menu.dll</HintPath>
+    </Reference>
+    <Reference Include="VIBlend.Silverlight.RibbonBar, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b48a61db02a9a805, processorArchitecture=MSIL">
+      <HintPath>..\Libraries\VIBlend\VIBlend.Silverlight.RibbonBar.dll</HintPath>
+    </Reference>
     <Reference Include="VIBlend.Silverlight.Utilities">
       <HintPath>..\Libraries\VIBlend\VIBlend.Silverlight.Utilities.dll</HintPath>
     </Reference>
