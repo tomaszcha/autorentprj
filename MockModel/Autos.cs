@@ -33,7 +33,7 @@ namespace MockModel
                     Engine = 4, ColorGroup = "Green", DayRate = 900, KmRate = 21 },
                new Auto{ Number = "AA 4412 DA", ModelName = "BMW X6", BodyType = 2, 
                     InsuaranceNumber="5645687998", Class = 3, Year = 2011, Mileage = 1500, 
-                    Engine = 5, ColorGroup = "White", DayRate = 2000, KmRate = 25, Advance = 2000 },
+                    Engine = 5, ColorGroup = "White", DayRate = 2000, KmRate = 25, Advance = 2000 }
             };
         }      
     }
