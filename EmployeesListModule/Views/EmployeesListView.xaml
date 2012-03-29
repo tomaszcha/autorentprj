@@ -1,0 +1,64 @@
+﻿<UserControl x:Class="EmployeesListModule.Views.EmployeesListView"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:viblendNavigation="clr-namespace:VIBlend.Silverlight.Controls;assembly=VIBlend.Silverlight.NavigationPanes"
+    xmlns:utilityControl="clr-namespace:VIBlend.Silverlight.Controls;assembly=VIBlend.Silverlight.Utilities"
+    xmlns:editors="clr-namespace:VIBlend.Silverlight.Controls;assembly=VIBlend.Silverlight.Editors"
+    mc:Ignorable="d"
+    d:DesignHeight="300" d:DesignWidth="400">
+    <UserControl.Resources>
+        
+        <DataTemplate x:Name="EmployeeTemplate">
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="24"></ColumnDefinition>
+                    <ColumnDefinition></ColumnDefinition>
+                </Grid.ColumnDefinitions>
+                <Image Margin="2,0,0,0" Width="18" HorizontalAlignment="Left" Height="18" Source="/images/RibbonImages/people-icon.png"></Image>
+                <TextBlock Grid.Column="1" VerticalAlignment="Center" HorizontalAlignment="Left" FontWeight="Bold" Text="Employees"></TextBlock>
+            </Grid>
+        </DataTemplate>
+
+        <DataTemplate x:Name="ShortEmployeeTemplate">
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="22"></ColumnDefinition>
+                </Grid.ColumnDefinitions>
+                <Image Margin="2,0,0,0" Width="18" HorizontalAlignment="Left" Height="18" Source="/images/RibbonImages/people-icon.png"></Image>
+            </Grid>
+        </DataTemplate>
+
+        <DataTemplate x:Name="BoldEmployeeTemplate">
+            <TextBlock VerticalAlignment="Center" FontSize="12" HorizontalAlignment="Left" FontWeight="Bold" Text="Employees"></TextBlock>
+        </DataTemplate>
+        
+    </UserControl.Resources>
+    
+    <Grid x:Name="LayoutRoot" Background="White">
+        <viblendNavigation:OutlookPane SelectedIndex="0" AutoSize="True" x:Name="OutlookPane" CollapseWidth="26" HorizontalAlignment="Left" DefaultWidth="250" Width="250">
+            <viblendNavigation:OutlookPane.CollapsedStateButtonContentTemplate>
+                <DataTemplate>
+                    <utilityControl:LayoutTransformer>
+                        <utilityControl:LayoutTransformer.LayoutTransform>
+                            <RotateTransform Angle="-90">
+                            </RotateTransform>
+                        </utilityControl:LayoutTransformer.LayoutTransform>
+                        <TextBlock TextAlignment="Left" TextWrapping="NoWrap" Foreground="Black" FontWeight="Bold" HorizontalAlignment="Center" FontStretch="Expanded"  VerticalAlignment="Center" Text="Folders"/>
+
+                    </utilityControl:LayoutTransformer>
+                </DataTemplate>
+            </viblendNavigation:OutlookPane.CollapsedStateButtonContentTemplate>
+            <viblendNavigation:OutlookPaneItem  
+                                                 IsSelected="True" MenuItemHeader="Employees" 
+                                             CollapsedDefaultHeaderTemplate="{StaticResource ShortEmployeeTemplate}"  
+                                             CollapsedStatusContentTemplate="{StaticResource ShortEmployeeTemplate}" 
+                                             DisplayHeaderTemplate="{StaticResource BoldEmployeeTemplate}"
+                                             DefaultHeaderTemplate="{StaticResource EmployeeTemplate}">
+            </viblendNavigation:OutlookPaneItem>
+
+        </viblendNavigation:OutlookPane>
+
+    </Grid>
+</UserControl>
