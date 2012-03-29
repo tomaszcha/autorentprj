@@ -47,7 +47,7 @@ namespace AutoModule.ViewModels
 
         #region Properties
 
-        public ObservableCollection<AutoViewModel> Auto
+        public ObservableCollection<AutoViewModel> Autos
         {
             get { return _autos; }
             set { _autos = value; }
