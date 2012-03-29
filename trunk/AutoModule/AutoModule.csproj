@@ -60,6 +60,7 @@
     <Reference Include="System.Windows" />
     <Reference Include="system" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Windows.Controls.Data, Version=2.0.5.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
     <Reference Include="System.Windows.Controls.Data.Input, Version=2.0.5.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35" />
     <Reference Include="System.Xml" />
     <Reference Include="System.Net" />
@@ -67,28 +68,46 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AutoModule.cs" />
+    <Compile Include="AutoSelect.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <Compile Include="ViewModels\AutosListViewModel.cs" />
     <Compile Include="ViewModels\AutoViewModel.cs" />
+    <Compile Include="ViewModels\IAutosListViewModel.cs" />
     <Compile Include="ViewModels\IAutoViewModel.cs" />
+    <Compile Include="Views\AutosListView.xaml.cs">
+      <DependentUpon>AutosListView.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Views\AutoView.xaml.cs">
       <DependentUpon>AutoView.xaml</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <Page Include="Views\AutosListView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Views\AutoView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\CommandsInfrastracture\CommandsInfrastracture.csproj">
+      <Project>{D2FBF449-378E-48A7-95AB-74D0DD98021A}</Project>
+      <Name>CommandsInfrastracture</Name>
+    </ProjectReference>
     <ProjectReference Include="..\EventInfrastracture\EventInfrastracture.csproj">
       <Project>{434F9A5F-7303-459A-9BBA-06C487C6A5D8}</Project>
       <Name>EventInfrastracture</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\MockModel\MockModel.csproj">
+      <Project>{5918D59C-871A-434C-AF9B-D82F1DACD5A8}</Project>
+      <Name>MockModel</Name>
     </ProjectReference>
     <ProjectReference Include="..\ModuleInfrastracture\ModuleInfrastracture.csproj">
       <Project>{8D54AB83-F6C5-49A9-AF1A-313E6C5EC3AE}</Project>

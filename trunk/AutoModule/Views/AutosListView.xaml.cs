@@ -15,18 +15,18 @@ using AutoModule.ViewModels;
 
 namespace AutoModule.Views
 {
-    public partial class AutoView : UserControl, IViewLeftRegion
+    public partial class AutosListView : UserControl, IViewRightRegion
     {
-        public AutoView()
+        public AutosListView()
         {
             InitializeComponent();
         }
-
+   
         [Dependency]
-        public IAutoViewModel ViewModel
+        public IAutosListViewModel ViewModel
         {
-            get { return DataContext as IAutoViewModel; }
+            get { return DataContext as IAutosListViewModel; }
             set { DataContext = value; }
-        }   
+        }
     }
 }

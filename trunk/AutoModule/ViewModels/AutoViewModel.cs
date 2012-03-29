@@ -8,9 +8,15 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Animation;
 using System.Windows.Shapes;
-using System.ComponentModel;
-using ModuleInfrastracture;
 using ModuleInfrastracture.ViewModels;
+using System.ComponentModel;
+using System.Text.RegularExpressions;
+using MockModel;
+using Microsoft.Practices.Prism.Events;
+using AutoModule.Events;
+using CommandsInfrastracture;
+using EventInfrastracture;
+using Microsoft.Practices.Prism.Commands;
 
 namespace AutoModule.ViewModels
 {
@@ -21,6 +27,44 @@ namespace AutoModule.ViewModels
     public class AutoViewModel : ViewModelBase, IAutoViewModel, IDataErrorInfo
     {
 
+        #region Constructors
+
+        public AutoViewModel(IEventAggregator eventAggregator)
+        {
+            _eventAggregator = eventAggregator;
+            _eventAggregator.GetEvent<AutoSelect>().Subscribe(onAutoSelect);
+            _eventAggregator.GetEvent<MenuEmployeeEvent>().Subscribe(onEventTypeChange);
+
+        }
+
+        public AutoViewModel(Auto auto, IEventAggregator eventAggregator)
+        {
+            _eventAggregator = eventAggregator;
+
+            if (String.IsNullOrEmpty(auto.Number))
+            {
+                _eventAggregator.GetEvent<AutoSelect>().Subscribe(onAutoSelect);               
+                _eventAggregator.GetEvent<MenuEmployeeEvent>().Subscribe(onEventTypeChange);
+                EventType = CommandsTypes.Edit;
+            }
+
+            _number = auto.Number;
+            _modelName = auto.ModelName;
+            _bodyType = auto.BodyType;
+            _insuaranceNumber = auto.InsuaranceNumber;
+            _class = auto.Class;
+            _year = auto.Year;
+            _mileage = auto.Mileage;
+            _engine = auto.Engine;
+            _colorGroup = auto.ColorGroup;
+            _dayRate = auto.DayRate;
+            _kmRate = auto.KmRate;
+            _status = auto.Status;
+            _advance = auto.Advance;         
+        }
+
+        #endregion Constructors
+        
         #region PrivateFields
 
         string _number;
@@ -36,11 +80,18 @@ namespace AutoModule.ViewModels
         decimal _kmRate;
         short _status;
         decimal _advance;
+
+
+        IEventAggregator _eventAggregator;
+        AutoViewModel _auto;
+        DelegateCommand _saveCommand;
+        DelegateCommand _cancelCommand;
         
         #endregion // Private fields
         
         #region Properties
 
+        public string EventType { get; set; }
 
         /// <summary>
         /// Auto number
@@ -382,5 +433,81 @@ namespace AutoModule.ViewModels
         }
 
         #endregion // IDataErrorInfo
+
+        #region Commands
+
+        public ICommand SaveCommand
+        {
+            get
+            {
+                if (_saveCommand == null)
+                    _saveCommand = new DelegateCommand(SaveExecute);
+                return _saveCommand;
+            }
+        }
+
+        public ICommand CancelCommand
+        {
+            get
+            {
+                if (_cancelCommand == null)
+                    _cancelCommand = new DelegateCommand(CancelExecute);
+                return _cancelCommand;
+            }
+        }
+
+        #endregion Commands
+
+        #region Helpers
+
+        public void onAutoSelect(AutoViewModel auto)
+        {
+            _auto = auto;
+
+            if (EventType == CommandsTypes.Edit || String.IsNullOrEmpty(auto.Number))
+            {
+                Number = auto.Number;
+                ModelName = auto.ModelName;
+                BodyType = auto.BodyType;
+                InsuaranceNumber = auto.InsuaranceNumber;
+                Class  = auto.Class;
+                Year = auto.Year;
+                Mileage = auto.Mileage;
+                Engine = auto.Engine;
+                ColorGroup = auto.ColorGroup;
+                DayRate = auto.DayRate;
+                KmRate = auto.KmRate;
+                Status = auto.Status;
+                Advance = auto.Advance;        
+
+            }
+        }
+
+        public void onEventTypeChange(string typeName)
+        {
+            EventType = typeName;
+            switch (EventType)
+            {
+                case CommandsTypes.Edit:
+                    onAutoSelect(_auto);
+                    break;
+                case CommandsTypes.New:
+                    onAutoSelect(new AutoViewModel(new Auto(), _eventAggregator));
+                    break;
+            }
+        }
+
+        private void SaveExecute()
+        {
+            if (EventType == CommandsTypes.New) { };
+            if (EventType == CommandsTypes.Edit) { };
+        }
+
+        private void CancelExecute()
+        {
+            onAutoSelect(_auto);
+        }
+
+        #endregion Helpers
     }
 }
