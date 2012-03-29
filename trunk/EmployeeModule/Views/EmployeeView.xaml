@@ -47,15 +47,15 @@
                 </StackPanel>
                 <StackPanel Style="{StaticResource StackPnlStyle}">
                     <sdk:Label Content="First name" Style="{StaticResource LblFieldStyle}"/>
-                    <TextBox Name="txtBoxFirstName" Text="{Binding FirstName}" Style="{StaticResource TextBoxStyle}"/>
+                    <TextBox Name="txtBoxFirstName" Text="{Binding FirstName, ValidatesOnDataErrors=True, Mode=TwoWay}" Style="{StaticResource TextBoxStyle}"/>
                 </StackPanel>
                 <StackPanel Style="{StaticResource StackPnlStyle}">
                     <sdk:Label Content="Last name" Style="{StaticResource LblFieldStyle}"/>
-                    <TextBox Name="txtBoxLastName" Text="{Binding LastName}" Style="{StaticResource TextBoxStyle}"/>
+                    <TextBox Name="txtBoxLastName" Text="{Binding LastName, ValidatesOnDataErrors=True, Mode=TwoWay}" Style="{StaticResource TextBoxStyle}"/>
                 </StackPanel>
                 <StackPanel Style="{StaticResource StackPnlStyle}">
                     <sdk:Label Content="Birthday" Style="{StaticResource LblFieldStyle}"/>
-                    <sdk:DatePicker Name="datePickerBirthDay" Text="{Binding BirthDay}" Style="{StaticResource DatePickerStyle}"/>
+                    <sdk:DatePicker Name="datePickerBirthDay" Text="{Binding BirthDay, ValidatesOnDataErrors=True, Mode=TwoWay}" Style="{StaticResource DatePickerStyle}"/>
                 </StackPanel>
                 <StackPanel Style="{StaticResource StackPnlStyle}">
                     <sdk:Label Content="Position" Width="120"/>
@@ -69,31 +69,31 @@
                 </StackPanel>
                 <StackPanel Style="{StaticResource StackPnlStyle}">
                     <sdk:Label Content="Address" Style="{StaticResource LblFieldStyle}"/>
-                    <TextBox Name="txtBoxAddress" Text="{Binding Address}" Style="{StaticResource TextBoxStyle}"/>
+                    <TextBox Name="txtBoxAddress" Text="{Binding Address, ValidatesOnDataErrors=True, Mode=TwoWay}" Style="{StaticResource TextBoxStyle}"/>
                 </StackPanel>
                 <StackPanel Style="{StaticResource StackPnlStyle}">
                     <sdk:Label Content="Phone" Style="{StaticResource LblFieldStyle}"/>
-                    <TextBox Name="txtBoxPhone" Text="{Binding Phone}" Style="{StaticResource TextBoxStyle}"/>
+                    <TextBox Name="txtBoxPhone" Text="{Binding Phone, ValidatesOnDataErrors=True, Mode=TwoWay}" Style="{StaticResource TextBoxStyle}"/>
                 </StackPanel>
                 <StackPanel Style="{StaticResource StackPnlStyle}">
                     <sdk:Label Content="Hire date" Style="{StaticResource LblFieldStyle}"/>
-                    <sdk:DatePicker Name="datePickerHireDate" Text="{Binding HireDate}" Style="{StaticResource DatePickerStyle}" />
+                    <sdk:DatePicker Name="datePickerHireDate" Text="{Binding HireDate, ValidatesOnDataErrors=True, Mode=TwoWay}" Style="{StaticResource DatePickerStyle}" />
                 </StackPanel>
                 <StackPanel Style="{StaticResource StackPnlStyle}">
                     <sdk:Label Content="Fire date" Style="{StaticResource LblFieldStyle}"/>
-                    <sdk:DatePicker Name="datePickerFireDate" Text="{Binding FireDate}" Style="{StaticResource DatePickerStyle}"/>
+                    <sdk:DatePicker Name="datePickerFireDate" Text="{Binding FireDate, ValidatesOnDataErrors=True, Mode=TwoWay}" Style="{StaticResource DatePickerStyle}"/>
                 </StackPanel>
                 <StackPanel Style="{StaticResource StackPnlStyle}">
                     <sdk:Label Content="Insuarance number" Style="{StaticResource LblFieldStyle}"/>
-                    <TextBox Name="txtBoxInsNumber" Text="{Binding InsuaranceNumber}" Style="{StaticResource TextBoxStyle}"/>
+                    <TextBox Name="txtBoxInsNumber" Text="{Binding InsuaranceNumber, ValidatesOnDataErrors=True, Mode=TwoWay}" Style="{StaticResource TextBoxStyle}"/>
                 </StackPanel>
                 <StackPanel Style="{StaticResource StackPnlStyle}">
                     <sdk:Label Content="Licence number" Style="{StaticResource LblFieldStyle}"/>
-                    <TextBox Name="txtBoxLicNumber" Text="{Binding LicenceNumber}" Style="{StaticResource TextBoxStyle}"/>
+                    <TextBox Name="txtBoxLicNumber" Text="{Binding LicenceNumber, ValidatesOnDataErrors=True, Mode=TwoWay}" Style="{StaticResource TextBoxStyle}"/>
                 </StackPanel>
                 <StackPanel Style="{StaticResource StackPnlStyle}">
                     <sdk:Label Content="Data" VerticalAlignment="Top" Style="{StaticResource LblFieldStyle}"/>
-                    <TextBox Name="txtBoxData" Text="{Binding Data}" Height="50" Style="{StaticResource TextBoxStyle}"/>
+                    <TextBox Name="txtBoxData" Text="{Binding Data, ValidatesOnDataErrors=True, Mode=TwoWay}" Height="50" Style="{StaticResource TextBoxStyle}"/>
                 </StackPanel>
                 <StackPanel Style="{StaticResource StackPnlStyle}" HorizontalAlignment="Center">
                     <Button Content="Save" Name="btnSave" Command="{Binding Path=SaveCommand}" Style="{StaticResource BtnStyle}"/>

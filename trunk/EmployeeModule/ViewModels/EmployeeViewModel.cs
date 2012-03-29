@@ -16,6 +16,7 @@ using Microsoft.Practices.Prism.Events;
 using EmployeeModule.Events;
 using CommandsInfrastracture;
 using EventInfrastracture;
+using Microsoft.Practices.Prism.Commands;
 
 namespace EmployeeModule.ViewModels
 {
@@ -43,6 +44,7 @@ namespace EmployeeModule.ViewModels
             {
                 _eventAggregator.GetEvent<EmployeeSelect>().Subscribe(onEmployeeSelect);
                 _eventAggregator.GetEvent<MenuEmployeeEvent>().Subscribe(onEventTypeChange);
+                EventType = CommandsTypes.Edit;
             }
 
             _address = employee.Address;
@@ -67,6 +69,10 @@ namespace EmployeeModule.ViewModels
         private IEventAggregator _eventAggregator;
 
         private EmployeeViewModel _employee;
+
+        private DelegateCommand _saveCommand;
+
+        private DelegateCommand _cancelCommand;
 
         private Guid _id;
         private string _firstName;
@@ -363,10 +369,11 @@ namespace EmployeeModule.ViewModels
         private string ValidateAddress()
         {
             string res = String.Empty;
-            if (_address.Length > 150)
-            {
-                res = Properties.Resources.LongString;
-            }
+            if (_address!=null)
+                if (_address.Length > 150)
+                {
+                    res = Properties.Resources.LongString;
+                }
             return res;
         }
 
@@ -431,6 +438,30 @@ namespace EmployeeModule.ViewModels
 
         #endregion // IDataErrorInfo
 
+        #region Commands
+
+        public ICommand SaveCommand
+        {
+            get
+            {
+                if (_saveCommand == null)
+                    _saveCommand = new DelegateCommand(SaveExecute);
+                return _saveCommand;
+            }
+        }
+
+        public ICommand CancelCommand
+        {
+            get
+            {
+                if (_cancelCommand == null)
+                    _cancelCommand = new DelegateCommand(CancelExecute);
+                return _cancelCommand;
+            }
+        }
+
+        #endregion Commands
+
         #region Helpers
 
         public void onEmployeeSelect(EmployeeViewModel employee)
@@ -466,6 +497,17 @@ namespace EmployeeModule.ViewModels
                     onEmployeeSelect(new EmployeeViewModel(new Employee(), _eventAggregator));
                     break;
             }
+        }
+
+        private void SaveExecute()
+        {
+            if (EventType == CommandsTypes.New) { };
+            if (EventType == CommandsTypes.Edit) { };
+        }
+
+        private void CancelExecute()
+        {
+            onEmployeeSelect(_employee);
         }
 
         #endregion Helpers
