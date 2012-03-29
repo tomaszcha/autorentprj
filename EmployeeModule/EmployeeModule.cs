@@ -26,7 +26,7 @@ namespace EmployeeModule
         protected override void RegisterViewsInRegions()
         {
             RegionManager.RegisterViewWithRegion(RegionNames.LeftPanelName, () => UnityContainer.Resolve<IViewLeftRegion>("EmployeeView"));
-            RegionManager.RegisterViewWithRegion(RegionNames.RightPanelName, () => UnityContainer.Resolve<IViewRightRegion>("EmployeesListView"));
+            RegionManager.RegisterViewWithRegion(RegionNames.RightPanelName, () => UnityContainer.Resolve<IViewRightRegion>("EmployeeView"));
         }
 
         protected override void RegisterTypesDependencies()
@@ -35,7 +35,7 @@ namespace EmployeeModule
             UnityContainer.RegisterType<IViewLeftRegion, EmployeeView>("EmployeeView", new ContainerControlledLifetimeManager());
 
             UnityContainer.RegisterType<IEmployeeListViewModel, EmployeesListViewModel>();
-            UnityContainer.RegisterType<IViewRightRegion, EmployeesListView>("EmployeesListView", new ContainerControlledLifetimeManager());
+            UnityContainer.RegisterType<IViewRightRegion, EmployeesListView>("EmployeeView", new ContainerControlledLifetimeManager());
         
         }
 

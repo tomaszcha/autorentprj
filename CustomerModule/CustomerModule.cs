@@ -26,7 +26,7 @@ namespace CustomerModule
         protected override void RegisterViewsInRegions()
         {
             RegionManager.RegisterViewWithRegion(RegionNames.LeftPanelName, () => UnityContainer.Resolve<IViewLeftRegion>("CustomerView"));
-            RegionManager.RegisterViewWithRegion(RegionNames.RightPanelName, () => UnityContainer.Resolve<IViewRightRegion>("CustomersListView"));
+            RegionManager.RegisterViewWithRegion(RegionNames.RightPanelName, () => UnityContainer.Resolve<IViewRightRegion>("CustomerView"));
         }
 
         protected override void RegisterTypesDependencies()
@@ -35,7 +35,7 @@ namespace CustomerModule
             UnityContainer.RegisterType<IViewLeftRegion, CustomerView>("CustomerView", new ContainerControlledLifetimeManager());
 
             UnityContainer.RegisterType<ICustomersListViewModel, CustomersListViewModel>();
-            UnityContainer.RegisterType<IViewRightRegion, CustomersListView>("CustomersListView", new ContainerControlledLifetimeManager());
+            UnityContainer.RegisterType<IViewRightRegion, CustomersListView>("CustomerView", new ContainerControlledLifetimeManager());
         
         }
 

@@ -32,6 +32,8 @@ namespace GeneralManagerManu.ViewModels
 
         private DelegateCommand<string> _menuActionCommand;
 
+        private DelegateCommand<string> _menuViewCommand;
+
         #endregion PrivateFields
 
         #region Commands
@@ -46,6 +48,16 @@ namespace GeneralManagerManu.ViewModels
             }
         }
 
+        public ICommand MenuViewCommand
+        {
+            get
+            {
+                if (_menuViewCommand == null)
+                    _menuViewCommand = new DelegateCommand<string>(MenuViewExecute);
+                return _menuViewCommand;
+            }
+        }
+
         #endregion Commands
 
         #region Helpers
@@ -53,6 +65,11 @@ namespace GeneralManagerManu.ViewModels
         private void MenuActionExecute(string typeName)
         {
             _eventAggregator.GetEvent<MenuEmployeeEvent>().Publish(typeName);
+        }
+
+        void MenuViewExecute(string view)
+        {
+            _eventAggregator.GetEvent<MenuEvent>().Publish(view);
         }
 
         #endregion Helpers
