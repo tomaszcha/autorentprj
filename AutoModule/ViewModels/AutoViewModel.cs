@@ -462,6 +462,7 @@ namespace AutoModule.ViewModels
 
         public void onAutoSelect(AutoViewModel auto)
         {
+            if (auto == null) return;
             _auto = auto;
 
             if (EventType == CommandsTypes.Edit || String.IsNullOrEmpty(auto.Number))
