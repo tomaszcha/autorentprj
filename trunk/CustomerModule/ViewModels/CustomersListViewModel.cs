@@ -67,9 +67,7 @@ namespace CustomerModule.ViewModels
         #endregion Properties
 
         #region Commands
-
-        
-
+               
         #endregion Commands
 
         #region Helpers
