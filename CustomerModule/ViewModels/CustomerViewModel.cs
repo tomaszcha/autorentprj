@@ -14,6 +14,9 @@ using System.Text.RegularExpressions;
 using MockModel;
 using Microsoft.Practices.Prism.Events;
 using CustomerModule.Events;
+using CommandsInfrastracture;
+using EventInfrastracture;
+using Microsoft.Practices.Prism.Commands;
 
 namespace CustomerModule.ViewModels
 {
@@ -29,16 +32,19 @@ namespace CustomerModule.ViewModels
         {
             _eventAggregator = eventAggregator;
             _eventAggregator.GetEvent<CustomerSelect>().Subscribe(onCustomerSelect);
+            _eventAggregator.GetEvent<MenuEmployeeEvent>().Subscribe(onEventTypeChange);
 
         }
 
         public CustomerViewModel(Customer customer, IEventAggregator eventAggregator)
         {
-
             _eventAggregator = eventAggregator;
+
             if (customer.Id == Guid.Empty)
             {
-                _eventAggregator.GetEvent<CustomerSelect>().Subscribe(onCustomerSelect);
+                _eventAggregator.GetEvent<CustomerSelect>().Subscribe(onCustomerSelect);               
+                _eventAggregator.GetEvent<MenuEmployeeEvent>().Subscribe(onEventTypeChange);
+                EventType = CommandsTypes.Edit;
             }
 
             _id = customer.Id;
@@ -69,11 +75,15 @@ namespace CustomerModule.ViewModels
         string _data;
 
         IEventAggregator _eventAggregator;
+        CustomerViewModel _customer;
+        DelegateCommand _saveCommand;
+        DelegateCommand _cancelCommand;
 
         #endregion // Private fields
 
         #region Properties
 
+        public string EventType { get; set; }
 
         /// <summary>
         /// Unique customer ids
@@ -345,20 +355,74 @@ namespace CustomerModule.ViewModels
                 
         #endregion // IDataErrorInfo
 
+        #region Commands
+
+        public ICommand SaveCommand
+        {
+            get
+            {
+                if (_saveCommand == null)
+                    _saveCommand = new DelegateCommand(SaveExecute);
+                return _saveCommand;
+            }
+        }
+
+        public ICommand CancelCommand
+        {
+            get
+            {
+                if (_cancelCommand == null)
+                    _cancelCommand = new DelegateCommand(CancelExecute);
+                return _cancelCommand;
+            }
+        }
+
+        #endregion Commands
+
         #region Helpers
 
         public void onCustomerSelect(CustomerViewModel customer)
-        {           
-            Id = customer.Id;
-            Name = customer.Name;
-            Type = customer.Type;
-            Address = customer.Address;
-            Phone = customer.Phone;
-            InsuaranceNumber = customer.InsuaranceNumber;
-            LicenceNumber = customer.LicenceNumber;
-            Passport = customer.Passport;
-            BirthDay = customer.BirthDay;
-            Data = customer.Data;
+        {
+            _customer = customer;
+
+            if (EventType == CommandsTypes.Edit || customer.Id == Guid.Empty)
+            {
+                Id = customer.Id;
+                Name = customer.Name;
+                Type = customer.Type;
+                Address = customer.Address;
+                Phone = customer.Phone;
+                InsuaranceNumber = customer.InsuaranceNumber;
+                LicenceNumber = customer.LicenceNumber;
+                Passport = customer.Passport;
+                BirthDay = customer.BirthDay;
+                Data = customer.Data;
+            }
+        }
+
+        public void onEventTypeChange(string typeName)
+        {
+            EventType = typeName;
+            switch (EventType)
+            {
+                case CommandsTypes.Edit:
+                    onCustomerSelect(_customer);
+                    break;
+                case CommandsTypes.New:
+                    onCustomerSelect(new CustomerViewModel(new Customer(), _eventAggregator));
+                    break;
+            }
+        }
+
+        private void SaveExecute()
+        {
+            if (EventType == CommandsTypes.New) { };
+            if (EventType == CommandsTypes.Edit) { };
+        }
+
+        private void CancelExecute()
+        {
+            onCustomerSelect(_customer);
         }
 
         #endregion Helpers
