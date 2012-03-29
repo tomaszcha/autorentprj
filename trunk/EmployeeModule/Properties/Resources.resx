@@ -134,7 +134,7 @@
     <comment>The string is too long</comment>
   </data>
   <data name="PhoneRegEx" xml:space="preserve">
-    <value>@"(^[0]\d{2})(\d{5-13}$)"</value>
+    <value>@"^\([0]\d{2}\))(\d{6,7}$"</value>
     <comment>Regular expression for phone number</comment>
   </data>
 </root>
