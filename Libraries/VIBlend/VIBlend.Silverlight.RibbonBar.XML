@@ -1,0 +1,3392 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>VIBlend.Silverlight.RibbonBar</name>
+    </assembly>
+    <members>
+        <member name="T:VIBlend.Silverlight.Controls.KeyTipService">
+            <summary>
+            Represents a class which contains RibbonBar Keytips.
+            </summary>
+        </member>
+        <member name="F:VIBlend.Silverlight.Controls.KeyTipService.KeyProperty">
+            <exclude/>
+        </member>
+        <member name="M:VIBlend.Silverlight.Controls.KeyTipService.GetKey(System.Windows.DependencyObject)">
+            <summary>
+            Gets the key.
+            </summary>
+            <param name="obj">The obj.</param>
+            <returns></returns>
+        </member>
+        <member name="M:VIBlend.Silverlight.Controls.KeyTipService.SetKey(System.Windows.DependencyObject,System.Windows.Input.Key)">
+            <summary>
+            Sets the key.
+            </summary>
+            <param name="obj">The obj.</param>
+            <param name="value">The value.</param>
+        </member>
+        <member name="F:VIBlend.Silverlight.Controls.KeyTipService.TextProperty">
+            <exclude/>
+        </member>
+        <member name="M:VIBlend.Silverlight.Controls.KeyTipService.GetText(System.Windows.DependencyObject)">
+            <summary>
+            Gets the key text.
+            </summary>
+            <param name="obj">The obj.</param>
+            <returns></returns>
+        </member>
+        <member name="M:VIBlend.Silverlight.Controls.KeyTipService.SetText(System.Windows.DependencyObject,System.String)">
+            <summary>
+            Sets the key text.
+            </summary>
+            <param name="obj">The obj.</param>
+            <param name="value">The value.</param>
+        </member>
+        <member name="F:VIBlend.Silverlight.Controls.KeyTipService.CommandProperty">
+            <exclude/>
+        </member>
+        <member name="M:VIBlend.Silverlight.Controls.KeyTipService.GetCommand(System.Windows.DependencyObject)">
+            <summary>
+            Gets the key tip command.
+            </summary>
+            <param name="obj">The obj.</param>
+            <returns></returns>
+        </member>
+        <member name="M:VIBlend.Silverlight.Controls.KeyTipService.SetCommand(System.Windows.DependencyObject,System.Windows.Input.ICommand)">
+            <summary>
+            Sets the key tip command.
+            </summary>
+            <param name="obj">The obj.</param>
+            <param name="value">The value.</param>
+        </member>
+        <member name="F:VIBlend.Silverlight.Controls.KeyTipService.CommandParameterProperty">
+            <exclude/>
+        </member>
+        <member name="M:VIBlend.Silverlight.Controls.KeyTipService.GetCommandParameter(System.Windows.DependencyObject)">
+            <summary>
+            Gets the key tip command parameter.
+            </summary>
+            <param name="obj">The obj.</param>
+            <returns></returns>
+        </member>
+        <member name="M:VIBlend.Silverlight.Controls.KeyTipService.SetCommandParameter(System.Windows.DependencyObject,System.Object)">
+            <summary>
+            Sets the key tip command parameter.
+            </summary>
+            <param name="obj">The obj.</param>
+            <param name="value">The value.</param>
+        </member>
+        <member name="M:VIBlend.Silverlight.Controls.KeyTipService.Refresh">
+            <summary>
+            Refreshes this instance.
+            </summary>
+        </member>
+        <member name="M:VIBlend.Silverlight.Controls.KeyTipService.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:VIBlend.Silverlight.Controls.KeyTipService"/> class.
+            </summary>
+        </member>
+        <member name="M:VIBlend.Silverlight.Controls.KeyTipService.#ctor(VIBlend.Silverlight.Controls.RibbonBar)">
+            <summary>
+            Initializes a new instance of the <see cref="T:VIBlend.Silverlight.Controls.KeyTipService"/> class.
+            </summary>
+            <param name="ribbon">The ribbon.</param>
+        </member>
+        <member name="M:VIBlend.Silverlight.Controls.KeyTipService.Attach(VIBlend.Silverlight.Controls.RibbonBar)">
+            <summary>
+            Attaches the specified ribbon.
+            </summary>
+            <param name="ribbon">The ribbon.</param>
+        </member>
+        <member name="M:VIBlend.Silverlight.Controls.KeyTipService.Detach(VIBlend.Silverlight.Controls.RibbonBar)">
+            <summary>
+            Detaches the specified ribbon.
+            </summary>
+            <param name="ribbon">The ribbon.</param>
+        </member>
+        <member name="M:VIBlend.Silverlight.Controls.KeyTipService.AddKeyTip(System.Windows.UIElement,System.String,System.Windows.Input.Key,VIBlend.Silverlight.Controls.KeyTipService)">
+            <summary>
+            Adds the key tip.
+            </summary>
+            <param name="child">The child.</param>
+            <param name="text">The text.</param>
+            <returns></returns>
+        </member>
+        <member name="M:VIBlend.Silverlight.Controls.KeyTipService.Hide">
+            <summary>
+            Hides all keytips.
+            </summary>
+        </member>
+        <member name="M:VIBlend.Silverlight.Controls.KeyTipService.Show">
+            <summary>
+            Shows all keytips.
+            </summary>
+        </member>
+        <member name="M:VIBlend.Silverlight.Controls.KeyTipService.Show(System.Windows.UIElement)">
+            <summary>
+            Shows the specified element.
+            </summary>
+            <param name="element">The element.</param>
+        </member>
+        <member name="P:VIBlend.Silverlight.Controls.KeyTipService.RibbonBar">
+            <summary>
+            Gets the ribbon bar.
+            </summary>
+            <value>The ribbon bar.</value>
+        </member>
+        <member name="P:VIBlend.Silverlight.Controls.KeyTipService.HideKeyTipsOnMouseUp">
+            <summary>
+            Gets or sets a value indicating whether to hide the key tips when mouse up event occurs.
+            </summary>
+        </member>
+        <member name="P:VIBlend.Silverlight.Controls.KeyTipService.AreKeyTipsVisible">
+            <summary>
+            Gets or sets a value indicating whether the key tips are visible.
+            </summary>
+        </member>
+        <member name="T:VIBlend.Silverlight.Controls.RibbonBar">
+            <summary>
+            Represents a control that enables the arrangement of a visual content in a compacted and organized form resembling the Office2007 and Office2010 Ribbon UI.
+            </summary>
+        </member>
+        <member name="F:VIBlend.Silverlight.Controls.RibbonBar.DockPanelPrimaryName">
+            <summary>
+            Repretents RibbonBar DockPanel.
+            </summary>
+        </member>
+        <member name="F:VIBlend.Silverlight.Controls.RibbonBar.HeaderBackgroundName">
+            <summary>
+            Repretents RibbonBar Header Area Background.
+            </summary>
+        </member>
+        <member name="F:VIBlend.Silverlight.Controls.RibbonBar.ScrollViewerName">
+            <summary>
+            Repretents RibbonBar Items Scrollviewer.
+            </summary>
+        </member>
+        <member name="F:VIBlend.Silverlight.Controls.RibbonBar.RibbonBarBorderName">
+            <summary>
+            Repretents RibbonBar Border.
+            </summary>
+        </member>
+        <member name="F:VIBlend.Silverlight.Controls.RibbonBar.RibbonBarHeaderLayoutName">
+            <summary>
+            Represents RibbonBar Grid layout panel.
+            </summary>
+        </member>
+        <member name="F:VIBlend.Silverlight.Controls.RibbonBar.RibbonBarContentLayoutName">
+            <summary>
+            Represents RibbonBar Grid content layout panel
+            </summary>
+        </member>
+        <member name="F:VIBlend.Silverlight.Controls.RibbonBar.RibbonBarLayoutRootName">
+            <summary>
+            Represents RibbonBar Root element.
+            </summary>
+        </member>
+        <member name="F:VIBlend.Silverlight.Controls.RibbonBar.RibbonBarHeaderAreaName">
+            <summary>
+            Represents the Header Area name.
+            </summary>
+        </member>
+        <member name="F:VIBlend.Silverlight.Controls.RibbonBar.RibbonBarCollapseButtonName">
+            <summary>
+            Represents RibbonBar collapse button.
+            </summary>
+        </member>
+        <member name="M:VIBlend.Silverlight.Controls.RibbonBar.OnItemClicked(VIBlend.Silverlight.Controls.RibbonTabItemEventArgs)">
+            <summary>
+            Raises the <see cref="E:ItemClicked"/> event.
+            </summary>
+            <param name="args">The <see cref="T:VIBlend.Silverlight.Controls.RibbonTabItemEventArgs"/> instance containing the event data.</param>
+        </member>
+        <member name="F:VIBlend.Silverlight.Controls.RibbonBar.defaultBorder">
+            <exclude/>
+        </member>
+        <member name="F:VIBlend.Silverlight.Controls.RibbonBar.RibbonBarLayoutRoot">
+            <exclude/>
+        </member>
+        <member name="F:VIBlend.Silverlight.Controls.RibbonBar.layoutPanel">
+            <exclude/>
+        </member>
+        <member name="F:VIBlend.Silverlight.Controls.RibbonBar.scrollViewer">
+            <exclude/>
+        </member>
+        <member name="F:VIBlend.Silverlight.Controls.RibbonBar.headerBackground">
+            <exclude/>
+        </member>
+        <member name="F:VIBlend.Silverlight.Controls.RibbonBar.RibbonBarBorder">
+            <exclude/>
+        </member>
+        <member name="F:VIBlend.Silverlight.Controls.RibbonBar.allowFadeEffect">
+            <exclude/>
+        </member>
+        <member name="F:VIBlend.Silverlight.Controls.RibbonBar.RibbonBarHeaderLayout">
+            <exclude/>
+        </member>
+        <member name="F:VIBlend.Silverlight.Controls.RibbonBar.RibbonBarContentLayout">
+            <exclude/>
+        </member>
+        <member name="F:VIBlend.Silverlight.Controls.RibbonBar.collapseButton">
+            <exclude/>
+        </member>
+        <member name="F:VIBlend.Silverlight.Controls.RibbonBar.RibbonBarHeaderArea">
+            <exclude/>
+        </member>
+        <member name="M:VIBlend.Silverlight.Controls.RibbonBar.GetTitlebar">
+            <summary>
+            Gets the title bar.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:VIBlend.Silverlight.Controls.RibbonBar.GetQuickAccessToolbar">
+            <summary>
+            Gets the quick access toolbar.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:VIBlend.Silverlight.Controls.RibbonBar.OnMouseRightButtonDown(System.Windows.Input.MouseButtonEventArgs)">
+            <summary>
+            Raises the <see cref="E:System.Windows.UIElement.MouseRightButtonDown"/> event.
+            </summary>
+            <param name="e">A <see cref="T:System.Windows.Input.MouseButtonEventArgs"/> that contains the event data.</param>
+        </member>
+        <member name="M:VIBlend.Silverlight.Controls.RibbonBar.InitializeDefaultContextMenu">
+            <summary>
+            Initializes the default context menu.
+            </summary>
+        </member>
+        <member name="M:VIBlend.Silverlight.Controls.RibbonBar.RemoveSort">
+            <summary>
+            Removes the sort.
+            </summary>
+        </member>
+        <member name="M:VIBlend.Silverlight.Controls.RibbonBar.UpdateTabsLayout">
+            <summary>
+            Updates the tabs layout.
+            </summary>
+        </member>
+        <member name="M:VIBlend.Silverlight.Controls.RibbonBar.UpdateTitleBarLayout">
+            <summary>
+            Updates the title bar layout.
+            </summary>
+        </member>
+        <member name="M:VIBlend.Silverlight.Controls.RibbonBar.Sort(System.Boolean)">
+            <summary>
+            Sorts the specified smallest to largest.
+            </summary>
+        </member>
+        <member name="F:VIBlend.Silverlight.Controls.RibbonBar.HorizontalHeaderAlignmentProperty">
+            <exclude/>
+        </member>
+        <member name="F:VIBlend.Silverlight.Controls.RibbonBar.VerticalHeaderAlignmentProperty">
+            <exclude/>
+        </member>
+        <member name="F:VIBlend.Silverlight.Controls.RibbonBar.HeaderTemplateProperty">
+            <exclude/>
+        </member>
+        <member name="F:VIBlend.Silverlight.Controls.RibbonBar.HeaderProperty">
+            <exclude/>
+        </member>
+        <member name="F:VIBlend.Silverlight.Controls.RibbonBar.TextProperty">
+            <exclude/>
+        </member>
+        <member name="F:VIBlend.Silverlight.Controls.RibbonBar.VerticalScrollbarHorizontalAlignmentProperty">
+            <exclude/>
+        </member>
+        <member name="F:VIBlend.Silverlight.Controls.RibbonBar.HorizontalScrollbarVerticalAlignmentProperty">
+            <exclude/>
+        </member>
+        <member name="F:VIBlend.Silverlight.Controls.RibbonBar.HeaderBackgroundProperty">
+            <exclude/>
+        </member>
+        <member name="F:VIBlend.Silverlight.Controls.RibbonBar.HeaderBorderBrushProperty">
+            <exclude/>
+        </member>
+        <member name="F:VIBlend.Silverlight.Controls.RibbonBar.ContentBorderBrushProperty">
+            <exclude/>
+        </member>
+        <member name="F:VIBlend.Silverlight.Controls.RibbonBar.ContentBorderThicknessProperty">
+            <exclude/>
+        </member>
+        <member name="F:VIBlend.Silverlight.Controls.RibbonBar.ShowQuickAccessToolBarBelowRibbonProperty">
+            <exclude/>
+        </member>
+        <member name="F:VIBlend.Silverlight.Controls.RibbonBar.HeaderAlignmentProperty">
+            <exclude/>
+        </member>
+        <member name="F:VIBlend.Silverlight.Controls.RibbonBar.HeaderVerticalAlignmentProperty">
+            <exclude/>
+        </member>
+        <member name="F:VIBlend.Silverlight.Controls.RibbonBar.HeaderBorderThicknessProperty">
+            <exclude/>
+        </member>
+        <member name="M:VIBlend.Silverlight.Controls.RibbonBar.OnTabOrientationChanged">
+            <summary>
+            Called when the tab orientation is changed.
+            </summary>
+        </member>
+        <member name="M:VIBlend.Silverlight.Controls.RibbonBar.IsItemItsOwnContainerOverride(System.Object)">
+            <summary>
+            Determines if the specified item is (or is eligible to be) its own container.
+            </summary>
+            <param name="item">The item to check.</param>
+            <returns>
+            true if the item is (or is eligible to be) its own container; otherwise, false.
+            </returns>
+        </member>
+        <member name="M:VIBlend.Silverlight.Controls.RibbonBar.GetContainerForItemOverride">
+            <summary>
+            Creates or identifies the element that is used to display the given item.
+            </summary>
+            <returns>
+            The element that is used to display the given item.
+            </returns>
+        </member>
+        <member name="M:VIBlend.Silverlight.Controls.RibbonBar.OnSelectionChanged(System.Windows.Controls.SelectionChangedEventArgs)">
+            <summary>
+            Raises the <see cref="E:SelectionChanged"/> event.
+            </summary>
+            <param name="args">The <see cref="T:System.Windows.Controls.SelectionChangedEventArgs"/> instance containing the event data.</param>
+        </member>
+        <member name="F:VIBlend.Silverlight.Controls.RibbonBar.ScrollStepProperty">
+            <exclude/>
+        </member>
+        <member name="F:VIBlend.Silverlight.Controls.RibbonBar.SelectedItemProperty">
+            <exclude/>
+        </member>
+        <member name="M:VIBlend.Silverlight.Controls.RibbonBar.ApplyContent(VIBlend.Silverlight.Controls.RibbonBar)">
+            <summary>
+            Applies the content.
+            </summary>
+            <param name="RibbonBar">The tab control.</param>
+        </member>
+        <member name="M:VIBlend.Silverlight.Controls.RibbonBar.SetCloseButtonVisibility(System.Windows.Visibility)">
+            <summary>
+            Sets the close button visibility.
+            </summary>
+            <param name="visibility">The visibility.</param>
+        </member>
+        <member name="F:VIBlend.Silverlight.Controls.RibbonBar.SelectedIndexProperty">
+            <exclude/>
+        </member>
+        <member name="M:VIBlend.Silverlight.Controls.RibbonBar.ApplySelectedIndex(VIBlend.Silverlight.Controls.RibbonBar)">
+            <summary>
+            Applies the index of the selected.
+            </summary>
+            <param name="RibbonBar">The tab control.</param>
+        </member>
+        <member name="M:VIBlend.Silverlight.Controls.RibbonBar.PrepareContainerForItemOverride(System.Windows.DependencyObject,System.Object)">
+            <summary>
+            Prepares the specified element to display the specified item.
+            </summary>
+            <param name="element">The element used to display the specified item.</param>
+            <param name="item">The item to display.</param>
+        </member>
+        <member name="F:VIBlend.Silverlight.Controls.RibbonBar.RibbonTabItemTemplateTemplateProperty">
+            <exclude/>
+        </member>
+        <member name="F:VIBlend.Silverlight.Controls.RibbonBar.ItemContainerStyleProperty">
+            <summary>
+            Identifies the
+            <see cref="P:System.Windows.Controls.NavigationPane.ItemContainerStyle" />
+            dependency property.
+            </summary>
+            <value>
+            The identifier for the
+            <see cref="P:System.Windows.Controls.NavigationPane.ItemContainerStyle" />
+            dependency property.
+            </value>
+        </member>
+        <member name="M:VIBlend.Silverlight.Controls.RibbonBar.OnItemContainerStylePropertyChanged(System.Windows.DependencyObject,System.Windows.DependencyPropertyChangedEventArgs)">
+            <summary>
+            ItemContainerStyleProperty property changed handler.
+            </summary>
+            <param name="d">
+            RibbonBar that changed its ItemContainerStyle.
+            </param>
+            <param name="e">Event arguments.</param>
+        </member>
+        <member name="M:VIBlend.Silverlight.Controls.RibbonBar.OnItemsChanged(System.Collections.Specialized.NotifyCollectionChangedEventArgs)">
+            <summary>
+            Called when the value of the <see cref="P:System.Windows.Controls.ItemsControl.Items"/> property changes.
+            </summary>
+            <param name="e">A <see cref="T:System.Collections.Specialized.NotifyCollectionChangedEventArgs"/> that contains the event data</param>
+        </member>
+        <member name="M:VIBlend.Silverlight.Controls.RibbonBar.ClearContainerForItemOverride(System.Windows.DependencyObject,System.Object)">
+            <summary>
+            Undoes the effects of the <see cref="M:System.Windows.Controls.ItemsControl.PrepareContainerForItemOverride(System.Windows.DependencyObject,System.Object)"/> method.
+            </summary>
+            <param name="element">The container element.</param>
+            <param name="item">The item.</param>
+        </member>
+        <member name="F:VIBlend.Silverlight.Controls.RibbonBar.TabOrientationProperty">
+            <exclude/>
+        </member>
+        <member name="F:VIBlend.Silverlight.Controls.RibbonBar.CornerRadiusProperty">
+            <exclude/>
+        </member>
+        <member name="F:VIBlend.Silverlight.Controls.RibbonBar.ContentTemplateProperty">
+            <exclude/>
+        </member>
+        <member name="F:VIBlend.Silverlight.Controls.RibbonBar.ContentProperty">
+            <exclude/>
+        </member>
+        <member name="F:VIBlend.Silverlight.Controls.RibbonBar.RibbonContextualGroupStyleProperty">
+            <exclude/>
+        </member>
+        <member name="F:VIBlend.Silverlight.Controls.RibbonBar.QuickAccessToolbarStyleProperty">
+            <exclude/>
+        </member>
+        <member name="F:VIBlend.Silverlight.Controls.RibbonBar.KeyTipStyleProperty">
+            <exclude/>
+        </member>
+        <member name="F:VIBlend.Silverlight.Controls.RibbonBar.ContextMenuStyleProperty">
+            <exclude/>
+        </member>
+        <member name="F:VIBlend.Silverlight.Controls.RibbonBar.ContextMenuItemStyleProperty">
+            <exclude/>
+        </member>
+        <member name="F:VIBlend.Silverlight.Controls.RibbonBar.ApplicationButtonHeaderProperty">
+            <exclude/>
+        </member>
+        <member name="F:VIBlend.Silverlight.Controls.RibbonBar.ApplicationButtonWidthProperty">
+            <exclude/>
+        </member>
+        <member name="F:VIBlend.Silverlight.Controls.RibbonBar.ApplicationButtonHeaderTemplateProperty">
+            <exclude/>
+        </member>
+        <member name="F:VIBlend.Silverlight.Controls.RibbonBar.ApplicationButtonContentProperty">
+            <exclude/>
+        </member>
+        <member name="F:VIBlend.Silverlight.Controls.RibbonBar.ApplicationButtonContentTemplateProperty">
+            <exclude/>
+        </member>
+        <member name="F:VIBlend.Silverlight.Controls.RibbonBar.ApplicationButtonStyleProperty">
+            <exclude/>
+        </member>
+        <member name="F:VIBlend.Silverlight.Controls.RibbonBar.ScreenTipStyleProperty">
+            <exclude/>
+        </member>
+        <member name="F:VIBlend.Silverlight.Controls.RibbonBar.IsMinimizedProperty">
+            <exclude/>
+        </member>
+        <member name="M:VIBlend.Silverlight.Controls.RibbonBar.OpenPopup">
+            <summary>
+            Opens the popup.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:VIBlend.Silverlight.Controls.RibbonBar.ClosePopup">
+            <summary>
+            Closes the popup.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="F:VIBlend.Silverlight.Controls.RibbonBar.PopupWidthProperty">
+            <exclude/>
+        </member>
+        <member name="F:VIBlend.Silverlight.Controls.RibbonBar.PopupHeightProperty">
+            <exclude/>
+        </member>
+        <member name="F:VIBlend.Silverlight.Controls.RibbonBar.MinimizeButtonVisibilityProperty">
+            <exclude/>
+        </member>
+        <member name="F:VIBlend.Silverlight.Controls.RibbonBar.ApplicationButtonVisibilityProperty">
+            <exclude/>
+        </member>
+        <member name="F:VIBlend.Silverlight.Controls.RibbonBar.QuickAccessToolBarVisibilityProperty">
+            <exclude/>
+        </member>
+        <member name="F:VIBlend.Silverlight.Controls.RibbonBar.TitleBarVisibilityProperty">
+            <exclude/>
+        </member>
+        <member name="F:VIBlend.Silverlight.Controls.RibbonBar.KeyTipsActivationKeyProperty">
+            <exclude/>
+        </member>
+        <member name="F:VIBlend.Silverlight.Controls.RibbonBar.KeyTipsDeActivationKeyProperty">
+            <exclude/>
+        </member>
+        <member name="M:VIBlend.Silverlight.Controls.RibbonBar.ClosePopupOnOusideMouseDown(System.Windows.Input.MouseButtonEventArgs)">
+            <summary>
+            Closes the popup on ouside mouse down.
+            </summary>
+            <param name="e">The <see cref="T:System.Windows.Input.MouseButtonEventArgs"/> instance containing the event data.</param>
+        </member>
+        <member name="M:VIBlend.Silverlight.Controls.RibbonBar.EnsureVisible(System.Windows.FrameworkElement)">
+            <summary>
+            Ensures the visibility of an element.
+            </summary>
+            <param name="element">The element.</param>
+        </member>
+        <member name="M:VIBlend.Silverlight.Controls.RibbonBar.OnIsCollapsedChanged(System.Boolean)">
+            <summary>
+            Called when the control is collapsed.
+            </summary>
+        </member>
+        <member name="M:VIBlend.Silverlight.Controls.RibbonBar.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:VIBlend.Silverlight.Controls.RibbonBar"/> class.
+            </summary>
+        </member>
+        <member name="F:VIBlend.Silverlight.Controls.RibbonBar.ShowQuickAccessToolBarAboveRibbonCommandProperty">
+            <exclude/>
+        </member>
+        <member name="F:VIBlend.Silverlight.Controls.RibbonBar.OpenApplicationButtonCommandProperty">
+            <exclude/>
+        </member>
+        <member name="F:VIBlend.Silverlight.Controls.RibbonBar.CloseApplicationButtonCommandProperty">
+            <exclude/>
+        </member>
+        <member name="F:VIBlend.Silverlight.Controls.RibbonBar.ToggleMinimizeStateCommandProperty">
+            <exclude/>
+        </member>
+        <member name="F:VIBlend.Silverlight.Controls.RibbonBar.ShowQuickAccessToolBarBelowRibbonCommandProperty">
+            <exclude/>
+        </member>
+        <member name="F:VIBlend.Silverlight.Controls.RibbonBar.MinimizeRibbonCommandProperty">
+            <exclude/>
+        </member>
+        <member name="F:VIBlend.Silverlight.Controls.RibbonBar.RestoreRibbonCommandProperty">
+            <exclude/>
+        </member>
+        <member name="M:VIBlend.Silverlight.Controls.RibbonBar.CanExecuteCommand(System.Object)">
+            <summary>
+            Executes the command.
+            </summary>
+            <param name="parameter"></param>
+            <returns></returns>
+        </member>
+        <member name="M:VIBlend.Silverlight.Controls.RibbonBar.OnApplyTemplate">
+            <summary>
+            When overridden in a derived class, is invoked whenever application code or internal processes (such as a rebuilding layout pass) call <see cref="M:System.Windows.Controls.Control.ApplyTemplate"/>. In simplest terms, this means the method is called just before a UI element displays in an application. For more information, see Remarks.
+            </summary>
+        </member>
+        <member name="M:VIBlend.Silverlight.Controls.RibbonBar.MoveContextualTabs">
+            <summary>
+            Moves the contextual tabs.
+            </summary>
+        </member>
+        <member name="F:VIBlend.Silverlight.Controls.RibbonBar.IsFixedLayoutProperty">
+            <exclude/>
+        </member>
+        <member name="M:VIBlend.Silverlight.Controls.RibbonBar.ShowContextualTabs">
+            <summary>
+            Shows the contextual tabs.
+            </summary>
+        </member>
+        <member name="M:VIBlend.Silverlight.Controls.RibbonBar.ShowContextualTabs(VIBlend.Silverlight.Controls.RibbonContextualTabGroup)">
+            <summary>
+            Shows the contextual tabs.
+            </summary>
+            <param name="group">The group.</param>
+        </member>
+        <member name="M:VIBlend.Silverlight.Controls.RibbonBar.HideContextualTabs(VIBlend.Silverlight.Controls.RibbonContextualTabGroup)">
+            <summary>
+            Shows the contextual tabs.
+            </summary>
+            <param name="group">The group.</param>
+        </member>
+        <member name="M:VIBlend.Silverlight.Controls.RibbonBar.HideContextualTabs">
+            <summary>
+            Hides the contextual tabs.
+            </summary>
+        </member>
+        <member name="M:VIBlend.Silverlight.Controls.RibbonBar.ShowKeyTips">
+            <summary>
+            Shows the key tips.
+            </summary>
+        </member>
+        <member name="M:VIBlend.Silverlight.Controls.RibbonBar.HideKeyTips">
+            <summary>
+            Hides the key tips.
+            </summary>
+        </member>
+        <member name="M:VIBlend.Silverlight.Controls.RibbonBar.SetScreenTipsStyle(System.Windows.UIElement)">
+            <summary>
+            Sets the screen tips style.
+            </summary>
+            <param name="element">The element.</param>
+        </member>
+        <member name="M:VIBlend.Silverlight.Controls.RibbonBar.MeasureOverride(System.Windows.Size)">
+            <summary>
+            Provides the behavior for the Measure pass of Silverlight layout. Classes can override this method to define their own Measure pass behavior.
+            </summary>
+            <param name="availableSize">The available size that this object can give to child objects. Infinity (<see cref="F:System.Double.PositiveInfinity"/>) can be specified as a value to indicate that the object will size to whatever content is available.</param>
+            <returns>
+            The size that this object determines it needs during layout, based on its calculations of the allocated sizes for child objects; or based on other considerations, such as a fixed container size.
+            </returns>
+        </member>
+        <member name="M:VIBlend.Silverlight.Controls.RibbonBar.CollapseGroups(System.Windows.Size,System.Boolean)">
+            <summary>
+            Collapses the groups.
+            </summary>
+            <param name="availableSize">Size of the available.</param>
+            <param name="canBreak">if set to <c>true</c> [can break].</param>
+            <returns></returns>
+        </member>
+        <member name="M:VIBlend.Silverlight.Controls.RibbonBar.ArrangeOverride(System.Windows.Size)">
+            <summary>
+            Provides the behavior for the Arrange pass of Silverlight layout. Classes can override this method to define their own Arrange pass behavior.
+            </summary>
+            <param name="finalSize">The final area within the parent that this object should use to arrange itself and its children.</param>
+            <returns>
+            The actual size that is used after the element is arranged in layout.
+            </returns>
+        </member>
+        <member name="M:VIBlend.Silverlight.Controls.RibbonBar.GetItemByVisualIndex(System.Int32)">
+            <summary>
+            Gets the index of the item by visual.
+            </summary>
+            <param name="index">The index.</param>
+            <returns></returns>
+        </member>
+        <member name="M:VIBlend.Silverlight.Controls.RibbonBar.SelectPrevItem">
+            <summary>
+            Selects the prev item.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:VIBlend.Silverlight.Controls.RibbonBar.SelectNextItem">
+            <summary>
+            Selects the next item.
+            </summary>
+        </member>
+        <member name="M:VIBlend.Silverlight.Controls.RibbonBar.SetOpacity(System.Double,System.Boolean)">
+            <summary>
+            Sets the opacity.
+            </summary>
+            <param name="opacity">The opacity.</param>
+        </member>
+        <member name="E:VIBlend.Silverlight.Controls.RibbonBar.ItemClicked">
+            <summary>
+            Occurs when a tab item is clicked.
+            </summary>
+        </member>
+        <member name="P:VIBlend.Silverlight.Controls.RibbonBar.IsContextMenuEnabled">
+            <summary>
+            Gets or sets a value indicating whether this instance is context menu enabled.
+            </summary>
+            <value>
+            	<c>true</c> if this instance is context menu enabled; otherwise, <c>false</c>.
+            </value>
+        </member>
+        <member name="P:VIBlend.Silverlight.Controls.RibbonBar.ContextMenu">
+            <summary>
+            Gets or sets the context menu.
+            </summary>
+            <value>The context menu.</value>
+        </member>
+        <member name="P:VIBlend.Silverlight.Controls.RibbonBar.LocalizationProvider">
+            <summary>
+            Gets or sets the localization provider.
+            </summary>
+            <value>The localization provider.</value>
+        </member>
+        <member name="P:VIBlend.Silverlight.Controls.RibbonBar.RibbonTabItemComparer">
+            <summary>
+            Gets or sets the ribbon tab item comparer.
+            </summary>
+            <value>The ribbon tab item comparer.</value>
+        </member>
+        <member name="P:VIBlend.Silverlight.Controls.RibbonBar.SortedItems">
+            <summary>
+            Gets the sorted items.
+            </summary>
+            <value>The sorted items.</value>
+        </member>
+        <member name="P:VIBlend.Silverlight.Controls.RibbonBar.HorizontalHeaderAlignment">
+            <summary>
+            Gets ot sets the horizontal alignment of button's Header.
+            </summary>
+        </member>
+        <member name="P:VIBlend.Silverlight.Controls.RibbonBar.VerticalHeaderAlignment">
+            <summary>
+            Gets ot sets the vertical alignment of the Header.
+            </summary>
+        </member>
+        <member name="P:VIBlend.Silverlight.Controls.RibbonBar.HeaderTemplate">
+            <summary>
+            Gets or sets the RibbonBar's Header data template.
+            </summary>
+        </member>
+        <member name="P:VIBlend.Silverlight.Controls.RibbonBar.Header">
+            <summary>
+            Gets or sets the RibbonBar's Header.
+            </summary>
+        </member>
+        <member name="P:VIBlend.Silverlight.Controls.RibbonBar.Text">
+            <summary>
+            Gets or sets the RibbonBar's Text.
+            </summary>
+        </member>
+        <member name="P:VIBlend.Silverlight.Controls.RibbonBar.VerticalScrollbarHorizontalAlignment">
+            <summary>
+            Gets or sets the vertical scrollbar horizontal alignment.
+            </summary>
+            <value>The vertical scrollbar horizontal alignment.</value>
+        </member>
+        <member name="P:VIBlend.Silverlight.Controls.RibbonBar.HorizontalScrollbarVerticalAlignment">
+            <summary>
+            Gets or sets the horizontal scrollbar vertical alignment.
+            </summary>
+            <value>The horizontal scrollbar vertical alignment.</value>
+        </member>
+        <member name="P:VIBlend.Silverlight.Controls.RibbonBar.HeaderBackground">
+            <summary>
+            Gets or sets the header background.
+            </summary>
+            <value>The header background.</value>
+        </member>
+        <member name="P:VIBlend.Silverlight.Controls.RibbonBar.HeaderBorderBrush">
+            <summary>
+            Gets or sets the header border brush.
+            </summary>
+            <value>The header border brush.</value>
+        </member>
+        <member name="P:VIBlend.Silverlight.Controls.RibbonBar.ContentBorderBrush">
+            <summary>
+            Gets or sets the Content border brush.
+            </summary>
+            <value>The Content border brush.</value>
+        </member>
+        <member name="P:VIBlend.Silverlight.Controls.RibbonBar.ContentBorderThickness">
+            <summary>
+            Gets or sets the Content border thickness.
+            </summary>
+            <value>The Content border thickness.</value>
+        </member>
+        <member name="P:VIBlend.Silverlight.Controls.RibbonBar.HeaderAlignment">
+            <summary>
+            Gets or sets the header alignment.
+            </summary>
+            <value>The header alignment.</value>
+        </member>
+        <member name="P:VIBlend.Silverlight.Controls.RibbonBar.HeaderVerticalAlignment">
+            <summary>
+            Gets or sets the header vertical alignment.
+            </summary>
+            <value>The header vertical alignment.</value>
+        </member>
+        <member name="P:VIBlend.Silverlight.Controls.RibbonBar.ShowQuickAccessToolBarBelowRibbon">
+            <summary>
+            Gets or sets a value indicating whether to show the QAT below the RibbonBar.
+            </summary>
+        </member>
+        <member name="P:VIBlend.Silverlight.Controls.RibbonBar.HeaderBorderThickness">
+            <summary>
+            Gets or sets the header border thickness.
+            </summary>
+            <value>The header border thickness.</value>
+        </member>
+        <member name="P:VIBlend.Silverlight.Controls.RibbonBar.AllowFadeEffect">
+            <summary>
+            Gets or sets a value indicating whether the fade effect is allowed.
+            </summary>
+        </member>
+        <member name="E:VIBlend.Silverlight.Controls.RibbonBar.TabOrientationChanged">
+            <summary>
+            Occurs when tab orientation is changed.
+            </summary>
+        </member>
+        <member name="P:VIBlend.Silverlight.Controls.RibbonBar.ScrollViewer">
+            <summary>
+            Gets the scroll viewer.
+            </summary>
+            <value>The scroll viewer.</value>
+        </member>
+        <member name="E:VIBlend.Silverlight.Controls.RibbonBar.SelectionChanged">
+            <summary>
+            Occurs when the Selection is changed.
+            </summary>
+        </member>
+        <member name="P:VIBlend.Silverlight.Controls.RibbonBar.ScrollStep">
+            <summary>
+            Gets or sets the scroll step.
+            </summary>
+            <value>The scroll step.</value>
+        </member>
+        <member name="P:VIBlend.Silverlight.Controls.RibbonBar.SelectedItem">
+            <summary>
+            Gets or sets the selected item.
+            </summary>
+            <value>The selected item.</value>
+        </member>
+        <member name="P:VIBlend.Silverlight.Controls.RibbonBar.SelectedIndex">
+            <summary>
+            Gets or sets the selected index.
+            </summary>
+        </member>
+        <member name="P:VIBlend.Silverlight.Controls.RibbonBar.RibbonTabItemTemplate">
+            <summary>
+            Gets or sets the tab item template.
+            </summary>
+            <value>The tab item template.</value>
+        </member>
+        <member name="P:VIBlend.Silverlight.Controls.RibbonBar.ItemsControlHelper">
+            <summary>
+            Gets or sets the items control helper.
+            </summary>
+            <value>
+            The items control helper.
+            </value>
+        </member>
+        <member name="P:VIBlend.Silverlight.Controls.RibbonBar.ItemContainerStyle">
+            <summary>
+            Gets or sets the item container style.
+            </summary>
+            <value>The item container style.</value>
+        </member>
+        <member name="P:VIBlend.Silverlight.Controls.RibbonBar.TabOrientation">
+            <summary>
+            Gets or sets the tab orientation.
+            </summary>
+            <value>The tab orientation.</value>
+        </member>
+        <member name="P:VIBlend.Silverlight.Controls.RibbonBar.CornerRadius">
+            <summary>
+            Gets or sets corner radius.
+            </summary>
+        </member>
+        <member name="P:VIBlend.Silverlight.Controls.RibbonBar.ContentTemplate">
+            <summary>
+            Gets or sets the RibbonBar's Content data template.
+            </summary>
+        </member>
+        <member name="P:VIBlend.Silverlight.Controls.RibbonBar.Content">
+            <summary>
+            Gets or sets the RibbonBar's content.
+            </summary>
+        </member>
+        <member name="P:VIBlend.Silverlight.Controls.RibbonBar.CanScroll">
+            <summary>
+            Gets a value indicating whether this instance can scroll.
+            </summary>
+            <value>
+            	<c>true</c> if this instance can scroll; otherwise, <c>false</c>.
+            </value>
+        </member>
+        <member name="P:VIBlend.Silverlight.Controls.RibbonBar.QuickAccessItems">
+            <summary>
+            Gets the quick access items.
+            </summary>
+            <value>The quick access items.</value>
+        </member>
+        <member name="P:VIBlend.Silverlight.Controls.RibbonBar.Buttons">
+            <summary>
+            Gets the buttons.
+            </summary>
+            <value>The buttons.</value>
+        </member>
+        <member name="P:VIBlend.Silverlight.Controls.RibbonBar.RibbonContextualGroupStyle">
+            <summary>
+            Gets or sets the ribbon contextual group style.
+            </summary>
+            <value>The ribbon contextual group style.</value>
+        </member>
+        <member name="P:VIBlend.Silverlight.Controls.RibbonBar.QuickAccessToolbarStyle">
+            <summary>
+            Gets or sets the quick access toolbar item style.
+            </summary>
+            <value>The quick access toolbar item style.</value>
+        </member>
+        <member name="P:VIBlend.Silverlight.Controls.RibbonBar.KeyTipStyle">
+            <summary>
+            Gets or sets the quick access toolbar item style.
+            </summary>
+            <value>The quick access toolbar item style.</value>
+        </member>
+        <member name="P:VIBlend.Silverlight.Controls.RibbonBar.ContextMenuStyle">
+            <summary>
+            Gets or sets the context menu style.
+            </summary>
+            <value>The context menu style.</value>
+        </member>
+        <member name="P:VIBlend.Silverlight.Controls.RibbonBar.ContextMenuItemStyle">
+            <summary>
+            Gets or sets the context menu item style.
+            </summary>
+            <value>The context menu item style.</value>
+        </member>
+        <member name="P:VIBlend.Silverlight.Controls.RibbonBar.ApplicationButtonHeader">
+            <summary>
+            Gets or sets the application button header.
+            </summary>
+            <value>The application button header.</value>
+        </member>
+        <member name="P:VIBlend.Silverlight.Controls.RibbonBar.ApplicationButtonWidth">
+            <summary>
+            Gets or sets the application button width.
+            </summary>
+            <value>The application button header.</value>
+        </member>
+        <member name="P:VIBlend.Silverlight.Controls.RibbonBar.ApplicationButtonHeaderTemplate">
+            <summary>
+            Gets or sets the application button header template.
+            </summary>
+            <value>The application button header template.</value>
+            <exclude/>
+        </member>
+        <member name="P:VIBlend.Silverlight.Controls.RibbonBar.ApplicationButtonContent">
+            <summary>
+            Gets or sets the content of the application button.
+            </summary>
+            <value>The content of the application button.</value>
+        </member>
+        <member name="P:VIBlend.Silverlight.Controls.RibbonBar.ApplicationButtonContentTemplate">
+            <summary>
+            Gets or sets the application button content template.
+            </summary>
+            <value>The application button content template.</value>
+        </member>
+        <member name="P:VIBlend.Silverlight.Controls.RibbonBar.ApplicationButtonStyle">
+            <summary>
+            Gets or sets the application button style.
+            </summary>
+            <value>The application button style.</value>
+        </member>
+        <member name="P:VIBlend.Silverlight.Controls.RibbonBar.ScreenTipStyle">
+            <summary>
+            Gets or sets the screen tip style.
+            </summary>
+            <value>The screen tip style.</value>
+        </member>
+        <member name="P:VIBlend.Silverlight.Controls.RibbonBar.ContextualGroups">
+            <summary>
+            Gets the contextual groups.
+            </summary>
+            <value>The contextual groups.</value>
+        </member>
+        <member name="P:VIBlend.Silverlight.Controls.RibbonBar.PopupWidth">
+            <summary>
+            Gets or sets the width of the popup.
+            </summary>
+            <value>The width of the popup.</value>
+        </member>
+        <member name="P:VIBlend.Silverlight.Controls.RibbonBar.PopupHeight">
+            <summary>
+            Gets or sets the Height of the popup.
+            </summary>
+            <value>The Height of the popup.</value>
+        </member>
+        <member name="P:VIBlend.Silverlight.Controls.RibbonBar.MinimizeButtonVisibility">
+            <summary>
+            Gets or sets the collapse minimize visibility.
+            </summary>
+            <value>The minimize button visibility.</value>
+        </member>
+        <member name="P:VIBlend.Silverlight.Controls.RibbonBar.ApplicationButtonVisibility">
+            <summary>
+            Gets or sets the collapse Application visibility.
+            </summary>
+            <value>The Application button visibility.</value>
+        </member>
+        <member name="P:VIBlend.Silverlight.Controls.RibbonBar.QuickAccessToolBarVisibility">
+            <summary>
+            Gets or sets the QAT visibility.
+            </summary>
+            <value>The QAT visibility.</value>
+        </member>
+        <member name="P:VIBlend.Silverlight.Controls.RibbonBar.TitleBarVisibility">
+            <summary>
+            Gets or sets the TitleBar visibility.
+            </summary>
+            <value>The TitleBar visibility.</value>
+        </member>
+        <member name="P:VIBlend.Silverlight.Controls.RibbonBar.KeyTipsActivationKey">
+            <summary>
+            Gets or sets the key tips activation key.
+            </summary>
+            <value>The key tips activation key.</value>
+        </member>
+        <member name="P:VIBlend.Silverlight.Controls.RibbonBar.KeyTipsDeActivationKey">
+            <summary>
+            Gets or sets the key tips DeActivation key.
+            </summary>
+            <value>The key tips DeActivation key.</value>
+        </member>
+        <member name="P:VIBlend.Silverlight.Controls.RibbonBar.IsMinimized">
+            <summary>
+            Gets or sets a value indicating whether this instance is collapsed.
+            </summary>
+            <value>
+            	<c>true</c> if this instance is collapsed; otherwise, <c>false</c>.
+            </value>
+        </member>
+        <member name="P:VIBlend.Silverlight.Controls.RibbonBar.ShowQuickAccessToolBarAboveRibbonCommand">
+            <summary>
+            Gets or sets the ShowQuickAccessToolBarAboveRibbonCommand.
+            </summary>
+            <value>The ShowQuickAccessToolBarAboveRibbonCommand.</value>
+        </member>
+        <member name="P:VIBlend.Silverlight.Controls.RibbonBar.OpenApplicationButtonCommand">
+            <summary>
+            Gets or sets the OpenApplicationButtonCommand.
+            </summary>
+            <value>The OpenApplicationButtonCommand.</value>
+        </member>
+        <member name="P:VIBlend.Silverlight.Controls.RibbonBar.CloseApplicationButtonCommand">
+            <summary>
+            Gets or sets the CloseApplicationButtonCommand.
+            </summary>
+            <value>The CloseApplicationButtonCommand.</value>
+        </member>
+        <member name="P:VIBlend.Silverlight.Controls.RibbonBar.ToggleMinimizeStateCommand">
+            <summary>
+            Gets or sets the ToggleMinimizeStateCommand.
+            </summary>
+            <value>The ToggleMinimizeStateCommand.</value>
+        </member>
+        <member name="P:VIBlend.Silverlight.Controls.RibbonBar.ShowQuickAccessToolBarBelowRibbonCommand">
+            <summary>
+            Gets or sets the ShowQuickAccessToolBarBelowRibbonCommand.
+            </summary>
+            <value>The ShowQuickAccessToolBarBelowRibbonCommand.</value>
+        </member>
+        <member name="P:VIBlend.Silverlight.Controls.RibbonBar.MinimizeRibbonCommand">
+            <summary>
+            Gets or sets the MinimizeRibbonCommand.
+            </summary>
+            <value>The MinimizeRibbonCommand.</value>
+        </member>
+        <member name="P:VIBlend.Silverlight.Controls.RibbonBar.RestoreRibbonCommand">
+            <summary>
+            Gets or sets the RestoreRibbonCommand.
+            </summary>
+            <value>The RestoreRibbonCommand.</value>
+        </member>
+        <member name="P:VIBlend.Silverlight.Controls.RibbonBar.IsFixedLayout">
+            <summary>
+            Gets or sets the is fixed layout. When the property is set to true, the RibbonGroup's will be in their default states even when you resize the RibbonBar.
+            </summary>
+            <value>The is fixed layout.</value>
+        </member>
+        <member name="P:VIBlend.Silverlight.Controls.RibbonBar.AreKeyTipsVisible">
+            <summary>
+            Gets a value indicating whether the key tips are visible.
+            </summary>
+            <value><c>true</c> if [are key tips visible]; otherwise, <c>false</c>.</value>
+        </member>
+        <member name="P:VIBlend.Silverlight.Controls.RibbonBar.HideKeyTipsOnMouseUp">
+            <summary>
+            Gets or sets a value indicating whether to hide the key tips when mouse up event occurs.
+            </summary>
+        </member>
+        <member name="P:VIBlend.Silverlight.Controls.RibbonBar.IsLoaded">
+            <summary>
+            Gets or sets a value indicating whether this instance is loaded.
+            </summary>
+            <value><c>true</c> if this instance is loaded; otherwise, <c>false</c>.</value>
+        </member>
+        <member name="P:VIBlend.Silverlight.Controls.RibbonBar.IsKeyboardNavigationEnabled">
+            <summary>
+            Gets or sets a value indicating whether this instance is keyboard navigation enabled.
+            </summary>
+            <value>
+            	<c>true</c> if this instance is keyboard navigation enabled; otherwise, <c>false</c>.
+            </value>
+        </member>
+        <member name="P:VIBlend.Silverlight.Controls.RibbonBar.FadeOpacity">
+            <summary>
+            Gets or sets the fade effect opacity.
+            </summary>
+            <value>The fade opacity.</value>
+        </member>
+        <member name="T:VIBlend.Silverlight.Controls.RibbonContextualTabGroup">
+            <summary>
+            Represents a single ContextualGroup in the VIBlend RibbonBar control.
+            </summary>
+        </member>
+        <member name="F:VIBlend.Silverlight.Controls.RibbonContextualTabGroup.TextProperty">
+            <exclude/>
+        </member>
+        <member name="M:VIBlend.Silverlight.Controls.RibbonContextualTabGroup.OnApplyTemplate">
+            <summary>
+            When overridden in a derived class, is invoked whenever application code or internal processes (such as a rebuilding layout pass) call <see cref="M:System.Windows.Controls.Control.ApplyTemplate"/>. In simplest terms, this means the method is called just before a UI element displays in an application. For more information, see Remarks.
+            </summary>
+        </member>
+        <member name="M:VIBlend.Silverlight.Controls.RibbonContextualTabGroup.OnItemsCollectionChanged(System.Collections.Specialized.NotifyCollectionChangedEventArgs)">
+            <summary>
+            Raises the <see cref="E:ItemsCollectionChanged"/> event.
+            </summary>
+            <param name="args">The <see cref="T:System.Collections.Specialized.NotifyCollectionChangedEventArgs"/> instance containing the event data.</param>
+        </member>
+        <member name="M:VIBlend.Silverlight.Controls.RibbonContextualTabGroup.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:VIBlend.Silverlight.Controls.RibbonContextualTabGroup"/> class.
+            </summary>
+        </member>
+        <member name="M:VIBlend.Silverlight.Controls.RibbonContextualTabGroup.AddItem(VIBlend.Silverlight.Controls.RibbonTabItem)">
+            <summary>
+            Adds the item.
+            </summary>
+            <param name="item">The item.</param>
+        </member>
+        <member name="M:VIBlend.Silverlight.Controls.RibbonContextualTabGroup.OnMouseLeftButtonUp(System.Windows.Input.MouseButtonEventArgs)">
+            <summary>
+            Called before the <see cref="E:System.Windows.UIElement.MouseLeftButtonUp"/> event occurs.
+            </summary>
+            <param name="e">The data for the event.</param>
+        </member>
+        <member name="M:VIBlend.Silverlight.Controls.RibbonContextualTabGroup.UpdateVisibility(VIBlend.Silverlight.Controls.RibbonContextualTabGroup)">
+            <summary>
+            Updates the visibility.
+            </summary>
+            <param name="group">The group.</param>
+        </member>
+        <member name="P:VIBlend.Silverlight.Controls.RibbonContextualTabGroup.RibbonTabItems">
+            <summary>
+            Gets the ribbon tab items.
+            </summary>
+            <value>The ribbon tab items.</value>
+        </member>
+        <member name="E:VIBlend.Silverlight.Controls.RibbonContextualTabGroup.ItemsCollectionChanged">
+            <summary>
+            Occurs when the items collection is changed.
+            </summary>
+        </member>
+        <member name="P:VIBlend.Silverlight.Controls.RibbonContextualTabGroup.RibbonBar">
+            <summary>
+            Gets the ribbon bar.
+            </summary>
+            <value>The ribbon bar.</value>
+        </member>
+        <member name="P:VIBlend.Silverlight.Controls.RibbonContextualTabGroup.Text">
+            <summary>
+            Gets or sets the Text.
+            </summary>
+            <value>The Text.</value>
+        </member>
+        <member name="T:VIBlend.Silverlight.Controls.RibbonGroup">
+            <summary>
+            Represents a RibbonGroup control which is used as part of the RibbonBar.
+            </summary>
+        </member>
+        <!-- Badly formed XML comment ignored for member "F:VIBlend.Silverlight.Controls.RibbonGroup.RibbonGroupBackgroundName" -->
+        <member name="F:VIBlend.Silverlight.Controls.RibbonGroup.RibbonGroupBorderName">
+            <summary>
+            Repretents RibbonGroup Border.
+            </summary>
+        </member>
+        <member name="M:VIBlend.Silverlight.Controls.RibbonGroup.OnRibbonGroupModeChanged(VIBlend.Silverlight.Controls.RibbonGroupEventArgs)">
+            <summary>
+            Raises the <see cref="E:RibbonGroupModeChanged"/> event.
+            </summary>
+            <param name="args">The <see cref="T:VIBlend.Silverlight.Controls.RibbonGroupEventArgs"/> instance containing the event data.</param>
+        </member>
+        <member name="F:VIBlend.Silverlight.Controls.RibbonGroup.TextProperty">
+            <exclude/>
+        </member>
+        <member name="F:VIBlend.Silverlight.Controls.RibbonGroup.HorizontalHeaderAlignmentProperty">
+            <exclude/>
+        </member>
+        <member name="F:VIBlend.Silverlight.Controls.RibbonGroup.VerticalHeaderAlignmentProperty">
+            <exclude/>
+        </member>
+        <member name="F:VIBlend.Silverlight.Controls.RibbonGroup.ForegroundDisabledProperty">
+            <exclude/>
+        </member>
+        <member name="F:VIBlend.Silverlight.Controls.RibbonGroup.ForegroundSelectedProperty">
+            <exclude/>
+        </member>
+        <member name="F:VIBlend.Silverlight.Controls.RibbonGroup.ForegroundHighlightProperty">
+            <exclude/>
+        </member>
+        <member name="F:VIBlend.Silverlight.Controls.RibbonGroup.ForegroundNormalProperty">
+            <exclude/>
+        </member>
+        <member name="F:VIBlend.Silverlight.Controls.RibbonGroup.HeaderBackgroundProperty">
+            <exclude/>
+        </member>
+        <member name="F:VIBlend.Silverlight.Controls.RibbonGroup.HeaderHeightProperty">
+            <exclude/>
+        </member>
+        <member name="F:VIBlend.Silverlight.Controls.RibbonGroup.HeaderBorderBrushProperty">
+            <exclude/>
+        </member>
+        <member name="F:VIBlend.Silverlight.Controls.RibbonGroup.ContentBorderBrushProperty">
+            <exclude/>
+        </member>
+        <member name="F:VIBlend.Silverlight.Controls.RibbonGroup.ContentBorderThicknessProperty">
+            <exclude/>
+        </member>
+        <member name="F:VIBlend.Silverlight.Controls.RibbonGroup.HeaderBorderThicknessProperty">
+            <exclude/>
+        </member>
+        <member name="F:VIBlend.Silverlight.Controls.RibbonGroup.DefaultStateWidthProperty">
+            <exclude/>
+        </member>
+        <member name="F:VIBlend.Silverlight.Controls.RibbonGroup.CollapsedStateWidthProperty">
+            <exclude/>
+        </member>
+        <member name="F:VIBlend.Silverlight.Controls.RibbonGroup.CornerRadiusProperty">
+            <exclude/>
+        </member>
+        <member name="M:VIBlend.Silverlight.Controls.RibbonGroup.MeasureOverride(System.Windows.Size)">
+            <summary>
+            Provides the behavior for the Measure pass of Silverlight layout. Classes can override this method to define their own Measure pass behavior.
+            </summary>
+            <param name="availableSize">The available size that this object can give to child objects. Infinity (<see cref="F:System.Double.PositiveInfinity"/>) can be specified as a value to indicate that the object will size to whatever content is available.</param>
+            <returns>
+            The size that this object determines it needs during layout, based on its calculations of the allocated sizes for child objects; or based on other considerations, such as a fixed container size.
+            </returns>
+        </member>
+        <member name="F:VIBlend.Silverlight.Controls.RibbonGroup.RibbonGroupModeProperty">
+            <exclude/>
+        </member>
+        <member name="F:VIBlend.Silverlight.Controls.RibbonGroup.IsFixedModeProperty">
+            <exclude/>
+        </member>
+        <member name="F:VIBlend.Silverlight.Controls.RibbonGroup.CollapsedStateButtonArrowBrushProperty">
+            <exclude/>
+        </member>
+        <member name="F:VIBlend.Silverlight.Controls.RibbonGroup.CollapsedStateButtonPositionProperty">
+            <exclude/>
+        </member>
+        <member name="F:VIBlend.Silverlight.Controls.RibbonGroup.CollapsedStateContentTemplateProperty">
+            <exclude/>
+        </member>
+        <member name="F:VIBlend.Silverlight.Controls.RibbonGroup.CollapsedStateContentProperty">
+            <exclude/>
+        </member>
+        <member name="F:VIBlend.Silverlight.Controls.RibbonGroup.IsSeparatorProperty">
+            <exclude/>
+        </member>
+        <member name="M:VIBlend.Silverlight.Controls.RibbonGroup.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:VIBlend.Silverlight.Controls.RibbonGroup"/> class.
+            </summary>
+        </member>
+        <member name="M:VIBlend.Silverlight.Controls.RibbonGroup.OnApplyTemplate">
+            <summary>
+            When overridden in a derived class, is invoked whenever application code or internal processes (such as a rebuilding layout pass) call <see cref="M:System.Windows.Controls.Control.ApplyTemplate"/>. In simplest terms, this means the method is called just before a UI element displays in an application. For more information, see Remarks.
+            </summary>
+        </member>
+        <member name="M:VIBlend.Silverlight.Controls.RibbonGroup.ApplySeparatorMode">
+            <summary>
+            Applies the separator mode.
+            </summary>
+        </member>
+        <member name="M:VIBlend.Silverlight.Controls.RibbonGroup.Dispose">
+            <summary>
+            Performs application-defined tasks associated with freeing, releasing, or resetting unmanaged resources.
+            </summary>
+        </member>
+        <member name="E:VIBlend.Silverlight.Controls.RibbonGroup.RibbonGroupModeChanged">
+            <summary>
+            Occurs when the RibbonGroupMode property is changed.
+            </summary>
+        </member>
+        <member name="P:VIBlend.Silverlight.Controls.RibbonGroup.HasMiddleSizeState">
+            <summary>
+            Gets a value indicating whether this instance has middle size state.
+            </summary>
+            <value>
+            	<c>true</c> if this instance has middle size state; otherwise, <c>false</c>.
+            </value>
+        </member>
+        <member name="P:VIBlend.Silverlight.Controls.RibbonGroup.Text">
+            <summary>
+            Gets or sets the RibbonGroup's Text.
+            </summary>
+        </member>
+        <member name="P:VIBlend.Silverlight.Controls.RibbonGroup.HorizontalHeaderAlignment">
+            <summary>
+            Gets or sets the horizontal header alignment.
+            </summary>
+            <value>The horizontal header alignment.</value>
+        </member>
+        <member name="P:VIBlend.Silverlight.Controls.RibbonGroup.VerticalHeaderAlignment">
+            <summary>
+            Gets or sets the vertical header alignment.
+            </summary>
+            <value>The vertical header alignment.</value>
+        </member>
+        <member name="P:VIBlend.Silverlight.Controls.RibbonGroup.ForegroundSelected">
+            <summary>
+            Gets or sets the brush which is used when the item is selected.
+            </summary>
+        </member>
+        <member name="P:VIBlend.Silverlight.Controls.RibbonGroup.ForegroundDisabled">
+            <summary>
+            Gets or sets the brush which is used when the item is disabled.
+            </summary>
+        </member>
+        <member name="P:VIBlend.Silverlight.Controls.RibbonGroup.ForegroundHighlight">
+            <summary>
+            Gets or sets the brush which is used when the item is highlighted.
+            </summary>
+        </member>
+        <member name="P:VIBlend.Silverlight.Controls.RibbonGroup.ForegroundNormal">
+            <summary>
+            Gets or sets the brush which is used when the item is in the default state.
+            </summary>
+        </member>
+        <member name="P:VIBlend.Silverlight.Controls.RibbonGroup.HeaderBackground">
+            <summary>
+            Gets or sets the header background.
+            </summary>
+            <value>The header background.</value>
+        </member>
+        <member name="P:VIBlend.Silverlight.Controls.RibbonGroup.HeaderHeight">
+            <summary>
+            Gets or sets the header Height.
+            </summary>
+            <value>The header Height.</value>
+        </member>
+        <member name="P:VIBlend.Silverlight.Controls.RibbonGroup.HeaderBorderBrush">
+            <summary>
+            Gets or sets the header border brush.
+            </summary>
+            <value>The header border brush.</value>
+        </member>
+        <member name="P:VIBlend.Silverlight.Controls.RibbonGroup.ContentBorderBrush">
+            <summary>
+            Gets or sets the Content border brush.
+            </summary>
+            <value>The Content border brush.</value>
+        </member>
+        <member name="P:VIBlend.Silverlight.Controls.RibbonGroup.ContentBorderThickness">
+            <summary>
+            Gets or sets the Content border thickness.
+            </summary>
+            <value>The Content border thickness.</value>
+        </member>
+        <member name="P:VIBlend.Silverlight.Controls.RibbonGroup.HeaderBorderThickness">
+            <summary>
+            Gets or sets the header border thickness.
+            </summary>
+            <value>The header border thickness.</value>
+        </member>
+        <member name="P:VIBlend.Silverlight.Controls.RibbonGroup.DefaultStateWidth">
+            <summary>
+            Gets or sets the Group's width when it is in the default state.
+            </summary>
+        </member>
+        <member name="P:VIBlend.Silverlight.Controls.RibbonGroup.CollapsedStateWidth">
+            <summary>
+            Gets or sets the Group's width when it is collapsed.
+            </summary>
+        </member>
+        <member name="P:VIBlend.Silverlight.Controls.RibbonGroup.CornerRadius">
+            <summary>
+            Gets or sets corner radius.
+            </summary>
+        </member>
+        <member name="P:VIBlend.Silverlight.Controls.RibbonGroup.CollapsedStateButtonPosition">
+            <summary>
+            Gets or sets the collapsed state button position.
+            </summary>
+            <value>The collapsed state button position.</value>
+        </member>
+        <member name="P:VIBlend.Silverlight.Controls.RibbonGroup.CollapsedStateButtonArrowBrush">
+            <summary>
+            Gets or sets the collapsed state button arrow brush.
+            </summary>
+            <value>The collapsed state button arrow brush.</value>
+        </member>
+        <member name="P:VIBlend.Silverlight.Controls.RibbonGroup.IsFixedMode">
+            <summary>
+            Gets or sets a value indicating whether the RibbonGroupMode property takes effect.
+            </summary>
+        </member>
+        <member name="P:VIBlend.Silverlight.Controls.RibbonGroup.RibbonGroupMode">
+            <summary>
+            Gets or sets a value indicating whether this instance is collapsed.
+            </summary>
+            <value>
+            	<c>true</c> if this instance is collapsed; otherwise, <c>false</c>.
+            </value>
+        </member>
+        <member name="P:VIBlend.Silverlight.Controls.RibbonGroup.CollapsedStateContentTemplate">
+            <summary>
+            Gets or sets the data template of the  header.
+            </summary>
+        </member>
+        <member name="P:VIBlend.Silverlight.Controls.RibbonGroup.CollapsedStateContent">
+            <summary>
+            Gets or sets the CollapsedStateContent of the  button.
+            </summary>
+        </member>
+        <member name="P:VIBlend.Silverlight.Controls.RibbonGroup.RibbonBar">
+            <summary>
+            Gets the parent RibbonBar.
+            </summary>
+        </member>
+        <member name="P:VIBlend.Silverlight.Controls.RibbonGroup.RibbonTabItem">
+            <summary>
+            Gets the parent item.
+            </summary>
+        </member>
+        <member name="P:VIBlend.Silverlight.Controls.RibbonGroup.ParentItemsControl">
+            <summary>
+            Gets or sets a reference to the parent ItemsControl.
+            </summary>
+        </member>
+        <member name="P:VIBlend.Silverlight.Controls.RibbonGroup.IsSeparator">
+            <summary>
+            Gets or sets a value indicating whether this instance is separator.
+            </summary>
+        </member>
+        <member name="P:VIBlend.Silverlight.Controls.RibbonGroup.IsLoaded">
+            <summary>
+            Gets or sets a value indicating whether this instance is loaded.
+            </summary>
+            <value><c>true</c> if this instance is loaded; otherwise, <c>false</c>.</value>
+        </member>
+        <member name="T:VIBlend.Silverlight.Controls.RibbonTitleBar">
+            <summary>
+            Represents the RibbonBar's Title bar which includes the QuickAccessToolbar, Title and Contextual Groups.
+            </summary>
+        </member>
+        <member name="F:VIBlend.Silverlight.Controls.RibbonTitleBar.QuickAccessToolBarVisibilityProperty">
+            <exclude/>
+        </member>
+        <member name="M:VIBlend.Silverlight.Controls.RibbonTitleBar.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:VIBlend.Silverlight.Controls.RibbonTitleBar"/> class.
+            </summary>
+        </member>
+        <member name="M:VIBlend.Silverlight.Controls.RibbonTitleBar.PrepareContainerForItemOverride(System.Windows.DependencyObject,System.Object)">
+            <summary>
+            Prepares the specified element to display the specified item.
+            </summary>
+            <param name="element">The element used to display the specified item.</param>
+            <param name="item">The item to display.</param>
+        </member>
+        <member name="F:VIBlend.Silverlight.Controls.RibbonTitleBar.HeaderAlignmentProperty">
+            <exclude/>
+        </member>
+        <member name="F:VIBlend.Silverlight.Controls.RibbonTitleBar.HeaderVerticalAlignmentProperty">
+            <exclude/>
+        </member>
+        <member name="F:VIBlend.Silverlight.Controls.RibbonTitleBar.QuickAccessToolBarProperty">
+            <exclude/>
+        </member>
+        <member name="M:VIBlend.Silverlight.Controls.RibbonTitleBar.ArrangeOverride(System.Windows.Size)">
+            <summary>
+            Arranges the override.
+            </summary>
+            <param name="arrangeBounds">The arrange bounds.</param>
+            <returns></returns>
+        </member>
+        <member name="M:VIBlend.Silverlight.Controls.RibbonTitleBar.GetContainerForItemOverride">
+            <summary>
+            Creates or identifies the element that is used to display the given item.
+            </summary>
+            <returns>
+            The element that is used to display the given item.
+            </returns>
+        </member>
+        <member name="M:VIBlend.Silverlight.Controls.RibbonTitleBar.IsItemItsOwnContainerOverride(System.Object)">
+            <summary>
+            Determines if the specified item is (or is eligible to be) its own container.
+            </summary>
+            <param name="item">The item to check.</param>
+            <returns>
+            true if the item is (or is eligible to be) its own container; otherwise, false.
+            </returns>
+        </member>
+        <member name="M:VIBlend.Silverlight.Controls.RibbonTitleBar.MeasureOverride(System.Windows.Size)">
+            <summary>
+            Measures the override.
+            </summary>
+            <param name="constraint">The constraint.</param>
+            <returns></returns>
+        </member>
+        <member name="M:VIBlend.Silverlight.Controls.RibbonTitleBar.OnApplyTemplate">
+            <summary>
+            When overridden in a derived class, is invoked whenever application code or internal processes (such as a rebuilding layout pass) call <see cref="M:System.Windows.Controls.Control.ApplyTemplate"/>. In simplest terms, this means the method is called just before a UI element displays in an application. For more information, see Remarks.
+            </summary>
+        </member>
+        <member name="M:VIBlend.Silverlight.Controls.RibbonTitleBar.CalculateSizes(System.Windows.Size)">
+            <summary>
+            Calculates the sizes.
+            </summary>
+            <param name="constraint">The constraint.</param>
+        </member>
+        <member name="P:VIBlend.Silverlight.Controls.RibbonTitleBar.QuickAccessToolBarVisibility">
+            <summary>
+            Gets or sets the QAT visibility.
+            </summary>
+            <value>The QAT visibility.</value>
+        </member>
+        <member name="P:VIBlend.Silverlight.Controls.RibbonTitleBar.RibbonBar">
+            <summary>
+            Gets the ribbon bar.
+            </summary>
+            <value>The ribbon bar.</value>
+        </member>
+        <member name="P:VIBlend.Silverlight.Controls.RibbonTitleBar.HeaderAlignment">
+            <summary>
+            Gets or sets the header alignment.
+            </summary>
+            <value>The header alignment.</value>
+        </member>
+        <member name="P:VIBlend.Silverlight.Controls.RibbonTitleBar.HeaderVerticalAlignment">
+            <summary>
+            Gets or sets the header vertical alignment.
+            </summary>
+            <value>The header vertical alignment.</value>
+        </member>
+        <member name="P:VIBlend.Silverlight.Controls.RibbonTitleBar.QuickAccessToolBar">
+            <summary>
+            Gets or sets the quick access tool bar.
+            </summary>
+            <value>The quick access tool bar.</value>
+        </member>
+        <member name="T:VIBlend.Silverlight.Controls.RibbonTabItemEventArgs">
+            <summary>
+            Represent the RibbonBar event data.
+            </summary>
+        </member>
+        <member name="M:VIBlend.Silverlight.Controls.RibbonTabItemEventArgs.#ctor(VIBlend.Silverlight.Controls.RibbonTabItem)">
+            <summary>
+            Initializes a new instance of the <see cref="T:VIBlend.Silverlight.Controls.RibbonTabItemEventArgs"/> class.
+            </summary>
+            <param name="item">The item.</param>
+        </member>
+        <member name="P:VIBlend.Silverlight.Controls.RibbonTabItemEventArgs.TabItem">
+            <summary>
+            Gets the tab item.
+            </summary>
+        </member>
+        <member name="T:VIBlend.Silverlight.Controls.RibbonCommand">
+            <summary>
+            Represents a class which implements the ICommand interface.
+            </summary>
+        </member>
+        <member name="M:VIBlend.Silverlight.Controls.RibbonCommand.CanExecute(System.Object)">
+            <summary>
+            Defines the method that determines whether the command 
+            can execute in its current state.
+            </summary>
+        </member>
+        <member name="M:VIBlend.Silverlight.Controls.RibbonCommand.Execute(System.Object)">
+            <summary>
+            Defines the method to be called when the command is invoked.
+            </summary>
+        </member>
+        <member name="E:VIBlend.Silverlight.Controls.RibbonCommand.CanExecuteChanged">
+            <summary>
+            Occurs when changes occur that affect whether the command should execute.
+            </summary>
+        </member>
+        <member name="T:VIBlend.Silverlight.Controls.RibbonGroupEventArgs">
+            <summary>
+            Represents a class that contains RibbonGroup event data.
+            </summary>
+        </member>
+        <member name="M:VIBlend.Silverlight.Controls.RibbonGroupEventArgs.#ctor(VIBlend.Silverlight.Controls.RibbonGroup)">
+            <summary>
+            Initializes a new instance of the <see cref="T:VIBlend.Silverlight.Controls.RibbonGroupEventArgs"/> class.
+            </summary>
+            <param name="ribbonGroup">The ribbon group.</param>
+        </member>
+        <member name="P:VIBlend.Silverlight.Controls.RibbonGroupEventArgs.RibbonGroup">
+            <summary>
+            Gets or sets the ribbon group.
+            </summary>
+            <value>The ribbon group.</value>
+        </member>
+        <member name="T:VIBlend.Silverlight.Controls.RibbonTabsLayoutPanel">
+            <summary>
+            Represents a layout panel which arranges the RibbonBar Tabs.
+            </summary>
+        </member>
+        <member name="M:VIBlend.Silverlight.Controls.RibbonTabsLayoutPanel.ArrangeOverride(System.Windows.Size)">
+            <summary>
+            Arranges the override.
+            </summary>
+            <param name="arrangeSize">Size of the arrange.</param>
+            <returns></returns>
+        </member>
+        <member name="M:VIBlend.Silverlight.Controls.RibbonTabsLayoutPanel.GetListByItemIndex(System.Collections.Generic.List{VIBlend.Silverlight.Controls.RibbonTabItem})">
+            <summary>
+            Gets the index of the list by visual.
+            </summary>
+            <param name="listToSortInternally">The list to sort internally.</param>
+            <returns></returns>
+        </member>
+        <member name="M:VIBlend.Silverlight.Controls.RibbonTabsLayoutPanel.MeasureOverride(System.Windows.Size)">
+            <summary>
+            Measures the override.
+            </summary>
+            <param name="constraint">The constraint.</param>
+            <returns></returns>
+        </member>
+        <member name="T:VIBlend.Silverlight.Controls.QuickAccessToolbar">
+            <summary>
+            Represents the RibbonBar's QuickAccessToolbar.
+            </summary>
+        </member>
+        <member name="F:VIBlend.Silverlight.Controls.QuickAccessToolbar.PopupHeaderBackgroundProperty">
+            <exclude/>
+        </member>
+        <member name="M:VIBlend.Silverlight.Controls.QuickAccessToolbar.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:VIBlend.Silverlight.Controls.QuickAccessToolbar"/> class.
+            </summary>
+        </member>
+        <member name="F:VIBlend.Silverlight.Controls.QuickAccessToolbar.MenuItemTextProperty">
+            <exclude/>
+        </member>
+        <member name="M:VIBlend.Silverlight.Controls.QuickAccessToolbar.SetMenuItemText(System.Windows.UIElement,System.String)">
+            <summary>
+            Sets the Text of the menu item.
+            </summary>
+            <param name="element">The element.</param>
+            <param name="value">The value.</param>
+        </member>
+        <member name="M:VIBlend.Silverlight.Controls.QuickAccessToolbar.GetMenuItemText(System.Windows.UIElement)">
+            <summary>
+            Gets the Text of the menu item.
+            </summary>
+            <param name="element">The element.</param>
+            <returns></returns>
+        </member>
+        <member name="F:VIBlend.Silverlight.Controls.QuickAccessToolbar.ContextMenuStyleProperty">
+            <exclude/>
+        </member>
+        <member name="F:VIBlend.Silverlight.Controls.QuickAccessToolbar.ContextMenuItemStyleProperty">
+            <exclude/>
+        </member>
+        <member name="F:VIBlend.Silverlight.Controls.QuickAccessToolbar.AllowUserChangesProperty">
+            <exclude/>
+        </member>
+        <member name="M:VIBlend.Silverlight.Controls.QuickAccessToolbar.OnApplyTemplate">
+            <summary>
+            When overridden in a derived class, is invoked whenever application code or internal processes (such as a rebuilding layout pass) call <see cref="M:System.Windows.Controls.Control.ApplyTemplate"/>. In simplest terms, this means the method is called just before a UI element displays in an application. For more information, see Remarks.
+            </summary>
+        </member>
+        <member name="M:VIBlend.Silverlight.Controls.QuickAccessToolbar.PrepareText">
+            <summary>
+            Prepares the Text.
+            </summary>
+        </member>
+        <member name="F:VIBlend.Silverlight.Controls.QuickAccessToolbar.DropDownButtonBackgroundProperty">
+            <exclude/>
+        </member>
+        <member name="P:VIBlend.Silverlight.Controls.QuickAccessToolbar.DropDownButton">
+            <summary>
+            Gets the drop down button.
+            </summary>
+            <value>The drop down button.</value>
+        </member>
+        <member name="P:VIBlend.Silverlight.Controls.QuickAccessToolbar.RibbonBar">
+            <summary>
+            Gets the ribbon bar.
+            </summary>
+            <value>The ribbon bar.</value>
+        </member>
+        <member name="P:VIBlend.Silverlight.Controls.QuickAccessToolbar.PopupHeaderBackground">
+            <summary>
+            Gets or sets the popup header background.
+            </summary>
+            <value>The popup header background.</value>
+        </member>
+        <member name="P:VIBlend.Silverlight.Controls.QuickAccessToolbar.ContextMenuStyle">
+            <summary>
+            Gets or sets the context menu style.
+            </summary>
+            <value>The context menu style.</value>
+        </member>
+        <member name="P:VIBlend.Silverlight.Controls.QuickAccessToolbar.ContextMenuItemStyle">
+            <summary>
+            Gets or sets the context menu item style.
+            </summary>
+            <value>The context menu item style.</value>
+        </member>
+        <member name="P:VIBlend.Silverlight.Controls.QuickAccessToolbar.AllowUserChanges">
+            <summary>
+            Gets or sets a value indicating whether to allow user changes.
+            </summary>
+        </member>
+        <member name="P:VIBlend.Silverlight.Controls.QuickAccessToolbar.ShowDefaultMenuItems">
+            <summary>
+            Gets or sets a value indicating whether to show the default menu items.
+            </summary>
+        </member>
+        <member name="P:VIBlend.Silverlight.Controls.QuickAccessToolbar.DropDownButtonBackground">
+            <summary>
+            Gets or sets the drop down button background.
+            </summary>
+            <value>The drop down button background.</value>
+        </member>
+        <member name="T:VIBlend.Silverlight.Controls.RibbonButtonGroup">
+            <summary>
+            Represents a group of buttons inside the RibbonGroup.
+            </summary>
+        </member>
+        <member name="F:VIBlend.Silverlight.Controls.RibbonButtonGroup.ItemContainerStyleProperty">
+            <exclude/>
+        </member>
+        <member name="F:VIBlend.Silverlight.Controls.RibbonButtonGroup.IsFixedModeProperty">
+            <exclude/>
+        </member>
+        <member name="F:VIBlend.Silverlight.Controls.RibbonButtonGroup.RibbonGroupModeProperty">
+            <exclude/>
+        </member>
+        <member name="M:VIBlend.Silverlight.Controls.RibbonButtonGroup.ApplyRibbonGroupMode">
+            <summary>
+            Applies the ribbon group mode.
+            </summary>
+        </member>
+        <member name="M:VIBlend.Silverlight.Controls.RibbonButtonGroup.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:VIBlend.Silverlight.Controls.RibbonGalleryGroup"/> class.
+            </summary>
+        </member>
+        <member name="M:VIBlend.Silverlight.Controls.RibbonButtonGroup.OnItemsChanged(System.Collections.Specialized.NotifyCollectionChangedEventArgs)">
+            <summary>
+            Called when the value of the <see cref="P:System.Windows.Controls.ItemsControl.Items"/> property changes.
+            </summary>
+            <param name="e">A <see cref="T:System.Collections.Specialized.NotifyCollectionChangedEventArgs"/> that contains the event data</param>
+        </member>
+        <member name="M:VIBlend.Silverlight.Controls.RibbonButtonGroup.OnApplyTemplate">
+            <summary>
+            When overridden in a derived class, is invoked whenever application code or internal processes (such as a rebuilding layout pass) call <see cref="M:System.Windows.Controls.Control.ApplyTemplate"/>. In simplest terms, this means the method is called just before a UI element displays in an application. For more information, see Remarks.
+            </summary>
+        </member>
+        <member name="M:VIBlend.Silverlight.Controls.RibbonButtonGroup.IsItemItsOwnContainerOverride(System.Object)">
+            <summary>
+            Determines if the specified item is (or is eligible to be) its own container.
+            </summary>
+            <param name="item">The item to check.</param>
+            <returns>
+            true if the item is (or is eligible to be) its own container; otherwise, false.
+            </returns>
+        </member>
+        <member name="M:VIBlend.Silverlight.Controls.RibbonButtonGroup.GetContainerForItemOverride">
+            <summary>
+            Creates or identifies the element that is used to display the given item.
+            </summary>
+            <returns>
+            The element that is used to display the given item.
+            </returns>
+        </member>
+        <member name="F:VIBlend.Silverlight.Controls.RibbonButtonGroup.OrientationProperty">
+            <exclude/>
+        </member>
+        <member name="M:VIBlend.Silverlight.Controls.RibbonButtonGroup.PrepareContainerForItemOverride(System.Windows.DependencyObject,System.Object)">
+            <summary>
+            Prepares the specified element to display the specified item.
+            </summary>
+            <param name="element">The element used to display the specified item.</param>
+            <param name="item">The item to display.</param>
+        </member>
+        <member name="M:VIBlend.Silverlight.Controls.RibbonButtonGroup.ClearContainerForItemOverride(System.Windows.DependencyObject,System.Object)">
+            <summary>
+            Undoes the effects of the <see cref="M:System.Windows.Controls.ItemsControl.PrepareContainerForItemOverride(System.Windows.DependencyObject,System.Object)"/> method.
+            </summary>
+            <param name="element">The container element.</param>
+            <param name="item">The item.</param>
+        </member>
+        <member name="M:VIBlend.Silverlight.Controls.RibbonButtonGroup.Dispose">
+            <summary>
+            Performs application-defined tasks associated with freeing, releasing, or resetting unmanaged resources.
+            </summary>
+        </member>
+        <member name="P:VIBlend.Silverlight.Controls.RibbonButtonGroup.ItemContainerStyle">
+            <summary>
+            Gets or sets the item container style.
+            </summary>
+            <value>The item container style.</value>
+        </member>
+        <member name="P:VIBlend.Silverlight.Controls.RibbonButtonGroup.IsFixedMode">
+            <summary>
+            Gets or sets a value indicating whether the RibbonGroupMode property takes effect.
+            </summary>
+        </member>
+        <member name="P:VIBlend.Silverlight.Controls.RibbonButtonGroup.RibbonGroupMode">
+            <summary>
+            Gets or sets the ribbon group mode.
+            </summary>
+            <value>The ribbon group mode.</value>
+        </member>
+        <member name="P:VIBlend.Silverlight.Controls.RibbonButtonGroup.Orientation">
+            <summary>
+            Gets or sets the orientation.
+            </summary>
+            <value>The orientation.</value>
+        </member>
+        <member name="P:VIBlend.Silverlight.Controls.RibbonButtonGroup.RibbonGroup">
+            <summary>
+            Gets the ribbon group.
+            </summary>
+            <value>The ribbon group.</value>
+        </member>
+        <member name="T:VIBlend.Silverlight.Controls.RibbonGroupMode">
+            <summary>
+            Represents RibbonGroupMode enumeration.
+            </summary>
+        </member>
+        <member name="F:VIBlend.Silverlight.Controls.RibbonGroupMode.Default">
+            <summary>
+            Default State
+            </summary>
+        </member>
+        <member name="F:VIBlend.Silverlight.Controls.RibbonGroupMode.Medium">
+            <summary>
+            Medium State
+            </summary>
+        </member>
+        <member name="F:VIBlend.Silverlight.Controls.RibbonGroupMode.Collapsed">
+            <summary>
+            Collapsed State
+            </summary>
+        </member>
+        <member name="T:VIBlend.Silverlight.Controls.BackstageApplicationMenuItem">
+            <summary>
+            Represents a single item in the Backstage Menu.
+            </summary>
+        </member>
+        <member name="M:VIBlend.Silverlight.Controls.BackstageApplicationMenuItem.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:VIBlend.Silverlight.Controls.BackstageApplicationMenuItem"/> class.
+            </summary>
+        </member>
+        <member name="M:VIBlend.Silverlight.Controls.BackstageApplicationMenuItem.OnApplyTemplate">
+            <summary>
+            Applies the TabItem Template.
+            </summary>
+        </member>
+        <member name="F:VIBlend.Silverlight.Controls.BackstageApplicationMenuItem.ShowArrowProperty">
+            <exclude/>
+        </member>
+        <member name="F:VIBlend.Silverlight.Controls.BackstageApplicationMenuItem.ArrowBrushProperty">
+            <exclude/>
+        </member>
+        <member name="P:VIBlend.Silverlight.Controls.BackstageApplicationMenuItem.ShowArrow">
+            <summary>
+            Gets or sets a value indicating whether to display the arrow.
+            </summary>
+        </member>
+        <member name="P:VIBlend.Silverlight.Controls.BackstageApplicationMenuItem.ArrowBrush">
+            <summary>
+            Gets or sets the BackstageApplicationMenuItem's arrow brush.
+            </summary>
+        </member>
+        <member name="T:VIBlend.Silverlight.Controls.RibbonGalleryGroup">
+            <summary>
+            Represents a group of items inside the RibbonGallery control.
+            </summary>
+        </member>
+        <member name="F:VIBlend.Silverlight.Controls.RibbonGalleryGroup.FilterItemHeaderTemplateProperty">
+            <exclude/>
+        </member>
+        <member name="F:VIBlend.Silverlight.Controls.RibbonGalleryGroup.FilterItemHeaderProperty">
+            <exclude/>
+        </member>
+        <member name="F:VIBlend.Silverlight.Controls.RibbonGalleryGroup.HeaderBackgroundProperty">
+            <exclude/>
+        </member>
+        <member name="F:VIBlend.Silverlight.Controls.RibbonGalleryGroup.HeaderBorderBrushProperty">
+            <exclude/>
+        </member>
+        <member name="F:VIBlend.Silverlight.Controls.RibbonGalleryGroup.HeaderBorderThicknessProperty">
+            <exclude/>
+        </member>
+        <member name="F:VIBlend.Silverlight.Controls.RibbonGalleryGroup.HeaderBorderCornerRadiusProperty">
+            <exclude/>
+        </member>
+        <member name="F:VIBlend.Silverlight.Controls.RibbonGalleryGroup.ShowHeaderProperty">
+            <summary>
+            Identifies the ShowHeader dependency property.
+            </summary>
+        </member>
+        <member name="M:VIBlend.Silverlight.Controls.RibbonGalleryGroup.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:VIBlend.Silverlight.Controls.RibbonGalleryGroup"/> class.
+            </summary>
+        </member>
+        <member name="M:VIBlend.Silverlight.Controls.RibbonGalleryGroup.OnItemsChanged(System.Collections.Specialized.NotifyCollectionChangedEventArgs)">
+            <summary>
+            Called when the value of the <see cref="P:System.Windows.Controls.ItemsControl.Items"/> property changes.
+            </summary>
+            <param name="e">A <see cref="T:System.Collections.Specialized.NotifyCollectionChangedEventArgs"/> that contains the event data</param>
+        </member>
+        <member name="M:VIBlend.Silverlight.Controls.RibbonGalleryGroup.GetRibbonGalleryItems">
+            <summary>
+            Gets the ribbon gallery groups.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:VIBlend.Silverlight.Controls.RibbonGalleryGroup.OnApplyTemplate">
+            <summary>
+            When overridden in a derived class, is invoked whenever application code or internal processes (such as a rebuilding layout pass) call <see cref="M:System.Windows.Controls.Control.ApplyTemplate"/>. In simplest terms, this means the method is called just before a UI element displays in an application. For more information, see Remarks.
+            </summary>
+        </member>
+        <member name="M:VIBlend.Silverlight.Controls.RibbonGalleryGroup.OnIsInPopupChanged">
+            <summary>
+            Called when [is in popup changed].
+            </summary>
+        </member>
+        <member name="F:VIBlend.Silverlight.Controls.RibbonGalleryGroup.IsInPopupProperty">
+            <summary>
+            Identifies the IsInPopup dependency property.
+            </summary>
+        </member>
+        <member name="M:VIBlend.Silverlight.Controls.RibbonGalleryGroup.IsItemItsOwnContainerOverride(System.Object)">
+            <summary>
+            Determines if the specified item is (or is eligible to be) its own container.
+            </summary>
+            <param name="item">The item to check.</param>
+            <returns>
+            true if the item is (or is eligible to be) its own container; otherwise, false.
+            </returns>
+        </member>
+        <member name="M:VIBlend.Silverlight.Controls.RibbonGalleryGroup.GetContainerForItemOverride">
+            <summary>
+            Creates or identifies the element that is used to display the given item.
+            </summary>
+            <returns>
+            The element that is used to display the given item.
+            </returns>
+        </member>
+        <member name="M:VIBlend.Silverlight.Controls.RibbonGalleryGroup.PrepareContainerForItemOverride(System.Windows.DependencyObject,System.Object)">
+            <summary>
+            Prepares the specified element to display the specified item.
+            </summary>
+            <param name="element">The element used to display the specified item.</param>
+            <param name="item">The item to display.</param>
+        </member>
+        <member name="M:VIBlend.Silverlight.Controls.RibbonGalleryGroup.ClearContainerForItemOverride(System.Windows.DependencyObject,System.Object)">
+            <summary>
+            Undoes the effects of the <see cref="M:System.Windows.Controls.ItemsControl.PrepareContainerForItemOverride(System.Windows.DependencyObject,System.Object)"/> method.
+            </summary>
+            <param name="element">The container element.</param>
+            <param name="item">The item.</param>
+        </member>
+        <member name="M:VIBlend.Silverlight.Controls.RibbonGalleryGroup.Dispose">
+            <summary>
+            Performs application-defined tasks associated with freeing, releasing, or resetting unmanaged resources.
+            </summary>
+        </member>
+        <member name="P:VIBlend.Silverlight.Controls.RibbonGalleryGroup.FilterItemHeaderTemplate">
+            <summary>
+            Gets or sets the Filter item header template.
+            </summary>
+            <value>The Filter item header template.</value>
+        </member>
+        <member name="P:VIBlend.Silverlight.Controls.RibbonGalleryGroup.FilterItemHeader">
+            <summary>
+            Gets or sets the Filter item header.
+            </summary>
+            <value>The Filter item header.</value>
+        </member>
+        <member name="P:VIBlend.Silverlight.Controls.RibbonGalleryGroup.ShowHeader">
+            <summary>
+            Gets or sets a value indicating whether to show the header.
+            </summary>
+        </member>
+        <member name="P:VIBlend.Silverlight.Controls.RibbonGalleryGroup.HeaderBackground">
+            <summary>
+            Gets or sets the header background.
+            </summary>
+            <value>The header background.</value>
+        </member>
+        <member name="P:VIBlend.Silverlight.Controls.RibbonGalleryGroup.HeaderBorderBrush">
+            <summary>
+            Gets or sets the header BorderBrush.
+            </summary>
+            <value>The header BorderBrush.</value>
+        </member>
+        <member name="P:VIBlend.Silverlight.Controls.RibbonGalleryGroup.HeaderBorderThickness">
+            <summary>
+            Gets or sets the header BorderThickness.
+            </summary>
+            <value>The header BorderThickness.</value>
+        </member>
+        <member name="P:VIBlend.Silverlight.Controls.RibbonGalleryGroup.HeaderBorderCornerRadius">
+            <summary>
+            Gets or sets the header BorderCornerRadius.
+            </summary>
+            <value>The header BorderCornerRadius.</value>
+        </member>
+        <member name="P:VIBlend.Silverlight.Controls.RibbonGalleryGroup.RibbonGallery">
+            <summary>
+            Gets the ribbon gallery.
+            </summary>
+            <value>The ribbon gallery.</value>
+        </member>
+        <member name="P:VIBlend.Silverlight.Controls.RibbonGalleryGroup.IsInPopup">
+            <summary>
+            Gets or sets a value indicating whether the RibbonGallery is expanded.
+            </summary>
+            <value>
+            	<c>true</c> if this instance is expanded; otherwise, <c>false</c>.
+            </value>
+        </member>
+        <member name="E:VIBlend.Silverlight.Controls.RibbonGalleryGroup.IsInPopupChanged">
+            <summary>
+            Occurs when the RibbonGalleryGroup is displayed in the Gallery's popup or in the Gallery's primary content.
+            </summary>
+        </member>
+        <member name="T:VIBlend.Silverlight.Controls.ScreenTip">
+            <summary>
+            Represents a Popup control which extends the functionality of the standard ToolTip control.
+            </summary>
+        </member>
+        <member name="F:VIBlend.Silverlight.Controls.ScreenTip.ScreenTipWidthProperty">
+            <exclude/>
+        </member>
+        <member name="M:VIBlend.Silverlight.Controls.ScreenTip.GetScreenTipWidth(System.Windows.UIElement)">
+            <summary>
+            Gets the width of the screen tip.
+            </summary>
+            <param name="element">The element.</param>
+            <returns></returns>
+        </member>
+        <member name="M:VIBlend.Silverlight.Controls.ScreenTip.SetScreenTipWidth(System.Windows.UIElement,System.Double)">
+            <summary>
+            Sets the width of the screen tip.
+            </summary>
+            <param name="element">The element.</param>
+            <param name="value">The value.</param>
+        </member>
+        <member name="F:VIBlend.Silverlight.Controls.ScreenTip.CornerRadiusProperty">
+            <exclude/>
+        </member>
+        <member name="F:VIBlend.Silverlight.Controls.ScreenTip.ScreenTipContentProperty">
+            <exclude/>
+        </member>
+        <member name="F:VIBlend.Silverlight.Controls.ScreenTip.ScreenTipContentTemplateProperty">
+            <exclude/>
+        </member>
+        <member name="F:VIBlend.Silverlight.Controls.ScreenTip.HelpTopicProperty">
+            <exclude/>
+        </member>
+        <member name="F:VIBlend.Silverlight.Controls.ScreenTip.ImageProperty">
+            <exclude/>
+        </member>
+        <member name="F:VIBlend.Silverlight.Controls.ScreenTip.TextProperty">
+            <exclude/>
+        </member>
+        <member name="F:VIBlend.Silverlight.Controls.ScreenTip.TitleProperty">
+            <exclude/>
+        </member>
+        <member name="F:VIBlend.Silverlight.Controls.ScreenTip.HasScreenTipProperty">
+            <exclude/>
+        </member>
+        <member name="F:VIBlend.Silverlight.Controls.ScreenTip.AssociatedScreenTipProperty">
+            <exclude/>
+        </member>
+        <member name="M:VIBlend.Silverlight.Controls.ScreenTip.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:VIBlend.Silverlight.Controls.ScreenTip"/> class.
+            </summary>
+        </member>
+        <member name="M:VIBlend.Silverlight.Controls.ScreenTip.SetAssociatedScreenTip(System.Windows.UIElement,System.Object)">
+            <summary>
+            Sets the associated screen tip.
+            </summary>
+            <param name="element">The element.</param>
+            <param name="value">The value.</param>
+        </member>
+        <member name="M:VIBlend.Silverlight.Controls.ScreenTip.GetAssociatedScreenTip(System.Windows.UIElement)">
+            <summary>
+            Gets the associated screen tip.
+            </summary>
+            <param name="element">The element.</param>
+            <returns></returns>
+        </member>
+        <member name="M:VIBlend.Silverlight.Controls.ScreenTip.SetHasScreenTip(System.Windows.UIElement,System.Object)">
+            <summary>
+            Sets the has screen tip.
+            </summary>
+            <param name="element">The element.</param>
+            <param name="value">The value.</param>
+        </member>
+        <member name="M:VIBlend.Silverlight.Controls.ScreenTip.GetHasScreenTip(System.Windows.UIElement)">
+            <summary>
+            Gets the has screen tip.
+            </summary>
+            <param name="element">The element.</param>
+            <returns></returns>
+        </member>
+        <member name="M:VIBlend.Silverlight.Controls.ScreenTip.GetRibbon">
+            <summary>
+            Gets the ribbon.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:VIBlend.Silverlight.Controls.ScreenTip.OnApplyTemplate">
+            <summary>
+            Builds the visual tree for the <see cref="T:System.Windows.Controls.ToolTip"/> when a new template is applied.
+            </summary>
+        </member>
+        <member name="M:VIBlend.Silverlight.Controls.ScreenTip.GetBitmapImage(System.String)">
+            <summary>
+            Gets the bitmap image.
+            </summary>
+            <param name="name">The name.</param>
+            <returns></returns>
+        </member>
+        <member name="M:VIBlend.Silverlight.Controls.ScreenTip.GetHelpTopic(System.Windows.UIElement)">
+            <summary>
+            Gets the help topic.
+            </summary>
+            <param name="element">The element.</param>
+            <returns></returns>
+        </member>
+        <member name="M:VIBlend.Silverlight.Controls.ScreenTip.SetHelpTopic(System.Windows.UIElement,System.Object)">
+            <summary>
+            Sets the help topic.
+            </summary>
+            <param name="element">The element.</param>
+            <param name="value">The value.</param>
+        </member>
+        <member name="M:VIBlend.Silverlight.Controls.ScreenTip.GetScreenTipContent(System.Windows.UIElement)">
+            <summary>
+            Gets the content of the screen tip.
+            </summary>
+            <param name="element">The element.</param>
+            <returns></returns>
+        </member>
+        <member name="M:VIBlend.Silverlight.Controls.ScreenTip.SetScreenTipContent(System.Windows.UIElement,System.Object)">
+            <summary>
+            Sets the content of the screen tip.
+            </summary>
+            <param name="element">The element.</param>
+            <param name="value">The value.</param>
+        </member>
+        <member name="M:VIBlend.Silverlight.Controls.ScreenTip.GetScreenTipContentTemplate(System.Windows.UIElement)">
+            <summary>
+            Gets the screen tip content template.
+            </summary>
+            <param name="element">The element.</param>
+            <returns></returns>
+        </member>
+        <member name="M:VIBlend.Silverlight.Controls.ScreenTip.SetScreenTipContentTemplate(System.Windows.UIElement,System.Windows.DataTemplate)">
+            <summary>
+            Sets the screen tip content template.
+            </summary>
+            <param name="element">The element.</param>
+            <param name="value">The value.</param>
+        </member>
+        <member name="M:VIBlend.Silverlight.Controls.ScreenTip.GetImage(System.Windows.UIElement)">
+            <summary>
+            Gets the image.
+            </summary>
+            <param name="element">The element.</param>
+            <returns></returns>
+        </member>
+        <member name="M:VIBlend.Silverlight.Controls.ScreenTip.SetImage(System.Windows.UIElement,System.Windows.Media.ImageSource)">
+            <summary>
+            Sets the image.
+            </summary>
+            <param name="element">The element.</param>
+            <param name="value">The value.</param>
+        </member>
+        <member name="M:VIBlend.Silverlight.Controls.ScreenTip.GetText(System.Windows.UIElement)">
+            <summary>
+            Gets the text.
+            </summary>
+            <param name="element">The element.</param>
+            <returns></returns>
+        </member>
+        <member name="M:VIBlend.Silverlight.Controls.ScreenTip.SetText(System.Windows.UIElement,System.String)">
+            <summary>
+            Sets the text.
+            </summary>
+            <param name="element">The element.</param>
+            <param name="value">The value.</param>
+        </member>
+        <member name="M:VIBlend.Silverlight.Controls.ScreenTip.GetTitle(System.Windows.UIElement)">
+            <summary>
+            Gets the title.
+            </summary>
+            <param name="element">The element.</param>
+            <returns></returns>
+        </member>
+        <member name="M:VIBlend.Silverlight.Controls.ScreenTip.SetTitle(System.Windows.UIElement,System.String)">
+            <summary>
+            Sets the title.
+            </summary>
+            <param name="element">The element.</param>
+            <param name="value">The value.</param>
+        </member>
+        <member name="P:VIBlend.Silverlight.Controls.ScreenTip.ParentElement">
+            <summary>
+            Gets the parent element.
+            </summary>
+            <value>The parent element.</value>
+        </member>
+        <member name="P:VIBlend.Silverlight.Controls.ScreenTip.Title">
+            <summary>
+            Gets or sets the title.
+            </summary>
+            <value>The title.</value>
+        </member>
+        <member name="P:VIBlend.Silverlight.Controls.ScreenTip.Text">
+            <summary>
+            Gets or sets the text.
+            </summary>
+            <value>The text.</value>
+        </member>
+        <member name="P:VIBlend.Silverlight.Controls.ScreenTip.CornerRadius">
+            <summary>
+            Gets or sets the corner radius.
+            </summary>
+            <value>The corner radius.</value>
+        </member>
+        <member name="P:VIBlend.Silverlight.Controls.ScreenTip.Image">
+            <summary>
+            Gets or sets the image.
+            </summary>
+            <value>The image.</value>
+        </member>
+        <member name="P:VIBlend.Silverlight.Controls.ScreenTip.ScreenTipContent">
+            <summary>
+            Gets or sets the content of the screen tip.
+            </summary>
+            <value>The content of the screen tip.</value>
+        </member>
+        <member name="P:VIBlend.Silverlight.Controls.ScreenTip.ScreenTipContentTemplate">
+            <summary>
+            Gets or sets the screen tip content template.
+            </summary>
+            <value>The screen tip content template.</value>
+        </member>
+        <member name="P:VIBlend.Silverlight.Controls.ScreenTip.HelpTopic">
+            <summary>
+            Gets or sets the help topic.
+            </summary>
+            <value>The help topic.</value>
+        </member>
+        <member name="P:VIBlend.Silverlight.Controls.ScreenTip.HelpImage">
+            <summary>
+            Gets or sets the help image.
+            </summary>
+            <value>The help image.</value>
+        </member>
+        <member name="T:VIBlend.Silverlight.Controls.ScreenTip.GetHelpImage">
+            <exclude/>
+        </member>
+        <member name="T:VIBlend.Silverlight.Controls.KeyTip">
+            <summary>
+            Represents a single KeyTip instance in the RibbonBar.
+            </summary>
+        </member>
+        <member name="M:VIBlend.Silverlight.Controls.KeyTip.#ctor(System.Windows.UIElement,System.String,System.Windows.Input.Key,VIBlend.Silverlight.Controls.KeyTipService)">
+            <summary>
+            Initializes a new instance of the <see cref="T:VIBlend.Silverlight.Controls.KeyTip"/> class.
+            </summary>
+            <param name="element">The element.</param>
+            <param name="text">The text.</param>
+            <param name="activationKey">The activation key.</param>
+        </member>
+        <member name="M:VIBlend.Silverlight.Controls.KeyTip.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:VIBlend.Silverlight.Controls.KeyTip"/> class.
+            </summary>
+        </member>
+        <member name="M:VIBlend.Silverlight.Controls.KeyTip.ExecuteCommand(System.Windows.Input.ICommand,System.Object)">
+            <summary>
+            Executes the command.
+            </summary>
+            <param name="keyTipCommand">The key tip command.</param>
+            <param name="commandParam">The command param.</param>
+        </member>
+        <member name="M:VIBlend.Silverlight.Controls.KeyTip.CreateNewPopup">
+            <summary>
+            Creates the new popup.
+            </summary>
+        </member>
+        <member name="M:VIBlend.Silverlight.Controls.KeyTip.OnApplyTemplate">
+            <summary>
+            When overridden in a derived class, is invoked whenever application code or internal processes (such as a rebuilding layout pass) call <see cref="M:System.Windows.Controls.Control.ApplyTemplate"/>. In simplest terms, this means the method is called just before a UI element displays in an application. For more information, see Remarks.
+            </summary>
+        </member>
+        <member name="F:VIBlend.Silverlight.Controls.KeyTip.ForegroundNormalProperty">
+            <exclude/>
+        </member>
+        <member name="F:VIBlend.Silverlight.Controls.KeyTip.ForegroundDisabledProperty">
+            <exclude/>
+        </member>
+        <member name="M:VIBlend.Silverlight.Controls.KeyTip.Hide">
+            <summary>
+            Hides this instance.
+            </summary>
+        </member>
+        <member name="P:VIBlend.Silverlight.Controls.KeyTip.Command">
+            <summary>
+            Gets the command.
+            </summary>
+            <value>The command.</value>
+        </member>
+        <member name="P:VIBlend.Silverlight.Controls.KeyTip.CommandParameter">
+            <summary>
+            Gets the command parameter.
+            </summary>
+            <value>The command parameter.</value>
+        </member>
+        <member name="P:VIBlend.Silverlight.Controls.KeyTip.Text">
+            <summary>
+            Gets the text.
+            </summary>
+            <value>The text.</value>
+        </member>
+        <member name="P:VIBlend.Silverlight.Controls.KeyTip.ActivationKey">
+            <summary>
+            Gets or sets the activation key.
+            </summary>
+            <value>The activation key.</value>
+        </member>
+        <member name="P:VIBlend.Silverlight.Controls.KeyTip.Element">
+            <summary>
+            Gets the element.
+            </summary>
+            <value>The element.</value>
+        </member>
+        <member name="P:VIBlend.Silverlight.Controls.KeyTip.ForegroundNormal">
+            <summary>
+            Gets or sets the foreground brush that is used when the button is in default state.
+            </summary>
+        </member>
+        <member name="P:VIBlend.Silverlight.Controls.KeyTip.ForegroundDisabled">
+            <summary>
+            Gets or sets the foreground brush that is used when the button is disabled.
+            </summary>
+        </member>
+        <member name="P:VIBlend.Silverlight.Controls.KeyTip.IsEnabled">
+            <summary>
+            Gets a value indicating whether this instance is enabled.
+            </summary>
+            <value>
+            	<c>true</c> if this instance is enabled; otherwise, <c>false</c>.
+            </value>
+        </member>
+        <member name="T:VIBlend.Silverlight.Controls.RibbonGallery">
+            <summary>
+            Represents a gallery control which is part of the Ribbon UI.
+            </summary>
+        </member>
+        <member name="F:VIBlend.Silverlight.Controls.RibbonGallery.ContextMenuStyleProperty">
+            <exclude/>
+        </member>
+        <member name="F:VIBlend.Silverlight.Controls.RibbonGallery.ContextMenuItemStyleProperty">
+            <exclude/>
+        </member>
+        <member name="F:VIBlend.Silverlight.Controls.RibbonGallery.ItemContainerStyleProperty">
+            <exclude/>
+        </member>
+        <member name="M:VIBlend.Silverlight.Controls.RibbonGallery.OnItemContainerStylePropertyChanged(System.Windows.DependencyObject,System.Windows.DependencyPropertyChangedEventArgs)">
+            <summary>
+            ItemContainerStyleProperty property changed handler.
+            </summary>
+            <param name="d">
+            RibbonGallery that changed its ItemContainerStyle.
+            </param>
+            <param name="e">Event arguments.</param>
+        </member>
+        <member name="F:VIBlend.Silverlight.Controls.RibbonGallery.IsExpandedProperty">
+            <summary>
+            Identifies the IsExpanded dependency property.
+            </summary>
+        </member>
+        <member name="M:VIBlend.Silverlight.Controls.RibbonGallery.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:VIBlend.Silverlight.Controls.RibbonGallery"/> class.
+            </summary>
+        </member>
+        <member name="F:VIBlend.Silverlight.Controls.RibbonGallery.SmallChangeProperty">
+            <exclude/>
+        </member>
+        <member name="F:VIBlend.Silverlight.Controls.RibbonGallery.LargeChangeProperty">
+            <exclude/>
+        </member>
+        <member name="F:VIBlend.Silverlight.Controls.RibbonGallery.ScrollAnimationTimeProperty">
+            <exclude/>
+        </member>
+        <member name="F:VIBlend.Silverlight.Controls.RibbonGallery.ScrollAnimationModeProperty">
+            <exclude/>
+        </member>
+        <member name="F:VIBlend.Silverlight.Controls.RibbonGallery.CornerRadiusProperty">
+            <exclude/>
+        </member>
+        <member name="M:VIBlend.Silverlight.Controls.RibbonGallery.OnItemsChanged(System.Collections.Specialized.NotifyCollectionChangedEventArgs)">
+            <summary>
+            Called when the value of the <see cref="P:System.Windows.Controls.ItemsControl.Items"/> property changes.
+            </summary>
+            <param name="e">A <see cref="T:System.Collections.Specialized.NotifyCollectionChangedEventArgs"/> that contains the event data</param>
+        </member>
+        <member name="F:VIBlend.Silverlight.Controls.RibbonGallery.ContextMenuItemsSourceProperty">
+            <exclude/>
+        </member>
+        <member name="F:VIBlend.Silverlight.Controls.RibbonGallery.ContextMenuDisplayMemberPathProperty">
+            <exclude/>
+        </member>
+        <member name="F:VIBlend.Silverlight.Controls.RibbonGallery.ContextMenuItemTemplateProperty">
+            <exclude/>
+        </member>
+        <member name="M:VIBlend.Silverlight.Controls.RibbonGallery.EnsureVisible(VIBlend.Silverlight.Controls.RibbonGalleryItem)">
+            <summary>
+            Brings the item that is passed as parameter to the view.
+            </summary>
+        </member>
+        <member name="M:VIBlend.Silverlight.Controls.RibbonGallery.OnApplyTemplate">
+            <summary>
+            When overridden in a derived class, is invoked whenever application code or internal processes (such as a rebuilding layout pass) call <see cref="M:System.Windows.Controls.Control.ApplyTemplate"/>. In simplest terms, this means the method is called just before a UI element displays in an application. For more information, see Remarks.
+            </summary>
+        </member>
+        <member name="F:VIBlend.Silverlight.Controls.RibbonGallery.AutoCloseFilterMenuAfterSelectionProperty">
+            <exclude/>
+        </member>
+        <member name="F:VIBlend.Silverlight.Controls.RibbonGallery.IsFilterItemVisibleProperty">
+            <exclude/>
+        </member>
+        <member name="F:VIBlend.Silverlight.Controls.RibbonGallery.PopupScrollViewerStyleProperty">
+            <exclude/>
+        </member>
+        <member name="F:VIBlend.Silverlight.Controls.RibbonGallery.FilterItemDropDownButtonStyleProperty">
+            <exclude/>
+        </member>
+        <member name="F:VIBlend.Silverlight.Controls.RibbonGallery.FilterItemCheckedListBoxStyleProperty">
+            <exclude/>
+        </member>
+        <member name="F:VIBlend.Silverlight.Controls.RibbonGallery.FilterItemStyleProperty">
+            <exclude/>
+        </member>
+        <member name="F:VIBlend.Silverlight.Controls.RibbonGallery.FilterItemTextProperty">
+            <exclude/>
+        </member>
+        <member name="F:VIBlend.Silverlight.Controls.RibbonGallery.AutoDisplayGalleryGroupHeadersProperty">
+            <exclude/>
+        </member>
+        <member name="F:VIBlend.Silverlight.Controls.RibbonGallery.ViewportHeightProperty">
+            <exclude/>
+        </member>
+        <member name="F:VIBlend.Silverlight.Controls.RibbonGallery.IsResizableProperty">
+            <exclude/>
+        </member>
+        <member name="M:VIBlend.Silverlight.Controls.RibbonGallery.ApplyIsResizable">
+            <summary>
+            Applies whether the gallery is resizable.
+            </summary>
+        </member>
+        <member name="M:VIBlend.Silverlight.Controls.RibbonGallery.ClosePopup">
+            <summary>
+            Closes the popup.
+            </summary>
+        </member>
+        <member name="M:VIBlend.Silverlight.Controls.RibbonGallery.ShowPopup">
+            <summary>
+            Shows the popup.
+            </summary>
+        </member>
+        <member name="M:VIBlend.Silverlight.Controls.RibbonGallery.AddToVisualTree(VIBlend.Silverlight.Controls.ContextMenu)">
+            <summary>
+            Adds to visual tree.
+            </summary>
+            <param name="menu">The menu.</param>
+        </member>
+        <member name="F:VIBlend.Silverlight.Controls.RibbonGallery.RibbonGroupPopupWidthProperty">
+            <exclude/>
+        </member>
+        <member name="M:VIBlend.Silverlight.Controls.RibbonGallery.InitializeGalleryItem">
+            <summary>
+            Initializes the gallery item.
+            </summary>
+        </member>
+        <member name="M:VIBlend.Silverlight.Controls.RibbonGallery.ShowItemHeaders(System.Boolean)">
+            <summary>
+            Shows the item headers.
+            </summary>
+        </member>
+        <member name="M:VIBlend.Silverlight.Controls.RibbonGallery.InitializeFilterItem">
+            <summary>
+            Initializes the filter item.
+            </summary>
+        </member>
+        <member name="F:VIBlend.Silverlight.Controls.RibbonGallery.SelectedItemProperty">
+            <exclude/>
+        </member>
+        <member name="M:VIBlend.Silverlight.Controls.RibbonGallery.UpdateGalleryItemStates(VIBlend.Silverlight.Controls.RibbonGalleryItem)">
+            <summary>
+            Updates the gallery item states.
+            </summary>
+        </member>
+        <member name="M:VIBlend.Silverlight.Controls.RibbonGallery.GetRibbonGalleryGroups">
+            <summary>
+            Gets the ribbon gallery groups.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:VIBlend.Silverlight.Controls.RibbonGallery.IsItemItsOwnContainerOverride(System.Object)">
+            <summary>
+            Determines if the specified item is (or is eligible to be) its own container.
+            </summary>
+            <param name="item">The item to check.</param>
+            <returns>
+            true if the item is (or is eligible to be) its own container; otherwise, false.
+            </returns>
+        </member>
+        <member name="M:VIBlend.Silverlight.Controls.RibbonGallery.GetContainerForItemOverride">
+            <summary>
+            Creates or identifies the element that is used to display the given item.
+            </summary>
+            <returns>
+            The element that is used to display the given item.
+            </returns>
+        </member>
+        <member name="M:VIBlend.Silverlight.Controls.RibbonGallery.PrepareContainerForItemOverride(System.Windows.DependencyObject,System.Object)">
+            <summary>
+            Prepares the specified element to display the specified item.
+            </summary>
+            <param name="element">The element used to display the specified item.</param>
+            <param name="item">The item to display.</param>
+        </member>
+        <member name="M:VIBlend.Silverlight.Controls.RibbonGallery.ClearContainerForItemOverride(System.Windows.DependencyObject,System.Object)">
+            <summary>
+            Undoes the effects of the <see cref="M:System.Windows.Controls.ItemsControl.PrepareContainerForItemOverride(System.Windows.DependencyObject,System.Object)"/> method.
+            </summary>
+            <param name="element">The container element.</param>
+            <param name="item">The item.</param>
+        </member>
+        <member name="M:VIBlend.Silverlight.Controls.RibbonGallery.Dispose">
+            <summary>
+            Performs application-defined tasks associated with freeing, releasing, or resetting unmanaged resources.
+            </summary>
+        </member>
+        <member name="P:VIBlend.Silverlight.Controls.RibbonGallery.ContextMenuStyle">
+            <summary>
+            Gets or sets the context menu style.
+            </summary>
+            <value>The context menu style.</value>
+        </member>
+        <member name="P:VIBlend.Silverlight.Controls.RibbonGallery.ContextMenuItemStyle">
+            <summary>
+            Gets or sets the context menu item style.
+            </summary>
+            <value>
+            The context menu item style.
+            </value>
+        </member>
+        <member name="P:VIBlend.Silverlight.Controls.RibbonGallery.ItemContainerStyle">
+            <summary>
+            Gets or sets the item container style.
+            </summary>
+            <value>The item container style.</value>
+        </member>
+        <member name="P:VIBlend.Silverlight.Controls.RibbonGallery.IsExpanded">
+            <summary>
+            Gets or sets a value indicating whether the RibbonGallery is expanded.
+            </summary>
+            <value>
+            	<c>true</c> if this instance is expanded; otherwise, <c>false</c>.
+            </value>
+        </member>
+        <member name="P:VIBlend.Silverlight.Controls.RibbonGallery.ScrollAnimationTime">
+            <summary>
+            Gets or sets the duration of the scroll animation.
+            </summary>
+        </member>
+        <member name="P:VIBlend.Silverlight.Controls.RibbonGallery.SmallChange">
+            <summary>
+            Gets or sets the small change.
+            </summary>
+            <value>The small change.</value>
+        </member>
+        <member name="P:VIBlend.Silverlight.Controls.RibbonGallery.LargeChange">
+            <summary>
+            Gets or sets the small change.
+            </summary>
+            <value>The small change.</value>
+        </member>
+        <member name="P:VIBlend.Silverlight.Controls.RibbonGallery.ScrollAnimationMode">
+            <summary>
+            Gets or sets the scroll animation mode.
+            </summary>
+        </member>
+        <member name="P:VIBlend.Silverlight.Controls.RibbonGallery.CornerRadius">
+            <summary>
+            Gets or sets the border's corner radius
+            </summary>
+        </member>
+        <member name="P:VIBlend.Silverlight.Controls.RibbonGallery.MenuItems">
+            <summary>
+            Gets the RibbonGallery's Menu Items collection.
+            </summary>
+        </member>
+        <member name="P:VIBlend.Silverlight.Controls.RibbonGallery.IsOpened">
+            <summary>
+            Gets or sets a value indicating whether this instance is opened.
+            </summary>
+            <value><c>true</c> if this instance is opened; otherwise, <c>false</c>.</value>
+        </member>
+        <member name="P:VIBlend.Silverlight.Controls.RibbonGallery.ContextMenuItemsSource">
+            <summary>
+            Gets or sets the ContextMenuItemsSource.
+            </summary>
+        </member>
+        <member name="P:VIBlend.Silverlight.Controls.RibbonGallery.ContextMenuDisplayMemberPath">
+            <summary>
+            Gets or sets the ContextMenuDisplayMemberPath.
+            </summary>
+        </member>
+        <member name="P:VIBlend.Silverlight.Controls.RibbonGallery.ContextMenuItemTemplate">
+            <summary>
+            Gets or sets the ContextMenuItemTemplate.
+            </summary>
+        </member>
+        <member name="P:VIBlend.Silverlight.Controls.RibbonGallery.ContextMenu">
+            <summary>
+            Gets the context menu.
+            </summary>
+            <value>The context menu.</value>
+        </member>
+        <member name="P:VIBlend.Silverlight.Controls.RibbonGallery.AutoScrollToSelectedItem">
+            <summary>
+            Gets or sets a value indicating whether to auto scroll to the selected item.
+            </summary>
+        </member>
+        <member name="P:VIBlend.Silverlight.Controls.RibbonGallery.RibbonBar">
+            <summary>
+            Gets the ribbon bar.
+            </summary>
+            <value>The ribbon bar.</value>
+        </member>
+        <member name="P:VIBlend.Silverlight.Controls.RibbonGallery.IsLoaded">
+            <summary>
+            Gets or sets a value indicating whether this instance is loaded.
+            </summary>
+            <value><c>true</c> if this instance is loaded; otherwise, <c>false</c>.</value>
+        </member>
+        <member name="P:VIBlend.Silverlight.Controls.RibbonGallery.AutoCloseFilterMenuAfterSelection">
+            <summary>
+            Gets or sets a value indicating whether to close the filter menu after selection.
+            </summary>
+            <value>
+            	<c>true</c> if [auto close filter menu after selection]; otherwise, <c>false</c>.
+            </value>
+        </member>
+        <member name="P:VIBlend.Silverlight.Controls.RibbonGallery.IsFilterItemVisible">
+            <summary>
+            Gets or sets a value indicating whether to matically IsVisible or hide the gallery group headers.
+            </summary>
+        </member>
+        <member name="P:VIBlend.Silverlight.Controls.RibbonGallery.PopupScrollViewerStyle">
+            <summary>
+            Gets or sets the filter item combo box style.
+            </summary>
+            <value>The filter item combo box style.</value>
+        </member>
+        <member name="P:VIBlend.Silverlight.Controls.RibbonGallery.FilterItemDropDownButtonStyle">
+            <summary>
+            Gets or sets the filter item combo box style.
+            </summary>
+            <value>The filter item combo box style.</value>
+        </member>
+        <member name="P:VIBlend.Silverlight.Controls.RibbonGallery.FilterItemCheckedListBoxStyle">
+            <summary>
+            Gets or sets the filter item combo box style.
+            </summary>
+            <value>The filter item combo box style.</value>
+        </member>
+        <member name="P:VIBlend.Silverlight.Controls.RibbonGallery.FilterItemStyle">
+            <summary>
+            Gets or sets the filter item combo box item style.
+            </summary>
+        </member>
+        <member name="P:VIBlend.Silverlight.Controls.RibbonGallery.FilterItemText">
+            <summary>
+            Gets or sets a value indicating whether to matically IsText or hide the gallery group headers.
+            </summary>
+        </member>
+        <member name="P:VIBlend.Silverlight.Controls.RibbonGallery.AutoDisplayGalleryGroupHeaders">
+            <summary>
+            Gets or sets a value indicating whether to automatically display or hide the gallery group headers.
+            </summary>
+        </member>
+        <member name="P:VIBlend.Silverlight.Controls.RibbonGallery.ViewportHeight">
+            <summary>
+            Gets or sets the height of the viewport.
+            </summary>
+            <value>The height of the viewport.</value>
+        </member>
+        <member name="P:VIBlend.Silverlight.Controls.RibbonGallery.IsResizable">
+            <summary>
+            Gets or sets whether the combo box popup is resizable.
+            </summary>
+        </member>
+        <member name="P:VIBlend.Silverlight.Controls.RibbonGallery.RibbonGroupPopupWidth">
+            <summary>
+            Gets or sets the Gallery's width when it is in the RibbonGroup's popup.
+            </summary>
+        </member>
+        <member name="P:VIBlend.Silverlight.Controls.RibbonGallery.SelectedItem">
+            <summary>
+            Gets or sets the selected item.
+            </summary>
+            <value>The selected item.</value>
+        </member>
+        <member name="P:VIBlend.Silverlight.Controls.RibbonGallery.IsContextMenuDirty">
+            <summary>
+            Gets or sets a value indicating whether this instance is context menu dirty.
+            </summary>
+            <value>
+            	<c>true</c> if this instance is context menu dirty; otherwise, <c>false</c>.
+            </value>
+        </member>
+        <member name="T:VIBlend.Silverlight.Controls.RibbonTabItemValueComparer">
+            <summary>
+            Represents a class which compares 2 RibbonTabItems.
+            </summary>
+        </member>
+        <member name="M:VIBlend.Silverlight.Controls.RibbonTabItemValueComparer.Compare(VIBlend.Silverlight.Controls.RibbonTabItem,VIBlend.Silverlight.Controls.RibbonTabItem)">
+            <summary>
+            Compares the specified item1.
+            </summary>
+            <param name="item1">The item1.</param>
+            <param name="item2">The item2.</param>
+            <returns></returns>
+        </member>
+        <member name="T:VIBlend.Silverlight.Controls.RibbonBarLocalizationBase">
+            <summary>
+            Represents a base class for the RibbonBar localization providers.
+            </summary>
+        </member>
+        <member name="M:VIBlend.Silverlight.Controls.RibbonBarLocalizationBase.GetString(VIBlend.Silverlight.Controls.RibbonLocalizationNames)">
+            <summary>
+            Gets the string.
+            </summary>
+            <param name="name">The name.</param>
+            <returns></returns>
+        </member>
+        <member name="T:VIBlend.Silverlight.Controls.RibbonBarLocalization">
+            <summary>
+            Represents a class that is used to localize the strings used in the RibbonBar control.
+            </summary>
+        </member>
+        <member name="M:VIBlend.Silverlight.Controls.RibbonBarLocalization.GetString(VIBlend.Silverlight.Controls.RibbonLocalizationNames)">
+            <summary>
+            Gets the string.
+            </summary>
+            <param name="name">The name.</param>
+            <returns></returns>
+        </member>
+        <member name="T:VIBlend.Silverlight.Controls.RibbonLocalizationNames">
+            <summary>
+            Represents the LocalizationNames enumeration.
+            </summary>
+        </member>
+        <member name="F:VIBlend.Silverlight.Controls.RibbonLocalizationNames.ShowQuickAccessToolBarBelowRibbonMenuItem">
+            <summary>
+            ContextMenu item - show QAT below ribbon.
+            </summary>
+        </member>
+        <member name="F:VIBlend.Silverlight.Controls.RibbonLocalizationNames.ShowQuickAccessToolBarAboveRibbonMenuItem">
+            <summary>
+            ContextMenu item - show QAT above ribbon.
+            </summary>
+        </member>
+        <member name="F:VIBlend.Silverlight.Controls.RibbonLocalizationNames.MinimizeRibbonMenuItem">
+            <summary>
+            ContextMenu item - minimize ribbon.
+            </summary>
+        </member>
+        <member name="F:VIBlend.Silverlight.Controls.RibbonLocalizationNames.CustomizeQuickAccessToolBar">
+            <summary>
+            ContextMenu item - customize QAT.
+            </summary>
+        </member>
+        <member name="T:VIBlend.Silverlight.Controls.RibbonContextualGroupsContainer">
+            <summary>
+            Represents a layout panel which arranges the RibbonContextual Groups.
+            </summary>
+        </member>
+        <member name="M:VIBlend.Silverlight.Controls.RibbonContextualGroupsContainer.ArrangeOverride(System.Windows.Size)">
+            <summary>
+            Provides the behavior for the Arrange pass of Silverlight layout. Classes can override this method to define their own Arrange pass behavior.
+            </summary>
+            <param name="finalSize">The final area within the parent that this object should use to arrange itself and its children.</param>
+            <returns>
+            The actual size that is used after the element is arranged in layout.
+            </returns>
+        </member>
+        <member name="M:VIBlend.Silverlight.Controls.RibbonContextualGroupsContainer.MeasureOverride(System.Windows.Size)">
+            <summary>
+            Provides the behavior for the Measure pass of Silverlight layout. Classes can override this method to define their own Measure pass behavior.
+            </summary>
+            <param name="availableSize">The available size that this object can give to child objects. Infinity (<see cref="F:System.Double.PositiveInfinity"/>) can be specified as a value to indicate that the object will size to whatever content is available.</param>
+            <returns>
+            The size that this object determines it needs during layout, based on its calculations of the allocated sizes for child objects; or based on other considerations, such as a fixed container size.
+            </returns>
+        </member>
+        <member name="T:VIBlend.Silverlight.Controls.BackstageApplicationMenu">
+            <summary>
+            Represents the Office Ribbon UI Application Menu.
+            </summary>
+        </member>
+        <member name="M:VIBlend.Silverlight.Controls.BackstageApplicationMenu.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:VIBlend.Silverlight.Controls.BackstageApplicationMenu"/> class.
+            </summary>
+        </member>
+        <member name="T:VIBlend.Silverlight.Controls.ScreenTipHelpEventArgs">
+            <summary>
+            Represents ScreenTip event data.
+            </summary>
+        </member>
+        <member name="M:VIBlend.Silverlight.Controls.ScreenTipHelpEventArgs.#ctor(System.Object)">
+            <summary>
+            Initializes a new instance of the <see cref="T:VIBlend.Silverlight.Controls.ScreenTipHelpEventArgs"/> class.
+            </summary>
+            <param name="helpTopic">The help topic.</param>
+        </member>
+        <member name="P:VIBlend.Silverlight.Controls.ScreenTipHelpEventArgs.HelpTopic">
+            <summary>
+            Gets or sets the help topic.
+            </summary>
+            <value>The help topic.</value>
+        </member>
+        <member name="T:VIBlend.Silverlight.Controls.RibbonTabItem">
+            <summary>
+            Represents a Tab in the RibbonBar control. 
+            </summary>
+        </member>
+        <member name="F:VIBlend.Silverlight.Controls.RibbonTabItem.TabPositionElementName">
+            <summary>
+            Repretents RibbonTabItem TabPosition element.
+            </summary>
+        </member>
+        <member name="F:VIBlend.Silverlight.Controls.RibbonTabItem.CornerRadiusProperty">
+            <exclude/>
+        </member>
+        <member name="M:VIBlend.Silverlight.Controls.RibbonTabItem.MeasureOverride(System.Windows.Size)">
+            <summary>
+            Provides the behavior for the Measure pass of Silverlight layout. Classes can override this method to define their own Measure pass behavior.
+            </summary>
+            <param name="availableSize">The available size that this object can give to child objects. Infinity (<see cref="F:System.Double.PositiveInfinity"/>) can be specified as a value to indicate that the object will size to whatever content is available.</param>
+            <returns>
+            The size that this object determines it needs during layout, based on its calculations of the allocated sizes for child objects; or based on other considerations, such as a fixed container size.
+            </returns>
+        </member>
+        <member name="M:VIBlend.Silverlight.Controls.RibbonTabItem.ArrangeOverride(System.Windows.Size)">
+            <summary>
+            Provides the behavior for the Arrange pass of Silverlight layout. Classes can override this method to define their own Arrange pass behavior.
+            </summary>
+            <param name="finalSize">The final area within the parent that this object should use to arrange itself and its children.</param>
+            <returns>
+            The actual size that is used after the element is arranged in layout.
+            </returns>
+        </member>
+        <member name="M:VIBlend.Silverlight.Controls.RibbonTabItem.OnTextImageRelationChanged">
+            <summary>
+            Called when the text image relation is changed.
+            </summary>
+        </member>
+        <member name="M:VIBlend.Silverlight.Controls.RibbonTabItem.OnHeaderChanged(System.Object,System.Object)">
+            <summary>
+            Called when the header is changed.
+            </summary>
+            <param name="oldHeader">The old header.</param>
+            <param name="newHeader">The new header.</param>
+        </member>
+        <member name="F:VIBlend.Silverlight.Controls.RibbonTabItem.TextImageRelationProperty">
+            <exclude/>
+        </member>
+        <member name="F:VIBlend.Silverlight.Controls.RibbonTabItem.TextProperty">
+            <exclude/>
+        </member>
+        <member name="F:VIBlend.Silverlight.Controls.RibbonTabItem.ImageSourceProperty">
+            <exclude/>
+        </member>
+        <member name="M:VIBlend.Silverlight.Controls.RibbonTabItem.UnwireEvents">
+            <summary>
+            Unwires the events.
+            </summary>
+        </member>
+        <member name="F:VIBlend.Silverlight.Controls.RibbonTabItem.BackgroundOpacityProperty">
+            <exclude/>
+        </member>
+        <member name="F:VIBlend.Silverlight.Controls.RibbonTabItem.ForegroundNormalProperty">
+            <exclude/>
+        </member>
+        <member name="F:VIBlend.Silverlight.Controls.RibbonTabItem.ForegroundDisabledProperty">
+            <exclude/>
+        </member>
+        <member name="F:VIBlend.Silverlight.Controls.RibbonTabItem.ForegroundPressedProperty">
+            <exclude/>
+        </member>
+        <member name="F:VIBlend.Silverlight.Controls.RibbonTabItem.ForegroundHighlightProperty">
+            <exclude/>
+        </member>
+        <member name="F:VIBlend.Silverlight.Controls.RibbonTabItem.BackgroundHighlightProperty">
+            <exclude/>
+        </member>
+        <member name="F:VIBlend.Silverlight.Controls.RibbonTabItem.BorderBrushHighlightProperty">
+            <exclude/>
+        </member>
+        <member name="F:VIBlend.Silverlight.Controls.RibbonTabItem.BackgroundPressedProperty">
+            <exclude/>
+        </member>
+        <member name="F:VIBlend.Silverlight.Controls.RibbonTabItem.BorderBrushPressedProperty">
+            <exclude/>
+        </member>
+        <member name="M:VIBlend.Silverlight.Controls.RibbonTabItem.OnMouseLeftButtonDown(System.Windows.Input.MouseButtonEventArgs)">
+            <exclude/>
+        </member>
+        <member name="M:VIBlend.Silverlight.Controls.RibbonTabItem.OnMouseMove(System.Windows.Input.MouseEventArgs)">
+            <exclude/>
+        </member>
+        <member name="M:VIBlend.Silverlight.Controls.RibbonTabItem.OnMouseRightButtonDown(System.Windows.Input.MouseButtonEventArgs)">
+            <exclude/>
+        </member>
+        <member name="M:VIBlend.Silverlight.Controls.RibbonTabItem.OnMouseLeftButtonUp(System.Windows.Input.MouseButtonEventArgs)">
+            <exclude/>
+        </member>
+        <member name="M:VIBlend.Silverlight.Controls.RibbonTabItem.OnMouseRightButtonUp(System.Windows.Input.MouseButtonEventArgs)">
+            <exclude/>
+        </member>
+        <member name="M:VIBlend.Silverlight.Controls.RibbonTabItem.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:VIBlend.Silverlight.Controls.RibbonTabItem"/> class.
+            </summary>
+        </member>
+        <member name="M:VIBlend.Silverlight.Controls.RibbonTabItem.#ctor(System.Object)">
+            <summary>
+            Initializes a new instance of the <see cref="T:VIBlend.Silverlight.Controls.RibbonTabItem"/> class.
+            </summary>
+            <param name="header">The header.</param>
+        </member>
+        <member name="M:VIBlend.Silverlight.Controls.RibbonTabItem.#ctor(System.String)">
+            <summary>
+            Initializes a new instance of the <see cref="T:VIBlend.Silverlight.Controls.RibbonTabItem"/> class.
+            </summary>
+            <param name="text">The text.</param>
+        </member>
+        <member name="F:VIBlend.Silverlight.Controls.RibbonTabItem.ContentMarginProperty">
+            <exclude/>
+        </member>
+        <member name="M:VIBlend.Silverlight.Controls.RibbonTabItem.OnContentChanged">
+            <summary>
+            Called when the value of the <see cref="P:System.Windows.Controls.ContentControl.Content"/> property changes.
+            </summary>
+            <param name="oldContent">The old value of the <see cref="P:System.Windows.Controls.ContentControl.Content"/> property.</param>
+            <param name="newContent">The new value of the <see cref="P:System.Windows.Controls.ContentControl.Content"/> property.</param>
+        </member>
+        <member name="M:VIBlend.Silverlight.Controls.RibbonTabItem.SetBorderThickness(System.Windows.Thickness)">
+            <summary>
+            Sets the border thickness.
+            </summary>
+            <param name="borderThickness">The border thickness.</param>
+        </member>
+        <member name="M:VIBlend.Silverlight.Controls.RibbonTabItem.SetCornerRadius(System.Windows.CornerRadius)">
+            <summary>
+            Sets the corner radius.
+            </summary>
+            <param name="cornerRadius">The corner radius.</param>
+        </member>
+        <member name="M:VIBlend.Silverlight.Controls.RibbonTabItem.OnApplyTemplate">
+            <summary>
+            Applies the RibbonTabItem Template.
+            </summary>
+        </member>
+        <member name="M:VIBlend.Silverlight.Controls.RibbonTabItem.IsItemItsOwnContainerOverride(System.Object)">
+            <summary>
+            Determines if the specified item is (or is eligible to be) its own container.
+            </summary>
+            <param name="item">The item to check.</param>
+            <returns>
+            true if the item is (or is eligible to be) its own container; otherwise, false.
+            </returns>
+        </member>
+        <member name="M:VIBlend.Silverlight.Controls.RibbonTabItem.GetContainerForItemOverride">
+            <summary>
+            Creates or identifies the element that is used to display the given item.
+            </summary>
+            <returns>
+            The element that is used to display the given item.
+            </returns>
+        </member>
+        <member name="F:VIBlend.Silverlight.Controls.RibbonTabItem.ContentBorderBrushProperty">
+            <exclude/>
+        </member>
+        <member name="F:VIBlend.Silverlight.Controls.RibbonTabItem.ContentBackgroundProperty">
+            <exclude/>
+        </member>
+        <member name="F:VIBlend.Silverlight.Controls.RibbonTabItem.ContentBorderThicknessProperty">
+            <exclude/>
+        </member>
+        <member name="M:VIBlend.Silverlight.Controls.RibbonTabItem.ApplyTextImageRelation(VIBlend.Silverlight.Controls.RibbonTabItem)">
+            <summary>
+            Applies the text image relation.
+            </summary>
+            <param name="b">The b.</param>
+        </member>
+        <member name="F:VIBlend.Silverlight.Controls.RibbonTabItem.AutoAdjustBorderThicknessProperty">
+            <exclude/>
+        </member>
+        <member name="M:VIBlend.Silverlight.Controls.RibbonTabItem.ApplyTransformation">
+            <summary>
+            Applies the transformation.
+            </summary>
+        </member>
+        <member name="F:VIBlend.Silverlight.Controls.RibbonTabItem.CloseButtonVisibilityProperty">
+            <exclude/>
+        </member>
+        <member name="M:VIBlend.Silverlight.Controls.RibbonTabItem.Close">
+            <summary>
+            Closes this instance.
+            </summary>
+        </member>
+        <member name="F:VIBlend.Silverlight.Controls.RibbonTabItem.TabOrientationProperty">
+            <exclude/>
+        </member>
+        <member name="F:VIBlend.Silverlight.Controls.RibbonTabItem.IsSelectedProperty">
+            <exclude/>
+        </member>
+        <member name="M:VIBlend.Silverlight.Controls.RibbonTabItem.OnCloseButtonClick">
+            <summary>
+            Called when the close button is clicked.
+            </summary>
+        </member>
+        <member name="M:VIBlend.Silverlight.Controls.RibbonTabItem.OnMouseLeave(System.Windows.Input.MouseEventArgs)">
+            <exclude/>
+        </member>
+        <member name="M:VIBlend.Silverlight.Controls.RibbonTabItem.OnMouseEnter(System.Windows.Input.MouseEventArgs)">
+            <exclude/>
+        </member>
+        <member name="F:VIBlend.Silverlight.Controls.RibbonTabItem.IsContextualProperty">
+            <exclude/>
+        </member>
+        <member name="F:VIBlend.Silverlight.Controls.RibbonTabItem.GroupProperty">
+            <exclude/>
+        </member>
+        <member name="F:VIBlend.Silverlight.Controls.RibbonTabItem.VisualIndexProperty">
+            <exclude/>
+        </member>
+        <member name="F:VIBlend.Silverlight.Controls.RibbonTabItem.ItemIndexProperty">
+            <exclude/>
+        </member>
+        <member name="M:VIBlend.Silverlight.Controls.RibbonTabItem.OnGotFocus(System.Windows.RoutedEventArgs)">
+            <summary>
+            Called before the <see cref="E:System.Windows.UIElement.GotFocus"/> event occurs.
+            </summary>
+            <param name="e">The data for the event.</param>
+        </member>
+        <member name="M:VIBlend.Silverlight.Controls.RibbonTabItem.OnLostFocus(System.Windows.RoutedEventArgs)">
+            <summary>
+            Called before the <see cref="E:System.Windows.UIElement.LostFocus"/> event occurs.
+            </summary>
+            <param name="e">The data for the event.</param>
+        </member>
+        <member name="M:VIBlend.Silverlight.Controls.RibbonTabItem.OnRibbonTabItemStateChanged">
+            <summary>
+            Called when tab item's state is changed.
+            </summary>
+        </member>
+        <member name="F:VIBlend.Silverlight.Controls.RibbonTabItem.HorizontalTextAlignmentProperty">
+            <exclude/>
+        </member>
+        <member name="F:VIBlend.Silverlight.Controls.RibbonTabItem.VerticalTextAlignmentProperty">
+            <exclude/>
+        </member>
+        <member name="F:VIBlend.Silverlight.Controls.RibbonTabItem.HorizontalImageAlignmentProperty">
+            <exclude/>
+        </member>
+        <member name="F:VIBlend.Silverlight.Controls.RibbonTabItem.VerticalImageAlignmentProperty">
+            <exclude/>
+        </member>
+        <member name="F:VIBlend.Silverlight.Controls.RibbonTabItem.DisplayModeProperty">
+            <exclude/>
+        </member>
+        <member name="M:VIBlend.Silverlight.Controls.RibbonTabItem.OnToggle">
+            <exclude/>
+        </member>
+        <member name="M:VIBlend.Silverlight.Controls.RibbonTabItem.ToString">
+            <exclude/>
+        </member>
+        <member name="M:VIBlend.Silverlight.Controls.RibbonTabItem.SynchronizeForegrounds">
+            <exclude/>
+        </member>
+        <member name="M:VIBlend.Silverlight.Controls.RibbonTabItem.Dispose">
+            <summary>
+            Performs application-defined tasks associated with freeing, releasing, or resetting unmanaged resources.
+            </summary>
+        </member>
+        <!-- Badly formed XML comment ignored for member "E:VIBlend.Silverlight.Controls.RibbonTabItem.TextImageRelationChanged" -->
+        <member name="E:VIBlend.Silverlight.Controls.RibbonTabItem.HeaderChanged">
+            <summary>
+            Occurs when the header is changed.
+            </summary>
+        </member>
+        <member name="P:VIBlend.Silverlight.Controls.RibbonTabItem.TextImageRelation">
+            <summary>
+            Gets or sets the text image relation.
+            </summary>
+        </member>
+        <member name="P:VIBlend.Silverlight.Controls.RibbonTabItem.Layout">
+            <summary>
+            Gets the layout control.
+            </summary>
+        </member>
+        <member name="P:VIBlend.Silverlight.Controls.RibbonTabItem.ImageControl">
+            <summary>
+            Gets the image control.
+            </summary>
+        </member>
+        <member name="P:VIBlend.Silverlight.Controls.RibbonTabItem.TextBlock">
+            <summary>
+            Gets the TextBlock.
+            </summary>
+        </member>
+        <member name="P:VIBlend.Silverlight.Controls.RibbonTabItem.Text">
+            <summary>
+            Gets or sets button's text.
+            </summary>
+        </member>
+        <member name="P:VIBlend.Silverlight.Controls.RibbonTabItem.ImageSource">
+            <summary>
+            Gets or sets the Button's image source.
+            </summary>
+        </member>
+        <member name="P:VIBlend.Silverlight.Controls.RibbonTabItem.CornerRadius">
+            <summary>
+            Gets or sets button's corner radius.
+            </summary>
+        </member>
+        <member name="P:VIBlend.Silverlight.Controls.RibbonTabItem.BackgroundOpacity">
+            <summary>
+            Gets or sets whether the button's background opacity.
+            </summary>
+        </member>
+        <member name="P:VIBlend.Silverlight.Controls.RibbonTabItem.ForegroundNormal">
+            <summary>
+            Gets or sets the foreground brush that is used when the button is in default state.
+            </summary>
+        </member>
+        <member name="P:VIBlend.Silverlight.Controls.RibbonTabItem.ForegroundDisabled">
+            <summary>
+            Gets or sets the foreground brush that is used when the button is disabled.
+            </summary>
+        </member>
+        <member name="P:VIBlend.Silverlight.Controls.RibbonTabItem.ForegroundPressed">
+            <summary>
+            Gets or sets the foreground brush that is used when the button is pressed.
+            </summary>
+        </member>
+        <member name="P:VIBlend.Silverlight.Controls.RibbonTabItem.ForegroundHighlight">
+            <summary>
+            Gets or sets the foreground brush that is used when the button is hovered.
+            </summary>
+        </member>
+        <member name="P:VIBlend.Silverlight.Controls.RibbonTabItem.BackgroundHighlight">
+            <summary>
+            Gets or sets whether the button's background opacity.
+            </summary>
+        </member>
+        <member name="P:VIBlend.Silverlight.Controls.RibbonTabItem.BorderBrushHighlight">
+            <summary>
+            Gets or sets whether the button's BorderBrush opacity.
+            </summary>
+        </member>
+        <member name="P:VIBlend.Silverlight.Controls.RibbonTabItem.BackgroundPressed">
+            <summary>
+            Gets or sets whether the button's background opacity.
+            </summary>
+        </member>
+        <member name="P:VIBlend.Silverlight.Controls.RibbonTabItem.BorderBrushPressed">
+            <summary>
+            Gets or sets whether the button's BorderBrush opacity.
+            </summary>
+        </member>
+        <member name="P:VIBlend.Silverlight.Controls.RibbonTabItem.CloseButton">
+            <summary>
+            Gets the close button.
+            </summary>
+            <value>The close button.</value>
+        </member>
+        <member name="P:VIBlend.Silverlight.Controls.RibbonTabItem.ContentMargin">
+            <summary>
+            Gets or sets the content margin.
+            </summary>
+            <value>The content margin.</value>
+        </member>
+        <member name="P:VIBlend.Silverlight.Controls.RibbonTabItem.IsLoaded">
+            <summary>
+            Gets or sets a value indicating whether this instance is loaded.
+            </summary>
+            <value><c>true</c> if this instance is loaded; otherwise, <c>false</c>.</value>
+        </member>
+        <member name="P:VIBlend.Silverlight.Controls.RibbonTabItem.RibbonBar">
+            <summary>
+            Gets the parent RibbonBar.
+            </summary>
+        </member>
+        <member name="P:VIBlend.Silverlight.Controls.RibbonTabItem.ContentBorderBrush">
+            <summary>
+            Gets or sets the Content border brush.
+            </summary>
+            <value>The Content border brush.</value>
+        </member>
+        <member name="P:VIBlend.Silverlight.Controls.RibbonTabItem.ContentBackground">
+            <summary>
+            Gets or sets the content background.
+            </summary>
+            <value>The content background.</value>
+        </member>
+        <member name="P:VIBlend.Silverlight.Controls.RibbonTabItem.ContentBorderThickness">
+            <summary>
+            Gets or sets the Content border thickness.
+            </summary>
+            <value>The Content border thickness.</value>
+        </member>
+        <member name="P:VIBlend.Silverlight.Controls.RibbonTabItem.ParentItemsControl">
+            <summary>
+            Gets or sets a reference to the parent ItemsControl.
+            </summary>
+        </member>
+        <member name="P:VIBlend.Silverlight.Controls.RibbonTabItem.AutoAdjustBorderThickness">
+            <summary>
+            Gets or sets a value indicating whether to auto adjust border's thickness.
+            </summary>
+        </member>
+        <member name="P:VIBlend.Silverlight.Controls.RibbonTabItem.CloseButtonVisibility">
+            <summary>
+            Gets or sets the close button visibility.
+            </summary>
+            <value>The close button visibility.</value>
+        </member>
+        <member name="P:VIBlend.Silverlight.Controls.RibbonTabItem.ShowCloseButtonInDefaultRibbonTabItemState">
+            <summary>
+            Gets or sets a value indicating whether to show the close button in the default state.
+            </summary>
+        </member>
+        <member name="P:VIBlend.Silverlight.Controls.RibbonTabItem.CloseButtonAction">
+            <summary>
+            Gets or sets the close button action.
+            </summary>
+            <value>The close button action.</value>
+        </member>
+        <member name="P:VIBlend.Silverlight.Controls.RibbonTabItem.TabOrientation">
+            <summary>
+            Gets or sets the tab orientation.
+            </summary>
+            <value>The tab orientation.</value>
+        </member>
+        <member name="E:VIBlend.Silverlight.Controls.RibbonTabItem.Selected">
+            <summary>
+            Occurs when the item is selected.
+            </summary>
+        </member>
+        <member name="E:VIBlend.Silverlight.Controls.RibbonTabItem.CloseButtonClick">
+            <summary>
+            Occurs when the close button is clicked.
+            </summary>
+        </member>
+        <member name="E:VIBlend.Silverlight.Controls.RibbonTabItem.Unselected">
+            <summary>
+            Occurs when the item is unselected.
+            </summary>
+        </member>
+        <member name="P:VIBlend.Silverlight.Controls.RibbonTabItem.IsFocused">
+            <summary>
+            Gets or sets a value indicating whether this instance is focused.
+            </summary>
+            <value>
+            	<c>true</c> if this instance is focused; otherwise, <c>false</c>.
+            </value>
+        </member>
+        <member name="P:VIBlend.Silverlight.Controls.RibbonTabItem.IsContextual">
+            <summary>
+            Gets or sets a value indicating whether this instance is contextual.
+            </summary>
+            <value>
+            	<c>true</c> if this instance is contextual; otherwise, <c>false</c>.
+            </value>
+        </member>
+        <member name="P:VIBlend.Silverlight.Controls.RibbonTabItem.Group">
+            <summary>
+            Gets or sets the group.
+            </summary>
+            <value>The group.</value>
+        </member>
+        <member name="P:VIBlend.Silverlight.Controls.RibbonTabItem.VisualIndex">
+            <summary>
+            Gets or sets the index of the visual.
+            </summary>
+            <value>The index of the visual.</value>
+        </member>
+        <member name="P:VIBlend.Silverlight.Controls.RibbonTabItem.ItemIndex">
+            <summary>
+            Gets or sets the index of the visual.
+            </summary>
+            <value>The index of the visual.</value>
+        </member>
+        <member name="E:VIBlend.Silverlight.Controls.RibbonTabItem.RibbonTabItemStateChanged">
+            <summary>
+            Occurs when button's UI state is changed.
+            </summary>
+        </member>
+        <member name="P:VIBlend.Silverlight.Controls.RibbonTabItem.HorizontalTextAlignment">
+            <summary>
+            Gets ot sets the horizontal alignment of button's text.
+            </summary>
+        </member>
+        <member name="P:VIBlend.Silverlight.Controls.RibbonTabItem.VerticalTextAlignment">
+            <summary>
+            Gets ot sets the vertical alignment of button's text.
+            </summary>
+        </member>
+        <member name="P:VIBlend.Silverlight.Controls.RibbonTabItem.HorizontalImageAlignment">
+            <summary>
+            Gets ot sets the horizontal alignment of button's image.
+            </summary>
+        </member>
+        <member name="P:VIBlend.Silverlight.Controls.RibbonTabItem.VerticalImageAlignment">
+            <summary>
+            Gets or sets the vertical alignment of button's image.
+            </summary>
+        </member>
+        <member name="P:VIBlend.Silverlight.Controls.RibbonTabItem.DisplayMode">
+            <summary>
+            Gets or sets the display mode.
+            </summary>
+            <value>The display mode.</value>
+        </member>
+        <member name="P:VIBlend.Silverlight.Controls.RibbonTabItem.IsMouseOver">
+            <summary>
+            Gets or sets a value indicating whether this instance is mouse over.
+            </summary>
+            <value>
+            	<c>true</c> if this instance is mouse over; otherwise, <c>false</c>.
+            </value>
+        </member>
+        <member name="P:VIBlend.Silverlight.Controls.RibbonTabItem.IsSelected">
+            <summary>
+            Gets or sets whether the button is selected.
+            </summary>
+        </member>
+        <member name="T:VIBlend.Silverlight.Controls.RibbonGalleryItem">
+            <summary>
+            Represents a single item in the RibbonGallery Group.
+            </summary>
+        </member>
+        <member name="M:VIBlend.Silverlight.Controls.RibbonGalleryItem.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:VIBlend.Silverlight.Controls.RibbonGalleryItem"/> class.
+            </summary>
+        </member>
+        <member name="M:VIBlend.Silverlight.Controls.RibbonGalleryItem.OnClick">
+            <summary>
+            Occurs when the button is clicked.
+            </summary>
+        </member>
+        <member name="M:VIBlend.Silverlight.Controls.RibbonGalleryItem.OnApplyTemplate">
+            <summary>
+            When overridden in a derived class, is invoked whenever application code or internal processes (such as a rebuilding layout pass) call <see cref="M:System.Windows.Controls.Control.ApplyTemplate"/>. In simplest terms, this means the method is called just before a UI element displays in an application. For more information, see Remarks.
+            </summary>
+        </member>
+        <member name="P:VIBlend.Silverlight.Controls.RibbonGalleryItem.RibbonGalleryGroup">
+            <summary>
+            Gets or sets the ribbon gallery group.
+            </summary>
+            <value>The ribbon gallery group.</value>
+        </member>
+    </members>
+</doc>

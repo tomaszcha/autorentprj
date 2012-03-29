@@ -1,0 +1,4 @@
+﻿[$RootKey$\ToolboxControlsInstaller\VIBlend.Silverlight.BannerRotator, Version=6.0.0.0, Culture=neutral, PublicKeyToken=f5371b34064f4b93, processorArchitecture=MSIL]
+@="VIBlend Silverlight Controls 6.0"
+"Codebase"="$PackageFolder$\VIBlend.Silverlight.BannerRotator.dll"
+"SilverlightControls"="2"

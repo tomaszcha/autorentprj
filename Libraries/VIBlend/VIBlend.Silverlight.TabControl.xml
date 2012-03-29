@@ -1,0 +1,1676 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>VIBlend.Silverlight.TabControl</name>
+    </assembly>
+    <members>
+        <member name="T:VIBlend.Silverlight.Controls.IAnimatedPanelScrollInfo">
+            <exclude/>   
+        </member>
+        <member name="M:VIBlend.Silverlight.Controls.IAnimatedPanelScrollInfo.LineDown">
+            <summary>Scrolls down within the content by one logical unit.</summary>
+        </member>
+        <member name="M:VIBlend.Silverlight.Controls.IAnimatedPanelScrollInfo.LineLeft">
+            <summary>Scrolls left within the content by one logical unit.</summary>
+        </member>
+        <member name="M:VIBlend.Silverlight.Controls.IAnimatedPanelScrollInfo.LineRight">
+            <summary>Scrolls right within the content by one logical unit.</summary>
+        </member>
+        <member name="M:VIBlend.Silverlight.Controls.IAnimatedPanelScrollInfo.LineUp">
+            <summary>Scrolls up within the content by one logical unit.</summary>
+        </member>
+        <member name="M:VIBlend.Silverlight.Controls.IAnimatedPanelScrollInfo.MakeVisible(System.Windows.UIElement,System.Windows.Rect)">
+            <summary>Forces content to scroll until the coordinate space of a visual object is visible.</summary>
+            <returns>A <see cref="T:System.Windows.Rect" /> that is visible.</returns>
+            <param name="visual">A <see cref="T:System.Windows.UIElement" /> that becomes visible.</param>
+            <param name="rectangle">A bounding rectangle that identifies the coordinate space to make visible.</param>
+        </member>
+        <member name="M:VIBlend.Silverlight.Controls.IAnimatedPanelScrollInfo.MouseWheelDown">
+            <summary>Scrolls down within the content after the user clicks the wheel button on a mouse.</summary>
+        </member>
+        <member name="M:VIBlend.Silverlight.Controls.IAnimatedPanelScrollInfo.MouseWheelLeft">
+            <summary>Scrolls left within the content after the user clicks the wheel button on a mouse.</summary>
+        </member>
+        <member name="M:VIBlend.Silverlight.Controls.IAnimatedPanelScrollInfo.MouseWheelRight">
+            <summary>Scrolls right within the content after the user clicks the wheel button on a mouse.</summary>
+        </member>
+        <member name="M:VIBlend.Silverlight.Controls.IAnimatedPanelScrollInfo.MouseWheelUp">
+            <summary>Scrolls up within the content after the user clicks the wheel button on a mouse.</summary>
+        </member>
+        <member name="M:VIBlend.Silverlight.Controls.IAnimatedPanelScrollInfo.PageDown">
+            <summary>Scrolls down within the content by one page.</summary>
+        </member>
+        <member name="M:VIBlend.Silverlight.Controls.IAnimatedPanelScrollInfo.PageLeft">
+            <summary>Scrolls left within the content by one page.</summary>
+        </member>
+        <member name="M:VIBlend.Silverlight.Controls.IAnimatedPanelScrollInfo.PageRight">
+            <summary>Scrolls right within the content by one page.</summary>
+        </member>
+        <member name="M:VIBlend.Silverlight.Controls.IAnimatedPanelScrollInfo.PageUp">
+            <summary>Scrolls up within the content by one page.</summary>
+        </member>
+        <member name="M:VIBlend.Silverlight.Controls.IAnimatedPanelScrollInfo.SetHorizontalOffset(System.Double)">
+            <summary>Sets the amount of horizontal offset.</summary>
+            <param name="offset">The amount that content is horizontally offset from the containing viewport.</param>
+        </member>
+        <member name="M:VIBlend.Silverlight.Controls.IAnimatedPanelScrollInfo.SetVerticalOffset(System.Double)">
+            <summary>Sets the amount of vertical offset.</summary>
+            <param name="offset">The amount that content is vertically offset from the containing viewport.</param>
+        </member>
+        <member name="P:VIBlend.Silverlight.Controls.IAnimatedPanelScrollInfo.CanHorizontallyScroll">
+            <summary>Gets or sets a value that indicates whether scrolling on the horizontal axis is possible.</summary>
+            <returns>true if scrolling is possible; otherwise false. This property has no default value.</returns>
+        </member>
+        <member name="P:VIBlend.Silverlight.Controls.IAnimatedPanelScrollInfo.CanVerticallyScroll">
+            <summary>Gets or sets a value that indicates whether scrolling on the vertical axis is possible.</summary>
+            <returns>true if scrolling is possible; otherwise false. This property has no default value.</returns>
+        </member>
+        <member name="P:VIBlend.Silverlight.Controls.IAnimatedPanelScrollInfo.ExtentHeight">
+            <summary>Gets the vertical size of the extent.</summary>
+            <returns>A <see cref="T:System.Double" /> that represents, in device independent pixels, the vertical size of the extent. This property has no default value.</returns>
+        </member>
+        <member name="P:VIBlend.Silverlight.Controls.IAnimatedPanelScrollInfo.ExtentWidth">
+            <summary>Gets the horizontal size of the extent.</summary>
+            <returns>A <see cref="T:System.Double" /> that represents, in device independent pixels, the horizontal size of the extent. This property has no default value.</returns>
+        </member>
+        <member name="P:VIBlend.Silverlight.Controls.IAnimatedPanelScrollInfo.HorizontalOffset">
+            <summary>Gets the horizontal offset of the scrolled content.</summary>
+            <returns>A <see cref="T:System.Double" /> that represents, in device independent pixels, the horizontal offset. Valid values are between zero and the <see cref="P:System.Windows.Controls.Primitives.IScrollInfo.ExtentWidth" /> minus the <see cref="P:System.Windows.Controls.Primitives.IScrollInfo.ViewportWidth" />. This property has no default value.</returns>
+        </member>
+        <member name="P:VIBlend.Silverlight.Controls.IAnimatedPanelScrollInfo.ScrollOwner">
+            <summary>Gets or sets a <see cref="T:System.Windows.Controls.ScrollViewer" /> element that controls scrolling behavior.</summary>
+            <returns>A <see cref="T:System.Windows.Controls.ScrollViewer" /> element that controls scrolling behavior. This property has no default value.</returns>
+        </member>
+        <member name="P:VIBlend.Silverlight.Controls.IAnimatedPanelScrollInfo.VerticalOffset">
+            <summary>Gets the vertical offset of the scrolled content.</summary>
+            <returns>A <see cref="T:System.Double" /> that represents, in device independent pixels, the vertical offset of the scrolled content. Valid values are between zero and the <see cref="P:System.Windows.Controls.Primitives.IScrollInfo.ExtentHeight" /> minus the <see cref="P:System.Windows.Controls.Primitives.IScrollInfo.ViewportHeight" />. This property has no default value.</returns>
+        </member>
+        <member name="P:VIBlend.Silverlight.Controls.IAnimatedPanelScrollInfo.ViewportHeight">
+            <summary>Gets the vertical size of the viewport for this content.</summary>
+            <returns>A <see cref="T:System.Double" /> that represents, in device independent pixels, the vertical size of the viewport for this content. This property has no default value.</returns>
+        </member>
+        <member name="P:VIBlend.Silverlight.Controls.IAnimatedPanelScrollInfo.ViewportWidth">
+            <summary>Gets the horizontal size of the viewport for this content.</summary>
+            <returns>A <see cref="T:System.Double" /> that represents, in device independent pixels, the horizontal size of the viewport for this content. This property has no default value.</returns>
+        </member>
+        <member name="T:VIBlend.Silverlight.Controls.TabItemBase">
+            <summary>
+            Represents a button control.
+            </summary>
+        </member>
+        <member name="F:VIBlend.Silverlight.Controls.TabItemBase.CornerRadiusProperty">
+            <exclude/>
+        </member>
+        <member name="F:VIBlend.Silverlight.Controls.TabItemBase.HeaderTemplateProperty">
+            <exclude/>
+        </member>
+        <member name="F:VIBlend.Silverlight.Controls.TabItemBase.HeaderProperty">
+            <exclude/>
+        </member>
+        <member name="M:VIBlend.Silverlight.Controls.TabItemBase.OnTextImageRelationChanged">
+            <summary>
+            Called when the text image relation is changed.
+            </summary>
+        </member>
+        <member name="M:VIBlend.Silverlight.Controls.TabItemBase.OnHeaderChanged(System.Object,System.Object)">
+            <summary>
+            Called when the header is changed.
+            </summary>
+            <param name="oldHeader">The old header.</param>
+            <param name="newHeader">The new header.</param>
+        </member>
+        <member name="F:VIBlend.Silverlight.Controls.TabItemBase.TextImageRelationProperty">
+            <exclude/>
+        </member>
+        <member name="F:VIBlend.Silverlight.Controls.TabItemBase.TextProperty">
+            <exclude/>
+        </member>
+        <member name="F:VIBlend.Silverlight.Controls.TabItemBase.ImageSourceProperty">
+            <exclude/>
+        </member>
+        <member name="M:VIBlend.Silverlight.Controls.TabItemBase.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:VIBlend.Silverlight.Controls.TabItemBase"/> class.
+            </summary>
+        </member>
+        <member name="M:VIBlend.Silverlight.Controls.TabItemBase.OnClick">
+            <summary>
+            Raises the <see cref="E:System.Windows.Controls.Primitives.ButtonBase.Click"/> event.
+            </summary>
+        </member>
+        <member name="M:VIBlend.Silverlight.Controls.TabItemBase.OnApplyTemplate">
+            <exclude/>
+        </member>
+        <member name="M:VIBlend.Silverlight.Controls.TabItemBase.UnwireEvents">
+            <summary>
+            Unwires the events.
+            </summary>
+        </member>
+        <member name="F:VIBlend.Silverlight.Controls.TabItemBase.BackgroundOpacityProperty">
+            <exclude/>
+        </member>
+        <member name="F:VIBlend.Silverlight.Controls.TabItemBase.ForegroundNormalProperty">
+            <exclude/>
+        </member>
+        <member name="F:VIBlend.Silverlight.Controls.TabItemBase.ForegroundDisabledProperty">
+            <exclude/>
+        </member>
+        <member name="F:VIBlend.Silverlight.Controls.TabItemBase.ForegroundPressedProperty">
+            <exclude/>
+        </member>
+        <member name="F:VIBlend.Silverlight.Controls.TabItemBase.ForegroundHighlightProperty">
+            <exclude/>
+        </member>
+        <member name="F:VIBlend.Silverlight.Controls.TabItemBase.BackgroundHighlightProperty">
+            <exclude/>
+        </member>
+        <member name="F:VIBlend.Silverlight.Controls.TabItemBase.BorderBrushHighlightProperty">
+            <exclude/>
+        </member>
+        <member name="F:VIBlend.Silverlight.Controls.TabItemBase.BackgroundPressedProperty">
+            <exclude/>
+        </member>
+        <member name="F:VIBlend.Silverlight.Controls.TabItemBase.BorderBrushPressedProperty">
+            <exclude/>
+        </member>
+        <member name="M:VIBlend.Silverlight.Controls.TabItemBase.SynchronizeForegrounds">
+            <exclude/>
+        </member>
+        <member name="M:VIBlend.Silverlight.Controls.TabItemBase.OnMouseEnter(System.Windows.Input.MouseEventArgs)">
+            <exclude/>
+        </member>
+        <member name="M:VIBlend.Silverlight.Controls.TabItemBase.OnMouseLeave(System.Windows.Input.MouseEventArgs)">
+            <exclude/>
+        </member>
+        <member name="M:VIBlend.Silverlight.Controls.TabItemBase.OnMouseLeftButtonDown(System.Windows.Input.MouseButtonEventArgs)">
+            <exclude/>
+        </member>
+        <member name="M:VIBlend.Silverlight.Controls.TabItemBase.OnMouseMove(System.Windows.Input.MouseEventArgs)">
+            <exclude/>
+        </member>
+        <member name="M:VIBlend.Silverlight.Controls.TabItemBase.OnMouseRightButtonDown(System.Windows.Input.MouseButtonEventArgs)">
+            <exclude/>
+        </member>
+        <member name="M:VIBlend.Silverlight.Controls.TabItemBase.OnMouseLeftButtonUp(System.Windows.Input.MouseButtonEventArgs)">
+            <exclude/>
+        </member>
+        <member name="M:VIBlend.Silverlight.Controls.TabItemBase.OnMouseRightButtonUp(System.Windows.Input.MouseButtonEventArgs)">
+            <exclude/>
+        </member>
+        <member name="P:VIBlend.Silverlight.Controls.TabItemBase.HeaderTemplate">
+            <summary>
+            Gets or sets the tab item header template.
+            </summary>
+            <value>The tab item header template.</value>
+        </member>
+        <member name="P:VIBlend.Silverlight.Controls.TabItemBase.Header">
+            <summary>
+            Gets or sets the header.
+            </summary>
+            <value>The header.</value>
+        </member>
+        <member name="E:VIBlend.Silverlight.Controls.TabItemBase.TextImageRelationChanged">
+            <summary>
+            Occurs when the TextImageRelation property is changed.
+            </summary>
+        </member>
+        <member name="E:VIBlend.Silverlight.Controls.TabItemBase.HeaderChanged">
+            <summary>
+            Occurs when the header is changed.
+            </summary>
+        </member>
+        <member name="P:VIBlend.Silverlight.Controls.TabItemBase.TextImageRelation">
+            <summary>
+            Gets or sets the text image relation.
+            </summary>
+        </member>
+        <member name="P:VIBlend.Silverlight.Controls.TabItemBase.Layout">
+            <summary>
+            Gets the layout control.
+            </summary>
+        </member>
+        <member name="P:VIBlend.Silverlight.Controls.TabItemBase.ImageControl">
+            <summary>
+            Gets the image control.
+            </summary>
+        </member>
+        <member name="P:VIBlend.Silverlight.Controls.TabItemBase.TextBlock">
+            <summary>
+            Gets the TextBlock.
+            </summary>
+        </member>
+        <member name="P:VIBlend.Silverlight.Controls.TabItemBase.Text">
+            <summary>
+            Gets or sets button's text.
+            </summary>
+        </member>
+        <member name="P:VIBlend.Silverlight.Controls.TabItemBase.ImageSource">
+            <summary>
+            Gets or sets the Button's image source.
+            </summary>
+        </member>
+        <member name="P:VIBlend.Silverlight.Controls.TabItemBase.CornerRadius">
+            <summary>
+            Gets or sets button's corner radius.
+            </summary>
+        </member>
+        <member name="P:VIBlend.Silverlight.Controls.TabItemBase.BackgroundOpacity">
+            <summary>
+            Gets or sets whether the button's background opacity.
+            </summary>
+        </member>
+        <member name="P:VIBlend.Silverlight.Controls.TabItemBase.ForegroundNormal">
+            <summary>
+            Gets or sets the foreground brush that is used when the button is in default state.
+            </summary>
+        </member>
+        <member name="P:VIBlend.Silverlight.Controls.TabItemBase.ForegroundDisabled">
+            <summary>
+            Gets or sets the foreground brush that is used when the button is disabled.
+            </summary>
+        </member>
+        <member name="P:VIBlend.Silverlight.Controls.TabItemBase.ForegroundPressed">
+            <summary>
+            Gets or sets the foreground brush that is used when the button is pressed.
+            </summary>
+        </member>
+        <member name="P:VIBlend.Silverlight.Controls.TabItemBase.ForegroundHighlight">
+            <summary>
+            Gets or sets the foreground brush that is used when the button is hovered.
+            </summary>
+        </member>
+        <member name="P:VIBlend.Silverlight.Controls.TabItemBase.BackgroundHighlight">
+            <summary>
+            Gets or sets whether the button's background opacity.
+            </summary>
+        </member>
+        <member name="P:VIBlend.Silverlight.Controls.TabItemBase.BorderBrushHighlight">
+            <summary>
+            Gets or sets whether the button's BorderBrush opacity.
+            </summary>
+        </member>
+        <member name="P:VIBlend.Silverlight.Controls.TabItemBase.BackgroundPressed">
+            <summary>
+            Gets or sets whether the button's background opacity.
+            </summary>
+        </member>
+        <member name="P:VIBlend.Silverlight.Controls.TabItemBase.BorderBrushPressed">
+            <summary>
+            Gets or sets whether the button's BorderBrush opacity.
+            </summary>
+        </member>
+        <member name="T:VIBlend.Silverlight.Controls.AnimatedScrollElement">
+            <exclude/>   
+        </member>
+        <member name="F:VIBlend.Silverlight.Controls.AnimatedScrollElement.OrientationProperty">
+            <exclude/>
+        </member>
+        <member name="F:VIBlend.Silverlight.Controls.AnimatedScrollElement.ViewportSizeProperty">
+            <exclude/>
+        </member>
+        <member name="M:VIBlend.Silverlight.Controls.AnimatedScrollElement.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:VIBlend.Silverlight.Controls.AnimatedScrollElement"/> class.
+            </summary>
+        </member>
+        <member name="M:VIBlend.Silverlight.Controls.AnimatedScrollElement.OnApplyTemplate">
+            <summary>
+            When overridden in a derived class, is invoked whenever application code or internal processes (such as a rebuilding layout pass) call <see cref="M:System.Windows.Controls.Control.ApplyTemplate"/>.
+            </summary>
+        </member>
+        <member name="M:VIBlend.Silverlight.Controls.AnimatedScrollElement.OnIsButtonMouseOverChanged">
+            <summary>
+            Called when a button's hover state is changed.
+            </summary>
+        </member>
+        <member name="M:VIBlend.Silverlight.Controls.AnimatedScrollElement.OnLostMouseCapture(System.Windows.Input.MouseEventArgs)">
+            <summary>
+            Called before the <see cref="E:System.Windows.UIElement.LostMouseCapture"/> event occurs to provide handling for the event in a derived class without attaching a delegate.
+            </summary>
+            <param name="e">A <see cref="T:System.Windows.Input.MouseEventArgs"/> that contains the event data.</param>
+        </member>
+        <member name="M:VIBlend.Silverlight.Controls.AnimatedScrollElement.OnMaximumChanged(System.Double,System.Double)">
+            <summary>
+            Called when the <see cref="P:System.Windows.Controls.Primitives.RangeBase.Maximum"/> property changes.
+            </summary>
+            <param name="oldMaximum">Old value of the <see cref="P:System.Windows.Controls.Primitives.RangeBase.Maximum"/> property.</param>
+            <param name="newMaximum">New value of the <see cref="P:System.Windows.Controls.Primitives.RangeBase.Maximum"/> property.</param>
+        </member>
+        <member name="M:VIBlend.Silverlight.Controls.AnimatedScrollElement.OnMinimumChanged(System.Double,System.Double)">
+            <summary>
+            Called when the <see cref="P:System.Windows.Controls.Primitives.RangeBase.Minimum"/> property changes.
+            </summary>
+            <param name="oldMinimum">Old value of the <see cref="P:System.Windows.Controls.Primitives.RangeBase.Minimum"/> property.</param>
+            <param name="newMinimum">New value of the <see cref="P:System.Windows.Controls.Primitives.RangeBase.Minimum"/> property.</param>
+        </member>
+        <member name="M:VIBlend.Silverlight.Controls.AnimatedScrollElement.OnMouseEnter(System.Windows.Input.MouseEventArgs)">
+            <summary>
+            Called before the <see cref="E:System.Windows.UIElement.MouseEnter"/> event occurs.
+            </summary>
+            <param name="e">The data for the event.</param>
+        </member>
+        <member name="M:VIBlend.Silverlight.Controls.AnimatedScrollElement.OnMouseLeave(System.Windows.Input.MouseEventArgs)">
+            <summary>
+            Called before the <see cref="E:System.Windows.UIElement.MouseLeave"/> event occurs.
+            </summary>
+            <param name="e">The data for the event.</param>
+        </member>
+        <member name="M:VIBlend.Silverlight.Controls.AnimatedScrollElement.OnMouseLeftButtonDown(System.Windows.Input.MouseButtonEventArgs)">
+            <summary>
+            Called before the <see cref="E:System.Windows.UIElement.MouseLeftButtonDown"/> event occurs.
+            </summary>
+            <param name="e">The data for the event.</param>
+        </member>
+        <member name="M:VIBlend.Silverlight.Controls.AnimatedScrollElement.OnMouseLeftButtonUp(System.Windows.Input.MouseButtonEventArgs)">
+            <summary>
+            Called before the <see cref="E:System.Windows.UIElement.MouseLeftButtonUp"/> event occurs.
+            </summary>
+            <param name="e">The data for the event.</param>
+        </member>
+        <member name="M:VIBlend.Silverlight.Controls.AnimatedScrollElement.OnValueChanged(System.Double,System.Double)">
+            <summary>
+            Raises the <see cref="E:System.Windows.Controls.Primitives.RangeBase.ValueChanged"/> routed event.
+            </summary>
+            <param name="oldValue">Old value of the <see cref="P:System.Windows.Controls.Primitives.RangeBase.Value"/> property.</param>
+            <param name="newValue">New value of the <see cref="P:System.Windows.Controls.Primitives.RangeBase.Value"/> property.</param>
+        </member>
+        <member name="E:VIBlend.Silverlight.Controls.AnimatedScrollElement.Scroll">
+            <summary>
+            Occurs when a user presses a scroll button.
+            </summary>
+        </member>
+        <member name="E:VIBlend.Silverlight.Controls.AnimatedScrollElement.IsButtonMouseOverChanged">
+            <summary>
+            Occurs when the mouse cursor is over the button.
+            </summary>
+        </member>
+        <member name="P:VIBlend.Silverlight.Controls.AnimatedScrollElement.IsButtonMouseOver">
+            <summary>
+            Gets or sets a value indicating whether this instance is button mouse over.
+            </summary>
+            <value>
+            	<c>true</c> if this instance is button mouse over; otherwise, <c>false</c>.
+            </value>
+        </member>
+        <member name="P:VIBlend.Silverlight.Controls.AnimatedScrollElement.Orientation">
+            <summary>
+            Gets or sets the orientation.
+            </summary>
+            <value>The orientation.</value>
+        </member>
+        <member name="P:VIBlend.Silverlight.Controls.AnimatedScrollElement.ViewportSize">
+            <summary>
+            Gets or sets the size of the viewport.
+            </summary>
+            <value>The size of the viewport.</value>
+        </member>
+        <member name="T:VIBlend.Silverlight.Controls.AnimatedPanelContentPresenter">
+            <exclude/>
+        </member>
+        <member name="M:VIBlend.Silverlight.Controls.AnimatedPanelContentPresenter.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:VIBlend.Silverlight.Controls.AnimatedPanelContentPresenter"/> class.
+            </summary>
+        </member>
+        <member name="F:VIBlend.Silverlight.Controls.AnimatedPanelContentPresenter.LineStepProperty">
+            <exclude/>
+        </member>
+        <member name="F:VIBlend.Silverlight.Controls.AnimatedPanelContentPresenter.AccelerationLineStepProperty">
+            <exclude/>
+        </member>
+        <member name="M:VIBlend.Silverlight.Controls.AnimatedPanelContentPresenter.ArrangeOverride(System.Windows.Size)">
+            <summary>
+            Arranges the override.
+            </summary>
+            <param name="arrangeSize">Size of the arrange.</param>
+            <returns></returns>
+        </member>
+        <member name="M:VIBlend.Silverlight.Controls.AnimatedPanelContentPresenter.HookupScrollingComponents">
+            <summary>
+            Hookups the scrolling components.
+            </summary>
+        </member>
+        <member name="M:VIBlend.Silverlight.Controls.AnimatedPanelContentPresenter.HookupScrollingComponents(VIBlend.Silverlight.Controls.AnimatedScrollViewer)">
+            <summary>
+            Hookups the scrolling components.
+            </summary>
+            <param name="templatedParent">The templated parent.</param>
+        </member>
+        <member name="M:VIBlend.Silverlight.Controls.AnimatedPanelContentPresenter.LineDown">
+            <summary>Scrolls the <see cref="T:System.Windows.Controls.ScrollContentPresenter" /> content downward by one line.</summary>
+        </member>
+        <member name="M:VIBlend.Silverlight.Controls.AnimatedPanelContentPresenter.LineLeft">
+            <summary>Scrolls the <see cref="T:System.Windows.Controls.ScrollContentPresenter" /> content to the left by a predetermined amount.</summary>
+        </member>
+        <member name="M:VIBlend.Silverlight.Controls.AnimatedPanelContentPresenter.LineRight">
+            <summary>Scrolls the <see cref="T:System.Windows.Controls.ScrollContentPresenter" /> content to the right by a predetermined amount.</summary>
+        </member>
+        <member name="M:VIBlend.Silverlight.Controls.AnimatedPanelContentPresenter.LineUp">
+            <summary>Scrolls the <see cref="T:System.Windows.Controls.ScrollContentPresenter" /> content upward by one line.</summary>
+        </member>
+        <member name="M:VIBlend.Silverlight.Controls.AnimatedPanelContentPresenter.MakeVisible(System.Windows.UIElement,System.Windows.Rect)">
+            <summary>Forces content to scroll until the coordinate space of a visual object is visible.</summary>
+            <returns>A <see cref="T:System.Windows.Rect" /> that represents the visible region. </returns>
+            <param name="visual">A <see cref="T:System.Windows.UIElement" /> that becomes visible.</param>
+            <param name="rectangle">The bounding rectangle that identifies the coordinate space to make visible.</param>
+        </member>
+        <member name="M:VIBlend.Silverlight.Controls.AnimatedPanelContentPresenter.MeasureOverride(System.Windows.Size)">
+            <summary>
+            Measures the override.
+            </summary>
+            <param name="constraint">The constraint.</param>
+            <returns></returns>
+        </member>
+        <member name="M:VIBlend.Silverlight.Controls.AnimatedPanelContentPresenter.MouseWheelDown">
+            <summary>Scrolls down within content after a user clicks the wheel button on a mouse.</summary>
+        </member>
+        <member name="M:VIBlend.Silverlight.Controls.AnimatedPanelContentPresenter.MouseWheelLeft">
+            <summary>Scrolls left within content after a user clicks the wheel button on a mouse.</summary>
+        </member>
+        <member name="M:VIBlend.Silverlight.Controls.AnimatedPanelContentPresenter.MouseWheelRight">
+            <summary>Scrolls right within content after a user clicks the wheel button on a mouse.</summary>
+        </member>
+        <member name="M:VIBlend.Silverlight.Controls.AnimatedPanelContentPresenter.MouseWheelUp">
+            <summary>Scrolls up within content after a user clicks the wheel button on a mouse.</summary>
+        </member>
+        <member name="M:VIBlend.Silverlight.Controls.AnimatedPanelContentPresenter.OnApplyTemplate">
+            <summary>Builds the visual tree for the <see cref="T:System.Windows.Controls.ScrollContentPresenter" /> when a new template is applied.</summary>
+        </member>
+        <member name="M:VIBlend.Silverlight.Controls.AnimatedPanelContentPresenter.PageDown">
+            <summary>Scrolls down within the content by one page.</summary>
+        </member>
+        <member name="M:VIBlend.Silverlight.Controls.AnimatedPanelContentPresenter.PageLeft">
+            <summary>Scrolls left within the content by one page.</summary>
+        </member>
+        <member name="M:VIBlend.Silverlight.Controls.AnimatedPanelContentPresenter.PageRight">
+            <summary>Scrolls right within the content by one page.</summary>
+        </member>
+        <member name="M:VIBlend.Silverlight.Controls.AnimatedPanelContentPresenter.PageUp">
+            <summary>Scrolls up within the content by one page.</summary>
+        </member>
+        <member name="M:VIBlend.Silverlight.Controls.AnimatedPanelContentPresenter.SetHorizontalOffset(System.Double)">
+            <summary>Sets the distance the content has been scrolled horizontally.</summary>
+            <param name="offset">The distance the content has been scrolled horizontally.</param>
+        </member>
+        <member name="M:VIBlend.Silverlight.Controls.AnimatedPanelContentPresenter.StopTimers">
+            <summary>
+            Stops the timers.
+            </summary>
+        </member>
+        <member name="M:VIBlend.Silverlight.Controls.AnimatedPanelContentPresenter.SetVerticalOffset(System.Double)">
+            <summary>Sets the distance the content has been scrolled vertically.</summary>
+            <param name="offset">The distance the content has been scrolled vertically.</param>
+        </member>
+        <member name="P:VIBlend.Silverlight.Controls.AnimatedPanelContentPresenter.LineSmallStep">
+            <summary>
+            Gets or sets the line small step.
+            </summary>
+            <value>The line small step.</value>
+        </member>
+        <member name="P:VIBlend.Silverlight.Controls.AnimatedPanelContentPresenter.LineStep">
+            <summary>
+            Gets or sets the line step.
+            </summary>
+            <value>The line step.</value>
+        </member>
+        <member name="P:VIBlend.Silverlight.Controls.AnimatedPanelContentPresenter.AccelerationLineStep">
+            <summary>
+            Gets or sets the acceleration max step.
+            </summary>
+            <value>The acceleration max step.</value>
+        </member>
+        <member name="P:VIBlend.Silverlight.Controls.AnimatedPanelContentPresenter.IsHovered">
+            <summary>
+            Gets or sets a value indicating whether this instance is hovered.
+            </summary>
+            <value>
+            	<c>true</c> if this instance is hovered; otherwise, <c>false</c>.
+            </value>
+        </member>
+        <member name="P:VIBlend.Silverlight.Controls.AnimatedPanelContentPresenter.CanHorizontallyScroll">
+            <summary>Gets or sets a value that indicates whether scrolling on the horizontal axis is possible.</summary>
+            <returns>true if scrolling is possible; otherwise, false.</returns>
+        </member>
+        <member name="P:VIBlend.Silverlight.Controls.AnimatedPanelContentPresenter.CanVerticallyScroll">
+            <summary>Gets or sets a value that indicates whether scrolling on the vertical axis is possible.</summary>
+            <returns>true if scrolling is possible; otherwise, false.</returns>
+        </member>
+        <member name="P:VIBlend.Silverlight.Controls.AnimatedPanelContentPresenter.ExtentHeight">
+            <summary>Gets the vertical size of the extent.</summary>
+            <returns>The vertical size of the extent.</returns>
+        </member>
+        <member name="P:VIBlend.Silverlight.Controls.AnimatedPanelContentPresenter.ExtentWidth">
+            <summary>Gets the horizontal size of the extent.</summary>
+            <returns>The horizontal size of the extent.</returns>
+        </member>
+        <member name="P:VIBlend.Silverlight.Controls.AnimatedPanelContentPresenter.HorizontalOffset">
+            <summary>Gets or sets the distance the content has been scrolled horizontally.</summary>
+            <returns>The distance the content has been scrolled horizontally.</returns>
+        </member>
+        <member name="P:VIBlend.Silverlight.Controls.AnimatedPanelContentPresenter.ScrollOwner">
+            <summary>Gets or sets the <see cref="T:System.Windows.Controls.ScrollViewer" /> element that controls scrolling behavior.</summary>
+            <returns>The <see cref="T:System.Windows.Controls.ScrollViewer" /> element that controls scrolling behavior.</returns>
+        </member>
+        <member name="P:VIBlend.Silverlight.Controls.AnimatedPanelContentPresenter.VerticalOffset">
+            <summary>Gets or sets the distance the content has been scrolled vertically.</summary>
+            <returns>The distance the content has been scrolled vertically.</returns>
+        </member>
+        <member name="P:VIBlend.Silverlight.Controls.AnimatedPanelContentPresenter.ViewportHeight">
+            <summary>Gets the vertical size of the viewport.</summary>
+            <returns>The vertical size of the viewport.</returns>
+        </member>
+        <member name="P:VIBlend.Silverlight.Controls.AnimatedPanelContentPresenter.ViewportWidth">
+            <summary>Gets the horizontal size of the viewport.</summary>
+            <returns>The horizontal size of the viewport.</returns>
+        </member>
+        <member name="T:VIBlend.Silverlight.Controls.TabControl">
+            <summary>
+            Represents a control that enables the arrangement of a visual content in a compacted and organized form.
+            </summary>
+        </member>
+        <member name="F:VIBlend.Silverlight.Controls.TabControl.DockPanelPrimaryName">
+            <summary>
+            Repretents TabControl DockPanel.
+            </summary>
+        </member>
+        <member name="F:VIBlend.Silverlight.Controls.TabControl.HeaderBackgroundName">
+            <summary>
+            Repretents TabControl Header Area Background.
+            </summary>
+        </member>
+        <member name="F:VIBlend.Silverlight.Controls.TabControl.ScrollViewerName">
+            <summary>
+            Repretents TabControl Items Scrollviewer.
+            </summary>
+        </member>
+        <member name="F:VIBlend.Silverlight.Controls.TabControl.TabControlBorderName">
+            <summary>
+            Repretents TabControl Border.
+            </summary>
+        </member>
+        <member name="F:VIBlend.Silverlight.Controls.TabControl.TabControlHeaderLayoutName">
+            <summary>
+            Represents TabControl Grid layout panel.
+            </summary>
+        </member>
+        <member name="F:VIBlend.Silverlight.Controls.TabControl.TabControlContentLayoutName">
+            <summary>
+            Represents TabControl Grid content layout panel
+            </summary>
+        </member>
+        <member name="F:VIBlend.Silverlight.Controls.TabControl.TabControlLayoutRootName">
+            <summary>
+            Represents TabControl Root element.
+            </summary>
+        </member>
+        <member name="F:VIBlend.Silverlight.Controls.TabControl.TabControlHeaderAreaName">
+            <summary>
+            Represents the Header Area name.
+            </summary>
+        </member>
+        <member name="F:VIBlend.Silverlight.Controls.TabControl.TabControlCollapseButtonName">
+            <summary>
+            Represents TabControl collapse button.
+            </summary>
+        </member>
+        <member name="F:VIBlend.Silverlight.Controls.TabControl.tabControlLayoutRoot">
+            <exclude/>
+        </member>
+        <member name="F:VIBlend.Silverlight.Controls.TabControl.layoutPanel">
+            <exclude/>
+        </member>
+        <member name="F:VIBlend.Silverlight.Controls.TabControl.scrollViewer">
+            <exclude/>
+        </member>
+        <member name="F:VIBlend.Silverlight.Controls.TabControl.headerBackground">
+            <exclude/>
+        </member>
+        <member name="F:VIBlend.Silverlight.Controls.TabControl.tabControlBorder">
+            <exclude/>
+        </member>
+        <member name="F:VIBlend.Silverlight.Controls.TabControl.allowFadeEffect">
+            <exclude/>
+        </member>
+        <member name="F:VIBlend.Silverlight.Controls.TabControl.tabControlHeaderLayout">
+            <exclude/>
+        </member>
+        <member name="F:VIBlend.Silverlight.Controls.TabControl.tabControlContentLayout">
+            <exclude/>
+        </member>
+        <member name="F:VIBlend.Silverlight.Controls.TabControl.collapseButton">
+            <exclude/>
+        </member>
+        <member name="F:VIBlend.Silverlight.Controls.TabControl.tabControlHeaderArea">
+            <exclude/>
+        </member>
+        <member name="F:VIBlend.Silverlight.Controls.TabControl.VerticalScrollbarHorizontalAlignmentProperty">
+            <exclude/>
+        </member>
+        <member name="F:VIBlend.Silverlight.Controls.TabControl.HorizontalScrollbarVerticalAlignmentProperty">
+            <exclude/>
+        </member>
+        <member name="F:VIBlend.Silverlight.Controls.TabControl.HeaderBackgroundProperty">
+            <exclude/>
+        </member>
+        <member name="F:VIBlend.Silverlight.Controls.TabControl.HeaderBorderBrushProperty">
+            <exclude/>
+        </member>
+        <member name="F:VIBlend.Silverlight.Controls.TabControl.ContentBorderBrushProperty">
+            <exclude/>
+        </member>
+        <member name="F:VIBlend.Silverlight.Controls.TabControl.ContentBorderThicknessProperty">
+            <exclude/>
+        </member>
+        <member name="F:VIBlend.Silverlight.Controls.TabControl.HeaderBorderThicknessProperty">
+            <exclude/>
+        </member>
+        <member name="M:VIBlend.Silverlight.Controls.TabControl.OnItemClicked(VIBlend.Silverlight.Controls.TabItemEventArgs)">
+            <summary>
+            Raises the <see cref="E:ItemClicked"/> event.
+            </summary>
+            <param name="args">The <see cref="T:VIBlend.Silverlight.Controls.TabItemEventArgs"/> instance containing the event data.</param>
+        </member>
+        <member name="M:VIBlend.Silverlight.Controls.TabControl.OnTabAlignmentChanged">
+            <summary>
+            Called when the tab alignment is changed.
+            </summary>
+        </member>
+        <member name="M:VIBlend.Silverlight.Controls.TabControl.OnTabOrientationChanged">
+            <summary>
+            Called when the tab orientation is changed.
+            </summary>
+        </member>
+        <member name="M:VIBlend.Silverlight.Controls.TabControl.IsItemItsOwnContainerOverride(System.Object)">
+            <summary>
+            Determines if the specified item is (or is eligible to be) its own container.
+            </summary>
+            <param name="item">The item to check.</param>
+            <returns>
+            true if the item is (or is eligible to be) its own container; otherwise, false.
+            </returns>
+        </member>
+        <member name="M:VIBlend.Silverlight.Controls.TabControl.GetContainerForItemOverride">
+            <summary>
+            Creates or identifies the element that is used to display the given item.
+            </summary>
+            <returns>
+            The element that is used to display the given item.
+            </returns>
+        </member>
+        <member name="M:VIBlend.Silverlight.Controls.TabControl.OnSelectionChanged(System.Windows.Controls.SelectionChangedEventArgs)">
+            <summary>
+            Raises the <see cref="E:SelectionChanged"/> event.
+            </summary>
+            <param name="args">The <see cref="T:System.Windows.Controls.SelectionChangedEventArgs"/> instance containing the event data.</param>
+        </member>
+        <member name="F:VIBlend.Silverlight.Controls.TabControl.ScrollStepProperty">
+            <exclude/>
+        </member>
+        <member name="F:VIBlend.Silverlight.Controls.TabControl.SelectedItemProperty">
+            <exclude/>
+        </member>
+        <member name="M:VIBlend.Silverlight.Controls.TabControl.ApplyContent(VIBlend.Silverlight.Controls.TabControl)">
+            <summary>
+            Applies the content.
+            </summary>
+            <param name="tabControl">The tab control.</param>
+        </member>
+        <member name="M:VIBlend.Silverlight.Controls.TabControl.SetCloseButtonVisibility(System.Windows.Visibility)">
+            <summary>
+            Sets the close button visibility.
+            </summary>
+            <param name="visibility">The visibility.</param>
+        </member>
+        <member name="F:VIBlend.Silverlight.Controls.TabControl.SelectedIndexProperty">
+            <exclude/>
+        </member>
+        <member name="M:VIBlend.Silverlight.Controls.TabControl.ApplySelectedIndex(VIBlend.Silverlight.Controls.TabControl)">
+            <summary>
+            Applies the index of the selected.
+            </summary>
+            <param name="tabControl">The tab control.</param>
+        </member>
+        <member name="M:VIBlend.Silverlight.Controls.TabControl.PrepareContainerForItemOverride(System.Windows.DependencyObject,System.Object)">
+            <summary>
+            Prepares the specified element to display the specified item.
+            </summary>
+            <param name="element">The element used to display the specified item.</param>
+            <param name="item">The item to display.</param>
+        </member>
+        <member name="F:VIBlend.Silverlight.Controls.TabControl.TabItemTemplateTemplateProperty">
+            <exclude/>
+        </member>
+        <member name="F:VIBlend.Silverlight.Controls.TabControl.ItemContainerStyleProperty">
+            <summary>
+            Identifies the
+            <see cref="P:System.Windows.Controls.NavigationPane.ItemContainerStyle" />
+            dependency property.
+            </summary>
+            <value>
+            The identifier for the
+            <see cref="P:System.Windows.Controls.NavigationPane.ItemContainerStyle" />
+            dependency property.
+            </value>
+        </member>
+        <member name="M:VIBlend.Silverlight.Controls.TabControl.OnItemContainerStylePropertyChanged(System.Windows.DependencyObject,System.Windows.DependencyPropertyChangedEventArgs)">
+            <summary>
+            ItemContainerStyleProperty property changed handler.
+            </summary>
+            <param name="d">
+            NavigationPane that changed its ItemContainerStyle.
+            </param>
+            <param name="e">Event arguments.</param>
+        </member>
+        <member name="M:VIBlend.Silverlight.Controls.TabControl.OnItemsChanged(System.Collections.Specialized.NotifyCollectionChangedEventArgs)">
+            <summary>
+            Called when the value of the <see cref="P:System.Windows.Controls.ItemsControl.Items"/> property changes.
+            </summary>
+            <param name="e">A <see cref="T:System.Collections.Specialized.NotifyCollectionChangedEventArgs"/> that contains the event data</param>
+        </member>
+        <member name="M:VIBlend.Silverlight.Controls.TabControl.ClearContainerForItemOverride(System.Windows.DependencyObject,System.Object)">
+            <summary>
+            Undoes the effects of the <see cref="M:System.Windows.Controls.ItemsControl.PrepareContainerForItemOverride(System.Windows.DependencyObject,System.Object)"/> method.
+            </summary>
+            <param name="element">The container element.</param>
+            <param name="item">The item.</param>
+        </member>
+        <member name="F:VIBlend.Silverlight.Controls.TabControl.TabAlignmentProperty">
+            <exclude/>
+        </member>
+        <member name="F:VIBlend.Silverlight.Controls.TabControl.TabOrientationProperty">
+            <exclude/>
+        </member>
+        <member name="F:VIBlend.Silverlight.Controls.TabControl.CornerRadiusProperty">
+            <exclude/>
+        </member>
+        <member name="F:VIBlend.Silverlight.Controls.TabControl.ContentTemplateProperty">
+            <exclude/>
+        </member>
+        <member name="F:VIBlend.Silverlight.Controls.TabControl.ContentProperty">
+            <exclude/>
+        </member>
+        <member name="F:VIBlend.Silverlight.Controls.TabControl.IsCollapsedProperty">
+            <exclude/>
+        </member>
+        <member name="M:VIBlend.Silverlight.Controls.TabControl.OpenPopup">
+            <summary>
+            Opens the popup.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:VIBlend.Silverlight.Controls.TabControl.ClosePopup">
+            <summary>
+            Closes the popup.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="F:VIBlend.Silverlight.Controls.TabControl.PopupWidthProperty">
+            <exclude/>
+        </member>
+        <member name="F:VIBlend.Silverlight.Controls.TabControl.PopupHeightProperty">
+            <exclude/>
+        </member>
+        <member name="F:VIBlend.Silverlight.Controls.TabControl.CollapseButtonVisibilityProperty">
+            <exclude/>
+        </member>
+        <member name="M:VIBlend.Silverlight.Controls.TabControl.ClosePopupOnOusideMouseDown(System.Windows.Input.MouseButtonEventArgs)">
+            <summary>
+            Closes the popup on ouside mouse down.
+            </summary>
+            <param name="e">The <see cref="T:System.Windows.Input.MouseButtonEventArgs"/> instance containing the event data.</param>
+        </member>
+        <member name="M:VIBlend.Silverlight.Controls.TabControl.EnsureVisible(System.Windows.FrameworkElement)">
+            <summary>
+            Ensures the visibility of an element.
+            </summary>
+            <param name="element">The element.</param>
+        </member>
+        <member name="M:VIBlend.Silverlight.Controls.TabControl.OnIsCollapsedChanged(System.Boolean)">
+            <summary>
+            Called when the control is collapsed.
+            </summary>
+        </member>
+        <member name="M:VIBlend.Silverlight.Controls.TabControl.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:VIBlend.Silverlight.Controls.TabControl"/> class.
+            </summary>
+        </member>
+        <member name="M:VIBlend.Silverlight.Controls.TabControl.OnApplyTemplate">
+            <summary>
+            When overridden in a derived class, is invoked whenever application code or internal processes (such as a rebuilding layout pass) call <see cref="M:System.Windows.Controls.Control.ApplyTemplate"/>. In simplest terms, this means the method is called just before a UI element displays in an application. For more information, see Remarks.
+            </summary>
+        </member>
+        <member name="M:VIBlend.Silverlight.Controls.TabControl.SelectNextItem">
+            <summary>
+            Selects the next item.
+            </summary>
+        </member>
+        <member name="M:VIBlend.Silverlight.Controls.TabControl.SelectPrevItem">
+            <summary>
+            Selects the prev item.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:VIBlend.Silverlight.Controls.TabControl.SetOpacity(System.Double,System.Boolean)">
+            <summary>
+            Sets the opacity.
+            </summary>
+            <param name="opacity">The opacity.</param>
+        </member>
+        <member name="F:VIBlend.Silverlight.Controls.TabControl.opacity">
+            <exclude/>
+        </member>
+        <member name="F:VIBlend.Silverlight.Controls.TabControl.faceOpacity">
+            <exclude/>
+        </member>
+        <member name="P:VIBlend.Silverlight.Controls.TabControl.VerticalScrollbarHorizontalAlignment">
+            <summary>
+            Gets or sets the vertical scrollbar horizontal alignment.
+            </summary>
+            <value>The vertical scrollbar horizontal alignment.</value>
+        </member>
+        <member name="P:VIBlend.Silverlight.Controls.TabControl.HorizontalScrollbarVerticalAlignment">
+            <summary>
+            Gets or sets the horizontal scrollbar vertical alignment.
+            </summary>
+            <value>The horizontal scrollbar vertical alignment.</value>
+        </member>
+        <member name="P:VIBlend.Silverlight.Controls.TabControl.HeaderBackground">
+            <summary>
+            Gets or sets the header background.
+            </summary>
+            <value>The header background.</value>
+        </member>
+        <member name="P:VIBlend.Silverlight.Controls.TabControl.HeaderBorderBrush">
+            <summary>
+            Gets or sets the header border brush.
+            </summary>
+            <value>The header border brush.</value>
+        </member>
+        <member name="P:VIBlend.Silverlight.Controls.TabControl.ContentBorderBrush">
+            <summary>
+            Gets or sets the Content border brush.
+            </summary>
+            <value>The Content border brush.</value>
+        </member>
+        <member name="P:VIBlend.Silverlight.Controls.TabControl.ContentBorderThickness">
+            <summary>
+            Gets or sets the Content border thickness.
+            </summary>
+            <value>The Content border thickness.</value>
+        </member>
+        <member name="P:VIBlend.Silverlight.Controls.TabControl.HeaderBorderThickness">
+            <summary>
+            Gets or sets the header border thickness.
+            </summary>
+            <value>The header border thickness.</value>
+        </member>
+        <member name="P:VIBlend.Silverlight.Controls.TabControl.AllowFadeEffect">
+            <summary>
+            Gets or sets a value indicating whether the fade effect is allowed.
+            </summary>
+        </member>
+        <member name="E:VIBlend.Silverlight.Controls.TabControl.TabOrientationChanged">
+            <summary>
+            Occurs when tab orientation is changed.
+            </summary>
+        </member>
+        <member name="E:VIBlend.Silverlight.Controls.TabControl.TabAlignmentChanged">
+            <summary>
+            Occurs when tab alignment is changed.
+            </summary>
+        </member>
+        <member name="E:VIBlend.Silverlight.Controls.TabControl.ItemClicked">
+            <summary>
+            Occurs when a tab item is clicked.
+            </summary>
+        </member>
+        <member name="P:VIBlend.Silverlight.Controls.TabControl.ScrollViewer">
+            <summary>
+            Gets the scroll viewer.
+            </summary>
+            <value>The scroll viewer.</value>
+        </member>
+        <member name="E:VIBlend.Silverlight.Controls.TabControl.SelectionChanged">
+            <summary>
+            Occurs when the Selection is changed.
+            </summary>
+        </member>
+        <member name="P:VIBlend.Silverlight.Controls.TabControl.ScrollStep">
+            <summary>
+            Gets or sets the scroll step.
+            </summary>
+            <value>The scroll step.</value>
+        </member>
+        <member name="P:VIBlend.Silverlight.Controls.TabControl.SelectedItem">
+            <summary>
+            Gets or sets the selected item.
+            </summary>
+            <value>The selected item.</value>
+        </member>
+        <member name="P:VIBlend.Silverlight.Controls.TabControl.SelectedIndex">
+            <summary>
+            Gets or sets the selected index.
+            </summary>
+        </member>
+        <member name="P:VIBlend.Silverlight.Controls.TabControl.TabItemTemplate">
+            <summary>
+            Gets or sets the tab item template.
+            </summary>
+            <value>The tab item template.</value>
+        </member>
+        <member name="P:VIBlend.Silverlight.Controls.TabControl.ItemContainerStyle">
+            <summary>
+            Gets or sets the item container style.
+            </summary>
+            <value>The item container style.</value>
+        </member>
+        <member name="P:VIBlend.Silverlight.Controls.TabControl.TabAlignment">
+            <summary>
+            Gets or sets the tab alignment.
+            </summary>
+            <value>The tab alignment.</value>
+        </member>
+        <member name="P:VIBlend.Silverlight.Controls.TabControl.TabOrientation">
+            <summary>
+            Gets or sets the tab orientation.
+            </summary>
+            <value>The tab orientation.</value>
+        </member>
+        <member name="P:VIBlend.Silverlight.Controls.TabControl.CornerRadius">
+            <summary>
+            Gets or sets corner radius.
+            </summary>
+        </member>
+        <member name="P:VIBlend.Silverlight.Controls.TabControl.ContentTemplate">
+            <summary>
+            Gets or sets the TabControl's Content data template.
+            </summary>
+        </member>
+        <member name="P:VIBlend.Silverlight.Controls.TabControl.Content">
+            <summary>
+            Gets or sets the TabControl's content.
+            </summary>
+        </member>
+        <member name="P:VIBlend.Silverlight.Controls.TabControl.PopupWidth">
+            <summary>
+            Gets or sets the width of the popup.
+            </summary>
+            <value>The width of the popup.</value>
+        </member>
+        <member name="P:VIBlend.Silverlight.Controls.TabControl.PopupHeight">
+            <summary>
+            Gets or sets the Height of the popup.
+            </summary>
+            <value>The Height of the popup.</value>
+        </member>
+        <member name="P:VIBlend.Silverlight.Controls.TabControl.CollapseButtonVisibility">
+            <summary>
+            Gets or sets the collapse button visibility.
+            </summary>
+            <value>The collapse button visibility.</value>
+        </member>
+        <member name="P:VIBlend.Silverlight.Controls.TabControl.IsCollapsed">
+            <summary>
+            Gets or sets a value indicating whether this instance is collapsed.
+            </summary>
+            <value>
+            	<c>true</c> if this instance is collapsed; otherwise, <c>false</c>.
+            </value>
+        </member>
+        <member name="P:VIBlend.Silverlight.Controls.TabControl.IsLoaded">
+            <summary>
+            Gets or sets a value indicating whether this instance is loaded.
+            </summary>
+            <value><c>true</c> if this instance is loaded; otherwise, <c>false</c>.</value>
+        </member>
+        <member name="P:VIBlend.Silverlight.Controls.TabControl.IsKeyboardNavigationEnabled">
+            <summary>
+            Gets or sets a value indicating whether this instance is keyboard navigation enabled.
+            </summary>
+            <value>
+            	<c>true</c> if this instance is keyboard navigation enabled; otherwise, <c>false</c>.
+            </value>
+        </member>
+        <member name="P:VIBlend.Silverlight.Controls.TabControl.FadeOpacity">
+            <summary>
+            Gets or sets the fade effect opacity.
+            </summary>
+            <value>The fade opacity.</value>
+        </member>
+        <member name="T:VIBlend.Silverlight.Controls.AnimatedScrollViewer">
+            <summary>
+            Represents a scrollable area that can contain other visible elements.
+            </summary>
+        </member>
+        <member name="F:VIBlend.Silverlight.Controls.AnimatedScrollViewer.ElementLeftHorizontalScrollBarName">
+            <exclude/>
+        </member>
+        <member name="F:VIBlend.Silverlight.Controls.AnimatedScrollViewer.ElementRightHorizontalScrollBarName">
+            <exclude/>
+        </member>
+        <member name="F:VIBlend.Silverlight.Controls.AnimatedScrollViewer.ElementScrollContentPresenterName">
+            <exclude/>
+        </member>
+        <member name="F:VIBlend.Silverlight.Controls.AnimatedScrollViewer.ElementTopVerticalScrollBarName">
+            <exclude/>
+        </member>
+        <member name="F:VIBlend.Silverlight.Controls.AnimatedScrollViewer.ElementBottomVerticalScrollBarName">
+            <exclude/>
+        </member>
+        <member name="F:VIBlend.Silverlight.Controls.AnimatedScrollViewer.ComputedHorizontalScrollBarVisibilityProperty">
+            <exclude/>
+        </member>
+        <member name="F:VIBlend.Silverlight.Controls.AnimatedScrollViewer.ComputedVerticalScrollBarVisibilityProperty">
+            <exclude/>
+        </member>
+        <member name="F:VIBlend.Silverlight.Controls.AnimatedScrollViewer.ExtentHeightProperty">
+            <exclude/>
+        </member>
+        <member name="F:VIBlend.Silverlight.Controls.AnimatedScrollViewer.ExtentWidthProperty">
+            <exclude/>
+        </member>
+        <member name="F:VIBlend.Silverlight.Controls.AnimatedScrollViewer.HorizontalOffsetProperty">
+            <exclude/>
+        </member>
+        <member name="F:VIBlend.Silverlight.Controls.AnimatedScrollViewer.HorizontalScrollBarVisibilityProperty">
+            <exclude/>
+        </member>
+        <member name="F:VIBlend.Silverlight.Controls.AnimatedScrollViewer.ScrollableHeightProperty">
+            <exclude/>
+        </member>
+        <member name="F:VIBlend.Silverlight.Controls.AnimatedScrollViewer.ScrollableWidthProperty">
+            <exclude/>
+        </member>
+        <member name="F:VIBlend.Silverlight.Controls.AnimatedScrollViewer.VerticalOffsetProperty">
+            <exclude/>
+        </member>
+        <member name="F:VIBlend.Silverlight.Controls.AnimatedScrollViewer.VerticalScrollBarVisibilityProperty">
+            <exclude/>
+        </member>
+        <member name="F:VIBlend.Silverlight.Controls.AnimatedScrollViewer.ViewportHeightProperty">
+            <exclude/>
+        </member>
+        <member name="F:VIBlend.Silverlight.Controls.AnimatedScrollViewer.ViewportWidthProperty">
+            <exclude/>
+        </member>
+        <member name="F:VIBlend.Silverlight.Controls.AnimatedScrollViewer.VerticalScrollbarHorizontalAlignmentProperty">
+            <exclude/>
+        </member>
+        <member name="F:VIBlend.Silverlight.Controls.AnimatedScrollViewer.HorizontalScrollbarVerticalAlignmentProperty">
+            <exclude/>
+        </member>
+        <member name="F:VIBlend.Silverlight.Controls.AnimatedScrollViewer.AccelerationMaxStepProperty">
+            <exclude/>
+        </member>
+        <member name="F:VIBlend.Silverlight.Controls.AnimatedScrollViewer.LineStepProperty">
+            <exclude/>
+        </member>
+        <member name="M:VIBlend.Silverlight.Controls.AnimatedScrollViewer.#ctor">
+            <summary>Initializes a new instance of the <see cref="T:System.Windows.Controls.CustomScrollViewer" /> class. </summary>
+        </member>
+        <member name="M:VIBlend.Silverlight.Controls.AnimatedScrollViewer.GetHorizontalScrollBarVisibility(System.Windows.DependencyObject)">
+            <summary>
+            Gets the horizontal scroll bar visibility.
+            </summary>
+            <param name="element">The element.</param>
+            <returns></returns>
+        </member>
+        <member name="M:VIBlend.Silverlight.Controls.AnimatedScrollViewer.GetVerticalScrollBarVisibility(System.Windows.DependencyObject)">
+            <summary>
+            Gets the vertical scroll bar visibility.
+            </summary>
+            <param name="element">The element.</param>
+            <returns></returns>
+        </member>
+        <member name="M:VIBlend.Silverlight.Controls.AnimatedScrollViewer.InvalidateScrollInfo">
+            <summary>Called when the value of properties that describe the size and location of the scroll area change. </summary>
+        </member>
+        <member name="M:VIBlend.Silverlight.Controls.AnimatedScrollViewer.MeasureOverride(System.Windows.Size)">
+            <summary>
+            Measures the override.
+            </summary>
+            <param name="constraint">The constraint.</param>
+            <returns></returns>
+        </member>
+        <member name="M:VIBlend.Silverlight.Controls.AnimatedScrollViewer.OnApplyTemplate">
+            <summary>Builds the visual tree for the <see cref="T:System.Windows.Controls.CustomScrollViewer" /> control when a new template is applied.</summary>
+        </member>
+        <member name="M:VIBlend.Silverlight.Controls.AnimatedScrollViewer.OnKeyDown(System.Windows.Input.KeyEventArgs)">
+            <summary>
+            Called before the <see cref="E:System.Windows.UIElement.KeyDown"/> event occurs.
+            </summary>
+            <param name="e">The data for the event.</param>
+        </member>
+        <member name="M:VIBlend.Silverlight.Controls.AnimatedScrollViewer.OnMouseLeftButtonDown(System.Windows.Input.MouseButtonEventArgs)">
+            <summary>
+            Called before the <see cref="E:System.Windows.UIElement.MouseLeftButtonDown"/> event occurs.
+            </summary>
+            <param name="e">The data for the event.</param>
+        </member>
+        <member name="M:VIBlend.Silverlight.Controls.AnimatedScrollViewer.ScrollToHorizontalOffset(System.Double)">
+            <summary>Scrolls the content that is within the <see cref="T:System.Windows.Controls.CustomScrollViewer" /> to the specified horizontal offset position.</summary>
+            <param name="offset">The position that the content scrolls to.</param>
+        </member>
+        <member name="M:VIBlend.Silverlight.Controls.AnimatedScrollViewer.ScrollToVerticalOffset(System.Double)">
+            <summary>Scrolls the content that is within the <see cref="T:System.Windows.Controls.CustomScrollViewer" /> to the specified vertical offset position.</summary>
+            <param name="offset">The position that the content scrolls to.</param>
+        </member>
+        <member name="M:VIBlend.Silverlight.Controls.AnimatedScrollViewer.SetHorizontalScrollBarVisibility(System.Windows.DependencyObject,System.Windows.Controls.ScrollBarVisibility)">
+            <summary>Sets the value of the <see cref="P:System.Windows.Controls.CustomScrollViewer.HorizontalScrollBarVisibility" /> dependency property to a specified element.</summary>
+            <param name="element">The element on which to set the property value.</param>
+            <param name="horizontalScrollBarVisibility">The property value to set.</param>
+            <exception cref="T:System.ArgumentNullException">
+            <paramref name="element" /> is null.</exception>
+        </member>
+        <member name="M:VIBlend.Silverlight.Controls.AnimatedScrollViewer.SetVerticalScrollBarVisibility(System.Windows.DependencyObject,System.Windows.Controls.ScrollBarVisibility)">
+            <summary>Sets the value of the <see cref="P:System.Windows.Controls.CustomScrollViewer.VerticalScrollBarVisibility" /> dependency property to a specified element.</summary>
+            <param name="element">The element on which to set the property value.</param>
+            <param name="verticalScrollBarVisibility">The property value to set.</param>
+            <exception cref="T:System.ArgumentNullException">
+            <paramref name="element" /> is null.</exception>
+        </member>
+        <member name="P:VIBlend.Silverlight.Controls.AnimatedScrollViewer.VerticalScrollbarHorizontalAlignment">
+            <summary>
+            Gets or sets the vertical scrollbar horizontal alignment.
+            </summary>
+            <value>The vertical scrollbar horizontal alignment.</value>
+        </member>
+        <member name="P:VIBlend.Silverlight.Controls.AnimatedScrollViewer.HorizontalScrollbarVerticalAlignment">
+            <summary>
+            Gets or sets the horizontal scrollbar vertical alignment.
+            </summary>
+            <value>The horizontal scrollbar vertical alignment.</value>
+        </member>
+        <member name="P:VIBlend.Silverlight.Controls.AnimatedScrollViewer.AccelerationMaxStep">
+            <summary>
+            Gets or sets the acceleration max step.
+            </summary>
+            <value>The acceleration max step.</value>
+        </member>
+        <member name="P:VIBlend.Silverlight.Controls.AnimatedScrollViewer.LineStep">
+            <summary>
+            Gets or sets the line step.
+            </summary>
+            <value>The line step.</value>
+        </member>
+        <member name="P:VIBlend.Silverlight.Controls.AnimatedScrollViewer.ComputedHorizontalScrollBarVisibility">
+            <summary>Gets a value that indicates whether the horizontal <see cref="T:System.Windows.Controls.Primitives.ScrollBar" /> is visible. </summary>
+            <returns>A <see cref="T:System.Windows.Visibility" /> that indicates whether the horizontal scroll bar is visible. The default value is <see cref="F:System.Windows.Controls.ScrollBarVisibility.Hidden" />.</returns>
+        </member>
+        <member name="P:VIBlend.Silverlight.Controls.AnimatedScrollViewer.ComputedVerticalScrollBarVisibility">
+            <summary>Gets a value that indicates whether the vertical <see cref="T:System.Windows.Controls.Primitives.ScrollBar" /> is visible. </summary>
+            <returns>A <see cref="T:System.Windows.Visibility" /> that indicates whether the vertical scroll bar is visible. The default value is <see cref="F:System.Windows.Controls.ScrollBarVisibility.Visible" />.</returns>
+        </member>
+        <member name="P:VIBlend.Silverlight.Controls.AnimatedScrollViewer.ElementLeftHorizontalScrollBar">
+            <summary>
+            Gets or sets the element left horizontal scroll bar.
+            </summary>
+            <value>The element left horizontal scroll bar.</value>
+        </member>
+        <member name="P:VIBlend.Silverlight.Controls.AnimatedScrollViewer.ElementRightHorizontalScrollBar">
+            <summary>
+            Gets or sets the element right horizontal scroll bar.
+            </summary>
+            <value>The element right horizontal scroll bar.</value>
+        </member>
+        <member name="P:VIBlend.Silverlight.Controls.AnimatedScrollViewer.ElementScrollContentPresenter">
+            <exclude/>
+        </member>
+        <member name="P:VIBlend.Silverlight.Controls.AnimatedScrollViewer.ElementTopVerticalScrollBar">
+            <summary>
+            Gets or sets the element top vertical scroll bar.
+            </summary>
+            <value>The element top vertical scroll bar.</value>
+        </member>
+        <member name="P:VIBlend.Silverlight.Controls.AnimatedScrollViewer.ElementBottomVerticalScrollBar">
+            <summary>
+            Gets or sets the element bottom vertical scroll bar.
+            </summary>
+            <value>The element bottom vertical scroll bar.</value>
+        </member>
+        <member name="P:VIBlend.Silverlight.Controls.AnimatedScrollViewer.ExtentHeight">
+            <summary>Gets the vertical size of all the content for display in the <see cref="T:System.Windows.Controls.CustomScrollViewer" />.</summary>
+            <returns>The vertical size of all the content for display in the <see cref="T:System.Windows.Controls.CustomScrollViewer" />.</returns>
+        </member>
+        <member name="P:VIBlend.Silverlight.Controls.AnimatedScrollViewer.ExtentWidth">
+            <summary>Gets the horizontal size of all the content for display in the <see cref="T:System.Windows.Controls.CustomScrollViewer" />.</summary>
+            <returns>The horizontal size of all the content for display in the <see cref="T:System.Windows.Controls.CustomScrollViewer" />.</returns>
+        </member>
+        <member name="P:VIBlend.Silverlight.Controls.AnimatedScrollViewer.HorizontalOffset">
+            <summary>Gets a value that contains the horizontal offset of the scrolled content. </summary>
+            <returns>The horizontal offset of the scrolled content. The default value is 0.0.</returns>
+        </member>
+        <member name="P:VIBlend.Silverlight.Controls.AnimatedScrollViewer.HorizontalScrollBarVisibility">
+            <summary>Gets or sets a value that indicates whether a horizontal <see cref="T:System.Windows.Controls.Primitives.ScrollBar" /> should be displayed.</summary>
+            <returns>A <see cref="T:System.Windows.Controls.ScrollBarVisibility" /> value that indicates whether a horizontal <see cref="T:System.Windows.Controls.Primitives.ScrollBar" /> should be displayed. The default value is <see cref="F:System.Windows.Controls.ScrollBarVisibility.Hidden" />.</returns>
+        </member>
+        <member name="P:VIBlend.Silverlight.Controls.AnimatedScrollViewer.ScrollableHeight">
+            <summary>Gets a value that represents the vertical size of the area that can be scrolled; the difference between the width of the extent and the width of the viewport.</summary>
+            <returns>The vertical size of the area that can be scrolled. This property has no default value.</returns>
+        </member>
+        <member name="P:VIBlend.Silverlight.Controls.AnimatedScrollViewer.ScrollableWidth">
+            <summary>Gets a value that represents the horizontal size of the area that can be scrolled; the difference between the width of the extent and the width of the viewport.. </summary>
+            <returns>The horizontal size of the area that can be scrolled. This property has no default value.</returns>
+        </member>
+        <member name="P:VIBlend.Silverlight.Controls.AnimatedScrollViewer.ScrollInfo">
+            <exclude/>
+        </member>
+        <member name="P:VIBlend.Silverlight.Controls.AnimatedScrollViewer.VerticalOffset">
+            <summary>Gets a value that contains the vertical offset of the scrolled content.</summary>
+            <returns>The vertical offset of the scrolled content. The default value is 0.0.</returns>
+        </member>
+        <member name="P:VIBlend.Silverlight.Controls.AnimatedScrollViewer.VerticalScrollBarVisibility">
+            <summary>Gets or sets a value that indicates whether a vertical <see cref="T:System.Windows.Controls.Primitives.ScrollBar" /> should be displayed. </summary>
+            <returns>A <see cref="T:System.Windows.Controls.ScrollBarVisibility" /> value that indicates whether a vertical <see cref="T:System.Windows.Controls.Primitives.ScrollBar" /> should be displayed. The default value is <see cref="F:System.Windows.Controls.ScrollBarVisibility.Visible" />.</returns>
+        </member>
+        <member name="P:VIBlend.Silverlight.Controls.AnimatedScrollViewer.ViewportHeight">
+            <summary>Gets a value that contains the vertical size of the viewable content. </summary>
+            <returns>The vertical size of the viewable content. This property has no default value.</returns>
+        </member>
+        <member name="P:VIBlend.Silverlight.Controls.AnimatedScrollViewer.ViewportWidth">
+            <summary>Gets a value that contains the horizontal size of the viewable content.</summary>
+            <returns>The horizontal size of the viewable content. The default value is 0.0.</returns>
+        </member>
+        <member name="T:VIBlend.Silverlight.Controls.TabItemEventArgs">
+            <summary>
+            Represent the TabControl event data.
+            </summary>
+        </member>
+        <member name="M:VIBlend.Silverlight.Controls.TabItemEventArgs.#ctor(VIBlend.Silverlight.Controls.TabItem)">
+            <summary>
+            Initializes a new instance of the <see cref="T:VIBlend.Silverlight.Controls.TabItemEventArgs"/> class.
+            </summary>
+            <param name="item">The item.</param>
+        </member>
+        <member name="P:VIBlend.Silverlight.Controls.TabItemEventArgs.TabItem">
+            <summary>
+            Gets the tab item.
+            </summary>
+        </member>
+        <member name="T:VIBlend.Silverlight.Controls.TabItem">
+            <summary>
+            Represents a single item in the TabControl control.
+            </summary>
+        </member>
+        <member name="F:VIBlend.Silverlight.Controls.TabItem.TabPositionElementName">
+            <summary>
+            Repretents TabItem TabPosition element.
+            </summary>
+        </member>
+        <member name="M:VIBlend.Silverlight.Controls.TabItem.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:VIBlend.Silverlight.Controls.TabItem"/> class.
+            </summary>
+        </member>
+        <member name="M:VIBlend.Silverlight.Controls.TabItem.#ctor(System.Object)">
+            <summary>
+            Initializes a new instance of the <see cref="T:VIBlend.Silverlight.Controls.TabItem"/> class.
+            </summary>
+            <param name="header">The header.</param>
+        </member>
+        <member name="M:VIBlend.Silverlight.Controls.TabItem.#ctor(System.String)">
+            <summary>
+            Initializes a new instance of the <see cref="T:VIBlend.Silverlight.Controls.TabItem"/> class.
+            </summary>
+            <param name="text">The text.</param>
+        </member>
+        <member name="F:VIBlend.Silverlight.Controls.TabItem.ContentMarginProperty">
+            <exclude/>
+        </member>
+        <member name="M:VIBlend.Silverlight.Controls.TabItem.OnContentChanged(System.Object,System.Object)">
+            <summary>
+            Called when the value of the <see cref="P:System.Windows.Controls.ContentControl.Content"/> property changes.
+            </summary>
+            <param name="oldContent">The old value of the <see cref="P:System.Windows.Controls.ContentControl.Content"/> property.</param>
+            <param name="newContent">The new value of the <see cref="P:System.Windows.Controls.ContentControl.Content"/> property.</param>
+        </member>
+        <member name="M:VIBlend.Silverlight.Controls.TabItem.SetBorderThickness(System.Windows.Thickness)">
+            <summary>
+            Sets the border thickness.
+            </summary>
+            <param name="borderThickness">The border thickness.</param>
+        </member>
+        <member name="M:VIBlend.Silverlight.Controls.TabItem.SetCornerRadius(System.Windows.CornerRadius)">
+            <summary>
+            Sets the corner radius.
+            </summary>
+            <param name="cornerRadius">The corner radius.</param>
+        </member>
+        <member name="F:VIBlend.Silverlight.Controls.TabItem.borderThickness">
+            <exclude/>
+        </member>
+        <member name="F:VIBlend.Silverlight.Controls.TabItem.cornerRadius">
+            <exclude/>
+        </member>
+        <member name="M:VIBlend.Silverlight.Controls.TabItem.OnApplyTemplate">
+            <summary>
+            Applies the TabItem Template.
+            </summary>
+        </member>
+        <member name="M:VIBlend.Silverlight.Controls.TabItem.ApplyTextImageRelation">
+            <summary>
+            Applies the text image relation.
+            </summary>
+        </member>
+        <member name="M:VIBlend.Silverlight.Controls.TabItem.UnwireEvents">
+            <summary>
+            Unwires the events.
+            </summary>
+        </member>
+        <member name="M:VIBlend.Silverlight.Controls.TabItem.ApplyTextImageRelation(VIBlend.Silverlight.Controls.TabItemBase)">
+            <summary>
+            Applies the text image relation.
+            </summary>
+            <param name="b">The b.</param>
+        </member>
+        <member name="F:VIBlend.Silverlight.Controls.TabItem.AutoAdjustBorderThicknessProperty">
+            <exclude/>
+        </member>
+        <member name="M:VIBlend.Silverlight.Controls.TabItem.ApplyTabAlignmentBorder">
+            <summary>
+            Applies the tab alignment border.
+            </summary>
+        </member>
+        <member name="M:VIBlend.Silverlight.Controls.TabItem.ApplyTransformation">
+            <summary>
+            Applies the transformation.
+            </summary>
+        </member>
+        <member name="F:VIBlend.Silverlight.Controls.TabItem.CloseButtonVisibilityProperty">
+            <exclude/>
+        </member>
+        <member name="M:VIBlend.Silverlight.Controls.TabItem.Close">
+            <summary>
+            Closes this instance.
+            </summary>
+        </member>
+        <member name="F:VIBlend.Silverlight.Controls.TabItem.TabOrientationProperty">
+            <exclude/>
+        </member>
+        <member name="F:VIBlend.Silverlight.Controls.TabItem.IsSelectedProperty">
+            <exclude/>
+        </member>
+        <member name="M:VIBlend.Silverlight.Controls.TabItem.OnCloseButtonClick">
+            <summary>
+            Called when the close button is clicked.
+            </summary>
+        </member>
+        <member name="M:VIBlend.Silverlight.Controls.TabItem.OnMouseLeave(System.Windows.Input.MouseEventArgs)">
+            <exclude/>
+        </member>
+        <member name="M:VIBlend.Silverlight.Controls.TabItem.OnMouseLeftButtonUp(System.Windows.Input.MouseButtonEventArgs)">
+            <summary>
+            </summary>
+            <param name="e"></param>
+            <exclude/>
+        </member>
+        <member name="M:VIBlend.Silverlight.Controls.TabItem.OnMouseLeftButtonDown(System.Windows.Input.MouseButtonEventArgs)">
+            <summary>
+            </summary>
+            <param name="e"></param>
+            <exclude/>
+        </member>
+        <member name="M:VIBlend.Silverlight.Controls.TabItem.OnMouseEnter(System.Windows.Input.MouseEventArgs)">
+            <exclude/>
+        </member>
+        <member name="M:VIBlend.Silverlight.Controls.TabItem.OnTabItemStateChanged">
+            <summary>
+            Called when tab item's state is changed.
+            </summary>
+        </member>
+        <member name="M:VIBlend.Silverlight.Controls.TabItem.OnClick">
+            <summary>
+            Occurs when the button is clicked.
+            </summary>
+        </member>
+        <member name="M:VIBlend.Silverlight.Controls.TabItem.OnToggle">
+            <exclude/>
+        </member>
+        <member name="M:VIBlend.Silverlight.Controls.TabItem.ToString">
+            <exclude/>
+        </member>
+        <member name="M:VIBlend.Silverlight.Controls.TabItem.SynchronizeForegrounds">
+            <exclude/>
+        </member>
+        <member name="P:VIBlend.Silverlight.Controls.TabItem.CloseButton">
+            <summary>
+            Gets the close button.
+            </summary>
+            <value>The close button.</value>
+        </member>
+        <member name="P:VIBlend.Silverlight.Controls.TabItem.ContentMargin">
+            <summary>
+            Gets or sets the content margin.
+            </summary>
+            <value>The content margin.</value>
+        </member>
+        <member name="P:VIBlend.Silverlight.Controls.TabItem.TabControl">
+            <summary>
+            Gets the parent TabControl.
+            </summary>
+        </member>
+        <member name="P:VIBlend.Silverlight.Controls.TabItem.ParentItemsControl">
+            <summary>
+            Gets or sets a reference to the parent ItemsControl.
+            </summary>
+        </member>
+        <member name="P:VIBlend.Silverlight.Controls.TabItem.AutoAdjustBorderThickness">
+            <summary>
+            Gets or sets a value indicating whether to auto adjust border's thickness.
+            </summary>
+        </member>
+        <member name="P:VIBlend.Silverlight.Controls.TabItem.CloseButtonVisibility">
+            <summary>
+            Gets or sets the close button visibility.
+            </summary>
+            <value>The close button visibility.</value>
+        </member>
+        <member name="P:VIBlend.Silverlight.Controls.TabItem.ShowCloseButtonInDefaultTabItemState">
+            <summary>
+            Gets or sets a value indicating whether to show the close button in the default state.
+            </summary>
+        </member>
+        <member name="P:VIBlend.Silverlight.Controls.TabItem.CloseButtonAction">
+            <summary>
+            Gets or sets the close button action.
+            </summary>
+            <value>The close button action.</value>
+        </member>
+        <member name="P:VIBlend.Silverlight.Controls.TabItem.TabOrientation">
+            <summary>
+            Gets or sets the tab orientation.
+            </summary>
+            <value>The tab orientation.</value>
+        </member>
+        <member name="E:VIBlend.Silverlight.Controls.TabItem.Selected">
+            <summary>
+            Occurs when the item is selected.
+            </summary>
+        </member>
+        <member name="E:VIBlend.Silverlight.Controls.TabItem.CloseButtonClick">
+            <summary>
+            Occurs when the close button is clicked.
+            </summary>
+        </member>
+        <member name="E:VIBlend.Silverlight.Controls.TabItem.Unselected">
+            <summary>
+            Occurs when the item is unselected.
+            </summary>
+        </member>
+        <member name="E:VIBlend.Silverlight.Controls.TabItem.TabItemStateChanged">
+            <summary>
+            Occurs when button's UI state is changed.
+            </summary>
+        </member>
+        <member name="P:VIBlend.Silverlight.Controls.TabItem.IsSelected">
+            <summary>
+            Gets or sets whether the button is selected.
+            </summary>
+        </member>
+        <member name="T:VIBlend.Silverlight.Controls.TabPositionElement">
+            <exclude/>   
+        </member>
+        <member name="F:VIBlend.Silverlight.Controls.TabPositionElement.AcceptableDelta">
+            <summary>
+            Acceptable difference between two doubles.
+            </summary>
+        </member>
+        <member name="F:VIBlend.Silverlight.Controls.TabPositionElement.DecimalsAfterRound">
+            <summary>
+            Number of decimals to round the Matrix to.
+            </summary>
+        </member>
+        <member name="F:VIBlend.Silverlight.Controls.TabPositionElement.LayoutTransformProperty">
+            <summary>
+            Identifies the LayoutTransform DependencyProperty.
+            </summary>
+        </member>
+        <member name="F:VIBlend.Silverlight.Controls.TabPositionElement._transformRoot">
+            <summary>
+            Root element for performing transformations.
+            </summary>
+        </member>
+        <member name="F:VIBlend.Silverlight.Controls.TabPositionElement._contentPresenter">
+            <summary>
+            ContentPresenter element for displaying the content.
+            </summary>
+        </member>
+        <member name="F:VIBlend.Silverlight.Controls.TabPositionElement._matrixTransform">
+            <summary>
+            RenderTransform/MatrixTransform applied to _transformRoot.
+            </summary>
+        </member>
+        <member name="F:VIBlend.Silverlight.Controls.TabPositionElement._transformation">
+            <summary>
+            Transformation matrix corresponding to _matrixTransform.
+            </summary>
+        </member>
+        <member name="F:VIBlend.Silverlight.Controls.TabPositionElement._childActualSize">
+            <summary>
+            Actual DesiredSize of Child element (the value it returned from its MeasureOverride method).
+            </summary>
+        </member>
+        <member name="M:VIBlend.Silverlight.Controls.TabPositionElement.#ctor">
+            <summary>
+            Initializes a new instance of the RotationElement class.
+            </summary>
+        </member>
+        <member name="M:VIBlend.Silverlight.Controls.TabPositionElement.OnApplyTemplate">
+            <summary>
+            Builds the visual tree for the RotationElement control when a new 
+            template is applied.
+            </summary>
+        </member>
+        <member name="M:VIBlend.Silverlight.Controls.TabPositionElement.LayoutTransformChanged(System.Windows.DependencyObject,System.Windows.DependencyPropertyChangedEventArgs)">
+            <summary>
+            Handles changes to the Transform DependencyProperty.
+            </summary>
+            <param name="o">Source of the change.</param>
+            <param name="e">Event args.</param>
+        </member>
+        <member name="M:VIBlend.Silverlight.Controls.TabPositionElement.ApplyLayoutTransform">
+            <summary>
+            Applies the layout transform on the RotationElement control content.
+            </summary>
+            <remarks>
+            Only used in advanced scenarios (like animating the LayoutTransform). 
+            Should be used to notify the RotationElement control that some aspect 
+            of its Transform property has changed. 
+            </remarks>
+        </member>
+        <member name="M:VIBlend.Silverlight.Controls.TabPositionElement.ProcessTransform(System.Windows.Media.Transform)">
+            <summary>
+            Processes the Transform to determine the corresponding Matrix.
+            </summary>
+            <param name="transform">Transform to process.</param>
+        </member>
+        <member name="M:VIBlend.Silverlight.Controls.TabPositionElement.GetTransformMatrix(System.Windows.Media.Transform)">
+            <summary>
+            Walks the Transform(Group) and returns the corresponding Matrix.
+            </summary>
+            <param name="transform">Transform(Group) to walk.</param>
+            <returns>Computed Matrix.</returns>
+        </member>
+        <member name="M:VIBlend.Silverlight.Controls.TabPositionElement.MeasureOverride(System.Windows.Size)">
+            <summary>
+            Provides the behavior for the "Measure" pass of layout.
+            </summary>
+            <param name="availableSize">The available size that this element can give to child elements.</param>
+            <returns>The size that this element determines it needs during layout, based on its calculations of child element sizes.</returns>
+        </member>
+        <member name="M:VIBlend.Silverlight.Controls.TabPositionElement.ArrangeOverride(System.Windows.Size)">
+            <summary>
+            Provides the behavior for the "Arrange" pass of layout.
+            </summary>
+            <param name="finalSize">The final area within the parent that this element should use to arrange itself and its children.</param>
+            <returns>The actual size used.</returns>
+            <remarks>
+            Using the WPF paramater name finalSize instead of Silverlight's finalSize for clarity
+            </remarks>
+        </member>
+        <member name="M:VIBlend.Silverlight.Controls.TabPositionElement.ComputeLargestTransformedSize(System.Windows.Size)">
+            <summary>
+            Compute the largest usable size (greatest area) after applying the transformation to the specified bounds.
+            </summary>
+            <param name="arrangeBounds">Arrange bounds.</param>
+            <returns>Largest Size possible.</returns>
+        </member>
+        <member name="M:VIBlend.Silverlight.Controls.TabPositionElement.IsSizeSmaller(System.Windows.Size,System.Windows.Size)">
+            <summary>
+            Returns true if Size a is smaller than Size b in either dimension.
+            </summary>
+            <param name="a">Second Size.</param>
+            <param name="b">First Size.</param>
+            <returns>True if Size a is smaller than Size b in either dimension.</returns>
+        </member>
+        <member name="M:VIBlend.Silverlight.Controls.TabPositionElement.RoundMatrix(System.Windows.Media.Matrix,System.Int32)">
+            <summary>
+            Rounds the non-offset elements of a Matrix to avoid issues due to floating point imprecision.
+            </summary>
+            <param name="matrix">Matrix to round.</param>
+            <param name="decimals">Number of decimal places to round to.</param>
+            <returns>Rounded Matrix.</returns>
+        </member>
+        <member name="M:VIBlend.Silverlight.Controls.TabPositionElement.RectTransform(System.Windows.Rect,System.Windows.Media.Matrix)">
+            <summary>
+            Implements WPF's Rect.Transform on Silverlight.
+            </summary>
+            <param name="rect">Rect to transform.</param>
+            <param name="matrix">Matrix to transform with.</param>
+            <returns>Bounding box of transformed Rect.</returns>
+        </member>
+        <member name="M:VIBlend.Silverlight.Controls.TabPositionElement.MatrixMultiply(System.Windows.Media.Matrix,System.Windows.Media.Matrix)">
+            <summary>
+            Implements WPF's Matrix.Multiply on Silverlight.
+            </summary>
+            <param name="matrix1">First matrix.</param>
+            <param name="matrix2">Second matrix.</param>
+            <returns>Multiplication result.</returns>
+        </member>
+        <member name="M:VIBlend.Silverlight.Controls.TabPositionElement.MatrixHasInverse(System.Windows.Media.Matrix)">
+            <summary>
+            Implements WPF's Matrix.HasInverse on Silverlight.
+            </summary>
+            <param name="matrix">Matrix to check for inverse.</param>
+            <returns>True if the Matrix has an inverse.</returns>
+        </member>
+        <member name="M:VIBlend.Silverlight.Controls.TabPositionElement.DiagnosticWriteLine(System.String)">
+            <summary>
+            Outputs diagnostic info if DIAGNOSTICWRITELINE is defined.
+            </summary>
+            <param name="message">Diagnostic message.</param>
+        </member>
+        <member name="P:VIBlend.Silverlight.Controls.TabPositionElement.LayoutTransform">
+            <summary>
+            Gets or sets the layout transform.
+            </summary>
+            <value>The layout transform.</value>
+        </member>
+        <member name="P:VIBlend.Silverlight.Controls.TabPositionElement.Child">
+            <summary>
+            Gets the child element being transformed.
+            </summary>
+        </member>
+    </members>
+</doc>

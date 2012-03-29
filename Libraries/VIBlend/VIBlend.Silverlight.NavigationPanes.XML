@@ -1,0 +1,2236 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>VIBlend.Silverlight.NavigationPanes</name>
+    </assembly>
+    <members>
+        <member name="T:VIBlend.Silverlight.Controls.OutlookPaneItem">
+            <summary>
+            Represents a single item in the OutlookPane control.
+            </summary>
+        </member>
+        <member name="F:VIBlend.Silverlight.Controls.OutlookPaneItem.HighlightForeBrushProperty">
+            <exclude/>
+        </member>
+        <member name="F:VIBlend.Silverlight.Controls.OutlookPaneItem.SelectedForeBrushProperty">
+            <exclude/>
+        </member>
+        <member name="F:VIBlend.Silverlight.Controls.OutlookPaneItem.NormalForeBrushProperty">
+            <exclude/>
+        </member>
+        <member name="F:VIBlend.Silverlight.Controls.OutlookPaneItem.DisabledForeBrushProperty">
+            <exclude/>
+        </member>
+        <member name="F:VIBlend.Silverlight.Controls.OutlookPaneItem.DefaultHeaderTemplateProperty">
+            <exclude/>
+        </member>
+        <member name="F:VIBlend.Silverlight.Controls.OutlookPaneItem.DefaultHeaderProperty">
+            <exclude/>
+        </member>
+        <member name="F:VIBlend.Silverlight.Controls.OutlookPaneItem.CollapsedDefaultHeaderTemplateProperty">
+            <exclude/>
+        </member>
+        <member name="F:VIBlend.Silverlight.Controls.OutlookPaneItem.CollapsedDefaultHeaderProperty">
+            <exclude/>
+        </member>
+        <member name="F:VIBlend.Silverlight.Controls.OutlookPaneItem.CollapsedStatusContentTemplateProperty">
+            <exclude/>
+        </member>
+        <member name="F:VIBlend.Silverlight.Controls.OutlookPaneItem.CollapsedStatusContentProperty">
+            <exclude/>
+        </member>
+        <member name="F:VIBlend.Silverlight.Controls.OutlookPaneItem.DisplayHeaderTemplateProperty">
+            <exclude/>
+        </member>
+        <member name="F:VIBlend.Silverlight.Controls.OutlookPaneItem.DisplayHeaderProperty">
+            <exclude/>
+        </member>
+        <member name="F:VIBlend.Silverlight.Controls.OutlookPaneItem.MenuItemHeaderTemplateProperty">
+            <exclude/>
+        </member>
+        <member name="F:VIBlend.Silverlight.Controls.OutlookPaneItem.MenuItemHeaderProperty">
+            <exclude/>
+        </member>
+        <member name="M:VIBlend.Silverlight.Controls.OutlookPaneItem.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:VIBlend.Silverlight.Controls.OutlookPaneItem"/> class.
+            </summary>
+        </member>
+        <member name="F:VIBlend.Silverlight.Controls.OutlookPaneItem.AutoHideProperty">
+            <exclude/>
+        </member>
+        <member name="F:VIBlend.Silverlight.Controls.OutlookPaneItem.IsSelectedProperty">
+            <exclude/>
+        </member>
+        <member name="F:VIBlend.Silverlight.Controls.OutlookPaneItem.IsCollapsedProperty">
+            <exclude/>
+        </member>
+        <member name="F:VIBlend.Silverlight.Controls.OutlookPaneItem.HorizontalHeaderAlignmentProperty">
+            <exclude/>
+        </member>
+        <member name="F:VIBlend.Silverlight.Controls.OutlookPaneItem.VerticalHeaderAlignmentProperty">
+            <exclude/>
+        </member>
+        <member name="F:VIBlend.Silverlight.Controls.OutlookPaneItem.ContentPaddingProperty">
+            <exclude/>
+        </member>
+        <member name="M:VIBlend.Silverlight.Controls.OutlookPaneItem.OnApplyTemplate">
+            <summary>
+            When overridden in a derived class, is invoked whenever application code or internal processes (such as a rebuilding layout pass) call <see cref="M:System.Windows.Controls.Control.ApplyTemplate"/>.
+            </summary>
+        </member>
+        <member name="M:VIBlend.Silverlight.Controls.OutlookPaneItem.OnMouseMove(System.Windows.Input.MouseEventArgs)">
+            <summary>
+            Called before the <see cref="E:System.Windows.UIElement.MouseMove"/> event occurs.
+            </summary>
+            <param name="e">The data for the event.</param>
+        </member>
+        <member name="M:VIBlend.Silverlight.Controls.OutlookPaneItem.OnMouseEnter(System.Windows.Input.MouseEventArgs)">
+            <summary>
+            Called before the <see cref="E:System.Windows.UIElement.MouseEnter"/> event occurs.
+            </summary>
+            <param name="e">The data for the event.</param>
+        </member>
+        <member name="M:VIBlend.Silverlight.Controls.OutlookPaneItem.OnMouseLeave(System.Windows.Input.MouseEventArgs)">
+            <summary>
+            Called before the <see cref="E:System.Windows.UIElement.MouseLeave"/> event occurs.
+            </summary>
+            <param name="e">The data for the event.</param>
+        </member>
+        <member name="M:VIBlend.Silverlight.Controls.OutlookPaneItem.OnMouseLeftButtonDown(System.Windows.Input.MouseButtonEventArgs)">
+            <summary>
+            Called before the <see cref="E:System.Windows.UIElement.MouseLeftButtonDown"/> event occurs.
+            </summary>
+            <param name="e">The data for the event.</param>
+        </member>
+        <member name="M:VIBlend.Silverlight.Controls.OutlookPaneItem.OnMouseLeftButtonUp(System.Windows.Input.MouseButtonEventArgs)">
+            <summary>
+            Called before the <see cref="E:System.Windows.UIElement.MouseLeftButtonUp"/> event occurs.
+            </summary>
+            <param name="e">The data for the event.</param>
+        </member>
+        <member name="M:VIBlend.Silverlight.Controls.OutlookPaneItem.OnMouseRightButtonDown(System.Windows.Input.MouseButtonEventArgs)">
+            <summary>
+            Raises the <see cref="E:System.Windows.UIElement.MouseRightButtonDown"/> event.
+            </summary>
+            <param name="e">A <see cref="T:System.Windows.Input.MouseButtonEventArgs"/> that contains the event data.</param>
+        </member>
+        <member name="M:VIBlend.Silverlight.Controls.OutlookPaneItem.OnMouseRightButtonUp(System.Windows.Input.MouseButtonEventArgs)">
+            <summary>
+            Raises the <see cref="E:System.Windows.UIElement.MouseRightButtonUp"/> event.
+            </summary>
+            <param name="e">A <see cref="T:System.Windows.Input.MouseButtonEventArgs"/> that contains the event data.</param>
+        </member>
+        <member name="F:VIBlend.Silverlight.Controls.OutlookPaneItem.CommandProperty">
+            <exclude/>
+        </member>
+        <member name="F:VIBlend.Silverlight.Controls.OutlookPaneItem.CommandParameterProperty">
+            <exclude/>
+        </member>
+        <member name="M:VIBlend.Silverlight.Controls.OutlookPaneItem.ExecuteCommand(System.Windows.Input.ICommand,System.Object)">
+            <summary>
+            Executes the command.
+            </summary>
+            <param name="command">The command.</param>
+            <param name="commandParameter">The command parameter.</param>
+        </member>
+        <member name="P:VIBlend.Silverlight.Controls.OutlookPaneItem.HighlightForeBrush">
+            <summary>
+            Gets or sets the Item's text highlight brush. 
+            </summary>
+        </member>
+        <member name="P:VIBlend.Silverlight.Controls.OutlookPaneItem.NormalForeBrush">
+            <summary>
+            Gets or sets the Item's text normal brush
+            </summary>
+        </member>
+        <member name="P:VIBlend.Silverlight.Controls.OutlookPaneItem.DisabledForeBrush">
+            <summary>
+            Gets or sets the Item's text disabled brush. 
+            </summary>
+        </member>
+        <member name="P:VIBlend.Silverlight.Controls.OutlookPaneItem.SelectedForeBrush">
+            <summary>
+            Gets or sets the Item's text disabled brush. 
+            </summary>
+        </member>
+        <member name="P:VIBlend.Silverlight.Controls.OutlookPaneItem.DefaultHeaderTemplate">
+            <summary>
+            Gets or sets the default header template.
+            </summary>
+            <value>The default header template.</value>
+        </member>
+        <member name="P:VIBlend.Silverlight.Controls.OutlookPaneItem.DefaultHeader">
+            <summary>
+            Gets or sets the content of the collapsed.
+            </summary>
+            <value>The content of the collapsed.</value>
+        </member>
+        <member name="P:VIBlend.Silverlight.Controls.OutlookPaneItem.CollapsedDefaultHeaderTemplate">
+            <summary>
+            Gets or sets the collapsed default header template.
+            </summary>
+            <value>The collapsed default header template.</value>
+        </member>
+        <member name="P:VIBlend.Silverlight.Controls.OutlookPaneItem.CollapsedDefaultHeader">
+            <summary>
+            Gets or sets the content of the collapsed.
+            </summary>
+            <value>The content of the collapsed.</value>
+        </member>
+        <member name="P:VIBlend.Silverlight.Controls.OutlookPaneItem.CollapsedStatusContentTemplate">
+            <summary>
+            Gets or sets the collapsed status content template.
+            </summary>
+            <value>The collapsed status content template.</value>
+        </member>
+        <member name="P:VIBlend.Silverlight.Controls.OutlookPaneItem.CollapsedStatusContent">
+            <summary>
+            Gets or sets the content of the collapsed.
+            </summary>
+            <value>The content of the collapsed.</value>
+        </member>
+        <member name="P:VIBlend.Silverlight.Controls.OutlookPaneItem.DisplayHeaderTemplate">
+            <summary>
+            Gets or sets the display header template.
+            </summary>
+            <value>The display header template.</value>
+        </member>
+        <member name="P:VIBlend.Silverlight.Controls.OutlookPaneItem.DisplayHeader">
+            <summary>
+            Gets or sets the display header.
+            </summary>
+            <value>The display header.</value>
+        </member>
+        <member name="P:VIBlend.Silverlight.Controls.OutlookPaneItem.MenuItemHeaderTemplate">
+            <summary>
+            Gets or sets the menu item header template.
+            </summary>
+            <value>The menu item header template.</value>
+        </member>
+        <member name="P:VIBlend.Silverlight.Controls.OutlookPaneItem.MenuItemHeader">
+            <summary>
+            Gets or sets the menu item header.
+            </summary>
+            <value>The menu item header.</value>
+        </member>
+        <member name="P:VIBlend.Silverlight.Controls.OutlookPaneItem.AutoHide">
+            <summary>
+            Gets or sets a value indicating whether the auto-hide is enabled.
+            </summary>
+        </member>
+        <member name="P:VIBlend.Silverlight.Controls.OutlookPaneItem.IsSelected">
+            <summary>
+            Gets or sets a value indicating whether this instance is selected.
+            </summary>
+            <value>
+            	<c>true</c> if this instance is selected; otherwise, <c>false</c>.
+            </value>
+        </member>
+        <member name="P:VIBlend.Silverlight.Controls.OutlookPaneItem.IsCollapsed">
+            <summary>
+            Gets or sets a value indicating whether this instance is collapsed.
+            </summary>
+            <value>
+            	<c>true</c> if this instance is collapsed; otherwise, <c>false</c>.
+            </value>
+        </member>
+        <member name="P:VIBlend.Silverlight.Controls.OutlookPaneItem.HorizontalHeaderAlignment">
+            <summary>
+            Gets or sets the horizontal header alignment.
+            </summary>
+            <value>The horizontal header alignment.</value>
+        </member>
+        <member name="P:VIBlend.Silverlight.Controls.OutlookPaneItem.VerticalHeaderAlignment">
+            <summary>
+            Gets or sets the vertical header alignment.
+            </summary>
+            <value>The vertical header alignment.</value>
+        </member>
+        <member name="P:VIBlend.Silverlight.Controls.OutlookPaneItem.ContentPadding">
+            <summary>
+            Gets or sets the content padding.
+            </summary>
+            <value>The content padding.</value>
+        </member>
+        <member name="P:VIBlend.Silverlight.Controls.OutlookPaneItem.IsMouseOver">
+            <summary>
+            Gets or sets a value indicating whether this instance is mouse over.
+            </summary>
+            <value>
+            	<c>true</c> if this instance is mouse over; otherwise, <c>false</c>.
+            </value>
+        </member>
+        <member name="P:VIBlend.Silverlight.Controls.OutlookPaneItem.HeaderItem">
+            <summary>
+            Gets the header item.
+            </summary>
+            <value>The header item.</value>
+        </member>
+        <member name="P:VIBlend.Silverlight.Controls.OutlookPaneItem.ContentItem">
+            <summary>
+            Gets the content item.
+            </summary>
+            <value>The content item.</value>
+        </member>
+        <member name="P:VIBlend.Silverlight.Controls.OutlookPaneItem.LayoutRoot">
+            <summary>
+            Gets the layout root.
+            </summary>
+            <value>The layout root.</value>
+        </member>
+        <member name="P:VIBlend.Silverlight.Controls.OutlookPaneItem.Command">
+            <summary>
+            Gets or sets the Command.
+            </summary>
+            <value>The command.</value>
+        </member>
+        <member name="P:VIBlend.Silverlight.Controls.OutlookPaneItem.CommandParameter">
+            <summary>
+            Gets or sets the  command parameter.
+            </summary>
+            <value>The command parameter.</value>
+        </member>
+        <member name="P:VIBlend.Silverlight.Controls.OutlookPaneItem.IsLoaded">
+            <summary>
+            Gets a value indicating whether this instance is loaded.
+            </summary>
+            <value><c>true</c> if this instance is loaded; otherwise, <c>false</c>.</value>
+        </member>
+        <member name="P:VIBlend.Silverlight.Controls.OutlookPaneItem.OutlookPane">
+            <summary>
+            Gets the outlook pane.
+            </summary>
+            <value>The outlook pane.</value>
+        </member>
+        <member name="T:VIBlend.Silverlight.Controls.ItemExpandType">
+            <summary>
+            Represents ItemExpandType enumeration.
+            </summary>
+        </member>
+        <member name="F:VIBlend.Silverlight.Controls.ItemExpandType.AutoExpand">
+            <summary>
+            Expands when the item is highlighted.
+            </summary>
+        </member>
+        <member name="F:VIBlend.Silverlight.Controls.ItemExpandType.SingleClick">
+            <summary>
+            Expands when the item is clicked.
+            </summary>
+        </member>
+        <member name="F:VIBlend.Silverlight.Controls.ItemExpandType.DoubleClick">
+            <summary>
+            Expands when the item is double-clicked.
+            </summary>
+        </member>
+        <member name="T:VIBlend.Silverlight.Controls.NavigationPane">
+            <summary>
+            Represents an accordion-like navigation pane.
+            </summary>
+        </member>
+        <member name="F:VIBlend.Silverlight.Controls.NavigationPane.ScrollTypeProperty">
+            <exclude/>
+        </member>
+        <member name="M:VIBlend.Silverlight.Controls.NavigationPane.OnMouseRightButtonDown(System.Windows.Input.MouseButtonEventArgs)">
+            <summary>
+            Raises the <see cref="E:System.Windows.UIElement.MouseRightButtonDown"/> event.
+            </summary>
+            <param name="e">A <see cref="T:System.Windows.Input.MouseButtonEventArgs"/> that contains the event data.</param>
+        </member>
+        <member name="M:VIBlend.Silverlight.Controls.NavigationPane.OnMouseRightButtonUp(System.Windows.Input.MouseButtonEventArgs)">
+            <summary>
+            Raises the <see cref="E:System.Windows.UIElement.MouseRightButtonUp"/> event.
+            </summary>
+            <param name="e">A <see cref="T:System.Windows.Input.MouseButtonEventArgs"/> that contains the event data.</param>
+        </member>
+        <member name="M:VIBlend.Silverlight.Controls.NavigationPane.OnItemMouseDown(VIBlend.Silverlight.Controls.NavigationPaneMouseEventArgs)">
+            <summary>
+            Raises the <see cref="E:ItemMouseDown"/> event.
+            </summary>
+            <param name="args">The <see cref="T:VIBlend.Silverlight.Controls.NavigationPaneEventArgs"/> instance containing the event data.</param>
+        </member>
+        <member name="M:VIBlend.Silverlight.Controls.NavigationPane.OnItemMouseUp(VIBlend.Silverlight.Controls.NavigationPaneMouseEventArgs)">
+            <summary>
+            Raises the <see cref="E:ItemMouseUp"/> event.
+            </summary>
+            <param name="args">The <see cref="T:VIBlend.Silverlight.Controls.NavigationPaneEventArgs"/> instance containing the event data.</param>
+        </member>
+        <member name="F:VIBlend.Silverlight.Controls.NavigationPane.ContentHeightProperty">
+            <exclude/>
+        </member>
+        <member name="M:VIBlend.Silverlight.Controls.NavigationPane.ApplyContentHeightProperty(VIBlend.Silverlight.Controls.NavigationPane)">
+            <summary>
+            Applies the content height property.
+            </summary>
+            <param name="pane">The pane.</param>
+        </member>
+        <member name="F:VIBlend.Silverlight.Controls.NavigationPane.DelayProperty">
+            <exclude/>
+        </member>
+        <member name="F:VIBlend.Silverlight.Controls.NavigationPane.IntervalProperty">
+            <exclude/>
+        </member>
+        <member name="F:VIBlend.Silverlight.Controls.NavigationPane.AccelerationMaxStepProperty">
+            <exclude/>
+        </member>
+        <member name="F:VIBlend.Silverlight.Controls.NavigationPane.HorizontalTemplateProperty">
+            <summary>
+            Represents the HorizontalThemplateProperty.
+            </summary>
+        </member>
+        <member name="F:VIBlend.Silverlight.Controls.NavigationPane.VerticalTemplateProperty">
+            <summary>
+            Represents the VerticalTemplateProperty.
+            </summary>
+        </member>
+        <member name="F:VIBlend.Silverlight.Controls.NavigationPane.OrientationProperty">
+            <exclude/>
+        </member>
+        <member name="M:VIBlend.Silverlight.Controls.NavigationPane.OnItemExpandedChanging(VIBlend.Silverlight.Controls.NavigationPaneCancelEventArgs)">
+            <summary>
+            Fires the ItemExpandedChanging event.
+            </summary>
+            <param name="args"></param>
+        </member>
+        <member name="M:VIBlend.Silverlight.Controls.NavigationPane.OnItemExpandedChanged(VIBlend.Silverlight.Controls.NavigationPaneEventArgs)">
+            <summary>
+            Fires the ItemExpandedChanged event.
+            </summary>
+            <param name="args"></param>
+        </member>
+        <member name="M:VIBlend.Silverlight.Controls.NavigationPane.ClearContainerForItemOverride(System.Windows.DependencyObject,System.Object)">
+            <exclude/>
+        </member>
+        <member name="F:VIBlend.Silverlight.Controls.NavigationPane.ExpandTypeProperty">
+            <exclude/>
+        </member>
+        <member name="F:VIBlend.Silverlight.Controls.NavigationPane.AreExpandCollapseElementsVisibleProperty">
+            <exclude/>
+        </member>
+        <member name="F:VIBlend.Silverlight.Controls.NavigationPane.EnableSingleItemExpandProperty">
+            <exclude/>
+        </member>
+        <member name="M:VIBlend.Silverlight.Controls.NavigationPane.CollapseAll">
+            <summary>
+            Collapses all.
+            </summary>
+        </member>
+        <member name="M:VIBlend.Silverlight.Controls.NavigationPane.CollapseItems(System.Windows.Controls.ItemsControl)">
+            <summary>
+            Collapses the items.
+            </summary>
+        </member>
+        <member name="M:VIBlend.Silverlight.Controls.NavigationPane.CollapseItems(System.Windows.Controls.ItemCollection)">
+            <summary>
+            Collapses the items.
+            </summary>
+            <param name="items">The items.</param>
+        </member>
+        <member name="M:VIBlend.Silverlight.Controls.NavigationPane.ExpandAll">
+            <summary>
+            Expands all.
+            </summary>
+        </member>
+        <member name="M:VIBlend.Silverlight.Controls.NavigationPane.ExpandItem(System.Int32)">
+            <summary>
+            Expands a navigation item.
+            </summary>
+            <param name="index"></param>
+        </member>
+        <member name="M:VIBlend.Silverlight.Controls.NavigationPane.CollapseItem(System.Int32)">
+            <summary>
+            Collapses a NavigationItem.
+            </summary>
+            <param name="index"></param>
+        </member>
+        <member name="M:VIBlend.Silverlight.Controls.NavigationPane.ExpandItems(System.Windows.Controls.ItemCollection)">
+            <summary>
+            Expands the items.
+            </summary>
+            <param name="items">The items.</param>
+        </member>
+        <member name="M:VIBlend.Silverlight.Controls.NavigationPane.ExpandItems(System.Windows.Controls.ItemsControl)">
+            <summary>
+            Expands the items.
+            </summary>
+            <param name="itemsControl">The items control.</param>
+        </member>
+        <member name="M:VIBlend.Silverlight.Controls.NavigationPane.OnLostFocus(System.Windows.RoutedEventArgs)">
+            <summary>
+            Called before the <see cref="E:System.Windows.UIElement.LostFocus"/> event occurs.
+            </summary>
+            <param name="e">The data for the event.</param>
+        </member>
+        <member name="M:VIBlend.Silverlight.Controls.NavigationPane.EnsureVisible(VIBlend.Silverlight.Controls.NavigationPaneItem)">
+            <summary>
+            Scrolls to a NavigationPane item.
+            </summary>
+            <param name="item"></param>
+        </member>
+        <member name="M:VIBlend.Silverlight.Controls.NavigationPane.OnMouseEnter(System.Windows.Input.MouseEventArgs)">
+            <summary>
+            Called before the <see cref="E:System.Windows.UIElement.MouseEnter"/> event occurs.
+            </summary>
+            <param name="e">The data for the event.</param>
+        </member>
+        <member name="M:VIBlend.Silverlight.Controls.NavigationPane.OnMouseLeave(System.Windows.Input.MouseEventArgs)">
+            <summary>
+            Called before the <see cref="E:System.Windows.UIElement.MouseLeave"/> event occurs.
+            </summary>
+            <param name="e">The data for the event.</param>
+        </member>
+        <member name="M:VIBlend.Silverlight.Controls.NavigationPane.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:VIBlend.Silverlight.Controls.NavigationPane"/> class.
+            </summary>
+        </member>
+        <member name="M:VIBlend.Silverlight.Controls.NavigationPane.OnMouseWheel(System.Windows.Input.MouseWheelEventArgs)">
+            <summary>
+            Called before the <see cref="E:System.Windows.UIElement.MouseWheel"/> event occurs to provide handling for the event in a derived class without attaching a delegate.
+            </summary>
+            <param name="e">A <see cref="T:System.Windows.Input.MouseWheelEventArgs"/> that contains the event data.</param>
+        </member>
+        <member name="M:VIBlend.Silverlight.Controls.NavigationPane.OnKeyUp(System.Windows.Input.KeyEventArgs)">
+            <summary>
+            Called before the <see cref="E:System.Windows.UIElement.KeyUp"/> event occurs.
+            </summary>
+            <param name="e">The data for the event.</param>
+        </member>
+        <member name="M:VIBlend.Silverlight.Controls.NavigationPane.GetContainerForItemOverride">
+            <summary>
+            Creates or identifies the element that is used to display the given item.
+            </summary>
+            <returns>
+            The element that is used to display the given item.
+            </returns>
+        </member>
+        <member name="M:VIBlend.Silverlight.Controls.NavigationPane.IsItemItsOwnContainerOverride(System.Object)">
+            <summary>
+            Determines if the specified item is (or is eligible to be) its own container.
+            </summary>
+            <param name="item">The item to check.</param>
+            <returns>
+            true if the item is (or is eligible to be) its own container; otherwise, false.
+            </returns>
+        </member>
+        <member name="F:VIBlend.Silverlight.Controls.NavigationPane.ItemContainerStyleProperty">
+            <summary>
+            Identifies the
+            <see cref="P:System.Windows.Controls.NavigationPane.ItemContainerStyle" />
+            dependency property.
+            </summary>
+            <value>
+            The identifier for the
+            <see cref="P:System.Windows.Controls.NavigationPane.ItemContainerStyle" />
+            dependency property.
+            </value>
+        </member>
+        <member name="M:VIBlend.Silverlight.Controls.NavigationPane.OnItemContainerStylePropertyChanged(System.Windows.DependencyObject,System.Windows.DependencyPropertyChangedEventArgs)">
+            <summary>
+            ItemContainerStyleProperty property changed handler.
+            </summary>
+            <param name="d">
+            NavigationPane that changed its ItemContainerStyle.
+            </param>
+            <param name="e">Event arguments.</param>
+        </member>
+        <member name="F:VIBlend.Silverlight.Controls.NavigationPane.NavigationPaneItemHeaderTemplateProperty">
+            <exclude/>
+        </member>
+        <member name="M:VIBlend.Silverlight.Controls.NavigationPane.PrepareContainerForItemOverride(System.Windows.DependencyObject,System.Object)">
+            <summary>
+            Prepares the specified element to display the specified item.
+            </summary>
+            <param name="element">The element used to display the specified item.</param>
+            <param name="item">The item to display.</param>
+        </member>
+        <member name="M:VIBlend.Silverlight.Controls.NavigationPane.OnItemBindingComplete(VIBlend.Silverlight.Controls.NavigationPaneEventArgs)">
+            <summary>
+            Raises the ItemBindingComplete event.
+            </summary>
+            <param name="args"></param>
+        </member>
+        <member name="M:VIBlend.Silverlight.Controls.NavigationPane.OnItemsChanged(System.Collections.Specialized.NotifyCollectionChangedEventArgs)">
+            <summary>
+            Called when the value of the <see cref="P:System.Windows.Controls.ItemsControl.Items"/> property changes.
+            </summary>
+            <param name="e">A <see cref="T:System.Collections.Specialized.NotifyCollectionChangedEventArgs"/> that contains the event data</param>
+        </member>
+        <member name="M:VIBlend.Silverlight.Controls.NavigationPane.OnApplyTemplate">
+            <summary>
+            When overridden in a derived class, is invoked whenever application code or internal processes (such as a rebuilding layout pass) call <see cref="M:System.Windows.Controls.Control.ApplyTemplate"/>.
+            </summary>
+        </member>
+        <member name="M:VIBlend.Silverlight.Controls.NavigationPane.OnPropertyChanged(System.String)">
+            <summary>
+            Called when a property is changed.
+            </summary>
+            <param name="propertyName">Name of the property.</param>
+        </member>
+        <member name="E:VIBlend.Silverlight.Controls.NavigationPane.ItemMouseDown">
+            <summary>
+            Occurs when the mouse button is up over a NavigationPaneItem.
+            </summary>
+        </member>
+        <member name="E:VIBlend.Silverlight.Controls.NavigationPane.ItemMouseUp">
+            <summary>
+            Occurs when the mouse button is up over a NavigationPaneItem.
+            </summary>
+        </member>
+        <member name="P:VIBlend.Silverlight.Controls.NavigationPane.NavigationPaneItems">
+            <summary>
+            Gets the NavigationPane items.
+            </summary>
+        </member>
+        <member name="P:VIBlend.Silverlight.Controls.NavigationPane.ContentHeight">
+            <summary>
+            Gets or sets the height of the content.
+            </summary>
+            <value>The height of the content.</value>
+        </member>
+        <member name="P:VIBlend.Silverlight.Controls.NavigationPane.AccelerationMaxStep">
+            <summary>
+            Gets or sets the acceleration max step.
+            </summary>
+            <value>The acceleration max step.</value>
+        </member>
+        <member name="P:VIBlend.Silverlight.Controls.NavigationPane.Delay">
+            <summary>
+            Gets or sets the delay.
+            </summary>
+            <value>The delay.</value>
+        </member>
+        <member name="P:VIBlend.Silverlight.Controls.NavigationPane.Interval">
+            <summary>
+            Gets or sets the interval.
+            </summary>
+            <value>The interval.</value>
+        </member>
+        <member name="P:VIBlend.Silverlight.Controls.NavigationPane.ScrollType">
+            <summary>
+            Gets or sets the type of the scroll.
+            </summary>
+            <value>The type of the scroll.</value>
+        </member>
+        <member name="P:VIBlend.Silverlight.Controls.NavigationPane.HorizontalTemplate">
+            <summary>
+            Gets or sets the horizontal menu template.
+            </summary>
+        </member>
+        <member name="P:VIBlend.Silverlight.Controls.NavigationPane.VerticalTemplate">
+            <summary>
+            Gets or sets the vertical menu template.
+            </summary>
+        </member>
+        <member name="P:VIBlend.Silverlight.Controls.NavigationPane.Orientation">
+            <summary>
+            Gets or sets the menu orientation. The menu could be horizontal or vertical.
+            </summary>
+        </member>
+        <member name="E:VIBlend.Silverlight.Controls.NavigationPane.ItemExpandedChanging">
+            <summary>
+            Occurs when item is expanding.
+            </summary>
+        </member>
+        <member name="E:VIBlend.Silverlight.Controls.NavigationPane.ItemExpandedChanged">
+            <summary>
+            Occurs when item is expanded.
+            </summary>
+        </member>
+        <member name="P:VIBlend.Silverlight.Controls.NavigationPane.IsControlKeyDown">
+            <summary>
+            Gets a value indicating whether the Control key is currently
+            pressed.
+            </summary>
+        </member>
+        <member name="P:VIBlend.Silverlight.Controls.NavigationPane.IsShiftKeyDown">
+            <summary>
+            Gets a value indicating whether the Shift key is currently pressed.
+            </summary>
+        </member>
+        <member name="P:VIBlend.Silverlight.Controls.NavigationPane.BackgroundBorder">
+            <exclude/>
+        </member>
+        <member name="P:VIBlend.Silverlight.Controls.NavigationPane.ExpandType">
+            <summary>
+            Gets or sets the expand type.
+            </summary>
+        </member>
+        <member name="P:VIBlend.Silverlight.Controls.NavigationPane.AreExpandCollapseElementsVisible">
+            <summary>
+            Gets or sets a value indicating whether the expand/collapse indicators are visible.
+            </summary>
+        </member>
+        <member name="P:VIBlend.Silverlight.Controls.NavigationPane.EnableSingleItemExpand">
+            <summary>
+            Gets or sets a value indicating whether an expanded navItem collapses all other sibling navItems.
+            </summary>
+        </member>
+        <member name="P:VIBlend.Silverlight.Controls.NavigationPane.AnimationType">
+            <summary>
+            Gets or sets the animation type.
+            </summary>
+        </member>
+        <member name="P:VIBlend.Silverlight.Controls.NavigationPane.ItemContainerStyle">
+            <summary>
+            Gets or sets the <see cref="T:System.Windows.Style" /> that is
+            applied to the container element generated for each item.
+            </summary>
+            <value>
+            The <see cref="T:System.Windows.Style" /> applied to the container
+            element that contains each item.
+            </value>
+        </member>
+        <member name="P:VIBlend.Silverlight.Controls.NavigationPane.NavigationPaneItemHeaderTemplate">
+            <summary>
+            Gets or sets the NavigationPaneItemHeaderTemplate which is used in the data binding process.
+            </summary>
+        </member>
+        <member name="E:VIBlend.Silverlight.Controls.NavigationPane.ItemBindingComplete">
+            <summary>
+            Occurs when the item's binding is completed.
+            </summary>
+        </member>
+        <member name="P:VIBlend.Silverlight.Controls.NavigationPane.VerticalScrollBarsVisibility">
+            <summary>
+            Gets or sets the Vertical scrollbars visibility.
+            </summary>
+        </member>
+        <member name="P:VIBlend.Silverlight.Controls.NavigationPane.HorizontalScrollBarsVisibility">
+            <summary>
+            Gets or sets the horizontal scrollbars visibility.
+            </summary>
+        </member>
+        <member name="E:VIBlend.Silverlight.Controls.NavigationPane.PropertyChanged">
+            <summary>
+            Occurs when a property is changed.
+            </summary>
+        </member>
+        <member name="T:VIBlend.Silverlight.Controls.NavigationPane.ItemStateChangedHandler">
+            <exclude/>
+        </member>
+        <member name="T:VIBlend.Silverlight.Controls.NavigationPane.ItemStateChangingHandler">
+            <exclude/>
+        </member>
+        <member name="T:VIBlend.Silverlight.Controls.ScrollChangedEventArgs">
+            <exclude/>
+        </member>
+        <member name="P:VIBlend.Silverlight.Controls.ScrollChangedEventArgs.HorizontalOffset">
+            <summary>
+            Gets or sets the horizontal offset.
+            </summary>
+            <value>The horizontal offset.</value>
+        </member>
+        <member name="P:VIBlend.Silverlight.Controls.ScrollChangedEventArgs.VerticalOffset">
+            <summary>
+            Gets or sets the vertical offset.
+            </summary>
+            <value>The vertical offset.</value>
+        </member>
+        <member name="P:VIBlend.Silverlight.Controls.ScrollChangedEventArgs.HorizontalChange">
+            <summary>
+            Gets or sets the horizontal change.
+            </summary>
+            <value>The horizontal change.</value>
+        </member>
+        <member name="P:VIBlend.Silverlight.Controls.ScrollChangedEventArgs.VerticalChange">
+            <summary>
+            Gets or sets the vertical change.
+            </summary>
+            <value>The vertical change.</value>
+        </member>
+        <member name="T:VIBlend.Silverlight.Controls.OutlookPaneHeaderItem">
+            <exclude/>   
+        </member>
+        <member name="F:VIBlend.Silverlight.Controls.OutlookPaneHeaderItem.CollapsedHeaderTemplateProperty">
+            <exclude/>
+        </member>
+        <member name="F:VIBlend.Silverlight.Controls.OutlookPaneHeaderItem.CollapsedHeaderProperty">
+            <exclude/>
+        </member>
+        <member name="F:VIBlend.Silverlight.Controls.OutlookPaneHeaderItem.CollapsedStateButtonContentTemplateProperty">
+            <exclude/>
+        </member>
+        <member name="F:VIBlend.Silverlight.Controls.OutlookPaneHeaderItem.CollapsedStateButtonContentProperty">
+            <exclude/>
+        </member>
+        <member name="F:VIBlend.Silverlight.Controls.OutlookPaneHeaderItem.IsExpandedProperty">
+            <exclude/>
+        </member>
+        <member name="M:VIBlend.Silverlight.Controls.OutlookPaneHeaderItem.OnExpanded">
+            <summary>
+            Called when the IsExpanded property is changed.
+            </summary>
+        </member>
+        <member name="M:VIBlend.Silverlight.Controls.OutlookPaneHeaderItem.OnCollapsed">
+            <summary>
+            Called when the IsExpanded property is changed.
+            </summary>
+        </member>
+        <member name="M:VIBlend.Silverlight.Controls.OutlookPaneHeaderItem.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:VIBlend.Silverlight.Controls.OutlookPaneHeaderItem"/> class.
+            </summary>
+        </member>
+        <member name="M:VIBlend.Silverlight.Controls.OutlookPaneHeaderItem.OnApplyTemplate">
+            <summary>
+            When overridden in a derived class, is invoked whenever application code or internal processes (such as a rebuilding layout pass) call <see cref="M:System.Windows.Controls.Control.ApplyTemplate"/>.
+            </summary>
+        </member>
+        <member name="M:VIBlend.Silverlight.Controls.OutlookPaneHeaderItem.OnPropertyChanged(System.String)">
+            <summary>
+            Called when a property is changed.
+            </summary>
+            <param name="propertyName">Name of the property.</param>
+        </member>
+        <member name="E:VIBlend.Silverlight.Controls.OutlookPaneHeaderItem.Expanded">
+            <summary>
+            Occurs when the control is expanded.
+            </summary>
+        </member>
+        <member name="E:VIBlend.Silverlight.Controls.OutlookPaneHeaderItem.Collapsed">
+            <summary>
+            Occurs when the control is collapsed.
+            </summary>
+        </member>
+        <member name="P:VIBlend.Silverlight.Controls.OutlookPaneHeaderItem.OutlookPane">
+            <summary>
+            Gets the outlook pane.
+            </summary>
+            <value>The outlook pane.</value>
+        </member>
+        <member name="P:VIBlend.Silverlight.Controls.OutlookPaneHeaderItem.ExpandButton">
+            <summary>
+            Gets or sets the expand button.
+            </summary>
+            <value>The expand button.</value>
+        </member>
+        <member name="P:VIBlend.Silverlight.Controls.OutlookPaneHeaderItem.CollapseButton">
+            <summary>
+            Gets or sets the expand button.
+            </summary>
+            <value>The expand button.</value>
+        </member>
+        <member name="P:VIBlend.Silverlight.Controls.OutlookPaneHeaderItem.CollapsedHeaderTemplate">
+            <summary>
+            Gets or sets the collapsed header template.
+            </summary>
+            <value>The collapsed header template.</value>
+        </member>
+        <member name="P:VIBlend.Silverlight.Controls.OutlookPaneHeaderItem.CollapsedHeader">
+            <summary>
+            Gets or sets the collapsed header.
+            </summary>
+            <value>The collapsed header.</value>
+        </member>
+        <member name="P:VIBlend.Silverlight.Controls.OutlookPaneHeaderItem.CollapsedStateButtonContentTemplate">
+            <summary>
+            Gets or sets the collapsed state button content template.
+            </summary>
+            <value>The collapsed state button content template.</value>
+        </member>
+        <member name="P:VIBlend.Silverlight.Controls.OutlookPaneHeaderItem.CollapsedStateButtonContent">
+            <summary>
+            Gets or sets the content of the collapsed state button.
+            </summary>
+            <value>The content of the collapsed state button.</value>
+        </member>
+        <member name="P:VIBlend.Silverlight.Controls.OutlookPaneHeaderItem.IsExpanded">
+            <summary>
+            Gets or sets a value indicating whether this instance is expanded.
+            </summary>
+            <value>
+            	<c>true</c> if this instance is expanded; otherwise, <c>false</c>.
+            </value>
+        </member>
+        <member name="P:VIBlend.Silverlight.Controls.OutlookPaneHeaderItem.PopupButton">
+            <summary>
+            Gets the popup button.
+            </summary>
+            <value>The popup button.</value>
+        </member>
+        <member name="P:VIBlend.Silverlight.Controls.OutlookPaneHeaderItem.IsPopupOpened">
+            <summary>
+            Gets a value indicating whether this instance is popup opened.
+            </summary>
+            <value>
+            	<c>true</c> if this instance is popup opened; otherwise, <c>false</c>.
+            </value>
+        </member>
+        <member name="E:VIBlend.Silverlight.Controls.OutlookPaneHeaderItem.PropertyChanged">
+            <summary>
+            Occurs when a property is changed.
+            </summary>
+        </member>
+        <member name="T:VIBlend.Silverlight.Controls.NavigationPaneItem">
+            <summary>
+            Represents a single item in the Navigation Pane.
+            </summary>
+        </member>
+        <member name="F:VIBlend.Silverlight.Controls.NavigationPaneItem.HeaderName">
+            <summary>
+            The name of the Header template part.
+            </summary>
+        </member>
+        <member name="M:VIBlend.Silverlight.Controls.NavigationPaneItem.OnIsExpandedChanged">
+            <summary>
+            Called when IsExpanded is changed.
+            </summary>
+        </member>
+        <member name="F:VIBlend.Silverlight.Controls.NavigationPaneItem.HorizontalHeaderAlignmentProperty">
+            <exclude/>
+        </member>
+        <member name="F:VIBlend.Silverlight.Controls.NavigationPaneItem.VerticalHeaderAlignmentProperty">
+            <exclude/>
+        </member>
+        <member name="F:VIBlend.Silverlight.Controls.NavigationPaneItem.DisabledForeBrushProperty">
+            <exclude/>
+        </member>
+        <member name="F:VIBlend.Silverlight.Controls.NavigationPaneItem.SelectedForeBrushProperty">
+            <exclude/>
+        </member>
+        <member name="F:VIBlend.Silverlight.Controls.NavigationPaneItem.HighlightForeBrushProperty">
+            <exclude/>
+        </member>
+        <member name="F:VIBlend.Silverlight.Controls.NavigationPaneItem.NormalForeBrushProperty">
+            <exclude/>
+        </member>
+        <member name="F:VIBlend.Silverlight.Controls.NavigationPaneItem.DisplayValueProperty">
+            <exclude/>
+        </member>
+        <member name="F:VIBlend.Silverlight.Controls.NavigationPaneItem.ImageProperty">
+            <exclude/>
+        </member>
+        <member name="F:VIBlend.Silverlight.Controls.NavigationPaneItem.StateImageProperty">
+            <exclude/>
+        </member>
+        <member name="M:VIBlend.Silverlight.Controls.NavigationPaneItem.OnVisualStateChanged">
+            <summary>
+            Called when a visual state is changed.
+            </summary>
+        </member>
+        <member name="M:VIBlend.Silverlight.Controls.NavigationPaneItem.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:VIBlend.Silverlight.Controls.NavigationPaneItem"/> class.
+            </summary>
+        </member>
+        <member name="M:VIBlend.Silverlight.Controls.NavigationPaneItem.#ctor(System.String)">
+            <summary>
+            Initializes a new instance of the <see cref="T:VIBlend.Silverlight.Controls.NavigationPaneItem"/> class.
+            </summary>
+            <param name="text">The text.</param>
+        </member>
+        <member name="M:VIBlend.Silverlight.Controls.NavigationPaneItem.#ctor(System.Windows.Media.ImageSource,System.String)">
+            <summary>
+            Initializes a new instance of the <see cref="T:VIBlend.Silverlight.Controls.NavigationPaneItem"/> class.
+            </summary>
+            <param name="imageSource">The image source.</param>
+            <param name="text">The text.</param>
+        </member>
+        <member name="F:VIBlend.Silverlight.Controls.NavigationPaneItem.IsSelectedProperty">
+            <exclude/>
+        </member>
+        <member name="F:VIBlend.Silverlight.Controls.NavigationPaneItem.ContentHeightProperty">
+            <exclude/>
+        </member>
+        <member name="F:VIBlend.Silverlight.Controls.NavigationPaneItem.IsExpandedProperty">
+            <exclude/>
+        </member>
+        <member name="F:VIBlend.Silverlight.Controls.NavigationPaneItem.ExpandCommandProperty">
+            <exclude/>
+        </member>
+        <member name="F:VIBlend.Silverlight.Controls.NavigationPaneItem.ExpandCommandParameterProperty">
+            <exclude/>
+        </member>
+        <member name="F:VIBlend.Silverlight.Controls.NavigationPaneItem.CollapseCommandProperty">
+            <exclude/>
+        </member>
+        <member name="F:VIBlend.Silverlight.Controls.NavigationPaneItem.CollapseCommandParameterProperty">
+            <exclude/>
+        </member>
+        <member name="M:VIBlend.Silverlight.Controls.NavigationPaneItem.ExecuteCommand(System.Windows.Input.ICommand,System.Object)">
+            <summary>
+            Executes the command.
+            </summary>
+            <param name="command">The command.</param>
+            <param name="commandParameter">The command parameter.</param>
+        </member>
+        <member name="M:VIBlend.Silverlight.Controls.NavigationPaneItem.Toggle">
+            <summary>
+            Toggles the item's state.
+            </summary>
+        </member>
+        <member name="F:VIBlend.Silverlight.Controls.NavigationPaneItem.VerticalTemplateProperty">
+            <summary>
+            Represents the VerticalTemplateProperty.
+            </summary>
+        </member>
+        <member name="M:VIBlend.Silverlight.Controls.NavigationPaneItem.OnApplyTemplate">
+            <summary>
+            Called when the template is applied.
+            </summary>
+        </member>
+        <member name="M:VIBlend.Silverlight.Controls.NavigationPaneItem.UpdateExpandCollapseIndicators">
+            <summary>
+            Updates the expand and collapse indicators.
+            </summary>
+        </member>
+        <member name="M:VIBlend.Silverlight.Controls.NavigationPaneItem.OnGotFocus(System.Windows.RoutedEventArgs)">
+            <summary>
+            Called before the <see cref="E:System.Windows.UIElement.GotFocus"/> event occurs.
+            </summary>
+            <param name="e">The data for the event.</param>
+        </member>
+        <member name="M:VIBlend.Silverlight.Controls.NavigationPaneItem.OnLostFocus(System.Windows.RoutedEventArgs)">
+            <summary>
+            Called before the <see cref="E:System.Windows.UIElement.LostFocus"/> event occurs.
+            </summary>
+            <param name="e">The data for the event.</param>
+        </member>
+        <member name="M:VIBlend.Silverlight.Controls.NavigationPaneItem.OnClick">
+            <summary>
+            Called when the item is clicked.
+            </summary>
+        </member>
+        <member name="M:VIBlend.Silverlight.Controls.NavigationPaneItem.OnMouseLeftButtonUp(System.Windows.Input.MouseButtonEventArgs)">
+            <summary>
+            Called before the <see cref="E:System.Windows.UIElement.MouseLeftButtonUp"/> event occurs.
+            </summary>
+            <param name="e">The data for the event.</param>
+        </member>
+        <member name="M:VIBlend.Silverlight.Controls.NavigationPaneItem.OnMouseLeftButtonDown(System.Windows.Input.MouseButtonEventArgs)">
+            <summary>
+            Called before the <see cref="E:System.Windows.UIElement.MouseLeftButtonDown"/> event occurs.
+            </summary>
+            <param name="e">The data for the event.</param>
+        </member>
+        <member name="M:VIBlend.Silverlight.Controls.NavigationPaneItem.OnPropertyChanged(System.String)">
+            <summary>
+            Called when a property is changed.
+            </summary>
+            <param name="propertyName">Name of the property.</param>
+        </member>
+        <member name="E:VIBlend.Silverlight.Controls.NavigationPaneItem.Click">
+            <summary>
+            Occurs when the user clicks the item.
+            </summary>
+        </member>
+        <member name="E:VIBlend.Silverlight.Controls.NavigationPaneItem.IsExpandedChanged">
+            <summary>
+            Occurs when the IsExpanded property is changed.
+            </summary>
+        </member>
+        <member name="P:VIBlend.Silverlight.Controls.NavigationPaneItem.HorizontalHeaderAlignment">
+            <summary>
+            Gets or sets the horizontal header alignment.
+            </summary>
+            <value>The horizontal header alignment.</value>
+        </member>
+        <member name="P:VIBlend.Silverlight.Controls.NavigationPaneItem.VerticalHeaderAlignment">
+            <summary>
+            Gets or sets the vertical header alignment.
+            </summary>
+            <value>The vertical header alignment.</value>
+        </member>
+        <member name="P:VIBlend.Silverlight.Controls.NavigationPaneItem.DefaultHeader">
+            <summary>
+            Gets or sets the default header.
+            </summary>
+            <value>The default header.</value>
+        </member>
+        <member name="P:VIBlend.Silverlight.Controls.NavigationPaneItem.DisplayValue">
+            <summary>
+            Gets or sets the item's value.
+            </summary>
+        </member>
+        <member name="P:VIBlend.Silverlight.Controls.NavigationPaneItem.ImageSource">
+            <summary>
+            Gets or sets item's image.
+            </summary>
+        </member>
+        <member name="P:VIBlend.Silverlight.Controls.NavigationPaneItem.StateImageSource">
+            <summary>
+            Gets or sets item's image.
+            </summary>
+        </member>
+        <member name="P:VIBlend.Silverlight.Controls.NavigationPaneItem.SelectedForeBrush">
+            <summary>
+            Gets or sets the brush which is used when the item is selected.
+            </summary>
+        </member>
+        <member name="P:VIBlend.Silverlight.Controls.NavigationPaneItem.DisabledForeBrush">
+            <summary>
+            Gets or sets the brush which is used when the item is disabled.
+            </summary>
+        </member>
+        <member name="P:VIBlend.Silverlight.Controls.NavigationPaneItem.HighlightForeBrush">
+            <summary>
+            Gets or sets the brush which is used when the item is highlighted.
+            </summary>
+        </member>
+        <member name="P:VIBlend.Silverlight.Controls.NavigationPaneItem.NormalForeBrush">
+            <summary>
+            Gets or sets the brush which is used when the item is in the default state.
+            </summary>
+        </member>
+        <member name="E:VIBlend.Silverlight.Controls.NavigationPaneItem.VisualStateChanged">
+            <summary>
+            Occurs when the visual state is changed.
+            </summary>
+        </member>
+        <member name="P:VIBlend.Silverlight.Controls.NavigationPaneItem.NavigationPane">
+            <summary>
+            Gets the parent NavigationPane.
+            </summary>
+        </member>
+        <member name="P:VIBlend.Silverlight.Controls.NavigationPaneItem.ParentItemsControl">
+            <summary>
+            Gets or sets a reference to the parent ItemsControl of a
+            NavigationPaneItem.
+            </summary>
+        </member>
+        <member name="P:VIBlend.Silverlight.Controls.NavigationPaneItem.ParentNavigationPane">
+            <summary>
+            Gets a reference to the parent NavigationPane of the NavigationPaneItem.
+            </summary>
+        </member>
+        <member name="P:VIBlend.Silverlight.Controls.NavigationPaneItem.ExpandElement">
+            <summary>
+            Gets or sets tree node's expand element.
+            </summary>
+        </member>
+        <member name="P:VIBlend.Silverlight.Controls.NavigationPaneItem.CollapseElement">
+            <summary>
+            Gets or sets tree node's collapse element.
+            </summary>
+        </member>
+        <member name="P:VIBlend.Silverlight.Controls.NavigationPaneItem.BackgroundHighlight">
+            <summary>
+            Gets or sets the background highlight rectangle.
+            </summary>
+        </member>
+        <member name="P:VIBlend.Silverlight.Controls.NavigationPaneItem.ContentHeight">
+            <summary>
+            Gets or sets the height of the content.
+            </summary>
+            <value>The height of the content.</value>
+        </member>
+        <member name="P:VIBlend.Silverlight.Controls.NavigationPaneItem.ExpandCommand">
+            <summary>
+            Gets or sets the Command.
+            </summary>
+            <value>The command.</value>
+        </member>
+        <member name="P:VIBlend.Silverlight.Controls.NavigationPaneItem.ExpandCommandParameter">
+            <summary>
+            Gets or sets the  command parameter.
+            </summary>
+            <value>The command parameter.</value>
+        </member>
+        <member name="P:VIBlend.Silverlight.Controls.NavigationPaneItem.CollapseCommand">
+            <summary>
+            Gets or sets the Command.
+            </summary>
+            <value>The command.</value>
+        </member>
+        <member name="P:VIBlend.Silverlight.Controls.NavigationPaneItem.CollapseCommandParameter">
+            <summary>
+            Gets or sets the  command parameter.
+            </summary>
+            <value>The command parameter.</value>
+        </member>
+        <member name="P:VIBlend.Silverlight.Controls.NavigationPaneItem.IsExpanded">
+            <summary>
+            Gets or sets the isExpanded state.
+            </summary>
+        </member>
+        <member name="P:VIBlend.Silverlight.Controls.NavigationPaneItem.HeaderElement">
+            <summary>
+            Gets the Header template part that is used to distinguish the bound
+            Header content of the NavigationPaneItem.
+            </summary>
+        </member>
+        <member name="P:VIBlend.Silverlight.Controls.NavigationPaneItem.VerticalTemplate">
+            <summary>
+            Gets or sets the vertical menu template.
+            </summary>
+        </member>
+        <member name="P:VIBlend.Silverlight.Controls.NavigationPaneItem.ExpanderButton">
+            <summary>
+            Gets the expander button.
+            </summary>
+            <value>The expander button.</value>
+        </member>
+        <member name="P:VIBlend.Silverlight.Controls.NavigationPaneItem.CollapseButton">
+            <summary>
+            Gets the collapse button.
+            </summary>
+            <value>The collapse button.</value>
+        </member>
+        <member name="P:VIBlend.Silverlight.Controls.NavigationPaneItem.ParentCollection">
+            <summary>
+            Gets the parent collection.
+            </summary>
+            <value>The parent collection.</value>
+        </member>
+        <member name="P:VIBlend.Silverlight.Controls.NavigationPaneItem.PrevSiblingItem">
+            <summary>
+            Gets the previous sibling item.
+            </summary>
+        </member>
+        <member name="P:VIBlend.Silverlight.Controls.NavigationPaneItem.NextSiblingItem">
+            <summary>
+            Gets the next sibling item.
+            </summary>
+        </member>
+        <member name="P:VIBlend.Silverlight.Controls.NavigationPaneItem.IsMouseOver">
+            <summary>
+            Gets or sets a value indicating whether the mouse is over this instance.
+            </summary>
+            <value>
+            	<c>true</c> if this instance is mouse over; otherwise, <c>false</c>.
+            </value>
+        </member>
+        <member name="P:VIBlend.Silverlight.Controls.NavigationPaneItem.IsSelected">
+            <summary>
+            Gets or sets whether the item is selected.
+            </summary>
+        </member>
+        <member name="E:VIBlend.Silverlight.Controls.NavigationPaneItem.PropertyChanged">
+            <summary>
+            Occurs when a property value changes.
+            </summary>
+        </member>
+        <member name="T:VIBlend.Silverlight.Controls.NavigationPaneAction">
+            <summary>
+            Represents NavigationPaneAction enumeration.
+            </summary>
+        </member>
+        <member name="F:VIBlend.Silverlight.Controls.NavigationPaneAction.None">
+            <summary>
+            None
+            </summary>
+        </member>
+        <member name="F:VIBlend.Silverlight.Controls.NavigationPaneAction.Expanded">
+            <summary>
+            Expanded action
+            </summary>
+        </member>
+        <member name="F:VIBlend.Silverlight.Controls.NavigationPaneAction.Collapsed">
+            <summary>
+            Collapsed action
+            </summary>
+        </member>
+        <member name="F:VIBlend.Silverlight.Controls.NavigationPaneAction.Edit">
+            <summary>
+            Item is edited.
+            </summary>
+        </member>
+        <member name="T:VIBlend.Silverlight.Controls.NavigationPaneEventArgs">
+            <summary>
+            Provides data for NavigationPane events.
+            </summary>
+        </member>
+        <member name="M:VIBlend.Silverlight.Controls.NavigationPaneEventArgs.#ctor(VIBlend.Silverlight.Controls.NavigationPaneItem,VIBlend.Silverlight.Controls.NavigationPaneAction)">
+            <summary>
+            Initializes a new instance of the <see cref="T:VIBlend.Silverlight.Controls.NavigationPaneEventArgs"/> class.
+            </summary>
+            <param name="item">The item.</param>
+            <param name="action">The action.</param>
+        </member>
+        <member name="P:VIBlend.Silverlight.Controls.NavigationPaneEventArgs.Action">
+            <summary>
+            Gets the action.
+            </summary>
+            <value>The action.</value>
+        </member>
+        <member name="P:VIBlend.Silverlight.Controls.NavigationPaneEventArgs.Item">
+            <summary>
+            Gets the item.
+            </summary>
+            <value>The item.</value>
+        </member>
+        <member name="T:VIBlend.Silverlight.Controls.OutlookPaneStatus">
+            <summary>
+            Represents the OutlookPane's status area.
+            </summary>
+        </member>
+        <member name="M:VIBlend.Silverlight.Controls.OutlookPaneStatus.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:VIBlend.Silverlight.Controls.OutlookPaneStatus"/> class.
+            </summary>
+        </member>
+        <member name="M:VIBlend.Silverlight.Controls.OutlookPaneStatus.OnApplyTemplate">
+            <summary>
+            When overridden in a derived class, is invoked whenever application code or internal processes (such as a rebuilding layout pass) call <see cref="M:System.Windows.Controls.Control.ApplyTemplate"/>. In simplest terms, this means the method is called just before a UI element displays in an application. For more information, see Remarks.
+            </summary>
+        </member>
+        <member name="P:VIBlend.Silverlight.Controls.OutlookPaneStatus.OverflowButton">
+            <summary>
+            Gets the overflow button.
+            </summary>
+            <value>The overflow button.</value>
+        </member>
+        <member name="P:VIBlend.Silverlight.Controls.OutlookPaneStatus.OutlookPane">
+            <summary>
+            Gets or sets the outlook pane.
+            </summary>
+            <value>The outlook pane.</value>
+        </member>
+        <member name="T:VIBlend.Silverlight.Controls.OutlookPaneMouseEventArgs">
+            <summary>
+            Represents a class that contains event data.
+            </summary>
+        </member>
+        <member name="M:VIBlend.Silverlight.Controls.OutlookPaneMouseEventArgs.#ctor(VIBlend.Silverlight.Controls.OutlookPaneItem,System.Windows.Input.MouseButtonEventArgs,VIBlend.Silverlight.Controls.MouseButton)">
+            <summary>
+            Initializes a new instance of the <see cref="T:VIBlend.Silverlight.Controls.OutlookPaneMouseEventArgs"/> class.
+            </summary>
+            <param name="item">The item.</param>
+            <param name="args">The <see cref="T:System.Windows.Input.MouseButtonEventArgs"/> instance containing the event data.</param>
+            <param name="changedButton">The changed button.</param>
+        </member>
+        <member name="P:VIBlend.Silverlight.Controls.OutlookPaneMouseEventArgs.MouseArgs">
+            <summary>
+            Gets or sets the mouse args.
+            </summary>
+            <value>The mouse args.</value>
+        </member>
+        <member name="P:VIBlend.Silverlight.Controls.OutlookPaneMouseEventArgs.HitItem">
+            <summary>
+            Gets or sets the hit item.
+            </summary>
+            <value>The hit item.</value>
+        </member>
+        <member name="P:VIBlend.Silverlight.Controls.OutlookPaneMouseEventArgs.ChangedButton">
+            <summary>
+            Gets the mouse button assoicated with the event.
+            </summary>
+        </member>
+        <member name="T:VIBlend.Silverlight.Controls.ContextMenuOpeningEventArgs">
+            <summary>
+            Provides data for cancelable event.
+            </summary>
+        </member>
+        <member name="M:VIBlend.Silverlight.Controls.ContextMenuOpeningEventArgs.#ctor(VIBlend.Silverlight.Controls.ContextMenu)">
+            <summary>
+            Initializes a new instance of the <see cref="T:VIBlend.Silverlight.Controls.ContextMenuOpeningEventArgs"/> class.
+            </summary>
+            <param name="contextMenu">The context menu.</param>
+        </member>
+        <member name="P:VIBlend.Silverlight.Controls.ContextMenuOpeningEventArgs.ContextMenu">
+            <summary>
+            Gets or sets the context menu.
+            </summary>
+            <value>The context menu.</value>
+        </member>
+        <member name="T:VIBlend.Silverlight.Controls.OutlookPane">
+            <summary>
+            Represents a navigation control similar to the MS Outlook's bar.
+            </summary>
+        </member>
+        <member name="F:VIBlend.Silverlight.Controls.OutlookPane.header">
+            <exclude/>
+        </member>
+        <member name="F:VIBlend.Silverlight.Controls.OutlookPane.ItemContainerStyleProperty">
+            <summary>
+            Identifies the
+            <see cref="P:System.Windows.Controls.NavigationPane.ItemContainerStyle" />
+            dependency property.
+            </summary>
+            <value>
+            The identifier for the
+            <see cref="P:System.Windows.Controls.NavigationPane.ItemContainerStyle" />
+            dependency property.
+            </value>
+        </member>
+        <member name="M:VIBlend.Silverlight.Controls.OutlookPane.OnItemContainerStylePropertyChanged(System.Windows.DependencyObject,System.Windows.DependencyPropertyChangedEventArgs)">
+            <summary>
+            ItemContainerStyleProperty property changed handler.
+            </summary>
+            <param name="d">
+            OutlookPane that changed its ItemContainerStyle.
+            </param>
+            <param name="e">Event arguments.</param>
+        </member>
+        <member name="M:VIBlend.Silverlight.Controls.OutlookPane.OnItemMouseDown(VIBlend.Silverlight.Controls.OutlookPaneMouseEventArgs)">
+            <summary>
+            Raises the <see cref="E:ItemMouseDown"/> event.
+            </summary>
+            <param name="args">The <see cref="T:VIBlend.Silverlight.Controls.OutlookPaneMouseEventArgs"/> instance containing the event data.</param>
+        </member>
+        <member name="M:VIBlend.Silverlight.Controls.OutlookPane.OnItemMouseUp(VIBlend.Silverlight.Controls.OutlookPaneMouseEventArgs)">
+            <summary>
+            Raises the <see cref="E:ItemMouseUp"/> event.
+            </summary>
+            <param name="args">The <see cref="T:VIBlend.Silverlight.Controls.OutlookPaneMouseEventArgs"/> instance containing the event data.</param>
+        </member>
+        <member name="F:VIBlend.Silverlight.Controls.OutlookPane.ContextMenuItemStyleProperty">
+            <exclude/>
+        </member>
+        <member name="M:VIBlend.Silverlight.Controls.OutlookPane.OnContextMenuInitialized">
+            <summary>
+            Called when the context menu is initialized.
+            </summary>
+        </member>
+        <member name="M:VIBlend.Silverlight.Controls.OutlookPane.OnMenuOpening(VIBlend.Silverlight.Controls.ContextMenuOpeningEventArgs)">
+            <summary>
+            Raises the <see cref="E:MenuOpening"/> event.
+            </summary>
+            <param name="args">The <see cref="T:VIBlend.Silverlight.Controls.ContextMenuOpeningEventArgs"/> instance containing the event data.</param>
+        </member>
+        <member name="M:VIBlend.Silverlight.Controls.OutlookPane.OnMenuOpened">
+            <summary>
+            Called when the menu is opened.
+            </summary>
+        </member>
+        <member name="M:VIBlend.Silverlight.Controls.OutlookPane.OnMenuClosed">
+            <summary>
+            Called when the menu is opened.
+            </summary>
+        </member>
+        <member name="M:VIBlend.Silverlight.Controls.OutlookPane.OnMenuClosing(System.ComponentModel.CancelEventArgs)">
+            <summary>
+            Raises the <see cref="E:MenuClosing"/> event.
+            </summary>
+            <param name="args">The <see cref="T:System.ComponentModel.CancelEventArgs"/> instance containing the event data.</param>
+        </member>
+        <member name="M:VIBlend.Silverlight.Controls.OutlookPane.OnExpandedChanged">
+            <summary>
+            Called when the IsExpanded property is changed.
+            </summary>
+        </member>
+        <member name="M:VIBlend.Silverlight.Controls.OutlookPane.OnExpandedChanging(System.ComponentModel.CancelEventArgs)">
+            <summary>
+            Called when the IsExpanded property is changing.
+            </summary>
+        </member>
+        <member name="M:VIBlend.Silverlight.Controls.OutlookPane.OnSelectionChanged">
+            <summary>
+            Called when the Selection is changed.
+            </summary>
+        </member>
+        <member name="M:VIBlend.Silverlight.Controls.OutlookPane.OnSelectionChanging(System.ComponentModel.CancelEventArgs)">
+            <summary>
+            Called when the Selection is changing.
+            </summary>
+        </member>
+        <member name="M:VIBlend.Silverlight.Controls.OutlookPane.OnItemResized">
+            <summary>
+            Called when the items are resized by the splitter.
+            </summary>
+        </member>
+        <member name="M:VIBlend.Silverlight.Controls.OutlookPane.OnItemResizing(System.ComponentModel.CancelEventArgs)">
+            <summary>
+            Called when the items are resizing by the splitter.
+            </summary>
+        </member>
+        <member name="F:VIBlend.Silverlight.Controls.OutlookPane.EnableResizeProperty">
+            <exclude/>
+        </member>
+        <member name="F:VIBlend.Silverlight.Controls.OutlookPane.AutoSizeProperty">
+            <exclude/>
+        </member>
+        <member name="F:VIBlend.Silverlight.Controls.OutlookPane.ContentHeightProperty">
+            <exclude/>
+        </member>
+        <member name="F:VIBlend.Silverlight.Controls.OutlookPane.EnableCollapseModeProperty">
+            <exclude/>
+        </member>
+        <member name="M:VIBlend.Silverlight.Controls.OutlookPane.ShowStatusItem">
+            <summary>
+            Shows the status.
+            </summary>
+        </member>
+        <member name="M:VIBlend.Silverlight.Controls.OutlookPane.HideStatusItem">
+            <summary>
+            Hides the status.
+            </summary>
+        </member>
+        <member name="M:VIBlend.Silverlight.Controls.OutlookPane.HideOverflowButton">
+            <summary>
+            Hides the overflow button.
+            </summary>
+        </member>
+        <member name="M:VIBlend.Silverlight.Controls.OutlookPane.ShowOverflowButton">
+            <summary>
+            Shows the overflow button.
+            </summary>
+        </member>
+        <member name="F:VIBlend.Silverlight.Controls.OutlookPane.CollapsedStateButtonContentTemplateProperty">
+            <exclude/>
+        </member>
+        <member name="F:VIBlend.Silverlight.Controls.OutlookPane.CollapsedStateButtonContentProperty">
+            <exclude/>
+        </member>
+        <member name="F:VIBlend.Silverlight.Controls.OutlookPane.CollapsedHeaderTemplateProperty">
+            <summary>
+            Identifies the CollapsedHeaderTemplate dependency property..
+            </summary>
+        </member>
+        <member name="F:VIBlend.Silverlight.Controls.OutlookPane.CollapsedHeaderProperty">
+            <summary>
+            Identifies the CollapsedHeader dependency property..
+            </summary>
+        </member>
+        <member name="F:VIBlend.Silverlight.Controls.OutlookPane.HeaderTemplateProperty">
+            <summary>
+            Identifies the ContentTemplate dependency property.
+            </summary>
+        </member>
+        <member name="F:VIBlend.Silverlight.Controls.OutlookPane.HeaderProperty">
+            <summary>
+            Identifies the ContentTemplate dependency property.
+            </summary>
+        </member>
+        <member name="F:VIBlend.Silverlight.Controls.OutlookPane.CollapseWidthProperty">
+            <summary>
+            Identifies the CollapsedWidth dependency property.
+            </summary>
+        </member>
+        <member name="F:VIBlend.Silverlight.Controls.OutlookPane.DefaultWidthProperty">
+            <summary>
+            Identifies the DefaultWidth dependency property.
+            </summary>
+        </member>
+        <member name="F:VIBlend.Silverlight.Controls.OutlookPane.HeaderPaddingProperty">
+            <exclude/>
+        </member>
+        <member name="F:VIBlend.Silverlight.Controls.OutlookPane.CollapsedPopupWidthProperty">
+            <summary>
+            Identifies the CollapsedPopupWidth dependency property.
+            </summary>
+        </member>
+        <member name="F:VIBlend.Silverlight.Controls.OutlookPane.IsExpandedProperty">
+            <summary>
+            Identifies the IsExpanded dependency property.
+            </summary>
+        </member>
+        <member name="M:VIBlend.Silverlight.Controls.OutlookPane.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:VIBlend.Silverlight.Controls.OutlookPane"/> class.
+            </summary>
+        </member>
+        <member name="M:VIBlend.Silverlight.Controls.OutlookPane.OnItemsChanged(System.Collections.Specialized.NotifyCollectionChangedEventArgs)">
+            <summary>
+            Called when the value of the <see cref="P:System.Windows.Controls.ItemsControl.Items"/> property changes.
+            </summary>
+            <param name="e">A <see cref="T:System.Collections.Specialized.NotifyCollectionChangedEventArgs"/> that contains the event data</param>
+        </member>
+        <member name="M:VIBlend.Silverlight.Controls.OutlookPane.OnApplyTemplate">
+            <summary>
+            When overridden in a derived class, is invoked whenever application code or internal processes (such as a rebuilding layout pass) call <see cref="M:System.Windows.Controls.Control.ApplyTemplate"/>.
+            </summary>
+        </member>
+        <member name="M:VIBlend.Silverlight.Controls.OutlookPane.Dispose">
+            <summary>
+            Performs application-defined tasks associated with freeing, releasing, or resetting unmanaged resources.
+            </summary>
+        </member>
+        <member name="M:VIBlend.Silverlight.Controls.OutlookPane.OnKeyDown(System.Windows.Input.KeyEventArgs)">
+            <summary>
+            Called before the <see cref="E:System.Windows.UIElement.KeyDown"/> event occurs.
+            </summary>
+            <param name="e">The data for the event.</param>
+        </member>
+        <member name="M:VIBlend.Silverlight.Controls.OutlookPane.ClosePopup">
+            <summary>
+            Closes the popup.
+            </summary>
+        </member>
+        <member name="M:VIBlend.Silverlight.Controls.OutlookPane.OpenPopup(System.Windows.Point)">
+            <summary>
+            Opens the popup.
+            </summary>
+            <param name="point">The point.</param>
+        </member>
+        <member name="M:VIBlend.Silverlight.Controls.OutlookPane.BuildPopupMenu">
+            <summary>
+            Builds the popup menu.
+            </summary>
+        </member>
+        <member name="M:VIBlend.Silverlight.Controls.OutlookPane.UpdateControl">
+            <summary>
+            Updates the control.
+            </summary>
+        </member>
+        <member name="F:VIBlend.Silverlight.Controls.OutlookPane.SelectedCommandProperty">
+            <exclude/>
+        </member>
+        <member name="F:VIBlend.Silverlight.Controls.OutlookPane.SelectedCommandParameterProperty">
+            <exclude/>
+        </member>
+        <member name="M:VIBlend.Silverlight.Controls.OutlookPane.ExecuteCommand">
+            <summary>
+            Executes the command.
+            </summary>
+        </member>
+        <member name="F:VIBlend.Silverlight.Controls.OutlookPane.SelectedIndexProperty">
+            <exclude/>
+        </member>
+        <member name="M:VIBlend.Silverlight.Controls.OutlookPane.ApplySelectedIndex(VIBlend.Silverlight.Controls.OutlookPane,System.Int32)">
+            <summary>
+            Applies the index of the selected.
+            </summary>
+            <param name="outlookPane">The outlook pane.</param>
+            <param name="selectedIndex">Index of the selected.</param>
+        </member>
+        <member name="M:VIBlend.Silverlight.Controls.OutlookPane.IsItemItsOwnContainerOverride(System.Object)">
+            <summary>
+            Determines if the specified item is (or is eligible to be) its own container.
+            </summary>
+            <param name="item">The item to check.</param>
+            <returns>
+            true if the item is (or is eligible to be) its own container; otherwise, false.
+            </returns>
+        </member>
+        <member name="M:VIBlend.Silverlight.Controls.OutlookPane.GetContainerForItemOverride">
+            <summary>
+            Creates or identifies the element that is used to display the given item.
+            </summary>
+            <returns>
+            The element that is used to display the given item.
+            </returns>
+        </member>
+        <member name="M:VIBlend.Silverlight.Controls.OutlookPane.PrepareContainerForItemOverride(System.Windows.DependencyObject,System.Object)">
+            <summary>
+            Prepares the specified element to display the specified item.
+            </summary>
+            <param name="element">The element used to display the specified item.</param>
+            <param name="item">The item to display.</param>
+        </member>
+        <member name="M:VIBlend.Silverlight.Controls.OutlookPane.ClearContainerForItemOverride(System.Windows.DependencyObject,System.Object)">
+            <summary>
+            Undoes the effects of the <see cref="M:System.Windows.Controls.ItemsControl.PrepareContainerForItemOverride(System.Windows.DependencyObject,System.Object)"/> method.
+            </summary>
+            <param name="element">The container element.</param>
+            <param name="item">The item.</param>
+        </member>
+        <member name="M:VIBlend.Silverlight.Controls.OutlookPane.GetNextDownItem">
+            <summary>
+            Gets the next down item.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:VIBlend.Silverlight.Controls.OutlookPane.GetNextUpItem">
+            <summary>
+            Gets the next up item.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:VIBlend.Silverlight.Controls.OutlookPane.Down">
+            <summary>
+            Downs this instance.
+            </summary>
+        </member>
+        <member name="M:VIBlend.Silverlight.Controls.OutlookPane.CollapseItem(VIBlend.Silverlight.Controls.OutlookPaneItem)">
+            <summary>
+            Collapses the item.
+            </summary>
+            <param name="item">The item.</param>
+        </member>
+        <member name="M:VIBlend.Silverlight.Controls.OutlookPane.Up">
+            <summary>
+            Ups this instance.
+            </summary>
+        </member>
+        <member name="M:VIBlend.Silverlight.Controls.OutlookPane.ExpandItem(VIBlend.Silverlight.Controls.OutlookPaneItem)">
+            <summary>
+            Expands the item.
+            </summary>
+            <param name="item">The item.</param>
+        </member>
+        <member name="P:VIBlend.Silverlight.Controls.OutlookPane.ItemContainerStyle">
+            <summary>
+            Gets or sets the <see cref="T:System.Windows.Style" /> that is
+            applied to the container element generated for each item.
+            </summary>
+            <value>
+            The <see cref="T:System.Windows.Style" /> applied to the container
+            element that contains each item.
+            </value>
+        </member>
+        <member name="E:VIBlend.Silverlight.Controls.OutlookPane.ItemMouseDown">
+            <summary>
+            Occurs when the mouse button is up over a OutlookPaneItem.
+            </summary>
+        </member>
+        <member name="E:VIBlend.Silverlight.Controls.OutlookPane.ItemMouseUp">
+            <summary>
+            Occurs when the mouse button is up over a OutlookPaneItem.
+            </summary>
+        </member>
+        <member name="P:VIBlend.Silverlight.Controls.OutlookPane.OutlookItems">
+            <summary>
+            Gets the OutlookPane items.
+            </summary>
+        </member>
+        <member name="P:VIBlend.Silverlight.Controls.OutlookPane.ContextMenuItemStyle">
+            <summary>
+            Gets or sets the context menu item style.
+            </summary>
+            <value>The context menu item style.</value>
+        </member>
+        <member name="E:VIBlend.Silverlight.Controls.OutlookPane.MenuOpening">
+            <summary>
+            Occurs when the context menu is opening.
+            </summary>
+        </member>
+        <member name="E:VIBlend.Silverlight.Controls.OutlookPane.MenuOpened">
+            <summary>
+            Occurs when the context menu is opened.
+            </summary>
+        </member>
+        <member name="E:VIBlend.Silverlight.Controls.OutlookPane.MenuClosing">
+            <summary>
+            Occurs when the context menu is opening.
+            </summary>
+        </member>
+        <member name="E:VIBlend.Silverlight.Controls.OutlookPane.MenuClosed">
+            <summary>
+            Occurs when the context menu is opened.
+            </summary>
+        </member>
+        <member name="E:VIBlend.Silverlight.Controls.OutlookPane.ExpandedChanged">
+            <summary>
+            Occurs when the IsExpanded property is changed.
+            </summary>
+        </member>
+        <member name="E:VIBlend.Silverlight.Controls.OutlookPane.ContextMenuInitialized">
+            <summary>
+            Occurs when the ContextMenu is initialized.
+            </summary>
+        </member>
+        <member name="E:VIBlend.Silverlight.Controls.OutlookPane.ExpandedChanging">
+            <summary>
+            Occurs when the IsExpanded property is changing.
+            </summary>
+        </member>
+        <member name="E:VIBlend.Silverlight.Controls.OutlookPane.ItemResizing">
+            <summary>
+            Occurs when the items are resizing by the splitter.
+            </summary>
+        </member>
+        <member name="E:VIBlend.Silverlight.Controls.OutlookPane.ItemResized">
+            <summary>
+            Occurs when the items are resized by the splitter.
+            </summary>
+        </member>
+        <member name="E:VIBlend.Silverlight.Controls.OutlookPane.SelectionChanging">
+            <summary>
+            Occurs when the Selection is changing.
+            </summary>
+        </member>
+        <member name="E:VIBlend.Silverlight.Controls.OutlookPane.SelectionChanged">
+            <summary>
+            Occurs when the Selection is changed.
+            </summary>
+        </member>
+        <member name="P:VIBlend.Silverlight.Controls.OutlookPane.ContextMenu">
+            <summary>
+            Gets the context menu.
+            </summary>
+            <value>The context menu.</value>
+        </member>
+        <member name="P:VIBlend.Silverlight.Controls.OutlookPane.StatusItem">
+            <summary>
+            Gets the status item.
+            </summary>
+            <value>The status item.</value>
+        </member>
+        <member name="P:VIBlend.Silverlight.Controls.OutlookPane.HeaderItem">
+            <summary>
+            Gets the header item.
+            </summary>
+            <value>The header item.</value>
+        </member>
+        <member name="P:VIBlend.Silverlight.Controls.OutlookPane.EnableResize">
+            <summary>
+            Gets or sets a value indicating whether the control can resize its items.
+            </summary>
+        </member>
+        <member name="P:VIBlend.Silverlight.Controls.OutlookPane.AutoSize">
+            <summary>
+            Gets or sets a value indicating whether the control's auto size feature is enabled.
+            </summary>
+        </member>
+        <member name="P:VIBlend.Silverlight.Controls.OutlookPane.ContentHeight">
+            <summary>
+            Gets or sets the height of the content.
+            </summary>
+            <value>The height of the content.</value>
+        </member>
+        <member name="P:VIBlend.Silverlight.Controls.OutlookPane.EnableCollapseMode">
+            <summary>
+            Gets or sets a value indicating whether the collapse mode is enabled.
+            </summary>
+        </member>
+        <member name="P:VIBlend.Silverlight.Controls.OutlookPane.CollapsedStateButtonContentTemplate">
+            <summary>
+            Gets or sets the collapsed state button content template.
+            </summary>
+            <value>The collapsed state button content template.</value>
+        </member>
+        <member name="P:VIBlend.Silverlight.Controls.OutlookPane.CollapsedStateButtonContent">
+            <exclude/>
+        </member>
+        <member name="P:VIBlend.Silverlight.Controls.OutlookPane.CollapsedHeaderTemplate">
+            <summary>
+            Gets or sets the collapsed header template.
+            </summary>
+            <value>The collapsed header template.</value>
+        </member>
+        <member name="P:VIBlend.Silverlight.Controls.OutlookPane.CollapsedHeader">
+            <summary>
+            Gets or sets the collapsed header.
+            </summary>
+            <value>The collapsed header.</value>
+        </member>
+        <member name="P:VIBlend.Silverlight.Controls.OutlookPane.HeaderTemplate">
+            <summary>
+            Gets or sets the header template.
+            </summary>
+            <value>The header template.</value>
+        </member>
+        <member name="P:VIBlend.Silverlight.Controls.OutlookPane.Header">
+            <summary>
+            Gets or sets the header.
+            </summary>
+            <value>The header.</value>
+        </member>
+        <member name="P:VIBlend.Silverlight.Controls.OutlookPane.CollapseWidth">
+            <summary>
+            Gets or sets the width of the control when it is collapsed.
+            </summary>
+            <value>The width of the collapse.</value>
+        </member>
+        <member name="P:VIBlend.Silverlight.Controls.OutlookPane.DefaultWidth">
+            <summary>
+            Gets or sets the default width of the OutlookPane when it is restored from the Collapsed state.
+            </summary>
+            <value>The default width.</value>
+        </member>
+        <member name="P:VIBlend.Silverlight.Controls.OutlookPane.HeaderPadding">
+            <summary>
+            Gets or sets the header padding.
+            </summary>
+            <value>The header padding.</value>
+        </member>
+        <member name="P:VIBlend.Silverlight.Controls.OutlookPane.CollapsedPopupWidth">
+            <summary>
+            Gets or sets the default width.
+            </summary>
+            <value>The default width.</value>
+        </member>
+        <member name="P:VIBlend.Silverlight.Controls.OutlookPane.IsExpanded">
+            <summary>
+            Gets or sets a value indicating whether the OutlookPane is expanded.
+            </summary>
+            <value>
+            	<c>true</c> if this instance is expanded; otherwise, <c>false</c>.
+            </value>
+        </member>
+        <member name="P:VIBlend.Silverlight.Controls.OutlookPane.ShowMoreButtonsText">
+            <summary>
+            Gets or sets the show more buttons text.
+            </summary>
+            <value>The show more buttons text.</value>
+        </member>
+        <member name="P:VIBlend.Silverlight.Controls.OutlookPane.AddOrRemoveButtonsText">
+            <summary>
+            Gets or sets the add or remove buttons text.
+            </summary>
+            <value>The add or remove buttons text.</value>
+        </member>
+        <member name="P:VIBlend.Silverlight.Controls.OutlookPane.ShowLessButtonsText">
+            <summary>
+            Gets or sets the show less buttons text.
+            </summary>
+            <value>The show less buttons.</value>
+        </member>
+        <member name="P:VIBlend.Silverlight.Controls.OutlookPane.SelectedCommand">
+            <summary>
+            Gets or sets the command.
+            </summary>
+            <value>The command.</value>
+        </member>
+        <member name="P:VIBlend.Silverlight.Controls.OutlookPane.SelectedCommandParameter">
+            <summary>
+            Gets or sets the command parameter.
+            </summary>
+            <value>The command parameter.</value>
+        </member>
+        <member name="P:VIBlend.Silverlight.Controls.OutlookPane.SelectedItem">
+            <summary>
+            Gets or sets the selected item.
+            </summary>
+            <value>The selected item.</value>
+        </member>
+        <member name="P:VIBlend.Silverlight.Controls.OutlookPane.SelectedIndex">
+            <summary>
+            Gets or sets the selected index.
+            </summary>
+        </member>
+        <member name="T:VIBlend.Silverlight.Controls.LayoutPanel">
+            <exclude/>   
+        </member>
+        <member name="M:VIBlend.Silverlight.Controls.LayoutPanel.OnElementLayoutChanging(VIBlend.Silverlight.Controls.LayoutEventArgs)">
+            <summary>
+            Raises the <see cref="E:ElementLayoutChanging"/> event.
+            </summary>
+            <param name="args">The <see cref="T:VIBlend.Silverlight.Controls.LayoutEventArgs"/> instance containing the event data.</param>
+        </member>
+        <member name="M:VIBlend.Silverlight.Controls.LayoutPanel.OnMeasureCalculating(VIBlend.Silverlight.Controls.MeasureEventArgs)">
+            <summary>
+            Raises the <see cref="E:MeasureCalculating"/> event.
+            </summary>
+            <param name="args">The <see cref="T:VIBlend.Silverlight.Controls.MeasureEventArgs"/> instance containing the event data.</param>
+        </member>
+        <member name="F:VIBlend.Silverlight.Controls.LayoutPanel.VerticalContentAlignmentProperty">
+            <exclude/>   
+        </member>
+        <member name="F:VIBlend.Silverlight.Controls.LayoutPanel.HorizontalContentAlignmentProperty">
+            <exclude/>   
+        </member>
+        <member name="F:VIBlend.Silverlight.Controls.LayoutPanel.LayoutOffsetProperty">
+            <exclude/>   
+        </member>
+        <member name="F:VIBlend.Silverlight.Controls.LayoutPanel.InitialOffsetProperty">
+            <exclude/>   
+        </member>
+        <member name="F:VIBlend.Silverlight.Controls.LayoutPanel.ViewProperty">
+            <exclude/>   
+        </member>
+        <member name="F:VIBlend.Silverlight.Controls.LayoutPanel.WrapWidthProperty">
+            <exclude/>   
+        </member>
+        <member name="F:VIBlend.Silverlight.Controls.LayoutPanel.WrapHeightProperty">
+            <exclude/>   
+        </member>
+        <member name="F:VIBlend.Silverlight.Controls.LayoutPanel.ScaleProperty">
+            <exclude/>
+        </member>
+        <member name="M:VIBlend.Silverlight.Controls.LayoutPanel.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:VIBlend.Silverlight.Controls.LayoutPanel"/> class.
+            </summary>
+        </member>
+        <member name="M:VIBlend.Silverlight.Controls.LayoutPanel.SetScale(System.Windows.DependencyObject,System.Windows.Size)">
+            <summary>
+            Sets the scale.
+            </summary>
+            <param name="obj">The obj.</param>
+            <param name="scale">The scale.</param>
+        </member>
+        <member name="M:VIBlend.Silverlight.Controls.LayoutPanel.GetScale(System.Windows.DependencyObject)">
+            <summary>
+            Gets the scale.
+            </summary>
+            <param name="obj">The obj.</param>
+            <returns></returns>
+        </member>
+        <member name="M:VIBlend.Silverlight.Controls.LayoutPanel.ArrangeOverride(System.Windows.Size)">
+            <summary>
+            Provides the behavior for the Arrange pass of Silverlight layout. Classes can override this method to define their own Arrange pass behavior.
+            </summary>
+            <param name="finalSize">The final area within the parent that this object should use to arrange itself and its children.</param>
+            <returns>
+            The actual size used once the element is arranged.
+            </returns>
+        </member>
+        <member name="M:VIBlend.Silverlight.Controls.LayoutPanel.ArrangeElementsInHorizontalStack(System.Double@,System.Double@,System.Double@,System.Double@,System.Windows.Size@,System.Int32,System.Windows.UIElement)">
+            <summary>
+            Arranges the elements in horizontal stack.
+            </summary>
+            <param name="width">The width.</param>
+            <param name="height">The height.</param>
+            <param name="x">The x.</param>
+            <param name="y">The y.</param>
+            <param name="arrangeSize">Size of the arrange.</param>
+            <param name="i">The i.</param>
+            <param name="element">The element.</param>
+        </member>
+        <member name="M:VIBlend.Silverlight.Controls.LayoutPanel.MeasureOverride(System.Windows.Size)">
+            <summary>
+            Provides the behavior for the Measure pass of Silverlight layout. Classes can override this method to define their own Measure pass behavior.
+            </summary>
+            <param name="availableSize">The available size that this object can give to child objects. Infinity can be specified as a value to indicate that the object will size to whatever content is available.</param>
+            <returns>
+            The size that this object determines it needs during layout, based on its calculations of child object allotted sizes.
+            </returns>
+        </member>
+        <member name="M:VIBlend.Silverlight.Controls.LayoutPanel.OnLayoutOffsetPropertyChanged(System.Windows.DependencyObject,System.Windows.DependencyPropertyChangedEventArgs)">
+            <exclude/>
+        </member>
+        <member name="M:VIBlend.Silverlight.Controls.LayoutPanel.OnInitialOffsetPropertyChanged(System.Windows.DependencyObject,System.Windows.DependencyPropertyChangedEventArgs)">
+            <exclude/>
+        </member>
+        <member name="M:VIBlend.Silverlight.Controls.LayoutPanel.OnWrapHeightPropertyChanged(System.Windows.DependencyObject,System.Windows.DependencyPropertyChangedEventArgs)">
+            <exclude/>
+        </member>
+        <member name="M:VIBlend.Silverlight.Controls.LayoutPanel.OnWrapWidthPropertyChanged(System.Windows.DependencyObject,System.Windows.DependencyPropertyChangedEventArgs)">
+            <exclude/>
+        </member>
+        <member name="M:VIBlend.Silverlight.Controls.LayoutPanel.OnViewPropertyChanged(System.Windows.DependencyObject,System.Windows.DependencyPropertyChangedEventArgs)">
+            <exclude/>
+        </member>
+        <member name="M:VIBlend.Silverlight.Controls.LayoutPanel.Drop(System.Object)">
+            <exclude/>
+        </member>
+        <member name="M:VIBlend.Silverlight.Controls.LayoutPanel.OnNumberOfColumnsPropertyChanged(System.Windows.DependencyObject,System.Windows.DependencyPropertyChangedEventArgs)">
+            <exclude/>
+        </member>
+        <member name="M:VIBlend.Silverlight.Controls.LayoutPanel.OnNumberOfRowsPropertyChanged(System.Windows.DependencyObject,System.Windows.DependencyPropertyChangedEventArgs)">
+            <exclude/>
+        </member>
+        <member name="M:VIBlend.Silverlight.Controls.LayoutPanel.OnHorizontalContentAlignmentPropertyChanged(System.Windows.DependencyObject,System.Windows.DependencyPropertyChangedEventArgs)">
+            <exclude/>
+        </member>
+        <member name="M:VIBlend.Silverlight.Controls.LayoutPanel.OnVerticalContentAlignmentPropertyChanged(System.Windows.DependencyObject,System.Windows.DependencyPropertyChangedEventArgs)">
+            <exclude/>
+        </member>
+        <member name="E:VIBlend.Silverlight.Controls.LayoutPanel.ElementLayoutChanging">
+            <exclude/>
+        </member>
+        <member name="E:VIBlend.Silverlight.Controls.LayoutPanel.MeasureCalculating">
+            <exclude/>
+        </member>
+        <member name="P:VIBlend.Silverlight.Controls.LayoutPanel.View">
+            <summary>
+            Gets or sets the view.
+            </summary>
+            <value>The view.</value>
+        </member>
+        <member name="P:VIBlend.Silverlight.Controls.LayoutPanel.InitialOffset">
+            <summary>
+            Gets or sets the initial offset.
+            </summary>
+            <value>The initial offset.</value>
+        </member>
+        <member name="P:VIBlend.Silverlight.Controls.LayoutPanel.LayoutOffset">
+            <summary>
+            Gets or sets the layout offset.
+            </summary>
+            <value>The layout offset.</value>
+        </member>
+        <member name="P:VIBlend.Silverlight.Controls.LayoutPanel.HorizontalContentAlignment">
+            <summary>
+            Gets or sets the horizontal content alignment.
+            </summary>
+            <value>The horizontal content alignment.</value>
+        </member>
+        <member name="P:VIBlend.Silverlight.Controls.LayoutPanel.VerticalContentAlignment">
+            <summary>
+            Gets or sets the vertical content alignment.
+            </summary>
+            <value>The vertical content alignment.</value>
+        </member>
+        <member name="T:VIBlend.Silverlight.Controls.LayoutViewType">
+            <summary>
+            Represents the LayoutViewType enumeration.
+            </summary>
+        </member>
+        <member name="F:VIBlend.Silverlight.Controls.LayoutViewType.HorizontalStack">
+            <summary>
+            Horizontal Stack
+            </summary>
+        </member>
+        <member name="F:VIBlend.Silverlight.Controls.LayoutViewType.VerticalStack">
+            <summary>
+            Vertical Stack
+            </summary>
+        </member>
+        <member name="F:VIBlend.Silverlight.Controls.LayoutViewType.HorizontalWrap">
+            <summary>
+            Horizontal Wrap
+            </summary>
+        </member>
+        <member name="F:VIBlend.Silverlight.Controls.LayoutViewType.VerticalWrap">
+            <summary>
+            Vertical Wrap
+            </summary>
+        </member>
+        <member name="T:VIBlend.Silverlight.Controls.LayoutEventArgs">
+            <exclude/>
+        </member>
+        <member name="M:VIBlend.Silverlight.Controls.LayoutEventArgs.#ctor(System.Windows.Rect,System.Windows.UIElement)">
+            <summary>
+            Initializes a new instance of the <see cref="T:VIBlend.Silverlight.Controls.LayoutEventArgs"/> class.
+            </summary>
+            <param name="arrangeRectangle">The arrange rectangle.</param>
+            <param name="element">The element.</param>
+        </member>
+        <member name="P:VIBlend.Silverlight.Controls.LayoutEventArgs.ArrangeRectange">
+            <summary>
+            Gets or sets the arrange rectange.
+            </summary>
+            <value>The arrange rectange.</value>
+        </member>
+        <member name="P:VIBlend.Silverlight.Controls.LayoutEventArgs.Element">
+            <summary>
+            Gets or sets the element.
+            </summary>
+            <value>The element.</value>
+        </member>
+        <member name="T:VIBlend.Silverlight.Controls.MeasureEventArgs">
+            <exclude/>
+        </member>
+        <member name="M:VIBlend.Silverlight.Controls.MeasureEventArgs.#ctor(System.Windows.Size,System.Windows.UIElement)">
+            <exclude/>
+        </member>
+        <member name="P:VIBlend.Silverlight.Controls.MeasureEventArgs.ElementSize">
+            <exclude/>
+        </member>
+        <member name="P:VIBlend.Silverlight.Controls.MeasureEventArgs.Element">
+            <exclude/>
+        </member>
+        <member name="T:VIBlend.Silverlight.Controls.NavigationPaneCancelEventArgs">
+            <summary>
+            Provides data for NavigationPane cancelable events.
+            </summary>
+        </member>
+        <member name="M:VIBlend.Silverlight.Controls.NavigationPaneCancelEventArgs.#ctor(VIBlend.Silverlight.Controls.NavigationPaneItem,System.Boolean,VIBlend.Silverlight.Controls.NavigationPaneAction)">
+            <summary>
+            Initializes a new instance of the <see cref="T:VIBlend.Silverlight.Controls.NavigationPaneCancelEventArgs"/> class.
+            </summary>
+            <param name="item">The item.</param>
+            <param name="cancel">if set to <c>true</c> [cancel].</param>
+            <param name="action">The action.</param>
+        </member>
+        <member name="P:VIBlend.Silverlight.Controls.NavigationPaneCancelEventArgs.Action">
+            <summary>
+            Gets the action.
+            </summary>
+            <value>The action.</value>
+        </member>
+        <member name="P:VIBlend.Silverlight.Controls.NavigationPaneCancelEventArgs.Item">
+            <summary>
+            Gets the item.
+            </summary>
+            <value>The item.</value>
+        </member>
+        <member name="T:VIBlend.Silverlight.Controls.NavigationPaneMouseEventArgs">
+            <summary>
+            Represents a class that contains event data.
+            </summary>
+        </member>
+        <member name="M:VIBlend.Silverlight.Controls.NavigationPaneMouseEventArgs.#ctor(VIBlend.Silverlight.Controls.NavigationPaneItem,System.Windows.Input.MouseButtonEventArgs,VIBlend.Silverlight.Controls.MouseButton)">
+            <summary>
+            Initializes a new instance of the <see cref="T:VIBlend.Silverlight.Controls.NavigationPaneMouseEventArgs"/> class.
+            </summary>
+            <param name="item">The item.</param>
+            <param name="args">The <see cref="T:System.Windows.Input.MouseButtonEventArgs"/> instance containing the event data.</param>
+            <param name="changedButton">The changed button.</param>
+        </member>
+        <member name="P:VIBlend.Silverlight.Controls.NavigationPaneMouseEventArgs.MouseArgs">
+            <summary>
+            Gets or sets the mouse args.
+            </summary>
+            <value>The mouse args.</value>
+        </member>
+        <member name="P:VIBlend.Silverlight.Controls.NavigationPaneMouseEventArgs.HitItem">
+            <summary>
+            Gets or sets the hit item.
+            </summary>
+            <value>The hit item.</value>
+        </member>
+        <member name="P:VIBlend.Silverlight.Controls.NavigationPaneMouseEventArgs.ChangedButton">
+            <summary>
+            Gets the mouse button assoicated with the event.
+            </summary>
+        </member>
+        <member name="T:VIBlend.Silverlight.Controls.PaneIndicatorButton">
+            <exclude/>   
+        </member>
+        <member name="M:VIBlend.Silverlight.Controls.PaneIndicatorButton.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:VIBlend.Silverlight.Controls.PaneIndicatorButton"/> class.
+            </summary>
+        </member>
+        <member name="M:VIBlend.Silverlight.Controls.PaneIndicatorButton.OnMouseEnter(System.Windows.Input.MouseEventArgs)">
+            <summary>
+            Provides class handling for the <see cref="E:System.Windows.UIElement.MouseEnter"/> event that occurs when the mouse enters this control.
+            </summary>
+            <param name="e">The event data.</param>
+            <exception cref="T:System.ArgumentNullException">
+            	<paramref name="e"/> is null.</exception>
+        </member>
+        <member name="M:VIBlend.Silverlight.Controls.PaneIndicatorButton.OnMouseLeave(System.Windows.Input.MouseEventArgs)">
+            <summary>
+            Provides class handling for the <see cref="E:System.Windows.UIElement.MouseLeave"/> routed event that occurs when the mouse leaves an element.
+            </summary>
+            <param name="e">The event data for the <see cref="E:System.Windows.UIElement.MouseLeave"/> event.</param>
+            <exception cref="T:System.ArgumentNullException">
+            	<paramref name="e"/> is null.</exception>
+        </member>
+        <member name="F:VIBlend.Silverlight.Controls.PaneIndicatorButton.ForeBrushProperty">
+            <exclude/>
+        </member>
+        <member name="F:VIBlend.Silverlight.Controls.PaneIndicatorButton.StrokeBrushProperty">
+            <exclude/>
+        </member>
+        <member name="F:VIBlend.Silverlight.Controls.PaneIndicatorButton.HighlightForeColorProperty">
+            <exclude/>
+        </member>
+        <member name="F:VIBlend.Silverlight.Controls.PaneIndicatorButton.HighlightStrokeForeColorProperty">
+            <exclude/>
+        </member>
+        <member name="F:VIBlend.Silverlight.Controls.PaneIndicatorButton.StrokeForeColorProperty">
+            <exclude/>
+        </member>
+        <member name="F:VIBlend.Silverlight.Controls.PaneIndicatorButton.ForeColorProperty">
+            <exclude/>
+        </member>
+        <member name="F:VIBlend.Silverlight.Controls.PaneIndicatorButton.NormalForeColorProperty">
+            <exclude/>
+        </member>
+        <member name="F:VIBlend.Silverlight.Controls.PaneIndicatorButton.NormalStrokeForeColorProperty">
+            <exclude/>
+        </member>
+        <member name="M:VIBlend.Silverlight.Controls.PaneIndicatorButton.OnApplyTemplate">
+            <summary>
+            Builds the visual tree for the <see cref="T:System.Windows.Controls.Primitives.ToggleButton"/> when a new template is applied.
+            </summary>
+        </member>
+        <member name="P:VIBlend.Silverlight.Controls.PaneIndicatorButton.ForeBrush">
+            <summary>
+            Gets or sets the Color which is used when the item is highlighted.
+            </summary>
+        </member>
+        <member name="P:VIBlend.Silverlight.Controls.PaneIndicatorButton.StrokeBrush">
+            <summary>
+            Gets or sets the Color which is used when the item is highlighted.
+            </summary>
+        </member>
+        <member name="P:VIBlend.Silverlight.Controls.PaneIndicatorButton.HighlightForeColor">
+            <summary>
+            Gets or sets the Color which is used when the item is highlighted.
+            </summary>
+        </member>
+        <member name="P:VIBlend.Silverlight.Controls.PaneIndicatorButton.HighlightStrokeForeColor">
+            <summary>
+            Gets or sets the Color which is used when the item is highlighted.
+            </summary>
+        </member>
+        <member name="P:VIBlend.Silverlight.Controls.PaneIndicatorButton.StrokeForeColor">
+            <summary>
+            Gets or sets the Color which is used when the item is highlighted.
+            </summary>
+        </member>
+        <member name="P:VIBlend.Silverlight.Controls.PaneIndicatorButton.ForeColor">
+            <summary>
+            Gets or sets the Color which is used when the item is highlighted.
+            </summary>
+        </member>
+        <member name="P:VIBlend.Silverlight.Controls.PaneIndicatorButton.NormalForeColor">
+            <summary>
+            Gets or sets the Color which is used when the item is highlighted.
+            </summary>
+        </member>
+        <member name="P:VIBlend.Silverlight.Controls.PaneIndicatorButton.NormalStrokeForeColor">
+            <summary>
+            Gets or sets the Color which is used when the item is highlighted.
+            </summary>
+        </member>
+    </members>
+</doc>

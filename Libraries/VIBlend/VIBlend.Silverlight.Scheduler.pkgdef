@@ -1,0 +1,4 @@
+﻿[$RootKey$\ToolboxControlsInstaller\VIBlend.Silverlight.Scheduler, Version=6.0.0.0, Culture=neutral, PublicKeyToken=5f440a87a84488e2, processorArchitecture=MSIL]
+@="VIBlend Silverlight Controls 6.0"
+"Codebase"="$PackageFolder$\VIBlend.Silverlight.Scheduler.dll"
+"SilverlightControls"="2"
