@@ -73,14 +73,14 @@ namespace OrderModule.ViewModels
         #region Helpers
 
         private void GetOrdersList()
-        {/*
+        {
             _orders.Clear();
-            //List<OrderViewModel> list = (from model in new Orders().List
-           //                              select new OrderViewModel(model, _eventAggregator)).ToList();
+            List<OrderViewModel> list = (from model in new Orders().List
+                                        select new OrderViewModel(model, _eventAggregator)).ToList();
             foreach (OrderViewModel model in list)
             {
                 _orders.Add(model);
-            }   */
+            }  
         }
 
         private void onOrderSelect(OrderViewModel order)
