@@ -1,12 +1,91 @@
 ﻿<UserControl x:Class="OrderModule.Views.OrderView"
+    xmlns:toolkit="http://schemas.microsoft.com/winfx/2006/xaml/presentation/toolkit" 
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d"
-    d:DesignHeight="300" d:DesignWidth="400">
-    
+    d:DesignHeight="350" d:DesignWidth="400" xmlns:sdk="http://schemas.microsoft.com/winfx/2006/xaml/presentation/sdk">
+    <UserControl.Resources>
+        <Style x:Key="LblTitleStyle" TargetType="sdk:Label">
+            <Setter Property="FontWeight" Value="Bold"/>
+            <Setter Property="FontSize" Value="14"/>
+            <Setter Property="Width" Value="120"/>
+            <Setter Property="Foreground" Value="LightSlateGray" />
+        </Style>
+        <Style x:Key="LblFieldStyle" TargetType="sdk:Label">
+            <Setter Property="Width" Value="120"/>
+        </Style>
+        <Style x:Key="TextBoxStyle" TargetType="TextBox">
+            <Setter Property="Width" Value="200"/>
+            <Setter Property="Height" Value="23"/>
+            <Setter Property="VerticalAlignment" Value="Top"/>
+        </Style>
+        <Style x:Key="CmbBoxStyle" TargetType="ComboBox">
+            <Setter Property="Width" Value="200"/>
+            <Setter Property="Height" Value="23"/>
+            <Setter Property="VerticalAlignment" Value="Top"/>
+        </Style>
+        <Style x:Key="StackPnlStyle" TargetType="StackPanel">
+            <Setter Property="Orientation" Value="Horizontal"/>
+            <Setter Property="Margin" Value="5"/>
+        </Style>
+        <Style x:Key="BtnStyle" TargetType="Button">
+            <Setter Property="Height" Value="23"/>
+            <Setter Property="Width" Value="80"/>
+        </Style>
+        <Style x:Key="DatePickerStyle" TargetType="sdk:DatePicker">
+            <Setter Property="Width" Value="200"/>
+            <Setter Property="Height" Value="23"/>
+            <Setter Property="VerticalAlignment" Value="Top"/>
+        </Style>
+    </UserControl.Resources>
     <Grid x:Name="LayoutRoot" Background="White">
-
+        <toolkit:Expander ExpandDirection="Left">
+            <StackPanel Orientation="Vertical" HorizontalAlignment="Center">
+                <StackPanel Style="{StaticResource StackPnlStyle}">
+                    <sdk:Label Content="Order" Style="{StaticResource LblTitleStyle}"/>
+                </StackPanel>
+                <StackPanel Style="{StaticResource StackPnlStyle}">
+                    <sdk:Label Content="Order #" Style="{StaticResource LblFieldStyle}"/>
+                    <TextBox Name="txtBoxOrder" Text="{Binding Number}" Style="{StaticResource TextBoxStyle}"/>
+                </StackPanel>
+                <StackPanel Style="{StaticResource StackPnlStyle}">
+                    <sdk:Label Content="Order type" Width="120"/>
+                    <ComboBox Height="23" Name="cmbType" VerticalAlignment="Top" Width="200" ItemsSource="{Binding}" 
+                          SelectedValue="{Binding}" DisplayMemberPath="Name" SelectedValuePath="Id" />
+                </StackPanel>
+                <StackPanel Style="{StaticResource StackPnlStyle}">
+                    <sdk:Label Content="Order status" Width="120"/>
+                    <ComboBox Height="23" Name="cmbStatus" VerticalAlignment="Top" Width="200" ItemsSource="{Binding}" 
+                          SelectedValue="{Binding}" DisplayMemberPath="Name" SelectedValuePath="Id" />
+                </StackPanel>                
+                <StackPanel Style="{StaticResource StackPnlStyle}">
+                    <sdk:Label Content="Auto number" Style="{StaticResource LblFieldStyle}"/>
+                    <TextBox Name="txtBoxAutoNumber" Text="{Binding AutoNumber, ValidatesOnDataErrors=True, Mode=TwoWay}" Style="{StaticResource TextBoxStyle}"/>
+                </StackPanel>                
+                <StackPanel Style="{StaticResource StackPnlStyle}">
+                    <sdk:Label Content="Customer" Style="{StaticResource LblFieldStyle}"/>
+                    <TextBox Name="txtBoxName" Text="{Binding Name, ValidatesOnDataErrors=True, Mode=TwoWay}" Style="{StaticResource TextBoxStyle}" Width="160"/>
+                    <Button Content="..." Name="btnSearch" Command="{Binding Path=SearchCommand}" Style="{StaticResource BtnStyle}" Width="40"/>
+                </StackPanel>
+                <StackPanel Style="{StaticResource StackPnlStyle}">
+                    <sdk:Label Content="Creation date" Style="{StaticResource LblFieldStyle}"/>
+                    <sdk:DatePicker Name="datePickerCreationDate" Text="{Binding CreationDate, ValidatesOnDataErrors=True, Mode=TwoWay}" Style="{StaticResource DatePickerStyle}"/>
+                </StackPanel>
+                <StackPanel Style="{StaticResource StackPnlStyle}">
+                    <sdk:Label Content="Expired date" Style="{StaticResource LblFieldStyle}"/>
+                    <sdk:DatePicker Name="datePickerExpiredDate" Text="{Binding ExpiredDate, ValidatesOnDataErrors=True, Mode=TwoWay}" Style="{StaticResource DatePickerStyle}"/>
+                </StackPanel>                
+                <StackPanel Style="{StaticResource StackPnlStyle}">
+                    <sdk:Label Content="Description" Style="{StaticResource LblFieldStyle}"/>
+                    <TextBox Name="txtBoxDescription" Text="{Binding Description, ValidatesOnDataErrors=True, Mode=TwoWay}" Style="{StaticResource TextBoxStyle}"/>
+                </StackPanel>
+                <StackPanel Style="{StaticResource StackPnlStyle}" HorizontalAlignment="Center">
+                    <Button Content="Save" Name="btnSave" Command="{Binding Path=SaveCommand}" Style="{StaticResource BtnStyle}"/>
+                    <Button Content="Cancel" Name="btnCancel" Command="{Binding Path=CancelCommand}" Margin="4,0,0,0" Style="{StaticResource BtnStyle}"/>
+                </StackPanel>
+            </StackPanel>
+        </toolkit:Expander>
     </Grid>
 </UserControl>
