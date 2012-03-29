@@ -16,6 +16,8 @@ using Microsoft.Practices.Prism.Regions;
 using Microsoft.Practices.Unity;
 using ShellInfrastracture;
 using EventInfrastracture;
+using EmployeeModule.Events;
+using ModuleInfrastracture.ViewModels;
 
 namespace EmployeeModule
 {
@@ -23,13 +25,23 @@ namespace EmployeeModule
     {
         protected override void RegisterViewsInRegions()
         {
-            RegionManager.RegisterViewWithRegion(RegionNames.RightPanelName, () => UnityContainer.Resolve<IViewRightRegion>("EmployeeView"));
+            RegionManager.RegisterViewWithRegion(RegionNames.LeftPanelName, () => UnityContainer.Resolve<IViewLeftRegion>("EmployeeView"));
+            RegionManager.RegisterViewWithRegion(RegionNames.RightPanelName, () => UnityContainer.Resolve<IViewRightRegion>("EmployeesListView"));
         }
 
         protected override void RegisterTypesDependencies()
         {
             UnityContainer.RegisterType<IEmployeeViewModel, EmployeeViewModel>();
-            UnityContainer.RegisterType<IViewRightRegion, EmployeeView>("EmployeeView", new ContainerControlledLifetimeManager());
+            UnityContainer.RegisterType<IViewLeftRegion, EmployeeView>("EmployeeView", new ContainerControlledLifetimeManager());
+
+            UnityContainer.RegisterType<IEmployeeListViewModel, EmployeesListViewModel>();
+            UnityContainer.RegisterType<IViewRightRegion, EmployeesListView>("EmployeesListView", new ContainerControlledLifetimeManager());
+        
+        }
+
+        public void onEmployeeSelect(ViewModelBase viewModel)
+        {
+             
         }
 
     }

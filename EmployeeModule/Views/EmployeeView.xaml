@@ -1,4 +1,4 @@
-﻿<UserControl x:Class="EmployeeModule.Views.EmployeeView"
+﻿<UserControl xmlns:toolkit="http://schemas.microsoft.com/winfx/2006/xaml/presentation/toolkit"  x:Class="EmployeeModule.Views.EmployeeView"
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
@@ -40,64 +40,66 @@
         </Style>
     </UserControl.Resources>
     <Grid x:Name="LayoutRoot" Background="White">
-        <StackPanel Orientation="Vertical" HorizontalAlignment="Center">
-            <StackPanel Style="{StaticResource StackPnlStyle}">
-                <sdk:Label Content="Employee" Style="{StaticResource LblTitleStyle}"/>
-            </StackPanel>
-            <StackPanel Style="{StaticResource StackPnlStyle}">
-                <sdk:Label Content="First name" Style="{StaticResource LblFieldStyle}"/>
-                <TextBox Name="txtBoxFirstName" Text="{Binding FirstName}" Style="{StaticResource TextBoxStyle}"/>
-            </StackPanel>
-            <StackPanel Style="{StaticResource StackPnlStyle}">
-                <sdk:Label Content="Last name" Style="{StaticResource LblFieldStyle}"/>
-                <TextBox Name="txtBoxLastName" Text="{Binding LastName}" Style="{StaticResource TextBoxStyle}"/>
-            </StackPanel>
-            <StackPanel Style="{StaticResource StackPnlStyle}">
-                <sdk:Label Content="Birthday" Style="{StaticResource LblFieldStyle}"/>
-                <sdk:DatePicker Name="datePickerBirthDay" Text="{Binding BirthDay}" Style="{StaticResource DatePickerStyle}"/>
-            </StackPanel>
-            <StackPanel Style="{StaticResource StackPnlStyle}">
-                <sdk:Label Content="Position" Width="120"/>
-                <ComboBox Height="23" Name="cmbPosition" VerticalAlignment="Top" Width="200" ItemsSource="{Binding}" 
+        <toolkit:Expander ExpandDirection="Left">
+            <StackPanel Orientation="Vertical" HorizontalAlignment="Center">
+                <StackPanel Style="{StaticResource StackPnlStyle}">
+                    <sdk:Label Content="Employee" Style="{StaticResource LblTitleStyle}"/>
+                </StackPanel>
+                <StackPanel Style="{StaticResource StackPnlStyle}">
+                    <sdk:Label Content="First name" Style="{StaticResource LblFieldStyle}"/>
+                    <TextBox Name="txtBoxFirstName" Text="{Binding FirstName}" Style="{StaticResource TextBoxStyle}"/>
+                </StackPanel>
+                <StackPanel Style="{StaticResource StackPnlStyle}">
+                    <sdk:Label Content="Last name" Style="{StaticResource LblFieldStyle}"/>
+                    <TextBox Name="txtBoxLastName" Text="{Binding LastName}" Style="{StaticResource TextBoxStyle}"/>
+                </StackPanel>
+                <StackPanel Style="{StaticResource StackPnlStyle}">
+                    <sdk:Label Content="Birthday" Style="{StaticResource LblFieldStyle}"/>
+                    <sdk:DatePicker Name="datePickerBirthDay" Text="{Binding BirthDay}" Style="{StaticResource DatePickerStyle}"/>
+                </StackPanel>
+                <StackPanel Style="{StaticResource StackPnlStyle}">
+                    <sdk:Label Content="Position" Width="120"/>
+                    <ComboBox Height="23" Name="cmbPosition" VerticalAlignment="Top" Width="200" ItemsSource="{Binding}" 
                           SelectedValue="{Binding}" DisplayMemberPath="Name" SelectedValuePath="Id" />
-            </StackPanel>
-            <StackPanel Style="{StaticResource StackPnlStyle}">
-                <sdk:Label Content="Department" Style="{StaticResource LblFieldStyle}"/>
-                <ComboBox Height="23" Name="cmbDepartment" VerticalAlignment="Top" Width="200" ItemsSource="{Binding}" 
+                </StackPanel>
+                <StackPanel Style="{StaticResource StackPnlStyle}">
+                    <sdk:Label Content="Department" Style="{StaticResource LblFieldStyle}"/>
+                    <ComboBox Height="23" Name="cmbDepartment" VerticalAlignment="Top" Width="200" ItemsSource="{Binding}" 
                           SelectedValue="{Binding}" DisplayMemberPath="Name" SelectedValuePath="Id" />
+                </StackPanel>
+                <StackPanel Style="{StaticResource StackPnlStyle}">
+                    <sdk:Label Content="Address" Style="{StaticResource LblFieldStyle}"/>
+                    <TextBox Name="txtBoxAddress" Text="{Binding Address}" Style="{StaticResource TextBoxStyle}"/>
+                </StackPanel>
+                <StackPanel Style="{StaticResource StackPnlStyle}">
+                    <sdk:Label Content="Phone" Style="{StaticResource LblFieldStyle}"/>
+                    <TextBox Name="txtBoxPhone" Text="{Binding Phone}" Style="{StaticResource TextBoxStyle}"/>
+                </StackPanel>
+                <StackPanel Style="{StaticResource StackPnlStyle}">
+                    <sdk:Label Content="Hire date" Style="{StaticResource LblFieldStyle}"/>
+                    <sdk:DatePicker Name="datePickerHireDate" Text="{Binding HireDate}" Style="{StaticResource DatePickerStyle}" />
+                </StackPanel>
+                <StackPanel Style="{StaticResource StackPnlStyle}">
+                    <sdk:Label Content="Fire date" Style="{StaticResource LblFieldStyle}"/>
+                    <sdk:DatePicker Name="datePickerFireDate" Text="{Binding FireDate}" Style="{StaticResource DatePickerStyle}"/>
+                </StackPanel>
+                <StackPanel Style="{StaticResource StackPnlStyle}">
+                    <sdk:Label Content="Insuarance number" Style="{StaticResource LblFieldStyle}"/>
+                    <TextBox Name="txtBoxInsNumber" Text="{Binding InsuaranceNumber}" Style="{StaticResource TextBoxStyle}"/>
+                </StackPanel>
+                <StackPanel Style="{StaticResource StackPnlStyle}">
+                    <sdk:Label Content="Licence number" Style="{StaticResource LblFieldStyle}"/>
+                    <TextBox Name="txtBoxLicNumber" Text="{Binding LicenceNumber}" Style="{StaticResource TextBoxStyle}"/>
+                </StackPanel>
+                <StackPanel Style="{StaticResource StackPnlStyle}">
+                    <sdk:Label Content="Data" VerticalAlignment="Top" Style="{StaticResource LblFieldStyle}"/>
+                    <TextBox Name="txtBoxData" Text="{Binding Data}" Height="50" Style="{StaticResource TextBoxStyle}"/>
+                </StackPanel>
+                <StackPanel Style="{StaticResource StackPnlStyle}" HorizontalAlignment="Center">
+                    <Button Content="Save" Name="btnSave" Command="{Binding Path=SaveCommand}" Style="{StaticResource BtnStyle}"/>
+                    <Button Content="Cancel" Name="btnCancel" Command="{Binding Path=CancelCommand}" Margin="4,0,0,0" Style="{StaticResource BtnStyle}"/>
+                </StackPanel>
             </StackPanel>
-            <StackPanel Style="{StaticResource StackPnlStyle}">
-                <sdk:Label Content="Address" Style="{StaticResource LblFieldStyle}"/>
-                <TextBox Name="txtBoxAddress" Text="{Binding Address}" Style="{StaticResource TextBoxStyle}"/>
-            </StackPanel>
-            <StackPanel Style="{StaticResource StackPnlStyle}">
-                <sdk:Label Content="Phone" Style="{StaticResource LblFieldStyle}"/>
-                <TextBox Name="txtBoxPhone" Text="{Binding Phone}" Style="{StaticResource TextBoxStyle}"/>
-            </StackPanel>
-            <StackPanel Style="{StaticResource StackPnlStyle}">
-                <sdk:Label Content="Hire date" Style="{StaticResource LblFieldStyle}"/>
-                <sdk:DatePicker Name="datePickerHireDate" Text="{Binding HireDate}" Style="{StaticResource DatePickerStyle}" />
-            </StackPanel>
-            <StackPanel Style="{StaticResource StackPnlStyle}">
-                <sdk:Label Content="Fire date" Style="{StaticResource LblFieldStyle}"/>
-                <sdk:DatePicker Name="datePickerFireDate" Text="{Binding FireDate}" Style="{StaticResource DatePickerStyle}"/>
-            </StackPanel>
-            <StackPanel Style="{StaticResource StackPnlStyle}">
-                <sdk:Label Content="Insuarance number" Style="{StaticResource LblFieldStyle}"/>
-                <TextBox Name="txtBoxInsNumber" Text="{Binding InsuaranceNumber}" Style="{StaticResource TextBoxStyle}"/>
-            </StackPanel>
-            <StackPanel Style="{StaticResource StackPnlStyle}">
-                <sdk:Label Content="Licence number" Style="{StaticResource LblFieldStyle}"/>
-                <TextBox Name="txtBoxLicNumber" Text="{Binding LicenceNumber}" Style="{StaticResource TextBoxStyle}"/>
-            </StackPanel>                   
-            <StackPanel Style="{StaticResource StackPnlStyle}">
-                <sdk:Label Content="Data" VerticalAlignment="Top" Style="{StaticResource LblFieldStyle}"/>
-                <TextBox Name="txtBoxData" Text="{Binding Data}" Height="50" Style="{StaticResource TextBoxStyle}"/>
-            </StackPanel>
-            <StackPanel Style="{StaticResource StackPnlStyle}" HorizontalAlignment="Center">
-                <Button Content="Save" Name="btnSave" Command="{Binding Path=SaveCommand}" Style="{StaticResource BtnStyle}"/>
-                <Button Content="Cancel" Name="btnCancel" Command="{Binding Path=CancelCommand}" Margin="4,0,0,0" Style="{StaticResource BtnStyle}"/>
-            </StackPanel>
-        </StackPanel>
+        </toolkit:Expander>
     </Grid>
 </UserControl>

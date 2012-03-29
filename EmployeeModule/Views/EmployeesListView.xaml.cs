@@ -15,17 +15,17 @@ using EmployeeModule.ViewModels;
 
 namespace EmployeeModule.Views
 {
-    public partial class EmployeeView : UserControl, IViewLeftRegion
+    public partial class EmployeesListView : UserControl, IViewRightRegion
     {
-        public EmployeeView()
+        public EmployeesListView()
         {
             InitializeComponent();
         }
 
         [Dependency]
-        public IEmployeeViewModel ViewModel
+        public IEmployeeListViewModel ViewModel
         {
-            get { return DataContext as IEmployeeViewModel; }
+            get { return DataContext as IEmployeeListViewModel; }
             set { DataContext = value; }
         } 
     }
