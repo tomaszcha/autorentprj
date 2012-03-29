@@ -20,7 +20,7 @@ namespace Main
     /// </summary>
     public class Bootstrapper : UnityBootstrapper
     {
-        #region Overrides of Bootstrapper
+        #region Overrides of Bootstrapper    
 
         protected override DependencyObject CreateShell()
         {
