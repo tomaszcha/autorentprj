@@ -40,7 +40,7 @@
         </Style>
     </UserControl.Resources>
     <Grid x:Name="LayoutRoot" Background="White">
-        <toolkit:Expander ExpandDirection="Right">
+        <toolkit:Expander ExpandDirection="Left">
             <StackPanel Orientation="Vertical" HorizontalAlignment="Center">
                 <StackPanel Style="{StaticResource StackPnlStyle}">
                     <sdk:Label Content="Employee" Style="{StaticResource LblTitleStyle}"/>
