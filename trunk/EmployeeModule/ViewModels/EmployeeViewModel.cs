@@ -11,6 +11,9 @@ using System.Windows.Shapes;
 using ModuleInfrastracture.ViewModels;
 using System.ComponentModel;
 using System.Text.RegularExpressions;
+using MockModel;
+using Microsoft.Practices.Prism.Events;
+using EmployeeModule.Events;
 
 namespace EmployeeModule.ViewModels
 {
@@ -20,7 +23,45 @@ namespace EmployeeModule.ViewModels
     /// </summary>  
     public class EmployeeViewModel : ViewModelBase, IEmployeeViewModel, IDataErrorInfo
     {
+
+        #region Constructors
+
+        public EmployeeViewModel(IEventAggregator eventAggregator)
+        {
+            _eventAggregator = eventAggregator;
+            _eventAggregator.GetEvent<EmployeeSelect>().Subscribe(onEmployeeSelect);
+
+        }
+
+        public EmployeeViewModel(Employee employee, IEventAggregator eventAggregator)
+        {
+
+            _eventAggregator = eventAggregator;
+            if (employee.Id == Guid.Empty)
+            {
+                _eventAggregator.GetEvent<EmployeeSelect>().Subscribe(onEmployeeSelect);
+            }
+
+            _address = employee.Address;
+            _birthDay = employee.BirthDay;
+            _data = employee.Data;
+            _departmentId = employee.DepartmentId;
+            _fireDate = employee.FireDate;
+            _firstName = employee.FirstName;
+            _hireDate = employee.HireDate;
+            _id = employee.Id;
+            _insuaranceNumber = employee.InsuaranceNumber;
+            _lastName = employee.LastName;
+            _licenceNumber = employee.LicenceNumber;
+            _phone = employee.Phone;
+            _position = employee.Position;
+        }
+
+        #endregion Constructors
+
         #region Private Fields
+
+        IEventAggregator _eventAggregator;
 
         Guid _id;
         string _firstName;
@@ -38,7 +79,7 @@ namespace EmployeeModule.ViewModels
 
         #endregion // Private fields
 
-        #region Properties
+        #region Properties   
 
 
         /// <summary>
@@ -50,7 +91,6 @@ namespace EmployeeModule.ViewModels
             private set
             {
                 _id = value;
-                OnPropertyChanged("Id");
             }
         }
 
@@ -120,7 +160,7 @@ namespace EmployeeModule.ViewModels
             set
             {
                 _departmentId = value;
-                OnPropertyChanged("DepartmentId");
+                //OnPropertyChanged("DepartmentId");
             }
         }
         
@@ -217,7 +257,7 @@ namespace EmployeeModule.ViewModels
             set
             {
                 _data = value;
-                OnPropertyChanged("Data");
+                //OnPropertyChanged("Data");
             }
         }
 
@@ -227,18 +267,31 @@ namespace EmployeeModule.ViewModels
 
         public string Error
         {
-            get { return (this as IDataErrorInfo).Error; }
+            get
+            {
+                string err = "";
+                if (this is IDataErrorInfo)
+                    err = (this as IDataErrorInfo).Error;
+                return err;
+            }
         }
 
         public string this[string columnName]
         {
             get
             {
-                string error;
+                string error = "";
 
                 switch (columnName)
                 {
+                    case "Id":
+                        break;
+                    case "Data":
+                        break;
+                    case "DepartmentId":
+                        break;
                     case "FirstName":
+                        break;
                     case "LastName":
                         error = ValidateName();
                         break;
@@ -254,7 +307,7 @@ namespace EmployeeModule.ViewModels
                     case "InsuaranceNumber":
                     case "LicenceNumber":
                         error = ValidateInsuarLicenceNumber();
-                        break;                   
+                        break;
                     case "BirthDay":
                         error = ValidateBirthDay();
                         break;
@@ -371,5 +424,26 @@ namespace EmployeeModule.ViewModels
 
 
         #endregion // IDataErrorInfo
+
+        #region Helpers
+
+        public void onEmployeeSelect(EmployeeViewModel employee)
+        {
+            Address = employee.Address;
+            BirthDay = employee.BirthDay;
+            Data = employee.Data;
+            DepartmentId = employee.DepartmentId;
+            FireDate = employee.FireDate;
+            FirstName = employee.FirstName;
+            HireDate = employee.HireDate;
+            Id = employee.Id;
+            InsuaranceNumber = employee.InsuaranceNumber;
+            LastName = employee.LastName;
+            LicenceNumber = employee.LicenceNumber;
+            Phone = employee.Phone;
+            Position = employee.Position;
+        }
+
+        #endregion Helpers
     }
 }
