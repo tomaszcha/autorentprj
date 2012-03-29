@@ -11,6 +11,9 @@ using System.Windows.Shapes;
 using ModuleInfrastracture.ViewModels;
 using System.ComponentModel;
 using System.Text.RegularExpressions;
+using MockModel;
+using Microsoft.Practices.Prism.Events;
+using CustomerModule.Events;
 
 namespace CustomerModule.ViewModels
 {
@@ -20,9 +23,41 @@ namespace CustomerModule.ViewModels
     /// </summary>  
     public class CustomerViewModel : ViewModelBase, ICustomerViewModel, IDataErrorInfo
     {
+        #region Constructors
+
+        public CustomerViewModel(IEventAggregator eventAggregator)
+        {
+            _eventAggregator = eventAggregator;
+            _eventAggregator.GetEvent<CustomerSelect>().Subscribe(onCustomerSelect);
+
+        }
+
+        public CustomerViewModel(Customer customer, IEventAggregator eventAggregator)
+        {
+
+            _eventAggregator = eventAggregator;
+            if (customer.Id == Guid.Empty)
+            {
+                _eventAggregator.GetEvent<CustomerSelect>().Subscribe(onCustomerSelect);
+            }
+
+            _id = customer.Id;
+            _name = customer.Name;
+            _type = customer.Type;
+            _address = customer.Address;
+            _phone = customer.Phone;
+            _insuaranceNumber = customer.InsuaranceNumber;
+            _licenceNumber = customer.LicenceNumber;
+            _passport = customer.Passport;
+            _birthDay = customer.BirthDay;
+            _data = customer.Data;
+        }
+
+        #endregion Constructors
+
         #region Private Fields
 
-        int _id;
+        Guid _id;
         string _name;
         string _type;
         string _address;
@@ -33,15 +68,17 @@ namespace CustomerModule.ViewModels
         DateTime _birthDay;
         string _data;
 
+        IEventAggregator _eventAggregator;
+
         #endregion // Private fields
 
         #region Properties
 
 
         /// <summary>
-        /// Unique customer id
+        /// Unique customer ids
         /// </summary>
-        public int Id
+        public Guid Id
         {
             get { return _id; }
             private set
@@ -307,5 +344,23 @@ namespace CustomerModule.ViewModels
         }
                 
         #endregion // IDataErrorInfo
+
+        #region Helpers
+
+        public void onCustomerSelect(CustomerViewModel customer)
+        {           
+            Id = customer.Id;
+            Name = customer.Name;
+            Type = customer.Type;
+            Address = customer.Address;
+            Phone = customer.Phone;
+            InsuaranceNumber = customer.InsuaranceNumber;
+            LicenceNumber = customer.LicenceNumber;
+            Passport = customer.Passport;
+            BirthDay = customer.BirthDay;
+            Data = customer.Data;
+        }
+
+        #endregion Helpers
     }
 }

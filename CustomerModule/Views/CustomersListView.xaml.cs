@@ -8,26 +8,25 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Animation;
-using ModuleInfrastracture.Views;
 using System.Windows.Shapes;
+using ModuleInfrastracture.Views;
 using Microsoft.Practices.Unity;
 using CustomerModule.ViewModels;
 
-
 namespace CustomerModule.Views
 {
-    public partial class CustomerView : UserControl, IViewLeftRegion
+    public partial class CustomersListView : UserControl, IViewRightRegion
     {
-        public CustomerView()
+        public CustomersListView()
         {
             InitializeComponent();
         }
 
         [Dependency]
-        public ICustomerViewModel ViewModel
+        public ICustomersListViewModel ViewModel
         {
-            get { return DataContext as ICustomerViewModel; }
+            get { return DataContext as ICustomersListViewModel; }
             set { DataContext = value; }
-        }   
-    }    
+        }
+    }
 }
