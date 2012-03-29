@@ -4,12 +4,8 @@
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     xmlns:editors="clr-namespace:VIBlend.Silverlight.Controls;assembly=VIBlend.Silverlight.Editors"
-    xmlns:viblend="clr-namespace:VIBlend.Silverlight.Controls;assembly=VIBlend.Silverlight.TabControl"
-    xmlns:viblendMenu="clr-namespace:VIBlend.Silverlight.Controls;assembly=VIBlend.Silverlight.Menu"
     xmlns:utilityControl="clr-namespace:VIBlend.Silverlight.Controls;assembly=VIBlend.Silverlight.Utilities"
-    xmlns:viblendNavigation="clr-namespace:VIBlend.Silverlight.Controls;assembly=VIBlend.Silverlight.NavigationPanes"
     xmlns:viblendRibbonBar="clr-namespace:VIBlend.Silverlight.Controls;assembly=VIBlend.Silverlight.RibbonBar"
-    xmlns:viblendDataGrid="clr-namespace:VIBlend.Silverlight.Controls;assembly=VIBlend.Silverlight.DataGrid"
     mc:Ignorable="d"
     d:DesignHeight="300" d:DesignWidth="400">
     <UserControl.Resources>
