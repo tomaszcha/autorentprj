@@ -40,7 +40,7 @@ namespace AutoModule
 
         }
 
-        public void onEmployeeSelect(ViewModelBase viewModel)
+        public void onAutoSelect(ViewModelBase viewModel)
         {
 
         }
