@@ -58,7 +58,7 @@ namespace Main
             moduleCatalog.AddModule(typeof(EmployeeModule.EmployeeModule));
             moduleCatalog.AddModule(typeof(CustomerModule.CustomerModule));
             moduleCatalog.AddModule(typeof(AutoModule.AutoModule));
-
+            moduleCatalog.AddModule(typeof(OrderModule.OrderModule));
         }
 
         #endregion Overrides of Bootstrapper
