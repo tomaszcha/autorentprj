@@ -105,6 +105,6 @@
         </Style>
     </UserControl.Resources>
     <Grid x:Name="LayoutRoot" Background="White">
-        <ListBox ItemsSource="{Binding Employees}" MinWidth="1500" ItemContainerStyle="{StaticResource ListBoxItemStyle}" SelectedItem="{Binding CurEmployee, Mode=TwoWay}"/>
+        <ListBox ItemsSource="{Binding Orders}" MinWidth="1500" ItemContainerStyle="{StaticResource ListBoxItemStyle}" SelectedItem="{Binding CurEmployee, Mode=TwoWay}"/>
     </Grid>
 </UserControl>
