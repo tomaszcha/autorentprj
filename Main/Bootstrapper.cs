@@ -52,8 +52,11 @@ namespace Main
             //moduleCatalog.AddModule(typeof(AutoModule.AutoModule));
             //moduleCatalog.AddModule(typeof(CustomerModule.CustomerModule));
             //moduleCatalog.AddModule(typeof(DamageClassModule.DamageClassModule));
-            moduleCatalog.AddModule(typeof(DepartmentModule.DepartmentModule));
-            moduleCatalog.AddModule(typeof(CustomerMenuModule.CustomerMenuModule));
+            //moduleCatalog.AddModule(typeof(DepartmentModule.DepartmentModule));
+            //moduleCatalog.AddModule(typeof(CustomerMenuModule.CustomerMenuModule));
+            moduleCatalog.AddModule(typeof(GeneralManagerManu.ManagerModule));
+            moduleCatalog.AddModule(typeof(EmployeeModule.EmployeeModule));
+
         }
 
         #endregion Overrides of Bootstrapper
