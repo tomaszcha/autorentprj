@@ -65,9 +65,6 @@
     <Reference Include="System.Xml" />
     <Reference Include="System.Net" />
     <Reference Include="System.Windows.Browser" />
-    <Reference Include="VIBlend.Silverlight.Extensions">
-      <HintPath>..\Libraries\VIBlend\VIBlend.Silverlight.Extensions.dll</HintPath>
-    </Reference>
     <Reference Include="VIBlend.Silverlight.Menu">
       <HintPath>..\Libraries\VIBlend\VIBlend.Silverlight.Menu.dll</HintPath>
     </Reference>
