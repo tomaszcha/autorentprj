@@ -16,6 +16,7 @@ using Microsoft.Practices.Prism.Regions;
 using Microsoft.Practices.Unity;
 using EventInfrastracture;
 using ModuleInfrastracture.ViewModels;
+using GeneralManagerManu.ViewModels;
 
 namespace GeneralManagerManu
 {
@@ -25,14 +26,17 @@ namespace GeneralManagerManu
         {
             RegionManager.RegisterViewWithRegion(RegionNames.MenuPanelName, () => UnityContainer.Resolve<IViewMenuRegion>("ManagerMenuView"));
 
-           // EventAggregator.GetEvent<MenuEvent>().Subscribe(onRightRegionNeedChangeEvent);
+            
         }
 
         protected override void RegisterTypesDependencies()
         {
-            //UnityContainer.RegisterType<ICustomerViewModel, CustomerViewModel>();
+            UnityContainer.RegisterType<IManagerViewModel, ManagerViewModel>();
             UnityContainer.RegisterType<IViewMenuRegion, generalManagerView>("ManagerMenuView", new ContainerControlledLifetimeManager());
         }
 
+        public void onEventTypeChange(string type)
+        { 
+        }
     }
 }
