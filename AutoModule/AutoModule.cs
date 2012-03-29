@@ -16,6 +16,8 @@ using Microsoft.Practices.Prism.Regions;
 using Microsoft.Practices.Unity;
 using ShellInfrastracture;
 using EventInfrastracture;
+using AutoModule.Events;
+using ModuleInfrastracture.ViewModels;
 
 
 namespace AutoModule
@@ -24,13 +26,23 @@ namespace AutoModule
     {
         protected override void RegisterViewsInRegions()
         {
+            RegionManager.RegisterViewWithRegion(RegionNames.LeftPanelName, () => UnityContainer.Resolve<IViewLeftRegion>("AutoView"));
             RegionManager.RegisterViewWithRegion(RegionNames.RightPanelName, () => UnityContainer.Resolve<IViewRightRegion>("AutoView"));
         }
 
         protected override void RegisterTypesDependencies()
         {
             UnityContainer.RegisterType<IAutoViewModel, AutoViewModel>();
-            UnityContainer.RegisterType<IViewRightRegion, AutoView>("AutoView", new ContainerControlledLifetimeManager());
+            UnityContainer.RegisterType<IViewLeftRegion, AutoView>("AutoView", new ContainerControlledLifetimeManager());
+
+            UnityContainer.RegisterType<IAutosListViewModel, AutosListViewModel>();
+            UnityContainer.RegisterType<IViewRightRegion, AutosListView>("AutoView", new ContainerControlledLifetimeManager());
+
+        }
+
+        public void onEmployeeSelect(ViewModelBase viewModel)
+        {
+
         }
     }
 }
