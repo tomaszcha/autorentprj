@@ -10,6 +10,8 @@ using System.Windows.Media;
 using System.Windows.Media.Animation;
 using System.Windows.Shapes;
 using ModuleInfrastracture.Views;
+using GeneralManagerManu.ViewModels;
+using Microsoft.Practices.Unity;
 
 namespace GeneralManagerManu.Views
 {
@@ -19,5 +21,12 @@ namespace GeneralManagerManu.Views
         {
             InitializeComponent();
         }
+
+        [Dependency]
+        public IManagerViewModel ViewModel
+        {
+            get { return DataContext as IManagerViewModel; }
+            set { DataContext = value; }
+        } 
     }
 }

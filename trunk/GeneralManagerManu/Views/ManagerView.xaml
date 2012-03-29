@@ -26,8 +26,8 @@
                 <viblendRibbonBar:RibbonGroup Text="Actions" Padding="40,0,40,0">
                     <StackPanel Orientation="Horizontal">
                         <viblendRibbonBar:RibbonButtonGroup>
-                            <editors:Button viblendRibbonBar:ScreenTip.Title="Add New" viblendRibbonBar:ScreenTip.Text="Add New Record." Text="Add New" Style="{StaticResource SButton}"/>
-                            <editors:Button viblendRibbonBar:ScreenTip.Title="Edit" viblendRibbonBar:ScreenTip.Text="Edit a record." Text="Edit" Style="{StaticResource SButton}"/>
+                            <editors:Button viblendRibbonBar:ScreenTip.Title="Add New" viblendRibbonBar:ScreenTip.Text="Add New Record." Text="Add New" Style="{StaticResource SButton}" Command="{Binding MenuActionCommand}" CommandParameter="New"/>
+                            <editors:Button viblendRibbonBar:ScreenTip.Title="Edit" viblendRibbonBar:ScreenTip.Text="Edit a record." Text="Edit" Style="{StaticResource SButton}" Command="{Binding MenuActionCommand}" CommandParameter="Edit"/>
                             <editors:Button viblendRibbonBar:ScreenTip.Title="Remove" viblendRibbonBar:ScreenTip.Text="Remove a record." Text="Remove" Style="{StaticResource SButton}"/>
                         </viblendRibbonBar:RibbonButtonGroup>
                     </StackPanel>
