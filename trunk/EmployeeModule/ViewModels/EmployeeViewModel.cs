@@ -14,6 +14,8 @@ using System.Text.RegularExpressions;
 using MockModel;
 using Microsoft.Practices.Prism.Events;
 using EmployeeModule.Events;
+using CommandsInfrastracture;
+using EventInfrastracture;
 
 namespace EmployeeModule.ViewModels
 {
@@ -30,7 +32,7 @@ namespace EmployeeModule.ViewModels
         {
             _eventAggregator = eventAggregator;
             _eventAggregator.GetEvent<EmployeeSelect>().Subscribe(onEmployeeSelect);
-
+            _eventAggregator.GetEvent<MenuEmployeeEvent>().Subscribe(onEventTypeChange);
         }
 
         public EmployeeViewModel(Employee employee, IEventAggregator eventAggregator)
@@ -40,6 +42,7 @@ namespace EmployeeModule.ViewModels
             if (employee.Id == Guid.Empty)
             {
                 _eventAggregator.GetEvent<EmployeeSelect>().Subscribe(onEmployeeSelect);
+                _eventAggregator.GetEvent<MenuEmployeeEvent>().Subscribe(onEventTypeChange);
             }
 
             _address = employee.Address;
@@ -61,26 +64,29 @@ namespace EmployeeModule.ViewModels
 
         #region Private Fields
 
-        IEventAggregator _eventAggregator;
+        private IEventAggregator _eventAggregator;
 
-        Guid _id;
-        string _firstName;
-        string _lastName;
-        DateTime _birthDay;
-        string _position;
-        int _departmentId;
-        string _address;
-        string _phone;
-        DateTime _hireDate;
-        DateTime _fireDate;
-        string _insuaranceNumber;
-        string _licenceNumber;       
-        string _data;
+        private EmployeeViewModel _employee;
+
+        private Guid _id;
+        private string _firstName;
+        private string _lastName;
+        private DateTime _birthDay;
+        private string _position;
+        private int _departmentId;
+        private string _address;
+        private string _phone;
+        private DateTime _hireDate;
+        private DateTime _fireDate;
+        private string _insuaranceNumber;
+        private string _licenceNumber;
+        private string _data;
 
         #endregion // Private fields
 
         #region Properties   
 
+        public string EventType { get; set; }
 
         /// <summary>
         /// Unique employee id
@@ -429,19 +435,37 @@ namespace EmployeeModule.ViewModels
 
         public void onEmployeeSelect(EmployeeViewModel employee)
         {
-            Address = employee.Address;
-            BirthDay = employee.BirthDay;
-            Data = employee.Data;
-            DepartmentId = employee.DepartmentId;
-            FireDate = employee.FireDate;
-            FirstName = employee.FirstName;
-            HireDate = employee.HireDate;
-            Id = employee.Id;
-            InsuaranceNumber = employee.InsuaranceNumber;
-            LastName = employee.LastName;
-            LicenceNumber = employee.LicenceNumber;
-            Phone = employee.Phone;
-            Position = employee.Position;
+            _employee = employee;
+            if (EventType == CommandsTypes.Edit || employee.Id == Guid.Empty)
+            {
+                Address = employee.Address;
+                BirthDay = employee.BirthDay;
+                Data = employee.Data;
+                DepartmentId = employee.DepartmentId;
+                FireDate = employee.FireDate;
+                FirstName = employee.FirstName;
+                HireDate = employee.HireDate;
+                Id = employee.Id;
+                InsuaranceNumber = employee.InsuaranceNumber;
+                LastName = employee.LastName;
+                LicenceNumber = employee.LicenceNumber;
+                Phone = employee.Phone;
+                Position = employee.Position;
+            }
+        }
+
+        public void onEventTypeChange(string typeName)
+        {
+            EventType = typeName;
+            switch (EventType)
+            {
+                case CommandsTypes.Edit:
+                    onEmployeeSelect(_employee);
+                    break;
+                case CommandsTypes.New:
+                    onEmployeeSelect(new EmployeeViewModel(new Employee(), _eventAggregator));
+                    break;
+            }
         }
 
         #endregion Helpers
