@@ -56,7 +56,7 @@
                     <StackPanel Orientation="Horizontal">
                         <viblendRibbonBar:RibbonButtonGroup>
                             <editors:Button viblendRibbonBar:ScreenTip.Title="List of Applications." Text="Applications" Style="{StaticResource SButton}"/>
-                            <editors:Button viblendRibbonBar:ScreenTip.Title="List of Rental Orders." Text="Rental orders" Style="{StaticResource SButton}"/>
+                            <editors:Button viblendRibbonBar:ScreenTip.Title="List of Rental Orders." Text="Rental orders" Style="{StaticResource SButton}" Command="{Binding MenuViewCommand}" CommandParameter="OrderView"/>
                         </viblendRibbonBar:RibbonButtonGroup>
                     </StackPanel>
                 </viblendRibbonBar:RibbonGroup>
