@@ -12,21 +12,22 @@
 
     <Grid x:Name="LayoutRoot" Background="White">
             <Grid.RowDefinitions>
-                <RowDefinition Height="45"/>
+                <RowDefinition Height="auto"/>
+                <RowDefinition Height="auto"/>
                 <RowDefinition Height="100*"/>
                 <RowDefinition Height="3*"/>
             </Grid.RowDefinitions>
             <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="40*"/>
-                <ColumnDefinition Width="60*"/>
+                <ColumnDefinition Width="auto"/>
+                <ColumnDefinition Width="*"/>
             </Grid.ColumnDefinitions>
-            <ContentControl Grid.Column="0" Grid.Row="0" Grid.ColumnSpan="2" HorizontalAlignment="Center"
+            <ContentControl Grid.Column="0" Grid.Row="1" Grid.ColumnSpan="2" HorizontalAlignment="Stretch"
                        VerticalAlignment="Stretch"
                        prism:RegionManager.RegionName="MenuRegion"/>
-            <ContentControl Grid.Column="0" Grid.Row="1" HorizontalAlignment="Stretch"
+            <ContentControl Grid.Column="0" Grid.Row="2" HorizontalAlignment="Stretch"
                        VerticalAlignment="Stretch"
                        prism:RegionManager.RegionName="LeftRegion"/>
-            <ContentControl Grid.Column="1" Grid.Row="1" HorizontalAlignment="Stretch"
+            <ContentControl Grid.Column="1" Grid.Row="2" HorizontalAlignment="Stretch"
                        VerticalAlignment="Stretch"
                        prism:RegionManager.RegionName="RightRegion">            
         </ContentControl>
