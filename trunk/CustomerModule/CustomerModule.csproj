@@ -90,6 +90,10 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\CommandsInfrastracture\CommandsInfrastracture.csproj">
+      <Project>{D2FBF449-378E-48A7-95AB-74D0DD98021A}</Project>
+      <Name>CommandsInfrastracture</Name>
+    </ProjectReference>
     <ProjectReference Include="..\EventInfrastracture\EventInfrastracture.csproj">
       <Project>{434F9A5F-7303-459A-9BBA-06C487C6A5D8}</Project>
       <Name>EventInfrastracture</Name>
