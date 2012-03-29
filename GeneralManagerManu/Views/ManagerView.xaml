@@ -1,0 +1,89 @@
+﻿<UserControl x:Class="GeneralManagerManu.Views.generalManagerView"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:editors="clr-namespace:VIBlend.Silverlight.Controls;assembly=VIBlend.Silverlight.Editors"
+    xmlns:viblend="clr-namespace:VIBlend.Silverlight.Controls;assembly=VIBlend.Silverlight.TabControl"
+    xmlns:viblendMenu="clr-namespace:VIBlend.Silverlight.Controls;assembly=VIBlend.Silverlight.Menu"
+    xmlns:utilityControl="clr-namespace:VIBlend.Silverlight.Controls;assembly=VIBlend.Silverlight.Utilities"
+    xmlns:viblendNavigation="clr-namespace:VIBlend.Silverlight.Controls;assembly=VIBlend.Silverlight.NavigationPanes"
+    xmlns:viblendRibbonBar="clr-namespace:VIBlend.Silverlight.Controls;assembly=VIBlend.Silverlight.RibbonBar"
+    xmlns:viblendDataGrid="clr-namespace:VIBlend.Silverlight.Controls;assembly=VIBlend.Silverlight.DataGrid"
+    mc:Ignorable="d"
+    d:DesignHeight="300" d:DesignWidth="400">
+    <UserControl.Resources>
+        <Style TargetType="editors:Button" x:Name="SButton">
+            <Setter Property="Margin" Value="2,0,2,0"/>
+            <Setter Property="Foreground" Value="#5C5E61"/>
+            <Setter Property="ForegroundNormal" Value="#5C5E61"/>
+            <Setter Property="Width" Value="150"/>
+            <Setter Property="HorizontalTextAlignment" Value="Center"/>
+            <Setter Property="HorizontalAlignment" Value="Left"/>
+            <Setter Property="BackgroundOpacity" Value="0"/>
+        </Style>
+    </UserControl.Resources>
+    
+    <Grid x:Name="LayoutRoot" Background="White">
+        <viblendRibbonBar:RibbonBar SelectedIndex="0" QuickAccessToolBarVisibility="Collapsed" ApplicationButtonVisibility="Collapsed" Text="Manager" Name="ribbonBar1" VerticalAlignment="Top">
+            <viblendRibbonBar:RibbonTabItem Margin="30,0,2,0" Text="Dictionaries">
+                <viblendRibbonBar:RibbonGroup Text="Actions" Padding="40,0,40,0">
+                    <StackPanel Orientation="Horizontal">
+                        <viblendRibbonBar:RibbonButtonGroup>
+                            <editors:Button viblendRibbonBar:ScreenTip.Title="Add New" viblendRibbonBar:ScreenTip.Text="Add New Record." Text="Add New" Style="{StaticResource SButton}"/>
+                            <editors:Button viblendRibbonBar:ScreenTip.Title="Edit" viblendRibbonBar:ScreenTip.Text="Edit a record." Text="Edit" Style="{StaticResource SButton}"/>
+                            <editors:Button viblendRibbonBar:ScreenTip.Title="Remove" viblendRibbonBar:ScreenTip.Text="Remove a record." Text="Remove" Style="{StaticResource SButton}"/>
+                        </viblendRibbonBar:RibbonButtonGroup>
+                    </StackPanel>
+                </viblendRibbonBar:RibbonGroup>
+                <viblendRibbonBar:RibbonGroup Text="Views" Padding="40,0,40,0">
+                    <StackPanel Orientation="Horizontal">
+                        <viblendRibbonBar:RibbonButtonGroup>
+                            <editors:Button viblendRibbonBar:ScreenTip.Title="Customers" viblendRibbonBar:ScreenTip.Text="List of customers." Text="Customers" Style="{StaticResource SButton}"/>
+                            <editors:Button viblendRibbonBar:ScreenTip.Title="Employees" viblendRibbonBar:ScreenTip.Text="List of employees." Text="Employees" Style="{StaticResource SButton}"/>
+                            <editors:Button viblendRibbonBar:ScreenTip.Title="Auto" viblendRibbonBar:ScreenTip.Text="List of cars." Text="Auto" Style="{StaticResource SButton}"/>
+                        </viblendRibbonBar:RibbonButtonGroup>
+                    </StackPanel>
+                </viblendRibbonBar:RibbonGroup>   
+            </viblendRibbonBar:RibbonTabItem>
+            <viblendRibbonBar:RibbonTabItem Margin="2,0,2,0" Text="Client">
+                <viblendRibbonBar:RibbonGroup Text="Action" Padding="40,0,40,0">
+                    <StackPanel Orientation="Horizontal">
+                        <viblendRibbonBar:RibbonButtonGroup>
+                            <editors:Button viblendRibbonBar:ScreenTip.Title="Add new rental order." Text="Add new order" Style="{StaticResource SButton}"/>
+                            <editors:Button viblendRibbonBar:ScreenTip.Title="Extend rental order." Text="Extend rental order" Style="{StaticResource SButton}"/>
+                            <editors:Button viblendRibbonBar:ScreenTip.Title="Reject rental order." Text="Reject rental order" Style="{StaticResource SButton}"/>
+                        </viblendRibbonBar:RibbonButtonGroup>
+                    </StackPanel>
+                </viblendRibbonBar:RibbonGroup>
+                <viblendRibbonBar:RibbonGroup Text="Views" Padding="40,0,40,0">
+                    <StackPanel Orientation="Horizontal">
+                        <viblendRibbonBar:RibbonButtonGroup>
+                            <editors:Button viblendRibbonBar:ScreenTip.Title="List of Applications." Text="Applications" Style="{StaticResource SButton}"/>
+                            <editors:Button viblendRibbonBar:ScreenTip.Title="List of Rental Orders." Text="Rental orders" Style="{StaticResource SButton}"/>
+                        </viblendRibbonBar:RibbonButtonGroup>
+                    </StackPanel>
+                </viblendRibbonBar:RibbonGroup>
+            </viblendRibbonBar:RibbonTabItem>
+            <viblendRibbonBar:RibbonTabItem Margin="2,0,2,0" Text="Contracts">
+                <viblendRibbonBar:RibbonGroup Text="Action" Padding="40,0,40,0">
+                    <StackPanel Orientation="Horizontal">
+                        <viblendRibbonBar:RibbonButtonGroup>
+                            <editors:Button viblendRibbonBar:ScreenTip.Title="Add new Contract." Text="Add new" Style="{StaticResource SButton}"/>
+                            <editors:Button viblendRibbonBar:ScreenTip.Title="Extend rental order." Text="Extend" Style="{StaticResource SButton}"/>
+                            <editors:Button viblendRibbonBar:ScreenTip.Title="Reject rental order." Text="Reject" Style="{StaticResource SButton}"/>
+                        </viblendRibbonBar:RibbonButtonGroup>
+                    </StackPanel>
+                </viblendRibbonBar:RibbonGroup>
+                <viblendRibbonBar:RibbonGroup Text="Views" Padding="40,0,40,0">
+                    <StackPanel Orientation="Horizontal">
+                        <viblendRibbonBar:RibbonButtonGroup>
+                            <editors:Button viblendRibbonBar:ScreenTip.Title="List Technical contracts." Text="Technical contracts" Style="{StaticResource SButton}"/>
+                            <editors:Button viblendRibbonBar:ScreenTip.Title="List Insuarance contracts." Text="Insuarance contracts" Style="{StaticResource SButton}"/>
+                        </viblendRibbonBar:RibbonButtonGroup>
+                    </StackPanel>
+                </viblendRibbonBar:RibbonGroup>
+            </viblendRibbonBar:RibbonTabItem>
+        </viblendRibbonBar:RibbonBar>
+    </Grid>
+</UserControl>
