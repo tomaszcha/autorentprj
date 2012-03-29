@@ -59,19 +59,17 @@
                                             <RowDefinition />
                                         </Grid.RowDefinitions>
 
-                                        <StackPanel Orientation="Horizontal" Grid.Column="0" Grid.Row="1">
-                                            <TextBlock Text="Type: " FontSize="12" />
-                                            <TextBlock Text="{Binding Type}" FontSize="12" />
-                                            <TextBlock Text=", Address: " FontSize="12" />
+                                        <StackPanel Orientation="Horizontal" Grid.Column="0" Grid.Row="1">                                            
+                                            <TextBlock Text="Address: " FontSize="12" />
                                             <TextBlock Text="{Binding Address}" FontSize="12" />
                                             <TextBlock Text=", Phone: " FontSize="12" />
                                             <TextBlock Text="{Binding Phone}" FontSize="12" />
-                                            <TextBlock Text=", Birth date: " FontSize="12" />
-                                            <TextBlock Text="{Binding BirthDay}" FontSize="12" />
+                                            <TextBlock Text=", Insuarance: " FontSize="12" />
+                                            <TextBlock Text="{Binding InsuaranceNumber}" FontSize="12" />
                                         </StackPanel>
                                         <StackPanel Orientation="Horizontal" Grid.Column="0" Grid.Row="0">
-                                            <TextBlock Text="Position: " FontSize="12" />
-                                            <TextBlock Text="{Binding Position}" FontSize="12" />
+                                            <TextBlock Text="Type: " FontSize="12" />
+                                            <TextBlock Text="{Binding Type}" FontSize="12" />
                                         </StackPanel>
                                     </Grid>
                                 </StackPanel>
