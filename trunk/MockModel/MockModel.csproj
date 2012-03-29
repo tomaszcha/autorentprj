@@ -55,6 +55,8 @@
     <Reference Include="System.Windows.Browser" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Auto.cs" />
+    <Compile Include="Autos.cs" />
     <Compile Include="Customer.cs" />
     <Compile Include="Customers.cs" />
     <Compile Include="Employee.cs" />
