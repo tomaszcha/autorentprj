@@ -97,7 +97,7 @@ namespace EmployeeModule.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to @&quot;(^[0]\d{2})(\d{5-13}$)&quot;.
+        ///   Looks up a localized string similar to @&quot;^\([0]\d{2}\))(\d{6,7}$&quot;.
         /// </summary>
         internal static string PhoneRegEx {
             get {
