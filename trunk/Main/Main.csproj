@@ -85,37 +85,9 @@
     <Reference Include="System.Windows.Controls.Toolkit, Version=4.0.5.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
     <Reference Include="System.Xml" />
     <Reference Include="System.Windows.Browser" />
-    <Reference Include="VIBlend.Silverlight.BannerRotator, Version=6.0.0.0, Culture=neutral, PublicKeyToken=f5371b34064f4b93, processorArchitecture=MSIL" />
-    <Reference Include="VIBlend.Silverlight.DataGrid, Version=6.0.0.0, Culture=neutral, PublicKeyToken=77d0cde755fee43c, processorArchitecture=MSIL" />
     <Reference Include="VIBlend.Silverlight.Editors, Version=6.0.0.0, Culture=neutral, PublicKeyToken=6546306d640fbdbb, processorArchitecture=MSIL" />
-    <Reference Include="VIBlend.Silverlight.Extensions">
-      <HintPath>..\Libraries\VIBlend\VIBlend.Silverlight.Extensions.dll</HintPath>
-    </Reference>
-    <Reference Include="VIBlend.Silverlight.Menu">
-      <HintPath>..\Libraries\VIBlend\VIBlend.Silverlight.Menu.dll</HintPath>
-    </Reference>
-    <Reference Include="VIBlend.Silverlight.NavigationPanes, Version=6.0.0.0, Culture=neutral, PublicKeyToken=91fd29d07a5e1d01, processorArchitecture=MSIL" />
+    <Reference Include="VIBlend.Silverlight.Menu, Version=6.0.0.0, Culture=neutral, PublicKeyToken=85c7390eefa587df, processorArchitecture=MSIL" />
     <Reference Include="VIBlend.Silverlight.RibbonBar, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b48a61db02a9a805, processorArchitecture=MSIL" />
-    <Reference Include="VIBlend.Silverlight.Scheduler, Version=6.0.0.0, Culture=neutral, PublicKeyToken=5f440a87a84488e2, processorArchitecture=MSIL" />
-    <Reference Include="VIBlend.Silverlight.TabControl, Version=6.0.0.0, Culture=neutral, PublicKeyToken=85c7390eefa587df, processorArchitecture=MSIL" />
-    <Reference Include="VIBlend.Silverlight.Theme.BlackPearl, Version=6.0.0.0, Culture=neutral, PublicKeyToken=391e3faf415e7c75, processorArchitecture=MSIL" />
-    <Reference Include="VIBlend.Silverlight.Theme.Custom, Version=3.5.0.0, Culture=neutral, processorArchitecture=MSIL" />
-    <Reference Include="VIBlend.Silverlight.Theme.Lime, Version=6.0.0.0, Culture=neutral, PublicKeyToken=391e3faf415e7c75, processorArchitecture=MSIL" />
-    <Reference Include="VIBlend.Silverlight.Theme.MetroBlue, Version=6.0.0.0, Culture=neutral, PublicKeyToken=391e3faf415e7c75, processorArchitecture=MSIL" />
-    <Reference Include="VIBlend.Silverlight.Theme.MetroGreen, Version=6.0.0.0, Culture=neutral, PublicKeyToken=391e3faf415e7c75, processorArchitecture=MSIL" />
-    <Reference Include="VIBlend.Silverlight.Theme.MetroOrange, Version=6.0.0.0, Culture=neutral, PublicKeyToken=391e3faf415e7c75, processorArchitecture=MSIL" />
-    <Reference Include="VIBlend.Silverlight.Theme.Office2007Black, Version=6.0.0.0, Culture=neutral, PublicKeyToken=391e3faf415e7c75, processorArchitecture=MSIL" />
-    <Reference Include="VIBlend.Silverlight.Theme.Office2007Blue, Version=6.0.0.0, Culture=neutral, PublicKeyToken=391e3faf415e7c75, processorArchitecture=MSIL" />
-    <Reference Include="VIBlend.Silverlight.Theme.Office2007Silver, Version=6.0.0.0, Culture=neutral, PublicKeyToken=391e3faf415e7c75, processorArchitecture=MSIL" />
-    <Reference Include="VIBlend.Silverlight.Theme.Office2010Black, Version=6.0.0.0, Culture=neutral, PublicKeyToken=391e3faf415e7c75, processorArchitecture=MSIL" />
-    <Reference Include="VIBlend.Silverlight.Theme.Office2010Blue, Version=6.0.0.0, Culture=neutral, PublicKeyToken=391e3faf415e7c75, processorArchitecture=MSIL" />
-    <Reference Include="VIBlend.Silverlight.Theme.Office2010Silver, Version=6.0.0.0, Culture=neutral, PublicKeyToken=391e3faf415e7c75, processorArchitecture=MSIL" />
-    <Reference Include="VIBlend.Silverlight.Theme.Silver, Version=6.0.0.0, Culture=neutral, PublicKeyToken=391e3faf415e7c75, processorArchitecture=MSIL" />
-    <Reference Include="VIBlend.Silverlight.Theme.SteelBlue, Version=6.0.0.0, Culture=neutral, PublicKeyToken=391e3faf415e7c75, processorArchitecture=MSIL" />
-    <Reference Include="VIBlend.Silverlight.Theme.UltraBlue, Version=6.0.0.0, Culture=neutral, processorArchitecture=MSIL" />
-    <Reference Include="VIBlend.Silverlight.Theme.Vista, Version=6.0.0.0, Culture=neutral, processorArchitecture=MSIL" />
-    <Reference Include="VIBlend.Silverlight.Theme.WebBlue, Version=6.0.0.0, Culture=neutral, PublicKeyToken=391e3faf415e7c75, processorArchitecture=MSIL" />
-    <Reference Include="VIBlend.Silverlight.TreeView, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7c851330d1470db6, processorArchitecture=MSIL" />
     <Reference Include="VIBlend.Silverlight.Utilities">
       <HintPath>..\Libraries\VIBlend\VIBlend.Silverlight.Utilities.dll</HintPath>
     </Reference>
