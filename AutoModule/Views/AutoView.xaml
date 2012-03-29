@@ -105,13 +105,9 @@
                     <sdk:Label Content="Status" Style="{StaticResource LblFieldStyle}"/>
                     <ComboBox Name="cmbStatus" ItemsSource="{Binding}" SelectedValue="{Binding}" 
                           DisplayMemberPath="Name" SelectedValuePath="Id" Style="{StaticResource CmbBoxStyle}" />
-
                 </StackPanel>
                 </StackPanel>
-            </toolkit:Expander>
-               
-            
-
+            </toolkit:Expander>              
             <StackPanel Style="{StaticResource StackPnlStyle}" HorizontalAlignment="Center">
                 <Button Content="Save" Name="btnSave" Command="{Binding Path=SaveCommand}" Style="{StaticResource BtnStyle}"/>
                 <Button Content="Cancel" Name="btnCancel" Command="{Binding Path=CancelCommand}" Margin="4,0,0,0" Style="{StaticResource BtnStyle}"/>
