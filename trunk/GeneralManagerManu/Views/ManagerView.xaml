@@ -35,8 +35,8 @@
                 <viblendRibbonBar:RibbonGroup Text="Views" Padding="40,0,40,0">
                     <StackPanel Orientation="Horizontal">
                         <viblendRibbonBar:RibbonButtonGroup>
-                            <editors:Button viblendRibbonBar:ScreenTip.Title="Customers" viblendRibbonBar:ScreenTip.Text="List of customers." Text="Customers" Style="{StaticResource SButton}"/>
-                            <editors:Button viblendRibbonBar:ScreenTip.Title="Employees" viblendRibbonBar:ScreenTip.Text="List of employees." Text="Employees" Style="{StaticResource SButton}"/>
+                            <editors:Button viblendRibbonBar:ScreenTip.Title="Customers" viblendRibbonBar:ScreenTip.Text="List of customers." Text="Customers" Style="{StaticResource SButton}" Command="{Binding MenuViewCommand}" CommandParameter="CustomerView"/>
+                            <editors:Button viblendRibbonBar:ScreenTip.Title="Employees" viblendRibbonBar:ScreenTip.Text="List of employees." Text="Employees" Style="{StaticResource SButton}" Command="{Binding MenuViewCommand}" CommandParameter="EmployeeView"/>
                             <editors:Button viblendRibbonBar:ScreenTip.Title="Auto" viblendRibbonBar:ScreenTip.Text="List of cars." Text="Auto" Style="{StaticResource SButton}"/>
                         </viblendRibbonBar:RibbonButtonGroup>
                     </StackPanel>

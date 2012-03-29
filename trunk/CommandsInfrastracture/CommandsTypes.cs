@@ -16,7 +16,5 @@ namespace CommandsInfrastracture
         public const string Edit = "Edit";
 
         public const string New = "New";
-
-        public const string Delete = "Remove";
     }
 }

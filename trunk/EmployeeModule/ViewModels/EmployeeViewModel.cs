@@ -317,8 +317,10 @@ namespace EmployeeModule.ViewModels
                         error = ValidatePhone();
                         break;
                     case "InsuaranceNumber":
+                        error = ValidateInsuarNumber();
+                        break;
                     case "LicenceNumber":
-                        error = ValidateInsuarLicenceNumber();
+                        error = ValidateLicenceNumber();
                         break;
                     case "BirthDay":
                         error = ValidateBirthDay();
@@ -395,15 +397,28 @@ namespace EmployeeModule.ViewModels
             return res;
         }
 
-        private string ValidateInsuarLicenceNumber()
+        private string ValidateInsuarNumber()
         {
             string res = String.Empty;
-            if (_insuaranceNumber.Length > 26 || _licenceNumber.Length > 26)
-            {
-                res = Properties.Resources.LongString;
-            }
+            if (_insuaranceNumber!=null)
+                if (_insuaranceNumber.Length > 26)
+                {
+                    res = Properties.Resources.LongString;
+                }
             return res;
-        }               
+        }
+
+        private string ValidateLicenceNumber()
+        {
+            string res = String.Empty;
+            if (_licenceNumber != null)
+                if (
+                    _licenceNumber.Length > 26)
+                {
+                    res = Properties.Resources.LongString;
+                }
+            return res;
+        }      
 
         private string ValidateBirthDay()
         {

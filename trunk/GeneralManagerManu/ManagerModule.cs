@@ -17,6 +17,7 @@ using Microsoft.Practices.Unity;
 using EventInfrastracture;
 using ModuleInfrastracture.ViewModels;
 using GeneralManagerManu.ViewModels;
+using Microsoft.Practices.Prism.Modularity;
 
 namespace GeneralManagerManu
 {
@@ -26,7 +27,7 @@ namespace GeneralManagerManu
         {
             RegionManager.RegisterViewWithRegion(RegionNames.MenuPanelName, () => UnityContainer.Resolve<IViewMenuRegion>("ManagerMenuView"));
 
-            
+            EventAggregator.GetEvent<MenuEvent>().Subscribe(onRegionNeedChangeEvent);
         }
 
         protected override void RegisterTypesDependencies()
@@ -35,8 +36,13 @@ namespace GeneralManagerManu
             UnityContainer.RegisterType<IViewMenuRegion, generalManagerView>("ManagerMenuView", new ContainerControlledLifetimeManager());
         }
 
-        public void onEventTypeChange(string type)
-        { 
+        public void onRegionNeedChangeEvent(string views)
+        {
+            IRegion region = RegionManager.Regions[RegionNames.RightPanelName];
+            region.Activate(UnityContainer.Resolve<IViewRightRegion>(views));
+
+            region = RegionManager.Regions[RegionNames.LeftPanelName];
+            region.Activate(UnityContainer.Resolve<IViewLeftRegion>(views));
         }
     }
 }

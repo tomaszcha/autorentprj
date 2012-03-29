@@ -56,6 +56,7 @@ namespace Main
             //moduleCatalog.AddModule(typeof(CustomerMenuModule.CustomerMenuModule));
             moduleCatalog.AddModule(typeof(GeneralManagerManu.ManagerModule));
             moduleCatalog.AddModule(typeof(EmployeeModule.EmployeeModule));
+            moduleCatalog.AddModule(typeof(CustomerModule.CustomerModule));
 
         }
 

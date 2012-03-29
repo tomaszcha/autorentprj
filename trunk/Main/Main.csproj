@@ -140,10 +140,6 @@
       <Project>{CFA6CA45-B3D5-4C59-8E88-5361F31DC9D4}</Project>
       <Name>EmployeeModule</Name>
     </ProjectReference>
-    <ProjectReference Include="..\EmployeesListModule\EmployeesListModule.csproj">
-      <Project>{1FEBB651-39A7-44C0-84BC-5439C15DFE06}</Project>
-      <Name>EmployeesListModule</Name>
-    </ProjectReference>
     <ProjectReference Include="..\GeneralManagerManu\ManagerMenu.csproj">
       <Project>{8F2B8F3A-7AB1-4456-8A17-D674E0C9E07D}</Project>
       <Name>ManagerMenu</Name>
