@@ -17,6 +17,7 @@ using EmployeeModule.Events;
 using CommandsInfrastracture;
 using EventInfrastracture;
 using Microsoft.Practices.Prism.Commands;
+using System.ServiceModel.DomainServices.Client; 
 
 namespace EmployeeModule.ViewModels
 {
