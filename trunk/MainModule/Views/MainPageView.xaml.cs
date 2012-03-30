@@ -5,9 +5,9 @@ using MainModule.ViewModels;
 
 namespace MainModule.Views
 {
-    public partial class MainView : UserControl, IViewRightRegion
+    public partial class MainPageView : UserControl, IViewRightRegion
     {
-        public MainView()
+        public MainPageView()
         {
             InitializeComponent();
         }
@@ -17,6 +17,6 @@ namespace MainModule.Views
         {
             get { return DataContext as IMainViewModel; }
             set { DataContext = value; }
-        } 
+        }
     }
 }

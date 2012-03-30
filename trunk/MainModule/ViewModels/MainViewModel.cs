@@ -4,14 +4,12 @@ using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Documents;
 using System.Windows.Ink;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Animation;
-using System.Windows.Shapes;
+using ModuleInfrastracture.ViewModels;
 using Microsoft.Practices.Prism.Events;
 using Microsoft.Practices.Prism.Commands;
 using EventInfrastracture;
-using ModuleInfrastracture.ViewModels;
+using System.Windows.Input;
+using MainModule.Views;
 
 namespace MainModule.ViewModels
 {
@@ -30,7 +28,9 @@ namespace MainModule.ViewModels
 
         private IEventAggregator _eventAggregator;
 
-        private DelegateCommand<string> _menuCommand;    
+        private DelegateCommand<string> _menuCommand;
+
+        private DelegateCommand _authorizeCommand;
 
         #endregion PrivateFields
 
@@ -46,6 +46,16 @@ namespace MainModule.ViewModels
             }
         }
 
+        public ICommand AuthorizeCommand
+        {
+            get
+            {
+                if (_authorizeCommand == null)
+                    _authorizeCommand = new DelegateCommand(AuthorizeExecute);
+                return _authorizeCommand;
+            }
+        }
+
         #endregion Commands
 
         #region Helpers
@@ -53,6 +63,15 @@ namespace MainModule.ViewModels
         private void MenuExecute(string typeName)
         {
             _eventAggregator.GetEvent<MenuEvent>().Publish(typeName);
+        }
+
+        private void AuthorizeExecute()
+        {
+            AuthorizeViewModel vm = new AuthorizeViewModel();
+            AuthorizeView view = new AuthorizeView();
+            view.ViewModel = vm;
+            view.Show();
+            
         }
 
         #endregion Helpers
