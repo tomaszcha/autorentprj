@@ -8,6 +8,8 @@ namespace BLL.Groups
 {
     public interface IGroups
     {
+        #region Order
+
         List<Order> GetOrdersByType(int orderType);
         List<Order> GetOrdersByDepartment(int orderType, Guid departmentId);
 
@@ -21,6 +23,22 @@ namespace BLL.Groups
         void UpdateOrder(Order order);
         void RemoveOrder(int number);
 
+        void ProlongateOrder(Order order);
 
+        #endregion
+
+        #region Auto
+
+        List<Auto> GetAutosByModelName(string modelName);        
+        List<string> GetAutoModelNames();
+
+        void CreateAuto(Auto auto);
+        void UpdateAuto(Auto auto);
+        void RemoveAuto(string autoNumber);
+
+        Auto GetAutoByNumber(string autoNumber);
+        Auto GetAutoByOrderNumber(int orderNumber);
+
+        #endregion
     }
 }
