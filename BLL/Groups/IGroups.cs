@@ -85,5 +85,14 @@ namespace BLL.Groups
         Employee GetEmployeeById(Guid id);
 
         #endregion
+
+        #region Revisions
+
+        List<Revisions> GetRevisions();
+        Revisions GetRevisionsById();
+
+        Revisions GetLastRevisions();
+       
+        #endregion
     }
 }
