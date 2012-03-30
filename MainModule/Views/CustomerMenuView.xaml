@@ -4,14 +4,14 @@
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     xmlns:vsm="clr-namespace:System.Windows;assembly=System.Windows"
-    mc:Ignorable="d" d:DesignHeight="70" d:DesignWidth="593" HorizontalAlignment="Center">
+    mc:Ignorable="d" d:DesignHeight="70" d:DesignWidth="593" HorizontalAlignment="Stretch">
     <UserControl.Resources>
     <Style x:Key="ContentButton" TargetType="TextBlock">
         <Setter Property="FontSize" Value="14"/>
         <Setter Property="FontWeight" Value="ExtraBold"/>
     </Style>
     <Style x:Key="RoundButton" TargetType="Button">
-        <Setter Property="Width" Value="150"/>
+        <Setter Property="Width" Value="160"/>
         <Setter Property="Height" Value="70"/>
         <Setter Property="Template">
             <Setter.Value>
@@ -34,11 +34,11 @@
                             </vsm:VisualStateGroup>
 
                         </vsm:VisualStateManager.VisualStateGroups>
-                        <Ellipse Width="150" Height="60" VerticalAlignment="Top" x:Name="ElElement">
+                        <Ellipse Width="150" Height="60" VerticalAlignment="Top" x:Name="ElElement" Margin="5,0,5,0">
                             <Ellipse.Fill>
                                 <RadialGradientBrush GradientOrigin=".12,.2">
                                     <GradientStop Offset="-0.3" Color="Transparent"/>
-                                    <GradientStop Offset="1" Color="White"/>
+                                    <GradientStop Offset="1" Color="LightGray"/>
                                 </RadialGradientBrush>
                             </Ellipse.Fill>
                         </Ellipse>
@@ -53,8 +53,8 @@
         </Setter>
     </Style>
     </UserControl.Resources>
-    <Grid x:Name="LayoutRoot" Background="LightGray" HorizontalAlignment="Center">
-        <StackPanel Orientation="Horizontal">
+    <Grid x:Name="LayoutRoot" Background="White">
+        <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
         <Button Style="{StaticResource RoundButton}">
             <Button.Content>
                 <TextBlock Text="Auto Park" Style="{StaticResource ContentButton}"/>
@@ -70,7 +70,7 @@
                     <TextBlock Text="Contacts" Style="{StaticResource ContentButton}"/>
                 </Button.Content>
             </Button>
-            <Button Style="{StaticResource RoundButton}">
+            <Button Style="{StaticResource RoundButton}" Command="{Binding AuthorizeCommand}">
                 <Button.Content>
                     <TextBlock Text="LogIn" Style="{StaticResource ContentButton}"/>
                 </Button.Content>
