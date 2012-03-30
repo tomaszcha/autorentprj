@@ -62,12 +62,12 @@
                     <TextBlock Text="Auto Park" Style="{StaticResource ContentButton}"/>
                 </Button.Content>
             </Button>
-            <Button Style="{StaticResource RoundButton}" VerticalAlignment="Bottom" Command="MenuCommand"> 
+            <Button Style="{StaticResource RoundButton}" VerticalAlignment="Bottom" Command="MenuCommand" CommandParameter="AutoParkCustomerView"> 
                 <Button.Content>
                     <TextBlock Text="Conditions" Style="{StaticResource ContentButton}"/>
                 </Button.Content>
             </Button>
-            <Button Style="{StaticResource RoundButton}" VerticalAlignment="Top" Command="MenuCommand">
+            <Button Style="{StaticResource RoundButton}" VerticalAlignment="Top" Command="MenuCommand" CommandParameter="AutoParkCustomerView">
                 <Button.Content>
                     <TextBlock Text="Contacts" Style="{StaticResource ContentButton}"/>
                 </Button.Content>

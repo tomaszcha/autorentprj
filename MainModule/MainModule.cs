@@ -15,8 +15,9 @@ namespace MainModule
         protected override void RegisterViewsInRegions()
         {
             RegionManager.RegisterViewWithRegion(RegionNames.RightPanelName, () => UnityContainer.Resolve<IViewRightRegion>(ViewNames.ViewName));
-            RegionManager.RegisterViewWithRegion(RegionNames.MenuPanelName, () => UnityContainer.Resolve<IViewMenuRegion>(ViewNames.ViewName));
-            DeactivateMenu();
+            //RegionManager.RegisterViewWithRegion(RegionNames.MenuPanelName, () => UnityContainer.Resolve<IViewMenuRegion>(ViewNames.ViewName));
+           
+            //DeactivateMenu();
 
             EventAggregator.GetEvent<MenuEvent>().Subscribe(onRegionNeedChangeEvent);
         }
@@ -25,7 +26,7 @@ namespace MainModule
         {
             UnityContainer.RegisterType<IMainViewModel, MainViewModel>();
             UnityContainer.RegisterType<IViewRightRegion, MainView>(ViewNames.ViewName, new ContainerControlledLifetimeManager());
-            UnityContainer.RegisterType<IViewMenuRegion, CustomerMenuView>(ViewNames.ViewName, new ContainerControlledLifetimeManager());
+            //UnityContainer.RegisterType<IViewMenuRegion, CustomerMenuView>(ViewNames.ViewName, new ContainerControlledLifetimeManager());
         }
 
         private void DeactivateMenu()
@@ -41,7 +42,7 @@ namespace MainModule
 
             region = RegionManager.Regions[RegionNames.RightPanelName];
             region.Deactivate(region.ActiveViews.FirstOrDefault());
-            region.Activate(UnityContainer.Resolve<IViewRightRegion>(views));
+            //region.Activate(UnityContainer.Resolve<IViewRightRegion>(views));
         }
     }
 }

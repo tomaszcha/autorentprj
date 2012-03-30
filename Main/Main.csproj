@@ -150,6 +150,10 @@
       <Project>{8F2B8F3A-7AB1-4456-8A17-D674E0C9E07D}</Project>
       <Name>ManagerMenu</Name>
     </ProjectReference>
+    <ProjectReference Include="..\MainModule\MainModule.csproj">
+      <Project>{F8E92333-C8C7-4C4E-961C-CBADDB4EE83B}</Project>
+      <Name>MainModule</Name>
+    </ProjectReference>
     <ProjectReference Include="..\ModuleInfrastracture\ModuleInfrastracture.csproj">
       <Project>{8D54AB83-F6C5-49A9-AF1A-313E6C5EC3AE}</Project>
       <Name>ModuleInfrastracture</Name>
