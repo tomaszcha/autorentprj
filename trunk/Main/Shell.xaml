@@ -22,12 +22,17 @@
             </Grid.ColumnDefinitions>
             <ContentControl Grid.Column="0" Grid.Row="1" Grid.ColumnSpan="2" HorizontalAlignment="Stretch"
                        VerticalAlignment="Stretch"
+                       HorizontalContentAlignment="Stretch"
                        prism:RegionManager.RegionName="MenuRegion"/>
             <ContentControl Grid.Column="0" Grid.Row="2" HorizontalAlignment="Stretch"
                        VerticalAlignment="Stretch"
+                       HorizontalContentAlignment="Stretch"
+                       VerticalContentAlignment="Stretch"
                        prism:RegionManager.RegionName="LeftRegion"/>
             <ContentControl Grid.Column="1" Grid.Row="2" HorizontalAlignment="Stretch"
                        VerticalAlignment="Stretch"
+                       HorizontalContentAlignment="Stretch"
+                       VerticalContentAlignment="Stretch"
                        prism:RegionManager.RegionName="RightRegion">            
         </ContentControl>
     </Grid>

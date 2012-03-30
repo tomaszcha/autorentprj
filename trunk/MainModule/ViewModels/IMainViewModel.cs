@@ -11,7 +11,7 @@ using System.Windows.Shapes;
 
 namespace MainModule.ViewModels
 {
-    public class IMainViewModel
+    public interface IMainViewModel
     {
 
     }

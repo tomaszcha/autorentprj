@@ -11,12 +11,13 @@ using System.Windows.Shapes;
 using Microsoft.Practices.Prism.Events;
 using Microsoft.Practices.Prism.Commands;
 using EventInfrastracture;
+using ModuleInfrastracture.ViewModels;
 
 namespace MainModule.ViewModels
 {
-    public class MainViewModel : IMainViewModel
+    public class MainViewModel : ViewModelBase, IMainViewModel
     {
-            #region Constructor
+        #region Constructor
 
         public MainViewModel(IEventAggregator eventAggregator)
         {

@@ -1,5 +1,4 @@
-﻿
-using System.Windows.Controls;
+﻿using System.Windows.Controls;
 using ModuleInfrastracture.Views;
 using GeneralManagerManu.ViewModels;
 using Microsoft.Practices.Unity;

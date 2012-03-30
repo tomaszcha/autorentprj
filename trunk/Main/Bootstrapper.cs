@@ -54,12 +54,13 @@ namespace Main
             //moduleCatalog.AddModule(typeof(DamageClassModule.DamageClassModule));
             //moduleCatalog.AddModule(typeof(DepartmentModule.DepartmentModule));
             //moduleCatalog.AddModule(typeof(CustomerMenuModule.CustomerMenuModule));
-            moduleCatalog.AddModule(typeof(EmployeeModule.EmployeeModule));
-            moduleCatalog.AddModule(typeof(CustomerModule.CustomerModule));
-            moduleCatalog.AddModule(typeof(AutoModule.AutoModule));
-            moduleCatalog.AddModule(typeof(OrderModule.OrderModule));
+            moduleCatalog.AddModule(typeof(MainModule.MainModule));
+            //moduleCatalog.AddModule(typeof(EmployeeModule.EmployeeModule));
+            //moduleCatalog.AddModule(typeof(CustomerModule.CustomerModule));
+            //moduleCatalog.AddModule(typeof(AutoModule.AutoModule));
+            //moduleCatalog.AddModule(typeof(OrderModule.OrderModule));
 
-            moduleCatalog.AddModule(typeof(GeneralManagerManu.ManagerModule));
+            //moduleCatalog.AddModule(typeof(GeneralManagerManu.ManagerModule));
 
         }
 
