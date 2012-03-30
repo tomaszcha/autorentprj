@@ -103,7 +103,9 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <None Include="Properties\DataSources\Main.Web.DomainModel.AutoRentDomainContext.datasource" />
+  </ItemGroup>
   <ItemGroup>
     <WCFMetadata Include="Service References\" />
   </ItemGroup>
