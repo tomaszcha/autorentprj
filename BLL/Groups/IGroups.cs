@@ -6,7 +6,7 @@ using Model;
 
 namespace BLL.Groups
 {
-    public class IGroups
+    public interface IGroups
     {
         public List<Order> GetOrdersByType(int orderType);
         public List<Order> GetOrdersByDepartment(int orderType, Guid departmentId);
