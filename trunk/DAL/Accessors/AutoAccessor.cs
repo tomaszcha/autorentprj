@@ -11,8 +11,7 @@ namespace DAL.Accessors
     {
         #region AutoAccessor members
 
-        /// <summary>
-        /// /// <summary>
+        /// <summary>       
         /// Get list of autos
         /// </summary>          
         /// <returns>List of autos</returns>   
