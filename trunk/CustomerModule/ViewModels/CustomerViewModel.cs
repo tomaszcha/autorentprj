@@ -32,7 +32,7 @@ namespace CustomerModule.ViewModels
         {
             _eventAggregator = eventAggregator;
             _eventAggregator.GetEvent<CustomerSelect>().Subscribe(onCustomerSelect);
-            _eventAggregator.GetEvent<MenuEmployeeEvent>().Subscribe(onEventTypeChange);
+            _eventAggregator.GetEvent<MenuDictinaryEvent>().Subscribe(onEventTypeChange);
 
         }
 
@@ -42,8 +42,8 @@ namespace CustomerModule.ViewModels
 
             if (customer.Id == Guid.Empty)
             {
-                _eventAggregator.GetEvent<CustomerSelect>().Subscribe(onCustomerSelect);               
-                _eventAggregator.GetEvent<MenuEmployeeEvent>().Subscribe(onEventTypeChange);
+                _eventAggregator.GetEvent<CustomerSelect>().Subscribe(onCustomerSelect);
+                _eventAggregator.GetEvent<MenuDictinaryEvent>().Subscribe(onEventTypeChange);
                 EventType = CommandsTypes.Edit;
             }
 
@@ -383,6 +383,8 @@ namespace CustomerModule.ViewModels
 
         public void onCustomerSelect(CustomerViewModel customer)
         {
+            if (customer == null) return;
+
             _customer = customer;
 
             if (EventType == CommandsTypes.Edit || customer.Id == Guid.Empty)

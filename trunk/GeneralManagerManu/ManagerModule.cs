@@ -18,6 +18,7 @@ using EventInfrastracture;
 using ModuleInfrastracture.ViewModels;
 using GeneralManagerManu.ViewModels;
 using Microsoft.Practices.Prism.Modularity;
+using System.Linq;
 
 namespace GeneralManagerManu
 {
@@ -39,9 +40,11 @@ namespace GeneralManagerManu
         public void onRegionNeedChangeEvent(string views)
         {
             IRegion region = RegionManager.Regions[RegionNames.RightPanelName];
+            region.Deactivate(region.ActiveViews.FirstOrDefault());
             region.Activate(UnityContainer.Resolve<IViewRightRegion>(views));
 
             region = RegionManager.Regions[RegionNames.LeftPanelName];
+            region.Deactivate(region.ActiveViews.FirstOrDefault());
             region.Activate(UnityContainer.Resolve<IViewLeftRegion>(views));
         }
     }

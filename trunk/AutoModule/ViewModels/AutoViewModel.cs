@@ -33,7 +33,7 @@ namespace AutoModule.ViewModels
         {
             _eventAggregator = eventAggregator;
             _eventAggregator.GetEvent<AutoSelect>().Subscribe(onAutoSelect);
-            _eventAggregator.GetEvent<MenuEmployeeEvent>().Subscribe(onEventTypeChange);
+            _eventAggregator.GetEvent<MenuDictinaryEvent>().Subscribe(onEventTypeChange);
 
         }
 
@@ -43,8 +43,8 @@ namespace AutoModule.ViewModels
 
             if (String.IsNullOrEmpty(auto.Number))
             {
-                _eventAggregator.GetEvent<AutoSelect>().Subscribe(onAutoSelect);               
-                _eventAggregator.GetEvent<MenuEmployeeEvent>().Subscribe(onEventTypeChange);
+                _eventAggregator.GetEvent<AutoSelect>().Subscribe(onAutoSelect);
+                _eventAggregator.GetEvent<MenuDictinaryEvent>().Subscribe(onEventTypeChange);
                 EventType = CommandsTypes.Edit;
             }
 
@@ -463,6 +463,7 @@ namespace AutoModule.ViewModels
         public void onAutoSelect(AutoViewModel auto)
         {
             if (auto == null) return;
+
             _auto = auto;
 
             if (EventType == CommandsTypes.Edit || String.IsNullOrEmpty(auto.Number))

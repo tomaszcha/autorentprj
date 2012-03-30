@@ -2,7 +2,7 @@
 
 namespace EventInfrastracture
 {
-    public class MenuEmployeeEvent : CompositePresentationEvent<string>
+    public class MenuClientEvent : CompositePresentationEvent<string>
     {
 
     }
