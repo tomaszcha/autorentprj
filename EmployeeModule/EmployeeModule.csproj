@@ -87,6 +87,7 @@
     <Compile Include="ViewModels\EmployeeViewModel.cs" />
     <Compile Include="ViewModels\IEmployeeListViewModel.cs" />
     <Compile Include="ViewModels\IEmployeeViewModel.cs" />
+    <Compile Include="ViewNames.cs" />
     <Compile Include="Views\EmployeesListView.xaml.cs">
       <DependentUpon>EmployeesListView.xaml</DependentUpon>
     </Compile>

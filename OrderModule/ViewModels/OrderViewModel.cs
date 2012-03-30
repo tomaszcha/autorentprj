@@ -17,6 +17,7 @@ using CommandsInfrastracture;
 using EventInfrastracture;
 using Microsoft.Practices.Prism.Commands;
 using ModuleInfrastracture.ViewModels;
+using EventInfrastracture;
 
 namespace OrderModule.ViewModels
 {
@@ -32,7 +33,7 @@ namespace OrderModule.ViewModels
         {
             _eventAggregator = eventAggregator;
             _eventAggregator.GetEvent<OrderSelect>().Subscribe(onOrderSelect);
-            _eventAggregator.GetEvent<MenuEmployeeEvent>().Subscribe(onEventTypeChange);
+            _eventAggregator.GetEvent<MenuDictinaryEvent>().Subscribe(onEventTypeChange);
         }
 
         public OrderViewModel(Order order, IEventAggregator eventAggregator)
@@ -42,7 +43,7 @@ namespace OrderModule.ViewModels
             if (order.Number == 0)
             {
                 _eventAggregator.GetEvent<OrderSelect>().Subscribe(onOrderSelect);
-                _eventAggregator.GetEvent<MenuEmployeeEvent>().Subscribe(onEventTypeChange);
+                _eventAggregator.GetEvent<MenuDictinaryEvent>().Subscribe(onEventTypeChange);
                 EventType = CommandsTypes.Edit;
             }
 
@@ -326,6 +327,7 @@ namespace OrderModule.ViewModels
 
         public void onOrderSelect(OrderViewModel order)
         {
+            if (order == null) return;
             _order = order;
             if (EventType == CommandsTypes.Edit || order.Number == 0)
             {

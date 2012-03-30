@@ -58,7 +58,8 @@
     <Reference Include="System.Windows.Browser" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="MenuEmployeeEvent.cs" />
+    <Compile Include="MenuClientEvent.cs" />
+    <Compile Include="MenuDictionaryEvent.cs" />
     <Compile Include="MenuEvent.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

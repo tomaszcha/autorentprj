@@ -34,7 +34,7 @@ namespace EmployeeModule.ViewModels
         {
             _eventAggregator = eventAggregator;
             _eventAggregator.GetEvent<EmployeeSelect>().Subscribe(onEmployeeSelect);
-            _eventAggregator.GetEvent<MenuEmployeeEvent>().Subscribe(onEventTypeChange);
+            _eventAggregator.GetEvent<MenuDictinaryEvent>().Subscribe(onEventTypeChange);
         }
 
         public EmployeeViewModel(Employee employee, IEventAggregator eventAggregator)
@@ -44,7 +44,7 @@ namespace EmployeeModule.ViewModels
             if (employee.Id == Guid.Empty)
             {
                 _eventAggregator.GetEvent<EmployeeSelect>().Subscribe(onEmployeeSelect);
-                _eventAggregator.GetEvent<MenuEmployeeEvent>().Subscribe(onEventTypeChange);
+                _eventAggregator.GetEvent<MenuDictinaryEvent>().Subscribe(onEventTypeChange);
                 EventType = CommandsTypes.Edit;
             }
 
@@ -482,6 +482,7 @@ namespace EmployeeModule.ViewModels
 
         public void onEmployeeSelect(EmployeeViewModel employee)
         {
+            if (employee == null) return;
             _employee = employee;
             if (EventType == CommandsTypes.Edit || employee.Id == Guid.Empty)
             {

@@ -64,7 +64,7 @@ namespace GeneralManagerManu.ViewModels
 
         private void MenuActionExecute(string typeName)
         {
-            _eventAggregator.GetEvent<MenuEmployeeEvent>().Publish(typeName);
+            _eventAggregator.GetEvent<MenuDictinaryEvent>().Publish(typeName);
         }
 
         void MenuViewExecute(string view)

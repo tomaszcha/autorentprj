@@ -25,23 +25,18 @@ namespace EmployeeModule
     {
         protected override void RegisterViewsInRegions()
         {
-            RegionManager.RegisterViewWithRegion(RegionNames.LeftPanelName, () => UnityContainer.Resolve<IViewLeftRegion>("EmployeeView"));
-            RegionManager.RegisterViewWithRegion(RegionNames.RightPanelName, () => UnityContainer.Resolve<IViewRightRegion>("EmployeeView"));
+            RegionManager.RegisterViewWithRegion(RegionNames.LeftPanelName, () => UnityContainer.Resolve<IViewLeftRegion>(ViewNames.ViewName));
+            RegionManager.RegisterViewWithRegion(RegionNames.RightPanelName, () => UnityContainer.Resolve<IViewRightRegion>(ViewNames.ViewName));
         }
 
         protected override void RegisterTypesDependencies()
         {
             UnityContainer.RegisterType<IEmployeeViewModel, EmployeeViewModel>();
-            UnityContainer.RegisterType<IViewLeftRegion, EmployeeView>("EmployeeView", new ContainerControlledLifetimeManager());
+            UnityContainer.RegisterType<IViewLeftRegion, EmployeeView>(ViewNames.ViewName, new ContainerControlledLifetimeManager());
 
             UnityContainer.RegisterType<IEmployeeListViewModel, EmployeesListViewModel>();
-            UnityContainer.RegisterType<IViewRightRegion, EmployeesListView>("EmployeeView", new ContainerControlledLifetimeManager());
+            UnityContainer.RegisterType<IViewRightRegion, EmployeesListView>(ViewNames.ViewName, new ContainerControlledLifetimeManager());
         
-        }
-
-        public void onEmployeeSelect(ViewModelBase viewModel)
-        {
-             
         }
 
     }
