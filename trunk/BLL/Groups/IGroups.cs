@@ -34,10 +34,10 @@ namespace BLL.Groups
 
         void CreateAuto(Auto auto);
         void UpdateAuto(Auto auto);
-        void RemoveAuto(string autoNumber);
+        void RemoveAuto(string number);
 
-        Auto GetAutoByNumber(string autoNumber);
-        Auto GetAutoByOrderNumber(int orderNumber);
+        Auto GetAutoByNumber(string number);
+        Auto GetAutoByOrderNumber(int number);
 
         #endregion
 
@@ -53,9 +53,9 @@ namespace BLL.Groups
 
         #region Damages
 
-        List<Damages> GetDamages();        
-        List<Damages> GetDamagesByRevision(int id);
-        Damages GetDamagesById(int revisionId);
+        List<Damages> GetDamages();
+        List<Damages> GetDamagesByRevisionId(int revisionId);
+        Damages GetDamagesById(int id);
 
         void CreateDamages(Damages damages);
         void UpdateDamages(Damages damages);
@@ -71,6 +71,18 @@ namespace BLL.Groups
         Guid CreateDepartment(Department department);
         void UpdateDepartment(Department department);
         void RemoveDepartment(Guid guid);
+
+        #endregion
+
+        #region Customer
+
+        Customer GetCustomerById(Guid id);
+
+        #endregion
+
+        #region Customer
+
+        Employee GetEmployeeById(Guid id);
 
         #endregion
     }
