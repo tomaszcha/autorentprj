@@ -8,17 +8,19 @@ namespace BLL.Groups
 {
     public interface IGroups
     {
-        public List<Order> GetOrdersByType(int orderType);
-        public List<Order> GetOrdersByDepartment(int orderType, Guid departmentId);
+        List<Order> GetOrdersByType(int orderType);
+        List<Order> GetOrdersByDepartment(int orderType, Guid departmentId);
 
-        public List<Order> GetrOdersByCustomerId(int orderType, Guid customerId);
-        public List<Order> GetOrdersByAutoNumber(int orderType, string autoNumber);        
+        List<Order> GetrOdersByCustomerId(int orderType, Guid customerId);
+        List<Order> GetOrdersByAutoNumber(int orderType, string autoNumber);        
 
-        public Order GetLastOrderByCustomerId(int orderType, Guid customerId);
-        public Order GetLastOrderByAutoNumber(int orderType, string autoNumber);
+        Order GetLastOrderByCustomerId(int orderType, Guid customerId);
+        Order GetLastOrderByAutoNumber(int orderType, string autoNumber);
                 
-        public void CreateOrder(Order order);
-        public void UpdateOrder(Order order);
-        public void RemoveOrder(int number);
+        void CreateOrder(Order order);
+        void UpdateOrder(Order order);
+        void RemoveOrder(int number);
+
+
     }
 }
