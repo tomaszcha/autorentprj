@@ -46,8 +46,8 @@
                 <viblendRibbonBar:RibbonGroup Text="Action" Padding="40,0,40,0">
                     <StackPanel Orientation="Horizontal">
                         <viblendRibbonBar:RibbonButtonGroup>
-                            <editors:Button viblendRibbonBar:ScreenTip.Title="Add new rental order." Text="Add new order" Style="{StaticResource SButton}"/>
-                            <editors:Button viblendRibbonBar:ScreenTip.Title="Extend rental order." Text="Extend rental order" Style="{StaticResource SButton}"/>
+                            <editors:Button viblendRibbonBar:ScreenTip.Title="Add new rental order." Text="Add new order" Style="{StaticResource SButton}"  Command="{Binding MenuActionCommand}" CommandParameter="New"/>
+                            <editors:Button viblendRibbonBar:ScreenTip.Title="Extend rental order." Text="Extend rental order" Style="{StaticResource SButton}" Command="{Binding MenuActionCommand}" CommandParameter="Edit"/>
                             <editors:Button viblendRibbonBar:ScreenTip.Title="Reject rental order." Text="Reject rental order" Style="{StaticResource SButton}"/>
                         </viblendRibbonBar:RibbonButtonGroup>
                     </StackPanel>
