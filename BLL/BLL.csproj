@@ -40,14 +40,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Administration\HRAdmin.cs" />
-    <Compile Include="Administration\Interfaces\IHRAdmin.cs" />
-    <Compile Include="Administration\Interfaces\IPermissionAccess.cs" />
-    <Compile Include="Administration\Interfaces\IPermissionAdmin.cs" />
-    <Compile Include="Administration\PermissionAccess.cs" />
-    <Compile Include="Administration\PermissionAdmin.cs" />
+    <Compile Include="HRAdmin\HRAdmin.cs" />
+    <Compile Include="HRAdmin\IHRAdmin.cs" />
+    <Compile Include="Ticket\ITicketAdmin.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Tickets\ITicketAdmin.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Model\Model.csproj">

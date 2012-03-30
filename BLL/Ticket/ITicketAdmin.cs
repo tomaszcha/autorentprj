@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using Model;
 
-namespace BLL.Tickets
+namespace BLL
 {
     public interface ITicketAdmin
     {
