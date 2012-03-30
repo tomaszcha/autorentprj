@@ -40,5 +40,38 @@ namespace BLL.Groups
         Auto GetAutoByOrderNumber(int orderNumber);
 
         #endregion
+
+        #region  DamageClass
+        
+        List<DamageClass> GetDamageClasss();
+
+        void CreateDamageClass(DamageClass damageClass);
+        void UpdateDamageClass(DamageClass damageClass);
+        void RemoveDamageClass(int clss);
+
+        #endregion
+
+        #region Damages
+
+        List<Damages> GetDamages();        
+        List<Damages> GetDamagesByRevision(int id);
+        Damages GetDamagesById(int revisionId);
+
+        void CreateDamages(Damages damages);
+        void UpdateDamages(Damages damages);
+        void RemoveDamages(int id);
+       
+        #endregion
+
+        #region Department
+        
+        List<Department> GetDepartments();
+        Department GetDepartmentById(Guid id);
+
+        Guid CreateDepartment(Department department);
+        void UpdateDepartment(Department department);
+        void RemoveDepartment(Guid guid);
+
+        #endregion
     }
 }
