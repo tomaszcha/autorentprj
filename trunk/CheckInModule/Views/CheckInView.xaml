@@ -5,7 +5,7 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     xmlns:sdk="http://schemas.microsoft.com/winfx/2006/xaml/presentation/sdk"
     mc:Ignorable="d"
-    d:DesignHeight="350" d:DesignWidth="400">
+    d:DesignHeight="370" d:DesignWidth="400">
     <UserControl.Resources>
         <Style x:Key="LblTitleStyle" TargetType="sdk:Label">
             <Setter Property="FontWeight" Value="Bold"/>
@@ -34,6 +34,10 @@
         <StackPanel Orientation="Vertical" HorizontalAlignment="Center">
             <StackPanel Style="{StaticResource StackPnlStyle}">
                 <sdk:Label Content="CheckIn" Style="{StaticResource LblTitleStyle}"/>
+            </StackPanel>
+            <StackPanel Style="{StaticResource StackPnlStyle}">
+                <sdk:Label Content="Order #" Style="{StaticResource LblFieldStyle}"/>
+                <TextBox Text="{Binding OrderNumber}" Style="{StaticResource TextBoxStyle}"/>
             </StackPanel>
             <StackPanel Style="{StaticResource StackPnlStyle}">
                 <sdk:Label Content="Auto number" Style="{StaticResource LblFieldStyle}"/>
