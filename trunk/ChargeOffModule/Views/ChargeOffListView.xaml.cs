@@ -8,25 +8,25 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Animation;
-using ModuleInfrastracture.Views;
 using System.Windows.Shapes;
+using ModuleInfrastracture.Views;
 using Microsoft.Practices.Unity;
 using ChargeOffModule.ViewModels;
 
 namespace ChargeOffModule.Views
 {
-    public partial class ChargeOffView : UserControl, IViewLeftRegion
+    public partial class ChargeOffListView : UserControl, IViewRightRegion
     {
-        public ChargeOffView()
+        public ChargeOffListView()
         {
             InitializeComponent();
         }
 
         [Dependency]
-        public IChargeOffViewModel ViewModel
+        public IChargeOffListViewModel ViewModel
         {
-            get { return DataContext as IChargeOffViewModel; }
+            get { return DataContext as IChargeOffListViewModel; }
             set { DataContext = value; }
-        }   
+        }
     }
 }
