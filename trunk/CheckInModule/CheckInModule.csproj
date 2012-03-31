@@ -63,6 +63,7 @@
     <Reference Include="System.Windows" />
     <Reference Include="system" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Windows.Controls.Data, Version=2.0.5.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
     <Reference Include="System.Windows.Controls.Data.Input, Version=2.0.5.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35" />
     <Reference Include="System.Xml" />
     <Reference Include="System.Net" />
@@ -101,6 +102,10 @@
     <ProjectReference Include="..\EventInfrastracture\EventInfrastracture.csproj">
       <Project>{77545971-825D-4FE2-B75D-F289D9728E0A}</Project>
       <Name>EventInfrastracture</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\MockModel\MockModel.csproj">
+      <Project>{5918D59C-871A-434C-AF9B-D82F1DACD5A8}</Project>
+      <Name>MockModel</Name>
     </ProjectReference>
     <ProjectReference Include="..\ModuleInfrastracture\ModuleInfrastracture.csproj">
       <Project>{8D54AB83-F6C5-49A9-AF1A-313E6C5EC3AE}</Project>
