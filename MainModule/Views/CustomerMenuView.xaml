@@ -37,8 +37,8 @@
                         <Ellipse Width="150" Height="60" VerticalAlignment="Top" x:Name="ElElement" Margin="5,0,5,0">
                             <Ellipse.Fill>
                                 <RadialGradientBrush GradientOrigin=".12,.2">
-                                    <GradientStop Offset="-0.3" Color="Transparent"/>
-                                    <GradientStop Offset="1" Color="LightGray"/>
+                                    <GradientStop Offset="-0.3" Color="White"/>
+                                    <GradientStop Offset="1" Color="LightSteelBlue"/>
                                 </RadialGradientBrush>
                             </Ellipse.Fill>
                         </Ellipse>
@@ -53,7 +53,7 @@
         </Setter>
     </Style>
     </UserControl.Resources>
-    <Grid x:Name="LayoutRoot" Background="White">
+    <Grid x:Name="LayoutRoot" Background="LightGray">
         <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
         <Button Style="{StaticResource RoundButton}">
             <Button.Content>

@@ -51,7 +51,7 @@
             </StackPanel>
             <StackPanel Style="{StaticResource StackPnlStyle}">
                 <sdk:Label Content="Login" Style="{StaticResource LblFieldStyle}"/>
-                <TextBox Name="txtBoxLogin" Text="{Binding Login}" Style="{StaticResource TextBoxStyle}"/>
+                <TextBox Name="txtBoxLogin" Text="{Binding Login, ValidatesOnDataErrors=True, Mode=TwoWay}" Style="{StaticResource TextBoxStyle}"/>
             </StackPanel>
             <StackPanel Style="{StaticResource StackPnlStyle}">
                 <sdk:Label Content="Password" Style="{StaticResource LblFieldStyle}"/>

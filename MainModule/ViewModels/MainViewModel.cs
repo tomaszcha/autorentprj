@@ -10,6 +10,7 @@ using Microsoft.Practices.Prism.Commands;
 using EventInfrastracture;
 using System.Windows.Input;
 using MainModule.Views;
+using MainModule.Events;
 
 namespace MainModule.ViewModels
 {
@@ -62,7 +63,9 @@ namespace MainModule.ViewModels
 
         private void MenuExecute(string typeName)
         {
-            _eventAggregator.GetEvent<MenuEvent>().Publish(typeName);
+            _eventAggregator.GetEvent<ActivateCustomerView>().Publish(typeName);
+            //_eventAggregator.GetEvent<MenuActivateEvent>().Publish("CustomerMenuView");
+            //_eventAggregator.GetEvent<RightRegionActivateEvent>().Publish(typeName);
         }
 
         private void AuthorizeExecute()
@@ -71,7 +74,19 @@ namespace MainModule.ViewModels
             AuthorizeView view = new AuthorizeView();
             view.ViewModel = vm;
             view.Show();
-            
+            view.Closed += (s, eargs) =>
+                {
+                    if (view.DialogResult != null)
+                        if (view.DialogResult == true)
+                        {
+                            if (view.ViewModel.Position == "Manager")
+                            {
+                                _eventAggregator.GetEvent<MenuActivateEvent>().Publish("ManagerMenu");
+                                //_eventAggregator.
+                            }
+                        }
+                };
+
         }
 
         #endregion Helpers

@@ -28,8 +28,8 @@ namespace MainModule.Views
 
         private void OKButton_Click(object sender, RoutedEventArgs e)
         {
-            if (!String.IsNullOrEmpty(ViewModel.Position))
-                this.DialogResult = true;
+            //if (!String.IsNullOrEmpty(ViewModel.Position))
+            //    this.DialogResult = true;
         }
 
         private void CancelButton_Click(object sender, RoutedEventArgs e)
