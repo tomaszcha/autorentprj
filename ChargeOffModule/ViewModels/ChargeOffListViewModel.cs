@@ -8,10 +8,18 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Animation;
 using System.Windows.Shapes;
+using ModuleInfrastracture.ViewModels;
+using System.Collections.ObjectModel;
+using Microsoft.Practices.Prism.Commands;
+using MockModel;
+using System.Collections.Generic;
+using System.Linq;
+using Microsoft.Practices.Prism.Events;
+using ChargeOffModule.Events;
 
 namespace ChargeOffModule.ViewModels
 {
-    public class ChargeOffListViewModel
+    public class ChargeOffListViewModel : ViewModelBase, IChargeOffListViewModel
     {
 
     }
