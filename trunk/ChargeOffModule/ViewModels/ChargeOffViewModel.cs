@@ -23,5 +23,14 @@ namespace ChargeOffModule.ViewModels
     public class ChargeOffViewModel : ViewModelBase, IChargeOffViewModel, IDataErrorInfo
     {
 
+        public string Error
+        {
+            get { throw new NotImplementedException(); }
+        }
+
+        public string this[string columnName]
+        {
+            get { throw new NotImplementedException(); }
+        }
     }
 }
