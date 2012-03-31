@@ -27,6 +27,11 @@ namespace ChargeOffModule.Views
         {
             get { return DataContext as IChargeOffViewModel; }
             set { DataContext = value; }
+        }
+
+        private void UserControl_Loaded(object sender, RoutedEventArgs e)
+        {
+
         }   
     }
 }
