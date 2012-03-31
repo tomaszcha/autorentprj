@@ -4,7 +4,7 @@
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d"
-    d:DesignHeight="410" d:DesignWidth="400">
+    d:DesignHeight="410" d:DesignWidth="400" Loaded="UserControl_Loaded">
     <UserControl.Resources>
         <Style x:Key="LblTitleStyle" TargetType="sdk:Label">
             <Setter Property="FontWeight" Value="Bold"/>
