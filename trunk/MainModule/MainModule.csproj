@@ -47,10 +47,10 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Microsoft.Practices.Prism">
-      <HintPath>..\..\AutoRentApp(1)\Libraries\Prism\Silverlight\Microsoft.Practices.Prism.dll</HintPath>
+      <HintPath>..\Libraries\Prism\Silverlight\Microsoft.Practices.Prism.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.Practices.Unity.Silverlight">
-      <HintPath>..\..\AutoRentApp(1)\Libraries\Prism\Silverlight\Microsoft.Practices.Unity.Silverlight.dll</HintPath>
+      <HintPath>..\Libraries\Prism\Silverlight\Microsoft.Practices.Unity.Silverlight.dll</HintPath>
     </Reference>
     <Reference Include="mscorlib" />
     <Reference Include="System.ComponentModel.DataAnnotations, Version=2.0.5.0, Culture=neutral, PublicKeyToken=ddd0da4d3e678217" />
