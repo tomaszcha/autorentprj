@@ -7,6 +7,7 @@ using Microsoft.Practices.Unity;
 using EventInfrastracture;
 using System.Linq;
 using MainModule.ViewModels;
+using MainModule.Events;
 
 namespace MainModule
 {
@@ -14,18 +15,20 @@ namespace MainModule
     {
         protected override void RegisterViewsInRegions()
         {
-            RegionManager.RegisterViewWithRegion(RegionNames.MenuPanelName, () => UnityContainer.Resolve<IViewMenuRegion>(ViewNames.ViewName));
+            RegionManager.RegisterViewWithRegion(RegionNames.MenuPanelName, () => UnityContainer.Resolve<IViewMenuRegion>(MenuNames.Customer));
             RegionManager.RegisterViewWithRegion(RegionNames.RightPanelName, () => UnityContainer.Resolve<IViewRightRegion>(ViewNames.ViewName));
             
             DeactivateMenu();
 
-            EventAggregator.GetEvent<MenuEvent>().Subscribe(onRegionNeedChangeEvent);
+            EventAggregator.GetEvent<ActivateCustomerView>().Subscribe(onActivateCustomerEvent);
+            EventAggregator.GetEvent<ActivateManagerViews>().Subscribe(onActivateManagerEvent);
+
         }
 
         protected override void RegisterTypesDependencies()
         {
             UnityContainer.RegisterType<IMainViewModel, MainViewModel>();
-            UnityContainer.RegisterType<IViewMenuRegion, CustomerMenuView>(ViewNames.ViewName, new ContainerControlledLifetimeManager());
+            UnityContainer.RegisterType<IViewMenuRegion, CustomerMenuView>(MenuNames.Customer, new ContainerControlledLifetimeManager());
             UnityContainer.RegisterType<IViewRightRegion, MainPageView>(ViewNames.ViewName, new ContainerControlledLifetimeManager());
 
         }
@@ -33,17 +36,25 @@ namespace MainModule
         private void DeactivateMenu()
         {
             IRegion region = RegionManager.Regions[RegionNames.MenuPanelName];
-            region.Deactivate(UnityContainer.Resolve<IViewMenuRegion>(ViewNames.ViewName));
+            region.Deactivate(UnityContainer.Resolve<IViewMenuRegion>(MenuNames.Customer));
         }
 
-        public void onRegionNeedChangeEvent(string views)
+        public void onActivateCustomerEvent(string views)
         {        
-            IRegion region = RegionManager.Regions[RegionNames.MenuPanelName];
-            region.Activate(UnityContainer.Resolve<IViewMenuRegion>(ViewNames.ViewName));
-
-            region = RegionManager.Regions[RegionNames.RightPanelName];
-            region.Deactivate(region.ActiveViews.FirstOrDefault());
+            IRegion region = RegionManager.Regions[RegionNames.RightPanelName];
             //region.Activate(UnityContainer.Resolve<IViewRightRegion>(views));
+
+            region = RegionManager.Regions[RegionNames.MenuPanelName];
+            region.Activate(UnityContainer.Resolve<IViewMenuRegion>(MenuNames.Customer));
+            
+        }
+        public void onActivateManagerEvent(string views)
+        {
+            IRegion region = RegionManager.Regions[RegionNames.RightPanelName];
+            region.Activate(UnityContainer.Resolve<IViewMenuRegion>(views));
+
+            //region = RegionManager.Regions[RegionNames.MenuPanelName];
+            //region.Activate(UnityContainer.Resolve<IViewMenuRegion>(MenuNames.Manager));
         }
     }
 }

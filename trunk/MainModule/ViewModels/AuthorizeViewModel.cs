@@ -115,6 +115,7 @@ namespace MainModule.ViewModels
         private void AuthorizeExecute(string pessword)
         {
             Position = "Manager";
+            Application.Current.MainWindow.Close();
         }
 
         #endregion Helpers
