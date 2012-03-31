@@ -58,10 +58,12 @@
     <Reference Include="System.Windows.Browser" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="MenuActivateEvent.cs" />
     <Compile Include="MenuClientEvent.cs" />
     <Compile Include="MenuDictionaryEvent.cs" />
     <Compile Include="MenuEvent.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RightRegionActivateEvent.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\ModuleInfrastracture\ModuleInfrastracture.csproj">
