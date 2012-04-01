@@ -62,17 +62,17 @@
                                         </Grid.RowDefinitions>
 
                                         <StackPanel Orientation="Horizontal" Grid.Column="0" Grid.Row="1">
-                                            <TextBlock Text="Insuarance: " FontSize="12" />
-                                            <TextBlock Text="{Binding InsuaranceNumber}" FontSize="12" />
-                                            <TextBlock Text=", Colore: " FontSize="12" />
+                                            <TextBlock Text="Insurance: " FontSize="12" />
+                                            <TextBlock Text="{Binding InsuranceNumber}" FontSize="12" />
+                                            <TextBlock Text=", Color: " FontSize="12" />
                                             <TextBlock Text="{Binding ColorGroup}" FontSize="12" />
                                             <TextBlock Text=", Year: " FontSize="12" />
                                             <TextBlock Text="{Binding Year}" FontSize="12" />
                                         </StackPanel>
                                         <StackPanel Orientation="Horizontal" Grid.Column="0" Grid.Row="0">
-                                            <TextBlock Text="DayRate: " FontSize="12" />
+                                            <TextBlock Text="Day rate: " FontSize="12" />
                                             <TextBlock Text="{Binding DayRate}" FontSize="12" />
-                                            <TextBlock Text="KmRate: " FontSize="12" />
+                                            <TextBlock Text="Km rate: " FontSize="12" />
                                             <TextBlock Text="{Binding KmRate}" FontSize="12" />
                                         </StackPanel>
                                     </Grid>
