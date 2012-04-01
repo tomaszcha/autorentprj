@@ -9,14 +9,24 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Animation;
 using System.Windows.Shapes;
+using ModuleInfrastracture.Views;
+using Microsoft.Practices.Unity;
+using AutoParkListModule.ViewModels;
 
 namespace AutoParkListModule.Views
 {
-    public partial class AutoParkListView : UserControl
+    public partial class AutoParkListView : UserControl, IViewRightRegion
     {
         public AutoParkListView()
         {
             InitializeComponent();
+        }
+
+        [Dependency]
+        public IAutoParkListViewModel ViewModel
+        {
+            get { return DataContext as IAutoParkListViewModel; }
+            set { DataContext = value; }
         }
     }
 }
