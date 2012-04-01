@@ -51,7 +51,7 @@ namespace AutoModule.ViewModels
             _number = auto.Number;
             _modelName = auto.ModelName;
             _bodyType = auto.BodyType;
-            _insuaranceNumber = auto.InsuaranceNumber;
+            _insuranceNumber = auto.InsuaranceNumber;
             _class = auto.Class;
             _year = auto.Year;
             _mileage = auto.Mileage;
@@ -70,7 +70,7 @@ namespace AutoModule.ViewModels
         string _number;
         string _modelName;
         int _bodyType;
-        string _insuaranceNumber;
+        string _insuranceNumber;
         short _class;
         short _year;
         short _mileage;
@@ -137,13 +137,13 @@ namespace AutoModule.ViewModels
         /// <summary>
         /// Insuarance number of the auto
         /// </summary>
-        public string InsuaranceNumber
+        public string InsuranceNumber
         {
-            get { return _insuaranceNumber; }
+            get { return _insuranceNumber; }
             set
             {
-                _insuaranceNumber = value;
-                OnPropertyChanged("InsuaranceNumber");
+                _insuranceNumber = value;
+                OnPropertyChanged("InsuranceNumber");
             }
         }
 
@@ -371,11 +371,11 @@ namespace AutoModule.ViewModels
         private string ValidateInsuaranceNumber()
         {
             string res = String.Empty;
-            if (string.IsNullOrEmpty(_insuaranceNumber))
+            if (string.IsNullOrEmpty(_insuranceNumber))
             {
                 res = Properties.Resources.EmptyField;
             }
-            else if (_insuaranceNumber.Length > 24)
+            else if (_insuranceNumber.Length > 24)
             {
                 res = Properties.Resources.LongString;
             }
@@ -471,7 +471,7 @@ namespace AutoModule.ViewModels
                 Number = auto.Number;
                 ModelName = auto.ModelName;
                 BodyType = auto.BodyType;
-                InsuaranceNumber = auto.InsuaranceNumber;
+                InsuranceNumber = auto.InsuranceNumber;
                 Class  = auto.Class;
                 Year = auto.Year;
                 Mileage = auto.Mileage;
