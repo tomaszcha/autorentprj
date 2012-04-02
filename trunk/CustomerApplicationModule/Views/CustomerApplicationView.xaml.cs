@@ -9,21 +9,24 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Animation;
 using System.Windows.Shapes;
-using System.Windows.Navigation;
+using ModuleInfrastracture.Views;
+using Microsoft.Practices.Unity;
+using CustomerApplicationModule.ViewModels;
 
 namespace CustomerApplicationModule.Views
 {
-    public partial class CustomerApplicationView : Page
+    public partial class CustomerApplicationView : UserControl, IViewLeftRegion
     {
         public CustomerApplicationView()
         {
             InitializeComponent();
         }
 
-        // Executes when the user navigates to this page.
-        protected override void OnNavigatedTo(NavigationEventArgs e)
+        [Dependency]
+        public ICustomerApplicationViewModel ViewModel
         {
+            get { return DataContext as ICustomerApplicationViewModel; }
+            set { DataContext = value; }
         }
-
     }
 }
