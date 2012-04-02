@@ -62,8 +62,8 @@
                 <TextBox Name="txtBoxPhone" Text="{Binding Phone}" Style="{StaticResource TextBoxStyle}"/>
             </StackPanel>
             <StackPanel Style="{StaticResource StackPnlStyle}">
-                <sdk:Label Content="Insuarance number" Style="{StaticResource LblFieldStyle}"/>
-                <TextBox Name="txtBoxInsNumber" Text="{Binding InsuaranceNumber}" Style="{StaticResource TextBoxStyle}"/>
+                <sdk:Label Content="Insurance number" Style="{StaticResource LblFieldStyle}"/>
+                <TextBox Name="txtBoxInsNumber" Text="{Binding InsuranceNumber}" Style="{StaticResource TextBoxStyle}"/>
             </StackPanel>
             <StackPanel Style="{StaticResource StackPnlStyle}">
                 <sdk:Label Content="Licence number" Style="{StaticResource LblFieldStyle}"/>
