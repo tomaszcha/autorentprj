@@ -51,7 +51,7 @@ namespace AutoModule.ViewModels
             _number = auto.Number;
             _modelName = auto.ModelName;
             _bodyType = auto.BodyType;
-            _insuranceNumber = auto.InsuaranceNumber;
+            _insuranceNumber = auto.InsuranceNumber;
             _class = auto.Class;
             _year = auto.Year;
             _mileage = auto.Mileage;
