@@ -42,8 +42,6 @@
                                     </Border.RenderTransform>
                                 </Border>
                                 
-                                
-                                
                                 <StackPanel x:Name="ClientDataPanel" Orientation="Vertical" Margin="2,2,2,2">
                                     <StackPanel.RenderTransform>
                                         <TransformGroup>
