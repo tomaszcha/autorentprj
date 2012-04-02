@@ -34,7 +34,7 @@ namespace MainModule.ViewModels
         public string Login
         {
             get { return _login; }
-            private set
+            set
             {
                 _login = value;
                 OnPropertyChanged("Login");
