@@ -18,7 +18,7 @@ namespace MockModel
         string _number;
         string _modelName;
         int _bodyType;
-        string _insuaranceNumber;
+        string _insuranceNumber;
         short _class;
         short _year;
         short _mileage;
@@ -75,12 +75,12 @@ namespace MockModel
         /// <summary>
         /// Insuarance number of the auto
         /// </summary>
-        public string InsuaranceNumber
+        public string InsuranceNumber
         {
-            get { return _insuaranceNumber; }
+            get { return _insuranceNumber; }
             set
             {
-                _insuaranceNumber = value;
+                _insuranceNumber = value;
             }
         }
 
