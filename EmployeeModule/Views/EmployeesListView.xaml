@@ -12,7 +12,7 @@
             <Setter Property="Foreground" Value="#FF000000" />
             <Setter Property="Template">
                 <Setter.Value>
-                    <ControlTemplate TargetType="Button">
+                    <ControlTemplate TargetType="ListBoxItem">
                         <Grid x:Name="RootElement" Height="54">
                             <vsm:VisualStateManager.VisualStateGroups>
                                 <vsm:VisualStateGroup x:Name="SelectionStates">

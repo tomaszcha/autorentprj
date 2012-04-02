@@ -332,9 +332,9 @@ namespace EmployeeModule.ViewModels
                     case "FireDate":
                         error = ValidateFireDate();
                         break;
-                    default:
-                        error = (this as IDataErrorInfo)[columnName];
-                        break;
+                    //default:
+                    //    error = (this as IDataErrorInfo)[columnName];
+                    //    break;
                 }
                 return error;
             }
