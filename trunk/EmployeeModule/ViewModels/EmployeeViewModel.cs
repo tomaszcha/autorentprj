@@ -56,7 +56,7 @@ namespace EmployeeModule.ViewModels
             _firstName = employee.FirstName;
             _hireDate = employee.HireDate;
             _id = employee.Id;
-            _insuaranceNumber = employee.InsuaranceNumber;
+            _insuranceNumber = employee.InsuranceNumber;
             _lastName = employee.LastName;
             _licenceNumber = employee.LicenceNumber;
             _phone = employee.Phone;
@@ -85,7 +85,7 @@ namespace EmployeeModule.ViewModels
         private string _phone;
         private DateTime _hireDate;
         private DateTime _fireDate;
-        private string _insuaranceNumber;
+        private string _insuranceNumber;
         private string _licenceNumber;
         private string _data;
 
@@ -234,15 +234,15 @@ namespace EmployeeModule.ViewModels
         }
 
         /// <summary>
-        /// Insuarance number of the employee
+        /// Insurance number of the employee
         /// </summary>
-        public string InsuaranceNumber
+        public string InsuranceNumber
         {
-            get { return _insuaranceNumber; }
+            get { return _insuranceNumber; }
             set
             {
-                _insuaranceNumber = value;
-                OnPropertyChanged("InsuaranceNumber");
+                _insuranceNumber = value;
+                OnPropertyChanged("InsuarnceNumber");
             }
         }
 
@@ -318,7 +318,7 @@ namespace EmployeeModule.ViewModels
                         error = ValidatePhone();
                         break;
                     case "InsuaranceNumber":
-                        error = ValidateInsuarNumber();
+                        error = ValidateInsurNumber();
                         break;
                     case "LicenceNumber":
                         error = ValidateLicenceNumber();
@@ -398,11 +398,11 @@ namespace EmployeeModule.ViewModels
             return res;
         }
 
-        private string ValidateInsuarNumber()
+        private string ValidateInsurNumber()
         {
             string res = String.Empty;
-            if (_insuaranceNumber!=null)
-                if (_insuaranceNumber.Length > 26)
+            if (_insuranceNumber!=null)
+                if (_insuranceNumber.Length > 26)
                 {
                     res = Properties.Resources.LongString;
                 }
@@ -494,7 +494,7 @@ namespace EmployeeModule.ViewModels
                 FirstName = employee.FirstName;
                 HireDate = employee.HireDate;
                 Id = employee.Id;
-                InsuaranceNumber = employee.InsuaranceNumber;
+                InsuranceNumber = employee.InsuranceNumber;
                 LastName = employee.LastName;
                 LicenceNumber = employee.LicenceNumber;
                 Phone = employee.Phone;
