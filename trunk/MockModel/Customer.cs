@@ -20,7 +20,7 @@ namespace MockModel
         string _type;
         string _address;
         string _phone;
-        string _insuaranceNumber;
+        string _insuranceNumber;
         string _licenceNumber;
         string _passport;
         DateTime _birthDay;
@@ -98,12 +98,12 @@ namespace MockModel
         /// <summary>
         /// Insuarance number of the customer
         /// </summary>
-        public string InsuaranceNumber
+        public string InsuranceNumber
         {
-            get { return _insuaranceNumber; }
+            get { return _insuranceNumber; }
             set
             {
-                _insuaranceNumber = value;                
+                _insuranceNumber = value;                
             }
         }
 
