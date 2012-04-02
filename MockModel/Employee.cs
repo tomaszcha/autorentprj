@@ -25,7 +25,7 @@ namespace MockModel
         string _phone;
         DateTime _hireDate;
         DateTime _fireDate;
-        string _insuaranceNumber;
+        string _insuranceNumber;
         string _licenceNumber;
         string _data;
 
@@ -166,12 +166,12 @@ namespace MockModel
         /// <summary>
         /// Insuarance number of the employee
         /// </summary>
-        public string InsuaranceNumber
+        public string InsuranceNumber
         {
-            get { return _insuaranceNumber; }
+            get { return _insuranceNumber; }
             set
             {
-                _insuaranceNumber = value;
+                _insuranceNumber = value;
             }
         }
 
