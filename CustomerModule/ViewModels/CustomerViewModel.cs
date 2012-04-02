@@ -52,7 +52,7 @@ namespace CustomerModule.ViewModels
             _type = customer.Type;
             _address = customer.Address;
             _phone = customer.Phone;
-            _insuaranceNumber = customer.InsuaranceNumber;
+            _insuranceNumber = customer.InsuranceNumber;
             _licenceNumber = customer.LicenceNumber;
             _passport = customer.Passport;
             _birthDay = customer.BirthDay;
@@ -68,7 +68,7 @@ namespace CustomerModule.ViewModels
         string _type;
         string _address;
         string _phone;
-        string _insuaranceNumber;
+        string _insuranceNumber;
         string _licenceNumber;
         string _passport;
         DateTime _birthDay;
@@ -157,13 +157,13 @@ namespace CustomerModule.ViewModels
         /// <summary>
         /// Insuarance number of the customer
         /// </summary>
-        public string InsuaranceNumber
+        public string InsuranceNumber
         {
-            get { return _insuaranceNumber; }
+            get { return _insuranceNumber; }
             set
             {
-                _insuaranceNumber = value;
-                OnPropertyChanged("InsuaranceNumber");
+                _insuranceNumber = value;
+                OnPropertyChanged("InsuranceNumber");
             }
         }
 
@@ -254,7 +254,7 @@ namespace CustomerModule.ViewModels
                         break;
                     case "InsuaranceNumber":
                     case "LicenceNumber":
-                        error = ValidateInsuarLicenceNumber();
+                        error = ValidateInsurLicenceNumber();
                         break;                    
                     case "Passport":
                         error = ValidatePassport();
@@ -323,10 +323,10 @@ namespace CustomerModule.ViewModels
             return res;
         }
 
-        private string ValidateInsuarLicenceNumber()
+        private string ValidateInsurLicenceNumber()
         {
             string res = String.Empty;
-            if (_insuaranceNumber.Length > 26 || _licenceNumber.Length > 26)
+            if (_insuranceNumber.Length > 26 || _licenceNumber.Length > 26)
             {
                 res = Properties.Resources.LongString;
             }
@@ -394,7 +394,7 @@ namespace CustomerModule.ViewModels
                 Type = customer.Type;
                 Address = customer.Address;
                 Phone = customer.Phone;
-                InsuaranceNumber = customer.InsuaranceNumber;
+                InsuranceNumber = customer.InsuranceNumber;
                 LicenceNumber = customer.LicenceNumber;
                 Passport = customer.Passport;
                 BirthDay = customer.BirthDay;
